@@ -1,0 +1,38 @@
+{
+  "name": "passports-prototype",
+  "version": "0.0.0",
+  "description": "Passport journeys",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "clean": "rm -rf public/; mkdir public",
+    "sass": "rm -rf public/stylesheets; mkdir public/stylesheets && npm-sass ./assets/sass/app.scss > ./public/stylesheets/app.css",
+    "js": "rm -rf public/javascripts; mkdir public/javascripts && cp assets/javascripts/app.js public/javascripts",
+    "postinstall": "npm run clean && npm run sass",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UKHomeOffice/passports-prototype.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UKHomeOffice/passports-prototype/issues"
+  },
+  "homepage": "https://github.com/UKHomeOffice/passports-prototype#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "express-partial-templates": "^0.2.0",
+    "express-session": "^1.14.0",
+    "hmpo-form-wizard": "^5.1.0",
+    "hmpo-frontend-toolkit": "^4.2.1",
+    "hmpo-template-mixins": "^4.2.1",
+    "hmpo-templates": "^0.1.1",
+    "hogan-express-strict": "^0.5.4",
+    "i18n-future": "^1.0.0",
+    "npm-sass": "^1.2.0"
+  }
+}
