@@ -1,0 +1,11 @@
+.phase-tag {
+    @include phase-tag(beta);
+    margin-left: $gutter-one-third;
+    @include media(tablet) {
+        vertical-align: middle;
+    }
+}
+
+.phase-banner  {
+  @include phase-banner(beta);
+}
