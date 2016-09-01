@@ -30,7 +30,7 @@
     "express-session": "^1.14.0",
     "hmpo-form-wizard": "^5.1.0",
     "hmpo-frontend-toolkit": "UKHomeOffice/passports-frontend-toolkit#feature/new-modules",
-    "hmpo-template-mixins": "^4.2.1",
+    "hmpo-template-mixins": "^4.5.0",
     "hmpo-templates": "^1.0.0",
     "hogan-express-strict": "^0.5.4",
     "i18n-future": "^1.0.0",
