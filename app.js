@@ -1,5 +1,6 @@
 var express = require('express');
-    app = express();
+    app = express(),
+    path = require('path');
 
 // session
 app.use(require('cookie-parser')());
@@ -17,8 +18,12 @@ app.engine('html', require('hogan-express-strict'));
 app.use(require('express-partial-templates')(app));
 app.use(require('hmpo-template-mixins')());
 app.use('/public/images', express.static('assets/images'));
-app.use(express.static('public'));
-
+app.use('/public/images', express.static(path.resolve(path.dirname(require.resolve('hmpo-frontend-toolkit')), 'assets/images')));
+app.use('/public', express.static('public'));
+app.use(function (req, res, next) {
+    res.locals.assetPath = '/public';
+    next();
+});
 
 // routes
 app.use(require('./routes/start'));
