@@ -7,8 +7,8 @@
     "start": "node app.js",
     "clean": "rm -rf public/; mkdir public",
     "sass": "rm -rf public/stylesheets; mkdir public/stylesheets && npm-sass ./assets/sass/app.scss > ./public/stylesheets/app.css",
-    "js": "rm -rf public/javascripts; mkdir public/javascripts && cp assets/javascripts/app.js public/javascripts",
-    "postinstall": "npm run clean && npm run sass",
+    "js": "rm -rf public/javascripts; mkdir public/javascripts && browserify -r hmpo-frontend-toolkit -r underscore ./assets/javascripts/app.js | uglifyjs -c > ./public/javascripts/app.js",
+    "postinstall": "npm run clean && npm run sass && npm run js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,16 +23,18 @@
   "homepage": "https://github.com/UKHomeOffice/passports-prototype#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "browserify": "^13.1.0",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "express-partial-templates": "^0.2.0",
     "express-session": "^1.14.0",
     "hmpo-form-wizard": "^5.1.0",
-    "hmpo-frontend-toolkit": "^4.2.1",
-    "hmpo-template-mixins": "^4.2.1",
-    "hmpo-templates": "^0.1.1",
+    "hmpo-frontend-toolkit": "UKHomeOffice/passports-frontend-toolkit#feature/new-modules",
+    "hmpo-template-mixins": "^4.5.0",
+    "hmpo-templates": "^1.0.0",
     "hogan-express-strict": "^0.5.4",
     "i18n-future": "^1.0.0",
-    "npm-sass": "^1.2.0"
+    "npm-sass": "^1.2.0",
+    "uglifyjs": "^2.4.10"
   }
 }
