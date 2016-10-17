@@ -1,0 +1,19 @@
+{{< layout}}
+
+{{$pageTitle}}What country are you applying from?{{/pageTitle}}
+
+{{$header}}
+    <h1>What country are you applying from?</h1>
+{{/header}}
+
+{{$content}}
+    {{< hmpo-partials-form}}
+    {{$form}}
+        <label class="form-label" for="country">Country</label>
+        <input class="form-control" id="country" type="text"><br/><br/>
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
