@@ -1,3 +1,103 @@
 @import "hmpo-frontend-toolkit/assets/stylesheets/app";
 
 @import "modules/phase";
+@import "modules/app-photo";
+
+
+
+/* additional css to match production prototype */
+
+/* photo guide styles */
+.panel-photo-pass {
+   background-image: url("../images/icon_thick_tick.svg");
+   margin: 10px 15px 10px 0;
+    border-left: 0;
+    padding-left: 38px;
+    background-repeat: no-repeat;
+    background-position: left 10px;
+    background-size: 24px;
+}
+@media (min-width: 769px){
+    .panel-photo-result {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-left: 54px;
+        background-size: 36px;
+    }
+}
+
+.button-guide-next a{
+    background-image:url("../images/icon-arrow-right.svg")!important;
+    background-repeat: no-repeat;
+}
+
+.button-guide-previous a{
+    background-image:url("../images/icon-arrow-left.svg")!important;
+    background-repeat: no-repeat;
+
+}
+
+/* upload screens styles */
+.animated-progress{
+  margin-top:30px;
+}
+
+.heading-medium, h2 {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0.7em 0 0.3em 0;   }
+  @media (min-width: 641px) {
+    .heading-medium, h2 {
+      font-size: 24px;
+      line-height: 1.25; } }
+  @media (min-width: 641px) {
+    .heading-medium, h2 {
+      margin: 0.7em 0 0.3em 0; } }
+
+.list-bullet, .list-number {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.list-bullet {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.list-item-bold {
+    font-family: "nta",Arial,sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: none;
+    font-size-adjust: 0.525;
+}
+@media (min-width: 641px){
+.list-item-bold {
+    font-size: 24px;
+    line-height: 1.25;
+}}
+.list-number li {
+    margin-bottom: 5px;
+}
+
+.list-item-bold p, .list-item-bold li {
+    font-family: "nta",Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+}
+@media (min-width: 641px){
+.list-item-bold p, .list-item-bold li {
+    font-size: 19px;
+    line-height: 1.31579;
+}}
+
+.list-item-bold p {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
