@@ -34,6 +34,8 @@ app.use('/sar', require('./routes/sar'));
 app.use('/overseas', require('./routes/overseas'));
 app.use('/uploadphoto', require('./routes/uploadphoto'));
 app.use('/photoguide-myself', require('./routes/photoguide-myself'));
+app.use('/renew', require('./routes/renew'));
+
 
 
 var port = process.env.PORT || 3000;
