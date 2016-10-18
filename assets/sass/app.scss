@@ -26,9 +26,6 @@
     }
 }
 
-.flash-card a:link, .flash-card a:visited, .flash-card details summary { /* added .flash-card details summary to make the details summary white as well when inside a flash card */
-      color: #fff; }
-
 .button-guide-next a{
     background-image:url("../images/icon-arrow-right.svg")!important;
     background-repeat: no-repeat;
@@ -37,8 +34,32 @@
 .button-guide-previous a{
     background-image:url("../images/icon-arrow-left.svg")!important;
     background-repeat: no-repeat;
-
 }
+
+/* other blue screens */
+.flash-card a:link, .flash-card a:visited, .flash-card details summary { /* added .flash-card details summary to make the details summary white as well when inside a flash card */
+      color: #fff; }
+details {
+  margin-bottom: 15px; }
+  @media (min-width: 641px) {
+    details {
+      margin-bottom: 30px; } }
+  details .panel {
+    margin-bottom: 0; }
+
+.button + details {
+  margin-top: 15px; }
+  @media (min-width: 641px) {
+    .button + details {
+      margin-top: 30px; } }
+
+.js-enabled details.focused {
+  outline: 3px solid #ffbf47; }
+
+.js-enabled summary:focus {
+  outline: none; }
+
+
 
 /* upload screens styles */
 .animated-progress{
