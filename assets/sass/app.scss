@@ -26,6 +26,9 @@
     }
 }
 
+.flash-card a:link, .flash-card a:visited, .flash-card details summary { /* added .flash-card details summary to make the details summary white as well when inside a flash card */
+      color: #fff; }
+
 .button-guide-next a{
     background-image:url("../images/icon-arrow-right.svg")!important;
     background-repeat: no-repeat;
