@@ -1,0 +1,32 @@
+{{< layout}}
+
+{{$back}}
+<div class="photo-guide">
+            <a href="./need-photo" class="back-link">Other ways to get a photo</a>
+            <span class="marker">Guide part 2 of 12</span>
+        </div>
+{{/back}}
+
+{{$main-content}}
+        <link rel="stylesheet" href="{{assetPath}}/stylesheets/app-photo.css">
+
+        <div class="flash-card column-full">
+          <h1>Take your photo</h1>
+          <p>You can only start your application once you have your photo.</p>
+<!--
+          {{< hmpo-partials-form}}
+            {{$form}}
+              {{#input-submit}}upload{{/input-submit}}
+            {{/form}}
+          {{/ hmpo-partials-form}}
+-->
+          <a href="/../uploadphoto" class="button">I already have a photo</a>
+
+          <p>Alternatively you can find out how to <a href="">get a photo from a shop</a>.</p>
+          <p><a href="">Read guide again</a></p>
+          <p><a href="">Download and print guide</a></p>
+          <p><a href="">Exit service</a></p>
+        </div>
+{{/main-content}}
+
+{{/ layout}}
