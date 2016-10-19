@@ -23,12 +23,14 @@
                     {{#input-text}}age-month{{/input-text}}
                     {{#input-text}}age-year{{/input-text}}
                 </div>
-            </fieldset><br/><br/>
+            </fieldset>
         </div>
 
-        <legend><span class="form-label-bold">Which is your passport issuing authority?</span></legend>
-        <p class="form-hint" id="dob-hint">Check the photo page of your passport.</p>
-        {{#radio-group}}issuing-authority{{/radio-group}}
+        <fieldset class="inline">
+            <legend><span class="form-label-bold">Which is your passport issuing authority?</span></legend>
+            <p class="form-hint" id="dob-hint">Check the photo page of your passport.</p>
+            {{#radio-group}}issuing-authority{{/radio-group}}
+        </fieldset>
 
         {{#input-submit}}{{/input-submit}}
     {{/form}}
