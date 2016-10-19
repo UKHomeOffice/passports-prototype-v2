@@ -1,7 +1,7 @@
 module.exports = {
     '/': {
         fields: ['country'],
-        backLink: './',
+        backLink: '/../filter/apply-from-uk',
         next: '/british-citizen'
     },
     '/british-citizen': {

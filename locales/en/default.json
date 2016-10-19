@@ -9,14 +9,21 @@
         "age": {
             "label": "Your age"
         },
+        "age-day":{
+          "label": "Day"
+        },
         "age-month":{
           "label": "Month"
         },
         "age-year":{
           "label": "Year"
+        },
+        "expiry-month":{
+          "label": "Month"
+        },
+        "expiry-year":{
+          "label": "Year"
         }
-
-
 
     },
     "validation": {
@@ -37,6 +44,12 @@
         },
         "issuing-authority": {
           "required": "You must answer this question - issuing-authority"
-          }
+        },
+        "what-to-do": {
+          "required": "You must answer this question - what to do"
+        },
+        "uncancelled": {
+          "required": "You must answer this question - uncancelled"
+        }
     }
 }
