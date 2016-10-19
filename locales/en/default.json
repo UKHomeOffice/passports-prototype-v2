@@ -1,5 +1,42 @@
 {
     "buttons": {
         "next": "Continue"
+    },
+    "fields": {
+        "country": {
+            "label": "Country"
+        },
+        "age": {
+            "label": "Your age"
+        },
+        "age-month":{
+          "label": "Month"
+        },
+        "age-year":{
+          "label": "Year"
+        }
+
+
+
+    },
+    "validation": {
+        "required": "Please enter {{label}}.",
+        "numeric": "{{label}} must only contain numbers.",
+        "default": "You must answer this question."
+    },
+    "error": {
+        "default": "An unknown error occured",
+        "session": "Session timeout"
+    },
+    "validation": {
+        "country": {
+          "required": "You must answer this question - country"
+        },
+        "british-citizen": {
+          "required": "You must answer this question - british"
+        },
+        "issuing-authority": {
+          "required": "You must answer this question - issuing-authority"
+          }
     }
 }

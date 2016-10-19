@@ -7,10 +7,10 @@
 {{/header}}
 
 {{$content}}
+
     {{< hmpo-partials-form}}
     {{$form}}
-        <label class="form-label" for="country">Country</label>
-        <input class="form-control" id="country" type="text"><br/><br/>
+        {{#input-text}}country{{/input-text}}
         {{#input-submit}}{{/input-submit}}
     {{/form}}
     {{/ hmpo-partials-form}}
