@@ -5,6 +5,7 @@
 
 
 
+
 /* additional css to match production prototype */
 
 /* photo guide styles */
@@ -35,6 +36,11 @@
     background-image:url("../images/icon-arrow-left.svg")!important;
     background-repeat: no-repeat;
 }
+
+@media (min-width: 769px){
+.flash-card .grid-row {
+    min-height: 2em;
+}}
 
 /* other blue screens */
 .flash-card a:link, .flash-card a:visited, .flash-card details summary { /* added .flash-card details summary to make the details summary white as well when inside a flash card */
@@ -124,4 +130,29 @@ details {
 .list-item-bold p {
     margin-top: 1em;
     margin-bottom: 0;
+}
+
+/* renew */
+.reveal .panel-indent {
+    margin-top: 7.5px;
+    margin-bottom: 15px;
+}
+.panel-indent {
+    border-left-width: 8px;
+    margin-right: 0;
+}
+
+.panel-indent {
+    clear: both;
+    border-left: 8px solid #bfc1c3;
+    padding: 10px 0 10px 15px;
+    margin: 30px 15px 45px 0;
+}
+
+.panel-indent .form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group {
+    float: none;
 }

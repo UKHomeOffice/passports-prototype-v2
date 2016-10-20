@@ -2,7 +2,7 @@
 
 {{$back}}
 <div class="photo-guide">
-            <a href="/../overseas/choose-photo-method" class="back-link">Other ways to get a photo</a>
+            <a href="/../intro/choose-photo-method" class="back-link">Other ways to get a photo</a>
             <span class="marker">Guide part 11 of 12</span>
         </div>
 {{/back}}
@@ -11,13 +11,36 @@
         <link rel="stylesheet" href="{{assetPath}}/stylesheets/app-photo.css">
 
         <div class="column-full">
-            <div class="flash-card">
-                <header>
-                    <h1>Face the camera with a plain expression</h1>
-                </header>
-                <div class="grid-row">
-                    <div class="column-half">
-                      <p>You must be facing forward and looking straight at the camera. Make sure your expression is neutral and your mouth is closed.</p>
+          <div class="flash-card">
+              <header>
+                <h1>Face the camera with a plain expression</h1>
+              </header>
+              <div class="grid-row">
+                  <div class="column-full">
+                    <p>You must be facing forward and looking straight at the camera. Make sure your expression is neutral and your mouth is closed.</p>
+                    <div class="guidance-photos" aria-hidden="true">
+                        <ul>
+                            <li>
+                                <img src="../public/images/photoguide/image-f1-plain.jpg" alt="">
+                                <div class="result" style="height: 38px;">
+                                    <p class="approved">Approved</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../public/images/photoguide/image-f1-smiling.jpg" alt="">
+                                <div class="result" style="height: 38px;">
+                                    <p class="failed">Don’t smile</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../public/images/photoguide/image-f1-mouth-open.jpg" alt="">
+                                <div class="result" style="height: 38px;">
+                                    <p class="failed">Mouth open</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
                       <nav class="guide-nav">
                                 <ul>
                                     <li class="button-guide button-guide-previous">
@@ -28,12 +51,9 @@
                                     </li>
                                 </ul>
                       </nav>
-                    </div>
-                    <div class="column-half">
-                      image here
-                    </div>
-                </div>
-            </div>
+                  </div>
+              </div>
+          </div>
         </div>
 
 {{/main-content}}
