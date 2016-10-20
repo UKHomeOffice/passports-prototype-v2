@@ -1,0 +1,52 @@
+{{< layout}}
+
+{{$pageTitle}}Your name{{/pageTitle}}
+
+{{$header}}
+    <h1>Your name</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+    {{#input-text}}name{{/input-text}}
+    {{#input-text}}lastname{{/input-text}}
+<fieldset class="inline">
+    <legend><span class="form-label-bold">Have you ever been known by any other names?</span></legend>
+    <p class="form-hint" id="name-hint">eg, maiden name, names from a previous marriage, a different name at birth</p>
+    <label for="yes" class="block-label selected">
+          <input type="radio" name="title" id="yes" value="Yes" aria-required="true" data-toggle="yes-title" aria-controls="yes-title" aria-expanded="true">
+          Yes
+    </label>
+    <div id="yes-title" class="reveal" aria-hidden="false">
+        <div class="panel-indent">
+            <p class="form-hint" id="name-hint">List all your previous names</p>
+            <div id="previous-name-title-group" class="form-group">
+                <label for="previous-name-title" class="form-label-bold">
+                    Previous first and middle names
+                </label>
+                <input type="text" name="other-title" id="previous-name-title" class="form-control" aria-required="true" maxlength="20">
+                <label for="previous-lastname-title" class="form-label-bold">
+                    Previous last name
+                </label>
+                <input type="text" name="previous-lastname-title" id="previous-lastname-title-title" class="form-control" aria-required="true" maxlength="20">
+            </div>
+        </div>
+    </div>
+    <label for="no" class="block-label selected">
+          <input type="radio" name="title" id="no" value="No" aria-required="true" data-toggle="no-title" aria-controls="no-title" aria-expanded="true">
+          No
+    </label>
+</fieldset>
+<br/>
+    {{#input-submit}}{{/input-submit}}
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+
+{{/ layout}}

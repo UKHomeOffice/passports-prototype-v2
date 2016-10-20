@@ -1,0 +1,47 @@
+{{< layout}}
+
+{{$pageTitle}}Check the personal details on your old passport{{/pageTitle}}
+
+{{$header}}
+    <h1>Check the personal details on your old passport</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+    <p>Look at your name, signature and other details.</p>
+
+    <div class="panel panel-border-wide">
+      <p>It doesn’t matter if your address has changed. </p>
+    </div>
+    <fieldset>
+        <label for="yes" class="block-label selected">
+              <input type="radio" name="title" id="yes" value="Other" aria-required="true" data-toggle="yes-title" aria-controls="yes-title" aria-expanded="true">
+              Yes, my details are correct
+        </label>
+        <div id="yes-title" class="reveal" aria-hidden="false">
+            <div class="panel-indent">
+                <p>We’ll reuse those details on your new passport.</p>
+            </div>
+        </div>
+        <label for="no" class="block-label selected">
+            <input type="radio" name="title" id="no" value="Other" aria-required="true" data-toggle="no-title" aria-controls="no-title" aria-expanded="true">
+            No, some details are wrong or have changed
+        </label>
+        <div id="no-title" class="reveal" aria-hidden="false">
+            <div class="panel-indent">
+                <p>As your personal details have changed you can’t use this service.</p>
+                <p>You’ll need to <a href="https://www.gov.uk/apply-renew-passport">renew your passport a different way</a>.</p>
+            </div>
+        </div>
+    </fieldset><br/>
+    {{#input-submit}}{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+{{/ layout}}

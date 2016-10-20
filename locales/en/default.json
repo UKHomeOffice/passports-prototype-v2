@@ -23,6 +23,33 @@
         },
         "expiry-year":{
           "label": "Year"
+        },
+        "name":{
+          "label": "First and middle names"
+        },
+        "lastname":{
+          "label": "Last name"
+        },
+        "town-birth":{
+          "label": "Town of birth"
+        },
+        "address1":{
+          "label": "Address"
+        },
+        "town":{
+          "label": "Town or city"
+        },
+        "postcode":{
+          "label": "Postcode"
+        },
+        "email":{
+          "label": "Email"
+        },
+        "mobile":{
+          "label": "Mobile or home phone"
+        },
+        "passport-options":{
+          "label": "Select passport size"
         }
 
     },
@@ -50,6 +77,21 @@
         },
         "uncancelled": {
           "required": "You must answer this question - uncancelled"
+        },
+        "passport-number": {
+          "required": "You must answer this question - passport number"
+        },
+        "town-birth": {
+          "required": "You must answer this question - town birth"
+        },
+        "email": {
+          "required": "Enter your email address."
+        },
+        "mobile": {
+          "required": "Enter your mobile or home phone number."
+        },
+        "passport-options": {
+          "required": "You must answer this question."
         }
     }
 }
