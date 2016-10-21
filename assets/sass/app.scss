@@ -336,3 +336,30 @@ details {
 .update-notice a {
     color: #fff;
 }
+
+/* start page */
+
+.related ul {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.14286;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+@media (min-width: 641px){
+.related ul {
+    font-size: 16px;
+    line-height: 1.25;
+}}
+.related li {
+    margin-bottom: 0.75em;
+    padding-left: 0;
+}
+.GDS{
+      margin-top: 40px;
+}

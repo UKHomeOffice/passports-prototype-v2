@@ -37,6 +37,8 @@ app.use('/photoguide-myself', require('./routes/photoguide-myself'));
 app.use('/renew', require('./routes/renew'));
 app.use('/intro', require('./routes/intro'));
 app.use('/filter', require('./routes/filter'));
+app.use('/startpage', require('./routes/startpage'));
+
 
 
 
