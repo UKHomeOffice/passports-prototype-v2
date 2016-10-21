@@ -116,5 +116,18 @@ module.exports = {
     validate: [
       'required'
     ]
+  },
+  'return-passport':{
+    legend: {
+      value: 'How would you like us to return your ols passport?',
+      className: 'visuallyhidden'
+    },
+    options: [
+      {value: 'Special-delivery', label: 'Special delivery (£3 extra)'},
+      {value: 'Standard', label: 'Standard post (free)'}
+    ],
+    validate: [
+      'required'
+    ]
   }
 };

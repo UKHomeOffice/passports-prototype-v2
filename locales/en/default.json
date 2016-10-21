@@ -92,6 +92,9 @@
         },
         "passport-options": {
           "required": "You must answer this question."
+        },
+        "return-passport": {
+          "required": "You must answer this question."
         }
     }
 }

@@ -7,6 +7,13 @@ module.exports = {
         next: '/check-photo'
     },
     '/check-photo':{
+        next: '/sending-old-pass'
+    },
+    '/sending-old-pass':{
+        next: '/returning-old-pass'
+    },
+    '/returning-old-pass':{
+        fields: ['return-passport'],
         next: '/title'
     },
     '/title':{
