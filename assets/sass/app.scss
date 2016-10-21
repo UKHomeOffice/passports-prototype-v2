@@ -241,3 +241,98 @@ details {
 .form-group {
     float: none;
 }
+
+/* summary page */
+.confirmation {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.confirmation .section {
+    margin: 1.5em 0;
+}
+.confirmation dl {
+    border-top: 1px solid #bfc1c3;
+    clear: both;
+    padding: 1em 0;
+}
+@media (min-width: 769px){
+.confirmation dl .column-one-third {
+    padding-right: 15px;
+}}
+.confirmation dl .column-one-third {
+    padding: 0;
+}
+.confirmation dl dt {
+    color: #6f777b;
+}
+.confirmation dl .column-two-thirds {
+    padding: 0;
+}
+
+.confirmation dl dd {
+    position: relative;
+}
+.confirmation dl dd p {
+    margin: 0;
+    padding-right: 100px;
+}
+.confirmation dl dd .button-wrapper {
+    position: absolute;
+    right: 0;
+    top: -16px;
+}
+@media (min-width: 641px){
+.confirmation dl dd .button-wrapper {
+    top: -23px;
+}}
+@media (min-width: 769px){
+.confirmation dl dd .button-wrapper {
+    top: -2px;
+}}
+.confirmation dl:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.panel-important {
+    clear: both;
+    padding: 15px 0 15px 3em;
+    margin: 0 15px 30px 0;
+    background: url("../images/icon-important.png") no-repeat 0 center;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), not all, not all, not all, only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){
+.panel-important {
+    background-image: url("../images/icon-important-2x.png");
+    background-size: 34px 34px;
+}}
+.panel-important p:only-child, .panel-important p:last-child {
+    margin-bottom: 0;
+}
+.panel-important p {
+    font-weight: bold;
+}
+
+/* confirmation page */
+@media (min-width: 641px){
+.update-notice {
+    margin: 30px 0;
+}}
+.update-notice {
+    margin: 15px 0;
+    padding: 15px;
+    color: #fff;
+    background: #28a197;
+    text-align: center;
+}
+.update-notice h1 {
+    margin: 15px 0;
+}
+.update-notice a.download {
+    background: url("../images/icon-file-download-white.png") no-repeat 0 0;
+    padding-left: 28px;
+    line-height: 20px;
+}
+.update-notice a {
+    color: #fff;
+}

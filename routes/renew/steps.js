@@ -47,6 +47,21 @@ module.exports = {
         next: '/delivering'
     },
     '/delivering':{
+        next: '/summary'
+    },
+    '/summary':{
+        next: '/declaration'
+    },
+    '/declaration':{
+        next: '/payment'
+    },
+    '/payment':{
+        next: '/processing-payment'
+    },
+    '/processing-payment':{
+        next: '/confirmation'
+    },
+    '/confirmation':{
         next: '/title'
     }
 };
