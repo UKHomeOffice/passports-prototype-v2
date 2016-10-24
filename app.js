@@ -38,6 +38,7 @@ app.use('/renew', require('./routes/renew'));
 app.use('/intro', require('./routes/intro'));
 app.use('/filter', require('./routes/filter'));
 app.use('/startpage', require('./routes/startpage'));
+app.use('/renew_10_NOV', require('./routes/renew_10_NOV'));
 
 
 
