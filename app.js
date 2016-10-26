@@ -42,17 +42,17 @@ app.use('/prototype_161025/filter', require('./routes/prototype_161025/filter'))
 app.use('/prototype_161025/startpage', require('./routes/prototype_161025/startpage'));
 app.use('/prototype_161025/renew_10_NOV', require('./routes/prototype_161025/renew_10_NOV'));
 
-app.use('/prototype_11112016/static', require('./routes/prototype_11112016/static'));
-app.use('/prototype_11112016/forms', require('./routes/prototype_11112016/forms'));
-app.use('/prototype_11112016/sar', require('./routes/prototype_11112016/sar'));
-app.use('/prototype_11112016/overseas', require('./routes/prototype_11112016/overseas'));
-app.use('/prototype_11112016/uploadphoto', require('./routes/prototype_11112016/uploadphoto'));
-app.use('/prototype_11112016/photoguide-myself', require('./routes/prototype_11112016/photoguide-myself'));
-app.use('/prototype_11112016/renew', require('./routes/prototype_11112016/renew'));
-app.use('/prototype_11112016/intro', require('./routes/prototype_11112016/intro'));
-app.use('/prototype_11112016/filter', require('./routes/prototype_11112016/filter'));
-app.use('/prototype_11112016/startpage', require('./routes/prototype_11112016/startpage'));
-app.use('/prototype_11112016/renew_10_NOV', require('./routes/prototype_11112016/renew_10_NOV'));
+app.use('/prototype_161110/static', require('./routes/prototype_161110/static'));
+app.use('/prototype_161110/forms', require('./routes/prototype_161110/forms'));
+app.use('/prototype_161110/sar', require('./routes/prototype_161110/sar'));
+app.use('/prototype_161110/overseas', require('./routes/prototype_161110/overseas'));
+app.use('/prototype_161110/uploadphoto', require('./routes/prototype_161110/uploadphoto'));
+app.use('/prototype_161110/photoguide-myself', require('./routes/prototype_161110/photoguide-myself'));
+app.use('/prototype_161110/renew', require('./routes/prototype_161110/renew'));
+app.use('/prototype_161110/intro', require('./routes/prototype_161110/intro'));
+app.use('/prototype_161110/filter', require('./routes/prototype_161110/filter'));
+app.use('/prototype_161110/startpage', require('./routes/prototype_161110/startpage'));
+app.use('/prototype_161110/renew_10_NOV', require('./routes/prototype_161110/renew_10_NOV'));
 
 
 
