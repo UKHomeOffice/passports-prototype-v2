@@ -1,28 +1,15 @@
 module.exports = {
-    '/': {
-        backLink: '/../uploadphoto/check-photo-and-submit',
-        fields: ['passport-number', 'expiry-year', 'expiry-month'],
-        next: '/check-personal-data'
-    },
-    '/check-personal-data': {
+    '/':{
         backLink: './',
-        next: '/check-photo'
+        next: '/old-pass-details'
     },
-    '/check-photo':{
-        backLink: './check-personal-data',
-        next: '/sending-old-pass'
-    },
-    '/sending-old-pass':{
-        backLink: './check-photo',
-        next: '/returning-old-pass'
-    },
-    '/returning-old-pass':{
-        backLink: './sending-old-pass',
-        fields: ['return-passport'],
+    '/old-pass-details': {
+        backLink: '/check-photo',
+        fields: ['passport-number', 'expiry-year', 'expiry-month'],
         next: '/title'
     },
     '/title':{
-        backLink: './returning-old-pass',
+        backLink: './old-pass-details',
         fields: ['title'],
         next: '/name'
     },
@@ -38,31 +25,41 @@ module.exports = {
     '/date-and-place-birth':{
         backLink: './gender',
         fields:['age-day', 'age-month', 'age-year', 'town-birth'],
+        next: '/sending-old-pass'
+    },
+    '/sending-old-pass':{
+        backLink: './date-and-place-birth',
         next: '/home-address'
     },
     '/home-address':{
-        backLink: './date-and-place-birth',
+        backLink: './sending-old-pass',
         fields:['address1', 'address2', 'town', 'postcode'],
         next: '/contact-details'
     },
     '/contact-details':{
         backLink: './home-address',
         fields:['email', 'mobile'],
-        next: '/get-updates'
-    },
-    '/get-updates':{
-        backLink: './contact-details',
         next: '/passport-options'
     },
     '/passport-options':{
         backLink: './get-updates',
         fields:['passport-options'],
+        next: '/signing-you-passport'
+    }, /* another page here for sign your passport */
+    '/signing-you-passport':{
+        backLink: './passport-options',
         next: '/delivering'
     },
     '/delivering':{
         backLink: './passport-options',
         next: '/summary'
     },
+      /*
+    '/returning-old-pass':{  /* -> to combine with delivering
+        backLink: './sending-old-pass',
+        fields: ['return-passport'],
+        next: '/title'
+    },*/
     '/summary':{
         backLink: './delivering',
         next: '/declaration'

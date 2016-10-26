@@ -40,7 +40,7 @@ app.use('/prototype_161025/renew', require('./routes/prototype_161025/renew'));
 app.use('/prototype_161025/intro', require('./routes/prototype_161025/intro'));
 app.use('/prototype_161025/filter', require('./routes/prototype_161025/filter'));
 app.use('/prototype_161025/startpage', require('./routes/prototype_161025/startpage'));
-app.use('/prototype_161025/renew_10_NOV', require('./routes/prototype_161025/renew_10_NOV'));
+app.use('/prototype_161025/renew', require('./routes/prototype_161025/renew'));
 
 app.use('/prototype_161110/static', require('./routes/prototype_161110/static'));
 app.use('/prototype_161110/forms', require('./routes/prototype_161110/forms'));
@@ -52,7 +52,6 @@ app.use('/prototype_161110/renew', require('./routes/prototype_161110/renew'));
 app.use('/prototype_161110/intro', require('./routes/prototype_161110/intro'));
 app.use('/prototype_161110/filter', require('./routes/prototype_161110/filter'));
 app.use('/prototype_161110/startpage', require('./routes/prototype_161110/startpage'));
-app.use('/prototype_161110/renew_10_NOV', require('./routes/prototype_161110/renew_10_NOV'));
 
 
 
