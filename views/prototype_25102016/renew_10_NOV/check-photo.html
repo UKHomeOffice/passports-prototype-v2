@@ -1,0 +1,57 @@
+{{< layout}}
+
+{{$pageTitle}}Compare your old and new photos{{/pageTitle}}
+
+{{$header}}
+    <h1>Compare your old and new photos</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+    <p>We’ll compare your old and new photos when we receive your application.</p>
+    <p>If we can’t recognise you as the same person, you’ll need to provide a ‘countersignature’.</p>
+    <details>
+        <summary><span class="summary">What’s a countersignature?</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>A countersignature is when a professional person signs a form to confirm who you are and that the information you’ve given is correct.</p>
+        </div>
+    </details>
+    <fieldset>
+      <label for="yes" class="block-label selected">
+            <input type="radio" name="title" id="yes" value="Other" aria-required="true" data-toggle="yes-title" aria-controls="yes-title" aria-expanded="true">
+            Yes, I’m recognisable
+      </label>
+        <label for="no" class="block-label selected">
+              <input type="radio" name="title" id="no" value="Other" aria-required="true" data-toggle="no-title" aria-controls="no-title" aria-expanded="true">
+              No, my appearance has changed a lot
+        </label>
+        <div id="no-title" class="reveal" aria-hidden="false">
+            <div class="panel-indent">
+                <p>If you don’t think you’d be recognised, you’ll need to <a href="https://www.gov.uk/apply-renew-passport">use a different service</a> that allows you to provide a countersignature.</p>
+            </div>
+        </div>
+    </fieldset><br/>
+    {{#input-submit}}{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+{{$sidebar}}
+<div class="column-one-third">
+    <div class="sidebar related">
+      <div class="photo-preview-inner">
+          <h2 class="heading-medium">Your photo</h2>
+          <div class="photo">
+              <img src="../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+          </div>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}

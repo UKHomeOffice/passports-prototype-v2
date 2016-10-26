@@ -1,0 +1,32 @@
+{{< layout}}
+
+{{$pageTitle}}Your gender{{/pageTitle}}
+
+{{$header}}
+    <h1>Your gender</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+<fieldset>
+    <label for="female" class="block-label selected">
+          <input type="radio" name="title" id="female" value="female" aria-required="true" data-toggle="female-title" aria-controls="female-title" aria-expanded="true">
+          Female
+    </label>
+    <label for="male" class="block-label selected">
+          <input type="radio" name="title" id="male" value="male" aria-required="true" data-toggle="male-title" aria-controls="male-title" aria-expanded="true">
+          Male
+    </label>
+</fieldset>
+<br/>
+    {{#input-submit}}{{/input-submit}}
+{{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+
+{{/ layout}}

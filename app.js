@@ -25,21 +25,34 @@ app.use(function (req, res, next) {
     next();
 });
 
+// prototype views
+// app.set('views', __dirname + '/views/prototype_25102016');
 
 // routes
 app.use(require('./routes/start'));
-app.use('/static', require('./routes/static'));
-app.use('/forms', require('./routes/forms'));
-app.use('/sar', require('./routes/sar'));
-app.use('/overseas', require('./routes/overseas'));
-app.use('/uploadphoto', require('./routes/uploadphoto'));
-app.use('/photoguide-myself', require('./routes/photoguide-myself'));
-app.use('/renew', require('./routes/renew'));
-app.use('/intro', require('./routes/intro'));
-app.use('/filter', require('./routes/filter'));
-app.use('/startpage', require('./routes/startpage'));
-app.use('/renew_10_NOV', require('./routes/renew_10_NOV'));
+app.use('/prototype_25102016/static', require('./routes/prototype_25102016/static'));
+app.use('/prototype_25102016/forms', require('./routes/prototype_25102016/forms'));
+app.use('/prototype_25102016/sar', require('./routes/prototype_25102016/sar'));
+app.use('/prototype_25102016/overseas', require('./routes/prototype_25102016/overseas'));
+app.use('/prototype_25102016/uploadphoto', require('./routes/prototype_25102016/uploadphoto'));
+app.use('/prototype_25102016/photoguide-myself', require('./routes/prototype_25102016/photoguide-myself'));
+app.use('/prototype_25102016/renew', require('./routes/prototype_25102016/renew'));
+app.use('/prototype_25102016/intro', require('./routes/prototype_25102016/intro'));
+app.use('/prototype_25102016/filter', require('./routes/prototype_25102016/filter'));
+app.use('/prototype_25102016/startpage', require('./routes/prototype_25102016/startpage'));
+app.use('/prototype_25102016/renew_10_NOV', require('./routes/prototype_25102016/renew_10_NOV'));
 
+app.use('/prototype_11112016/static', require('./routes/prototype_11112016/static'));
+app.use('/prototype_11112016/forms', require('./routes/prototype_11112016/forms'));
+app.use('/prototype_11112016/sar', require('./routes/prototype_11112016/sar'));
+app.use('/prototype_11112016/overseas', require('./routes/prototype_11112016/overseas'));
+app.use('/prototype_11112016/uploadphoto', require('./routes/prototype_11112016/uploadphoto'));
+app.use('/prototype_11112016/photoguide-myself', require('./routes/prototype_11112016/photoguide-myself'));
+app.use('/prototype_11112016/renew', require('./routes/prototype_11112016/renew'));
+app.use('/prototype_11112016/intro', require('./routes/prototype_11112016/intro'));
+app.use('/prototype_11112016/filter', require('./routes/prototype_11112016/filter'));
+app.use('/prototype_11112016/startpage', require('./routes/prototype_11112016/startpage'));
+app.use('/prototype_11112016/renew_10_NOV', require('./routes/prototype_11112016/renew_10_NOV'));
 
 
 

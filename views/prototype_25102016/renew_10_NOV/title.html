@@ -1,0 +1,44 @@
+{{< layout}}
+
+{{$pageTitle}}Your title{{/pageTitle}}
+
+{{$header}}
+    <h1>Your title</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+<fieldset class="inline">
+    <p>As written in your passport</p>
+    {{#radio-group}}title{{/radio-group}}
+    <p>or</p>
+    <label for="other" class="block-label selected">
+          <input type="radio" name="title" id="other" value="Other" aria-required="true" data-toggle="other-title" aria-controls="other-title" aria-expanded="true">
+          Other
+    </label>
+    <div id="other-title" class="reveal" aria-hidden="false">
+        <div class="panel-indent">
+            <p>You can only use another title, such as a professional title or honour, if it’s already used in your old passport.</p>
+            <p>To use a new title you’ll need to <a href="https://www.gov.uk/apply-renew-passport">apply to update your passport</a> instead.</p>
+            <div id="other-title-group" class="form-group">
+                <label for="other-title" class="form-label-bold">
+                    Title in old passport
+                </label>
+                <input type="text" name="other-title" id="other-title" class="form-control" aria-required="true" maxlength="20">
+            </div>
+
+        </div>
+    </div>
+</fieldset>
+<br/>
+    {{#input-submit}}{{/input-submit}}
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+
+{{/ layout}}
