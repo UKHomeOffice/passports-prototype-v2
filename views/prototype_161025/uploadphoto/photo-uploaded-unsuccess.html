@@ -1,0 +1,31 @@
+{{< layout}}
+
+{{$pageTitle}}You need another photo{{/pageTitle}}
+
+{{$header}}
+    <h1>You need another photo</h1>
+{{/header}}
+
+{{$content}}
+
+        <div class="panel-indent panel-photo-result panel-photo-pass">
+            <h2>Photo passed first check</h2>
+            <p>Your photo has been automatically checked for common mistakes.</p>
+        </div>
+        <p>We’ll still check it manually and we could still ask for another if something doesn't look right.</p>
+
+        <div class="panel panel-border-wide">
+            <p>
+              If you're not happy with your photo, <a href="/prototype_161025/uploadphoto">upload a new one now</a>.
+            </p>
+        </div>
+
+        {{< hmpo-partials-form}}
+          {{$form}}
+            {{#input-submit}}{{/input-submit}}
+          {{/form}}
+        {{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}
