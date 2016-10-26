@@ -5,6 +5,7 @@
 
 
 
+
 /* additional css to match production prototype */
 
 /* photo guide styles */
@@ -35,6 +36,96 @@
     background-image:url("../images/icon-arrow-left.svg")!important;
     background-repeat: no-repeat;
 }
+
+@media (min-width: 769px){
+.flash-card .grid-row {
+    min-height: 2em;
+}}
+
+/* guidance-photos */
+
+    @media (min-width: 641px){
+    .guidance-photos {
+        overflow-x: auto;
+    }}
+    .guidance-photos {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+    .guidance-photos ul {
+        margin-left: -8px;
+    }
+    @media (min-width: 769px){
+.guidance-photos ul li {
+    max-width: 188px;
+}}
+.guidance-photos ul li {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    min-width: 120px;
+    max-width: 172px;
+    margin-bottom: 1.05263em;
+    padding-left: 8px;
+}
+.guidance-photos img {
+    width: 100%;
+    vertical-align: bottom;
+}
+.guidance-photos .result {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 85%;
+    height: 57px;
+    background: #fff;
+    font-family: "nta",Arial,sans-serif;
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+    color: #0b0c0c;
+}
+.guidance-photos ul div {
+    float: left;
+}
+.js-enabled .guidance-photos .result .approved, .js-enabled .guidance-photos .result .failed {
+    position: absolute;
+    top: 50%;
+    box-sizing: border-box;
+    width: 100%;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+.guidance-photos .result .approved {
+    background-image: url("../images/icon_thick_tick.svg");
+}
+.guidance-photos .result .failed {
+    background-image: url("../images/icon_thick_cross.svg");
+}
+@media (min-width: 641px){
+.guidance-photos .result .approved, .guidance-photos .result .failed {
+    padding-top: 11px;
+    padding-right: 34px;
+    padding-bottom: 8px;
+    background-size: 22px;
+}}
+.guidance-photos .result .approved, .guidance-photos .result .failed {
+    margin: 0;
+    padding: 8px 28px 5px 8px;
+    background-repeat: no-repeat;
+    background-position: right 7px center;
+    background-size: 18px;
+}
+.guidance-photos p{
+  font-size:14px;
+}
+
 
 /* other blue screens */
 .flash-card a:link, .flash-card a:visited, .flash-card details summary { /* added .flash-card details summary to make the details summary white as well when inside a flash card */
@@ -124,4 +215,165 @@ details {
 .list-item-bold p {
     margin-top: 1em;
     margin-bottom: 0;
+}
+
+/* renew */
+.reveal .panel-indent {
+    margin-top: 7.5px;
+    margin-bottom: 15px;
+}
+.panel-indent {
+    border-left-width: 8px;
+    margin-right: 0;
+}
+
+.panel-indent {
+    clear: both;
+    border-left: 8px solid #bfc1c3;
+    padding: 10px 0 10px 15px;
+    margin: 30px 15px 45px 0;
+}
+
+.panel-indent .form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group {
+    float: none;
+}
+
+/* photo upload override */
+.panel-photo-pass{
+  border-left: 0;
+  padding-left: 54px;
+  padding-top:0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* summary page */
+.confirmation {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.confirmation .section {
+    margin: 1.5em 0;
+}
+.confirmation dl {
+    border-top: 1px solid #bfc1c3;
+    clear: both;
+    padding: 1em 0;
+}
+@media (min-width: 769px){
+.confirmation dl .column-one-third {
+    padding-right: 15px;
+}}
+.confirmation dl .column-one-third {
+    padding: 0;
+}
+.confirmation dl dt {
+    color: #6f777b;
+}
+.confirmation dl .column-two-thirds {
+    padding: 0;
+}
+
+.confirmation dl dd {
+    position: relative;
+}
+.confirmation dl dd p {
+    margin: 0;
+    padding-right: 100px;
+}
+.confirmation dl dd .button-wrapper {
+    position: absolute;
+    right: 0;
+    top: -16px;
+}
+@media (min-width: 641px){
+.confirmation dl dd .button-wrapper {
+    top: -23px;
+}}
+@media (min-width: 769px){
+.confirmation dl dd .button-wrapper {
+    top: -2px;
+}}
+.confirmation dl:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.panel-important {
+    clear: both;
+    padding: 15px 0 15px 3em;
+    margin: 0 15px 30px 0;
+    background: url("../images/icon-important.png") no-repeat 0 center;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), not all, not all, not all, only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){
+.panel-important {
+    background-image: url("../images/icon-important-2x.png");
+    background-size: 34px 34px;
+}}
+.panel-important p:only-child, .panel-important p:last-child {
+    margin-bottom: 0;
+}
+.panel-important p {
+    font-weight: bold;
+}
+
+/* confirmation page */
+@media (min-width: 641px){
+.update-notice {
+    margin: 30px 0;
+}}
+.update-notice {
+    margin: 15px 0;
+    padding: 15px;
+    color: #fff;
+    background: #28a197;
+    text-align: center;
+}
+.update-notice h1 {
+    margin: 15px 0;
+}
+.update-notice a.download {
+    background: url("../images/icon-file-download-white.png") no-repeat 0 0;
+    padding-left: 28px;
+    line-height: 20px;
+}
+.update-notice a {
+    color: #fff;
+}
+
+/* start page */
+
+.related ul {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.14286;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+@media (min-width: 641px){
+.related ul {
+    font-size: 16px;
+    line-height: 1.25;
+}}
+.related li {
+    margin-bottom: 0.75em;
+    padding-left: 0;
+}
+.GDS{
+      margin-top: 40px;
+}
+
+/* form hint fix */
+.form-hint{
+  margin-bottom: 0px;
 }

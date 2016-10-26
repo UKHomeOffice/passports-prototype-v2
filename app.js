@@ -25,16 +25,35 @@ app.use(function (req, res, next) {
     next();
 });
 
+// prototype views
+// app.set('views', __dirname + '/views/prototype_161025');
 
 // routes
 app.use(require('./routes/start'));
-app.use('/static', require('./routes/static'));
-app.use('/forms', require('./routes/forms'));
-app.use('/sar', require('./routes/sar'));
-app.use('/overseas', require('./routes/overseas'));
-app.use('/uploadphoto', require('./routes/uploadphoto'));
-app.use('/photoguide-myself', require('./routes/photoguide-myself'));
-app.use('/renew', require('./routes/renew'));
+app.use('/prototype_161025/static', require('./routes/prototype_161025/static'));
+app.use('/prototype_161025/forms', require('./routes/prototype_161025/forms'));
+app.use('/prototype_161025/sar', require('./routes/prototype_161025/sar'));
+app.use('/prototype_161025/overseas', require('./routes/prototype_161025/overseas'));
+app.use('/prototype_161025/uploadphoto', require('./routes/prototype_161025/uploadphoto'));
+app.use('/prototype_161025/photoguide-myself', require('./routes/prototype_161025/photoguide-myself'));
+app.use('/prototype_161025/renew', require('./routes/prototype_161025/renew'));
+app.use('/prototype_161025/intro', require('./routes/prototype_161025/intro'));
+app.use('/prototype_161025/filter', require('./routes/prototype_161025/filter'));
+app.use('/prototype_161025/startpage', require('./routes/prototype_161025/startpage'));
+app.use('/prototype_161025/renew', require('./routes/prototype_161025/renew'));
+
+app.use('/prototype_161110/static', require('./routes/prototype_161110/static'));
+app.use('/prototype_161110/forms', require('./routes/prototype_161110/forms'));
+app.use('/prototype_161110/sar', require('./routes/prototype_161110/sar'));
+app.use('/prototype_161110/overseas', require('./routes/prototype_161110/overseas'));
+app.use('/prototype_161110/uploadphoto', require('./routes/prototype_161110/uploadphoto'));
+app.use('/prototype_161110/photoguide-myself', require('./routes/prototype_161110/photoguide-myself'));
+app.use('/prototype_161110/renew', require('./routes/prototype_161110/renew'));
+app.use('/prototype_161110/intro', require('./routes/prototype_161110/intro'));
+app.use('/prototype_161110/filter', require('./routes/prototype_161110/filter'));
+app.use('/prototype_161110/startpage', require('./routes/prototype_161110/startpage'));
+
+
 
 
 

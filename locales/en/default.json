@@ -1,5 +1,100 @@
 {
     "buttons": {
         "next": "Continue"
+    },
+    "fields": {
+        "country": {
+            "label": "Country"
+        },
+        "age": {
+            "label": "Your age"
+        },
+        "age-day":{
+          "label": "Day"
+        },
+        "age-month":{
+          "label": "Month"
+        },
+        "age-year":{
+          "label": "Year"
+        },
+        "expiry-month":{
+          "label": "Month"
+        },
+        "expiry-year":{
+          "label": "Year"
+        },
+        "name":{
+          "label": "First and middle names"
+        },
+        "lastname":{
+          "label": "Last name"
+        },
+        "town-birth":{
+          "label": "Town of birth"
+        },
+        "address1":{
+          "label": "Address"
+        },
+        "town":{
+          "label": "Town or city"
+        },
+        "postcode":{
+          "label": "Postcode"
+        },
+        "email":{
+          "label": "Email"
+        },
+        "mobile":{
+          "label": "Mobile or home phone"
+        },
+        "passport-options":{
+          "label": "Select passport size"
+        }
+
+    },
+    "validation": {
+        "required": "Please enter {{label}}.",
+        "numeric": "{{label}} must only contain numbers.",
+        "default": "You must answer this question."
+    },
+    "error": {
+        "default": "An unknown error occured",
+        "session": "Session timeout"
+    },
+    "validation": {
+        "country": {
+          "required": "You must answer this question - country"
+        },
+        "british-citizen": {
+          "required": "You must answer this question - british"
+        },
+        "issuing-authority": {
+          "required": "You must answer this question - issuing-authority"
+        },
+        "what-to-do": {
+          "required": "You must answer this question - what to do"
+        },
+        "uncancelled": {
+          "required": "You must answer this question - uncancelled"
+        },
+        "passport-number": {
+          "required": "You must answer this question - passport number"
+        },
+        "town-birth": {
+          "required": "You must answer this question - town birth"
+        },
+        "email": {
+          "required": "Enter your email address."
+        },
+        "mobile": {
+          "required": "Enter your mobile or home phone number."
+        },
+        "passport-options": {
+          "required": "You must answer this question."
+        },
+        "return-passport": {
+          "required": "You must answer this question."
+        }
     }
 }
