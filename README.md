@@ -8,6 +8,10 @@ Clone/download this repo and run `npm install` then `npm start`.
 
 Visit <a href="http://localhost:3001/" target="_blank">http://localhost:3000/</a> in your browser.
 
+# Development
+
+Watch for JS and Sass changes and automatically compile using `npm run watch:js` and `npm run watch:sass`.
+
 # View the prototype online
 
 <a href="http://passports-prototype.herokuapp.com/" target="_blank">http://passports-prototype.herokuapp.com/</a>
