@@ -9,7 +9,9 @@
     "sass": "rm -rf public/stylesheets; mkdir public/stylesheets && npm-sass ./assets/sass/app.scss > ./public/stylesheets/app.css",
     "js": "rm -rf public/javascripts; mkdir public/javascripts && browserify -r hmpo-frontend-toolkit -r underscore ./assets/javascripts/app.js | uglifyjs -c > ./public/javascripts/app.js",
     "postinstall": "npm run clean && npm run sass && npm run js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:js": "watch 'npm run js' ./assets/javascripts",
+    "watch:sass": "watch 'npm run sass' ./assets/sass"
   },
   "repository": {
     "type": "git",
@@ -36,5 +38,8 @@
     "i18n-future": "^1.0.0",
     "npm-sass": "^1.2.0",
     "uglifyjs": "^2.4.10"
+  },
+  "devDependencies": {
+    "watch": "^1.0.1"
   }
 }
