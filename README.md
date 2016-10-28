@@ -12,6 +12,10 @@ Visit <a href="http://localhost:3001/" target="_blank">http://localhost:3000/</a
 
 Watch for JS and Sass changes and automatically compile using `npm run watch:js` and `npm run watch:sass`.
 
+# Redis
+
+When Redis is running on localhost:6379 (standard settings) your session data won't be lost during app restarts. [Download Redis](http://redis.io/download).
+
 # View the prototype online
 
 <a href="http://passports-prototype.herokuapp.com/" target="_blank">http://passports-prototype.herokuapp.com/</a>
