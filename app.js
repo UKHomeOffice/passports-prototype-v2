@@ -81,7 +81,6 @@ function init(sessionStore) {
     app.use('/static', require('./routes/static'));
     app.use('/forms', require('./routes/forms'));
     app.use('/sar', require('./routes/sar'));
-    app.use('/typeahead', require('./routes/typeahead'));
 
     var port = process.env.PORT || 3000;
     app.listen(port);
