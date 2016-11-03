@@ -50,6 +50,9 @@
         },
         "passport-options":{
           "label": "Select passport size"
+        },
+        "typeahead": {
+          "label": "Country"
         }
     },
     "error": {
