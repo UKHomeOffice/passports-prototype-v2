@@ -65,7 +65,8 @@ var autocomplete = {
         var options = _.filter(_.map(select.options, function (o) {
             return {
                 label: o.innerHTML.trim(),
-                value: o.value
+                value: o.value,
+                synonyms: o.dataset.synonyms && o.dataset.synonyms.split(',')
             };
         }), function (o) {
             return o.value && o.value.trim();
@@ -73,7 +74,15 @@ var autocomplete = {
 
         var search = new Bloodhound({
             local: options,
-            datumTokenizer: Bloodhound.tokenizers.obj.whitespace('label', 'value'),
+            datumTokenizer: function(datum) {
+                var vals = Bloodhound.tokenizers.whitespace(datum.label).concat(Bloodhound.tokenizers.whitespace(datum.value));
+                if (datum.synonyms) {
+                    _.each(datum.synonyms, function (s) {
+                        vals = vals.concat(Bloodhound.tokenizers.whitespace(s));
+                    });
+                }
+                return vals;
+            },
             queryTokenizer: Bloodhound.tokenizers.whitespace
         });
 

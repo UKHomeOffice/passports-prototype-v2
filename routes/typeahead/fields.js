@@ -8,7 +8,11 @@ module.exports = {
             return {
                 value: c.id,
                 label: c.name,
-                'data-synonyms': Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+                attributes: [
+                    {
+                        attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+                    }
+                ]
             }
         })),
         validate: [

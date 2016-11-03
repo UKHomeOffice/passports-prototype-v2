@@ -1067,7 +1067,10 @@
     {
         "id": "US",
         "name": "USA",
-        "altName": ""
+        "altName": [
+            "America",
+            "United States of America"
+        ]
     },
     {
         "id": "UG",
@@ -1087,7 +1090,14 @@
     {
         "id": "UK",
         "name": "United Kingdom",
-        "altName": ""
+        "altName": [
+            "GB",
+            "Great Britain",
+            "England",
+            "Wales",
+            "Scotland",
+            "Northern Ireland"
+        ]
     },
     {
         "id": "UY",
