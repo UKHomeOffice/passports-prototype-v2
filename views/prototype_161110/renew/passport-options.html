@@ -3,10 +3,12 @@
 {{$pageTitle}}Passport options{{/pageTitle}}
 
 {{$header}}
-    <h1>Passport options</h1>
+    <h1>Your new passport</h1>
 {{/header}}
 
 {{$content}}
+
+<!-- We need the question about 'Which passport do you need? Standard or Jumbo' -->
 
 {{< hmpo-partials-form}}
 {{$form}}
@@ -14,12 +16,13 @@
 
       <fieldset>
           <legend class="visuallyhidden">Add a Braille sticker</legend>
-          <p>HM Passport Office can add a free sticker that says 'passport' in Braille.</p>
+          <p>We can add a free sticker that says 'passport' in Braille.</p>
 
           <div id="braille-group" class="form-group form-group-compound">
               <label for="braille" class="block-label ">
                   <input type="checkbox" id="braille" name="braille" value="true" aria-required="false">
-                      I'd like a braille sticker
+                      I need a Braille sticker
+                      <!-- discuss the change from 'want' to 'need' a Braille sticker-->
               </label>
           </div>
     </fieldset>
