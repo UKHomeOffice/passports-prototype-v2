@@ -15,10 +15,8 @@ var session = require('express-session'),
 
 redis.getClient(function (err, client) {
     if (err) {
-        console.log('no redis');
         return init();
     }
-    console.log('redis');
     init({
         store: new RedisStore({
             client: client,
