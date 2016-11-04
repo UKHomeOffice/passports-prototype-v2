@@ -1,0 +1,28 @@
+.twitter-typeahead {
+    width: 100%;
+}
+
+// menu position: absolute isn't overridable
+.tt-menu {
+    background-color: #fff;
+    outline: 1px solid #ccc;
+    width: 50%;
+
+    .tt-suggestion {
+        padding: 0.5em;
+        &:hover, &.tt-cursor {
+            color: #fff;
+            background-color: #0097cf;
+        }
+    }
+}
+
+.invalid-input {
+    border: 4px solid $error-colour;
+}
+
+.js-enabled {
+    .typeahead {
+        // display: none;
+    }
+}

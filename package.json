@@ -7,7 +7,7 @@
     "start": "node app.js",
     "clean": "rm -rf public/; mkdir public",
     "sass": "rm -rf public/stylesheets; mkdir public/stylesheets && npm-sass ./assets/sass/app.scss > ./public/stylesheets/app.css",
-    "js": "rm -rf public/javascripts; mkdir public/javascripts && browserify -r hmpo-frontend-toolkit -r underscore ./assets/javascripts/app.js | uglifyjs -c > ./public/javascripts/app.js",
+    "js": "rm -rf public/javascripts; mkdir public/javascripts && browserify -r hmpo-frontend-toolkit -r underscore -r jquery ./assets/javascripts/app.js | uglifyjs -c > ./public/javascripts/app.js",
     "postinstall": "npm run clean && npm run sass && npm run js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:js": "watch 'npm run js' ./assets/javascripts",
@@ -37,9 +37,11 @@
     "hmpo-templates": "^1.0.0",
     "hogan-express-strict": "^0.5.4",
     "i18n-future": "^1.0.0",
+    "jquery": "^3.1.1",
     "lodash": "^4.16.4",
     "npm-sass": "^1.2.0",
     "redis": "^2.6.2",
+    "typeahead-aria": "UKHomeOffice/typeahead-aria",
     "uglifyjs": "^2.4.10"
   },
   "devDependencies": {

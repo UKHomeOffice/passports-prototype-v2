@@ -50,19 +50,22 @@
         },
         "passport-options":{
           "label": "Select passport size"
+        },
+        "typeahead": {
+          "label": "Country"
         }
-
-    },
-    "validation": {
-        "required": "Please enter {{label}}.",
-        "numeric": "{{label}} must only contain numbers.",
-        "default": "You must answer this question."
     },
     "error": {
         "default": "An unknown error occured",
         "session": "Session timeout"
     },
     "validation": {
+        "required": "Please enter {{label}}.",
+        "numeric": "{{label}} must only contain numbers.",
+        "default": "You must answer this question.",
+        "continue": {
+          "required": "Please tell us if you'd like to continue."
+        },
         "country": {
           "required": "You must answer this question - country"
         },
