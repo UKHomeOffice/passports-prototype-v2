@@ -6,6 +6,9 @@
         "country": {
             "label": "Country"
         },
+        "application-country": {
+            "label": "Country"
+        },
         "age": {
             "label": "Your age"
         },
@@ -93,6 +96,12 @@
         },
         "country": {
           "required": "You must answer this question - country"
+        },
+        "apply-uk": {
+          "required": "Please tell us if you're applying from the UK"
+        },
+        "application-country": {
+          "required": "You must answer this question"
         },
         "british-citizen": {
           "required": "You must answer this question - british"
