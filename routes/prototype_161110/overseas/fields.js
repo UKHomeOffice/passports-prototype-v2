@@ -6,7 +6,7 @@ module.exports = {
     },
   'british-citizen': {
     legend: {
-      value: 'Do you have a plain expression?',
+      value: 'Are you a British citizen?',
       className: 'visuallyhidden'
     },
     options: [

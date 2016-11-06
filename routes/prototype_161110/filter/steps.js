@@ -10,7 +10,7 @@ module.exports = {
         next: '/apply-from-uk' /* if Yes is selected */
     },
     '/apply-from-uk': {
-      fields: ['apply-uk'],
+    /*  fields: ['apply-uk'],*/
         backLink: './dob',
         next: '/passport-damaged' /* if Yes is selected */
     },
