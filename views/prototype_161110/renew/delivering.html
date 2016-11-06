@@ -1,21 +1,31 @@
 {{< layout}}
 
-{{$pageTitle}}Delivering your new passport{{/pageTitle}}
+{{$pageTitle}}Your old and new passports{{/pageTitle}}
 
 {{$header}}
-    <h1>Delivering your new passport</h1>
+    <h1>Receiving your old and new passports</h1>
+    <!-- do we need to shorten this or is it okay? -->
 {{/header}}
 
 {{$content}}
 
+<!-- content changes made to returning-old-pass.html -->
+
 {{< hmpo-partials-form}}
 {{$form}}
-    <p>We’ll send your new passport by special delivery (included in the passport fee) to: <strong>DYNAMIC DATA</strong></p>
+    <p>We'll send your old and your new passports separately.</p>
+     </p>
+   <!-- discuss if we really need this message about coming separarely now -->
     <div class="panel panel-border-wide">
       <p>
-        We’ll send your new passport at a different time and from a different location to your old one.
+        Your new passport will be sent by special delivery. This is included in the passport fee.
+        <!-- do we need the grey call out bar? -->
       </p>
     </div>
+     <p><strong>How would you like us to send your old passport back to you?<strong></p>
+     <!-- needs to be formatted as a question -->
+     </p>
+     <p></p>Add delivery radio buttons here 'Special delivery (£3 extra)' and 'Standard post (free)'<p></p>
 
 <br/>
     {{#input-submit}}{{/input-submit}}

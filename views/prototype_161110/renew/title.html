@@ -11,7 +11,7 @@
 {{< hmpo-partials-form}}
 {{$form}}
 <fieldset class="inline">
-    <p>As written in your passport</p>
+    <p>As written on your passport.</p>
     {{#radio-group}}title{{/radio-group}}
     <p>or</p>
     <label for="other" class="block-label selected">
@@ -20,15 +20,15 @@
     </label>
     <div id="other-title" class="reveal" aria-hidden="false">
         <div class="panel-indent">
-            <p>You can only use another title, such as a professional title or honour, if it’s already used in your old passport.</p>
-            <p>To use a new title you’ll need to <a href="https://www.gov.uk/apply-renew-passport">apply to update your passport</a> instead.</p>
+            <p>You can only use a different title if it’s written in your old passport.</p>
             <div id="other-title-group" class="form-group">
                 <label for="other-title" class="form-label-bold">
-                    Title in old passport
+                    Title in your old passport
                 </label>
                 <input type="text" name="other-title" id="other-title" class="form-control" aria-required="true" maxlength="20">
+                   <p><p>If you want to use a new professional or honorary title, you need to apply to <a href="https://www.gov.uk/apply-renew-passport">update your passport</a>.</p>
+                   <!-- check it is only professional and hnonourary titles -->
             </div>
-
         </div>
     </div>
 </fieldset>
