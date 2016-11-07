@@ -2,9 +2,6 @@ module.exports = {
     '/': {
       backLink: '/../overseas/choose-photo-method'
     },
-    '/photorules': {
-      backLink: './choose-photo-method'
-    },
     '/short-find-camera': {
       backLink: './choose-photo-method'
     },
@@ -17,8 +14,11 @@ module.exports = {
     '/short-lighting': {
       backLink: '/short-right-position'
     },
-    '/short-quality': {
+    '/photorules-icao': {
       backLink: '/short-lighting'
+    },
+    '/short-upload-photo': {
+      backlink: '/short-quality'
     }
     
 };

@@ -76,6 +76,7 @@ function init(sessionStore) {
     app.use('/prototype_161110/startpage', require('./routes/prototype_161110/startpage'));
 
 	app.use('/photoguide-short', require('./routes/photoguide-short'));
+	app.use('/photoguide-static', require('./routes/photoguide-static'));
 
     // Examples
     app.use('/static', require('./routes/static'));
