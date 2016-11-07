@@ -54,11 +54,6 @@ module.exports = {
           'required'
         ]
   },
-  'town-birth': {
-      validate: [
-          'required'
-        ]
-  },
   'expiry-year': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',

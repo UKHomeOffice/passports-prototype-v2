@@ -10,20 +10,25 @@
 
 {{< hmpo-partials-form}}
 {{$form}}
-    <div class="panel panel-border-wide">
+  <!--  <div class="panel panel-border-wide">-->
       <p>
         If your name has changed, you’ll need to <a href="https://passportapplication.service.gov.uk/ips-olc/">renew your passport a different way</a>.
         <!-- this looks strange as a call out here, can we either drop the grey call out bar or display this further down the page -->
       </p>
-    </div>
+  <!--  </div> -->
     {{#input-text}}name{{/input-text}}
     {{#input-text}}lastname{{/input-text}}
-<fieldset>
+
+<fieldset  class="inline">
     <legend><span class="form-label-bold">Have you ever been known by any other names?</span></legend>
     <p class="form-hint" id="name-hint">For example, a maiden name, names from previous marriages or a different name at birth.</p>
     <label for="yes" class="block-label selected">
           <input type="radio" name="title" id="yes" value="Yes" aria-required="true" data-toggle="yes-title" aria-controls="yes-title" aria-expanded="true">
           Yes
+    </label>
+    <label for="no" class="block-label selected">
+          <input type="radio" name="title" id="no" value="No" aria-required="true" data-toggle="no-title" aria-controls="no-title" aria-expanded="true">
+          No
     </label>
     <div id="yes-title" class="reveal" aria-hidden="false">
         <div class="panel-indent">
@@ -40,10 +45,6 @@
             </div>
         </div>
     </div>
-    <label for="no" class="block-label selected">
-          <input type="radio" name="title" id="no" value="No" aria-required="true" data-toggle="no-title" aria-controls="no-title" aria-expanded="true">
-          No
-    </label>
 </fieldset>
 <br/>
     {{#input-submit}}{{/input-submit}}
