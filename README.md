@@ -6,7 +6,7 @@ Passport journeys
 
 Clone/download this repo and run `npm install` then `npm start`.
 
-Visit <a href="http://localhost:3001/" target="_blank">http://localhost:3000/</a> in your browser.
+Visit <a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a> in your browser.
 
 # Development
 

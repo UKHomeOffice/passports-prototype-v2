@@ -6,54 +6,50 @@ module.exports = {
     '/old-pass-details': {
         backLink: '/check-photo',
         fields: ['passport-number', 'expiry-year', 'expiry-month'],
+        next: '/sign'
+    },
+    '/sign': {
+        fields: ['can-sign', 'no-sign-reason'],
         next: '/title'
     },
     '/title':{
-        backLink: './old-pass-details',
         fields: ['title'],
         next: '/name'
     },
     '/name':{
-        backLink: './title',
-        fields: ['name','lastname'],
+        fields: [
+            'name',
+            'lastname',
+            'previous-name',
+            'previous-names'
+        ],
         next: '/gender'
     },
     '/gender':{
-        backLink: './name',
+        fields: ['gender'],
         next: '/date-and-place-birth'
     },
     '/date-and-place-birth':{
-        backLink: './gender',
-        fields:['age-day', 'age-month', 'age-year'],
-        next: '/home-address'
-    },
-    '/sending-old-pass':{
-        backLink: './date-and-place-birth',
-        next: '/home-address'
-    },
+        next: '/home-address',
+        fields:['age-day', 'age-month', 'age-year', 'born-in-uk', 'town-of-birth', 'country-of-birth']    },
     '/home-address':{
-        backLink: './date-and-place-birth',
         fields:['address1', 'address2', 'town', 'postcode'],
         next: '/contact-details'
     },
     '/contact-details':{
-        backLink: './home-address',
         fields:['email', 'mobile'],
         next: '/passport-options'
     },
     '/passport-options':{
-        backLink: './get-updates',
-        fields:['passport-options'],
-        next: '/signing-you-passport'
-    }, /* another page here for sign your passport */
-    '/signing-you-passport':{
-        backLink: './passport-options',
-        next: '/delivering'
+        fields: ['passport-options', 'braille'],
+        next: '/new-passport-delivery'
     },
-    '/delivering':{
-        backLink: './passport-options',
-        fields: ['return-passport'],
-        next: '/summary'
+    '/new-passport-delivery': {
+        next: '/passport-special-delivery'
+    },
+    '/passport-special-delivery': {
+        next: '/summary',
+        fields: ['secure-return']
     },
       /*
     '/returning-old-pass':{  /* -> to combine with delivering
@@ -62,11 +58,11 @@ module.exports = {
         next: '/title'
     },*/
     '/summary':{
-        backLink: './delivering',
+        controller: require('../../../controllers/confirm'),
+        template: 'confirm',
         next: '/declaration'
     },
     '/declaration':{
-        backLink: './summary',
         next: '/payment'
     },
     '/payment':{

@@ -30,8 +30,15 @@
         "lastname":{
           "label": "Last name"
         },
-        "town-birth":{
-          "label": "Town of birth"
+        "town-of-birth": {
+            "label": "Town of birth",
+            "hint": "As written on your old passport"
+        },
+        "country-of-birth": {
+            "label": "Country of birth"
+        },
+        "born-in-uk": {
+            "legend": "Were you born in the UK?"
         },
         "address1":{
           "label": "Address"
@@ -53,7 +60,25 @@
         },
         "typeahead": {
           "label": "Country"
+        },
+        "no-sign-reason": {
+          "label": "Explain why you can’t sign your passport"
+        },
+        "previous-name": {
+            "legend": "Have you ever been known by any other names?",
+            "hint": "For example, a maiden name, names from previous marriages or a different name at birth."
+        },
+        "previous-names": {
+            "label": "All of your previous names"
+        },
+        "braille": {
+            "label": "I need a braille sticker."
         }
+    },
+    "validation": {
+        "required": "Please enter {{label}}.",
+        "numeric": "{{label}} must only contain numbers.",
+        "default": "You must answer this question."
     },
     "error": {
         "default": "An unknown error occured",

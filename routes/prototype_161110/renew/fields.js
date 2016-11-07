@@ -1,9 +1,40 @@
+var _ = require('underscore');
+
 module.exports = {
   'passport-number': {
       labelClassName: 'visuallyhidden',
       validate: [
           'required'
         ]
+  },
+  'can-sign': {
+    legend: {
+      className: 'visuallyhidden'
+    },
+    formatter: 'boolean',
+    validate: ['required'],
+    options: [
+      {
+        value: true,
+        label: 'I understand and will sign my passport',
+      },
+      {
+        value: false,
+        label: 'I can’t sign my name',
+        toggle: 'no-sign'
+      }
+    ]
+  },
+  'no-sign-reason': {
+    className: 'textarea',
+    validate: [
+      'required',
+      { type: 'maxlength', arguments: 250 }
+    ],
+    dependent: {
+      field: 'can-sign',
+      value: false
+    }
   },
   'age-year': {
     labelClassName: 'form-label',
@@ -53,6 +84,65 @@ module.exports = {
       validate: [
           'required'
         ]
+  },
+  'previous-name': {
+      formatter: 'boolean',
+      validate: 'required',
+      legend: {
+          className: 'form-label-bold'
+      },
+      className: 'inline',
+      options: [
+          { value: true, label: 'Yes', toggle: 'previous-names', child: 'input-text' },
+          { value: false, label: 'No' }
+      ]
+  },
+  'previous-names': {
+      validate: [
+          'required',
+          { type: 'maxlength', arguments: 100 }
+      ],
+      dependent: {
+          field: 'previous-name',
+          value: true
+      }
+  },
+  'gender': {
+      validate: [
+          'required'
+      ],
+      legend: {
+          value: 'Your gender',
+          className: 'visuallyhidden'
+      },
+      options: [
+          { value: 'F', label: 'Female' },
+          { value: 'M', label: 'Male' }
+      ]
+  },
+  'town-birth': {
+      validate: [
+          'required'
+        ]
+  },
+  'born-in-uk': {
+      formatter: 'boolean',
+      validate: 'required',
+      legend: {
+          className: 'form-label-bold'
+      },
+      options: [
+          { value: true, label: 'Yes' },
+          { value: false, label: 'No', toggle: 'birth-country' }
+      ],
+      className: 'inline'
+  },
+  'country-of-birth': {
+      validate: 'required',
+      dependent: {
+          field: 'born-in-uk',
+          value: false
+      },
   },
   'expiry-year': {
     labelClassName: 'form-label',
@@ -112,6 +202,28 @@ module.exports = {
       'required'
     ]
   },
+  'passport-size': {
+      formatter: 'boolean',
+      validate: 'required',
+      legend: {
+          value: 'What size passport would you like?',
+          className: 'form-label'
+      },
+      options: [
+          { value: false, label: '32-page passport (free)' },
+          { value: true, label: '48-page passport ({{#currency}}{{largePassportCost}}{{/currency}})' }
+      ],
+      dependent: {
+          field: 'passport-size-dependent',
+          value: 'true'
+      }
+  },
+  braille: {
+    formatter: 'boolean-strict',
+    legend: {
+      value: 'Add a Braille sticker'
+    },
+  },
   'return-passport':{
     legend: {
       value: 'How would you like us to return your ols passport?',
@@ -124,5 +236,17 @@ module.exports = {
     validate: [
       'required'
     ]
-  }
+  },
+  'secure-return': {
+      formatter: 'boolean',
+      validate: 'required',
+      legend: {
+          value: 'Choose how you’d like us to return your old passport',
+          className: 'form-label-bold'
+      },
+      options: [
+          { value: true, label: 'Special delivery' },
+          { value: false, label: 'Standard post' }
+      ]
+  },
 };
