@@ -24,15 +24,15 @@ module.exports = {
     },
     '/date-and-place-birth':{
         backLink: './gender',
-        fields:['age-day', 'age-month', 'age-year', 'town-birth'],
-        next: '/sending-old-pass'
+        fields:['age-day', 'age-month', 'age-year'],
+        next: '/home-address'
     },
     '/sending-old-pass':{
         backLink: './date-and-place-birth',
         next: '/home-address'
     },
     '/home-address':{
-        backLink: './sending-old-pass',
+        backLink: './date-and-place-birth',
         fields:['address1', 'address2', 'town', 'postcode'],
         next: '/contact-details'
     },
@@ -52,6 +52,7 @@ module.exports = {
     },
     '/delivering':{
         backLink: './passport-options',
+        fields: ['return-passport'],
         next: '/summary'
     },
       /*
