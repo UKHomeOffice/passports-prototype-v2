@@ -1,0 +1,9 @@
+{
+    "costs": {
+        "standard-service": 72.5,
+        "premium-service": 103,
+        "large-passport": 13,
+        "secure-delivery": 3
+    },
+    "veteranEndDate": "1929-09-03"
+}

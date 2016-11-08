@@ -9,20 +9,18 @@
 {{$content}}
 
 {{< hmpo-partials-form}}
-{{$form}}
+    {{$form}}
       {{#radio-group}}passport-options{{/radio-group}}
 
       <fieldset>
           <legend class="visuallyhidden">Add a braille sticker</legend>
           <p>We can add a free sticker that says 'passport' in braille.</p>
-          <label for="braille" class="block-label" style="margin-top:-10px">
-              <input type="checkbox" id="braille" name="braille" value="true" aria-required="false">
-                  I need a braille sticker
-          </label>
+          {{#checkbox}}braille{{/checkbox}}
+          <!-- discuss the change from 'want' to 'need' a Braille sticker-->
     </fieldset>
     <br/>
     {{#input-submit}}{{/input-submit}}
-{{/form}}
+    {{/form}}
 {{/ hmpo-partials-form}}
 
 
