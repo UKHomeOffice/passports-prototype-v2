@@ -50,7 +50,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
 
     response.sections.push({
         className: 'old-passport-details',
-        title: 'Old passport details',
+        title: 'Old passport',
         fields: [
             {
                 step: this.getEditStep('passport-number'),
@@ -109,7 +109,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             {
                 step: this.getEditStep('can-sign'),
                 title: 'Signature',
-                value: 'You must sign your new passport when you receive it'
+                value: 'You&#39;ll sign your passport when you receive it.'
             }
         );
     } else {
@@ -141,13 +141,13 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
 
     response.sections.push({
         className: 'new-passport-details',
-        title: 'New passport details',
+        title: 'New passport',
         fields: newPassportFields
     });
 
     response.sections.push({
         className: 'application-details',
-        title: 'Application details',
+        title: 'Application',
         fields: [
             {
                 step: this.getEditStep('postcode'),
@@ -161,38 +161,11 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             },
             {
                 step: this.getEditStep('braille'),
-                title: 'Passport options',
+                title: 'Braille',
                 value: function () {
                     var output = [];
-                    if (values['passport-options'] == '48') {
-                        var cost = model.largePassport();
-                        cost = currency(cost);
-                        if (!values.veteran) {
-                            cost += '&nbsp;extra';
-                        }
-
-                        output.push('Larger 48-page passport (' + cost + ')');
-                    } else {
-                        output.push('Standard size passport');
-                    }
                     output.push(values['braille'] ? 'You require a braille sticker' : 'You don’t require a braille sticker');
                     return output.join('<br><br>');
-                }
-            },
-            {
-                step: values.veteran ? null : this.getEditStep('secure-return'),
-                title: values.veteran ? 'Delivery' : 'Delivery options',
-                value: function () {
-                    if (values['secure-return']) {
-                        var output = 'Both passports sent by special delivery';
-                        var cost = model.delivery();
-                        if (cost) {
-                            output += ' (' + currency(cost) + ' extra)';
-                        }
-                        return output;
-                    } else {
-                        return 'Old passport sent by standard post<br/><br/>New passport sent by special delivery';
-                    }
                 }
             }
         ]
@@ -202,6 +175,41 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         className: 'cost-details',
         title: 'Cost',
         fields: [
+            {
+                step: this.getEditStep('braille'),
+                title: 'New passport',
+                value: function () {
+                    var output = [];
+                    if (values['passport-options'] == '48') {
+                        var cost = model.largePassport();
+                        cost = currency(cost);
+                        if (!values.veteran) {
+                            cost += '&nbsp;extra';
+                        }
+
+                        output.push('Jumbo passport with special delivery included £85.50');
+                    } else {
+                        output.push('Standard passport with special delivery included £72.50');
+                    }
+                    return output.join('<br><br>');
+                }
+            },
+            {
+                step: values.veteran ? null : this.getEditStep('secure-return'),
+                title: values.veteran ? 'Delivery' : 'Old passport',
+                value: function () {
+                    if (values['secure-return']) {
+                        var output = 'You need to post your old passport to us. We’ll return it to you by ';
+                        var cost = model.delivery();
+                        if (cost) {
+                            output += ' special delivery £3.00 ';
+                        }
+                        return output;
+                    } else {
+                        return 'You need to post your old passport to us. We’ll return it to you by standard post £0.00';
+                    }
+                }
+            },
             {
                 className: 'cost',
                 title: 'Total',
