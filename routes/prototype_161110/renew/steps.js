@@ -1,10 +1,10 @@
 module.exports = {
     '/':{
-        backLink: './',
+        backLink: '../uploadphoto/check-photo-and-submit',
         next: '/old-pass-details'
     },
     '/old-pass-details': {
-        backLink: '/check-photo',
+        backLink: './',
         fields: ['passport-number', 'expiry-year', 'expiry-month'],
         next: '/title'
     },

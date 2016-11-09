@@ -70,6 +70,7 @@ module.exports = {
       {value: 'Mrs', label: 'Mrs'},
       {value: 'Miss', label: 'Miss'},
       {value: 'Ms', label: 'Ms'},
+      {value: 'Other', label: 'Other', toggle: 'other-titles'}
     ],
     validate: [
       'required'
