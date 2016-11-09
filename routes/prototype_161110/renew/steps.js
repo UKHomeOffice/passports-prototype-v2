@@ -6,10 +6,6 @@ module.exports = {
     '/old-pass-details': {
         backLink: '/check-photo',
         fields: ['passport-number', 'expiry-year', 'expiry-month'],
-        next: '/sign'
-    },
-    '/sign': {
-        fields: ['can-sign', 'no-sign-reason'],
         next: '/title'
     },
     '/title':{
@@ -38,13 +34,17 @@ module.exports = {
     },
     '/contact-details':{
         fields:['email', 'mobile'],
+        next: '/get-updates'
+    },
+    '/get-updates':{
         next: '/passport-options'
     },
     '/passport-options':{
         fields: ['passport-options', 'braille'],
-        next: '/new-passport-delivery'
+        next: '/sign'
     },
-    '/new-passport-delivery': {
+    '/sign': {
+        fields: ['can-sign', 'no-sign-reason'],
         next: '/passport-special-delivery'
     },
     '/passport-special-delivery': {

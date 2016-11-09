@@ -13,34 +13,20 @@
 
       <p>We’ll only use these details to contact you about your application. You can also get updates, for example when we receive your old passport.</p>
       {{#input-text}}email{{/input-text}}
-      <fieldset style="margin-top:-20px; margin-bottom:20px">
-          <div id="contact-prefs-email-group" class="form-group form-group-compound">
-              <label for="contact-prefs-email" class="block-label ">
-                  <input type="checkbox" id="contact-prefs-email" name="contact-prefs-email" value="true" aria-required="false">
-                      Email updates
-              </label>
-          </div>
-      </fieldset>
       {{#input-text}}mobile{{/input-text}}
-      <fieldset style="margin-top:-20px; margin-bottom:20px">
-        <div class="form-group">
-            <label for="contact-prefs-sms" class="block-label">
-                <input type="checkbox" id="contact-prefs-sms" name="contact-prefs-sms" value="true" aria-required="false" data-toggle="contact-sms" aria-controls="contact-sms" aria-expanded="false">
-                    Text updates
+      <details>
+          <summary><span class="summary">I need to tell you more about how to contact me</span></summary>
+          <div class="panel panel-border-narrow">
+            <label for="yes" class="block-label selected">
+                  <input type="radio" name="title" id="yes" value="Yes" aria-required="true" data-toggle="yes-title" aria-controls="yes-title" aria-expanded="true">
+                  Text only (no voice calls)
             </label>
-            <div id="contact-sms" class="reveal js-hidden" aria-hidden="true">
-                <div class="panel-indent">
-                    <div id="uk-mobile-phone-group" class="form-group">
-                        <label for="uk-mobile-phone" class="form-label-bold">
-                            Mobile number
-                        </label>
-                        <input type="tel" name="uk-mobile-phone" id="uk-mobile-phone" class="form-control" aria-required="true" value="" maxlength="15">
-                    </div>
-
-               </div>
-            </div>
-       </div>
-      </fieldset>
+            <label for="no" class="block-label selected">
+                  <input type="radio" name="title" id="no" value="No" aria-required="true" data-toggle="no-title" aria-controls="no-title" aria-expanded="true">
+                  Voice only (no text)
+            </label>
+          </div>
+      </details>
 
     {{#input-submit}}{{/input-submit}}
 {{/form}}
