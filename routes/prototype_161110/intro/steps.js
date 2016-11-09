@@ -12,7 +12,7 @@ module.exports = {
     },
     '/you-need-a-photo': {
       backLink: './what-you-need',
-      next: '/../photoguide-myself'
+      next: '/../photoguide-short'
     },
     '/you-need-a-photo-v2': {
       backLink: './what-you-need',

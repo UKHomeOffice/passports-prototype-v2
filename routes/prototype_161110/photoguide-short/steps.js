@@ -1,11 +1,7 @@
 module.exports = {
   '/': {
-    next: '/short-find-camera',
-    backLink: '/../overseas/choose-photo-method'
-  },
-  '/short-find-camera': {
     next: '/short-plain-bg',
-    backLink: './'
+    backLink: '/../overseas/choose-photo-method'
   },
   '/short-plain-bg': {
     next: '/short-lighting'
@@ -17,8 +13,6 @@ module.exports = {
     next: '/photorules-icao'
   },
   '/photorules-icao': {
-    next: '/short-upload-photo'
-  },
-  '/short-upload-photo': {
+    next: '/../uploadphoto'
   }
 };
