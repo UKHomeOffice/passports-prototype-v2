@@ -241,12 +241,12 @@ module.exports = {
       formatter: 'boolean',
       validate: 'required',
       legend: {
-          value: 'Choose how you’d like us to return your old passport',
+          value: 'How would you like us to send your old passport back to you?',
           className: 'form-label-bold'
       },
       options: [
-          { value: true, label: 'Special delivery' },
-          { value: false, label: 'Standard post' }
+          { value: true, label: 'Special delivery (&#163;3 extra)' },
+          { value: false, label: 'Standard post (free)' }
       ]
   },
 };

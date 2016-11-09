@@ -45,9 +45,6 @@ module.exports = {
     },
     '/sign': {
         fields: ['can-sign', 'no-sign-reason'],
-        next: '/new-passport-delivery'
-    },
-    '/new-passport-delivery': {
         next: '/passport-special-delivery'
     },
     '/passport-special-delivery': {
