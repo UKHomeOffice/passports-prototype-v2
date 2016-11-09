@@ -8,12 +8,12 @@ module.exports = {
     backLink: './'
   },
   '/short-plain-bg': {
-    next: '/short-right-position'
-  },
-  '/short-right-position': {
     next: '/short-lighting'
   },
   '/short-lighting': {
+    next: '/short-right-position'
+  },
+  '/short-right-position': {
     next: '/photorules-icao'
   },
   '/photorules-icao': {
