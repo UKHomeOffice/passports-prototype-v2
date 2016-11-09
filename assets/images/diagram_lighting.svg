@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="385.702px" height="245px"
+	 viewBox="251.298 0 385.702 245" enable-background="new 251.298 0 385.702 245" xml:space="preserve">
+<rect x="717" y="-40.5" fill="#351CEA" stroke="#000000" stroke-miterlimit="10" width="493" height="326"/>
+<title>diagram_distance_white copy</title>
+<desc>Created with Sketch.</desc>
+<path fill="#FFFFFF" d="M448.274,245"/>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="257.642" y="7" width="57" height="83"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<rect x="252.642" y="2" opacity="0.5058" clip-path="url(#SVGID_2_)" fill="#FFFFFF" width="67" height="93"/>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_3_" x="257.642" y="100" width="57" height="83"/>
+	</defs>
+	<clipPath id="SVGID_4_">
+		<use xlink:href="#SVGID_3_"  overflow="visible"/>
+	</clipPath>
+	<rect x="252.642" y="95" opacity="0.5058" clip-path="url(#SVGID_4_)" fill="#FFFFFF" width="67" height="93"/>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_5_" x="324.642" y="7" width="57" height="83"/>
+	</defs>
+	<clipPath id="SVGID_6_">
+		<use xlink:href="#SVGID_5_"  overflow="visible"/>
+	</clipPath>
+	<rect x="319.642" y="2" opacity="0.5058" clip-path="url(#SVGID_6_)" fill="#FFFFFF" width="67" height="93"/>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_7_" x="324.642" y="100" width="57" height="83"/>
+	</defs>
+	<clipPath id="SVGID_8_">
+		<use xlink:href="#SVGID_7_"  overflow="visible"/>
+	</clipPath>
+	<rect x="319.642" y="95" opacity="0.5058" clip-path="url(#SVGID_8_)" fill="#FFFFFF" width="67" height="93"/>
+</g>
+<g display="none">
+	<defs>
+		<polygon id="SVGID_9_" points="441.196,245 256.298,182.292 257.259,6.064 382.825,6.078 636.954,54.65 636.86,244 		"/>
+	</defs>
+	<clipPath id="SVGID_10_" display="inline">
+		<use xlink:href="#SVGID_9_"  overflow="visible"/>
+	</clipPath>
+	
+		<rect x="251.298" y="1.064" display="inline" opacity="0.2401" clip-path="url(#SVGID_10_)" fill="#FFFFFF" width="390.656" height="263.871"/>
+</g>
+<g>
+	<defs>
+		<polygon id="SVGID_11_" points="442.845,245.936 257.946,183.228 258.907,7 384.474,7.014 638.603,55.586 638.509,244.936 		"/>
+	</defs>
+	<clipPath id="SVGID_12_">
+		<use xlink:href="#SVGID_11_"  overflow="visible"/>
+	</clipPath>
+	<rect x="252.946" y="2" opacity="0.2401" clip-path="url(#SVGID_12_)" fill="#FFFFFF" width="390.656" height="263.871"/>
+</g>
+<g>
+	<path fill="#FFFFFF" d="M457.972,115.563c-0.922,0-1.832-0.415-2.432-1.205c-1.02-1.345-0.758-3.26,0.586-4.281
+		c0.553-0.418,1.199-0.619,1.844-0.62c0.924,0,1.834,0.416,2.436,1.207c1.021,1.343,0.758,3.258-0.586,4.276
+		C459.267,115.36,458.616,115.563,457.972,115.563 M473.36,86.699c-0.199,0-0.396,0.002-0.598,0.007
+		c-11.965,0.278-21.783,8.86-24.08,20.11c-0.158,0.77-0.85,3.331-0.998,3.992c-2.164,9.554-3.463,15.278-3.967,17.517
+		c-0.047,0.156-0.111,0.328-0.105,0.537c0.016,0.758,0.609,1.375,1.363,1.427h0.148c0.236-0.005,5.375-0.124,5.375-0.124
+		s1.334,9.107,1.668,11.059c0.641,3.746,2.154,5.856,9.867,5.856c0.352,0,0.713-0.004,1.088-0.013
+		c7.408-0.174,19.27-3.379,25.172-9.551c5.084-5.312,10.541-12.988,10.232-26.218C498.21,97.594,487.001,86.699,473.36,86.699"/>
+	<path fill="#FFFFFF" d="M492.005,244h-5.664H492.005 M481.31,151.708c-3.453,0-6.715,0.297-9.602,1.366
+		c-21.297,7.889-21.297,45.954-21.297,45.954c0,3.242,0,7.295,0,7.562v16.771v20.637h35.928l2.197-6.809l-12.354-40.812
+		c-0.432-1.423,0.375-2.927,1.799-3.357c0.26-0.08,0.521-0.116,0.781-0.116c1.156,0,2.227,0.751,2.578,1.913l12.598,41.621
+		c0.158,0.524,0.154,1.086-0.016,1.607l-1.92,5.953h8.752h10.029h4.225c0,0,3.248-4.355,2.494-10.831
+		c-1.359-11.664-2.133-17.965-2.918-23.782c-2.842-21.046-5.6-31.514-5.6-31.514l-0.004-0.002c-0.881-3.88-2.16-7.742-4.004-11.249
+		C499.771,156.726,492.694,151.708,481.31,151.708"/>
+</g>
+<rect x="619.752" y="0.5" fill="#FFFFFF" width="17.248" height="244"/>
+</svg>
