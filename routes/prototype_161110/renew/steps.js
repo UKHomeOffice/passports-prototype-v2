@@ -38,6 +38,9 @@ module.exports = {
     },
     '/contact-details':{
         fields:['email', 'mobile'],
+        next: '/get-updates'
+    },
+    '/get-updates':{
         next: '/passport-options'
     },
     '/passport-options':{
