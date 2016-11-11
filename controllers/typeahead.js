@@ -19,7 +19,6 @@ Typeahead.prototype.getValues = function getValues(req, res, callback) {
                     return c;
                 }
             });
-            console.log(country);
             values = _.extend(values, { country: country.name });
         }
         callback(null, values);
