@@ -26,8 +26,10 @@ module.exports = {
         next: '/uncancelled'
     },
     '/uncancelled': {
-      fields: ['uncancelled'],
+        controller: require('../../../controllers/go-overseas'),
+        fields: ['uncancelled'],
         backLink: './passport-damaged',
-        next: '/../intro'
+        next: '/../intro',
+        nextAlt: '../overseas'
     }
 };
