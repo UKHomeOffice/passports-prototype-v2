@@ -9,36 +9,12 @@
 {{/header}}
 
 {{$content}}
-
-    {{< hmpo-partials-form}}
+{{< hmpo-partials-form}}
     {{$form}}
-      <fieldset class="inline">
-        <!--{{#radio-group}}apply-uk{{/radio-group}}-->
-        <fieldset class="inline">
-            <label for="yes" class="block-label selected">
-                  <input type="radio" name="title" id="yes" value="Yes" aria-required="true" data-toggle="yes-title" aria-controls="yes-title" aria-expanded="true">
-                  Yes
-            </label>
-            <label for="no" class="block-label selected">
-                  <input type="radio" name="title" id="no" value="No" aria-required="true" data-toggle="no-title" aria-controls="no-title" aria-expanded="true">
-                  No
-            </label>
-            <div id="no-title" class="reveal" aria-hidden="false">
-                <div class="panel-indent">
-                    <div id="previous-name-title-group" class="form-group">
-                        <label for="previous-name-title" class="form-label-bold">
-                            Country
-                        </label>
-                        <input type="text" name="other-title" id="previous-name-title" class="form-control" aria-required="true" maxlength="20">
-                    </div>
-                </div>
-            </div>
-        </fieldset><br/>
-
+        {{#radio-group}}apply-uk{{/radio-group}}
         {{#input-submit}}{{/input-submit}}
-      </fieldset>
     {{/form}}
-    {{/ hmpo-partials-form}}
+{{/ hmpo-partials-form}}
 {{/content}}
 
 {{/ layout}}

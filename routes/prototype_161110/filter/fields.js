@@ -1,3 +1,6 @@
+const _ = require('lodash');
+const countries = require('../../../config/countries');
+
 module.exports = {
   'what-to-do': {
     legend: {
@@ -49,17 +52,35 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [
-      {value: 'Yes', label: 'Yes'},
-      {value: 'No', label: 'No'}
+      { value: true, label: 'Yes' },
+      { value: false, label: 'No', toggle: 'application-country', child: 'select' }
     ],
+    formatter: ['boolean'],
     validate: [
-      'required',
-      {
-        type:'equal',
-        arguments:['Yes'], /* if No is selected */
-        redirect:'/../overseas'
+      'required'
+    ],
+    className: 'inline'
+  },
+  'application-country': {
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.id,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
       }
-    ]
+    })),
+    validate: [
+      'required'
+    ],
+    dependent: {
+      field: 'apply-uk',
+      value: false
+    },
+    className: 'typeahead'
   },
 'passport-damaged': {
   legend: {
