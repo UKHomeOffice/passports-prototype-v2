@@ -44,6 +44,9 @@ function init(sessionStore) {
     app.use('/public', express.static('public'));
     app.use(function (req, res, next) {
         res.locals.assetPath = '/public';
+        res.locals.urls = {
+            feedback: ' '
+        };
         next();
     });
 
