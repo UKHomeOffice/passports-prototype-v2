@@ -1,0 +1,23 @@
+{{< layout}}
+
+{{$pageTitle}}Are you a British Citizen?{{/pageTitle}}
+
+{{$header}}
+    <h1>Are you a British Citizen?</h1>
+{{/header}}
+
+{{$content}}
+
+    {{< hmpo-partials-form}}
+    {{$form}}
+        <fieldset class="inline">
+            <p class="form-hint" id="dob-hint">Check your nationality on the photo page of your passport.</p>
+            {{#radio-group}}british-citizen{{/radio-group}}
+            {{#input-submit}}{{/input-submit}}
+        </fieldset>
+    {{/form}}
+    {{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}

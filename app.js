@@ -67,6 +67,7 @@ function init(sessionStore) {
     app.use('/prototype_161025/startpage', require('./routes/prototype_161025/startpage'));
     app.use('/prototype_161025/renew', require('./routes/prototype_161025/renew'));
 
+//prototype 161110
     app.use('/prototype_161110/static', require('./routes/prototype_161110/static'));
     app.use('/prototype_161110/forms', require('./routes/prototype_161110/forms'));
     app.use('/prototype_161110/sar', require('./routes/prototype_161110/sar'));
@@ -77,9 +78,19 @@ function init(sessionStore) {
     app.use('/prototype_161110/intro', require('./routes/prototype_161110/intro'));
     app.use('/prototype_161110/filter', require('./routes/prototype_161110/filter'));
     app.use('/prototype_161110/startpage', require('./routes/prototype_161110/startpage'));
+    app.use('/prototype_161110/photoguide-short', require('./routes/prototype_161110/photoguide-short'));
+	  app.use('/prototype_161110/photoguide-static', require('./routes/prototype_161110/photoguide-static'));
 
-	app.use('/prototype_161110/photoguide-short', require('./routes/prototype_161110/photoguide-short'));
-	app.use('/prototype_161110/photoguide-static', require('./routes/prototype_161110/photoguide-static'));
+//prototype 161124
+    app.use('/prototype_161124/overseas', require('./routes/prototype_161124/overseas'));
+    app.use('/prototype_161124/uploadphoto', require('./routes/prototype_161124/uploadphoto'));
+    app.use('/prototype_161124/photoguide-myself', require('./routes/prototype_161124/photoguide-myself'));
+    app.use('/prototype_161124/renew', require('./routes/prototype_161124/renew'));
+    app.use('/prototype_161124/intro', require('./routes/prototype_161124/intro'));
+    app.use('/prototype_161124/filter', require('./routes/prototype_161124/filter'));
+    app.use('/prototype_161124/startpage', require('./routes/prototype_161124/startpage'));
+    app.use('/prototype_161124/photoguide-short', require('./routes/prototype_161124/photoguide-short'));
+    app.use('/prototype_161124/photoguide-static', require('./routes/prototype_161124/photoguide-static'));
 
     // Examples
     app.use('/static', require('./routes/static'));
@@ -91,4 +102,3 @@ function init(sessionStore) {
     app.listen(port);
     console.log('App listening on port %s', port);
 }
-
