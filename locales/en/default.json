@@ -76,6 +76,9 @@
         },
         "braille": {
             "label": "I need a braille sticker."
+        },
+        "title": {
+            "label": "your title"
         }
     },
     "validation": {
