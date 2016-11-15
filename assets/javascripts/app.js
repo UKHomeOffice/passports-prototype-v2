@@ -1,5 +1,7 @@
 var helpers = require('hmpo-frontend-toolkit').helpers;
 
+require('van11y-accessible-tab-panel-aria');
+
 var formFocus = require('hmpo-frontend-toolkit').formFocus,
     reveal = require('hmpo-frontend-toolkit').progressiveReveal,
     validation = require('hmpo-frontend-toolkit').validation,

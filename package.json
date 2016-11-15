@@ -42,7 +42,8 @@
     "npm-sass": "^1.2.0",
     "redis": "^2.6.2",
     "typeahead-aria": "UKHomeOffice/typeahead-aria",
-    "uglifyjs": "^2.4.10"
+    "uglifyjs": "^2.4.10",
+    "van11y-accessible-tab-panel-aria": "gavboulton/van11y-accessible-tab-panel-aria#feature/keep-href"
   },
   "devDependencies": {
     "watch": "^1.0.1"
