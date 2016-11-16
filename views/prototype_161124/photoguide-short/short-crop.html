@@ -1,0 +1,41 @@
+{{< layout}}
+
+{{$back}}
+<div class="photo-guide">
+            <a href="/../prototype_161110/intro/choose-photo-method" class="back-link">Other ways to get a photo</a>
+            <span class="marker">Guide part 5 of 6</span>
+        </div>
+{{/back}}
+
+{{$main-content}}
+        <link rel="stylesheet" href="{{assetPath}}/stylesheets/app-photo.css">
+
+        <div class="column-full">
+            <div class="flash-card">
+                <header>
+                    <h1>We'll crop your photo</h1>
+                </header>
+                <div class="grid-row">
+                    <div class="column-half">
+                    <p>It's difficult to crop your photo correctly. Don't crop your photo, we'll do it for you.</p>
+                      <p>Make sure there’s enough room around your head and shoulders. The person taking the photo may have to move if there's not.
+                    </div>
+                    <div class="column-half">
+                      <img src="../../public/images/photoguide/diagram_too_close_photo@2x.png"  alt="" width="333" height="288">
+                    </div>
+                    <nav class="guide-nav">
+                              <ul>
+                                  <li class="button-guide button-guide-previous">
+                                      <a href="{{backLink}}">Previous</a>
+                                  </li>
+                                  <li class="button-guide button-guide-next">
+                                      <a href="{{nextPage}}">Get yourself ready</a>
+                                  </li>
+                              </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+{{/main-content}}
+{{/ layout}}

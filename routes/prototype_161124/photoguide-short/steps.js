@@ -10,6 +10,9 @@ module.exports = {
     next: '/short-right-position'
   },
   '/short-right-position': {
+    next: '/short-crop'
+  },
+  '/short-crop': {
     next: '/photorules-icao'
   },
   '/photorules-icao': {
