@@ -92,11 +92,15 @@ function init(sessionStore) {
     app.use('/prototype_161124/photoguide-short', require('./routes/prototype_161124/photoguide-short'));
     app.use('/prototype_161124/photoguide-static', require('./routes/prototype_161124/photoguide-static'));
 
+    //How to
+    app.use('/how-to', require('./routes/how-to'));
+
     // Examples
     app.use('/static', require('./routes/static'));
     app.use('/forms', require('./routes/forms'));
     app.use('/sar', require('./routes/sar'));
     app.use('/typeahead', require('./routes/typeahead'));
+
 
     var port = process.env.PORT || 3000;
     app.listen(port);
