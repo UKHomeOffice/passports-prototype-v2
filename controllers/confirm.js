@@ -187,11 +187,13 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                             cost += '&nbsp;extra';
                         }
 
-                        output.push('Jumbo passport with special delivery included £85.50');
+                        output.push('Jumbo passport with special delivery included.');
+                        output.push('£85.50');
                     } else {
-                        output.push('Standard passport with special delivery included £72.50');
+                        output.push('Standard passport with special delivery included.');
+                        output.push('£72.50');
                     }
-                    return output.join('<br><br>');
+                    return output.join('<br>');
                 }
             },
             {
@@ -202,11 +204,11 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                         var output = 'You need to post your old passport to us. We’ll return it to you by ';
                         var cost = model.delivery();
                         if (cost) {
-                            output += ' special delivery £3.00 ';
+                            output += ' special delivery. <br/>£3.00 ';
                         }
                         return output;
                     } else {
-                        return 'You need to post your old passport to us. We’ll return it to you by standard post £0.00';
+                        return 'You need to post your old passport to us. We’ll return it to you by standard post. <br/>£0.00';
                     }
                 }
             },
