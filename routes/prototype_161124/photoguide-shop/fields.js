@@ -6,7 +6,7 @@ module.exports = {
       },
       options: [
         {value: 'myself', label: 'Show me how to do it myself'},
-        {value: 'shop', label: 'Show me how to get it from a shop (not yet prototyped)'},
+      /*  {value: 'shop', label: 'Show me how to get it from a shop'},*/
         {value: 'upload', label: 'I already have a digital photo'}
       ],
       validate: [
@@ -14,12 +14,12 @@ module.exports = {
         {
           type:'equal',
           arguments:['upload','shop'],
-          redirect:'/../photoguide-short'
+          redirect:'/guidemyself-how-to-take-photo'
         },
         {
           type:'equal',
           arguments:['upload','myself'],
-          redirect:'/../photoguide-shop'
+          redirect:'/end'
         },
         {
           type:'equal',
