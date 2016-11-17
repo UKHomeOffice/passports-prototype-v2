@@ -91,6 +91,8 @@ function init(sessionStore) {
     app.use('/prototype_161124/startpage', require('./routes/prototype_161124/startpage'));
     app.use('/prototype_161124/photoguide-short', require('./routes/prototype_161124/photoguide-short'));
     app.use('/prototype_161124/photoguide-static', require('./routes/prototype_161124/photoguide-static'));
+    app.use('/prototype_161124/photoguide-shop', require('./routes/prototype_161124/photoguide-shop'));
+
 
     //How to
     app.use('/how-to', require('./routes/how-to'));
