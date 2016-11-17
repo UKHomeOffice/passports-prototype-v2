@@ -14,7 +14,7 @@ module.exports = {
         {
           type:'equal',
           arguments:['upload','shop'],
-          redirect:'/../photoguide-myself'
+          redirect:'/../photoguide-short'
         },
         {
           type:'equal',
