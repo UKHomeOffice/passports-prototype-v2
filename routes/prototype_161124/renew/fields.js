@@ -121,7 +121,7 @@ module.exports = {
           { value: 'M', label: 'Male' }
       ]
   },
-  'town-birth': {
+  'town-of-birth': {
       validate: [
           'required'
         ]

@@ -95,7 +95,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         {
             step: this.getEditStep('town-of-birth'),
             title: 'Town of birth',
-            value: values['town']
+            value: values['town-of-birth']
         },
         {
             step: this.getEditStep('country-of-birth'),
