@@ -70,7 +70,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         {
             step: this.getEditStep('title'),
             title: 'Title',
-            value: values['title'] === 'Other' ? values['other-title'] : values['title']
+              value: values['title']
+          //  value: values['title'] === 'Other' ? values['other-title'] : values['title']
         },
         {
             step: this.getEditStep('name'),
@@ -108,7 +109,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
           value: values['country-of-birth']
       }
       );
-    } 
+    }
 
     if (values['can-sign']) {
         newPassportFields.push(
