@@ -1,7 +1,7 @@
 module.exports = {
     '/': {
         fields: ['what-to-do'],
-        backLink: '/../startpage',
+        backLink: '/../prototype_161124/startpage',
         next: '/dob'
     },
     '/dob': {
