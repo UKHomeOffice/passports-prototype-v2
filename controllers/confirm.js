@@ -70,7 +70,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         {
             step: this.getEditStep('title'),
             title: 'Title',
-            value: values['title'] === 'Other' ? values['other-title'] : values['title']
+              value: values['title']
+          //  value: values['title'] === 'Other' ? values['other-title'] : values['title']
         },
         {
             step: this.getEditStep('name'),
@@ -95,14 +96,20 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         {
             step: this.getEditStep('town-of-birth'),
             title: 'Town of birth',
-            value: values['town']
-        },
-        {
-            step: this.getEditStep('country-of-birth'),
-            title: 'Country of birth',
-            value: values['country-of-birth']
+            value: values['town-of-birth']
         }
+
     );
+
+    if(values['country-of-birth']){
+      newPassportFields.push(
+        {
+          step: this.getEditStep('country-of-birth'),
+          title: 'Country of birth',
+          value: values['country-of-birth']
+      }
+      );
+    }
 
     if (values['can-sign']) {
         newPassportFields.push(
