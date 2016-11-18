@@ -96,13 +96,19 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             step: this.getEditStep('town-of-birth'),
             title: 'Town of birth',
             value: values['town-of-birth']
-        },
-        {
-            step: this.getEditStep('country-of-birth'),
-            title: 'Country of birth',
-            value: values['country-of-birth']
         }
+
     );
+
+    if(values['country-of-birth']){
+      newPassportFields.push(
+        {
+          step: this.getEditStep('country-of-birth'),
+          title: 'Country of birth',
+          value: values['country-of-birth']
+      }
+      );
+    } 
 
     if (values['can-sign']) {
         newPassportFields.push(
