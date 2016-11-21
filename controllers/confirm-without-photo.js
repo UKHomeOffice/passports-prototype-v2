@@ -137,12 +137,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         },
         {
             title: 'Your photo',
-            custom: '<div class="photo"><img src="../../public/images/thumbnail-no-photo.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150" style="float:left"><strong class="no-photo">Send your printed photo with your old passport.</strong></div>'
-        },
-        {
-            step: this.getEditStep('recognisable'),
-            title: 'Your appearance',
-            value: 'You can be recognised as the same person'
+            custom: '<div class="photo"><img src="../../public/images/thumbnail-no-photo.jpg" alt="Send your printed photo with your old passport" title="Your uploaded photo" width="150" style="float:left; width:20%"><span class="no-photo">You need to send your printed photo with your old passport.</span></div>'
         }
     );
 
