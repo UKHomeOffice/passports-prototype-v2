@@ -1,7 +1,8 @@
 module.exports = {
     '/':{
-        backLink: '../uploadphoto/check-photo-and-submit',
-        next: '/old-pass-details'
+        backLink: '../intro/choose-photo-method',
+        fields: ['passport-number', 'expiry-year', 'expiry-month'],
+        next: '/title'
     },
     '/old-pass-details': {
         backLink: './',
@@ -58,7 +59,7 @@ module.exports = {
         next: '/title'
     },*/
     '/summary':{
-        controller: require('../../../controllers/confirm'),
+        controller: require('../../../controllers/confirm-without-photo'),
         template: 'confirm',
         next: '/declaration'
     },
