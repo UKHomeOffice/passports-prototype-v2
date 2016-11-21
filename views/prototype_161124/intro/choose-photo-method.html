@@ -25,7 +25,7 @@
                         <input type="radio" name="choose-photo" id="choose-photo-shop" value="shop" aria-required="upload"{{#selected}}choose-photo=shop{{/selected}}{{#errors.choose-photo}} aria-describedby="{{key}}-error" aria-invalid="upload"{{/errors.choose-photo}}>
                         Check the rules for photo shops
                     </label>
-                    <div style="clear:both"></div>
+                    <div style="clear:both"></div><br/>
                     <h2>I have a digital photo</h2>
                     <p class="form-block">Your photo needs to meet the <a href=""> rules for passport photos</a>.</p>
                     <label class="block-label" for="choose-photo-upload">
@@ -35,6 +35,13 @@
                 </fieldset>
             </div>
             {{#input-submit}}{{/input-submit}}
+            <details>
+                <summary><span class="summary">I have a printed passport photo</span></summary>
+                <div class="panel panel-border-narrow">
+                  <p>We’ll scan your photo for our automated checks. Your application will be delayed if we have to ask you for a different photo.</p>
+                  <p>You’ll need to post your printed photo with your old passport.</p>
+                </div>
+            </details>
         {{/form}}
     {{/ hmpo-partials-form}}
 
