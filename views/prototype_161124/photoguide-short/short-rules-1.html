@@ -1,0 +1,86 @@
+{{< layout}}
+
+{{$back}}
+<div class="photo-guide">
+             <a href="/../prototype_161124/intro/you-need-a-photo-v2" class="back-link">Other ways to get a photo</a>
+            <span class="marker">Guide part 6 of 7</span>
+        </div>
+{{/back}}
+
+{{$main-content}}
+        <link rel="stylesheet" href="{{assetPath}}/stylesheets/app-photo.css">
+
+        <div class="column-full">
+          <div class="flash-card">
+              <header>
+                  <!--<h1>Make sure your face is visible, your expression plain</h1>-->
+                  <h1>Get yourself ready</h1>
+              </header>
+              <div class="grid-row">
+                  <div class="column-full">
+                     <p>Remove any headwear, unless you’re wearing it for religious or medical reasons.</p>
+                    <div class="guidance-photos" aria-hidden="true">
+                        <ul>
+                            <li>
+                                <img src="../../public/images/photoguide/image-f2-religious-head-covering.jpg" alt="">
+                                <div class="result" style="height: 57px;">
+                                    <p class="approved">Approved</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../../public/images/photoguide/image-m3-head-covering.jpg" alt="">
+                                <div class="result" style="height: 57px;">
+                                    <p class="failed">No fashion hair covering</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../../public/images/photoguide/image-f1-hair-accessory.jpg" alt="">
+                                <div class="result" style="height: 57px;">
+                                    <p class="failed">No hair accessories</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <p>Keep your hair away from your face and brushed down.<br>Your face and eyes must be visible.</p>
+                    <div class="guidance-photos" aria-hidden="true">
+                          <ul>
+                              <li>
+                                  <img src="../../public/images/photoguide/image-f1-plain.jpg" alt="">
+                                  <div class="result" style="height: 57px;">
+                                      <p class="approved">Approved</p>
+                                  </div>
+                              </li>
+                              <li>
+                                  <img src="../../public/images/photoguide/image-f1-hair-over-eye.jpg" alt="">
+                                  <div class="result" style="height: 57px;">
+                                      <p class="failed">Keep hair away from eyes</p>
+                                  </div>
+                              </li>
+                              <li>
+                                  <img src="../../public/images/photoguide/image-f2-headscarf-covering-eye.jpg" alt="">
+                                  <div class="result" style="height: 57px;">
+                                      <p class="failed">Avoid covering face</p>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+                      
+
+                    <nav class="guide-nav">
+                              <ul>
+                                  <li class="button-guide button-guide-previous">
+                                      <a href="{{backLink}}" style="font-size: 20px">Previous</a>
+                                  </li>
+                                  <li class="button-guide button-guide-next">
+                                      <a href="{{nextPage}}" style="font-size: 20px">Get yourself ready 2</a>
+                                  </li>
+                              </ul>
+                    </nav>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+{{/main-content}}
+
+{{/ layout}}

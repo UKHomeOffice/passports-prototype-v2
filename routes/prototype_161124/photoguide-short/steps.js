@@ -13,9 +13,12 @@ module.exports = {
     next: '/short-crop'
   },
   '/short-crop': {
-    next: '/photorules-icao'
+    next: '/short-rules-1'
   },
-  '/photorules-icao': {
+  '/short-rules-1': {
+    next: '/short-rules-2'
+  },
+  '/short-rules-2': {
     next: '/../uploadphoto'
   }
 };
