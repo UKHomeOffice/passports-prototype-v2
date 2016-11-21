@@ -10,6 +10,9 @@ module.exports = {
     next: '/short-right-position'
   },
   '/short-right-position': {
+    next: '/short-noshadows'
+  },
+  '/short-noshadows': {
     next: '/short-crop'
   },
   '/short-crop': {
