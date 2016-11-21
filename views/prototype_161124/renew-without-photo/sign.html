@@ -1,0 +1,26 @@
+{{< layout}}
+
+{{$pageTitle}}Signing your new passport{{/pageTitle}}
+
+{{$header}}
+    <h1>Signing your new passport</h1>
+{{/header}}
+
+{{$content}}
+    {{< hmpo-partials-form}}
+        {{$form}}
+            <p>You must sign your new passport when you receive it.</p>
+            {{#radio-group}}can-sign{{/radio-group}}
+            <div id="no-sign" class="reveal js-hidden">
+                <div class="panel panel-border-narrow">
+                    <p>You must explain why you can’t sign your passport (eg there’s a medical reason or you can’t write).</p>
+                    <p>If you can provide supporting evidence please include it when you send us your old passport.</p>
+                    {{#textarea}}no-sign-reason{{/textarea}}
+                </div>
+            </div>
+            {{#input-submit}}{{/input-submit}}
+        {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}

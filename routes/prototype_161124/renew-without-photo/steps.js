@@ -69,7 +69,10 @@ module.exports = {
         next: '/processing-payment'
     },
     '/processing-payment':{
-        next: '/confirmation'
+        next: '/confirmation-paper-photo'
+    },
+    '/confirmation-paper-photo':{
+        next: '/confirmation-paper-photo'
     },
     '/confirmation':{
         next: '/title'
