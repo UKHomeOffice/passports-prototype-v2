@@ -24,7 +24,7 @@ module.exports = {
         {
           type:'equal',
           arguments:['upload','upload'],
-          redirect:'/../uploadphoto'
+          redirect:'/../upload'
         }
       ]
     }
