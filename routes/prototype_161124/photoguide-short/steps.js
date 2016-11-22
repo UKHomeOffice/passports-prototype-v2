@@ -22,6 +22,6 @@ module.exports = {
     next: '/short-rules-2'
   },
   '/short-rules-2': {
-    next: '/take-your-photo'
+    next: '/../takephoto'
   }
 };

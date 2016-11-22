@@ -93,6 +93,8 @@ function init(sessionStore) {
     app.use('/prototype_161124/photoguide-static', require('./routes/prototype_161124/photoguide-static'));
     app.use('/prototype_161124/photoguide-shop', require('./routes/prototype_161124/photoguide-shop'));
     app.use('/prototype_161124/renew-without-photo', require('./routes/prototype_161124/renew-without-photo'));
+    app.use('/prototype_161124/takephoto', require('./routes/prototype_161124/takephoto'));
+    app.use('/prototype_161124/upload', require('./routes/prototype_161124/upload'));
 
     //How to
     app.use('/how-to', require('./routes/how-to'));
