@@ -397,3 +397,14 @@ details {
   float: left;
   padding-left: 20px;
 }
+
+/* changes on the chevron in the photo guide */
+@media (min-width: 641px){
+.button-guide-next a {
+    padding-right: 45px;
+}
+.button-guide-previous a {
+    padding-left: 45px;
+
+}
+}
