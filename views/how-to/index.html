@@ -68,13 +68,34 @@
             <p>4. Go to Pull Requests from the main horizontal menu</p>
             <p>5. Click “New pull request” - green button</p>
             <p>6. In the compare:master dropdown, select your branch. then click “create pull request“</p>
+            <p>7. If your changes are small <strong>AND</strong> not something someone else is working on (if it is, just double check with the person working on the same thing), you can merge your own PR.<br/>
+            To merge, after you've created your PR in github, click on your PR and click MERGE. Add a message and then delete the brach if you're not going to work on it anymore. Branches can be restored if needed.</p>
+              <hr>
+          </div>
+
+          <div class="column-two-thirds">
+            <h2>How to check someone's branch and merge</h2>
+            <p>1. In github desktop click sync. </p>
+            <p>2. Go to your terminal and write: <span class="code_snippet">git checkout &#60;branch_you_want_to_merge&#62;</span></p>
+            <p>You should get a message like:<br/> <span class="code_snippet">Branch &#60;branch_you_want_to_merge&#62; set up to track remote branch &#60;branch_you_want_to_merge&#62; from origin.<br/>Switched to a new branch '&#60;branch_you_want_to_merge&#62;'</span></p>
+            <p>3. Run <span class="code_snippet">npm start</span></p>
+            <p>4. Go in browser on <span class="code_snippet">localhost<span> as usual and check the changes</p>
+            <p>6. If you are happy with the changes, you can go ahead and merge in github (browser). See instructions above.</p>
+            <p>If not, leave a message in github, on the PR, tagging the owner of the PR, explaining the problem you found.</p>
               <hr>
           </div>
 
           <div class="column-two-thirds">
             <h2>Deploying to heroku</h2>
-            <p>You don't have to have merged a branch to master in order to deploy to heroku. You can deploy a branch.</p>
-            <p>Follow instructions at the bottom of this page: <a href="https://github.com/UKHomeOffice/passports-prototype">https://github.com/UKHomeOffice/passports-prototype</a>  (add heroku remote and then push to heroku)</p>
+            <p>1. Go to github desktop and click sync - in History you should see the latest merges. Now you are up to date in master.</p>
+            <p>2. Follow instructions at the bottom of this page: <a href="https://github.com/UKHomeOffice/passports-prototype">https://github.com/UKHomeOffice/passports-prototype</a>  (add heroku remote and then push to heroku)</p>
+            <hr>
+          </div>
+
+          <div class="column-two-thirds">
+            <h2>Things to know, troubleshooting</h2>
+            <p>If you have done/pulled changes to styles (scss files), uou need to run install in your terminal: <span class="code_snippet">npm install</span>. This should recompile the sass file and create the local css and you should be able to load the new styles.</p>
+            <p>If <span class="code_snippet">pull</span> from github desktop doesn't work correctly, then run in terminal: <span class="code_snippet">git pull origin master</span></p>
             <hr>
           </div>
 
