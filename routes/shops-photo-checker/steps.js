@@ -1,9 +1,12 @@
 module.exports = {
     '/': {
         template: 'index',
-        next: '/one'
+        next: '/processing-image'
     },
-    '/one': {
-        backLink: './'
+    '/processing-image': {
+        next: '/photo-uploaded-success'
+    },
+    '/photo-uploaded-success': {
+        next: '/photo-uploaded-success'
     }
 };
