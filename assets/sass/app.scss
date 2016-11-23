@@ -408,3 +408,26 @@ details {
 
 }
 }
+
+/* unsuccessful photo submission */
+.panel-photo-error{
+  background-image: url("../images/icon_thick_cross.svg");
+  margin: 10px 15px 10px 0;
+   border-left: 0;
+   padding-left: 38px;
+   background-repeat: no-repeat;
+   background-position: left 10px;
+   background-size: 24px;
+}
+@media (min-width: 769px){
+   .panel-photo-result {
+       margin-top: 15px;
+       margin-bottom: 15px;
+       padding-left: 54px;
+       background-size: 36px;
+   }
+}
+
+.panel-photo-error h2{
+  margin-top:0!important;
+}
