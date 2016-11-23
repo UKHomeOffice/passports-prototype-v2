@@ -99,6 +99,9 @@ function init(sessionStore) {
     //How to
     app.use('/how-to', require('./routes/how-to'));
 
+    //3rd party shops photo checker
+    app.use('/shops-photo-checker', require('./routes/shops-photo-checker'));
+
     // Examples
     app.use('/static', require('./routes/static'));
     app.use('/forms', require('./routes/forms'));

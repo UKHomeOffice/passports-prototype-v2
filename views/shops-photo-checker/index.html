@@ -1,0 +1,106 @@
+{{< layout}}
+
+{{$pageTitle}}How to{{/pageTitle}}
+
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$header}}
+    <h1>How to</h1>
+{{/header}}
+
+{{$main-content}}
+      <h1>How to</h1>
+      <div class="grid-row">
+          <div class="column-two-thirds">
+              <h2>Create a new prototype (after each testing)</h2>
+              <p>1. Duplicate latest prototype in <span class="code_snippet">views</span>, name it <span class="code_snippet">prototype_&#60;date_of_next_testing&#62;</span></p>
+              <p>2. Duplicate latest prototype in <span class="code_snippet">routes</span>, needs to match name above</p>
+              <p>3. In <span class="code_snippet">app.js</span> duplicate the <span class="code_snippet">app.use(‘/prototype_&#60;date_of_previous_testing&#62;/…’, require (‘./routes/prototype_&#60;date_of_previous_testing&#62;/…’))..</span> and rename the prototype date with the one above</p>
+              <p>4. Go through the files in the new prototype folder in views and routes and search for the old prototype name, and replace it with the new prototype name. (it’s easy if you leave search open, it automatically searches in any file you open).
+                <br/><br/>Files to look for:
+                <ul  class="list-bullet">
+                  <li>the <span class="code_snippet">index.js</span> of each folder in <span class="code_snippet">routes/prototype_&#60;date_of_next_testing&#62;</span></li>
+                  <li><span class="code_snippet">steps.js</span></li>
+                  <li><span class="code_snippet">intro</span> folder in <span class="code_snippet">views</span></li>
+                  <li>photo guides in <span class="code_snippet">views</span></li>
+                  <li><span class="code_snippet">declaration.html</span> in <span class="code_snippet">renew in views</span></li>
+                  <li><span class="code_snippet">payment.html</span> in <span class="code_snippet">renew in views</span></li>
+                  <li><span class="code_snippet">start</span> page in <span class="code_snippet">views</span></li>
+                  <li><span class="code_snippet">upload photo</span> folder in <span class="code_snippet">views</span></li>
+                </ul>
+              </p>
+              <p>5. Add a new prototype area on the <span class="code_snippet">start</span> page.
+                <br/><br/>It should contain:
+                  <ul  class="list-bullet">
+                    <li>The date of the next prototype</li>
+                    <li>Link to the start page of the new prototype</li>
+                    <li>Link to micro journeys to jump directly if necesarely</li>
+                    <li>Changes from the last prototype with user needs and story link</li>
+                  </ul>
+              </p>
+              <hr>
+          </div>
+
+          <div class="column-two-thirds">
+            <h2>Start to work on a ticket</h2>
+              <p>1. Go on github desktop and make sure you are not on a branch, if so, select master from the top left drop down.
+                <img src="../../public/images/how-to/master.png" alt="" / >
+              </p>
+              <p>2. Click sync (top right hand) - if you go on history you should be able to see all the latest changes there, so to be up to date with everything
+              <!--  <img src="../../public/images/how-to/sync.png" alt="" / >-->
+              </p>
+              <p>3. Create a new branch from the button next to the master dropdown. Name it with the ticket number and some short title. Make sure it's <strong>from master</strong>.
+                <img src="../../public/images/how-to/branch.png" alt="" / >
+              </p>
+              <p>4. Make your changes in atom/sublime. Check locally by running npm start to make sure everything is as you want. Commit often and small changes. Please include useful commit titles and descriptions - so other members of the team understand your choices and changes. </p>
+              <p>5. At any point you can pull (it won't discard your changes), and its recommended to do it often, when you commit something or if you haven't pulled in a while, do so. It's easier to resolve conflicts if changes are small.
+                <img src="../../public/images/how-to/pull.png" alt="" / >
+              </p>
+
+              <hr>
+          </div>
+
+          <div class="column-two-thirds">
+            <h2>After a ticket or a ‘thing’ is done</h2>
+            <p>1. Make sure locally it works - if you commit to master something that locally doesn’t work, it will break it for everyone without knowing why</p>
+            <p>2. In github desktop click publish (top right corner) then sync </p>
+            <p>3. Go on <a href="https://github.com/UKHomeOffice/passports-prototype">https://github.com/UKHomeOffice/passports-prototype</a></p>
+            <p>4. Go to Pull Requests from the main horizontal menu</p>
+            <p>5. Click “New pull request” - green button</p>
+            <p>6. In the compare:master dropdown, select your branch. then click “create pull request“</p>
+            <p>7. If your changes are small <strong>AND</strong> not something someone else is working on (if it is, just double check with the person working on the same thing), you can merge your own PR.<br/>
+            To merge, after you've created your PR in github, click on your PR and click MERGE. Add a message and then delete the brach if you're not going to work on it anymore. Branches can be restored if needed.</p>
+              <hr>
+          </div>
+
+          <div class="column-two-thirds">
+            <h2>How to check someone's branch and merge</h2>
+            <p>1. In github desktop click sync. </p>
+            <p>2. Go to your terminal and write: <span class="code_snippet">git checkout &#60;branch_you_want_to_merge&#62;</span></p>
+            <p>You should get a message like:<br/> <span class="code_snippet">Branch &#60;branch_you_want_to_merge&#62; set up to track remote branch &#60;branch_you_want_to_merge&#62; from origin.<br/>Switched to a new branch '&#60;branch_you_want_to_merge&#62;'</span></p>
+            <p>3. Run <span class="code_snippet">npm start</span></p>
+            <p>4. Go in browser on <span class="code_snippet">localhost<span> as usual and check the changes</p>
+            <p>6. If you are happy with the changes, you can go ahead and merge in github (browser). See instructions above.</p>
+            <p>If not, leave a message in github, on the PR, tagging the owner of the PR, explaining the problem you found.</p>
+              <hr>
+          </div>
+
+          <div class="column-two-thirds">
+            <h2>Deploying to heroku</h2>
+            <p>1. Go to github desktop and click sync - in History you should see the latest merges. Now you are up to date in master.</p>
+            <p>2. Follow instructions at the bottom of this page: <a href="https://github.com/UKHomeOffice/passports-prototype">https://github.com/UKHomeOffice/passports-prototype</a>  (add heroku remote and then push to heroku)</p>
+            <hr>
+          </div>
+
+          <div class="column-two-thirds">
+            <h2>Things to know, troubleshooting</h2>
+            <p>If you have done/pulled changes to styles (scss files), uou need to run install in your terminal: <span class="code_snippet">npm install</span>. This should recompile the sass file and create the local css and you should be able to load the new styles.</p>
+            <p>If <span class="code_snippet">pull</span> from github desktop doesn't work correctly, then run in terminal: <span class="code_snippet">git pull origin master</span></p>
+            <hr>
+          </div>
+
+    </div>
+
+{{/main-content}}
+
+{{/ layout}}
