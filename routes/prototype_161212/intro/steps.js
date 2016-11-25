@@ -8,7 +8,8 @@ module.exports = {
       next: '/choose-photo-method'
     },
     '/what-you-need-overseas': {
-      backLink: './'
+      backLink: './',
+      next: '/choose-photo-method'
     },
     '/you-need-a-photo': {
       backLink: './what-you-need',

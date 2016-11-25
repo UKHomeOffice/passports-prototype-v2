@@ -41,7 +41,11 @@ module.exports = {
     '/about-your-passport': {
         fields: ['issuing-authority', 'age-year', 'age-month'],
         backLink: './',
-        next: '/prove-your-identity'
+        next: '/have-to-send'
+    },
+    '/have-to-send': {
+      backLink: './about-your-passport',
+      next: '/../intro/what-you-need-overseas'
     },
     '/prove-your-identity': {
       backLink: './about-your-passport',
