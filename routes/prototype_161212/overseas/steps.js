@@ -28,13 +28,14 @@ module.exports = {
     '/uncancelled': {
         controller: require('../../../controllers/go-overseas'),
         fields: ['uncancelled'],
-        backLink: './passport-damaged',
+        backLink: './passport-expiry',
         next: '/../intro',
-        nextAlt: '../overseas'
+      /*  nextAlt: '../overseas'*/
+        nextAlt: '/../prototype_161212/overseas/british-citizen'
     },
     '/british-citizen': {
         fields: ['british-citizen'],
-        backLink: '/../prototype_161212/filter/uncancelled',
+        backLink: './uncancelled',
         next: '/about-your-passport' /* if Yes is selected */
     },
     '/about-your-passport': {
