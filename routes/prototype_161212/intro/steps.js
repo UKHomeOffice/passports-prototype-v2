@@ -25,7 +25,6 @@ module.exports = {
     },
     '/choose-photo-method': {
       fields: ['choose-photo'],
-      backLink: './what-you-need',
       next: '/../upload'
     }
 };
