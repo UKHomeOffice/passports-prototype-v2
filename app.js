@@ -96,6 +96,21 @@ function init(sessionStore) {
     app.use('/prototype_161124/takephoto', require('./routes/prototype_161124/takephoto'));
     app.use('/prototype_161124/upload', require('./routes/prototype_161124/upload'));
 
+    //prototype 161124
+        app.use('/prototype_161212/overseas', require('./routes/prototype_161212/overseas'));
+        app.use('/prototype_161212/uploadphoto', require('./routes/prototype_161212/uploadphoto'));
+        app.use('/prototype_161212/renew', require('./routes/prototype_161212/renew'));
+        app.use('/prototype_161212/intro', require('./routes/prototype_161212/intro'));
+        app.use('/prototype_161212/filter', require('./routes/prototype_161212/filter'));
+        app.use('/prototype_161212/startpage', require('./routes/prototype_161212/startpage'));
+        app.use('/prototype_161212/photoguide-short', require('./routes/prototype_161212/photoguide-short'));
+        app.use('/prototype_161212/photoguide-static', require('./routes/prototype_161212/photoguide-static'));
+        app.use('/prototype_161212/photoguide-shop', require('./routes/prototype_161212/photoguide-shop'));
+        app.use('/prototype_161212/renew-without-photo', require('./routes/prototype_161212/renew-without-photo'));
+        app.use('/prototype_161212/takephoto', require('./routes/prototype_161212/takephoto'));
+        app.use('/prototype_161212/upload', require('./routes/prototype_161212/upload'));
+
+
     //How to
     app.use('/how-to', require('./routes/how-to'));
 

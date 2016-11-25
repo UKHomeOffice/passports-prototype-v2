@@ -1,0 +1,30 @@
+{{< layout}}
+
+{{$pageTitle}}Your name{{/pageTitle}}
+
+{{$header}}
+    <h1>Your name</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+  <!--  <div class="panel panel-border-wide">-->
+      <p>
+        If your name has changed, you’ll need to <a href="https://passportapplication.service.gov.uk/ips-olc/">renew your passport a different way</a>.
+        <!-- this looks strange as a call out here, can we either drop the grey call out bar or display this further down the page -->
+      </p>
+  <!--  </div> -->
+    {{#input-text}}name{{/input-text}}
+    {{#input-text}}lastname{{/input-text}}
+    {{#radio-group}}previous-name{{/radio-group}}
+    {{#input-submit}}{{/input-submit}}
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+
+{{/ layout}}

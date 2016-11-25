@@ -1,0 +1,75 @@
+{{< layout}}
+
+{{$pageTitle}}Check your photo and submit{{/pageTitle}}
+
+{{$header}}
+    <h1>Check your photo</h1>
+{{/header}}
+
+{{$content}}
+
+        <p>Your photo has passed the automated checks. We still need to check it manually and may ask you for another photo if something isn’t right.</p>
+
+        <!-- discuss removing some or all of this content -->
+        <p>Check your photo meets all the requirements in the following 3 categories:</p>
+        <ol class="list-number">
+                <li class="list-item-bold">Your appearance
+                    <p>Make sure:</p>
+                    <ul class="list-bullet">
+                        <li>the photo is a good likeness taken in the last month</li>
+                        <li>your whole face is visible</li>
+                        <li>you have a plain or neutral expression</li>
+                        <li>there are no reflections or glare (if you wear glasses)</li>
+                        <li>you’re not wearing headwear (unless for religious or medical reasons)</li>
+                    </ul>
+                </li>
+                <li class="list-item-bold">Photo set up
+                    <p>Your photo must:</p>
+                    <ul class="list-bullet">
+                        <li>have no other people or objects in it</li>
+                        <li>be taken against a plain background (eg light grey or cream)</li>
+                        <li>have no shadows on your face or behind you</li>
+                    </ul>
+                </li>
+                <li class="list-item-bold">Photo quality and format
+                    <p>Your photo must:</p>
+                    <ul class="list-bullet">
+                        <li>be in colour, with no effects or filters</li>
+                        <li>not be blurred or have ‘red eye’</li>
+                        <li>be unedited – you can’t ‘correct’ your passport photo</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="panel panel-border-wide">
+                <p>
+                  <a href="/prototype_161124/uploadphoto">Take a new photo</a> if you’re unsure.
+                </p>
+            </div>
+
+            <a href="/../prototype_161124/renew/" class="button">Submit photo</a><br/><br/>
+
+            <div class="panel panel-border-wide">
+                <p>
+                  We will compare your new photo with your old one. If you can’t be recognised we’ll ask you to get someone to confirm your identity.
+                </p>
+            </div>
+
+
+{{/content}}
+
+{{$sidebar}}
+<div class="column-one-third">
+    <div class="sidebar related">
+      <div class="photo-preview-inner">
+          <h2 class="heading-medium">Your photo</h2>
+          <div class="photo">
+              <img src="../../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+          </div>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}
