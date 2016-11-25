@@ -176,8 +176,8 @@ validate: [
     options: [
       {value: 'UKPA', label: 'UKPA'},
       {value: 'UKPS', label: 'UKPS'},
-      {value: 'UKPS', label: 'IPS'},
-      {value: 'UKPS', label: 'Other'}
+      {value: 'IPS', label: 'IPS'},
+      {value: 'Other', label: 'Other'}
     ],
     validate: [
       'required'
