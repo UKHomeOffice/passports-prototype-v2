@@ -103,6 +103,7 @@ function init(sessionStore) {
         app.use('/prototype_161212/intro', require('./routes/prototype_161212/intro'));
         app.use('/prototype_161212/filter', require('./routes/prototype_161212/filter'));
         app.use('/prototype_161212/startpage', require('./routes/prototype_161212/startpage'));
+        app.use('/prototype_161212/startpage-overseas', require('./routes/prototype_161212/startpage-overseas'));
         app.use('/prototype_161212/photoguide-short', require('./routes/prototype_161212/photoguide-short'));
         app.use('/prototype_161212/photoguide-static', require('./routes/prototype_161212/photoguide-static'));
         app.use('/prototype_161212/photoguide-shop', require('./routes/prototype_161212/photoguide-shop'));
