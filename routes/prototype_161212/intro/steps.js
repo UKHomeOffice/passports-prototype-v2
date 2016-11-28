@@ -9,7 +9,7 @@ module.exports = {
     },
     '/what-you-need-overseas': {
       backLink: './',
-      next: '/choose-photo-method'
+      next: '/choose-photo-method-overseas'
     },
     '/you-need-a-photo': {
       backLink: './what-you-need',
@@ -25,6 +25,10 @@ module.exports = {
     },
     '/choose-photo-method': {
       fields: ['choose-photo'],
+      next: '/../upload'
+    },
+    '/choose-photo-method-overseas': {
+      fields: ['choose-photo-overseas'],
       next: '/../upload'
     }
 };
