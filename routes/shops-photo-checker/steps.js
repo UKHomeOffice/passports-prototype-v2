@@ -1,6 +1,7 @@
 module.exports = {
     '/': {
         template: 'index',
+        fields:['companyName', 'postcode'],
         next: '/processing-image'
     },
     '/processing-image': {

@@ -79,6 +79,9 @@
         },
         "title": {
             "label": "your title"
+        },
+        "companyName": {
+            "label": "Company name"
         }
     },
     "validation": {
