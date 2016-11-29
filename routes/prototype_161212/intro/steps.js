@@ -5,7 +5,7 @@ module.exports = {
     },
     '/what-you-need': {
       backLink: './',
-      next: '/choose-photo-method'
+      next: '/you-need-a-photo'
     },
     '/what-you-need-overseas': {
       backLink: './',
@@ -13,7 +13,7 @@ module.exports = {
     },
     '/you-need-a-photo': {
       backLink: './what-you-need',
-      next: '/../photoguide-short'
+      next: '/choose-photo-method'
     },
     '/you-need-a-photo-v2': {
       backLink: './what-you-need',
