@@ -1,9 +1,11 @@
 module.exports = {
     '/':{
       controller: require('../../../controllers/application-country'),
+      controller: require('../../../controllers/go-overseas'),/* added this here so if you answer yes you are applying from the uk to redirect you to the index of the UK filter */
       fields: ['apply-uk', 'application-country'],
       backLink: '/../prototype_161212/startpage-overseas',
-      next: '/what-do-you-want-to-do' /* if Yes is selected */
+      next: '/../filter', /* if Yes is selected */
+      nextAlt: '../overseas/what-do-you-want-to-do' /* added this here so if you answer yes you are applying from the uk to redirect you to the index of the UK filter */
     },
     '/what-do-you-want-to-do': {
         fields: ['what-to-do'],
