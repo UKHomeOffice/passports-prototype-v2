@@ -1,22 +1,21 @@
 {{< layout}}
 
-{{$pageTitle}}Upload your photo{{/pageTitle}}
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Company or individual?{{/pageTitle}}
 
 {{$header}}
-    <h1>Check a customer photo</h1>
+    <h1>Are you a company or an individual?</h1>
 {{/header}}
 
 {{$content}}
 
-        {{#input-text}}companyName{{/input-text}}
-
-        {{#input-text}}postcode{{/input-text}}
-<br/>
-        <a href="/shops-photo-checker/processing-image" class="button">Upload customer photo</a><br/><br/>
-    <!--  <a href="/shops-photo-checker/processing-image-unsucc" >Upload an unsuccessful photo</a><br/><br/> -->
-
-
-
+    {{< hmpo-partials-form}}
+    {{$form}}
+        {{#radio-group}}what-are-you{{/radio-group}}
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+    {{/ hmpo-partials-form}}
 {{/content}}
 
 {{/ layout}}
