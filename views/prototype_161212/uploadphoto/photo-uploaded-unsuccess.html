@@ -8,24 +8,41 @@
 
 {{$content}}
 
-        <div class="panel-indent panel-photo-result panel-photo-pass">
-            <h2>Photo passed first check</h2>
-            <p>Your photo has been automatically checked for common mistakes.</p>
-        </div>
-        <p>We’ll still check it manually and we could still ask for another if something doesn't look right.</p>
-
-        <div class="panel panel-border-wide">
-            <p>
-              If you're not happy with your photo, <a href="/prototype_161212/uploadphoto">upload a new one now</a>.
-            </p>
-        </div>
-
+      <p>Your photo has failed for the following reasons:</p>
+      <div class="panel-indent panel-photo-result panel-photo-error">
+          <h2>It looks like your mouth is open</h2>
+          <p>Sometimes this is caused by facial hair or shadows near your mouth. Please try different lighting.</p>
+          <p>If there’s a medical reason why your mouth appears to be open, override this message and submit your photo.</p>
+      </div>
+      <details>
+        <summary><span class="summary">If you believe your photo should be accepted</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>You can only use this photo if either:</p>
+          </div>
+      </details>
         {{< hmpo-partials-form}}
           {{$form}}
             {{#input-submit}}{{/input-submit}}
           {{/form}}
         {{/ hmpo-partials-form}}
 
+        <p>Find out <a href="">how to get another photo</a>.</p>
+
 {{/content}}
+{{$sidebar}}
+<div class="column-one-third">
+  <br/>
+    <br/>
+      <div class="sidebar related">
+        <div class="photo-preview-inner">
+          <h2 class="heading-medium">Your photo</h2>
+            <div class="photo">
+              <img src="../../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+          </div>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
 
 {{/ layout}}
