@@ -1,7 +1,13 @@
 module.exports = {
     '/': {
         template: 'index',
-        fields:['companyName', 'postcode'],
+        fields:['what-are-you'],
+        next: '/upload'
+    },
+    '/upload': {
+        next: '/processing-image'
+    },
+    '/upload-only': {
         next: '/processing-image'
     },
     '/processing-image': {
