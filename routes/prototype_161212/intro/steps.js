@@ -8,7 +8,7 @@ module.exports = {
       next: '/you-need-a-photo'
     },
     '/what-you-need-overseas': {
-      backLink: './',
+      backLink: '/../prototype_161212/overseas/have-to-send',
       next: '/choose-photo-method-overseas'
     },
     '/you-need-a-photo': {
