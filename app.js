@@ -99,6 +99,7 @@ function init(sessionStore) {
     //prototype 161124
         app.use('/prototype_161212/overseas', require('./routes/prototype_161212/overseas'));
         app.use('/prototype_161212/uploadphoto', require('./routes/prototype_161212/uploadphoto'));
+        app.use('/prototype_161212/filter-common', require('./routes/prototype_161212/filter-common'));
         app.use('/prototype_161212/renew', require('./routes/prototype_161212/renew'));
         app.use('/prototype_161212/intro', require('./routes/prototype_161212/intro'));
         app.use('/prototype_161212/filter', require('./routes/prototype_161212/filter'));

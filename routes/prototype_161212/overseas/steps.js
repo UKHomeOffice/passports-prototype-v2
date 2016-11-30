@@ -1,47 +1,23 @@
 module.exports = {
     '/':{
-      controller: require('../../../controllers/application-country'),
-      fields: ['apply-uk', 'application-country'],
-      backLink: '/../prototype_161212/startpage-overseas',
-      next: '/what-do-you-want-to-do' /* if Yes is selected */
-    },
-    '/what-do-you-want-to-do': {
-        fields: ['what-to-do'],
-        backLink: './',
-        next: '/dob'
-    },
-    '/dob': {
-      fields: ['age-day', 'age-year', 'age-month'],
-        backLink: './',
-        next: '/passport-damaged' /* if Yes is selected */
+      fields: ['issuing-authority', 'age-year', 'age-month'],
+      backLink: '../filter-common/dob',
+      next: '/passport-damaged'
     },
     '/passport-damaged': {
       fields: ['passport-damaged'],
-        backLink: './apply-from-uk',
-        next: '/passport-expiry' /* if No is selected */
-    },
-    '/passport-expiry': {
-      fields: ['expiry-year', 'expiry-month'],
-        backLink: './passport-damaged',
-        next: '/uncancelled'
+        backLink: './',
+        next: '/uncancelled' /* if No is selected */
     },
     '/uncancelled': {
-        controller: require('../../../controllers/go-overseas'),
         fields: ['uncancelled'],
-        backLink: './passport-expiry',
-        next: '/../intro',
-      /*  nextAlt: '../overseas'*/
-        nextAlt: '/../prototype_161212/overseas/british-citizen'
+        backLink: './passport-damaged',
+        next: '/british-citizen'
     },
     '/british-citizen': {
         fields: ['british-citizen'],
         backLink: './uncancelled',
-        next: '/about-your-passport' /* if Yes is selected */
-    },
-    '/about-your-passport': {
-        fields: ['issuing-authority', 'age-year', 'age-month'],
-        backLink: './',
-        next: '/have-to-send'
+        next: '/have-to-send' /* if Yes is selected */
     },
     '/have-to-send': {
       backLink: './about-your-passport',
