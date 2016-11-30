@@ -111,6 +111,8 @@ function init(sessionStore) {
         app.use('/prototype_161212/renew-without-photo', require('./routes/prototype_161212/renew-without-photo'));
         app.use('/prototype_161212/takephoto', require('./routes/prototype_161212/takephoto'));
         app.use('/prototype_161212/upload', require('./routes/prototype_161212/upload'));
+        app.use('/prototype_161212/rejectedphoto', require('./routes/prototype_161212/rejectedphoto'));
+
 
 
     //How to

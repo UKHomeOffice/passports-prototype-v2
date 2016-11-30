@@ -15,16 +15,18 @@
           <p>If there’s a medical reason why your mouth appears to be open, override this message and submit your photo.</p>
       </div>
       <details>
-        <summary><span class="summary">If you believe your photo should be accepted</span></summary>
+        <summary><span class="summary">Can I use this photo?</span></summary>
           <div class="panel panel-border-narrow">
-            <p>You can only use this photo if either:</p>
+            <p>You can only use this photo if you:</p>
+            <ul>
+                <li>have a medical or religious reason why it doesn't meet the rules</li>
+                <li>think that the reason it failed is not correct</li>
+            </ul>
+            <p>Your application will be detayed if we have to ask you for a different photo</p>
+            <a href="" class="button">I understand - use this photo</a><br/><br/>
           </div>
       </details>
-        {{< hmpo-partials-form}}
-          {{$form}}
-            {{#input-submit}}{{/input-submit}}
-          {{/form}}
-        {{/ hmpo-partials-form}}
+      <a href="" class="button">Try another photo</a><br/><br/>
 
         <p>Find out <a href="">how to get another photo</a>.</p>
 
