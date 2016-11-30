@@ -15,7 +15,7 @@ module.exports = {
       {
         type:'equal',
         arguments:['company'], /* if the arguments are NOT selected */
-        redirect:'/shops-photo-checker/upload.html'
+        redirect:'/shops-photo-checker/upload-only'
       }
     ]
   },

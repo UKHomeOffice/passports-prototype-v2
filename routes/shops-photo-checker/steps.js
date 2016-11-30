@@ -7,6 +7,9 @@ module.exports = {
     '/upload': {
         next: '/processing-image'
     },
+    '/upload-only': {
+        next: '/processing-image'
+    },
     '/processing-image': {
         next: '/photo-uploaded-success'
     },
