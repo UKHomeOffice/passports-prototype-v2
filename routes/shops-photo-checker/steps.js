@@ -1,15 +1,20 @@
 module.exports = {
-    '/': {
+  '/': {
+      template: 'index',
+      fields:['companyName'],
+      next: '/upload'
+    },
+    /* '/': {
         template: 'index',
         fields:['what-are-you'],
         next: '/upload'
-    },
-    '/upload': {
+    }, */
+    /* '/upload': {
         next: '/processing-image'
     },
     '/upload-only': {
         next: '/processing-image'
-    },
+    }, */
     '/processing-image': {
         next: '/photo-uploaded-success'
     },
