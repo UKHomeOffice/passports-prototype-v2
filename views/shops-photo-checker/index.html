@@ -1,23 +1,24 @@
-{{< layout}}
+{{< layout2}}
 
-{{$propositionHeader}}{{/propositionHeader}}
-
-{{$pageTitle}}Company or individual?{{/pageTitle}}
+{{$pageTitle}}Upload your photo{{/pageTitle}}
 
 {{$header}}
     <h1>Passport photo checker</h1>
 {{/header}}
 
 {{$content}}
-    <p>This is a line about the photo checker, what it is, what it isn't and who it's for.</p>
-    <br/>
-    <h2>Are you a company or an individual?</h2>
-    {{< hmpo-partials-form}}
-    {{$form}}
-        {{#radio-group}}what-are-you{{/radio-group}}
-        {{#input-submit}}{{/input-submit}}
-    {{/form}}
-    {{/ hmpo-partials-form}}
+        <p>A line or 2 of explanation in here about what this is for and what to expect from it.</p>
+        
+        <h2>Check a photo</h2>
+        <!-- {{#input-text}}companyName{{/input-text}}
+
+        {{#input-text}}postcode{{/input-text}} -->
+        <a href="/shops-photo-checker/processing-image" class="button">Upload a photo</a><br/><br/>
+        <br>
+        <a href="/shops-photo-checker/processing-image-unsucc" >Upload an unsuccessful photo</a><br/><br/>
+
+
+
 {{/content}}
 
-{{/ layout}}
+{{/ layout2}}
