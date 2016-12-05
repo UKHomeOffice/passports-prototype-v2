@@ -113,7 +113,8 @@ function init(sessionStore) {
         app.use('/prototype_161212/upload', require('./routes/prototype_161212/upload'));
         app.use('/prototype_161212/rejectedphoto', require('./routes/prototype_161212/rejectedphoto'));
 
-
+    //Priority service
+    app.use('/priority-service', require('./routes/priority-service'));
 
     //How to
     app.use('/how-to', require('./routes/how-to'));
