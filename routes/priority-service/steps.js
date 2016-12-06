@@ -1,9 +1,9 @@
 module.exports = {
     '/': {
         template: 'index',
-        next: '/one'
+        next: '/what-to-take'
     },
-    '/one': {
+    '/what-to-take': {
         backLink: './'
     }
 };
