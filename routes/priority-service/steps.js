@@ -8,5 +8,9 @@ module.exports = {
     },
     '/what-to-take': {
         backLink: './'
+    },
+    '/how-to': {
+        backLink: './'
     }
+      
 };
