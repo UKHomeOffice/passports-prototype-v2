@@ -9,7 +9,14 @@ module.exports = {
     '/what-to-take': {
         backLink: './'
     },
+<<<<<<< HEAD
     '/what-you-need': {
         backLink: './'
     },  
+=======
+    '/how-to': {
+        backLink: './'
+    }
+      
+>>>>>>> PEXRD-66
 };
