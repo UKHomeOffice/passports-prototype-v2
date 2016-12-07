@@ -8,5 +8,8 @@ module.exports = {
     },
     '/what-to-take': {
         backLink: './'
-    }
+    },
+    '/what-you-need': {
+        backLink: './'
+    },  
 };
