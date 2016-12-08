@@ -1,0 +1,27 @@
+{{< layout}}
+
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Are you applying for a second UK passport?{{/pageTitle}}
+
+{{$header}}
+    <h1>Are you applying for a second UK passport?</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+        {{#radio-group}}second{{/radio-group}}
+        <div id="apply-second" class="reveal js-hidden">
+          <div class="panel panel-border-narrow">
+              <p>You cannot use Premium Click & Collect to apply for or renew a second UK passport.</p>
+              <p>You’ll need to <a href="https://www.gov.uk/get-a-passport-urgently/book-appointment-pay">use the existing service.</a>.</p>
+          </div>
+        </div>
+
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
