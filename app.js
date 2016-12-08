@@ -118,6 +118,7 @@ function init(sessionStore) {
     app.use('/priority-service-filter-common', require('./routes/priority-service/filter-common'));
     app.use('/priority-service-filter', require('./routes/priority-service/filter'));
     app.use('/priority-service-intro', require('./routes/priority-service/intro'));
+    app.use('/not-eligible', require('./routes/priority-service/not-eligible'));
 
     //How to
     app.use('/how-to', require('./routes/how-to'));
