@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-        template: 'index',
+        template: 'how-to',
         next: '/what-you-need'
     }
 };

@@ -2,7 +2,7 @@ module.exports = {
     '/':{
       controller: require('../../../controllers/application-country'),
       fields: ['apply-uk', 'application-country'],
-      backLink: '/../prototype_161212/startpage',
+      backLink: 'priority-service',
       next: '/what-do-you-want-to-do', /* if Yes is selected */
     },
     '/what-do-you-want-to-do': {
@@ -14,7 +14,7 @@ module.exports = {
       fields: ['age-day', 'age-year', 'age-month'],
       controller: require('../../../controllers/go-overseas'),
       backLink: './',
-      next: '/../filter', /* if they are from the UK */
+      next: '/../priority-service-filter', /* if they are from the UK */
       nextAlt: '../overseas' /* if they are from overseas */
     }
 };

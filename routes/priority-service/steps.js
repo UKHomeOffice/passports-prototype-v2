@@ -1,7 +1,7 @@
 module.exports = {
     '/': {
         template: 'index',
-        next: '/what-to-take'
+        next: '/prices'
     },
     '/prices': {
         backLink: './'
@@ -11,6 +11,7 @@ module.exports = {
     },
     '/how-to': {
         backLink: './'
+
     }
-      
+
 };
