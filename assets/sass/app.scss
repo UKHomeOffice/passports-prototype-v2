@@ -431,3 +431,125 @@ details {
 .panel-photo-error h2{
   margin-top:0!important;
 }
+
+/* priority service fixes */
+aside {
+    margin: 0 0 2.5em!important;
+    padding-bottom: 1em;
+    overflow: hidden;
+    z-index: 10;
+    border-bottom: 1px solid #bbb;
+}
+aside .page-navigation li {
+    font-size: 16px;
+    line-height: 1.25;
+    list-style-position: outside;
+    font-weight: 400;
+    text-transform: none;
+}
+
+aside .page-navigation li.active {
+    padding: 0.25em 0.25em 0.25em 0;
+}
+aside .page-navigation li {
+    list-style: decimal;
+    list-style-position: outside;
+    margin-right: 0.75em;
+    margin-left: 1.5em;
+    clear: left;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-top:0.25em;
+    margin-bottom:0.25em;
+    padding: 0.25em 0.25em 0.25em 0;
+
+}
+@media (min-width: 641px){
+aside .page-navigation li {
+    font-size: 16px;
+    line-height: 1.25;
+}
+}
+/* next and previous links */
+.pagination {
+    display: block;
+    margin: 4em 0 0 0;
+    border-bottom: 1px solid #bfc1c3;
+}
+.pagination li{
+    margin: 0;
+    padding: 0;
+    width: 49%;
+}
+.pagination li.next {
+    float: right;
+    text-align: right;
+}
+.pagination li.previous {
+  float: left;
+  text-align: left;
+}
+.pagination li a {
+    background-color: transparent;
+    display: block;
+    color: #005ea5;
+    text-decoration: none;
+}
+.pagination li.next a {
+    padding: 0.75em 3em 0.75em 0;
+}
+.pagination li.previous a {
+    padding: 0.75em 0 0.75em 3em;
+}
+.pagination li a .pagination-label {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 20px;
+    line-height: 1.11111;
+    margin-bottom: 0.1em;
+    display: block;
+}
+@media (min-width: 641px){
+.pagination li a .pagination-label {
+    font-size: 27px;
+    line-height: 1.25;
+}
+}
+.group:after {
+    clear: both;
+}
+.group:before, .group:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+.pagination li.next a:before {
+    background: transparent url("../images/arrow-sprite-0fa429eadf557102b8e1ca6bf7220f7e61812efbc4f52ed40e5aedd11474635f.png") no-repeat -102px -11px;
+    margin: -4px -32px 0 0;
+    display: block;
+    float: right;
+    width: 30px;
+    height: 38px;
+    content: " ";
+}
+.pagination li.previous a:before {
+    background: transparent url("../images/arrow-sprite-0fa429eadf557102b8e1ca6bf7220f7e61812efbc4f52ed40e5aedd11474635f.png") no-repeat -20px -11px;
+    margin: -4px 0 0 -32px;
+    display: block;
+    float: left;
+    width: 30px;
+    height: 38px;
+    content: " ";
+}
+.pagination li a .pagination-part-title {
+    text-decoration: underline;
+}
+
+.pagination ul{
+      list-style-type: none;
+}
