@@ -25,7 +25,7 @@ module.exports = {
     '/second': {
       fields: ['second-passport'],
         backLink: './',
-        next: '/../intro', /* if No is selected */
+        next: '/../priority-service-intro', /* if No is selected */
         nextAlt: '/not-eligible'
     }
 };
