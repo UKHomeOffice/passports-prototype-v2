@@ -20,11 +20,12 @@ module.exports = {
       fields: ['collect'],
         backLink: './',
         next: '/second' /* if No is selected */
+        nextAlt: '/not-eligible'
     },
     '/second': {
       fields: ['second-passport'],
         backLink: './',
         next: '/../intro', /* if No is selected */
-        nextAlt: '../overseas'
+        nextAlt: '/not-eligible'
     }
 };
