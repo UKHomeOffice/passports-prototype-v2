@@ -432,6 +432,26 @@ details {
   margin-top:0!important;
 }
 
+
+/* circles numbers */
+.circle {
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #fff;
+    color: #005ea5;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    float:left;
+    margin-right:10px;
+}
+.circle-step {
+    min-width: 24px;
+    min-height: 24px;
+    line-height: 24px;
+
 /* priority service fixes */
 aside {
     margin: 0 0 2.5em!important;
