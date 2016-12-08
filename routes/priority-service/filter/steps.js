@@ -19,7 +19,7 @@ module.exports = {
     '/collect': {
       fields: ['collect'],
         backLink: './',
-        next: '/second' /* if No is selected */
+        next: '/second', /* if No is selected */
         nextAlt: '/not-eligible'
     },
     '/second': {
