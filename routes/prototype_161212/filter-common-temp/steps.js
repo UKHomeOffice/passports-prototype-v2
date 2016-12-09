@@ -1,7 +1,7 @@
 module.exports = {
     '/':{
       fields: ['apply-uk-temp'],
-      backLink: './',
+      backLink: '/../prototype_161212/startpage-temp',
       next: '/what-do-you-want-to-do', /* if Yes is selected */
     },
     '/what-do-you-want-to-do': {
