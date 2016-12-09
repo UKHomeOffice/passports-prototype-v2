@@ -22,41 +22,24 @@ module.exports = {
       }
     ]
   },
-'apply-uk': {
+'apply-uk-temp': {
   legend: {
     value: 'Are you applying from the UK?',
     className: 'visuallyhidden'
   },
   options: [
-    { value: true, label: 'Yes' },
-    { value: false, label: 'No', toggle: 'application-country', child: 'select' }
+    {value: 'Yes', label: 'Yes'},
+    {value: 'No', label: 'No'}
   ],
-  formatter: ['boolean'],
   validate: [
-    'required'
+    'required',
+    {
+      type:'equal',
+      arguments:['Yes'], /* if Yes is selected */
+      redirect:'https://www.gov.uk/overseas-passports'
+    }
   ],
   className: 'inline'
-},
-'application-country': {
-  options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
-    return {
-      value: c.id,
-      label: c.name,
-      attributes: [
-        {
-          attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-        }
-      ]
-    }
-  })),
-  validate: [
-    'required'
-  ],
-  dependent: {
-    field: 'apply-uk',
-    value: false
-  },
-  className: 'typeahead'
 },
   'age-day': {
     labelClassName: 'form-label',
