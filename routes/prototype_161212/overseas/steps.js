@@ -17,7 +17,7 @@ module.exports = {
     '/british-citizen': {
         fields: ['british-citizen'],
         backLink: './uncancelled',
-        next: '/have-to-send' /* if Yes is selected */
+        next: '/try-service' /* if Yes is selected */
     },
     '/have-to-send': {
       backLink: './about-your-passport',
@@ -26,5 +26,9 @@ module.exports = {
     '/prove-your-identity': {
       backLink: './about-your-passport',
       next: '/../intro/what-you-need-overseas'
+    },
+    '/try-service': {
+        backLink: './',
+        next: '/../intro/what-you-need-overseas' /* if yes is selected */
     }
 };
