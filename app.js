@@ -96,7 +96,7 @@ function init(sessionStore) {
     app.use('/prototype_161124/takephoto', require('./routes/prototype_161124/takephoto'));
     app.use('/prototype_161124/upload', require('./routes/prototype_161124/upload'));
 
-    //prototype 161124
+    //prototype 161212
         app.use('/prototype_161212/overseas', require('./routes/prototype_161212/overseas'));
         app.use('/prototype_161212/uploadphoto', require('./routes/prototype_161212/uploadphoto'));
         app.use('/prototype_161212/filter-common', require('./routes/prototype_161212/filter-common'));
@@ -112,6 +112,8 @@ function init(sessionStore) {
         app.use('/prototype_161212/takephoto', require('./routes/prototype_161212/takephoto'));
         app.use('/prototype_161212/upload', require('./routes/prototype_161212/upload'));
         app.use('/prototype_161212/rejectedphoto', require('./routes/prototype_161212/rejectedphoto'));
+        app.use('/prototype_161212/filter-common-temp', require('./routes/prototype_161212/filter-common-temp'));
+
 
     //Priority service
     app.use('/priority-service', require('./routes/priority-service'));

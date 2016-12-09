@@ -45,7 +45,10 @@ module.exports = {
     },
     '/sign': {
         fields: ['can-sign', 'no-sign-reason'],
-        next: '/passport-special-delivery'
+        controller: require('../../../controllers/go-overseas'),
+        backLink: './',
+        next: '/passport-special-delivery', /* if they are from the UK */
+        nextAlt: '../summary' /* if they are from overseas */
     },
     '/passport-special-delivery': {
         next: '/summary',
