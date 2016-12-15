@@ -12,23 +12,16 @@
 {{$form}}
 
       <p>This is the address we will post your passport to.</p>
-      {{#input-text}}address1{{/input-text}}
+      {{#input-text-compound}}address1{{/input-text-compound}}
       {{#input-text}}address2{{/input-text}}
-
-      <label for="town-title" class="form-label-bold">
-          Town or city (optional)
-      </label>
-      <input type="text" name="town-title" id="town-title" class="form-control" aria-required="true" maxlength="50">
+      {{#input-text}}town{{/input-text}}
+      {{#input-text}}postcode{{/input-text}}
 
       <label for="state-title" class="form-label-bold">
-          State of Province (optional)
+          Country
       </label>
-      <input type="text" name="state-title" id="state-title" class="form-control" aria-required="true" maxlength="50">
+      <p>France</p>
 
-      <label for="state-title" class="form-label-bold">
-          Postcode (optional)
-      </label>
-      <input type="text" name="state-title" id="state-title" class="form-control" aria-required="true" maxlength="50">
 
       <label for="state-title" class="form-label-bold">
           Country
