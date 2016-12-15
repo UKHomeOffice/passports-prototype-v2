@@ -123,6 +123,12 @@ function init(sessionStore) {
     app.use('/priority-service-filter', require('./routes/priority-service/filter'));
     app.use('/priority-service-intro', require('./routes/priority-service/intro'));
     app.use('/not-eligible', require('./routes/priority-service/not-eligible'));
+    //Priority service-161221
+    app.use('/priority-service-161221', require('./routes/priority-service-161221'));
+    app.use('/priority-service-161221-filter-common', require('./routes/priority-service-161221/filter-common'));
+    app.use('/priority-service-161221/filter', require('./routes/priority-service-161221/filter'));
+    app.use('/priority-service-161221/intro', require('./routes/priority-service-161221/intro'));
+    app.use('/not-eligible', require('./routes/priority-service-161221/not-eligible'));
 
     //How to
     app.use('/how-to', require('./routes/how-to'));
