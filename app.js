@@ -98,6 +98,7 @@ function init(sessionStore) {
 
     //prototype 161212
         app.use('/prototype_161212/overseas', require('./routes/prototype_161212/overseas'));
+        app.use('/prototype_161212/overseas-not-eligible', require('./routes/prototype_161212/overseas-not-eligible'));
         app.use('/prototype_161212/uploadphoto', require('./routes/prototype_161212/uploadphoto'));
         app.use('/prototype_161212/filter-common', require('./routes/prototype_161212/filter-common'));
         app.use('/prototype_161212/renew', require('./routes/prototype_161212/renew'));
