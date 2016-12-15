@@ -11,7 +11,9 @@ module.exports = {
     },
     '/how-to': {
         backLink: './'
-
+    },
+    '/govuk-version2': {
+        backLink: './'
     }
 
 };
