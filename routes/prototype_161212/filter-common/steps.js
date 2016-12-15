@@ -15,6 +15,7 @@ module.exports = {
       controller: require('../../../controllers/go-overseas'),
       backLink: './',
       next: '/../filter', /* if they are from the UK */
-      nextAlt: '../overseas' /* if they are from overseas */
+      nextAlt: '../overseas', /* if they are from Germany/France */
+      nextAltAlt:'../overseas-not-eligible' /* if they are from Afganistan */
     }
 };
