@@ -8,7 +8,8 @@ app.use(require('hmpo-template-mixins')(fields, { sharedTranslationKey: 'prototy
 app.use(wizard(steps, fields, {
     controller: require('../../../controllers/form'),
     templatePath: 'prototype_161212/renew',
-    params: '/:action?',
+    name: 'common',
+    params: '/:action?'
 }));
 
 module.exports = app;
