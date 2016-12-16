@@ -13,23 +13,28 @@
 
     <p>We’ll only use these details to contact you about your application.</p>
     {{#input-text}}email{{/input-text}}
-    <fieldset>
+  <!--  <fieldset>
         <legend><span class="form-label-bold">Mobile or home phone</span></legend>
         <div class="form-date">
           {{#input-text}}country-code{{/input-text}}
           {{#input-text}}mobile{{/input-text}}
         </div>
-    </fieldset>
-    <br/>
-
-    <!--
-    <label for="phone-title" class="form-label-bold">
-        Mobile or home phone
-    </label>
-    <input type="text" value="+33" name="country-code-phone-title" id="country-code-phone-title" class="form-control" aria-required="true" maxlength="5" style="width:60px; float:left; margin-right:15px">
-    <input type="text" name="phone-title" id="phone-title" class="form-control" aria-required="true" maxlength="50">
+    </fieldset>-->
+    <fieldset>
+            <legend><span class="form-label-bold">Mobile or home phone</span></legend>
+            <div class="form-date">
+              <div id="country-code-group" class="form-group">
+                <label for="country-code" class="visuallyhidden"></label>
+                <input type="text" name="country-code" id="country-code" class="form-control" aria-required="true" value="+33">
+              </div>
+              <div id="mobile-group" class="form-group">
+                <label for="mobile" class="visuallyhidden"></label>
+                <input type="text" name="mobile" id="mobile" class="form-control" aria-required="true">
+              </div>
+            </div>
+        </fieldset>
     <br/><br/>
-  -->
+
     <details>
         <summary><span class="summary">I need to tell you more about how to contact me</span></summary>
         <div class="panel panel-border-narrow">

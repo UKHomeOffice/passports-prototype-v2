@@ -164,7 +164,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             {
                 step: this.getEditStep('email'),
                 title: 'Contact details',
-                value: join(values, ['email', 'mobile'], '<br><br>')
+                value: join(values, ['email','country-code', 'mobile'], '<br><br>')
             },
             {
                 step: this.getEditStep('braille'),

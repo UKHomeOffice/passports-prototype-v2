@@ -189,10 +189,8 @@ module.exports = {
     labelClassName: 'visuallyhidden',
     formatter: 'removehyphens',
     validate: [
-        'numeric',
         'required'
-    ],
-    value: '+33'
+    ]
   },
   'mobile': {
     labelClassName: 'visuallyhidden',
