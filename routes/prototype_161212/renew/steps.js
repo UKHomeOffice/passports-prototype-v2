@@ -33,11 +33,15 @@ module.exports = {
       },
     '/home-address-overseas':{
         fields:['address1', 'address2', 'town', 'postcode'],
-        next: '/contact-details'
+        next: '/contact-details-overseas'
     },
     '/home-address':{
         fields:['address1', 'address2', 'town', 'postcode'],
         next: '/contact-details'
+    },
+    '/contact-details-overseas':{
+        fields:['email', 'mobile'],
+        next: '/get-updates'
     },
     '/contact-details':{
         fields:['email', 'mobile'],
