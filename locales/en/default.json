@@ -55,6 +55,9 @@
         "email":{
           "label": "Email"
         },
+        "country-code":{
+          "value": "Country code"
+        },
         "mobile":{
           "label": "Mobile or home phone"
         },

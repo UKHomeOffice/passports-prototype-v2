@@ -185,11 +185,19 @@ module.exports = {
           'required'
       ]
   },
+  'country-code': {
+    labelClassName: 'visuallyhidden',
+    formatter: 'removehyphens',
+    validate: [
+        'required'
+    ]
+  },
   'mobile': {
-      validate: [
-          'numeric',
-          'required'
-      ]
+    labelClassName: 'visuallyhidden',
+    validate: [
+        'numeric',
+        'required'
+    ]
   },
   'passport-options':{
     legend: {
