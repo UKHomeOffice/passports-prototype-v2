@@ -159,7 +159,12 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             {
                 step: this.getEditStep('postcode'),
                 title: 'Address',
-                value: join(values, ['address1', 'address2', 'town', 'postcode'], '<br>')
+                /*value: join(values, ['address1', 'address2', 'town', 'postcode'], '<br>')*/
+                value: function(){
+                  var output = join(values, ['address1', 'address2', 'town', 'postcode'], '<br/>');
+                  output += '<br/>France';
+                  return output;
+                }
             },
             {
                 step: this.getEditStep('email'),
