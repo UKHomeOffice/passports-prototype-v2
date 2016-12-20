@@ -41,11 +41,14 @@ module.exports = {
     },
     '/contact-details-overseas':{
         fields:['email','country-code' ,'mobile'],
-        next: '/get-updates'
+        next: '/get-updates-overseas'
     },
     '/contact-details':{
         fields:['email', 'mobile'],
         next: '/get-updates'
+    },
+    '/get-updates-overseas':{
+        next: '/passport-options'
     },
     '/get-updates':{
         next: '/passport-options'
