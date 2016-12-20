@@ -56,18 +56,18 @@ validate: [
 },
   'british-citizen': {
     legend: {
-      value: 'Are you a British citizen?',
+      value: 'What nationality is shown on your passport?',
       className: 'visuallyhidden'
     },
     options: [
-      {value: 'Yes', label: 'Yes'},
-      {value: 'No', label: 'No'}
+      {value: 'british-citizen', label: 'British Citizen'},
+      {value: 'Other', label: 'Other', toggle: 'other-citizen' }
     ],
     validate: [
       'required',
       {
         type:'equal',
-        arguments:['Yes'], /* if No is selected */
+        arguments:['british-citizen'], /* if No is selected */
         redirect:'https://passportapplication.service.gov.uk/ips-olc/'
       }
     ]
