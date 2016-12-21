@@ -77,14 +77,10 @@ module.exports = {
     ]
   },
   'name': {
-      validate: [
-          'required'
-        ]
+
   },
   'lastname': {
-      validate: [
-          'required'
-        ]
+    
   },
   'previous-name': {
       formatter: 'boolean',
