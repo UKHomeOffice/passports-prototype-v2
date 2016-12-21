@@ -159,12 +159,23 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             {
                 step: this.getEditStep('postcode'),
                 title: 'Address',
-                value: join(values, ['address1', 'address2', 'town', 'postcode'], '<br>')
+                /*value: join(values, ['address1', 'address2', 'town', 'postcode'], '<br>')*/
+                value: function(){
+                  var output = join(values, ['address1', 'address2', 'town', 'postcode'], '<br/>');
+                  output += '<br/>France';
+                  return output;
+                }
             },
             {
                 step: this.getEditStep('email'),
                 title: 'Contact details',
-                value: join(values, ['email', 'mobile'], '<br><br>')
+                /*value: join(values, ['email','country-code', 'mobile'], '<br><br>')*/
+                value: function() {
+                  var output = join(values, ['email'], '<br/><br/>');
+                  output += '<br/><br/>';
+                  output += join(values, ['country-code', 'mobile']);
+                  return output;
+                }
             },
             {
                 step: this.getEditStep('braille'),

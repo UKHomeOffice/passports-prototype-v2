@@ -59,21 +59,20 @@ module.exports = {
     },
     '/sign': {
         fields: ['can-sign', 'no-sign-reason'],
-      /*  controller: require('../../../controllers/go-overseas'),*/
         backLink: './',
         next: '/passport-special-delivery', /* if they are from the UK */
-        /*nextAlt: '../summary'  if they are from overseas */
+        controller: require('../../../controllers/go-overseas'),
+        nextAlt: './summary-overseas'
+    },
+    '/summary-overseas':{
+        controller: require('../../../controllers/confirm-overseas'),
+        template: 'confirm',
+        next: '/declaration'
     },
     '/passport-special-delivery': {
         next: '/summary',
         fields: ['secure-return']
     },
-      /*
-    '/returning-old-pass':{  /* -> to combine with delivering
-        backLink: './sending-old-pass',
-        fields: ['return-passport'],
-        next: '/title'
-    },*/
     '/summary':{
         controller: require('../../../controllers/confirm'),
         template: 'confirm',
