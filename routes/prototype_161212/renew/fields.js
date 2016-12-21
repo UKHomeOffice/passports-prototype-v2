@@ -80,7 +80,7 @@ module.exports = {
 
   },
   'lastname': {
-    
+
   },
   'previous-name': {
       formatter: 'boolean',
@@ -189,7 +189,6 @@ module.exports = {
     ]
   },
   'mobile': {
-    labelClassName: 'visuallyhidden',
     validate: [
         'numeric',
         'required'
