@@ -3,7 +3,7 @@
 {{$pageTitle}}What nationality is shown on your passport?{{/pageTitle}}
 
 {{$header}}
-    <h1>What nationality is shown on your passport?</h1>
+    <h1>Which nationality is written on your passport?</h1>
 {{/header}}
 
 {{$content}}
@@ -11,14 +11,15 @@
     {{< hmpo-partials-form}}
     {{$form}}
         <fieldset class="inline">
-            <p class="form-hint" id="dob-hint">Check your nationality on the photo page of your passport.</p>
+          <!--
+            <p class="form-hint" id="dob-hint">Check your nationality on the photo page of your passport.</p> -->
             {{#radio-group}}british-citizen{{/radio-group}}
             <div id="other-citizen" class="reveal js-hidden" style="margin-bottom:20px; margin-top:0px;">
                 <div class="panel panel-border-narrow">
-                  <p>Please choose one.</p>
+                  <p>Select nationality</p>
                   <select>
                     <option value="empty"></option>
-                      <option value="bno">British National overseas</option>
+                      <option value="bno">British National Overseas</option>
                       <option value="botc">British Overseas Territory Citizen</option>
                       <option value="boc">British Overseas Citizen</option>
                       <option value="bpp">British Protected Person</option>
