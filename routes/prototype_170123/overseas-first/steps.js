@@ -6,16 +6,16 @@ module.exports = {
     },
     '/issued':{
         fields: ['issuing-authority', 'age-year', 'age-month'],
-        backLink: '../filter-common/dob',
+        backLink: './',
         next: '/country-born'
       },
     '/country-born': {
         controller: require('../../../controllers/application-country'),
         fields: ['application-country'],
-        backLink: './',
+        backLink: './issued',
         next: '/france-first'
       },
     '/france-first': {
-        backLink: './',
+        backLink: './country-born',
       }
 };
