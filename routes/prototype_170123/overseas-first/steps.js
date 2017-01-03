@@ -7,6 +7,12 @@ module.exports = {
     '/issued':{
         fields: ['issuing-authority', 'age-year', 'age-month'],
         backLink: '../filter-common/dob',
+        next: '/country-born'
+      },
+    '/country-born': {
+        controller: require('../../../controllers/application-country'),
+        fields: ['application-country'],
+        backLink: './',
         next: '/france-first'
       },
     '/france-first': {
