@@ -18,22 +18,30 @@ module.exports = {
         'required'
     ]
 },
-    'age-year': {
+  'age-day': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
+  'age-year': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
+  'age-month': {
       labelClassName: 'form-label',
       formatter: 'removehyphens',
-        validate: [
-            'numeric',
-            'required'
-        ]
-    },
-    'age-month': {
-        labelClassName: 'form-label',
-        formatter: 'removehyphens',
-        validate: [
-            'numeric',
-            'required'
-        ]
-    },
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
   'issuing-authority': {
     legend: {
       value: 'Which is your passport issuing authority?',
