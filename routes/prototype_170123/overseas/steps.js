@@ -33,6 +33,6 @@ module.exports = {
     },
     '/give-contact-details': {
         backLink: './try-service',
-        next: '/../intro/what-you-need-overseas' /* if yes is selected */
+        next: '/../intro/before-you-continue-overseas' /* if yes is selected */
     }
 };
