@@ -116,6 +116,25 @@ function init(sessionStore) {
         app.use('/prototype_161212/filter-common-temp', require('./routes/prototype_161212/filter-common-temp'));
         app.use('/prototype_161212/startpage-temp', require('./routes/prototype_161212/startpage-temp'));
 
+    //prototype 170123
+        app.use('/prototype_170123/overseas', require('./routes/prototype_170123/overseas'));
+        app.use('/prototype_170123/overseas-not-eligible', require('./routes/prototype_170123/overseas-not-eligible'));
+        app.use('/prototype_170123/uploadphoto', require('./routes/prototype_170123/uploadphoto'));
+        app.use('/prototype_170123/filter-common', require('./routes/prototype_170123/filter-common'));
+        app.use('/prototype_170123/renew', require('./routes/prototype_170123/renew'));
+        app.use('/prototype_170123/intro', require('./routes/prototype_170123/intro'));
+        app.use('/prototype_170123/filter', require('./routes/prototype_170123/filter'));
+        app.use('/prototype_170123/startpage', require('./routes/prototype_170123/startpage'));
+        app.use('/prototype_170123/startpage-overseas', require('./routes/prototype_170123/startpage-overseas'));
+        app.use('/prototype_170123/photoguide-short', require('./routes/prototype_170123/photoguide-short'));
+        app.use('/prototype_170123/photoguide-static', require('./routes/prototype_170123/photoguide-static'));
+        app.use('/prototype_170123/photoguide-shop', require('./routes/prototype_170123/photoguide-shop'));
+        app.use('/prototype_170123/takephoto', require('./routes/prototype_170123/takephoto'));
+        app.use('/prototype_170123/upload', require('./routes/prototype_170123/upload'));
+        app.use('/prototype_170123/rejectedphoto', require('./routes/prototype_170123/rejectedphoto'));
+        app.use('/prototype_170123/filter-common-temp', require('./routes/prototype_170123/filter-common-temp'));
+        app.use('/prototype_170123/startpage-temp', require('./routes/prototype_170123/startpage-temp'));
+
 
 
     //Priority service

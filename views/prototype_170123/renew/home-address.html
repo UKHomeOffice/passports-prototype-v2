@@ -1,0 +1,31 @@
+{{< layout}}
+
+{{$pageTitle}}Home address{{/pageTitle}}
+
+{{$header}}
+    <h1>Home address</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+      <p>This is the address we'll send your new passport to. <br>
+      	We'll also return your old passport to this address.</p>
+      {{#input-text-compound}}address1{{/input-text-compound}}
+      {{#input-text}}address2{{/input-text}}
+
+      {{#input-text}}town{{/input-text}}
+
+      {{#input-text}}postcode{{/input-text}}
+
+    {{#input-submit}}{{/input-submit}}
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+
+{{/ layout}}
