@@ -119,6 +119,7 @@ function init(sessionStore) {
     //prototype 170123
         app.use('/prototype_170123/overseas', require('./routes/prototype_170123/overseas'));
         app.use('/prototype_170123/overseas-not-eligible', require('./routes/prototype_170123/overseas-not-eligible'));
+        app.use('/prototype_170123/overseas-first', require('./routes/prototype_170123/overseas-first'));
         app.use('/prototype_170123/uploadphoto', require('./routes/prototype_170123/uploadphoto'));
         app.use('/prototype_170123/filter-common', require('./routes/prototype_170123/filter-common'));
         app.use('/prototype_170123/renew', require('./routes/prototype_170123/renew'));
