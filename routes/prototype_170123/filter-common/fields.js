@@ -37,8 +37,13 @@ module.exports = {
       'required',
       {
         type:'equal',
-        arguments:['Renew'], /* if the arguments are NOT selected */
-        redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+        arguments:['Renew', 'Change', 'Replace'], /* if the arguments are NOT selected */
+        redirect:'/../overseas-first'
+      },
+      {
+        type:'equal',
+        arguments:['Renew', 'First'], /* if the arguments are NOT selected */
+        redirect:'/../overseas-lost-change'
       }
     ]
   },
