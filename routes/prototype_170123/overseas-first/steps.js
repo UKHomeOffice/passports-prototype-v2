@@ -7,9 +7,9 @@ module.exports = {
     '/issued':{
         fields: ['issuing-authority', 'age-year', 'age-month'],
         backLink: '../filter-common/dob',
-        next: '/afghanistan'
+        next: '/france-first'
       },
-    '/afghanistan': {
+    '/france-first': {
         backLink: './',
       }
 };
