@@ -6,6 +6,7 @@ module.exports = {
       backLink: '/../prototype_170123/startpage',
       next: '/what-do-you-want-to-do', /* if Yes is selected */
       nextAlt: 'what-do-you-want-to-do-overseas', /* if they are from Germany/France */
+      nextAltAlt:'what-do-you-want-to-do-overseas'
     },
     '/what-do-you-want-to-do': {
         fields: ['what-to-do'],
