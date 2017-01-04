@@ -5,7 +5,7 @@ module.exports = {
       next: '/issued'
     },
     '/issued':{
-        fields: ['issuing-authority', 'age-year', 'age-month'],
+        fields: ['issuing-authority', 'expiry-year', 'expiry-month'],
         backLink: './',
         next: '/france-lost-change'
       },
