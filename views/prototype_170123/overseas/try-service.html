@@ -9,19 +9,9 @@
 {{$content}}
     {{< hmpo-partials-form}}
     {{$form}}
-        <p>You can take and upload a digital photo using the new online service. 
+        <p>You can take and upload a digital photo using the new online service.
           <br>We'll show you how to take a good passport photo.</p>
-<fieldset>
-          <label for="yes" class="block-label selected">
-                <input type="radio" name="title" id="yes" value="Other" aria-required="true" data-toggle="yes-title" aria-controls="yes-title" aria-expanded="true">
-                Yes, I'd like to try the new service
-          </label>
-          <label for="no" class="block-label selected">
-                <input type="radio" name="title" id="no" value="Other" aria-required="true" data-toggle="no-title" aria-controls="no-title" aria-expanded="true">
-              No, I'd prefer not to
-          </label>
-        </fieldset>
-        <br/>
+          {{#radio-group}}try-service{{/radio-group}}
         {{#input-submit}}{{/input-submit}}
     {{/form}}
     {{/ hmpo-partials-form}}
