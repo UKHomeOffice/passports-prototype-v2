@@ -102,24 +102,6 @@ validate: [
     validate: [
       'required'
     ]
-  },
-  'try-service': {
-  legend: {
-    value: 'Do you have any uncancelled passport from a different country?',
-    className: 'visuallyhidden'
-  },
-  options: [
-    {value: 'Yes', label: 'Yes, I&#39;d like to try the new service'},
-    {value: 'No', label: 'No, I&#39;d prefer not to'}
-  ],
-  validate: [
-    'required',
-    {
-      type:'equal',
-      arguments:['Yes'], /* if No is selected */
-      redirect:'/../overseas-not-eligible/france'
-    }
-  ]
   }
 
 };

@@ -6,8 +6,5 @@ module.exports = {
     },
     '/afghanistan': {
         backLink: './',
-    },
-    '/france': {
-        backLink: './',
       }
 };

@@ -28,7 +28,6 @@ module.exports = {
       next: '/../intro/what-you-need-overseas'
     },
     '/try-service': {
-        fields: ['try-service'],
         backLink: './british-citizen',
         next: '/give-contact-details' /* if yes is selected */
     },
