@@ -22,6 +22,31 @@ module.exports = {
       }
     ]
   },
+  'what-to-do-overseas': {
+    legend: {
+      value: 'What to you want to do?',
+      className: 'visuallyhidden'
+    },
+    options: [
+      {value: 'First', label: 'Apply for a first British passport'},
+      {value: 'Change', label: 'Make a change to a current British passport (including a change of name)'},
+      {value: 'Renew', label: 'Renew a British passport'},
+      {value: 'Replace', label: 'Replace a lost or stolen British passport'}
+    ],
+    validate: [
+      'required',
+      {
+        type:'equal',
+        arguments:['Renew', 'Change', 'Replace'], /* if the arguments are NOT selected */
+        redirect:'/../overseas-first'
+      },
+      {
+        type:'equal',
+        arguments:['Renew', 'First'], /* if the arguments are NOT selected */
+        redirect:'/../overseas-lost-change'
+      }
+    ]
+  },
 'apply-uk': {
   legend: {
     value: 'Are you applying from the UK?',
