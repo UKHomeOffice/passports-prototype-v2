@@ -573,3 +573,8 @@ aside .page-navigation li {
 .pagination ul{
       list-style-type: none;
 }
+
+/* table styling for static pages */
+article th, article td{
+    font-size: 16px;
+}
