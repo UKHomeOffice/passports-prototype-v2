@@ -1,0 +1,52 @@
+{{< layout}}
+
+{{$pageTitle}}Track a passport application{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Track a passport application</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+      <div id="passport-number-group" class="form-group">
+          <fieldset>
+                  {{#input-text}}reference-no{{/input-text}}
+              {{#input-text}}postcode{{/input-text}}
+          </fieldset>
+          <fieldset>
+            <legend><span class="form-label-bold">Date of birth</span></legend>
+              <div class="form-date">
+                <p class="form-hint" id="dob-hint">For example 20 01 2004</p>
+                  {{#input-text}}age-day{{/input-text}}
+                  {{#input-text}}age-month{{/input-text}}
+                  {{#input-text}}age-year{{/input-text}}
+              </div>
+          </fieldset>
+      </div>
+
+      {{#input-submit}}{{/input-submit}}
+      {{/form}}
+  {{/ hmpo-partials-form}}
+{{/content}}
+{{$sidebar}}
+    <div class="column-one-third">
+        <div class="sidebar related GDS">
+          <div class="photo-preview-inner">
+            <div class="inner group related-subsection">
+            <h2 id="parent-subsection">Passports</h2>
+            <nav role="navigation" aria-labelledby="parent-subsection">
+              <ul>
+                <li>
+                  <a href="">Passport advice and complains</a>
+                </li>
+             </ul>
+            </nav>
+          </div>
+          </div>
+        </div>
+    </div>
+{{/sidebar}}
+
+{{/ layout}}

@@ -1,6 +1,16 @@
 module.exports = {
     '/': {
         fields: ['pex-reference'],
-        next: '/one'
+        next: '/track-a-application'
+    },
+    '/track-a-application': {
+        next: '/track'
+    },
+    '/track': {
+        fields: ['reference-no', 'postcode', 'age-day', 'age-month', 'age-year'],
+        next: '/waiting-for-old-pass'
+    },
+    '/waiting-for-old-pass': {
+        next: '/track'
     }
 };

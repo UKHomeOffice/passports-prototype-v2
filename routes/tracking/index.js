@@ -5,6 +5,8 @@ var app = require('express')(),
 
 app.use(require('hmpo-template-mixins')(fields, { sharedTranslationKey: 'prototype' }));
 
-app.use(require('hmpo-form-wizard')(steps, {}, { templatePath: 'tracking' }));
-
+app.use(wizard(steps, fields, {
+    controller: require('../../controllers/form'),
+    templatePath: 'tracking'
+}));
 module.exports = app;
