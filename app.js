@@ -161,6 +161,9 @@ function init(sessionStore) {
     //How to
     app.use('/how-to', require('./routes/how-to'));
 
+    //Tracking
+    app.use('/tracking', require('./routes/tracking'));
+
     //3rd party shops photo checker
     app.use('/shops-photo-checker', require('./routes/shops-photo-checker'));
 

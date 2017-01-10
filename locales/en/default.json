@@ -85,6 +85,14 @@
         },
         "companyName": {
             "label": "Company name"
+        },
+        "pex-reference": {
+            "legend": "Does your reference number begin with PEX?",
+            "hint": "For example PEX 123 456 7890"
+        },
+        "reference-no":{
+            "label": "Reference",
+            "hint": "You'll find this information in your confirmation email, eg PEX 123 456 7890"
         }
     },
     "validation": {
