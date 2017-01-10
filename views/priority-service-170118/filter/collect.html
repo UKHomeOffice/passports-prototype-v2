@@ -1,0 +1,31 @@
+{{< layout}}
+
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Can you collect your passport in person?{{/pageTitle}}
+
+{{$header}}
+    <h1>Can you collect your new passport in person?</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+        {{#radio-group}}collect{{/radio-group}}
+        <div id="cannot-collect" class="reveal js-hidden">
+          <div class="panel panel-border-narrow">
+              <p>You need to collect your new passport in person. <br>
+                If you can't, you need to <a href="https://www.gov.uk/get-a-passport-urgently/book-appointment-pay">use another service</a>.</p>
+
+<!--
+              <p>You’ll need to <a href="{{urls.olc}}">renew your passport a different way</a>.</p> -->
+
+          </div>
+      </div>
+        {{#input-submit}}{{/input-submit}}
+
+    {{/form}}
+{{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}

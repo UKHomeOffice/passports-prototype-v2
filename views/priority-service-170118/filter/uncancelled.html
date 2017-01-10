@@ -1,0 +1,23 @@
+{{< layout}}
+
+
+{{$pageTitle}}Do you have any uncancelled passports from a different country?{{/pageTitle}}
+
+{{$header}}
+    <h1>Do you have any uncancelled passports from a different country?</h1>
+{{/header}}
+
+{{$content}}
+
+    {{< hmpo-partials-form}}
+    {{$form}}
+      <fieldset class="inline">
+        <p>For example, if you're a dual national. This includes any non-British passport that has expired but hasn't been cancelled.</p>
+        {{#radio-group}}uncancelled{{/radio-group}}
+        {{#input-submit}}{{/input-submit}}
+      </fieldset>
+    {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
