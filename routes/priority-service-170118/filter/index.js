@@ -7,7 +7,7 @@ app.use(require('hmpo-template-mixins')(fields, { sharedTranslationKey: 'prototy
 
 app.use(wizard(steps, fields, {
     controller: require('../../../controllers/form'),
-    templatePath: 'priority-service-161221/filter'
+    templatePath: 'priority-service-170118/filter'
 }));
 
 module.exports = app;
