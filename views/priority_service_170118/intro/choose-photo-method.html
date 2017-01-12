@@ -1,0 +1,44 @@
+{{< layout}}
+
+{{$pageTitle}}Get your digital photo{{/pageTitle}}
+
+{{$header}}
+    <h1>Get a digital passport photo</h1>
+{{/header}}
+
+<!-- content changes made to you-need-a-photo.html -->
+{{$content}}
+
+    {{< hmpo-partials-form}}
+    {{$form}}
+            <div id="choose-photo-group" class="form-group{{#errors.choose-photo}} error{{/errors.choose-photo}}">
+                <fieldset role="radiogroup" aria-required="upload">
+                    <legend>
+                        <span class="form-label"></span>
+                        {{#errors.choose-photo}}<span id="{{key}}-error" class="error-message">{{errors.choose-photo.message}}</span>{{/errors.choose-photo}}
+                    </legend>
+                    <label class="block-label" for="choose-photo-myself">
+                        <input type="radio" name="choose-photo" id="choose-photo-myself" value="myself" aria-required="upload"{{#selected}}choose-photo=myself{{/selected}}{{#errors.choose-photo}} aria-describedby="{{key}}-error" aria-invalid="upload"{{/errors.choose-photo}}>
+                        Show me how to take a passport photo
+                    </label>
+                    <label class="block-label" for="choose-photo-shop">
+                        <input type="radio" name="choose-photo" id="choose-photo-shop" value="shop" aria-required="upload"{{#selected}}choose-photo=shop{{/selected}}{{#errors.choose-photo}} aria-describedby="{{key}}-error" aria-invalid="upload"{{/errors.choose-photo}}>
+                        Check what to ask for at a shop
+                    </label>
+                    <div style="clear:both"></div><br/>
+                    <h2>I have a digital photo</h2>
+                    <p class="form-block">Your photo must be taken in the last month and meet the <br><a href="/../prototype_170123/photoguide-short"> rules for passport photos</a>.</p>
+                    <label class="block-label" for="choose-photo-upload">
+                        <input type="radio" name="choose-photo" id="choose-photo-upload" value="upload" aria-required="upload"{{#selected}}choose-photo=upload{{/selected}}{{#errors.choose-photo}} aria-describedby="{{key}}-error" aria-invalid="upload"{{/errors.choose-photo}}>
+                        Upload your photo
+                    </label>
+                </fieldset>
+            </div>
+            {{#input-submit}}{{/input-submit}}
+
+        {{/form}}
+    {{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}
