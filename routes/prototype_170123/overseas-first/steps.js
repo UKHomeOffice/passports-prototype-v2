@@ -14,8 +14,8 @@ module.exports = {
         controller: require('../../../controllers/go-overseas'),
         fields: ['application-country'],
         backLink: './issued',
-        next: '/france-first',
-        nextAlt: '/france-first',
+        next: 'france-first',
+        nextAlt: 'france-first',
         nextAltAltAlt: 'spain-first' /* if they are from Spain - first hidden as renewal */
       },
     '/france-first': {

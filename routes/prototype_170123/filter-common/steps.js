@@ -19,8 +19,8 @@ module.exports = {
         fields: ['what-to-do-overseas'],
         backLink: './',
         next: '/dob',
-        nextAlt: '/dob',
-        nextAltAlt: '/dob',
+        nextAlt: 'dob',
+        nextAltAlt: 'dob',
         nextAltAltAlt:'../overseas-first' /* if they are from Spain - first hidden as renewal */
     },
     '/dob': {

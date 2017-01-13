@@ -6,9 +6,7 @@ var Base = require('./form'),
     firstHiddenAsRenew = require('../config/overseas-renew-first');
 
 var Controller = function Controller(options) {
-    if (!options.nextAlt) {
-        throw new Error('`options.nextAlt` should be specified');
-    }
+
     Base.call(this, options);
 };
 
