@@ -580,7 +580,31 @@ article th, article td{
 }
 
 
+.more-dates {
+  text-align: right;
+}
+
+.book-table {
+  font-size: 16px;
+  text-align: center;
+}
+
+.book-table a {
+  text-decoration: none;
+}
+
 .weekday {
-  background: $grey-3;
-  padding: 10px;
+  background: white;
+}
+
+.book-table td {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-bottom: 2px solid #cccccc;
+  border-right: 2px solid #cccccc;
+}
+
+td:last-child {
+  border-right: none;
 }
