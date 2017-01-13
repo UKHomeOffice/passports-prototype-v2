@@ -3,6 +3,7 @@ var Base = require('hmpo-form-wizard').Controller;
 
 var overseasCountries = require('../config/or-overseas-countries');
 var overseasNotEligibleCountries = require('../config/overseas-not-eligible-countries');
+var overseasFirstHiddenAsRenew = require('../config/overseas-renew-first');
 
 var config = require('../config');
 
@@ -16,6 +17,7 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     if (req.sessionModel.get('application-country')
     	&& overseasCountries.indexOf(req.sessionModel.get('application-country')) === -1
       && overseasNotEligibleCountries.indexOf(req.sessionModel.get('application-country')) === -1
+      && overseasFirstHiddenAsRenew.indexOf(req.sessionModel.get('application-country')) === -1
     	&& req.sessionModel.get('application-country') !== "UK"
     	) {
         return res.redirect(config.services.olc);
