@@ -4,6 +4,8 @@ var Base = require('./form'),
     orCountries = require('../config/or-overseas-countries'),
     notEligibleCountries = require('../config/overseas-not-eligible-countries'),
     firstHiddenAsRenew = require('../config/overseas-renew-first');
+    notAvailableCountries = require('../config/overseas-not-available');
+
 
 var Controller = function Controller(options) {
 
@@ -21,6 +23,9 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     }
     if (req.sessionModel.get('application-country') && firstHiddenAsRenew.indexOf(req.sessionModel.get('application-country')) > -1) {
         return res.redirect(this.options.nextAltAltAlt);
+    }
+    if (req.sessionModel.get('application-country') && notAvailableCountries.indexOf(req.sessionModel.get('application-country')) > -1) {
+        return res.redirect(this.options.nextAltAltAltAlt);
     }
     Base.prototype.successHandler.call(this, req, res, callback);
 };
