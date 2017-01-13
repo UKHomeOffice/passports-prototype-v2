@@ -6,7 +6,8 @@ module.exports = {
       backLink: '/../prototype_170123/startpage',
       next: '/what-do-you-want-to-do', /* if Yes is selected */
       nextAlt: 'what-do-you-want-to-do-overseas', /* if they are from Germany/France */
-      nextAltAlt:'what-do-you-want-to-do-overseas'
+      nextAltAlt:'what-do-you-want-to-do-overseas',/* if they are from Afganistan */
+      nextAltAltAlt:'what-do-you-want-to-do-overseas' /* if they are from Spain - first hidden as renewal */
     },
     '/what-do-you-want-to-do': {
         fields: ['what-to-do'],
@@ -14,9 +15,13 @@ module.exports = {
         next: '/dob'
     },
     '/what-do-you-want-to-do-overseas': {
+        controller: require('../../../controllers/go-overseas'),
         fields: ['what-to-do-overseas'],
         backLink: './',
-        next: '/dob'
+        next: '/dob',
+        nextAlt: '/dob',
+        nextAltAlt: '/dob',
+        nextAltAltAlt:'../overseas-first' /* if they are from Spain - first hidden as renewal */
     },
     '/dob': {
       fields: ['age-day', 'age-year', 'age-month'],
@@ -24,6 +29,6 @@ module.exports = {
       backLink: './',
       next: '/../filter', /* if they are from the UK */
       nextAlt: '../overseas', /* if they are from Germany/France */
-      nextAltAlt:'../overseas-not-eligible' /* if they are from Afganistan */
+      nextAltAlt:'../overseas-not-eligible', /* if they are from Afganistan */
     }
 };
