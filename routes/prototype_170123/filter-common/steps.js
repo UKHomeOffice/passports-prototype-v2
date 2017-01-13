@@ -7,7 +7,8 @@ module.exports = {
       next: '/what-do-you-want-to-do', /* if Yes is selected */
       nextAlt: 'what-do-you-want-to-do-overseas', /* if they are from Germany/France */
       nextAltAlt:'what-do-you-want-to-do-overseas',/* if they are from Afganistan */
-      nextAltAltAlt:'what-do-you-want-to-do-overseas' /* if they are from Spain - first hidden as renewal */
+      nextAltAltAlt:'what-do-you-want-to-do-overseas', /* if they are from Spain - first hidden as renewal */
+      nextAltAltAltAlt:'../overseas-not-available' /* if they are from Syria - not available */
     },
     '/what-do-you-want-to-do': {
         fields: ['what-to-do'],
