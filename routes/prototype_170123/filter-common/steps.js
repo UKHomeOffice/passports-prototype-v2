@@ -20,16 +20,22 @@ module.exports = {
         fields: ['what-to-do-overseas'],
         backLink: './',
         next: '/dob',
-        nextAlt: 'dob',
-        nextAltAlt: 'dob',
-        nextAltAltAlt:'../overseas-first' /* if they are from Spain - first hidden as renewal */
+        nextAlt: 'dob-overseas', /* if they are from Germany/France */
+        nextAltAlt: 'dob-overseas', /* if they are from Afganistan */
+        nextAltAltAlt: '../overseas-first' /* if they are from Spain - first hidden as renewal */
     },
-    '/dob': {
+    '/dob-overseas': {
       fields: ['age-day', 'age-year', 'age-month'],
       controller: require('../../../controllers/go-overseas'),
       backLink: './',
       next: '/../filter', /* if they are from the UK */
       nextAlt: '../overseas', /* if they are from Germany/France */
       nextAltAlt:'../overseas-not-eligible', /* if they are from Afganistan */
+    },
+    '/dob': {
+      fields: ['age-day', 'age-year', 'age-month'],
+      controller: require('../../../controllers/go-overseas'),
+      backLink: './',
+      next: '/../filter', /* if they are from the UK */
     }
 };
