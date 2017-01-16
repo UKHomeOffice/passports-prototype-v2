@@ -4,7 +4,7 @@
 {{$pageTitle}}Do you have any uncancelled passports from a different country?{{/pageTitle}}
 
 {{$header}}
-    <h1>Do you have any uncancelled passports from a different country?</h1>
+    <h1>Do you have any other passports that haven't been cancelled?</h1>
 {{/header}}
 
 {{$content}}
@@ -14,6 +14,9 @@
       <fieldset class="inline">
         <p>For example, if you're a dual national. This includes any non-British passport that has expired but hasn't been cancelled.</p>
         {{#radio-group}}uncancelled{{/radio-group}}
+        <h2>Which additional passports do you have?</h2>
+        {{#radio-group}}which-passport{{/radio-group}}
+
         {{#input-submit}}{{/input-submit}}
       </fieldset>
     {{/form}}
