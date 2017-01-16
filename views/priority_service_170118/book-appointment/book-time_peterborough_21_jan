@@ -12,15 +12,11 @@
 {{$main-content}}
 
 <h1>Book an appointment</h1>
-<p class="heading-medium">Newport</p>
+<p class="heading-medium">Peterborough</p>
 <p class="font-small"><a href="./">Pick a different location</a></p>
 
 
-<p>Newport Passport Office</br>
-  Mission Court</br>
-  Nexus House</br>
-Newport</br>
-NP20 2DW</p>
+<p>Peterborough Passport Office</p>
 
 
 
@@ -34,9 +30,9 @@ NP20 2DW</p>
 <tbody>
 
 <tr>
-<td><p class="bold-medium">Friday<br> 29 January</p></td>
-<td class="date-select"><p class="bold-medium">Saturday<br>  30 January</p></td>
-<td><p class="bold-medium">Monday<br>  31 January</p></td>
+<td><p class="bold-medium">Friday<br> 21 January</p></td>
+<td class="date-select"><p class="bold-medium">Saturday<br>  23 January</p></td>
+<td><p class="bold-medium">Monday<br>  24 January</p></td>
 
 </tr>
 <tr>
@@ -47,29 +43,29 @@ NP20 2DW</p>
 </tr>
 <tr>
   <td><span class="font-medium">9:00am </br>unavailable</td>
-    <td><span class="bold-medium"><a href="confirmation-scenario-1">9:00am </br>available</span></td>
+    <td><span class="font-medium">9:00am </br>unavailable</td>
       <td><span class="font-medium">9:00am </br>unavailable</td>
 
 </tr>
 <tr>
   <td><span class="font-medium">10:00am </br>unavailable</span></td>
     <td><span class="font-medium">10:00am </br>unavailable</span></td>
-    <td><span class="font-medium">10:00am </br>unavailable</td>
+    <td><span class="font-medium">10:00am </br>unavailable</span></td>
 </tr>
 <tr>
   <td><span class="bold-medium"><a href="#">12:00pm </br>available</span></td>
   <td><span class="bold-medium"><a href="#">12:00pm </br>available</span></td>
-    <td><span class="font-medium">12:00pm </br>unavailable</td>
+    <td><span class="bold-medium"><a href="#">12:00pm </br>available</span></td>
 </tr>
 <tr>
   <td><span class="bold-medium"><a href="#">2:00pm </br>available</span></td>
     <td><span class="bold-medium"><a href="#">2:00pm </br>available</span></td>
-      <td><span class="font-medium">2:00pm </br>unavailable</td>
+  <td><span class="bold-medium"><a href="#">2:00pm </br>available</span></td>
 </tr>
 <tr>
   <td><span class="font-medium">5:00pm </br>unavailable</span></td>
     <td><span class="font-medium">5:00pm </br>unavailable</span></td>
-    <td><span class="font-medium">5:00pm </br>unavailable</span></td>
+  <td><span class="bold-medium"><a href="#">5:00pm </br>available</span></td>
 </tr>
 
 </tbody>
