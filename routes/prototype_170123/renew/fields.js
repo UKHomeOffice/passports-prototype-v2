@@ -222,6 +222,18 @@ module.exports = {
           value: 'true'
       }
   },
+  'passport-options-overseas':{
+    legend: {
+      value: 'Select passport size'
+    },
+    options: [
+      {value: '32', label: 'Standard adult 32-page passport (£102.86)'},
+      {value: '48', label: 'Jumbo adult 48-page passport (£110.86)'}
+    ],
+    validate: [
+      'required'
+    ]
+  },
   braille: {
     formatter: 'boolean-strict',
     legend: {
