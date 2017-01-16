@@ -42,7 +42,7 @@ legend: {
   className: 'visuallyhidden'
 },
 options: [
-  {value: 'Yes', label: 'Yes'},
+  {value: 'Yes', label: 'Yes', toggle: 'which-passport'},
   {value: 'No', label: 'No'}
 ],
 validate: [
@@ -53,6 +53,23 @@ validate: [
     redirect:'https://passportapplication.service.gov.uk/ips-olc/'
   }
 ]
+},
+    'which-passport': {
+    legend: {
+      value: 'Which type of passport?',
+      className: 'visuallyhidden'
+    },
+    options: [
+      {value: 'Yes', label: 'Another British passport'},
+      {value: 'No', label: 'Passport from another country'}
+    ],
+    validate: [
+      'required'
+    ],
+    dependent: {
+        field: 'uncancelled',
+        value: true
+    }
 },
   'british-citizen': {
     legend: {
