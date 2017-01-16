@@ -54,23 +54,6 @@ validate: [
   }
 ]
 },
-    'which-passport': {
-    legend: {
-      value: 'Which type of passport?',
-      className: 'visuallyhidden'
-    },
-    options: [
-      {value: 'Yes', label: 'Another British passport'},
-      {value: 'No', label: 'Passport from another country'}
-    ],
-    validate: [
-      'required'
-    ],
-    dependent: {
-        field: 'uncancelled',
-        value: true
-    }
-},
   'british-citizen': {
     legend: {
       value: 'What nationality is shown on your passport?',
