@@ -30,6 +30,9 @@ ConfirmForm.prototype.getEditStep = function (field) {
     if (step == '/address') {
         step +='-manual';
     }
+    if (step == '/passport-options/edit'){
+       step += '-overseas';
+    }
     return step && (step + '/edit');
 };
 
@@ -198,18 +201,18 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 title: 'New passport',
                 value: function () {
                     var output = [];
-                    if (values['passport-options'] == '48') {
+                    if (values['passport-options-overseas'] == '48') {
                         var cost = model.largePassport();
                         cost = currency(cost);
                         if (!values.veteran) {
                             cost += '&nbsp;extra';
                         }
 
-                        output.push('Jumbo passport with special delivery included.');
-                        output.push('£85.50');
+                        output.push('Jumbo passport including delivery by courier.');
+                        output.push('£110.86');
                     } else {
-                        output.push('Standard passport with special delivery included.');
-                        output.push('£72.50');
+                        output.push('Standard passport including delivery by courier.');
+                        output.push('£102.86');
                     }
                     return output.join('<br>');
                 }
@@ -226,7 +229,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                         }
                         return output;
                     } else {
-                        return 'You need to post your old passport to us. We’ll return it to you by standard post. <br/>£0.00';
+                        return 'You need to post your old passport to us. We’ll return it to you by courier - this is included in the cost. ';
                     }
                 }
             },
@@ -234,7 +237,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 className: 'cost',
                 title: 'Total',
                 value: function () {
-                    return currency(values.cost);
+                    return currency(values.cost + 30.36);
                 }
             }
         ]
