@@ -18,7 +18,7 @@ module.exports = {
       {
         type:'equal',
         arguments:['Renew'], /* if the arguments are NOT selected */
-        redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+        redirect:'/../not-eligible'
       }
     ]
   },
