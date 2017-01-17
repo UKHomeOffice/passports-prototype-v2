@@ -136,6 +136,8 @@ function init(sessionStore) {
         app.use('/prototype_170123/rejectedphoto', require('./routes/prototype_170123/rejectedphoto'));
         app.use('/prototype_170123/filter-common-temp', require('./routes/prototype_170123/filter-common-temp'));
         app.use('/prototype_170123/startpage-temp', require('./routes/prototype_170123/startpage-temp'));
+        app.use('/prototype_170123/overseas-not-available', require('./routes/prototype_170123/overseas-not-available'));
+
 
         //prototype 170118
 

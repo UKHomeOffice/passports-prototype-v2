@@ -11,11 +11,17 @@ module.exports = {
       },
     '/country-born': {
         controller: require('../../../controllers/application-country'),
+        controller: require('../../../controllers/go-overseas'),
         fields: ['application-country'],
         backLink: './issued',
-        next: '/france-first'
+        next: 'france-first',
+        nextAlt: 'france-first',
+        nextAltAltAlt: 'spain-first' /* if they are from Spain - first hidden as renewal */
       },
     '/france-first': {
+        backLink: './country-born',
+      },
+    '/spain-first': {
         backLink: './country-born',
       }
 };
