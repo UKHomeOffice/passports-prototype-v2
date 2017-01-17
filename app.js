@@ -160,6 +160,8 @@ function init(sessionStore) {
         app.use('/priority_service_170118/startpage-temp', require('./routes/priority_service_170118/startpage-temp'));
         app.use('/priority_service_170118/get-urgent-passport', require('./routes/priority_service_170118/get-urgent-passport'));
         app.use('/priority_service_170118/book-appointment', require('./routes/priority_service_170118/book-appointment'));
+        app.use('/priority_service_170118/not-eligible', require('./routes/priority_service_170118/not-eligible'));
+
 
 
     //Priority service
