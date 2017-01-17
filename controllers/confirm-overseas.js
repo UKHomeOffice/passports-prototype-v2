@@ -164,9 +164,12 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                   var country = req.sessionModel.get('application-country');
                   console.log(country);
                   var output = join(values, ['address1', 'address2','town', 'postcode'], '<br/>');
-                  if (country == 'FR'){
-                    output += '<br/>France';
-                  }
+                  if (country == 'FR'){ output += '<br/>France';}
+                  else if (country == 'DE'){ output += '<br/>Germany';}
+                  else if (country == 'IL'){ output += '<br/>Israel';}
+                  else if (country == 'BE'){ output += '<br/>Belgium';}
+                  else if (country == 'NL'){ output += '<br/>Netherlands';}
+                  else if (country == 'ES'){ output += '<br/>Spain';}
                 /*  output += country;*/
                   return output;
                 }
