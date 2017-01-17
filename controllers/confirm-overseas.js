@@ -161,8 +161,13 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 title: 'Address',
                 /*value: join(values, ['address1', 'address2', 'town', 'postcode'], '<br>')*/
                 value: function(){
-                  var output = join(values, ['address1', 'address2', 'town', 'postcode'], '<br/>');
-                  output += '<br/>France';
+                  var country = req.sessionModel.get('application-country');
+                  console.log(country);
+                  var output = join(values, ['address1', 'address2','town', 'postcode'], '<br/>');
+                  if (country == 'FR'){
+                    output += '<br/>France';
+                  }
+                /*  output += country;*/
                   return output;
                 }
             },
