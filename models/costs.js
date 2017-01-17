@@ -35,6 +35,12 @@ Costs.prototype.getCost = function () {
     if (this.get('passport-options') == '48') {
         cost += this.largePassport();
     }
+    if (this.get('passport-options-overseas') == '48') {
+        cost += this.largePassport() + 25.36;
+    }
+    if (this.get('passport-options-overseas') == '32') {
+        cost += 30.36;
+    }
     if (this.get('secure-return')) {
         cost += this.delivery();
     }

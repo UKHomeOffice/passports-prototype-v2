@@ -30,9 +30,6 @@ ConfirmForm.prototype.getEditStep = function (field) {
     if (step == '/address') {
         step +='-manual';
     }
-    if (step == '/passport-options/edit'){
-       step += '-overseas';
-    }
     return step && (step + '/edit');
 };
 
@@ -237,7 +234,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 className: 'cost',
                 title: 'Total',
                 value: function () {
-                    return currency(values.cost + 30.36);
+                    return currency(values.cost);
                 }
             }
         ]
