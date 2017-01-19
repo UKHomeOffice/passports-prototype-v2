@@ -16,7 +16,7 @@ module.exports = {
     {
       type:'equal',
       arguments:['No'], /* if Yes is selected */
-      redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+      redirect:'/../overseas-not-eligible/france'
     }
   ]
 },
@@ -50,7 +50,7 @@ validate: [
   {
     type:'equal',
     arguments:['No'], /* if Yes is selected */
-    redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+    redirect:'/../overseas-not-eligible/france'
   }
 ]
 },
@@ -68,7 +68,7 @@ validate: [
       {
         type:'equal',
         arguments:['british-citizen'], /* if No is selected */
-        redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+        redirect:'/../overseas-not-eligible/france'
       }
     ]
   },
