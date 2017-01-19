@@ -212,29 +212,31 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                             cost += '&nbsp;extra';
                         }
 
-                        output.push('Jumbo passport including delivery by courier.');
-                        output.push('£110.86');
+                        output.push('Jumbo passport ');
+                        output.push('£91');
                     } else {
-                        output.push('Standard passport including delivery by courier.');
-                        output.push('£102.86');
+                        output.push('Standard passport');
+                        output.push('£83');
                     }
                     return output.join('<br>');
                 }
             },
             {
                 step: values.veteran ? null : this.getEditStep('secure-return'),
+                title: values.veteran ? 'Delivery' : 'Courier fee',
+                value: function () {
+
+                        var output = 'We&#39;ll send your old and new passports to you separately.';
+                            output += '<br/>£19.86 ';
+                        return output;
+                    }
+            },
+            {
+                step: values.veteran ? null : this.getEditStep('secure-return'),
                 title: values.veteran ? 'Delivery' : 'Old passport',
                 value: function () {
-                    if (values['secure-return']) {
-                        var output = 'You need to post your old passport to us. We’ll return it to you by ';
-                        var cost = model.delivery();
-                        if (cost) {
-                            output += ' special delivery. <br/>£3.00 ';
-                        }
+                        var output = 'You need to post your old passport to us. We’ll return it to you by courier - this is included.';
                         return output;
-                    } else {
-                        return 'You need to post your old passport to us. We’ll return it to you by courier - this is included in the cost. ';
-                    }
                 }
             },
             {
