@@ -53,12 +53,12 @@ module.exports = {
     '/get-updates':{
         next: '/passport-options'
     },
-    '/passport-options':{
-        fields: ['passport-options', 'braille'],
-        next: '/sign'
-    },
     '/passport-options-overseas':{
         fields: ['passport-options-overseas', 'braille'],
+        next: '/sign'
+    },
+    '/passport-options':{
+        fields: ['passport-options', 'braille'],
         next: '/sign'
     },
     '/sign': {
