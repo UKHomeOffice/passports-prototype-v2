@@ -20,6 +20,10 @@ Controller.prototype.saveValues = function (req, res, callback) {
     if (req.form.values['application-country']) {
         var country = _.findWhere(countries, { id: req.form.values['application-country']});
         req.form.values['application-country-label'] = country ? country.name : '';
+
+        var countrycode = _.findWhere(countries, { id: req.form.values['application-country']});
+        req.form.values['application-country-code'] = country ? country.countrycode : '';
+
     }
     Base.prototype.saveValues.call(this, req, res, callback);
 };
