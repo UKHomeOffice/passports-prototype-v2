@@ -40,7 +40,7 @@ module.exports = {
         next: '/contact-details'
     },
     '/contact-details-overseas':{
-        fields:['email','country-code' ,'mobile'],
+        fields:['email','application-country-code' ,'mobile'],
         next: '/get-updates-overseas'
     },
     '/contact-details':{
