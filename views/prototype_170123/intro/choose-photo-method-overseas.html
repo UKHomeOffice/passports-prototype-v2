@@ -3,7 +3,7 @@
 {{$pageTitle}}Get your digital photo{{/pageTitle}}
 
 {{$header}}
-    <h1>Get your digital photo</h1>
+    <h1>Get your digital passport photo</h1>
 {{/header}}
 
 {{$content}}
@@ -13,17 +13,17 @@
             <div id="choose-photo-overseas-group" class="form-group{{#errors.choose-photo}} error{{/errors.choose-photo}}">
                 <fieldset role="radiogroup" aria-required="upload">
                     <legend>
-                        <span class="form-label">You can take your photo and upload it. We'll show you how. <br>
+                        <span class="form-label">You can take a photo and upload it - we'll show you how. <br>
                        </span>
                         {{#errors.choose-photo}}<span id="{{key}}-error" class="error-message">{{errors.choose-photo.message}}</span>{{/errors.choose-photo}}
                     </legend>
                     <label class="block-label" for="choose-photo-overseas-myself">
                         <input type="radio" name="choose-photo-overseas" id="choose-photo-overseas-myself" value="myself" aria-required="upload"{{#selected}}choose-photo-overseas=myself{{/selected}}{{#errors.choose-photo}} aria-describedby="{{key}}-error" aria-invalid="upload"{{/errors.choose-photo}}>
-                        Show me how to take a passport photo
+                        Show me how to take a digital passport photo
                     </label>
                     <label class="block-label" for="choose-photo-overseas-upload">
                         <input type="radio" name="choose-photo-overseas" id="choose-photo-overseas-upload" value="upload" aria-required="upload"{{#selected}}choose-photo-overseas=upload{{/selected}}{{#errors.choose-photo}} aria-describedby="{{key}}-error" aria-invalid="upload"{{/errors.choose-photo}}>
-                        I have a digital photo to upload
+                        I have a digital passport photo 
                     </label>
                   <!--  <div style="clear:both"></div><br/>
                     <h2>I have a digital photo</h2>
