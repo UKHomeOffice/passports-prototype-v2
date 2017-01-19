@@ -103,6 +103,22 @@ validate: [
       'required'
     ]
   },
+  'issue-year': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
+  'issue-month': {
+      labelClassName: 'form-label',
+      formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
   'try-service': {
   legend: {
     value: 'Do you have any uncancelled passport from a different country?',
