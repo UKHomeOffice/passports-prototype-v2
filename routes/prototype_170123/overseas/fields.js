@@ -120,6 +120,31 @@ validate: [
       redirect:'/../overseas-not-eligible/france'
     }
   ]
-  }
+},
+'name': {
+
+},
+'lastname': {
+
+},
+'email': {
+    validate: [
+        'required'
+    ]
+},
+'application-country-code': {
+  labelClassName: 'visuallyhidden',
+  formatter: 'removehyphens',
+  validate: [
+      'required'
+  ]
+},
+'mobile': {
+  labelClassName: 'visuallyhidden',
+  validate: [
+      'numeric',
+      'required'
+  ]
+}
 
 };
