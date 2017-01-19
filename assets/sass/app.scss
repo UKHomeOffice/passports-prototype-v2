@@ -617,11 +617,14 @@ td:last-child {
 }
 
 /* summary page for overseas */
-.old-passport .button-wrapper{
+.old-passport .button-wrapper, .courier-fee .button-wrapper{
   display:none;
 }
 
 /* country code input size*/
 #application-country-code-group{
   width:60px;
+}
+#mobile {
+  width: 229px;
 }
