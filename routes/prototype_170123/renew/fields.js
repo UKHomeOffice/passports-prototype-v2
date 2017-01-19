@@ -188,6 +188,13 @@ module.exports = {
         'required'
     ]
   },
+  'application-country-code': {
+    labelClassName: 'visuallyhidden',
+    formatter: 'removehyphens',
+    validate: [
+        'required'
+    ]
+  },
   'mobile': {
     validate: [
         'numeric',
