@@ -180,7 +180,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 value: function() {
                   var output = join(values, ['email'], '<br/><br/>');
                   output += '<br/><br/>';
-                  output += join(values, ['country-code', 'mobile']);
+                  output += join(values, ['application-country-code', 'mobile']);
                   return output;
                 }
             },
