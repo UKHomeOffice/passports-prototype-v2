@@ -235,7 +235,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 step: values.veteran ? null : this.getEditStep('secure-return'),
                 title: values.veteran ? 'Delivery' : 'Old passport',
                 value: function () {
-                        var output = 'You need to post your old passport to us. We’ll return it to you by courier - this is included.';
+                        var output = 'You need to post your old passport to us.';
                         return output;
                 }
             },
