@@ -1,0 +1,136 @@
+
+{{< layout}}
+
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Pick appointment time{{/pageTitle}}
+
+{{$header}}
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+{{/header}}
+
+{{$main-content}}
+
+<h1>Choose an appointment time</h1>
+
+<p class="heading-medium">Peterborough Passport Office</p>
+  Aragon Court</br>
+  Northminster Road</br>
+Peterborough</br>
+PE1 1QG</p>
+
+
+
+<div class="stuck" id="stickynav">
+  <div class="book-table">
+  <table class="book-table">
+    <tbody>
+    <tr>
+    <td><p class="bold-small">Saturday<br> 21 January</p></td>
+    <td><p class="bold-small">Monday<br>  23 January</p></td>
+    <td><p class="bold-small">Tuesday<br>  24 January</p></td>
+    <td><p class="bold-small">Wednesday<br>  25 January</p></td>
+    <td><p class="bold-small">Thursday<br>  26 January</p></td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+</div>
+
+
+<div class="book-table">
+
+  <table class="book-table">
+  <tbody>
+    <!--
+  <tr>
+  <td><p class="bold-small">Saturday<br> 21 January</p></td>
+  <td><p class="bold-small">Monday<br>  23 January</p></td>
+  <td><p class="bold-small">Tuesday<br>  24 January</p></td>
+  <td><p class="bold-small">Wednesday<br>  25 January</p></td>
+  <td><p class="bold-small">Thursday<br>  26 January</p></td>
+  </tr>
+
+-->
+<tr>
+  <td><span class="font-small">10:00am </br>unavailable</span></td>
+    <td><span class="font-small">10:00am </br>unavailable</span></td>
+    <td><span class="font-small">10:00am </br>unavailable</span></td>
+    <td><span class="font-small">10:00am </br>unavailable</span></td>
+    <td><span class="font-small">10:00am </br>unavailable</span></td>
+
+</tr>
+<tr>
+  <td><span class="font-small">10:30am </br>unavailable</span></td>
+    <td><span class="font-small">10:30am </br>unavailable</span></td>
+    <td><span class="font-small">10:30am </br>unavailable</span></td>
+    <td><span class="font-small">10:30am </br>unavailable</span></td>
+    <td><span class="font-small">10:30am </br>unavailable</span></td>
+
+
+</tr>
+<tr>
+  <td><span class="font-small">12:30pm </br>unavailable</span></td>
+    <td><span class="font-small">12:30pm </br>unavailable</span></td>
+    <td><span class="font-small">12:30pm </br>unavailable</span></td>
+    <td><span class="font-small">12:30pm </br>unavailable</span></td>
+    <td><span class="font-small">12:30pm </br>unavailable</span></td>
+
+</tr>
+<tr>
+  <td><span class="font-small">13:00pm </br>unavailable</span></td>
+    <td><span class="font-small">13:00pm </br>unavailable</span></td>
+    <td><span class="font-small">13:00pm </br>unavailable</span></td>
+    <td><span class="font-small">13:00pm </br>unavailable</span></td>
+    <td><span class="font-small">13:00pm </br>unavailable</span></td>
+
+</tr>
+<tr>
+  <td><span class="font-small">13:30pm </br>unavailable</span></td>
+    <td><span class="font-small">13:30pm </br>unavailable</span></td>
+    <td><span class="font-small">10:00am </br>unavailable</span></td>
+    <td><span class="font-small">10:00am </br>unavailable</span></td>
+    <td><span class="font-small">10:00am </br>unavailable</span></td>
+
+</tr>
+<tr>
+  <td><span class="font-small">10:00am </br>unavailable</span></td>
+    <td><span class="font-small">10:00am </br>unavailable</span></td>
+    <td><span class="font-small">10:00am </br>unavailable</span></td>
+    <td><span class="font-small">10:00am </br>unavailable</span></td>
+    <td><span class="font-small">10:00am </br>unavailable</span></td>
+
+</tr>
+  <tr>
+    <td><span class="font-small">10:00am </br>unavailable</span></td>
+      <td><span class="font-small">10:00am </br>unavailable</span></td>
+      <td><span class="font-small">10:00am </br>unavailable</span></td>
+      <td><span class="font-small">10:00am </br>unavailable</span></td>
+      <td><span class="font-small">10:00am </br>unavailable</span></td>
+
+  </tr>
+
+  </tbody>
+  </table>
+
+
+</div>
+</div>
+
+
+<script>
+window.onscroll = function() {
+    var sticky = document.getElementById('stickynav');
+    if( document.body.scrollTop+document.documentElement.scrollTop > 240)
+        sticky.className = "stuck";
+    else sticky.className = "";
+};
+</script>
+
+
+{{/main-content}}
+
+{{/ layout}}
