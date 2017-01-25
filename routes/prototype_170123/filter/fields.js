@@ -42,7 +42,7 @@ legend: {
   className: 'visuallyhidden'
 },
 options: [
-  {value: 'Yes', label: 'Yes'},
+  {value: 'Yes', label: 'Yes', toggle: 'which-passport'},
   {value: 'No', label: 'No'}
 ],
 validate: [

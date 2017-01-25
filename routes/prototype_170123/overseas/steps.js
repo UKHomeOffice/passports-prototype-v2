@@ -1,6 +1,6 @@
 module.exports = {
     '/':{
-      fields: ['issuing-authority', 'age-year', 'age-month'],
+      fields: ['issuing-authority', 'issue-year', 'issue-month'],
       backLink: '../filter-common/dob',
       next: '/passport-damaged'
     },
@@ -33,6 +33,7 @@ module.exports = {
         next: '/give-contact-details' /* if yes is selected */
     },
     '/give-contact-details': {
+        fields: ['name','lastname','email','application-country-code', 'mobile'],
         backLink: './try-service',
         next: '/../intro/before-you-continue-overseas' /* if yes is selected */
     }

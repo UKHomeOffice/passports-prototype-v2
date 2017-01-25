@@ -27,6 +27,12 @@
         "expiry-year":{
           "label": "Year"
         },
+        "issue-year":{
+          "label": "Year"
+        },
+        "issue-month":{
+          "label": "Month"
+        },
         "name":{
           "label": "First and middle names"
         },
@@ -54,6 +60,9 @@
         },
         "email":{
           "label": "Email"
+        },
+        "country-code":{
+          "value": "Country code"
         },
         "country-code":{
           "value": "Country code"

@@ -14,6 +14,7 @@ _.extend(Form.prototype, {
 
     getValues: function (req, res, callback) {
         Base.prototype.getValues.call(this, req, res, function (err, values) {
+console.log(values);
             var model = new Model(values);
             callback(err, model.toJSON());
         });
@@ -21,7 +22,8 @@ _.extend(Form.prototype, {
 
     locals: function (req/*, res*/) {
         return _.extend(Base.prototype.locals.apply(this, arguments), {
-            urlSuffix: req.params && req.params.action ? '/' + req.params.action : ''
+            urlSuffix: req.params && req.params.action ? '/' + req.params.action : '',
+            test: 'TTTTTTT'
         });
     },
     getNextStep: function (req) {

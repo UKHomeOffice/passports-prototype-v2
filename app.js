@@ -26,6 +26,20 @@ redis.getClient(function (err, client) {
 });
 
 function init(sessionStore) {
+    // auth
+    if (process.env.NODE_ENV && process.env.NODE_ENV.toLowerCase() === 'heroku') {
+        var auth = require('express-basic-auth');
+
+        function authoriser(user, pass) {
+            return (user === process.env.USER || user === 'fish') && (pass === process.env.PASS || pass === process.env.PASSWORD || pass === 'chips');
+        };
+
+        app.use(auth({
+            authorizer: authoriser,
+            challenge: true
+        }));
+    }
+
     // session
     app.use(require('cookie-parser')());
     app.use(session(_.extend(sessionConfig, sessionStore)));
@@ -160,6 +174,8 @@ function init(sessionStore) {
         app.use('/priority_service_170118/startpage-temp', require('./routes/priority_service_170118/startpage-temp'));
         app.use('/priority_service_170118/get-urgent-passport', require('./routes/priority_service_170118/get-urgent-passport'));
         app.use('/priority_service_170118/book-appointment', require('./routes/priority_service_170118/book-appointment'));
+        app.use('/priority_service_170118/not-eligible', require('./routes/priority_service_170118/not-eligible'));
+
 
         //prototype 170202
 

@@ -16,7 +16,7 @@ module.exports = {
     {
       type:'equal',
       arguments:['No'], /* if Yes is selected */
-      redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+      redirect:'/../overseas-not-eligible/france'
     }
   ]
 },
@@ -50,7 +50,7 @@ validate: [
   {
     type:'equal',
     arguments:['No'], /* if Yes is selected */
-    redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+    redirect:'/../overseas-not-eligible/france'
   }
 ]
 },
@@ -68,7 +68,7 @@ validate: [
       {
         type:'equal',
         arguments:['british-citizen'], /* if No is selected */
-        redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+        redirect:'/../overseas-not-eligible/france'
       }
     ]
   },
@@ -103,6 +103,22 @@ validate: [
       'required'
     ]
   },
+  'issue-year': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
+  'issue-month': {
+      labelClassName: 'form-label',
+      formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
   'try-service': {
   legend: {
     value: 'Do you have any uncancelled passport from a different country?',
@@ -120,6 +136,31 @@ validate: [
       redirect:'/../overseas-not-eligible/france'
     }
   ]
-  }
+},
+'name': {
+
+},
+'lastname': {
+
+},
+'email': {
+    validate: [
+        'required'
+    ]
+},
+'application-country-code': {
+  labelClassName: 'visuallyhidden',
+  formatter: 'removehyphens',
+  validate: [
+      'required'
+  ]
+},
+'mobile': {
+  labelClassName: 'visuallyhidden',
+  validate: [
+      'numeric',
+      'required'
+  ]
+}
 
 };

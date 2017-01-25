@@ -4,7 +4,7 @@ module.exports = {
         next: '/what-you-need'
     },
     '/before-you-continue-overseas': {
-        backLink: '/../prototype_170123/overseas/uncancelled',
+        backLink: '/../prototype_170123/overseas/give-contact-details',
         next: '/what-you-need-overseas'
     },
     '/what-you-need': {
@@ -12,7 +12,7 @@ module.exports = {
       next: '/you-need-a-photo'
     },
     '/what-you-need-overseas': {
-      backLink: '/../prototype_170123/overseas/try-service',
+      backLink: './before-you-continue-overseas',
       next: '/you-need-a-photo-overseas'
     },
     '/you-need-a-photo': {
