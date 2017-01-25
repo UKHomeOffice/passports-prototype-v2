@@ -595,10 +595,11 @@ article th, article td{
 
 .book-table td {
   text-align: center;
-  padding: 15px;
+  padding: 12px;
   background: white;
   border: 1px solid #cccccc;
-  margin-top: 70px;
+  margin-top: 50px;
+  height: 60px;
 }
 
 /*
@@ -607,18 +608,42 @@ td:last-child {
 }
 */
 
-
 .manage-times {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 0 auto;
 }
 
-.time-unavailable {
+
+.manage-time-next {
+  margin-top: 20px;
+  margin-bottom: 20px;
+float: right;
+}
+
+.manage-time-previous {
+  margin-top: 20px;
+  margin-bottom: 20px;
+float: left;
+}
+
+.unavailable {
   font-size: 19px;
   color: $grey-2;
+}
+
+.available {
+  font-size: 19px;
+  font-weight: normal;
+}
+
+.city-available {
+  font-size: 22px;
 }
 
 .time-available {
   font-size: 22px;
   font-weight: bold;
+}
+
+.muted {
+  color: $grey-1;
 }
