@@ -34,26 +34,16 @@ module.exports = {
           backLink: './',
           next: '/passport-damaged' /* if No is selected */
     },
-    '/book-time_newport_25_jan': {
+    '/book-time_newport_4_feb': {
       fields: ['passport-damaged'],
         backLink: './',
         next: '/passport-damaged' /* if No is selected */
-    },
-    '/book-time_newport_27_jan': {
-      fields: ['passport-damaged'],
-        backLink: './',
-        next: '/passport-damaged' /* if No is selected */
-    },
-  '/book-time_newport_28_jan': {
+  },
+  '/book-time_newport_10_feb': {
     fields: ['passport-damaged'],
       backLink: './',
       next: '/passport-damaged' /* if No is selected */
   },
-    '/book-time_newport_30_jan': {
-      fields: ['passport-damaged'],
-        backLink: './',
-        next: '/passport-damaged' /* if No is selected */
-    },
     '/passport-damaged': {
       fields: ['passport-damaged'],
         backLink: './',

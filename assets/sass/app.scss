@@ -593,27 +593,60 @@ article th, article td{
   text-decoration: none;
 }
 
-.weekday {
-  background: white;
-}
-
 .book-table td {
   text-align: center;
-  padding: 20px;
+  padding: 12px;
   background: white;
-  border-bottom: 2px solid #cccccc;
-  border-right: 2px solid #cccccc;
-  margin-top: 70px;
+  border: 1px solid #cccccc;
+  margin-top: 50px;
+  height: 60px;
 }
 
+/*
 td:last-child {
   border-right: none;
 }
-
+*/
 
 .manage-times {
+  margin: 0 auto;
+}
+
+
+.manage-time-next {
   margin-top: 20px;
   margin-bottom: 20px;
+float: right;
+}
+
+.manage-time-previous {
+  margin-top: 20px;
+  margin-bottom: 20px;
+float: left;
+}
+
+.unavailable {
+  font-size: 19px;
+  color: $grey-2;
+}
+
+.available {
+  font-size: 19px;
+  font-weight: normal;
+}
+
+.city-available {
+  font-size: 22px;
+}
+
+.time-available {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.muted {
+  color: $grey-1;
+=======
 }
 
 /* summary page for overseas */
