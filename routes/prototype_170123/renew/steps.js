@@ -32,7 +32,7 @@ module.exports = {
         nextAlt: './home-address-overseas'
       },
     '/home-address-overseas':{
-        fields:['address1', 'address2', 'town', 'postcode'],
+        fields:['address1', 'address2','address3','address4','address5', 'town', 'postcode'],
         next: '/contact-details-overseas'
     },
     '/home-address':{
