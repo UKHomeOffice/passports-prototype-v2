@@ -1,7 +1,7 @@
 module.exports = {
     '/':{
       fields: ['issuing-authority', 'issue-year', 'issue-month'],
-      backLink: '../filter-common/dob',
+      backLink: '/../prototype_170123/filter-common/dob-overseas',
       next: '/passport-damaged'
     },
     '/passport-damaged': {
