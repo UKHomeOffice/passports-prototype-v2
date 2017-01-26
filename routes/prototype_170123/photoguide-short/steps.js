@@ -1,7 +1,7 @@
 module.exports = {
   '/': {
     next: '/short-plain-bg',
-    backLink: '/../intro/choose-photo-method-overseas'
+    backLink: '/../prototype_170123/intro/choose-photo-method'
   },
   '/short-plain-bg': {
     next: '/short-lighting'
