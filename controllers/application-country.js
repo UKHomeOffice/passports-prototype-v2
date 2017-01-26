@@ -1,6 +1,7 @@
 var util = require('util');
 var Base = require('hmpo-form-wizard').Controller;
 
+var countries = require('../config/countries');
 var overseasCountries = require('../config/or-overseas-countries');
 var overseasNotEligibleCountries = require('../config/overseas-not-eligible-countries');
 var overseasFirstHiddenAsRenew = require('../config/overseas-renew-first');

@@ -97,7 +97,8 @@
     {
         "id": "BE",
         "name": "Belgium",
-        "altName": ""
+        "altName": "",
+        "countrycode": "+32"
     },
     {
         "id": "BZ",
@@ -352,7 +353,8 @@
     {
         "id": "FR",
         "name": "France",
-        "altName": ""
+        "altName": "",
+        "countrycode": "+33"
     },
     {
         "id": "GF",
@@ -382,7 +384,8 @@
     {
         "id": "DE",
         "name": "Germany",
-        "altName": ""
+        "altName": "",
+        "countrycode": "+49"
     },
     {
         "id": "GH",
@@ -482,7 +485,8 @@
     {
         "id": "IL",
         "name": "Israel",
-        "altName": ""
+        "altName": "",
+        "countrycode": "+972"
     },
     {
         "id": "IT",
@@ -707,7 +711,8 @@
     {
         "id": "NL",
         "name": "Netherlands",
-        "altName": ""
+        "altName": "",
+        "countrycode": "+31"
     },
     {
         "id": "NC",
@@ -917,7 +922,8 @@
     {
         "id": "ES",
         "name": "Spain",
-        "altName": ""
+        "altName": "",
+        "countrycode": "+34"
     },
     {
         "id": "LK",

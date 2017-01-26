@@ -1,6 +1,5 @@
 module.exports = {
     '/':{
-      controller: require('../../../controllers/application-country'),
       fields: ['apply-uk', 'application-country'],
       controller: require('../../../controllers/go-overseas'),
       backLink: '/../prototype_170123/startpage',

@@ -25,11 +25,10 @@
             <div class="form-date">
               <div id="country-code-group" class="form-group">
                 <label for="country-code" class="visuallyhidden"></label>
-                <input type="text" name="country-code" id="country-code" class="form-control" aria-required="true" value="+33">
+                {{#input-text}}application-country-code{{/input-text}}
               </div>
               <div id="mobile-group" class="form-group" style="width:50%">
-                <label for="mobile" class="visuallyhidden"></label>
-                <input type="text" name="mobile" id="mobile" class="form-control" aria-required="true">
+                {{#input-text}}mobile{{/input-text}}
               </div>
             </div>
         </fieldset>

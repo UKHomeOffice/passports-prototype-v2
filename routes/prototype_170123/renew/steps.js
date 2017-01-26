@@ -40,7 +40,7 @@ module.exports = {
         next: '/contact-details'
     },
     '/contact-details-overseas':{
-        fields:['email','country-code' ,'mobile'],
+        fields:['email','application-country-code' ,'mobile'],
         next: '/get-updates-overseas'
     },
     '/contact-details':{
@@ -53,12 +53,12 @@ module.exports = {
     '/get-updates':{
         next: '/passport-options'
     },
-    '/passport-options':{
-        fields: ['passport-options', 'braille'],
-        next: '/sign'
-    },
     '/passport-options-overseas':{
         fields: ['passport-options-overseas', 'braille'],
+        next: '/sign'
+    },
+    '/passport-options':{
+        fields: ['passport-options', 'braille'],
         next: '/sign'
     },
     '/sign': {

@@ -161,8 +161,15 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 title: 'Address',
                 /*value: join(values, ['address1', 'address2', 'town', 'postcode'], '<br>')*/
                 value: function(){
-                  var output = join(values, ['address1', 'address2', 'town', 'postcode'], '<br/>');
-                  output += '<br/>France';
+                  var country = req.sessionModel.get('application-country');
+                  var output = join(values, ['address1', 'address2','town', 'postcode'], '<br/>');
+                  if (country == 'FR'){ output += '<br/>France';}
+                  else if (country == 'DE'){ output += '<br/>Germany';}
+                  else if (country == 'IL'){ output += '<br/>Israel';}
+                  else if (country == 'BE'){ output += '<br/>Belgium';}
+                  else if (country == 'NL'){ output += '<br/>Netherlands';}
+                  else if (country == 'ES'){ output += '<br/>Spain';}
+                /*  output += country;*/
                   return output;
                 }
             },
@@ -173,7 +180,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 value: function() {
                   var output = join(values, ['email'], '<br/><br/>');
                   output += '<br/><br/>';
-                  output += join(values, ['country-code', 'mobile']);
+                  output += join(values, ['application-country-code', 'mobile']);
                   return output;
                 }
             },
@@ -198,36 +205,38 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 title: 'New passport',
                 value: function () {
                     var output = [];
-                    if (values['passport-options'] == '48') {
+                    if (values['passport-options-overseas'] == '48') {
                         var cost = model.largePassport();
                         cost = currency(cost);
                         if (!values.veteran) {
                             cost += '&nbsp;extra';
                         }
 
-                        output.push('Jumbo passport with special delivery included.');
-                        output.push('£85.50');
+                        output.push('Jumbo passport ');
+                        output.push('£91');
                     } else {
-                        output.push('Standard passport with special delivery included.');
-                        output.push('£72.50');
+                        output.push('Standard passport');
+                        output.push('£83');
                     }
                     return output.join('<br>');
                 }
             },
             {
                 step: values.veteran ? null : this.getEditStep('secure-return'),
+                title: values.veteran ? 'Delivery' : 'Courier fee',
+                value: function () {
+
+                        var output = 'We&#39;ll send your old and new passports to you separately.';
+                            output += '<br/>£19.86 ';
+                        return output;
+                    }
+            },
+            {
+                step: values.veteran ? null : this.getEditStep('secure-return'),
                 title: values.veteran ? 'Delivery' : 'Old passport',
                 value: function () {
-                    if (values['secure-return']) {
-                        var output = 'You need to post your old passport to us. We’ll return it to you by ';
-                        var cost = model.delivery();
-                        if (cost) {
-                            output += ' special delivery. <br/>£3.00 ';
-                        }
+                        var output = 'You need to post your old passport to us.';
                         return output;
-                    } else {
-                        return 'You need to post your old passport to us. We’ll return it to you by standard post. <br/>£0.00';
-                    }
                 }
             },
             {
