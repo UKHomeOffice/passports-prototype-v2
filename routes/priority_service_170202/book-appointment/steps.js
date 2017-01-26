@@ -29,17 +29,32 @@ module.exports = {
         backLink: './',
         next: '/passport-damaged' /* if No is selected */
     },
-      '/book-time_peterborough_21_jan': {
-        fields: ['passport-damaged'],
-          backLink: './',
-          next: '/passport-damaged' /* if No is selected */
-    },
-    '/book-time_newport_4_feb': {
+    '/book-appointment_peterborough_4_feb': {
       fields: ['passport-damaged'],
         backLink: './',
         next: '/passport-damaged' /* if No is selected */
   },
-  '/book-time_newport_10_feb': {
+  '/book-appointment_peterborough_10_feb': {
+    fields: ['passport-damaged'],
+      backLink: './',
+      next: '/passport-damaged' /* if No is selected */
+    },
+    '/book-appointment_newport_4_feb': {
+      fields: ['passport-damaged'],
+        backLink: './',
+        next: '/passport-damaged' /* if No is selected */
+  },
+  '/book-appointment_newport_10_feb': {
+    fields: ['passport-damaged'],
+      backLink: './',
+      next: '/passport-damaged' /* if No is selected */
+    },
+    '/book-appointment_london_4_feb': {
+      fields: ['passport-damaged'],
+        backLink: './',
+        next: '/passport-damaged' /* if No is selected */
+  },
+  '/book-appointment_london_10_feb': {
     fields: ['passport-damaged'],
       backLink: './',
       next: '/passport-damaged' /* if No is selected */
