@@ -72,6 +72,20 @@ validate: [
       }
     ]
   },
+    'help': {
+      legend: {
+        value: 'What nationality is shown on your passport?',
+        className: 'visuallyhidden'
+      },
+      className: 'inline',
+      options: [
+        {value: 'yes', label: 'Yes, I&#39;d like to help', toggle: 'yes-title'},
+        {value: 'no', label: 'No, I&#39;d prefer not to' }
+      ],
+      validate: [
+        'required'
+      ]
+    },
     'age-year': {
       labelClassName: 'form-label',
       formatter: 'removehyphens',

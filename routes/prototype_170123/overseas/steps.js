@@ -33,7 +33,7 @@ module.exports = {
         next: '/give-contact-details' /* if yes is selected */
     },
     '/give-contact-details': {
-        fields: ['name','lastname','email','application-country-code', 'mobile'],
+        fields: ['name','lastname','email','application-country-code', 'mobile', 'help'],
         backLink: './try-service',
         next: '/../intro/before-you-continue-overseas' /* if yes is selected */
     }
