@@ -579,11 +579,32 @@ article th, article td{
     font-size: 16px;
 }
 
+
+.comparison-table {
+  font-size: 19px;
+  text-align: center;
+}
+
+.comparison-table a {
+  text-decoration: none;
+}
+
+.comparison-table td {
+  text-align: center;
+  padding: 12px;
+  background: white;
+  border: 1px solid #cccccc;
+  margin-top: 50px;
+  height: 60px;
+}
+
+
 .reserve-notice {
   width: 66%;
   padding: 30px 20px 10px 40px;
   margin-bottom: 30px;
   background: $orange;
+  color: white;
 }
 
 .more-dates {
