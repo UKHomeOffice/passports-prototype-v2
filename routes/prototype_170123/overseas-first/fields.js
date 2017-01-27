@@ -58,7 +58,6 @@ module.exports = {
     ]
   },
   'application-country': {
-      className: 'typeahead',
       options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
           return {
               value: c.id,

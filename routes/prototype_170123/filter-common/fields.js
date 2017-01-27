@@ -80,8 +80,7 @@ module.exports = {
   dependent: {
     field: 'apply-uk',
     value: false
-  },
-  className: 'typeahead'
+  }
 },
   'age-day': {
     labelClassName: 'form-label',
