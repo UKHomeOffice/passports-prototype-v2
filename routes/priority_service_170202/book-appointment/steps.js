@@ -9,7 +9,7 @@ module.exports = {
         backLink: './',
         next: '/passport-damaged' /* if No is selected */
     },
-    '/book-appointments-2': {
+    '/book-appointment-2': {
       fields: ['passport-damaged'],
         backLink: './',
         next: '/passport-damaged' /* if No is selected */
