@@ -41,6 +41,7 @@ legend: {
   value: 'Do you have any uncancelled passport from a different country?',
   className: 'visuallyhidden'
 },
+className: 'inline',
 options: [
   {value: 'Yes', label: 'Yes', toggle: 'which-passport'},
   {value: 'No', label: 'No'}
@@ -53,6 +54,27 @@ validate: [
     redirect:'/../overseas-not-eligible/france'
   }
 ]
+},
+'dual-national-country': {
+  labelClassName: 'visuallyhidden',
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+        return {
+            value: c.id,
+            label: c.name,
+            attributes: [
+                {
+                    attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+                }
+            ]
+        }
+    })),
+    groupAttributes: [
+        { attribute: 'data-previous-value', value: '{{values.typeahead}}' }
+    ],
+    dependent: {
+        field: 'uncancelled',
+        value: true
+    }
 },
   'british-citizen': {
     legend: {
