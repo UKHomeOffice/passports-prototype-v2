@@ -108,10 +108,8 @@ validate: [
       className: 'visuallyhidden'
     },
     options: [
-      {value: 'UKPA', label: 'UKPA'},
-      {value: 'UKPS', label: 'UKPS'},
-      {value: 'IPS', label: 'IPS'},
-      {value: 'Other', label: 'Other'}
+      {value: 'UK', label: 'One of: UKPA / UKPS / IPS / HMPO'},
+      {value: 'Other', label: 'Other (passports usually issued outside the UK)'}
     ],
     validate: [
       'required'
