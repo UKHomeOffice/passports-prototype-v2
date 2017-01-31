@@ -4,7 +4,7 @@
 {{$pageTitle}}Do you have any uncancelled passports from a different country?{{/pageTitle}}
 
 {{$header}}
-    <h1>Do you have any other passports that haven't been cancelled?</h1>
+    <h1>Do you have any other passports?</h1>
 {{/header}}
 
 {{$content}}
@@ -12,10 +12,22 @@
     {{< hmpo-partials-form}}
     {{$form}}
       <fieldset class="inline">
-        <p>For example, if you're a dual national. This includes any non-British passport that has expired but hasn't been cancelled.</p>
+      <!--  <p>For example, if you're a dual national. </p>-->
         {{#radio-group}}uncancelled{{/radio-group}}
 
-        <div id="which-passport" class="reveal js-hidden" style="margin-top:-20px;">
+        <div id="which-passport" class="reveal js-hidden" style="margin-top:-25px; margin-bottom:20px">
+            <div class="panel panel-border-narrow">
+              <legend><span class="form-label-bold">Which country is it for?</span></legend>
+              <div class="form-date">
+                <div id="country-code-group" class="form-group">
+                  <label for="country-code" class="visuallyhidden"></label>
+                  {{#select}}dual-national-country{{/select}}
+                </div>
+              </div>
+        </div>
+        </div>
+
+      <!--  <div id="which-passport" class="reveal js-hidden" style="margin-top:-20px;">
           <div class="panel-indent">
               <fieldset>
                   <legend><h2>Which additional passports do you have?</h2></legend>
@@ -33,9 +45,10 @@
                  </div>
             </fieldset>
           </div>
-        </div>
-        {{#input-submit}}{{/input-submit}}
+        </div> -->
       </fieldset>
+
+        {{#input-submit}}{{/input-submit}}
     {{/form}}
     {{/ hmpo-partials-form}}
 {{/content}}

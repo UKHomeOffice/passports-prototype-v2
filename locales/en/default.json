@@ -102,6 +102,9 @@
         "reference-no":{
             "label": "Reference",
             "hint": "You'll find this information in your confirmation email, eg PEX 123 456 7890"
+        },
+        "dual-national-country":{
+          "label": "Which country is it for?"
         }
     },
     "validation": {
@@ -130,7 +133,7 @@
           "required": "You must answer this question"
         },
         "british-citizen": {
-          "required": "You must answer this question - british"
+          "required": "You must answer this question - british citizen"
         },
         "issuing-authority": {
           "required": "You must answer this question - issuing-authority"
