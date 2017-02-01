@@ -16,7 +16,7 @@ module.exports = {
     {
       type:'equal',
       arguments:['No'], /* if Yes is selected */
-      redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+      redirect:'/../not-eligible/1week'
     }
   ]
 },
