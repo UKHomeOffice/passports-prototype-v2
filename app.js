@@ -198,6 +198,8 @@ function init(sessionStore) {
         app.use('/priority_service_170202/startpage-temp', require('./routes/priority_service_170202/startpage-temp'));
         app.use('/priority_service_170202/get-urgent-passport', require('./routes/priority_service_170202/get-urgent-passport'));
         app.use('/priority_service_170202/book-appointment', require('./routes/priority_service_170202/book-appointment'));
+        app.use('/priority_service_170202/not-eligible', require('./routes/priority_service_170202/not-eligible'));
+
 
 
 
@@ -221,7 +223,7 @@ function init(sessionStore) {
     app.use('/priority-service-170118/intro', require('./routes/priority-service-170118/intro'));
     app.use('/not-eligible', require('./routes/priority-service-170118/not-eligible'));
 
-  
+
     //How to
     app.use('/how-to', require('./routes/how-to'));
 

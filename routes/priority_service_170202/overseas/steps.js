@@ -10,7 +10,7 @@ module.exports = {
         next: '/uncancelled' /* if No is selected */
     },
     '/uncancelled': {
-        fields: ['uncancelled'],
+        fields: ['uncancelled', 'dual-national-country'],
         backLink: './passport-damaged',
         next: '/british-citizen'
     },

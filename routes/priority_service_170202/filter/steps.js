@@ -11,7 +11,7 @@ module.exports = {
     },
     '/uncancelled': {
         controller: require('../../../controllers/go-overseas'),
-        fields: ['uncancelled'],
+        fields: ['uncancelled', 'dual-national-country'],
         backLink: './passport-damaged',
         next: '/../intro',
         nextAlt: '../overseas'
