@@ -1,0 +1,149 @@
+
+{{< layout}}
+
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Pick appointment time{{/pageTitle}}
+
+{{$header}}
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+{{/header}}
+
+{{$main-content}}
+
+<h1>Choose an appointment time</h1>
+
+<h2>London <span class="font-small"><a href="/priority_service_170202/book-appointment">Change</a>
+</span></h2>
+
+
+<p>You need to be at London passport office 5 minutes before your appointment.</p>
+
+<p>It takes about 15 minutes to get your new passport. </p>
+
+
+<!--
+<p class="heading-medium">Peterborough Passport Office</p>
+  Aragon Court</br>
+  Northminster Road</br>
+Peterborough</br>
+PE1 1QG</p>
+-->
+<!--
+
+<div class="stuck" id="stickynav">
+  <div class="book-table">
+  <table class="book-table">
+    <tbody>
+    <tr>
+    <td><p class="bold-small">Saturday<br> 21 January</p></td>
+    <td><p class="bold-small">Monday<br>  23 January</p></td>
+    <td><p class="bold-small">Tuesday<br>  24 January</p></td>
+    <td><p class="bold-small">Wednesday<br>  25 January</p></td>
+    <td><p class="bold-small">Thursday<br>  26 January</p></td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+</div>
+-->
+
+<div class="manage-times">
+  <div class="manage-time-next">
+<span class="font-small"><a href="#">Next &nbsp; ▶</a> </span>
+</div>
+<div class="manage-time-previous">
+<span class="font-small"><a href="/priority_service_170202/book-appointment/book-appointment_london_4_feb">◀ &nbsp; Previous</a></span>
+</div>
+</div>
+
+<div class="book-table">
+  <table class="book-table">
+  <tbody>
+  <tr>
+  <td><span class="bold-small">Saturday<br> 11 February</span></td>
+  <td><span class="bold-small">Monday<br>  13 February</span></td>
+  <td><span class="bold-small">Tuesday<br>  14 February</span></td>
+  <td><span class="bold-small">Wednesday<br>  15 February</span></td>
+  <td><span class="bold-small">Thursday<br>  16 February</span></td>
+  </tr>
+<tr>
+  <td><span class="unavailable">10.00am </br></span></td>
+  <td><span class="unavailable">10.00am </br></span></td>
+  <td><span class="unavailable">10.00am </br></span></td>
+    <td><span class="unavailable">10.00am </br></span></td>
+    <td><a href="#"><span class="available">10.00am </br><span class="available">Available</span></span></a></td>
+
+</tr>
+<tr>
+  <td><span class="unavailable">10.30am </br></span></td>
+  <td><span class="unavailable">10.30am </br></span></td>
+    <td><span class="unavailable">10.30am </br></span></td>
+    <td><span class="available"><a href="#">10.30am </br><span class="available">Available</span></span></a></td>
+    <td><span class="unavailable">10.30am </br></span></td>
+
+
+</tr>
+<tr>
+  <td><span class="unavailable">12.30pm </br></span></td>
+  <td><span class="unavailable">12.30pm </br></span></td>
+  <td><span class="unavailable">12.30pm </br></span></td>
+  <td><span class="unavailable">12.30pm </br></span></td>
+    <td><span class="unavailable">12.30pm </br></span></td>
+
+</tr>
+<tr>
+  <td><span class="unavailable">1.00pm </br></span></td>
+    <td><span class="unavailable">1.00pm </br></span></td>
+    <td><span class="unavailable">1.00pm </br></san></td>
+      <td><span class="unavailable">1.00pm </br></span></td>
+    <td><span class="unavailable">1.00pm </br></span></td>
+
+</tr>
+<tr>
+  <td><span class="available"><a href="/priority_service_170202/book-appointment/confirmation-scenario-1">1.30pm </br><span class="available">Available</span></span></a></td>
+  <td><span class="unavailable">1.30pm </br></span></td>
+  <td><span class="unavailable">1.30pm </br></span></td>
+  <td><span class="unavailable">1.30pm </br></span></td>
+    <td><span class="unavailable">1.30pm </br></span></td>
+</tr>
+<tr>
+  <td><span class="unavailable">4.30pm </br></span></td>
+  <td><span class="unavailable">4.30pm </br></span></td>
+  <td><span class="unavailable">4.30pm </br></span></td>
+  <td><a href="#"><span class="available">4.30pm </br><span class="available">Available</span></span></a></td>
+    <td><span class="unavailable">4.30pm </br></span></td>
+</tr>
+  <tr>
+    <td><span class="unavailable">5.00pm </br></span></td>
+    <td><span class="unavailable">5.00pm </br></span></td>
+    <td><span class="unavailable">5.00pm </br></span></td>
+    <td><span class="unavailable">5.00pm </br></span></td>
+    <td><span class="unavailable">5.00pm </br></span></td>
+
+  </tr>
+
+  </tbody>
+  </table>
+
+
+</div>
+</div>
+
+
+<script>
+window.onscroll = function() {
+    var sticky = document.getElementById('stickynav');
+    if( document.body.scrollTop+document.documentElement.scrollTop > 240)
+        sticky.className = "stuck";
+    else sticky.className = "";
+};
+</script>
+
+
+{{/main-content}}
+
+{{/ layout}}
