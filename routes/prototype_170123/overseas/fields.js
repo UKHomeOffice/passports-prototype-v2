@@ -130,9 +130,7 @@ validate: [
       className: 'visuallyhidden'
     },
     options: [
-      {value: 'UKPA', label: 'UKPA'},
-      {value: 'UKPS', label: 'UKPS'},
-      {value: 'IPS', label: 'IPS'},
+      {value: 'UK', label: 'UKPA, UKPS, IPS or HMPO'},
       {value: 'Other', label: 'Other'}
     ],
     validate: [
