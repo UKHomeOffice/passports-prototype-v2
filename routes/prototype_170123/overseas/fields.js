@@ -178,9 +178,7 @@ validate: [
 
 },
 'email': {
-    validate: [
-        'required'
-    ]
+
 },
 'application-country-code': {
   labelClassName: 'visuallyhidden',
@@ -191,10 +189,7 @@ validate: [
 },
 'mobile': {
   labelClassName: 'visuallyhidden',
-  validate: [
-      'numeric',
-      'required'
-  ]
+  
 }
 
 };
