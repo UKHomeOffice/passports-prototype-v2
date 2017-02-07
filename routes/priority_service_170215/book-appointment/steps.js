@@ -29,32 +29,37 @@ module.exports = {
         backLink: './',
         next: '/passport-damaged' /* if No is selected */
     },
-    '/book-appointment_peterborough_4_feb': {
+    '/london-week-1-selected': {
       fields: ['passport-damaged'],
         backLink: './',
         next: '/passport-damaged' /* if No is selected */
   },
-  '/book-appointment_peterborough_10_feb': {
+    '/peterborough-week-1': {
+      fields: ['passport-damaged'],
+        backLink: './',
+        next: '/passport-damaged' /* if No is selected */
+  },
+  '/peterborough-week-2': {
     fields: ['passport-damaged'],
       backLink: './',
       next: '/passport-damaged' /* if No is selected */
     },
-    '/book-appointment_newport_4_feb': {
+    '/newport-week-1': {
       fields: ['passport-damaged'],
         backLink: './',
         next: '/passport-damaged' /* if No is selected */
   },
-  '/book-appointment_newport_10_feb': {
+  '/newport-week-2': {
     fields: ['passport-damaged'],
       backLink: './',
       next: '/passport-damaged' /* if No is selected */
     },
-    '/book-appointment_london_4_feb': {
+    '/london-week-1': {
       fields: ['passport-damaged'],
         backLink: './',
         next: '/passport-damaged' /* if No is selected */
   },
-  '/book-appointment_london_10_feb': {
+  '/london-week-2': {
     fields: ['passport-damaged'],
       backLink: './',
       next: '/passport-damaged' /* if No is selected */

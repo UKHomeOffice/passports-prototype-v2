@@ -614,6 +614,7 @@ article th, article td{
   text-align: right;
 }
 
+
 .book-table {
   font-size: 16px;
   text-align: center;
@@ -625,11 +626,17 @@ article th, article td{
 
 .book-table td {
   text-align: center;
-  padding: 15px;
-  background: white;
+  padding: 10px;
   border: 1px solid #cccccc;
   margin-top: 50px;
   height: 60px;
+}
+
+.times {
+}
+
+.day-select {
+  background: $highlight-colour;
 }
 
 /*
