@@ -60,7 +60,7 @@ module.exports = {
     '/sign': {
         fields: ['can-sign', 'no-sign-reason'],
         backLink: './',
-        next: '/passport-special-delivery', /* if they are from the UK */
+        next: '/summary', /* if they are from the UK */
         controller: require('../../../controllers/go-overseas'),
         nextAlt: './summary-overseas'
     },
