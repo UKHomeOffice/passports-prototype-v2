@@ -130,9 +130,7 @@ validate: [
       className: 'visuallyhidden'
     },
     options: [
-      {value: 'UKPA', label: 'UKPA'},
-      {value: 'UKPS', label: 'UKPS'},
-      {value: 'IPS', label: 'IPS'},
+      {value: 'UK', label: 'UKPA, UKPS, IPS or HMPO'},
       {value: 'Other', label: 'Other'}
     ],
     validate: [
@@ -180,9 +178,7 @@ validate: [
 
 },
 'email': {
-    validate: [
-        'required'
-    ]
+
 },
 'application-country-code': {
   labelClassName: 'visuallyhidden',
@@ -193,10 +189,7 @@ validate: [
 },
 'mobile': {
   labelClassName: 'visuallyhidden',
-  validate: [
-      'numeric',
-      'required'
-  ]
+  
 }
 
 };
