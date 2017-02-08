@@ -248,14 +248,14 @@ response.sections.push({
                     return output.join('<br>');
                 }
             },
-            {
+          /*  {
                 step: values.veteran ? null : this.getEditStep('secure-return'),
                 title: values.veteran ? 'Delivery' : 'Old passport',
                 value: function () {
-                        var output = 'You need to bring your old passport to the appointment.';
+                        var output = 'You must bring your old passport when you collect your new one.';
                         return output;
                 }
-            },
+            },*/
             {
                 className: 'cost',
                 title: 'Total',
