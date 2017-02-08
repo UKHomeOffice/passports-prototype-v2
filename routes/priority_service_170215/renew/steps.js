@@ -74,7 +74,7 @@ module.exports = {
         fields: ['secure-return']
     },
     '/summary':{
-        controller: require('../../../controllers/confirm'),
+        controller: require('../../../controllers/confirm-dps'),
         template: 'confirm',
         next: '/declaration'
     },
