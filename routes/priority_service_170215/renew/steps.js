@@ -54,7 +54,7 @@ module.exports = {
         next: '/passport-options'
     },
     '/passport-options':{
-        fields: ['passport-options', 'braille'],
+        fields: ['passport-options-dps', 'braille'],
         next: '/sign'
     },
     '/sign': {

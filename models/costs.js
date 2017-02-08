@@ -44,6 +44,13 @@ Costs.prototype.getCost = function () {
     if (this.get('secure-return')) {
         cost += this.delivery();
     }
+    if (this.get('passport-options-dps') == '48') {
+        cost += this.largePassport() + 51.5;
+    }
+    if (this.get('passport-options-dps') == '32') {
+        cost += 55.5;
+        console.log(cost);
+    }
     return cost;
 };
 

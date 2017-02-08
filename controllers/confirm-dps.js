@@ -232,7 +232,7 @@ response.sections.push({
                 title: 'New passport',
                 value: function () {
                     var output = [];
-                    if (values['passport-options-overseas'] == '48') {
+                    if (values['passport-options-dps'] == '48') {
                         var cost = model.largePassport();
                         cost = currency(cost);
                         if (!values.veteran) {
@@ -240,29 +240,19 @@ response.sections.push({
                         }
 
                         output.push('Jumbo passport ');
-                        output.push('£91');
+                        output.push('£137');
                     } else {
                         output.push('Standard passport');
-                        output.push('£83');
+                        output.push('£128');
                     }
                     return output.join('<br>');
                 }
             },
             {
                 step: values.veteran ? null : this.getEditStep('secure-return'),
-                title: values.veteran ? 'Delivery' : 'Courier fee',
-                value: function () {
-
-                        var output = 'We&#39;ll send your old and new passports to you separately.';
-                            output += '<br/>£19.86 ';
-                        return output;
-                    }
-            },
-            {
-                step: values.veteran ? null : this.getEditStep('secure-return'),
                 title: values.veteran ? 'Delivery' : 'Old passport',
                 value: function () {
-                        var output = 'You need to post your old passport to us.';
+                        var output = 'You need to bring your old passport to the appointment.';
                         return output;
                 }
             },
