@@ -205,7 +205,7 @@ response.sections.push({
             title: 'Date and time',
             value: function() {
               var output = [];
-              output.push('Saturday, 11 February 2017 <br/>1:30pm');
+              output.push('Saturday, 25 February 2017 <br/>12:30pm');
               return output;
             }
         },
