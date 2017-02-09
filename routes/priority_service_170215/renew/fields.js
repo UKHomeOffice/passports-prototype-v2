@@ -194,13 +194,13 @@ module.exports = {
         'required'
     ]
   },
-  'passport-options':{
+  'passport-options-dps':{
     legend: {
       value: 'Select passport size'
     },
     options: [
-      {value: '32', label: 'Standard adult 32-page passport (£72.50)'},
-      {value: '48', label: 'Jumbo adult 48-page passport (£85.50)'}
+      {value: '32', label: 'Standard adult 32-page passport (£128)'},
+      {value: '48', label: 'Jumbo adult 48-page passport (£137)'}
     ],
     validate: [
       'required'

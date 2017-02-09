@@ -54,7 +54,7 @@ module.exports = {
         next: '/passport-options'
     },
     '/passport-options':{
-        fields: ['passport-options', 'braille'],
+        fields: ['passport-options-dps', 'braille'],
         next: '/sign'
     },
     '/sign': {
@@ -74,7 +74,7 @@ module.exports = {
         fields: ['secure-return']
     },
     '/summary':{
-        controller: require('../../../controllers/confirm'),
+        controller: require('../../../controllers/confirm-dps'),
         template: 'confirm',
         next: '/declaration'
     },
