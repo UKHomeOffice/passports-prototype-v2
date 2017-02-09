@@ -574,6 +574,10 @@ aside .page-navigation li {
       list-style-type: none;
 }
 
+.oab-link {
+  padding: 30px 0 30px 0;
+}
+
 /* table styling for static pages */
 article th, article td{
     font-size: 16px;
@@ -581,6 +585,7 @@ article th, article td{
 
 
 .comparison-table {
+  margin-top: 30px;
   font-size: 19px;
   text-align: center;
 }
@@ -602,6 +607,10 @@ article th, article td{
   height: 60px;
 }
 
+.no-style {
+  border: 0px solid white !important;
+
+}
 
 .reserve-notice {
   width: 66%;
