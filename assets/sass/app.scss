@@ -711,6 +711,8 @@ float: left;
 #application-country-code-group{
   width:60px;
 }
+/* this is for overseas when there should be an input with the country code before the phone number input
+/* for normal OR or DPS this needs to be disabled
 #mobile {
-  width: 229px;
-}
+  width: 229px; }
+*/
