@@ -715,3 +715,52 @@ float: left;
 #mobile {
   width: 229px; }
 */
+
+/* time out modal */
+.modalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+  box-sizing: border-box;
+  padding:10px;
+	background: #fff;
+}
+
+.warning{
+  width:100%;
+  box-sizing: border-box;
+  padding:15px;
+  background: #F47738;
+  color: white;
+}
+
+.timeout_content{
+  box-sizing: border-box;
+  padding:20px;
+}
+
+.icon-important{
+  background-image: url("../images/icon-important-white.png");
+
+}
