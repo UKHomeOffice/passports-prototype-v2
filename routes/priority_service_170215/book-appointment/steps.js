@@ -4,6 +4,11 @@ module.exports = {
       backLink: '../filter-common/dob',
       next: '/passport-damaged'
     },
+    '/passport-offices': {
+      fields: ['passport-damaged'],
+        backLink: './',
+        next: '/passport-damaged' /* if No is selected */
+    },
     '/book-time': {
       fields: ['passport-damaged'],
         backLink: './',
