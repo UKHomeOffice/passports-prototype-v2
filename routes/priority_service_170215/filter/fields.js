@@ -16,7 +16,7 @@ module.exports = {
     {
       type:'equal',
       arguments:['No'], /* if Yes is selected */
-      redirect:'/../not-eligible/1week'
+      redirect:'/../not-eligible'
     }
   ]
 },
