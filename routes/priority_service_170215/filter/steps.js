@@ -6,7 +6,7 @@ module.exports = {
     },
     '/passport-damaged': {
       fields: ['passport-damaged'],
-        backLink: './',
+        backLink: '/',
         next: '/uncancelled' /* if No is selected */
     },
     '/uncancelled': {
