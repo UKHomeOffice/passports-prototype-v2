@@ -76,15 +76,16 @@ function countdown(minutes) {
                // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
                setTimeout(function () { countdown(mins - 1); }, 1000);
             }
+
           else {
-            setTimeout(function(){window.location.href='timedout-message'},0);
+            setTimeout(function(){window.location.href='timeout/timedout-message'},0);
           }
         }
     }
     tick();
 }
 
-countdown(5);
+countdown(1);
 
 </script>
     <!-- end of time countdown script -->
