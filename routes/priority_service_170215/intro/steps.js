@@ -16,7 +16,7 @@ module.exports = {
       next: '/you-need-a-photo-overseas'
     },
     '/you-need-a-photo': {
-      backLink: './book-appointment/confirmation-scenario-1',
+      backLink: '../book-appointment/confirmation-scenario-1',
       next: '/choose-photo-method'
     },
     '/you-need-a-photo-overseas': {

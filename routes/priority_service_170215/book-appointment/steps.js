@@ -1,8 +1,6 @@
 module.exports = {
     '/': {
-      fields: ['expiry-year', 'expiry-month'],
-      backLink: '../filter-common/dob',
-      next: '/passport-damaged'
+      backLink: '../intro/what-you-need'
     },
     '/passport-offices': {
       fields: ['passport-damaged'],
@@ -15,9 +13,7 @@ module.exports = {
         next: '/passport-damaged' /* if No is selected */
     },
     '/book-appointment-2': {
-      fields: ['passport-damaged'],
-        backLink: './',
-        next: '/passport-damaged' /* if No is selected */
+      backLink: '../intro/what-you-need'
     },
     '/book-appointment-3': {
       fields: ['passport-damaged'],
