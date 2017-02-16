@@ -634,17 +634,32 @@ article th, article td{
 
 .book-table td {
   text-align: center;
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #cccccc;
-  margin-top: 50px;
-  height: 60px;
+  margin-top: 0px;
+  height: 50px;
 }
 
+.filter-locations {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.filter-locations a {
+  text-decoration: none;
+}
 .times {
 }
 
 .day-select {
   background: $highlight-colour;
+}
+
+.location-select {
+  font-size: 19px;
+  border-bottom: 5px solid $govuk-blue;
+  padding: 7px;
+  font-weight: bold;
 }
 
 /*
@@ -659,8 +674,8 @@ td:last-child {
 
 
 .manage-time-next {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 3px;
+  margin-bottom: 10px;
 float: right;
 }
 
@@ -684,12 +699,12 @@ float: left;
 }
 
 .available {
-  font-size: 19px;
+  font-size: 16px;
   font-weight: normal;
 }
 
 .city-available {
-  font-size: 22px;
+  font-size: 19px;
 }
 
 .time-available {
