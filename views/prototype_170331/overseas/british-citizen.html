@@ -1,0 +1,55 @@
+{{< layout}}
+
+{{$pageTitle}}What nationality is shown on your passport?{{/pageTitle}}
+
+{{$header}}
+    <h1>What nationality is written on your passport?</h1>
+{{/header}}
+
+{{$content}}
+
+    {{< hmpo-partials-form}}
+    {{$form}}
+        <fieldset class="inline">
+          <!--
+            <p class="form-hint" id="dob-hint">Check your nationality on the photo page of your passport.</p> -->
+            {{#radio-group}}british-citizen{{/radio-group}}
+            <div id="other-citizen" class="reveal js-hidden" style="margin-bottom:20px; margin-top:-20px;">
+                <div class="panel panel-border-narrow">
+                  <p>Select nationality</p>
+                  <select>
+                    <option value="empty"></option>
+                      <option value="bno">British National Overseas</option>
+                      <option value="botc">British Overseas Territory Citizen</option>
+                      <option value="boc">British Overseas Citizen</option>
+                      <option value="bpp">British Protected Person</option>
+                      <option value="bs">British Subject</option>
+                      <option value="bs2">British Subject (UK & Colonies)</option>
+                    </select>
+                  </div>
+                </div>
+            {{#input-submit}}{{/input-submit}}
+        </fieldset>
+    {{/form}}
+    {{/ hmpo-partials-form}}
+
+{{/content}}
+{{$sidebar}}
+
+<div class="column-one-third">
+  <br/>
+  <br/>
+    <div class="sidebar related">
+      <div class="photo-preview-inner">
+        <h2 class="heading-medium">Check here</h2>
+        <div class="photo">
+            <img src="../../public/images/british-citizen.png" alt="where to check your nationality" title="where to check your nationality" width="203">
+          </div>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
+
+
+{{/ layout}}

@@ -1,0 +1,36 @@
+{{< layout}}
+
+{{$pageTitle}}Getting your old and new passports to you
+{{/pageTitle}}
+
+    <div></div>
+    <p>We’ll send your old and your new passports to you separately.
+    </p>
+    <div></div>
+    <p>Your new passport will be sent by special delivery. This is included in the passport fee.
+    </p>
+    </div>
+
+{{$header}}
+    <h1>How would you like us to send your old passport back to you?
+</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+  <!-- we need the rado buttons here 'Special delivery (£3 extra' and 'Standard post (free)' -->
+
+      {{#radio-group}}return-passport{{/radio-group}}
+
+    {{#input-submit}}{{/input-submit}}
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+
+{{/ layout}}

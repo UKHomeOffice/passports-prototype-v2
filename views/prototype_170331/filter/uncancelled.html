@@ -1,0 +1,43 @@
+{{< layout}}
+
+
+{{$pageTitle}}Do you have any uncancelled passports from a different country?{{/pageTitle}}
+
+{{$header}}
+    <h1>Do you have any other passports that haven't been cancelled?</h1>
+{{/header}}
+
+{{$content}}
+
+    {{< hmpo-partials-form}}
+    {{$form}}
+      <fieldset class="inline">
+        <p>For example, if you're a dual national. This includes any non-British passport that has expired but hasn't been cancelled.</p>
+        {{#radio-group}}uncancelled{{/radio-group}}
+
+        <div id="which-passport" class="reveal js-hidden" style="margin-top:-20px;">
+          <div class="panel-indent">
+              <fieldset>
+                  <legend><h2>Which additional passports do you have?</h2></legend>
+                  <div id="contact-prefs-email-group" class="form-group form-group-compound">
+                      <label for="contact-prefs-email" class="block-label ">
+                          <input type="checkbox" id="contact-prefs-email" name="contact-prefs-email" value="true" aria-required="false">
+                              Another British passport
+                      </label>
+                  </div>
+                  <div class="form-group">
+                      <label for="contact-prefs-sms" class="block-label">
+                          <input type="checkbox" id="contact-prefs-sms" name="contact-prefs-sms" value="true" aria-required="false" data-toggle="contact-sms" aria-controls="contact-sms" aria-expanded="false">
+                              Passport from another country
+                      </label>
+                 </div>
+            </fieldset>
+          </div>
+        </div>
+        {{#input-submit}}{{/input-submit}}
+      </fieldset>
+    {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}

@@ -152,9 +152,30 @@ function init(sessionStore) {
         app.use('/prototype_170123/startpage-temp', require('./routes/prototype_170123/startpage-temp'));
         app.use('/prototype_170123/overseas-not-available', require('./routes/prototype_170123/overseas-not-available'));
 
+        //prototype ovs - or 170331
+            app.use('/prototype_170331/overseas', require('./routes/prototype_170331/overseas'));
+            app.use('/prototype_170331/overseas-not-eligible', require('./routes/prototype_170331/overseas-not-eligible'));
+            app.use('/prototype_170331/overseas-first', require('./routes/prototype_170331/overseas-first'));
+            app.use('/prototype_170331/overseas-lost-change', require('./routes/prototype_170331/overseas-lost-change'));
+            app.use('/prototype_170331/uploadphoto', require('./routes/prototype_170331/uploadphoto'));
+            app.use('/prototype_170331/filter-common', require('./routes/prototype_170331/filter-common'));
+            app.use('/prototype_170331/renew', require('./routes/prototype_170331/renew'));
+            app.use('/prototype_170331/intro', require('./routes/prototype_170331/intro'));
+            app.use('/prototype_170331/filter', require('./routes/prototype_170331/filter'));
+            app.use('/prototype_170331/startpage', require('./routes/prototype_170331/startpage'));
+            app.use('/prototype_170331/startpage-overseas', require('./routes/prototype_170331/startpage-overseas'));
+            app.use('/prototype_170331/photoguide-short', require('./routes/prototype_170331/photoguide-short'));
+            app.use('/prototype_170331/photoguide-static', require('./routes/prototype_170331/photoguide-static'));
+            app.use('/prototype_170331/photoguide-shop', require('./routes/prototype_170331/photoguide-shop'));
+            app.use('/prototype_170331/takephoto', require('./routes/prototype_170331/takephoto'));
+            app.use('/prototype_170331/upload', require('./routes/prototype_170331/upload'));
+            app.use('/prototype_170331/rejectedphoto', require('./routes/prototype_170331/rejectedphoto'));
+            app.use('/prototype_170331/filter-common-temp', require('./routes/prototype_170331/filter-common-temp'));
+            app.use('/prototype_170331/startpage-temp', require('./routes/prototype_170331/startpage-temp'));
+            app.use('/prototype_170331/overseas-not-available', require('./routes/prototype_170331/overseas-not-available'));
+
 
         //prototype 170118
-
         app.use('/priority_service_170118/overseas', require('./routes/priority_service_170118/overseas'));
         app.use('/priority_service_170118/overseas-not-eligible', require('./routes/priority_service_170118/overseas-not-eligible'));
         app.use('/priority_service_170118/overseas-first', require('./routes/priority_service_170118/overseas-first'));
@@ -178,7 +199,6 @@ function init(sessionStore) {
 
 
         //prototype 170202
-
         app.use('/priority_service_170202/overseas', require('./routes/priority_service_170202/overseas'));
         app.use('/priority_service_170202/overseas-not-eligible', require('./routes/priority_service_170202/overseas-not-eligible'));
         app.use('/priority_service_170202/overseas-first', require('./routes/priority_service_170202/overseas-first'));
@@ -202,7 +222,6 @@ function init(sessionStore) {
 
 
         //prototype 170215
-
         app.use('/priority_service_170215/overseas', require('./routes/priority_service_170215/overseas'));
         app.use('/priority_service_170215/overseas-not-eligible', require('./routes/priority_service_170215/overseas-not-eligible'));
         app.use('/priority_service_170215/overseas-first', require('./routes/priority_service_170215/overseas-first'));
@@ -228,7 +247,6 @@ function init(sessionStore) {
         app.use('/priority_service_170215/timeout', require('./routes/priority_service_170215/timeout'));
 
         //prototype 170301
-
         app.use('/priority_service_170301/overseas', require('./routes/priority_service_170301/overseas'));
         app.use('/priority_service_170301/overseas-not-eligible', require('./routes/priority_service_170301/overseas-not-eligible'));
         app.use('/priority_service_170301/overseas-first', require('./routes/priority_service_170301/overseas-first'));
