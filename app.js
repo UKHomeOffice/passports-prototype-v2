@@ -173,6 +173,7 @@ function init(sessionStore) {
             app.use('/prototype_170331/filter-common-temp', require('./routes/prototype_170331/filter-common-temp'));
             app.use('/prototype_170331/startpage-temp', require('./routes/prototype_170331/startpage-temp'));
             app.use('/prototype_170331/overseas-not-available', require('./routes/prototype_170331/overseas-not-available'));
+            app.use('/prototype_170331/throttle', require('./routes/prototype_170331/throttle'));
 
 
         //prototype 170118
