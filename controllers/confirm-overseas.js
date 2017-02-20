@@ -130,11 +130,11 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     }
 
     newPassportFields.push(
-        {
+      /*  {
             step: this.getEditStep('passport-details-correct'),
             title: 'Personal details',
             value: 'Your personal details haven’t changed'
-        },
+        },*/
         {
             title: 'Your photo',
             custom: '<div class="photo"><img src="../../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150"></div>'
