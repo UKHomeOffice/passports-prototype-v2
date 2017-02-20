@@ -1,0 +1,49 @@
+{{< layout}}
+
+{{$pageTitle}}Do you want to try the new digital service?{{/pageTitle}}
+
+{{$header}}
+    <h1>Help us improve the new service</h1>
+{{/header}}
+
+{{$content}}
+    {{< hmpo-partials-form}}
+    {{$form}}
+        <p>We'd like to talk to you about how to improve the service. Your contact details won't be used for anything else.
+        </p>
+        {{#radio-group}}help{{/radio-group}}
+    <fieldset>
+      <!--  <label for="yes" class="block-label selected">
+              <input type="radio" name="title" id="yes" value="Other" aria-required="true" data-toggle="yes-title" aria-controls="yes-title" aria-expanded="true">
+              Yes, I'd like to help
+        </label>-->
+              <div id="yes-title" class="reveal js-hidden" style="margin-top:-25px;">
+                  <div class="panel panel-border-narrow">
+                    {{#input-text}}name{{/input-text}}
+                    {{#input-text}}lastname{{/input-text}}
+                    {{#input-text}}email{{/input-text}}
+                    <legend><span class="form-label-bold">Mobile or home phone</span></legend>
+                    <div class="form-date">
+                      <div id="country-code-group" class="form-group">
+                        <label for="country-code" class="visuallyhidden"></label>
+                        {{#input-text}}application-country-code{{/input-text}}
+                      </div>
+                      <div id="mobile-group" class="form-group" style="width:50%">
+                        {{#input-text}}mobile{{/input-text}}
+                      </div>
+                    </div>
+              </div>
+            </div>
+<!--
+          <label for="no" class="block-label selected">
+                <input type="radio" name="title" id="no" value="Other" aria-required="true" data-toggle="no-title" aria-controls="no-title" aria-expanded="true">
+              No, I'd prefer not to
+          </label>-->
+        </fieldset>
+        <br/>
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}

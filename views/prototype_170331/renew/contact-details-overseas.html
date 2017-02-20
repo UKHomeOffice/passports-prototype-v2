@@ -1,0 +1,60 @@
+{{< layout}}
+
+{{$pageTitle}}Your contact details{{/pageTitle}}
+
+{{$header}}
+    <h1>Your contact details</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+    <p>We’ll only use these details to contact you about your application.</p>
+    {{#input-text}}email{{/input-text}}
+  <!--  <fieldset>
+        <legend><span class="form-label-bold">Mobile or home phone</span></legend>
+        <div class="form-date">
+          {{#input-text}}country-code{{/input-text}}
+          {{#input-text}}mobile{{/input-text}}
+        </div>
+    </fieldset>-->
+    <fieldset>
+            <legend><span class="form-label-bold">Mobile or home phone</span></legend>
+            <div class="form-date">
+              <div id="country-code-group" class="form-group">
+                <label for="country-code" class="visuallyhidden"></label>
+                {{#input-text}}application-country-code{{/input-text}}
+              </div>
+              <div id="mobile-group" class="form-group" style="width:50%">
+                {{#input-text}}mobile{{/input-text}}
+              </div>
+            </div>
+        </fieldset>
+    <br/><br/>
+
+    <details>
+        <summary><span class="summary">I need to tell you more about how to contact me</span></summary>
+        <div class="panel panel-border-narrow">
+          <label for="yes" class="block-label selected">
+                <input type="radio" name="title" id="yes" value="Yes" aria-required="true" data-toggle="yes-title" aria-controls="yes-title" aria-expanded="true">
+                Text only (no voice calls)
+          </label>
+          <label for="no" class="block-label selected">
+                <input type="radio" name="title" id="no" value="No" aria-required="true" data-toggle="no-title" aria-controls="no-title" aria-expanded="true">
+                Voice only (no text)
+          </label>
+        </div>
+    </details>
+
+
+    {{#input-submit}}{{/input-submit}}
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+
+{{/ layout}}
