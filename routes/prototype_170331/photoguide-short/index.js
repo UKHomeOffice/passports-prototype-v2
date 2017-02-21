@@ -5,6 +5,6 @@ var app = require('express')(),
 
 app.use(require('hmpo-template-mixins')(fields, { sharedTranslationKey: 'prototype' }));
 
-app.use(wizard(steps, fields, { templatePath: 'prototype_170123/photoguide-short' }));
+app.use(wizard(steps, fields, { templatePath: 'prototype_170331/photoguide-short' }));
 
 module.exports = app;
