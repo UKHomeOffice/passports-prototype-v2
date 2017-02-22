@@ -622,6 +622,38 @@ article th, article td{
   text-align: right;
 }
 
+.col-third {
+  width: 33%;
+  float: left;
+}
+
+.location-metadata {
+  text-align: center;
+  padding: 7px 0 0 0;
+}
+
+.location-metadata p {
+  font-weight: bold;
+}
+
+.location-day {
+  padding: 7px 0 0 0;
+  text-align: center;
+  border-top: 1px solid #cccccc;
+}
+
+.book-table-2 {
+  text-align: center;
+  padding: 10px 5px 5px 15px;
+  margin: 0 auto;
+  clear: both;
+  border: 1px solid #cccccc;
+}
+
+
+.book-table-2 a {
+  text-decoration: none;
+}
 
 .book-table {
   font-size: 16px;
@@ -642,9 +674,12 @@ article th, article td{
 
 .filter-locations {
   text-align: left;
-  margin-top: 10px;
+  margin: 7px;
 }
 
+.filter-locations p {
+  line-height: 200%;
+}
 .filter-locations a {
   text-decoration: none;
 }
@@ -656,10 +691,7 @@ article th, article td{
 }
 
 .location-select {
-  font-size: 19px;
-  border-bottom: 5px solid $govuk-blue;
-  padding: 7px;
-  font-weight: bold;
+  border-bottom: 2px solid $govuk-blue;
 }
 
 /*
@@ -670,6 +702,7 @@ td:last-child {
 
 .manage-times {
   margin: 0 auto;
+  clear: both;
 }
 
 
