@@ -834,6 +834,27 @@ float: left;
 }
 
 .responsive-container {
-  background: red;
   margin: 0 10px 0 10px;
+}
+
+
+.earlier-arrow {
+  float: left;
+  background: url("/public/images/left-arr.png");
+height: 12px;
+width: 10px;
+background-position: 10px 10px;
+margin-top: -5px;
+background-repeat: no-repeat;
+padding: 10px;
+}
+.later-arrow {
+  float: right;
+  background: url("/public/images/right-arr.png");
+height: 12px;
+width: 10px;
+background-position: 10px 10px;
+margin-top: -5px;
+background-repeat: no-repeat;
+padding: 10px;
 }
