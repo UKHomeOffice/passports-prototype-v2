@@ -636,7 +636,7 @@ article th, article td{
 
 .location-metadata {
   text-align: center;
-  padding: 7px 0 0 0;
+  padding: 6px;
 }
 
 .location-metadata p {
@@ -644,14 +644,29 @@ article th, article td{
 }
 
 .location-day {
-  padding: 7px 0 0 0;
+  padding: 6px;
   text-align: center;
   border-top: 1px solid #cccccc;
 }
 
+.col-1 {
+  padding: 6px;
+  text-align: center;
+  border-right: 1px solid #cccccc;
+}
+.col-2 {
+  padding: 6px;
+  text-align: center;
+  border-right: 1px solid #cccccc;
+}
+.col-3 {
+  padding: 6px;
+  text-align: center;
+}
+
 .book-table-2 {
   text-align: center;
-  padding: 10px 5px 5px 15px;
+  padding: 0;
   margin: 0 auto;
   clear: both;
   border: 1px solid #cccccc;
