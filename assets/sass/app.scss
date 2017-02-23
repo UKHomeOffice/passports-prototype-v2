@@ -729,12 +729,11 @@ float: right;
 }
 
 .manage-time-previous {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 3px;
+  margin-bottom: 10px;
   margin-right: 10px;
 float: left;
 }
-
 .unavailable {
   font-size: 19px;
   color: $grey-2;
@@ -836,4 +835,30 @@ float: left;
 }
 .secret-link a {
   text-decoration: none;
+}
+
+.responsive-container {
+  margin: 0 10px 0 10px;
+}
+
+
+.earlier-arrow {
+  float: left;
+  background: url("/public/images/left-arr.png");
+height: 12px;
+width: 10px;
+background-position: 10px 10px;
+margin-top: -5px;
+background-repeat: no-repeat;
+padding: 10px;
+}
+.later-arrow {
+  float: right;
+  background: url("/public/images/right-arr.png");
+height: 12px;
+width: 10px;
+background-position: 10px 10px;
+margin-top: -5px;
+background-repeat: no-repeat;
+padding: 10px;
 }
