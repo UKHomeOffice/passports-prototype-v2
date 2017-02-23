@@ -725,12 +725,11 @@ float: right;
 }
 
 .manage-time-previous {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 3px;
+  margin-bottom: 10px;
   margin-right: 10px;
 float: left;
 }
-
 .unavailable {
   font-size: 19px;
   color: $grey-2;
@@ -832,4 +831,9 @@ float: left;
 }
 .secret-link a {
   text-decoration: none;
+}
+
+.responsive-container {
+  background: red;
+  margin: 0 10px 0 10px;
 }
