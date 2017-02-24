@@ -636,7 +636,7 @@ article th, article td{
 
 .location-metadata {
   text-align: center;
-  padding: 7px 0 0 0;
+  border-bottom: 1px solid $grey-3;
 }
 
 .location-metadata p {
@@ -644,17 +644,43 @@ article th, article td{
 }
 
 .location-day {
-  padding: 7px 0 0 0;
   text-align: center;
-  border-top: 1px solid #cccccc;
+}
+
+.unavail {
+  color: white;
+}
+
+.col-1 {
+  text-align: center;
+  border-right: 1px solid $grey-3;
+  border-bottom: 1px solid $grey-3;
+  padding: 10px;
+  margin-left: 15px;
+
+}
+.col-2 {
+  text-align: center;
+  border-right: 1px solid $grey-3;
+  border-bottom: 1px solid $grey-3;
+  padding: 10px;
+
+}
+.col-3 {
+  border-bottom: 1px solid $grey-3;
+  text-align: center;
+  padding: 10px;
+  margin-right: 10px;
+
 }
 
 .book-table-2 {
   text-align: center;
-  padding: 10px 5px 5px 15px;
+  padding: 0;
   margin: 0 auto;
   clear: both;
-  border: 1px solid #cccccc;
+  font-size: 16px !important;
+  border: 1px solid $grey-3;
 }
 
 
@@ -682,6 +708,12 @@ article th, article td{
 .filter-locations {
   text-align: left;
   margin: -10px 7px 7px 2px;
+}
+
+.filter-locations li {
+  margin-right: 0.5em;
+  line-height: 120%;
+  display: inline;
 }
 
 .filter-locations p {
@@ -735,7 +767,6 @@ float: right;
 float: left;
 }
 .unavailable {
-  font-size: 19px;
   color: $grey-2;
 }
 
@@ -838,7 +869,7 @@ float: left;
 }
 
 .responsive-container {
-  margin: 0 10px 0 10px;
+  margin: 0 5px 0 5px;
 }
 
 
