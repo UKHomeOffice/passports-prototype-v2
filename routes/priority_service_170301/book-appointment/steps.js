@@ -40,6 +40,11 @@ module.exports = {
         backLink: './',
         next: '/passport-damaged' /* if No is selected */
   },
+  '/london-week-1-selected': {
+    fields: ['passport-damaged'],
+      backLink: './',
+      next: '/passport-damaged' /* if No is selected */
+},
     '/peterborough-week-1': {
       fields: ['passport-damaged'],
         backLink: './',
@@ -55,6 +60,11 @@ module.exports = {
         backLink: './',
         next: '/passport-damaged' /* if No is selected */
   },
+  '/newport-week-1-selected': {
+    fields: ['passport-damaged'],
+      backLink: './',
+      next: '/passport-damaged' /* if No is selected */
+},
     '/london-week-1': {
       fields: ['passport-damaged'],
         backLink: './',
