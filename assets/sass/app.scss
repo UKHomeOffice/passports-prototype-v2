@@ -596,10 +596,15 @@ article th, article td{
 
 .criterion {
   text-align: right !important;
+  width: 300px;
 }
 
 .criterion td {
-  min-width: 300px;
+  width: 500px !important;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  background: red;
 }
 .comparison-table a {
   text-decoration: none;
@@ -607,11 +612,10 @@ article th, article td{
 
 .comparison-table td {
   text-align: center;
-  padding: 12px;
-  background: white;
+  padding: 10px;
   border: 1px solid #cccccc;
   margin-top: 50px;
-  height: 60px;
+  height: 50px;
 }
 
 .no-style {
