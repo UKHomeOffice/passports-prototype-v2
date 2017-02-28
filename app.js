@@ -174,7 +174,7 @@ function init(sessionStore) {
             app.use('/prototype_170331/startpage-temp', require('./routes/prototype_170331/startpage-temp'));
             app.use('/prototype_170331/overseas-not-available', require('./routes/prototype_170331/overseas-not-available'));
             app.use('/prototype_170331/throttle', require('./routes/prototype_170331/throttle'));
-            app.use('/prototype_170331/throttle', require('./routes/prototype_170331/payment'));
+            app.use('/prototype_170331/payment', require('./routes/prototype_170331/payment'));
 
         //prototype 170118
         app.use('/priority_service_170118/overseas', require('./routes/priority_service_170118/overseas'));
