@@ -214,7 +214,7 @@ response.sections.push({
             title: 'Passport office',
             value: function() {
               var output = [];
-              output.push('London<br/>Globe House <br/>89 Eccleston Square <br/>London <br/>SW1V 1PN');
+              output.push('Newport<br/>Nexus House <br/>Newport <br/>NP20 2DW');
               return output;
             }
         }
