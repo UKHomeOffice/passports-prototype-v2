@@ -214,7 +214,7 @@ response.sections.push({
             title: 'Passport office',
             value: function() {
               var output = [];
-              output.push('Newport<br/>Nexus House <br/>Newport <br/>NP20 2DW');
+              output.push('Newport HM Passport Office <br/>Nexus House <br/>Newport <br/>NP20 2DW');
               return output;
             }
         }
