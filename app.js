@@ -272,6 +272,32 @@ function init(sessionStore) {
         app.use('/priority_service_170301/not-eligible', require('./routes/priority_service_170301/not-eligible'));
         app.use('/priority_service_170301/timeout', require('./routes/priority_service_170301/timeout'));
 
+        //prototype 170315
+        app.use('/priority_service_170315/overseas', require('./routes/priority_service_170315/overseas'));
+        app.use('/priority_service_170315/overseas-not-eligible', require('./routes/priority_service_170315/overseas-not-eligible'));
+        app.use('/priority_service_170315/overseas-first', require('./routes/priority_service_170315/overseas-first'));
+        app.use('/priority_service_170315/overseas-lost-change', require('./routes/priority_service_170315/overseas-lost-change'));
+        app.use('/priority_service_170315/uploadphoto', require('./routes/priority_service_170315/uploadphoto'));
+        app.use('/priority_service_170315/filter-common', require('./routes/priority_service_170315/filter-common'))
+        app.use('/priority_service_170315/renew', require('./routes/priority_service_170315/renew'));
+        app.use('/priority_service_170315/intro', require('./routes/priority_service_170315/intro'));
+        app.use('/priority_service_170315/filter', require('./routes/priority_service_170315/filter'));
+        app.use('/priority_service_170315/startpage', require('./routes/priority_service_170315/startpage'));
+        app.use('/priority_service_170315/startpage-overseas', require('./routes/priority_service_170315/startpage-overseas'));
+        app.use('/priority_service_170315/photoguide-short', require('./routes/priority_service_170315/photoguide-short'));
+        app.use('/priority_service_170315/photoguide-static', require('./routes/priority_service_170315/photoguide-static'));
+        app.use('/priority_service_170315/photoguide-shop', require('./routes/priority_service_170315/photoguide-shop'));
+        app.use('/priority_service_170315/takephoto', require('./routes/priority_service_170315/takephoto'));
+        app.use('/priority_service_170315/upload', require('./routes/priority_service_170315/upload'));
+        app.use('/priority_service_170315/rejectedphoto', require('./routes/priority_service_170315/rejectedphoto'));
+        app.use('/priority_service_170315/filter-common-temp', require('./routes/priority_service_170315/filter-common-temp'));
+        app.use('/priority_service_170315/startpage-temp', require('./routes/priority_service_170315/startpage-temp'));
+        app.use('/priority_service_170315/get-urgent-passport', require('./routes/priority_service_170315/get-urgent-passport'));
+        app.use('/priority_service_170315/book-appointment', require('./routes/priority_service_170315/book-appointment'));
+        app.use('/priority_service_170315/not-eligible', require('./routes/priority_service_170315/not-eligible'));
+        app.use('/priority_service_170315/timeout', require('./routes/priority_service_170315/timeout'));
+
+
 
 
 
