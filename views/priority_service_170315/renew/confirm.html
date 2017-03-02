@@ -1,0 +1,38 @@
+{{< layout}}
+
+{{$pageTitle}}Check your application details{{/pageTitle}}
+
+{{$header}}
+    <h1>Check your details</h1>
+{{/header}}
+
+{{$content}}
+    {{< hmpo-partials-form}}
+        {{$form}}
+            <div class="confirmation">
+            {{#values.sections}}
+                <div class="section {{className}}">
+                    <h2>{{title}}</h2>
+                    {{#fields}}
+                        <dl class="{{#hyphenate}}{{title}}{{/hyphenate}}">
+                            <dt class="column-one-third">{{title}}</dt>
+                            <dd class="column-two-thirds">
+                                {{#value}}<p>{{{value}}}</p>{{/value}}
+                                {{{custom}}}
+                                {{#step}}
+                                <div class="button-wrapper">
+                                    <a href="{{baseUrl}}{{step}}">Change<span class="visuallyhidden"> {{#lowercase}}{{title}}{{/lowercase}}</span></a>
+                                </div>
+                                {{/step}}
+                            </dd>
+                        </dl>
+                    {{/fields}}
+                </div>
+            {{/values.sections}}
+            </div>
+            {{#input-submit}}{{/input-submit}}
+        {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
