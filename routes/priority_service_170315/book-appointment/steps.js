@@ -12,6 +12,9 @@ module.exports = {
         backLink: './',
         next: '/passport-damaged' /* if No is selected */
     },
+    '/book-appointment-2_mobile': {
+      backLink: '../intro/what-you-need'
+    },
     '/book-appointment-2': {
       backLink: '../intro/what-you-need'
     },
