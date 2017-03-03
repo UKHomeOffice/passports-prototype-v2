@@ -20,6 +20,9 @@ module.exports = {
         backLink: './',
         next: '/passport-damaged' /* if No is selected */
     },
+    '/book-appointment-2_mobile': {
+      backLink: '../intro/what-you-need'
+    },
     '/confirmation-scenario-1': {
       fields: ['passport-damaged'],
         backLink: './',
