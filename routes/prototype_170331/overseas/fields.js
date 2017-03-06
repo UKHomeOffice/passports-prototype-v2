@@ -189,7 +189,7 @@ validate: [
 },
 'mobile': {
   labelClassName: 'visuallyhidden',
-  
+
 }
 
 };
