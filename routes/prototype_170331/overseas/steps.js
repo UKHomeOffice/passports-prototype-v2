@@ -1,7 +1,7 @@
 module.exports = {
     '/':{
       fields: ['issuing-authority', 'issue-year', 'issue-month'],
-      backLink: '/../prototype_170331/filter-common/dob-overseas',
+      backLink: '/../prototype_170123/filter-common/dob-overseas',
       next: '/passport-damaged'
     },
     '/passport-damaged': {
@@ -10,7 +10,7 @@ module.exports = {
         next: '/uncancelled' /* if No is selected */
     },
     '/uncancelled': {
-        fields: ['uncancelled', 'dual-national-country'],
+        fields: ['uncancelled'],
         backLink: './passport-damaged',
         next: '/british-citizen'
     },

@@ -1,10 +1,10 @@
 {{< layout}}
 
 
-{{$pageTitle}}Do you have any uncancelled passports from a different country?{{/pageTitle}}
+{{$pageTitle}}Do you have dual nationality?{{/pageTitle}}
 
 {{$header}}
-    <h1>Do you have any other passports?</h1>
+    <h1>Do you have dual nationality?</h1>
 {{/header}}
 
 {{$content}}
@@ -12,10 +12,26 @@
     {{< hmpo-partials-form}}
     {{$form}}
       <fieldset class="inline">
-      <!--  <p>For example, if you're a dual national. </p>-->
+       <p>You have dual nationality if you're a British citizen and a citizen of another country. For example, if you have a passport from another country.</p>
         {{#radio-group}}uncancelled{{/radio-group}}
-
+        <!--<div class="panel-indent">
         <div id="which-passport" class="reveal js-hidden" style="margin-top:-25px; margin-bottom:20px">
+        <fieldset role="radiogroup" aria-required="upload">
+          <legend><span class="form-label-bold">Do you have a passport?</span></legend>
+            <label class="block-label" for="choose-photo-myself">
+                <input type="radio" id="yes" value="myself" aria-required="upload"{{#selected}}choose-photo=myself{{/selected}}{{#errors.choose-photo}} aria-describedby="{{key}}-error" aria-invalid="upload"{{/errors.choose-photo}}>
+                Yes
+            </label>
+            <label class="block-label" for="choose-photo-shop">
+                <input type="radio" name="choose-photo" id="choose-photo-shop" value="shop" aria-required="upload"{{#selected}}choose-photo=shop{{/selected}}{{#errors.choose-photo}} aria-describedby="{{key}}-error" aria-invalid="upload"{{/errors.choose-photo}}>
+                No
+            </label>
+        </fieldset>
+      </div>
+    </div>-->
+
+
+<!--        <div id="which-passport" class="reveal js-hidden" style="margin-top:-25px; margin-bottom:20px">
             <div class="panel panel-border-narrow">
               <legend><span class="form-label-bold">Which country is it for?</span></legend>
               <div class="form-date">
@@ -26,7 +42,7 @@
               </div>
         </div>
         </div>
-
+-->
       <!--  <div id="which-passport" class="reveal js-hidden" style="margin-top:-20px;">
           <div class="panel-indent">
               <fieldset>
