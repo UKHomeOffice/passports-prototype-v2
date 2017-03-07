@@ -595,27 +595,26 @@ article th, article td{
 }
 
 .criterion {
-  text-align: right !important;
-  width: 300px;
+  width: 100%;
 }
 
 .criterion td {
-  width: 500px !important;
-  overflow: hidden;
-  display: inline-block;
-  white-space: nowrap;
-  background: red;
+  border: 0 !important;
+  font-weight: bold;
+}
+
+.1stcol {
+  border-right: 1px solid #ccc !important;
 }
 .comparison-table a {
   text-decoration: underline;
 }
 
 .comparison-table td {
-  text-align: center;
-  padding: 10px;
-  border: 1px solid #cccccc;
+  padding: 5px;
+  border-bottom: 1px solid #cccccc;
   margin-top: 50px;
-  height: 50px;
+  height: 40px;
 }
 
 .no-style {
@@ -899,7 +898,7 @@ padding: 10px;
 }
 
 .padding-wrapper {
-  margin: 0 15px 0 15px; 
+  margin: 0 15px 0 15px;
 }
 
 /* responsive book appts */
