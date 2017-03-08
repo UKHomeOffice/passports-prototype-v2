@@ -913,3 +913,9 @@ padding: 10px;
   @media (max-width: 800px) {
     .show-responsive {
       display:block; } }
+
+/* selected appt */
+.day-held{
+  outline: 3px solid #ffbf47;
+  outline-offset: -3px;
+}

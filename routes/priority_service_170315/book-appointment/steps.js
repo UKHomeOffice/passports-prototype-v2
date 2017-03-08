@@ -21,6 +21,9 @@ module.exports = {
     '/book-appointment-2-change': {
       backLink: '../intro/what-you-need'
     },
+    '/replace-appt': {
+      backLink: './newport-week-1-selected-change'
+    },
     '/book-appointment-3': {
       fields: ['passport-damaged'],
         backLink: './',
