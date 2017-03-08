@@ -588,10 +588,11 @@ article th, article td{
 }
 
 
-.comparison-table {
+.comparison-table tr, td {
   margin-top: 30px;
   font-size: 19px;
   text-align: center;
+  border: 0;
 }
 
 .criterion {
@@ -599,22 +600,27 @@ article th, article td{
 }
 
 .criterion td {
+  padding-left: 5px;
   border: 0 !important;
   font-weight: bold;
+  background: $grey-4;
 }
 
-.1stcol {
-  border-right: 1px solid #ccc !important;
-}
+
+
 .comparison-table a {
   text-decoration: underline;
 }
 
-.comparison-table td {
+.comparison-table {
   padding: 5px;
-  border-bottom: 1px solid #cccccc;
+  border-right: 0px solid #cccccc;
   margin-top: 50px;
   height: 40px;
+}
+
+.comparison-table td {
+  border-bottom: 0 !important;
 }
 
 .no-style {
@@ -652,29 +658,6 @@ article th, article td{
 
 .unavail {
   color: white;
-}
-
-.col-1 {
-  text-align: center;
-  border-right: 1px solid $grey-3;
-  border-bottom: 1px solid $grey-3;
-  padding: 10px;
-  margin-left: 15px;
-
-}
-.col-2 {
-  text-align: center;
-  border-right: 1px solid $grey-3;
-  border-bottom: 1px solid $grey-3;
-  padding: 10px;
-
-}
-.col-3 {
-  border-bottom: 1px solid $grey-3;
-  text-align: center;
-  padding: 10px;
-  margin-right: 10px;
-
 }
 
 .book-table-2 {
@@ -913,3 +896,49 @@ padding: 10px;
   @media (max-width: 800px) {
     .show-responsive {
       display:block; } }
+
+
+.comparison-wrapper {
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+
+.question-wrapper {
+  display: block;
+  background: $grey-3;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+.col-1 {
+  width: 29%;
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.col-2 {
+  width: 25%;
+  display: inline-block;
+  border-left: 1px solid $grey-3;
+  border-right: 1px solid $grey-3;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.col-3 {
+  width: 25%;
+  display: inline-block;
+  margin-left: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.choose-buttons {
+  border: 0px !important;
+  padding: 10px;
+}
