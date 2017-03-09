@@ -951,3 +951,71 @@ padding: 10px;
 .choose-buttons {
   margin-top: -50px;
 }
+
+
+
+#container1 {
+   display: table;
+   width: 100%;
+   margin: 0 auto;
+   text-align: center;
+   margin-bottom: 50px;
+   }
+
+ #row  {
+   border: 1px solid $grey-3;
+   }
+
+ #one {
+   display: inline-block;
+   border-right: 1px solid $grey-3;
+   width: 13%;
+   height: 50px;
+   padding: 7px;
+   }
+
+  #two {
+    display: inline-block;
+    width: 13%;
+    border-right: 1px solid $grey-3;
+    height: 50px;
+    padding: 7px;
+
+    }
+
+  #three {
+    display: inline-block;
+    width: 13%;
+    border-right: 1px solid $grey-3;
+    height: 50px;
+    padding: 7px;
+
+
+  }
+
+  #four {
+    display: inline-block;
+    width: 13%;
+    border-right: 1px solid $grey-3;
+    height: 50px;
+    padding: 7px;
+
+  }
+
+  #five {
+    display: inline-block;
+    width: 13%;
+    border-right: 1px solid $grey-3;
+    height: 50px;
+    padding: 7px;
+
+
+  }
+
+  #six {
+    display: inline-block;
+    width: 13%;
+    height: 50px;
+    padding: 15px;
+
+  }

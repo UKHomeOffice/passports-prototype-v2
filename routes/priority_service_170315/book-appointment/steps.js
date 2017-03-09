@@ -36,6 +36,11 @@ module.exports = {
         backLink: './',
         next: '/passport-damaged' /* if No is selected */
     },
+    '/confirmation-scenario-3': {
+      fields: ['passport-damaged'],
+        backLink: './',
+        next: '/passport-damaged' /* if No is selected */
+    },
     '/responsive': {
       fields: ['passport-damaged'],
         backLink: './',
