@@ -913,8 +913,9 @@ padding: 10px;
 .question-wrapper {
   display: block;
   margin: 0 auto;
-  background: $grey-3;
-    text-align: center;
+  border-bottom: 2px solid $govuk-blue;
+  background: $grey-4;
+    text-align: left;
     padding: 15px;
     width: 85%;
 }
