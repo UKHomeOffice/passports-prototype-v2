@@ -954,68 +954,123 @@ padding: 10px;
 
 
 
-#container1 {
+.container1 {
    display: table;
    width: 100%;
    margin: 0 auto;
    text-align: center;
    margin-bottom: 50px;
+   border: 1px solid $grey-3
    }
 
- #row  {
-   border: 1px solid $grey-3;
+ .row  {
+   border-bottom: 1px solid $grey-3;
    }
 
- #one {
+ .one {
    display: inline-block;
    border-right: 1px solid $grey-3;
    width: 13%;
    height: 50px;
-   padding: 7px;
+   padding: 15px;
    }
 
-  #two {
+  .two {
     display: inline-block;
     width: 13%;
     border-right: 1px solid $grey-3;
     height: 50px;
-    padding: 7px;
+    padding: 15px;
 
     }
 
-  #three {
+  .three {
     display: inline-block;
     width: 13%;
     border-right: 1px solid $grey-3;
     height: 50px;
-    padding: 7px;
+    padding: 15px;
 
 
   }
 
-  #four {
+  .four {
     display: inline-block;
     width: 13%;
     border-right: 1px solid $grey-3;
-    height: 50px;
-    padding: 7px;
-
-  }
-
-  #five {
-    display: inline-block;
-    width: 13%;
-    border-right: 1px solid $grey-3;
-    height: 50px;
-    padding: 7px;
-
-
-  }
-
-  #six {
-    display: inline-block;
-    width: 13%;
     height: 50px;
     padding: 15px;
 
   }
+
+  .five {
+    display: inline-block;
+    width: 13%;
+    border-right: 1px solid $grey-3;
+    height: 50px;
+    padding: 15px;
+
+
+  }
+
+  .six {
+    display: inline-block;
+    width: 13%;
+    height: 50px;
+    padding: 10px;
+  }
+
+.unavailable-days {
+  border-right: 5px solid $baby-pink;
+}
+
+
+
+.container1 {
+   display: table;
+   width: 100%;
+   margin: 0 auto;
+   text-align: center;
+   margin-bottom: 50px;
+   border: 0px solid $grey-3
+   }
+
+   .container1 a {
+     text-decoration: none;
+   }
+
+ .one-time {
+   display: inline-block;
+   border-right: 1px solid $grey-3;
+   width: 29%;
+   height: 50px;
+   padding: 15px;
+   }
+
+  .two-time {
+    display: inline-block;
+    width: 29%;
+    border-right: 1px solid $grey-3;
+    height: 50px;
+    padding: 15px;
+    }
+
+  .three-time {
+    display: inline-block;
+    width: 29%;
+    height: 50px;
+    padding: 15px;
+  }
+
+  .unavailable-days-2 {
+    border-right: 1px dashed $govuk-blue;
+  }
+
+
+   .row-2 {
+     border-bottom: 0px solid $grey-3;
+     }
+
+.hidden-1 {
+  border: 0px !important;
+}
