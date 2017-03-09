@@ -898,10 +898,15 @@ padding: 10px;
       display:block; } }
 
 
+.comparison-grid {
+  width: 95%;
+
+}
+
+
 .comparison-wrapper {
   margin: 0 auto;
   text-align: center;
-
 }
 
 
@@ -911,13 +916,14 @@ padding: 10px;
   background: $grey-3;
     text-align: center;
     padding: 15px;
+    width: 85%;
 }
 .col-1 {
   width: 25%;
   display: inline-block;
   margin-right: 10px;
   margin-left: 10px;
-  padding-top: 25px;
+  padding-top: 40px;
   padding-bottom: 30px;
 }
 
@@ -926,7 +932,7 @@ padding: 10px;
   display: inline-block;
   border-left: 1px solid $grey-3;
   border-right: 1px solid $grey-3;
-  padding-top: 30px;
+  padding-top: 40px;
   padding-bottom: 30px;
   padding-left: 10px;
   padding-right: 10px;
@@ -936,10 +942,11 @@ padding: 10px;
   width: 25%;
   display: inline-block;
   margin-left: 5px;
-  padding-top: 25px;
+  padding-top: 40px;
   padding-bottom: 30px;
   padding-left: 10px;
 }
 
 .choose-buttons {
+  margin-top: -50px;
 }
