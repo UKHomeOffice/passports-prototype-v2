@@ -588,10 +588,11 @@ article th, article td{
 }
 
 
-.comparison-table {
+.comparison-table tr, td {
   margin-top: 30px;
   font-size: 19px;
   text-align: center;
+  border: 0;
 }
 
 .criterion {
@@ -599,22 +600,27 @@ article th, article td{
 }
 
 .criterion td {
+  padding-left: 5px;
   border: 0 !important;
   font-weight: bold;
+  background: $grey-4;
 }
 
-.1stcol {
-  border-right: 1px solid #ccc !important;
-}
+
+
 .comparison-table a {
   text-decoration: underline;
 }
 
-.comparison-table td {
+.comparison-table {
   padding: 5px;
-  border-bottom: 1px solid #cccccc;
+  border-right: 0px solid #cccccc;
   margin-top: 50px;
   height: 40px;
+}
+
+.comparison-table td {
+  border-bottom: 0 !important;
 }
 
 .no-style {
@@ -652,29 +658,6 @@ article th, article td{
 
 .unavail {
   color: white;
-}
-
-.col-1 {
-  text-align: center;
-  border-right: 1px solid $grey-3;
-  border-bottom: 1px solid $grey-3;
-  padding: 10px;
-  margin-left: 15px;
-
-}
-.col-2 {
-  text-align: center;
-  border-right: 1px solid $grey-3;
-  border-bottom: 1px solid $grey-3;
-  padding: 10px;
-
-}
-.col-3 {
-  border-bottom: 1px solid $grey-3;
-  text-align: center;
-  padding: 10px;
-  margin-right: 10px;
-
 }
 
 .book-table-2 {
@@ -913,3 +896,188 @@ padding: 10px;
   @media (max-width: 800px) {
     .show-responsive {
       display:block; } }
+
+
+/* selected appt */
+.day-held{
+  outline: 3px solid #ffbf47;
+  outline-offset: -3px;
+}
+
+.comparison-grid {
+  width: 98%;
+
+}
+
+
+.comparison-wrapper {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.question-wrapper {
+  display: block;
+  margin: 0 auto;
+  border-bottom: 2px solid $govuk-blue;
+  background: $grey-4;
+    text-align: left;
+    padding: 15px;
+    width: 95%;
+}
+.col-1 {
+  width: 25%;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.col-2 {
+  width: 29%;
+  display: inline-block;
+  border-left: 1px solid $grey-3;
+  border-right: 1px solid $grey-3;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.col-3 {
+  width: 25%;
+  display: inline-block;
+  margin-left: 5px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+}
+
+.choose-buttons {
+  margin-top: -50px;
+}
+
+
+
+.container1 {
+   display: table;
+   width: 100%;
+   margin: 0 auto;
+   text-align: center;
+   margin-bottom: 50px;
+   border: 1px solid $grey-3
+   }
+
+ .row  {
+   border-bottom: 1px solid $grey-3;
+   }
+
+ .one {
+   display: inline-block;
+   border-right: 1px solid $grey-3;
+   width: 13%;
+   height: 50px;
+   padding: 15px;
+   }
+
+  .two {
+    display: inline-block;
+    width: 13%;
+    border-right: 1px solid $grey-3;
+    height: 50px;
+    padding: 15px;
+
+    }
+
+  .three {
+    display: inline-block;
+    width: 13%;
+    border-right: 1px solid $grey-3;
+    height: 50px;
+    padding: 15px;
+
+
+  }
+
+  .four {
+    display: inline-block;
+    width: 13%;
+    border-right: 1px solid $grey-3;
+    height: 50px;
+    padding: 15px;
+
+  }
+
+  .five {
+    display: inline-block;
+    width: 13%;
+    border-right: 1px solid $grey-3;
+    height: 50px;
+    padding: 15px;
+
+
+  }
+
+  .six {
+    display: inline-block;
+    width: 13%;
+    height: 50px;
+    padding: 10px;
+  }
+
+.unavailable-days {
+  border-right: 5px solid $baby-pink;
+}
+
+
+
+.container1 {
+   display: table;
+   width: 100%;
+   margin: 0 auto;
+   text-align: center;
+   margin-bottom: 50px;
+   border: 0px solid $grey-3
+   }
+
+   .container1 a {
+     text-decoration: none;
+   }
+
+ .one-time {
+   display: inline-block;
+   border-right: 1px solid $grey-3;
+   width: 29%;
+   height: 50px;
+   padding: 15px;
+   }
+
+  .two-time {
+    display: inline-block;
+    width: 29%;
+    border-right: 1px solid $grey-3;
+    height: 50px;
+    padding: 15px;
+    }
+
+  .three-time {
+    display: inline-block;
+    width: 29%;
+    height: 50px;
+    padding: 15px;
+  }
+
+  .unavailable-days-2 {
+    border-right: 1px dashed $govuk-blue;
+  }
+
+
+   .row-2 {
+     border-bottom: 0px solid $grey-3;
+     }
+
+.hidden-1 {
+  border: 0px !important;
+
+}
