@@ -2,7 +2,7 @@ module.exports = {
     '/':{
       fields: ['age-day', 'age-year', 'age-month'],
       backLink: '../filter-common/what-do-you-want-to-do-overseas',
-      next: '/issued'
+      next: '/country-born'
     },
     '/issued':{
         fields: ['issuing-authority', 'expiry-year', 'expiry-month'],
@@ -13,7 +13,7 @@ module.exports = {
         controller: require('../../../controllers/application-country'),
         controller: require('../../../controllers/go-overseas'),
         fields: ['application-country'],
-        backLink: './issued',
+        backLink: './',
         next: 'france-first',
         nextAlt: 'france-first',
         nextAltAltAlt: 'spain-first' /* if they are from Spain - first hidden as renewal */
