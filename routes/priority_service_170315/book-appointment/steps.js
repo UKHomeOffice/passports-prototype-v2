@@ -85,10 +85,12 @@ module.exports = {
       backLink: './',
       next: '/passport-damaged' /* if No is selected */
 },
+'/newport-week-1-selected-missing': {
+    backLink: './'
+  },
 '/newport-week-1-selected-change': {
     backLink: './'
-  }
-  ,
+},
     '/london-week-1': {
       fields: ['passport-damaged'],
         backLink: './',
@@ -115,5 +117,8 @@ module.exports = {
         backLink: './passport-damaged',
         next: '/../intro',
         nextAlt: '../overseas'
+    },
+    '/locations-days-missing': {
+        backLink: '../intro/what-you-need'
     }
 };
