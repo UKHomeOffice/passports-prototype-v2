@@ -2,6 +2,9 @@ module.exports = {
     '/': {
       backLink: '../intro/what-you-need'
     },
+    '/index-change': {
+      backLink: '../intro/what-you-need'
+    },
     '/passport-offices': {
       fields: ['passport-damaged'],
         backLink: './',
@@ -14,6 +17,12 @@ module.exports = {
     },
     '/book-appointment-2': {
       backLink: '../intro/what-you-need'
+    },
+    '/book-appointment-2-change': {
+      backLink: '../intro/what-you-need'
+    },
+    '/replace-appt': {
+      backLink: './newport-week-1-selected-change'
     },
     '/book-appointment-3': {
       fields: ['passport-damaged'],
@@ -76,6 +85,10 @@ module.exports = {
       backLink: './',
       next: '/passport-damaged' /* if No is selected */
 },
+'/newport-week-1-selected-change': {
+    backLink: './'
+  }
+  ,
     '/london-week-1': {
       fields: ['passport-damaged'],
         backLink: './',

@@ -898,6 +898,12 @@ padding: 10px;
       display:block; } }
 
 
+/* selected appt */
+.day-held{
+  outline: 3px solid #ffbf47;
+  outline-offset: -3px;
+
+
 .comparison-grid {
   width: 98%;
 
@@ -1073,4 +1079,5 @@ padding: 10px;
 
 .hidden-1 {
   border: 0px !important;
+
 }
