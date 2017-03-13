@@ -32,6 +32,9 @@ module.exports = {
     '/book-appointment-2_mobile': {
       backLink: '../intro/what-you-need'
     },
+    '/border-cue-test': {
+      backLink: '../intro/what-you-need'
+    },
     '/confirmation-scenario-1': {
       fields: ['passport-damaged'],
         backLink: './',
