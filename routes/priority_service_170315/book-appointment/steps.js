@@ -22,6 +22,9 @@ module.exports = {
       backLink: '../intro/what-you-need'
     },
     '/replace-appt': {
+      backLink: './newport-week-1-selected-change2'
+    },
+    '/replace-appt2': {
       backLink: './newport-week-1-selected-change'
     },
     '/book-appointment-3': {
@@ -90,6 +93,9 @@ module.exports = {
   },
 '/newport-week-1-selected-change': {
     backLink: './'
+},
+'/newport-week-1-selected-change2': {
+  backLink: './'
 },
     '/london-week-1': {
       fields: ['passport-damaged'],
