@@ -1,0 +1,100 @@
+{{< layout}}
+
+{{$pageTitle}}Prove your identity{{/pageTitle}}
+
+{{$header}}
+    <h1>Prove your identity</h1>
+{{/header}}
+
+{{$content}}
+    {{< hmpo-partials-form}}
+    {{$form}}
+    <p>To prove your identity you must send:</p>
+    <fieldset class="inline">
+        <legend><span class="form-label-bold">Two of the following:</span></legend>
+        <p class="form-hint" id="id-check-1-hint">Select each document you’re sending</p>
+        <label class="block-label" for="doc-1">
+          <input id="doc-1" name="current-passport" type="checkbox" value="current-passport">
+          My current British passport (or most recent if it's expired)
+        </label>
+        <label class="block-label" for="doc-2">
+          <input id="doc-2" name="uncancelled-passports" type="checkbox" value="uncancelled-passports">
+          A colour copy of any other uncancelled passports in your name
+        </label>
+    </fieldset><br/><br/>
+
+    <fieldset class="inline">
+        <legend><span class="form-label-bold">One of the following forms of photo identity:</span></legend>
+        <div class="panel panel-border-wide">
+          <p>
+            If you think you are not recognisable since your last passport, you'll need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a>.
+          </p>
+        </div>
+        <p class="form-hint" id="id-check-1-hint">Select each document you’re sending</p>
+        <label class="block-label" for="doc-3">
+          <input id="doc-3" name="national-id" type="radio" value="national-id">
+          National identity card or equivalent (or color photocopy)
+        </label>
+        <label class="block-label" for="doc-4">
+          <input id="doc-4" name="driving-licence" type="radio" value="driving-licence">
+          Driving licence
+        </label>
+        <label class="block-label" for="doc-5">
+          <input id="doc-5" name="any-other" type="radio" value="any-other">
+          Any government or local government document that includes your photograph (eg a library card)
+        </label>
+    </fieldset><br/><br/>
+
+    <fieldset>
+        <legend><span class="form-label-bold">One of the following forms of photo identity:</span></legend>
+        <p class="form-hint" id="id-check-1-hint">Select each document you’re sending</p>
+        <label class="block-label" for="doc-6">
+          <input id="doc-6" name="visa" type="radio" value="visa">
+          Visa or resident permit (or colour photocopy)
+        </label>
+        <label class="block-label" for="doc-7">
+          <input id="doc-7" name="driving-licence" type="radio" value="tax-record">
+          Tax record or letter
+        </label>
+        <label class="block-label" for="doc-8">
+          <input id="doc-8" name="any-other" type="radio" value="any-other">
+          Any government or local government document that includes your photograph (eg a library card)
+        </label>
+        <label class="block-label" for="doc-9">
+          <input id="doc-9" name="educational-record" type="radio" value="educational-record">
+          Educational recored (eg a school report)
+        </label>
+        <label class="block-label" for="doc-10">
+          <input id="doc-10" name="proof-employment" type="radio" value="proof-employment">
+          Proof of employment (eg a letter from your employer)
+        </label>
+        <label class="block-label" for="doc-11">
+          <input id="doc-11" name="letter-local-gov" type="radio" value="letter-local-gov">
+          Letter sent to you from a central, regional or local government department
+        </label>
+        <label class="block-label" for="doc-12">
+          <input id="doc-12" name="medical-health-card" type="radio" value="medical-health-card">
+          Medical health card
+        </label>
+        <label class="block-label" for="doc-13">
+          <input id="doc-13" name="voters-card" type="radio" value="voters-card">
+          Voter's card
+        </label>
+        <label class="block-label" for="doc-14">
+          <input id="doc-14" name="immigration-docs" type="radio" value="immigration-docs">
+          Immigration documents
+        </label>
+    </fieldset><br/><br/>
+
+    <div class="panel panel-border-wide">
+      <p>
+        This document must not be more than a year old
+      </p>
+    </div>
+
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
