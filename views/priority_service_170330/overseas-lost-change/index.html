@@ -1,0 +1,29 @@
+{{< layout}}
+{{$propositionHeader}}Apply first passport{{/propositionHeader}}
+
+{{$pageTitle}}What is your date of birth?{{/pageTitle}}
+
+{{$header}}
+    <h1>What is your date of birth?</h1>
+{{/header}}
+
+{{$content}}
+
+    {{< hmpo-partials-form}}
+    {{$form}}
+        <div id="date-group" class="form-group">
+            <fieldset>
+                <div class="form-date">
+                  <p class="form-hint" id="dob-hint">For example 20 01 2004</p>
+                    {{#input-text}}age-day{{/input-text}}
+                    {{#input-text}}age-month{{/input-text}}
+                    {{#input-text}}age-year{{/input-text}}
+                </div>
+            </fieldset>
+        </div>
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
