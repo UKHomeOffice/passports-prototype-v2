@@ -899,16 +899,20 @@ padding: 10px;
 
 
 /* selected appt */
-.day-held{
+.day-held {
   outline: 3px solid #ffbf47;
   outline-offset: -3px;
 }
 
 .comparison-grid {
   width: 98%;
-
 }
 
+
+.service-name {
+  position: sticky;
+  position: -webkit-sticky;
+}
 
 .comparison-wrapper {
   margin: 0 auto;
@@ -930,16 +934,16 @@ padding: 10px;
   display: inline-block;
   margin-right: 10px;
   margin-left: 10px;
-  padding-top: 40px;
+  padding-top: 10px;
   padding-bottom: 30px;
 }
 
 .col-2 {
   width: 29%;
   display: inline-block;
-  border-left: 1px solid $grey-3;
-  border-right: 1px solid $grey-3;
-  padding-top: 40px;
+  border-left: 2px solid $grey-3;
+  border-right: 2px solid $grey-3;
+  padding-top: 10px;
   padding-bottom: 30px;
   padding-left: 10px;
   padding-right: 10px;
@@ -949,14 +953,16 @@ padding: 10px;
   width: 25%;
   display: inline-block;
   margin-left: 5px;
-  padding-top: 40px;
+  padding-top: 10px;
   padding-bottom: 30px;
   padding-left: 10px;
 }
 
 .choose-buttons {
-  margin-top: -50px;
+  margin-top: -10px;
 }
+
+
 
 
 
