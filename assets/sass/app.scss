@@ -910,17 +910,15 @@ padding: 10px;
 
 
 // sticky div //
-#header {
-	background: #666;
-	padding: 3px;
-  padding: 10px 20px;
-  color: #fff;
-}
 
 .fixed {
 	position: fixed;
 	top: 0;
 	width: 100%;
+  margin-left: -20px;
+  background: $govuk-blue;
+  color: white;
+
 }
 
 
@@ -929,6 +927,8 @@ padding: 10px;
   text-align: center;
 }
 
+.service-name {
+}
 
 .question-wrapper {
   display: block;
