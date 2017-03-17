@@ -24,6 +24,12 @@
 <!-- CSS version of comparison table -->
 
 
+<div class="sticky">
+  hi test
+</div>
+
+<h2>Compare services</h2>
+
 <div class="comparison-grid">
 <div class="comparison-wrapper">
   <div class="col-1 service-name">
@@ -136,8 +142,21 @@
 </div>
 </div>
 
+<script>
+$(window).scroll(function(){
+  var sticky = $('.sticky'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 100) sticky.addClass('fixed');
+  else sticky.removeClass('fixed');
+});
+</script>
+
 
 
 {{/main-content}}
+
+
+
 
 {{/ layout}}

@@ -909,10 +909,20 @@ padding: 10px;
 }
 
 
-.service-name {
-  position: sticky;
-  position: -webkit-sticky;
+// sticky div //
+#header {
+	background: #666;
+	padding: 3px;
+  padding: 10px 20px;
+  color: #fff;
 }
+
+.fixed {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
 
 .comparison-wrapper {
   margin: 0 auto;
