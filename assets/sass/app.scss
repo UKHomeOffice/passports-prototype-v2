@@ -909,16 +909,26 @@ padding: 10px;
 }
 
 
-.service-name {
-  position: sticky;
-  position: -webkit-sticky;
+// sticky div //
+
+.fixed {
+	position: fixed;
+	top: 0;
+	width: 100%;
+  margin-left: -20px;
+  background: $govuk-blue;
+  color: white;
+
 }
+
 
 .comparison-wrapper {
   margin: 0 auto;
   text-align: center;
 }
 
+.service-name {
+}
 
 .question-wrapper {
   display: block;

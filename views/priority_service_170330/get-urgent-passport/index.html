@@ -24,8 +24,14 @@
 <!-- CSS version of comparison table -->
 
 
+
+<h2>Compare services</h2>
+
 <div class="comparison-grid">
-<div class="comparison-wrapper">
+
+<div class="sticky">
+<div class="comparison-wrapper service-name">
+
   <div class="col-1 service-name">
     <span class="font-medium">Paper Premium
 </span>
@@ -39,6 +45,8 @@
 </span>
   </div>
 </div>
+</div>
+
 
 
 <div class="question-wrapper">
@@ -136,8 +144,22 @@
 </div>
 </div>
 
+<script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+<script>
+$(window).scroll(function(){
+  var sticky = $('.sticky'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 100) sticky.addClass('fixed');
+  else sticky.removeClass('fixed');
+});
+</script>
+
 
 
 {{/main-content}}
+
+
+
 
 {{/ layout}}
