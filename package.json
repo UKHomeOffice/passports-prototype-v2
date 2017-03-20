@@ -7,7 +7,7 @@
     "start": "node app.js",
     "clean": "rm -rf public/; mkdir public",
     "sass": "rm -rf public/stylesheets; mkdir public/stylesheets && npm-sass ./assets/sass/app.scss > ./public/stylesheets/app.css",
-    "js": "rm -rf public/javascripts; mkdir public/javascripts && browserify -r hmpo-frontend-toolkit -r underscore ./assets/javascripts/app.js | uglifyjs -c > ./public/javascripts/app.js && browserify ./assets/javascripts/jquery.min.js > ./public/javascripts/jquery.min.js",
+    "js": "rm -rf public/javascripts; mkdir public/javascripts && browserify -r hmpo-frontend-toolkit -r underscore ./assets/javascripts/app.js | uglifyjs -c > ./public/javascripts/app.js",
     "postinstall": "npm run clean && npm run sass && npm run js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:js": "watch 'npm run js' ./assets/javascripts",
