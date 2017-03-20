@@ -909,17 +909,6 @@ padding: 10px;
 }
 
 
-// sticky div //
-
-.fixed {
-	position: fixed;
-	top: 0;
-	width: 100%;
-  margin-left: -20px;
-  background: $govuk-blue;
-  color: white;
-
-}
 
 
 .comparison-wrapper {
@@ -927,8 +916,44 @@ padding: 10px;
   text-align: center;
 }
 
-.service-name {
+.service-name-1 {
+  width: 25%;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
 }
+
+.service-name-2 {
+  width: 25%;
+  display: inline-block;
+  margin-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.service-name-3 {
+  width: 25%;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+// sticky div //
+
+.fixed {
+	position: fixed;
+	top: 0;
+	width: 100%;
+  background: $govuk-blue;
+  color: white;
+  margin-left: -15px;
+}
+
 
 .question-wrapper {
   display: block;
@@ -936,7 +961,7 @@ padding: 10px;
   border-bottom: 2px solid $govuk-blue;
   background: $grey-4;
     text-align: left;
-    padding: 15px;
+    padding: 7px;
     width: 95%;
 }
 .col-1 {
