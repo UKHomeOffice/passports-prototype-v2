@@ -3,6 +3,10 @@ module.exports = {
       backLink: '../startpage',
       next: '/passport-damaged'
     },
+    '/index2': {
+        backLink: './',
+        next: './' /* if No is selected */
+    },
     '/passport-damaged': {
         backLink: './',
         next: '/filter-common' /* if No is selected */

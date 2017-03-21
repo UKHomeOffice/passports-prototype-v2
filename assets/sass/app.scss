@@ -916,6 +916,13 @@ padding: 10px;
   text-align: center;
 }
 
+
+.comparison-wrapper-2 {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: -5px;
+}
+
 .service-name-1 {
   width: 25%;
   display: inline-block;
@@ -965,6 +972,50 @@ padding: 10px;
     padding: 7px;
     width: 95%;
 }
+
+.col-0 {
+  width: 30%;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-top: 10px;
+  padding: 10px;
+  text-align: right;
+}
+
+.col-11 {
+  width: 16%;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+
+}
+
+.col-22 {
+  width: 16%;
+  display: inline-block;
+  border-left: 2px solid $grey-3;
+  border-right: 2px solid $grey-3;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+
+.col-33 {
+  width: 16%;
+  display: inline-block;
+  margin-left: 5px;
+  padding: 10px;
+}
+
+
+
+
+
+
 .col-1 {
   width: 25%;
   display: inline-block;
