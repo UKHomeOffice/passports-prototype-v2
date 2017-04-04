@@ -176,6 +176,7 @@ function init(sessionStore) {
             app.use('/prototype_170331/throttle', require('./routes/prototype_170331/throttle'));
             app.use('/prototype_170331/payment', require('./routes/prototype_170331/payment'));
             app.use('/prototype_170331/submission-failed', require('./routes/prototype_170331/submission-failed'));
+            app.use('/prototype_170331/sar', require('./routes/prototype_170331/sar'));
 
         //prototype 170118
         app.use('/priority_service_170118/overseas', require('./routes/priority_service_170118/overseas'));
