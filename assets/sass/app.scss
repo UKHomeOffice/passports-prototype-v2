@@ -917,6 +917,7 @@ padding: 10px;
 }
 
 
+
 .comparison-wrapper-2 {
   margin: 0 auto;
   text-align: center;
@@ -960,7 +961,13 @@ padding: 10px;
   color: white;
   margin-left: -15px;
     max-width: 980px;
+
+    .fixed a, a:visited {
+      color: white;
+      text-decoration: none;
+    }
 }
+
 
 
 .question-wrapper {
