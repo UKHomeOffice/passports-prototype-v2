@@ -1179,5 +1179,27 @@ padding: 10px;
 
 .hidden-1 {
   border: 0px !important;
+}
 
+
+.tick {
+  display: inline-block;
+    background-image: url("../images/icon_thick_tick.svg");
+   margin: 10px 0px 0px 0px;
+    border-left: 0;
+    background-repeat: no-repeat;
+    background-position: left 10px;
+    background-size: 24px;
+    padding: 15px 5px 15px 30px;
+}
+
+
+.alert {
+  display: inline-block;
+    background-image: url("../images/icon-important-white-2x.png");
+   margin: 10px;
+    border-left: 0;
+    background-repeat: no-repeat;
+    background-size: 21px;
+    padding: 50px;
 }
