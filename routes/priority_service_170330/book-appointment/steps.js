@@ -107,6 +107,11 @@ module.exports = {
       backLink: './',
       next: '/passport-damaged' /* if No is selected */
   },
+  '/london-week-1-selected-change': {
+    fields: ['passport-damaged'],
+      backLink: './',
+      next: '/passport-damaged' /* if No is selected */
+  },
   '/london-week-3': {
     fields: ['passport-damaged'],
       backLink: './',
