@@ -17,7 +17,7 @@ module.exports = {
     '/british-citizen': {
         fields: ['british-citizen'],
         backLink: './uncancelled',
-        next: '/try-service' /* if Yes is selected */
+        next: '/try-service'
     },
     '/have-to-send': {
       backLink: './about-your-passport',
@@ -30,7 +30,9 @@ module.exports = {
     '/try-service': {
         fields: ['try-service'],
         backLink: './british-citizen',
-        next: '/give-contact-details' /* if yes is selected */
+        /*next: '/give-contact-details' to include if we add the UR pages */
+        next: '/../intro/before-you-continue-overseas'
+
     },
     '/give-contact-details': {
         fields: ['name','lastname','email','application-country-code', 'mobile', 'help'],

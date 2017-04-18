@@ -42,19 +42,33 @@ module.exports = {
           'required'
       ]
   },
-  'issuing-authority': {
-    legend: {
-      value: 'Which is your passport issuing authority?',
-      className: 'visuallyhidden'
-    },
-    options: [
-      {value: 'UKPA', label: 'UKPA'},
-      {value: 'UKPS', label: 'UKPS'},
-      {value: 'IPS', label: 'IPS'},
-      {value: 'Other', label: 'Other'}
-    ],
+'issuing-authority': {
+  legend: {
+    value: 'Which is your passport issuing authority?',
+    className: 'visuallyhidden'
+  },
+  options: [
+    {value: 'UK', label: 'UKPA, UKPS, IPS or HMPO'},
+    {value: 'Other', label: 'Other'}
+  ],
+  validate: [
+    'required'
+  ]
+},
+'issue-year': {
+  labelClassName: 'form-label',
+  formatter: 'removehyphens',
     validate: [
-      'required'
+        'numeric',
+        'required'
     ]
-  }
+},
+'issue-month': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    validate: [
+        'numeric',
+        'required'
+    ]
+}
 };

@@ -208,6 +208,12 @@ module.exports = {
     ]
   },
   'mobile': {
+    validate: [
+        'numeric',
+        'required'
+    ]
+  },
+  'mobile-overseas': {
     labelClassName: 'visuallyhidden',
     validate: [
         'numeric',

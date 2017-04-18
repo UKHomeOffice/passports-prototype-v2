@@ -12,14 +12,8 @@
 {{$form}}
 
     <p>We’ll only use these details to contact you about your application.</p>
+    <p>It's best to use a phone that you'll have access to. We may call you if there's a problem with your application.</p>
     {{#input-text}}email{{/input-text}}
-  <!--  <fieldset>
-        <legend><span class="form-label-bold">Mobile or home phone</span></legend>
-        <div class="form-date">
-          {{#input-text}}country-code{{/input-text}}
-          {{#input-text}}mobile{{/input-text}}
-        </div>
-    </fieldset>-->
     <fieldset>
             <legend><span class="form-label-bold">Mobile or home phone</span></legend>
             <div class="form-date">
@@ -28,7 +22,7 @@
                 {{#input-text}}application-country-code{{/input-text}}
               </div>
               <div id="mobile-group" class="form-group" style="width:50%">
-                {{#input-text}}mobile{{/input-text}}
+                {{#input-text}}mobile-overseas{{/input-text}}
               </div>
             </div>
         </fieldset>
