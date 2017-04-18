@@ -1206,4 +1206,16 @@ padding: 10px;
 
 .service-info {
   margin-bottom: 3em;
+  p {
+    line-height: 70%;
+  }
+  h2 {
+    margin-bottom: 0.8em;
+  }
+}
+
+.question {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  font-weight: bold;
 }
