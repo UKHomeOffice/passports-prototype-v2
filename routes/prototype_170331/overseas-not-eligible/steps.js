@@ -1,6 +1,6 @@
 module.exports = {
     '/':{
-      fields: ['issuing-authority', 'age-year', 'age-month'],
+      fields: ['issuing-authority', 'issue-year', 'issue-month'],
       backLink: '../filter-common/dob',
       next: '/afghanistan'
     },

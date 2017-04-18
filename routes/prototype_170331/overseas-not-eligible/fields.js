@@ -94,14 +94,28 @@ validate: [
       className: 'visuallyhidden'
     },
     options: [
-      {value: 'UKPA', label: 'UKPA'},
-      {value: 'UKPS', label: 'UKPS'},
-      {value: 'IPS', label: 'IPS'},
+      {value: 'UK', label: 'UKPA, UKPS, IPS or HMPO'},
       {value: 'Other', label: 'Other'}
     ],
     validate: [
       'required'
     ]
+  },
+  'issue-year': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
+  'issue-month': {
+      labelClassName: 'form-label',
+      formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
   }
 
 };
