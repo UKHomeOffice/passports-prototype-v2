@@ -1,6 +1,6 @@
 module.exports = {
     '/':{
-      next: '/error'
+      next: '/success'
     },
     '/error': {
         backLink: './',
