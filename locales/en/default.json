@@ -108,6 +108,9 @@
         },
         "dual-national-country":{
           "label": "Which country is it for?"
+        },
+        "photo-url":{
+          "label": "URL"
         }
     },
     "validation": {
