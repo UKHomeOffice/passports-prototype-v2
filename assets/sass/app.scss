@@ -784,10 +784,10 @@ float: left;
   width:60px;
 }
 /* this is for overseas when there should be an input with the country code before the phone number input
-/* for normal OR or DPS this needs to be disabled
-#mobile {
+/* for normal OR or DPS this needs to be disabled */
+#mobile-overseas {
   width: 229px; }
-*/
+
 
 /* time out modal */
 .modalDialog {
@@ -922,6 +922,7 @@ padding: 10px;
   margin: 0 auto;
   text-align: center;
   margin-bottom: -5px;
+  border-bottom: 2px solid #dee0e2;
 }
 
 .service-name-1 {
@@ -1054,6 +1055,7 @@ padding: 10px;
 
 .choose-buttons {
   margin-top: -10px;
+  border-bottom: 2px solid white !important;
 }
 
 
@@ -1205,17 +1207,13 @@ padding: 10px;
 }
 
 .service-info {
-  margin-bottom: 3em;
+  margin-bottom: 4em;
   p {
-    line-height: 70%;
   }
   h2 {
-    margin-bottom: 0.8em;
   }
 }
 
 .question {
-  margin-top: 1.5em;
-  margin-bottom: 1em;
   font-weight: bold;
 }
