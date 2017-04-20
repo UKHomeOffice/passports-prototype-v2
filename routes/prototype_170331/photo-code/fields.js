@@ -1,7 +1,7 @@
 const _ = require('lodash');
 
 module.exports = {
-'photo-url': {
+'photo-code': {
   validate: [
     'required'
   ]

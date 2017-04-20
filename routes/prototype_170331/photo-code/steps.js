@@ -1,7 +1,7 @@
 module.exports = {
    '/':{
-       controller: require('../../../controllers/photo-url'),
-       fields: ['photo-url'],
+       controller: require('../../../controllers/photo-code'),
+       fields: ['photo-code'],
        next: '/error'
    },
    '/error': {
