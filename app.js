@@ -178,6 +178,8 @@ function init(sessionStore) {
             app.use('/prototype_170331/submission-failed', require('./routes/prototype_170331/submission-failed'));
             app.use('/prototype_170331/sar', require('./routes/prototype_170331/sar'));
             app.use('/prototype_170331/photo-url', require('./routes/prototype_170331/photo-url'));
+            app.use('/prototype_170331/photo-code', require('./routes/prototype_170331/photo-code'));
+
 
 
         //prototype 170118

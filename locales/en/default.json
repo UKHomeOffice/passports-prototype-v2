@@ -110,7 +110,10 @@
           "label": "Which country is it for?"
         },
         "photo-url":{
-          "label": "URL"
+          "label": "Link"
+        },
+        "photo-code":{
+          "label": "Code"
         }
     },
     "validation": {
