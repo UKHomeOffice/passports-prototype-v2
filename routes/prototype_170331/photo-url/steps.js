@@ -1,11 +1,13 @@
 module.exports = {
-    '/':{
-      next: '/success'
-    },
-    '/error': {
-        backLink: './',
-    },
-    '/success': {
-        backLink: './',
-      }
+   '/':{
+       controller: require('../../../controllers/photo-url'),
+       fields: ['photo-url'],
+       next: '/error'
+   },
+   '/error': {
+       backLink: './',
+   },
+   '/success': {
+       backLink: './',
+     }
 };
