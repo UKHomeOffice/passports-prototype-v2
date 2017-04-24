@@ -1,0 +1,30 @@
+{{< layout}}
+
+{{$pageTitle}}Passport options{{/pageTitle}}
+
+{{$header}}
+    <h1>Your new passport</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+    {{$form}}
+      {{#radio-group}}passport-options-dps{{/radio-group}}
+
+      <fieldset>
+          <legend class="visuallyhidden">Add a braille sticker</legend>
+          <p>If you need one, we can add a braille sticker that says 'passport'.</p>
+          {{#checkbox}}braille{{/checkbox}}
+          <!-- discuss the change from 'want' to 'need' a Braille sticker-->
+    </fieldset>
+    <br/>
+    {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+
+{{/ layout}}
