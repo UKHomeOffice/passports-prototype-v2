@@ -104,7 +104,7 @@
         },
         "reference-no":{
             "label": "Reference",
-            "hint": "You'll find this information in your confirmation email, eg PEX 123 456 7890"
+            "hint": "You’ll find this in your confirmation email, eg PEX 123 456 7890"
         },
         "dual-national-country":{
           "label": "Which country is it for?"

@@ -12,13 +12,28 @@
     {{$form}}
       <div id="passport-number-group" class="form-group">
           <fieldset>
-                  {{#input-text}}reference-no{{/input-text}}
-              {{#input-text}}postcode{{/input-text}}
+            <div id="reference-group" class="form-group">
+                <label for="reference" class="form-label-bold">
+                    Reference
+                    <span class="form-hint">You’ll find this in your confirmation email, eg PEX 123 456 7890</span>
+
+                </label>
+                <span id="reference-prefix" class="prefix">PEX</span>
+                <span>
+                    <input type="text" id="reference" class="form-control reference" name="reference" value="" maxlength="16" aria-describedby="reference-prefix" aria-required="true">
+                </span>
+            </div>
+            <div id="address-postcode-group" class="form-group">
+                <label for="address-postcode" class="form-label-bold">
+                    Postcode
+                </label>
+                <input type="text" name="address-postcode" id="address-postcode" class="form-control input-code" aria-required="true">
+            </div>
           </fieldset>
           <fieldset>
             <legend><span class="form-label-bold">Date of birth</span></legend>
               <div class="form-date">
-                <p class="form-hint" id="dob-hint">For example 20 01 2004</p>
+                <p class="form-hint" id="dob-hint">For example, 31 08 1970</p>
                   {{#input-text}}age-day{{/input-text}}
                   {{#input-text}}age-month{{/input-text}}
                   {{#input-text}}age-year{{/input-text}}
@@ -30,23 +45,5 @@
       {{/form}}
   {{/ hmpo-partials-form}}
 {{/content}}
-{{$sidebar}}
-    <div class="column-one-third">
-        <div class="sidebar related GDS">
-          <div class="photo-preview-inner">
-            <div class="inner group related-subsection">
-            <h2 id="parent-subsection">Passports</h2>
-            <nav role="navigation" aria-labelledby="parent-subsection">
-              <ul>
-                <li>
-                  <a href="">Passport advice and complains</a>
-                </li>
-             </ul>
-            </nav>
-          </div>
-          </div>
-        </div>
-    </div>
-{{/sidebar}}
 
 {{/ layout}}
