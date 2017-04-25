@@ -7,7 +7,7 @@ module.exports = {
         next: '/track'
     },
     '/track': {
-        fields: ['reference-no', 'postcode', 'age-day', 'age-month', 'age-year'],
+        fields: ['age-day', 'age-month', 'age-year'],
         next: '/waiting-for-old-pass'
     },
     '/waiting-for-old-pass': {
