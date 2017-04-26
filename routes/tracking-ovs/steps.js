@@ -15,5 +15,5 @@ module.exports = {
   },
   '/passport-coming': {
       next: '/track'
-
+  }
 };
