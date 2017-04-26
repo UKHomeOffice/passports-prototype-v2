@@ -406,6 +406,8 @@ function init(sessionStore) {
 
     //Tracking
     app.use('/tracking', require('./routes/tracking'));
+    app.use('/tracking-email', require('./routes/tracking-email'));
+
 
     //3rd party shops photo checker
     app.use('/shops-photo-checker', require('./routes/shops-photo-checker'));
