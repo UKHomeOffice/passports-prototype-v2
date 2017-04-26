@@ -34,6 +34,9 @@ function init(sessionStore) {
             return (user === process.env.USER || user === 'fish') && (pass === process.env.PASS || pass === process.env.PASSWORD || pass === 'chips');
         };
 
+        function authoriser(user, pass) {
+            return (user === process.env.USER || user === 'fish') && (pass === process.env.PASS || pass === process.env.PASSWORD || pass === 'chips');
+        };
 
         app.use(auth({
             authorizer: authoriser,
@@ -407,6 +410,7 @@ function init(sessionStore) {
 
     //Tracking
     app.use('/tracking', require('./routes/tracking'));
+    app.use('/tracking-ovs', require('./routes/tracking-ovs'));
     app.use('/tracking-email', require('./routes/tracking-email'));
 
 
