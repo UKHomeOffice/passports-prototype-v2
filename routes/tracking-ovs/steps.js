@@ -12,5 +12,8 @@ module.exports = {
     },
     '/waiting-for-old-pass': {
         next: '/track'
-    }
+  },
+  '/passport-coming': {
+      next: '/track'
+  }
 };
