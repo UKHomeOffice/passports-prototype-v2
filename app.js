@@ -406,6 +406,7 @@ function init(sessionStore) {
 
     //Tracking
     app.use('/tracking', require('./routes/tracking'));
+    app.use('/tracking-ovs', require('./routes/tracking-ovs'));
     app.use('/tracking-email', require('./routes/tracking-email'));
 
 
