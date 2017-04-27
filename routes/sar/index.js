@@ -1,5 +1,7 @@
-var app = require('express')();
-app.get('/help-signing-passport', function (req, res, callback) {
-	res.render('sar/index');
+var app = require('express').Router();
+
+app.get('/', function (req, res, next) {
+    res.render('sar');
 });
+
 module.exports = app;
