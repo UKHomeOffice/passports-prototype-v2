@@ -412,6 +412,8 @@ function init(sessionStore) {
     app.use('/tracking', require('./routes/tracking'));
     app.use('/tracking-ovs', require('./routes/tracking-ovs'));
     app.use('/tracking-email', require('./routes/tracking-email'));
+    app.use('/tracking-dps', require('./routes/tracking-dps'));
+
 
 
     //3rd party shops photo checker
