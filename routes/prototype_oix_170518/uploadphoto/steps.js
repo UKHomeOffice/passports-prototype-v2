@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-        backLink: '../intro/you-need-a-photo-v2',
+        backLink: '../intro/photo-retrieved',
         next: '/processing-image'
     },
     '/uploading': {
