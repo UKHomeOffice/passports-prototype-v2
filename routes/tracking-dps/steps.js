@@ -14,6 +14,23 @@ module.exports = {
         next: '/track'
   },
   '/passport-coming': {
-      next: '/track'
+  },
+  '/application-received': {
+  },
+  '/application-approved': {
+  },
+  '/countersignature-in-time': {
+  },
+  '/downgraded': {
+  },
+  '/joined-processing-queue': {
+  },
+  '/new-photo-received': {
+  },
+  '/photo-rejected-in-time': {
+  },
+  '/photo-rejected-no-time': {
+  },
+  '/received-old-passport': {
   }
 };
