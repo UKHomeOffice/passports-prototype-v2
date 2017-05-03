@@ -184,6 +184,27 @@ function init(sessionStore) {
             app.use('/prototype_170331/photo-url', require('./routes/prototype_170331/photo-url'));
             app.use('/prototype_170331/photo-code', require('./routes/prototype_170331/photo-code'));
 
+            //prototype OIX 120518
+                app.use('/prototype_oix_170518/uploadphoto', require('./routes/prototype_oix_170518/uploadphoto'));
+                app.use('/prototype_oix_170518/filter-common', require('./routes/prototype_oix_170518/filter-common'));
+                app.use('/prototype_oix_170518/renew', require('./routes/prototype_oix_170518/renew'));
+                app.use('/prototype_oix_170518/intro', require('./routes/prototype_oix_170518/intro'));
+                app.use('/prototype_oix_170518/filter', require('./routes/prototype_oix_170518/filter'));
+                app.use('/prototype_oix_170518/startpage', require('./routes/prototype_oix_170518/startpage'));
+                app.use('/prototype_oix_170518/photoguide-short', require('./routes/prototype_oix_170518/photoguide-short'));
+                app.use('/prototype_oix_170518/photoguide-static', require('./routes/prototype_oix_170518/photoguide-static'));
+                app.use('/prototype_oix_170518/photoguide-shop', require('./routes/prototype_oix_170518/photoguide-shop'));
+                app.use('/prototype_oix_170518/takephoto', require('./routes/prototype_oix_170518/takephoto'));
+                app.use('/prototype_oix_170518/upload', require('./routes/prototype_oix_170518/upload'));
+                app.use('/prototype_oix_170518/rejectedphoto', require('./routes/prototype_oix_170518/rejectedphoto'));
+                app.use('/prototype_oix_170518/filter-common-temp', require('./routes/prototype_oix_170518/filter-common-temp'));
+                app.use('/prototype_oix_170518/throttle', require('./routes/prototype_oix_170518/throttle'));
+                app.use('/prototype_oix_170518/payment', require('./routes/prototype_oix_170518/payment'));
+                app.use('/prototype_oix_170518/submission-failed', require('./routes/prototype_oix_170518/submission-failed'));
+                app.use('/prototype_oix_170518/sar', require('./routes/prototype_oix_170518/sar'));
+                app.use('/prototype_oix_170518/photo-url', require('./routes/prototype_oix_170518/photo-url'));
+                app.use('/prototype_oix_170518/photo-code', require('./routes/prototype_oix_170518/photo-code'));
+
 
 
         //prototype 170118
