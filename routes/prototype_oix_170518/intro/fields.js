@@ -7,6 +7,7 @@ module.exports = {
       options: [
         {value: 'myself', label: 'Show me how to do it myself'},
         {value: 'shop', label: 'Show me how to get it from a shop (not yet prototyped)'},
+        {value: 'code', label: 'I have a printed photo with a code'},
         {value: 'upload', label: 'I already have a digital photo'}
       ],
       validate: [
