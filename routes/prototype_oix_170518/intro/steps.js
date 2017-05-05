@@ -8,7 +8,7 @@ module.exports = {
       next: '/photo-retrieved'
     },
     '/you-need-a-photo': {
-      backLink: './what-you-need-overseas',
+      backLink: './what-you-need',
       next: '/choose-photo-method'
     },
     '/choose-photo-method': {
@@ -17,5 +17,9 @@ module.exports = {
     },
     '/photo-retrieved': {
       next: '/../uploadphoto'
+    },
+    '/get-photo-code': {
+      backLink: './choose-photo-method',
+      next: '/photo-retrieved'
     }
 };

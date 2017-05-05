@@ -1224,3 +1224,24 @@ padding: 10px;
   padding: 30px;
   border: 10px dashed green;
 }
+
+
+/* photo code styles */
+.photo-code{
+  width:40px!important;
+  text-transform: none!important;
+}
+
+.photo-code-long{
+  width:120px!important;
+  text-transform: none!important;
+}
+
+/* start button fix */
+.get-started .button{
+    background-image: url(https://assets.publishing.service.gov.uk/static/icon-pointer-2x-8e9c31a486acd2de3aca823392c6d8667b60110cc8369ab1c9e03360b0d91dae.png);
+    background-size: 30px 19px;
+    padding-right: 1.7em;
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+}
