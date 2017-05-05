@@ -14,18 +14,23 @@ module.exports = {
         'required',
         {
           type:'equal',
-          arguments:['upload','shop'],
+          arguments:['upload','shop', 'code'],
           redirect:'/../photoguide-short'
         },
         {
           type:'equal',
-          arguments:['upload','myself'],
+          arguments:['upload','myself', 'code'],
           redirect:'/../photoguide-shop'
         },
         {
           type:'equal',
-          arguments:['upload','upload'],
+          arguments:['upload','upload', 'code'],
           redirect:'/../upload'
+        },
+        {
+          type:'equal',
+          arguments:['upload','myself', 'shop'],
+          redirect:'/get-photo-code'
         }
       ]
     },

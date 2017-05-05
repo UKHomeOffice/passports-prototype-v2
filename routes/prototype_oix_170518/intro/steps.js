@@ -17,5 +17,8 @@ module.exports = {
     },
     '/photo-retrieved': {
       next: '/../uploadphoto'
+    },
+    '/get-photo-code': {
+      next: '/photo-retrieved'
     }
 };
