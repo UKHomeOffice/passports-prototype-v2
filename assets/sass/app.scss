@@ -1221,8 +1221,15 @@ padding: 10px;
 
 
 .build-box {
-  padding: 30px;
-  border: 10px dashed green;
+  padding: 20px;
+  border: 7px dotted green;
+}
+
+
+.design-box {
+  margin-top: 50px;
+  padding: 20px;
+  border: 7px dotted gold;
 }
 
 
@@ -1244,4 +1251,12 @@ padding: 10px;
     padding-right: 1.7em;
     background-position: 100% 50%;
     background-repeat: no-repeat;
+}
+
+
+.appointment-unavailable {
+  border-left: 5px solid $error-colour;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 20px;
 }
