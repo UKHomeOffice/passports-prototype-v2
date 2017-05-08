@@ -9,13 +9,12 @@
 {{$content}}
     {{< hmpo-partials-form}}
     {{$form}}
-        [Do we still need to say this? --->]
-        <p>Your photo must be taken in the last month and meet the <br><a href="/../prototype_oix_1705180331/photoguide-static/photorules"> rules for passport photos</a>.</p>
-        <p>[Smth more about where the code is or how to get one?]</p>
+        <p>You can access your digital passport photo by entering the code shown on <br>
+          your printed photos.</p>
 
         <div id="photo-code-group" class="form-group">
             <label for="photo-code" class="form-label-bold">
-                Photo code
+            Code
             </label>
             <input type="text" name="photo-code" id="photo-code" class="form-control input-code photo-code" aria-required="true">
             <span id="reference-prefix" class="prefix">.</span>
@@ -26,13 +25,16 @@
         </div>
 
         <a href="photo-retrieved" class="button">Get your photo</a><br/><br/>
+
+        <p><a href="">I don't have a code</a></p>
+
     {{/form}}
     {{/ hmpo-partials-form}}
 
-    <br/>
-    <p>
-          We keep all photos for up to 30 days in line with our <a href="" rel="external">privacy policy</a>.
+   <p><div role="note" aria-label="Information" class="panel panel-border-wide application-notice info-notice">
+          We keep all photos for up to 30 days in line with our <a href="">privacy policy</a>.
         </p>
+      </div>
 
 
 {{/content}}
