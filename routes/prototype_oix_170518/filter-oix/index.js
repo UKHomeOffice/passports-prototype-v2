@@ -6,7 +6,8 @@ var app = require('express')(),
 app.use(require('hmpo-template-mixins')(fields, { sharedTranslationKey: 'prototype' }));
 
 app.use(wizard(steps, fields, {
-  controller: require('../../../controllers/form'),
-  templatePath: 'prototype_oix_170518/filter-common-temp' }));
+    controller: require('../../../controllers/form'),
+    templatePath: 'prototype_oix_170518/filter-oix'
+}));
 
 module.exports = app;
