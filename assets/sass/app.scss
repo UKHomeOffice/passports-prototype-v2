@@ -1260,3 +1260,34 @@ padding: 10px;
   margin-bottom: 15px;
   padding: 20px;
 }
+
+
+/* get your digital photo - choose your photo methdo page */
+.guide-box{
+  width:47%;
+  background:#005EA5;
+  box-sizing: border-box;
+  padding:30px;
+  padding-bottom:17px;
+  float:left;
+  margin-right:30px;
+}
+
+.guide-box img{
+  width:30%;
+  float:left;
+  margin-right:20px;
+}
+
+.last{
+  margin-right:0!important;
+}
+
+.guide-box h2{
+  color:#fff;
+}
+
+.guide-box a{
+  color:#fff;
+  display:block;
+}
