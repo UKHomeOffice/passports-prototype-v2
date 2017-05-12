@@ -205,6 +205,9 @@ function init(sessionStore) {
                 app.use('/prototype_oix_170518/photo-url', require('./routes/prototype_oix_170518/photo-url'));
                 app.use('/prototype_oix_170518/photo-code', require('./routes/prototype_oix_170518/photo-code'));
                 app.use('/prototype_oix_170518/oix', require('./routes/prototype_oix_170518/oix'));
+                app.use('/prototype_oix_170518/intro-oix', require('./routes/prototype_oix_170518/intro-oix'));
+                app.use('/prototype_oix_170518/photo-retrieved', require('./routes/prototype_oix_170518/photo-retrieved'));
+
 
 
 
