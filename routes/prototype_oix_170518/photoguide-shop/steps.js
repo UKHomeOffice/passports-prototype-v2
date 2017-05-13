@@ -10,5 +10,8 @@ module.exports = {
     },
     '/transfer-photo': {
       backLink: './'
+    },
+    '/booths': {
+      backLink: './'
     }
 };
