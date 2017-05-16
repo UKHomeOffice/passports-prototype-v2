@@ -136,4 +136,8 @@ module.exports = {
     '/locations-days-missing': {
         backLink: '../intro/what-you-need'
     }
+    ,
+    '/no-appointments': {
+        backLink: '../intro/what-you-need'
+    }
 };
