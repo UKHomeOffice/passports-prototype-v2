@@ -18,10 +18,13 @@ module.exports = {
     },
     '/track-postcode': {
         fields: ['age-day', 'age-month', 'age-year'],
-        next: '/waiting-for-old-pass',
+        next: '/need-csig',
         backLink: 'track'
     },
     '/waiting-for-old-pass': {
+        next: '/track'
+    },
+    '/need-csig': {
         next: '/track'
     }
 };
