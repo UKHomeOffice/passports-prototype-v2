@@ -445,6 +445,9 @@ function init(sessionStore) {
     app.use('/tracking-email', require('./routes/tracking-email'));
     app.use('/tracking-dps', require('./routes/tracking-dps'));
 
+    //Csig
+    app.use('/csig_170601', require('./routes/csig_170601'));
+
 
 
     //3rd party shops photo checker
