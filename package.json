@@ -1,53 +1,53 @@
 {
-  "name": "passports-prototype",
-  "version": "0.0.0",
-  "description": "Passport journeys",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "clean": "rm -rf public/; mkdir public",
-    "sass": "rm -rf public/stylesheets; mkdir public/stylesheets && npm-sass ./assets/sass/app.scss > ./public/stylesheets/app.css",
-    "js": "rm -rf public/javascripts; mkdir public/javascripts && browserify -r hmpo-frontend-toolkit -r underscore ./assets/javascripts/app.js | uglifyjs -c > ./public/javascripts/app.js",
-    "postinstall": "npm run clean && npm run sass && npm run js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:js": "watch 'npm run js' ./assets/javascripts",
-    "watch:sass": "watch 'npm run sass' ./assets/sass"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/UKHomeOffice/passports-prototype.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/UKHomeOffice/passports-prototype/issues"
-  },
-  "homepage": "https://github.com/UKHomeOffice/passports-prototype#readme",
-  "dependencies": {
-    "body-parser": "^1.15.2",
-    "browserify": "^13.1.0",
-    "connect-redis": "^3.1.0",
-    "cookie-parser": "^1.4.3",
-    "express": "^4.14.0",
-    "express-basic-auth": "^0.2.3",
-    "express-partial-templates": "^0.2.0",
-    "express-session": "^1.14.0",
-    "govuk-elements-sass": "2.1.0",
-    "hmpo-form-wizard": "^5.1.0",
-    "hmpo-frontend-toolkit": "^7.0.0",
-    "hmpo-template-mixins": "^4.5.0",
-    "hmpo-templates": "^1.0.0",
-    "hogan-express-strict": "^0.5.4",
-    "i18n-future": "^1.0.0",
-    "jquery": "^3.1.1",
-    "lodash": "^4.16.4",
-    "npm-sass": "^1.2.0",
-    "redis": "^2.6.2",
-    "typeahead-aria": "UKHomeOffice/typeahead-aria",
-    "uglifyjs": "^2.4.10",
-    "van11y-accessible-tab-panel-aria": "gavboulton/van11y-accessible-tab-panel-aria#feature/keep-href"
-  },
-  "devDependencies": {
-    "watch": "^1.0.1"
-  }
+ "name": "passports-prototype",
+ "version": "0.0.0",
+ "description": "Passport journeys",
+ "main": "app.js",
+ "scripts": {
+   "start": "node app.js",
+   "clean": "rm -rf public/; mkdir public",
+   "sass": "rm -rf public/stylesheets; mkdir public/stylesheets && npm-sass ./assets/sass/app.scss > ./public/stylesheets/app.css",
+   "js": "rm -rf public/javascripts; mkdir public/javascripts && browserify -r hmpo-frontend-toolkit -r underscore ./assets/javascripts/app.js | uglifyjs -c > ./public/javascripts/app.js",
+   "postinstall": "npm run clean && npm run sass && npm run js",
+   "test": "echo \"Error: no test specified\" && exit 1",
+   "watch:js": "watch 'npm run js' ./assets/javascripts",
+   "watch:sass": "watch 'npm run sass' ./assets/sass"
+ },
+ "repository": {
+   "type": "git",
+   "url": "git+https://github.com/UKHomeOffice/passports-prototype.git"
+ },
+ "author": "",
+ "license": "MIT",
+ "bugs": {
+   "url": "https://github.com/UKHomeOffice/passports-prototype/issues"
+ },
+ "homepage": "https://github.com/UKHomeOffice/passports-prototype#readme",
+ "dependencies": {
+   "body-parser": "^1.15.2",
+   "browserify": "^13.1.0",
+   "connect-redis": "^3.1.0",
+   "cookie-parser": "^1.4.3",
+   "express": "^4.14.0",
+   "express-basic-auth": "^0.2.3",
+   "express-partial-templates": "^0.2.0",
+   "express-session": "^1.14.0",
+   "govuk-elements-sass": "2.1.0",
+   "hmpo-form-wizard": "^5.1.0",
+   "hmpo-frontend-toolkit": "^7.0.0",
+   "hmpo-template-mixins": "^4.5.0",
+   "hmpo-templates": "^1.0.0",
+   "hogan-express-strict": "^0.5.4",
+   "i18n-future": "^1.0.0",
+   "jquery": "^3.1.1",
+   "lodash": "^4.16.4",
+   "npm-sass": "^1.2.0",
+   "redis": "^2.6.2",
+   "typeahead-aria": "UKHomeOffice/typeahead-aria",
+   "uglifyjs": "^2.4.10",
+   "van11y-accessible-tab-panel-aria": "gavboulton/van11y-accessible-tab-panel-aria#feature/keep-href"
+ },
+ "devDependencies": {
+   "watch": "^1.0.1"
+ }
 }
