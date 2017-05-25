@@ -456,6 +456,9 @@ function init(sessionStore) {
     app.use('/sar', require('./routes/sar'));
     app.use('/typeahead', require('./routes/typeahead'));
 
+    // CSig
+    app.use('/csig', require('./routes/csig'));
+
 
     var port = process.env.PORT || 3000;
     app.listen(port);

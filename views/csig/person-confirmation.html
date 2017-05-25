@@ -1,0 +1,17 @@
+{{< layout}}
+
+{{$pageTitle}}Do you know this person?{{/pageTitle}}
+{{$header}}<h1>Do you know this person?</h1>{{/header}}
+
+{{$content}}
+    {{<hmpo-partials-form}}
+        {{$form}}
+            <p>Matt Damon</p>
+            <img src="../public/images/csig-images/passport-photo-example.jpeg" alt="persons picture" style="width:228px;height:228px;">
+            {{#radio-group}}person-check{{/radio-group}}
+            {{#input-submit}}{{/input-submit}}
+        {{/form}}
+    {{/hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
