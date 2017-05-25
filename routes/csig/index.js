@@ -4,7 +4,7 @@ const wizard = require('hmpo-form-wizard');
 const steps = require('./steps');
 const fields = require('./fields');
 
-let app = express.Router();
+var app = express.Router();
 
 app.use(templateMixins(fields));
 
