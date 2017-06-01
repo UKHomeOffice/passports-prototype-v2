@@ -19,11 +19,16 @@ module.exports = {
       next: '/../uploadphoto'
     },
     '/get-photo-code': {
+      controller: require('../../../controllers/photo-code-photo'),
+      fields: ['photo-code-photo'],
       backLink: './choose-photo-method',
-      next: '/photo-retrieved'
+      next: '/error'
     },
     '/retrieving': {
       backLink: './get-photo-code',
       next: '/photo-retrieved'
+    },
+    '/error': {
+        backLink: './get-photo-code',
     }
 };
