@@ -21,5 +21,9 @@ module.exports = {
     '/get-photo-code': {
       backLink: './choose-photo-method',
       next: '/photo-retrieved'
+    },
+    '/retrieving': {
+      backLink: './get-photo-code',
+      next: '/photo-retrieved'
     }
 };
