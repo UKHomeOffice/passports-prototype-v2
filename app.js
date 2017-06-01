@@ -212,6 +212,34 @@ function init(sessionStore) {
 
 
 
+                //prototype OIX 120518
+                    app.use('/prototype_oix_170601/uploadphoto', require('./routes/prototype_oix_170601/uploadphoto'));
+                    app.use('/prototype_oix_170601/filter-common', require('./routes/prototype_oix_170601/filter-common'));
+                    app.use('/prototype_oix_170601/renew', require('./routes/prototype_oix_170601/renew'));
+                    app.use('/prototype_oix_170601/intro', require('./routes/prototype_oix_170601/intro'));
+                    app.use('/prototype_oix_170601/filter', require('./routes/prototype_oix_170601/filter'));
+                    app.use('/prototype_oix_170601/startpage', require('./routes/prototype_oix_170601/startpage'));
+                    app.use('/prototype_oix_170601/photoguide-short', require('./routes/prototype_oix_170601/photoguide-short'));
+                    app.use('/prototype_oix_170601/photoguide-static', require('./routes/prototype_oix_170601/photoguide-static'));
+                    app.use('/prototype_oix_170601/photoguide-shop', require('./routes/prototype_oix_170601/photoguide-shop'));
+                    app.use('/prototype_oix_170601/takephoto', require('./routes/prototype_oix_170601/takephoto'));
+                    app.use('/prototype_oix_170601/upload', require('./routes/prototype_oix_170601/upload'));
+                    app.use('/prototype_oix_170601/rejectedphoto', require('./routes/prototype_oix_170601/rejectedphoto'));
+                    app.use('/prototype_oix_170601/throttle', require('./routes/prototype_oix_170601/throttle'));
+                    app.use('/prototype_oix_170601/payment', require('./routes/prototype_oix_170601/payment'));
+                    app.use('/prototype_oix_170601/submission-failed', require('./routes/prototype_oix_170601/submission-failed'));
+                    app.use('/prototype_oix_170601/sar', require('./routes/prototype_oix_170601/sar'));
+                    app.use('/prototype_oix_170601/photo-url', require('./routes/prototype_oix_170601/photo-url'));
+                    app.use('/prototype_oix_170601/photo-code', require('./routes/prototype_oix_170601/photo-code'));
+                    app.use('/prototype_oix_170601/oix', require('./routes/prototype_oix_170601/oix'));
+                    app.use('/prototype_oix_170601/intro-oix', require('./routes/prototype_oix_170601/intro-oix'));
+                    app.use('/prototype_oix_170601/photo-retrieved', require('./routes/prototype_oix_170601/photo-retrieved'));
+                    app.use('/prototype_oix_170601/startpage-oix', require('./routes/prototype_oix_170601/startpage-oix'));
+                    app.use('/prototype_oix_170601/filter-oix', require('./routes/prototype_oix_170601/filter-oix'));
+                    app.use('/prototype_oix_170601/filter-common-oix', require('./routes/prototype_oix_170601/filter-common-oix'));
+
+
+
 
 
 

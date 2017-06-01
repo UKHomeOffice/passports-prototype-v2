@@ -1,0 +1,54 @@
+{{< layout}}
+
+{{$pageTitle}}Upload your photo{{/pageTitle}}
+
+{{$header}}
+    <h1>Get your digital photo</h1>
+{{/header}}
+
+{{$content}}
+    {{< hmpo-partials-form}}
+    {{$form}}
+         <p>You need to enter the digital photo code shown on your printed photos.</p>
+
+        <div id="photo-code-group" class="form-group">
+            <label for="photo-code" class="form-label-bold">
+            Digital photo code
+            </label>
+            <input type="text" name="photo-code" id="photo-code" class="form-control input-code photo-code" aria-required="true">
+            <span id="reference-prefix" class="prefix">.</span>
+            <input type="text" name="photo-code" id="photo-code" class="form-control input-code  photo-code" aria-required="true">
+            <span id="reference-prefix" class="prefix">/</span>
+            <input type="text" name="photo-code" id="photo-code" class="form-control input-code  photo-code-long" aria-required="true">
+
+        </div>
+
+        <a href="photo-retrieved" class="button">Get your photo</a><br/><br/>
+
+    {{/form}}
+    {{/ hmpo-partials-form}}
+
+   <p><div role="note" aria-label="Information" class="panel panel-border-wide application-notice info-notice">
+          We keep all photos for up to 30 days in line with our <a href="">privacy policy</a>.
+        </p>
+      </div>
+
+
+{{/content}}
+<br/><br/>
+{{$sidebar}}
+<div class="column-one-third">
+  <br/><br/>
+    <div class="sidebar related">
+      <div class="photo-preview-inner">
+          <h2 class="heading-medium">Check here</h2>
+          <div class="photo">
+              <img src="../../public/images/printed-photo-code.png" alt="Your uploaded photo" title="Your uploaded photo" width="300">
+          </div>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}
