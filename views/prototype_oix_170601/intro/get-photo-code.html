@@ -9,11 +9,12 @@
 {{$content}}
     {{< hmpo-partials-form}}
     {{$form}}
-      <p>A photo shop will email your code to you. A booth will print the code next to your photos.</p>
         <div id="photo-code-group" class="form-group">
             <label for="photo-code" class="form-label-bold">
             Digital photo code
             </label>
+
+            <p class="form-hint" id="dob-hint">This will be in an email from a shop or on your printed photos.</p>
             <input type="text" name="photo-code" id="photo-code-bit" class="form-control input-code photo-code" aria-required="true">
             <span id="reference-prefix" class="prefix">.</span>
             <input type="text" name="photo-code" id="photo-code-ly" class="form-control input-code  photo-code" aria-required="true">
