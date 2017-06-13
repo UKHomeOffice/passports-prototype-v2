@@ -183,6 +183,9 @@ function init(sessionStore) {
             app.use('/prototype_170331/sar', require('./routes/prototype_170331/sar'));
             app.use('/prototype_170331/photo-url', require('./routes/prototype_170331/photo-url'));
             app.use('/prototype_170331/photo-code', require('./routes/prototype_170331/photo-code'));
+            app.use('/prototype_170331/mismatch', require('./routes/prototype_170331/mismatch'));
+
+
 
             //prototype OIX 120518
                 app.use('/prototype_oix_170518/uploadphoto', require('./routes/prototype_oix_170518/uploadphoto'));
