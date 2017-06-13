@@ -3,6 +3,9 @@ module.exports = {
     next: '/short-plain-bg',
     backLink: '/../prototype_170331/intro/choose-photo-method'
   },
+  '/find-a-camera': {
+    next: '/short-plain-bg'
+  },
   '/short-plain-bg': {
     next: '/short-lighting'
   },
