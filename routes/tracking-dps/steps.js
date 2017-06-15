@@ -32,5 +32,7 @@ module.exports = {
   '/photo-rejected-no-time': {
   },
   '/received-old-passport': {
+  },
+  '/no-longer-updated': {
   }
 };

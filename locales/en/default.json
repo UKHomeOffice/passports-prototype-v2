@@ -114,6 +114,24 @@
         },
         "photo-code":{
           "label": "Code"
+        },
+        "passport-number":{
+            "label": "Passport Number"
+        },
+        "verification-method": {
+            "legend": "Your verification option",
+            "label": "Your verification option"
+        },
+        "national-insurance": {
+            "label": "National Insurance Number"
+        },
+        "person-check": {
+            "legend": "Do you know this person",
+            "label": "whether you know this person"
+        },
+        "reasons": {
+            "legend": "Why did you reject the countersignature",
+            "label": "reason for rejecting the countersignature"
         }
     },
     "validation": {
@@ -170,6 +188,9 @@
         },
         "return-passport": {
           "required": "You must answer this question."
-        }
+        },
+        "email": "You must enter a valid email",
+        "exactlength": "{{label}} must be 9 characters",
+        "ninoformat": "{{label}} format incorrect"
     }
 }

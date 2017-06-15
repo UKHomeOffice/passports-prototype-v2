@@ -1,0 +1,28 @@
+{{< layout}}
+
+{{$pageTitle}}Countersignature's details{{/pageTitle}}
+{{$header}}<h1>Countersignature's details</h1>{{/header}}
+
+{{$content}}
+    {{<hmpo-partials-form}}
+        {{$form}}
+          {{#input-text}}name{{/input-text}}
+          {{#input-text}}lastname{{/input-text}}
+          {{#input-text}}passport-number{{/input-text}}
+          <div id="age" class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">Date of birth</span>
+                <span id="dob-hint" class="form-hint">For example 20 01 1994</span>
+              </legend>
+              <div class="form-date">
+                {{#input-date}}age{{/input-date}}
+              </div>
+            </fieldset>
+          </div>
+          {{#input-submit}}{{/input-submit}}
+        {{/form}}
+    {{/hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}

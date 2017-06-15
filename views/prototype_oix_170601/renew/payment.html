@@ -1,0 +1,74 @@
+{{< layout}}
+
+{{$pageTitle}}Payment for UK adult passport renewal{{/pageTitle}}
+
+{{$header}}
+    <h1>Payment for UK adult passport renewal</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+      <p>Total <strong>£102.86</strong></p>
+      <hr>
+      <p style="margin-bottom:10px">Accepted cards</p>
+      <div style="margin-bottom:30px">
+        <img src="../../public/images/payment/logo_VISA.png" alt="Visa" title="Visa">
+        <img src="../../public/images/payment/logo_MASTERCARD.png" alt="Mastercard" title="Mastercard">
+        <img src="../../public/images/payment/logo_VISA_ELECTRON.png" alt="Visa Electron" title="Visa Electron">
+        <img src="../../public/images/payment/logo_DELTA.png" alt="Visa Debit" title="Visa Debit">
+        <img src="../../public/images/payment/logo_AMEX.png" alt="American Express" title="American Express">
+        <img src="../../public/images/payment/logo_MAESTRO.png" alt="Maestro" title="Maestro">
+      </div>
+      <p style="margin-bottom:10px">Card number (without spaces)</p>
+      <input type="text" name="cardnumber" style="margin-bottom:30px;width:300px">
+
+      <p style="margin-bottom:5px">Expiry date</p>
+        <div style="float:left;">
+            <p style="margin-bottom:0px">Month<p>
+            <select style="width:80px">
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+          </div>
+          <div style="float:left;">
+            <p style="margin-bottom:0px">Year<p>
+            <select style="width:120px; margin-bottom:10px;">
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+              </select>
+          </div>
+          <div style="clear:both;"></div>
+
+      <p style="margin-bottom:10px">Security code</p>
+      <input type="text" name="security code" style="margin-bottom:30px;width:50px; margin-right:10px;">
+      <span> <a href="">Help?</a></span>
+
+      <br/>
+    <a href="/prototype_oix_170601/renew/processing-payment" class="button">Confirm</a><br/><br/>
+    <a href="/prototype_oix_170601/renew/declaration">Cancel</a>
+    <hr>
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+
+{{/ layout}}

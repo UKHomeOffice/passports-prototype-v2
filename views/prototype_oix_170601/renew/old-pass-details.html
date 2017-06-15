@@ -1,0 +1,49 @@
+{{< layout}}
+
+{{$pageTitle}}Your old passport{{/pageTitle}}
+
+{{$header}}
+    <h1>Your old passport</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+    <div class="panel-important">
+              <p>        You'll need to send us your old passport so we can cancel it.
+
+                <!-- Suggest that there's no content need to tell users that we'll tell them where to send it, we'll provide a post address at the end. -->
+</p>
+    </div>
+
+    <div id="passport-number-group" class="form-group">
+        <fieldset>
+            <legend><span class="form-label-bold">Passport number</span></legend>
+              <p class="form-hint" id="dob-hint">For example 502135326</p>
+                {{#input-text}}passport-number{{/input-text}}
+        </fieldset>
+        <fieldset>
+            <legend><span class="form-label-bold">Expiry date</span></legend>
+            <div class="form-date">
+              <p class="form-hint" id="dob-hint">For example 08 2015</p>
+                {{#input-text}}expiry-month{{/input-text}}
+                {{#input-text}}expiry-year{{/input-text}}
+            </div>
+        </fieldset>
+    </div>
+
+    <details>
+        <summary><span class="summary">My passport is lost or stolen</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>If you don’t have your old passport you must <a href="https://www.gov.uk/report-a-lost-or-stolen-passport">report it lost or stolen</a>.</p>
+        </div>
+    </details>
+    {{#input-submit}}{{/input-submit}}
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+{{/ layout}}
