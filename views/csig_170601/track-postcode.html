@@ -1,0 +1,38 @@
+{{< layout}}
+
+{{$pageTitle}}Track a passport application{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Track a passport application</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+      <div id="passport-number-group" class="form-group">
+          <fieldset>
+            <div id="address-postcode-group" class="form-group">
+                <label for="address-postcode" class="form-label-bold">
+                    Postcode
+                </label>
+                <input type="text" name="address-postcode" id="address-postcode" class="form-control input-code" aria-required="true">
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend><span class="form-label-bold">Date of birth</span></legend>
+              <div class="form-date">
+                <p class="form-hint" id="dob-hint">For example, 31 08 1970</p>
+                  {{#input-text}}age-day{{/input-text}}
+                  {{#input-text}}age-month{{/input-text}}
+                  {{#input-text}}age-year{{/input-text}}
+              </div>
+          </fieldset>
+      </div>
+
+      {{#input-submit}}{{/input-submit}}
+      {{/form}}
+  {{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
