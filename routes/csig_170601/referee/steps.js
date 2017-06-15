@@ -7,7 +7,7 @@ module.exports = {
         next: '/track'
     },
     '/track': {
-      controller: require('../../controllers/tracking'),
+      controller: require('../../../controllers/tracking'),
       fields: ['reference'],
         next: '/track-postcode'
     },
