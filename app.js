@@ -444,6 +444,7 @@ function init(sessionStore) {
         app.use('/priority_service_170510/book-appointment', require('./routes/priority_service_170510/book-appointment'));
         app.use('/priority_service_170510/not-eligible', require('./routes/priority_service_170510/not-eligible'));
         app.use('/priority_service_170510/timeout', require('./routes/priority_service_170510/timeout'));
+        app.use('/priority_service_170510/no-appointment', require('./routes/priority_service_170510/no-appointment'));
 
 
 
