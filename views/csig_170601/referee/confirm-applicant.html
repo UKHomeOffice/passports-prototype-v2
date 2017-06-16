@@ -12,6 +12,16 @@
     {{$form}}
       <img src="../../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
       {{#radio-group}}applicant-check{{/radio-group}}
+      <div id="knowntime-group" class="form-group">
+          <label for="knowntime" class="form-label-bold">
+              Length of time since knowing the applicant
+          </label>
+          <span class="form-hint">You must know the applicant for at least 2 years</span>
+          <span>
+              <input type="text" id="knowntime" class="form-control date" name="knowntime" value="" maxlength="2" aria-describedby="knowntime" aria-required="true" style="width:70px;">
+              <span id="reference-prefix" class="prefix">years</span>
+          </span>
+      </div>
         {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}
