@@ -5,6 +5,8 @@ module.exports = {
       '/none-at-all': {
       },
       '/declaration': {
+      },
+      '/confirmation': {
       }
 
 };
