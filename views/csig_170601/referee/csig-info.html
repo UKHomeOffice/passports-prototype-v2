@@ -1,6 +1,6 @@
 {{< layout}}
 
-{{$pageTitle}}Track your passport application{{/pageTitle}}
+{{$pageTitle}}Give a countersignature{{/pageTitle}}
 
 
 {{$header}}
@@ -10,31 +10,24 @@
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-    <div id="reference-number-group" class="form-group">
-        <fieldset>
-          <div id="reference-group" class="form-group">
-              <label for="reference" class="form-label-bold">
-                  Reference
-                  <span class="form-hint">Your ... should've sent this to you, eg PEX 123 456 7890</span>
-              </label>
-              <span id="reference-prefix" class="prefix">PEX</span>
-              <span>
-                  <input type="text" id="reference" class="form-control reference" name="reference" value="" maxlength="16" aria-describedby="reference-prefix" aria-required="true">
-              </span>
-          </div>
-          <div id="phoneno-group" class="form-group">
-              <label for="phoneno" class="form-label-bold">
-                  Your phone number
-                  <span class="form-hint">Your ... gave us this</span>
-              </label>
-              <span>
-                  <input type="text" id="phoneno" class="form-control phoneno" name="phoneno" value="" maxlength="16" aria-describedby="phoneno-prefix" aria-required="true">
-              </span>
-          </div>
-        </fieldset>
-      </div>
+      <h2>Why you received this</h2>
+      <p>some info here about someone/a friend has asked them to do this?</p>
+      <h2>As a countersignature you must:</h2>
+        <ul class="list-bullet">
+          <li>have known the person applying for at least 2 years</li>
+          <li>be able to identify the person applying, eg they’re a friend, neighbour or colleague (not just someone who knows them professionally)</li>
+          <li>be ‘a person of good standing in their community’ or <a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories" target="_blank">work in (or be retired from) a recognised profession</a></li>
+          <li>live in the UK</li>
+          <li>have a current British or Irish passport</li>
+        </ul>
+      <h2>You can't be closely-related to or involved with the person applying, eg:</h2>
+          <ul class="list-bullet">
+            <li>related by birth or marriage</li>
+            <li>be in a relationship with or live at the same address as the person applying</li>
+          </ul>
 
         {{#input-submit}}{{/input-submit}}
+        <a href="">Should we offer a way out in case they are not eligible?</a>
     {{/form}}
 {{/ hmpo-partials-form}}
 
