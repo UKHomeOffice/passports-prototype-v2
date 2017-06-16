@@ -1,0 +1,47 @@
+{{< layout}}
+
+{{$pageTitle}}Your details{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Your details</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+    <div id="profession-group" class="form-group">
+        <label for="profession" class="form-label-bold">
+            Profession
+            <span class="form-hint">It must be <a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories">a recognised profession</a></span>
+        </label>
+        <span>
+            <input type="text" id="profession" class="form-control" name="profession" value="" maxlength="16" aria-describedby="profession" aria-required="true">
+        </span>
+    </div>
+    <div id="employer-group" class="form-group">
+        <label for="employer" class="form-label-bold">
+            Employer name
+        </label>
+        <span>
+            <input type="text" id="employer" class="form-control" name="employer" value="" maxlength="16" aria-describedby="profession" aria-required="true">
+        </span>
+    </div>
+    <div id="employeraddress-group" class="form-group">
+        <label for="employeraddress" class="form-label-bold">
+            Employer address
+        </label>
+        <span>
+            <input type="text" id="employeraddress" class="form-control" name="employeraddress" value="" maxlength="16" aria-describedby="profession" aria-required="true">
+        </span>
+    </div>
+
+            {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+
+
+{{/content}}
+
+{{/ layout}}

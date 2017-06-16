@@ -76,6 +76,22 @@ module.exports = {
           { value: 'No', label: 'No' }
       ],
       className: 'inline'
+  },
+  'title':{
+    legend: {
+      value: 'Your title',
+      className: 'visuallyhidden'
+    },
+    options: [
+      {value: 'Mr', label: 'Mr'},
+      {value: 'Mrs', label: 'Mrs'},
+      {value: 'Miss', label: 'Miss'},
+      {value: 'Ms', label: 'Ms'},
+      {value: 'Other', label: 'Other', toggle: 'other-titles'}
+    ],
+    validate: [
+      'required'
+    ]
   }
 
 };
