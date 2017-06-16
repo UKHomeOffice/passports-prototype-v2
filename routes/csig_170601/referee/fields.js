@@ -65,6 +65,17 @@ module.exports = {
             return val.match('^[A-z]{2}[0-9]{6}[A-z]{1}$');
           }
       ]
+  },
+  'applicant-check': {
+      legend: {
+          className: 'form-label-bold'
+      },
+      validate: 'required',
+      options: [
+          { value: 'Yes', label: 'Yes' },
+          { value: 'No', label: 'No' }
+      ],
+      className: 'inline'
   }
 
 };
