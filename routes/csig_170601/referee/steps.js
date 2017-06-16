@@ -13,6 +13,15 @@ module.exports = {
     },
     '/confirm-applicant': {
         fields: ['applicant-check'],
+        next: '/csig-details'
+    },
+    '/csig-details': {
+        fields: ['title'],
+        back:'confirm-applicant',
+        next: '/csig-details-work'
+    },
+    '/csig-details-work': {
+        back:'csig-details',
         next: '/csig-identity-check'
     }
 };
