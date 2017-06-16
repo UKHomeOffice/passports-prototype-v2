@@ -132,6 +132,10 @@
         "reasons": {
             "legend": "Why did you reject the countersignature",
             "label": "reason for rejecting the countersignature"
+        },
+        "applicant-check": {
+            "legend": "Is this Jane Smith?",
+            "label": "Is this Jane Smith?"
         }
     },
     "validation": {
