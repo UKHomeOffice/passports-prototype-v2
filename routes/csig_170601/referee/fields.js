@@ -12,15 +12,11 @@ module.exports = {
           { value: 'No', label: 'No' }
       ]
   },
-  'reference': {
+  'passport-number': {
+      labelClassName: 'visuallyhidden',
       validate: [
           'required'
-      ]
-  },
-  'postcode': {
-      validate: [
-          'required'
-      ]
+        ]
   },
   'age-year': {
     labelClassName: 'form-label',
@@ -44,6 +40,30 @@ module.exports = {
       validate: [
           'numeric',
           'required'
+      ]
+  },
+  'expiry-year': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
+  'expiry-month': {
+      labelClassName: 'form-label',
+      formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
+  'national-insurance': {
+      validate:[
+          'required',
+          function ninoformat(val) {
+            return val.match('^[A-z]{2}[0-9]{6}[A-z]{1}$');
+          }
       ]
   }
 
