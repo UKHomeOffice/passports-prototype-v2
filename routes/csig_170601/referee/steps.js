@@ -22,6 +22,14 @@ module.exports = {
     },
     '/csig-details-work': {
         back:'csig-details',
+        next: '/declaration'
+    },
+    '/declaration': {
+        back:'csig-details-work',
         next: '/csig-identity-check'
+    },
+    '/confirmation': {
+        back:'declaration',
+        next: '/'
     }
 };
