@@ -30,6 +30,6 @@ module.exports = {
     },
     '/confirmation': {
         back:'declaration',
-        next: '/'
+        next: '/confirmation'
     }
 };
