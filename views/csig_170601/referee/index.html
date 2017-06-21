@@ -1,41 +1,36 @@
 {{< layout}}
-{{$propositionHeader}}{{/propositionHeader}}
+{{$propositionHeader}}Renew a passport{{/propositionHeader}}
 
 {{$pageTitle}}Give a countersignature{{/pageTitle}}
 
 
 {{$header}}
-    <h1>Give a countersignature</h1>
+    <h1>Confirm someone's identity</h1>
 {{/header}}
 
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-    <div id="reference-number-group" class="form-group">
-        <fieldset>
-          <div id="reference-group" class="form-group">
-              <label for="reference" class="form-label-bold">
-                  Reference
-                  <span class="form-hint">Your ... should've sent this to you, eg PEX 123 456 7890</span>
-              </label>
-              <span id="reference-prefix" class="prefix">PEX</span>
-              <span>
-                  <input type="text" id="reference" class="form-control reference" name="reference" value="" maxlength="16" aria-describedby="reference-prefix" aria-required="true">
-              </span>
-          </div>
-          <div id="phoneno-group" class="form-group">
-              <label for="phoneno" class="form-label-bold">
-                  Your phone number
-                  <span class="form-hint">Your ... gave us this</span>
-              </label>
-              <span>
-                  <input type="text" id="phoneno" class="form-control phoneno" name="phoneno" value="" maxlength="16" aria-describedby="phoneno-prefix" aria-required="true">
-              </span>
-          </div>
-        </fieldset>
-      </div>
 
-        {{#input-submit}}{{/input-submit}}
+    <p>We sometimes need to check that the person applying for a new passport is who they claim to be. </p>
+
+      <h2>To confirm someone's identity, you must:</h2>
+        <ul class="list-bullet">
+          <li>have known them for at least 2 years</li>
+          <li>be able to identify them, for example they’re a friend, neighbour or colleague (not just someone you know professionally, like a doctor)</li>
+          <li>be a person of good standing in your community or work in (or be retired from) a <a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories" target="_blank">recognised profession</a></li>
+          <li>live in the UK</li>
+          <li>have a current UK passport</li>
+        </ul>
+      <h2>You must not be:</h2>
+          <ul class="list-bullet">
+            <li>related by birth or marriage</li>
+            <li>be in a relationship with them or live at the same address</li>
+          </ul>
+
+        <a href="/csig_170601/referee/csig-details" class="button">Sign in</a><br/><br/>
+
+        <a href="">I can't confirm this person's identity</a>
     {{/form}}
 {{/ hmpo-partials-form}}
 
