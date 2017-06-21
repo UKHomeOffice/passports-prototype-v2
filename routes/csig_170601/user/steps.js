@@ -26,5 +26,12 @@ module.exports = {
     },
     '/need-csig': {
         next: '/track'
+    },
+    '/give-csig-details': {
+      backLink: 'track',
+        next: '/confirm'
+    },
+    '/confirm': {
+        next: '/track'
     }
 };
