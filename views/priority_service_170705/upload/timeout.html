@@ -1,0 +1,94 @@
+{{< layout}}
+
+{{$pageTitle}}Upload your photo{{/pageTitle}}
+
+{{$header}}
+    <h1>Upload your photo</h1>
+{{/header}}
+
+{{$content}}
+        <p>   Your photo must be taken in the last month.</p>
+        <p>
+              We keep all photos for up to 30 days in line with our <a href="" rel="external">privacy policy</a>.
+            </p>
+
+        <a href="/priority_service_170705/uploadphoto/" class="button">Upload your photo</a><br/><br/>
+
+
+    <div class="grid-row photo-upload-eg">
+        <div class="column-half img">
+            <object type="image/jpg" data="/public/images/woman-with-reddish-hair_ex@2x.jpg"type="image/svg+xml" class="svg" tabindex="-1">
+            <img src="/public/images/woman-with-reddish-hair_ex@2x.jpg" width="206" height= alt="">
+            </object>
+        </div>
+        <div class="column-half">
+          <h2>Taking a good photo</h2>
+            <ol class="list list-number">
+                <li>Get a friend to take your photo.</li>
+                <li>Use a plain background.</li>
+                <li>Don’t crop your photo, include your face, shoulders and upper body.</li>
+                <li>Keep your hair away from your face and brushed down.</li>
+                <li>Make sure there are no shadows on your face or behind you.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- modal box -->
+    <br/><br/><br/>
+    <a href="#openModal">Timeout</a>
+    <div id="openModal" class="modalDialog">
+    	<div>
+        <div class="warning">
+            <div class="notice">
+              <i class="icon icon-important">
+                <span class="visually-hidden">Warning</span>
+              </i>
+              <strong class="bold-small">
+                Your session expires in <span id="timer" class="timer">4:59</span> minutes
+              </strong>
+            </div>
+        </div>
+        <div class="timeout_content">
+          <p>We won’t be able save what you’ve done so far. You’ll need to start again.</p>
+          <a href="#close" class="button" title="Close">Continue</a><br>
+        </div>
+    	</div>
+    </div>
+    <!-- end of modal box -->
+
+    <!-- time countdown script -->
+    <script type="text/javascript">
+var timeoutHandle;
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML =
+        current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            timeoutHandle=setTimeout(tick, 1000);
+        } else {
+            if(mins > 1){
+
+               // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+               setTimeout(function () { countdown(mins - 1); }, 1000);
+            }
+          else {
+            setTimeout(function(){window.location.href='timedout-message'},0);
+          }
+        }
+    }
+    tick();
+}
+
+countdown(5);
+
+</script>
+    <!-- end of time countdown script -->
+
+{{/content}}
+
+{{/ layout}}
