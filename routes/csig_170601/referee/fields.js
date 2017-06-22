@@ -72,7 +72,7 @@ module.exports = {
       },
       validate: 'required',
       options: [
-          { value: 'Yes', label: 'Yes' },
+          { value: 'Yes', label: 'Yes', toggle: 'declarations' },
           { value: 'No', label: 'No' }
       ],
       className: 'inline'
