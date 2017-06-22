@@ -12,18 +12,17 @@
 {{< hmpo-partials-form}}
     {{$form}}
 
-  <p>You should have a reference number from the person applying for a passport. If you don't, you need to ask them for it.</p>
     <div id="reference-number-group" class="form-group">
         <fieldset>
           <fieldset>
-              <legend><span class="form-label-bold">Passport number</span></legend>
+              <legend><span class="form-label-bold">Your passport number</span></legend>
                 <p class="form-hint" id="dob-hint">For example 502135326</p>
                   {{#input-text}}passport-number{{/input-text}}
           </fieldset>
           <div id="phoneno-group" class="form-group">
               <label for="phoneno" class="form-label-bold">
                   Your phone number
-                  <span class="form-hint">We'll only use this to contact you if there's a problem.</span>
+                  <span class="form-hint">We'll only contact you if there's a problem.</span>
               </label>
               <span>
                   <input type="text" id="phoneno" class="form-control phoneno" name="phoneno" value="" maxlength="16" aria-describedby="phoneno-prefix" aria-required="true">
