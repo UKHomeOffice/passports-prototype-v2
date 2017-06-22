@@ -5,7 +5,7 @@
 
 
 {{$header}}
-    <h1>Confirm applicant</h1>
+    <h1>Confirm an applicant's identity</h1>
 {{/header}}
 
 {{$content}}
@@ -15,12 +15,11 @@
       {{#radio-group}}applicant-check{{/radio-group}}
       <div id="knowntime-group" class="form-group">
           <label for="knowntime" class="form-label-bold">
-              Length of time since knowing the applicant
+              How many years have you known Jane?
           </label>
-          <span class="form-hint">You must know the applicant for at least 2 years</span>
           <span>
               <input type="text" id="knowntime" class="form-control date" name="knowntime" value="" maxlength="2" aria-describedby="knowntime" aria-required="true" style="width:70px;">
-              <span id="reference-prefix" class="prefix">years</span>
+              <span id="reference-prefix" class="prefix"></span>
           </span>
       </div>
         {{#input-submit}}{{/input-submit}}
