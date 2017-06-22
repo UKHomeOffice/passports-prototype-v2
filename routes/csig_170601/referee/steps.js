@@ -3,11 +3,11 @@ module.exports = {
         next: '/csig-info'
     },
     '/csig-info': {
-      fields: ['pex-reference', 'phoneno'],
+      fields: ['passport-number', 'phoneno'],
         next: '/csig-identity-check'
     },
     '/csig-identity-check': {
-        fields: ['name', 'lastname','passport-number','expiry-month','expiry-year','age-day','age-month','age-year','national-insurance'],
+        fields: ['name', 'lastname','expiry-month','expiry-year','age-day','age-month','age-year','national-insurance'],
         back:'csig-info',
         next: '/confirm-applicant'
     },
