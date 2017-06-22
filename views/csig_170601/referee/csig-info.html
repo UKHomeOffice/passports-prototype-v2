@@ -15,16 +15,11 @@
   <p>You should have a reference number from the person applying for a passport. If you don't, you need to ask them for it.</p>
     <div id="reference-number-group" class="form-group">
         <fieldset>
-          <div id="reference-group" class="form-group">
-              <label for="reference" class="form-label-bold">
-                  Applicantion reference number
-                  <span class="form-hint">For example, PEX 123 456 7890</span>
-              </label>
-              <span id="reference-prefix" class="prefix">PEX</span>
-              <span>
-                  <input type="text" id="reference" class="form-control reference" name="reference" value="" maxlength="16" aria-describedby="reference-prefix" aria-required="true">
-              </span>
-          </div>
+          <fieldset>
+              <legend><span class="form-label-bold">Passport number</span></legend>
+                <p class="form-hint" id="dob-hint">For example 502135326</p>
+                  {{#input-text}}passport-number{{/input-text}}
+          </fieldset>
           <div id="phoneno-group" class="form-group">
               <label for="phoneno" class="form-label-bold">
                   Your phone number

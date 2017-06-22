@@ -5,7 +5,7 @@
 
 
 {{$header}}
-    <h1>Confirm an applicant's identity</h1>
+    <h1>Confirm applicant</h1>
 {{/header}}
 
 {{$content}}
@@ -13,15 +13,43 @@
     {{$form}}
       <img src="../../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
       {{#radio-group}}applicant-check{{/radio-group}}
+
+      <div id="declarations" class="reveal js-hidden" style="margin-top:-30px;margin-bottom:20px">
+          <div class="panel panel-border-narrow">
+            <fieldset>
+                <legend class="visuallyhidden">You must agree in order to continue.</legend>
+                <div id="contact-prefs-email-group" class="form-group form-group-compound">
+                    <label for="contact-prefs-email" class="block-label ">
+                        <input type="checkbox" id="contact-prefs-email" name="contact-prefs-email" value="true" aria-required="false" required="true">
+                            I can identify the applicant, for example as a friend, neighbour or colleague (not just someone you know professionally, like a doctor)
+                    </label>
+                </div>
+                <legend class="visuallyhidden">You must agree in order to continue.</legend>
+                <div id="contact-prefs-email-group" class="form-group form-group-compound">
+                    <label for="contact-prefs-email" class="block-label ">
+                        <input type="checkbox" id="contact-prefs-email" name="contact-prefs-email" value="true" aria-required="false" required="true">
+                            I am not related nor in a relationship with the applicant
+                    </label>
+                </div>
+          </fieldset>
+          </div>
+      </div>
+
+
+
       <div id="knowntime-group" class="form-group">
           <label for="knowntime" class="form-label-bold">
-              How many years have you known Jane?
+              Length of time since knowing the applicant
           </label>
+          <span class="form-hint">You must know the applicant for at least 2 years</span>
           <span>
               <input type="text" id="knowntime" class="form-control date" name="knowntime" value="" maxlength="2" aria-describedby="knowntime" aria-required="true" style="width:70px;">
-              <span id="reference-prefix" class="prefix"></span>
+              <span id="reference-prefix" class="prefix">years</span>
           </span>
       </div>
+
+
+
         {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}
@@ -29,5 +57,20 @@
 
 
 {{/content}}
+{{$sidebar}}
+<div class="column-one-third">
+    <div class="sidebar " style="margin-top:30px">
+      <div class="photo-preview-inner">
+          <h2 class="heading-medium">You need to:</h2>
+          <ul class="list-bullet" >
+            <li style="list-style-type: disc;">know the applicant for at least 2 years</li>
+            <li>must not be related by birth or marriage</li>
+            <li>must not be in a relationship with the applicant or living at the same address</li>
+          </ul>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
 
 {{/ layout}}
