@@ -92,6 +92,17 @@ module.exports = {
     validate: [
       'required'
     ]
+  },
+  'name': {
+      labelClassName: 'visuallyhidden',
+      validate: [
+          'required'
+        ]
+  },
+  'lastname': {
+      labelClassName: 'visuallyhidden',
+      validate: [
+          'required'
+        ]
   }
-
 };
