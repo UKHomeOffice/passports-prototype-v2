@@ -13,7 +13,7 @@ module.exports = {
     },
     '/confirm-applicant': {
         fields: ['applicant-check'],
-        next: '/csig-details'
+        next: '/csig-details-work'
     },
     '/csig-details': {
         fields: ['title'],
@@ -21,7 +21,7 @@ module.exports = {
         next: '/csig-details-work'
     },
     '/csig-details-work': {
-        back:'csig-details',
+        back:'confirm-applicant',
         next: '/declaration'
     },
     '/declaration': {
