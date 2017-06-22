@@ -49,6 +49,11 @@
                     <input type="text" id="phoneno" class="form-control phoneno" name="phoneno" value="" maxlength="16" aria-describedby="phoneno-prefix" aria-required="true">
                 </span>
             </div>
+            <fieldset>
+                <legend><span class="form-label-bold">Their passport number</span></legend>
+                  <p class="form-hint" id="dob-hint">For example 502135326</p>
+                    {{#input-text}}passport-number{{/input-text}}
+            </fieldset>
           </fieldset>
             {{#input-submit}}{{/input-submit}}
         </div>
