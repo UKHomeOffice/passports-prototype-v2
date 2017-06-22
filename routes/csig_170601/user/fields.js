@@ -45,6 +45,12 @@ module.exports = {
           'numeric',
           'required'
       ]
+  },
+  'passport-number': {
+      labelClassName: 'visuallyhidden',
+      validate: [
+          'required'
+        ]
   }
 
 };
