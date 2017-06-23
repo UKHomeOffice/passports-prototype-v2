@@ -5,7 +5,7 @@ module.exports = {
     },
     '/old-pass-details': {
         backLink: './',
-        fields: ['passport-number', 'expiry-year', 'expiry-month'],
+        fields: ['passport-number'],
         next: '/title'
     },
     '/title':{
