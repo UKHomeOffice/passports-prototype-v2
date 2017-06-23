@@ -32,6 +32,9 @@ module.exports = {
         next: '/confirm'
     },
     '/confirm': {
+        next: '/tracking-waiting'
+    },
+    '/tracking-waiting': {
         next: '/track'
     }
 };
