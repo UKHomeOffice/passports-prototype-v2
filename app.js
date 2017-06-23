@@ -471,6 +471,7 @@ function init(sessionStore) {
         app.use('/priority_service_170705/not-eligible', require('./routes/priority_service_170705/not-eligible'));
         app.use('/priority_service_170705/timeout', require('./routes/priority_service_170705/timeout'));
         app.use('/priority_service_170705/no-appointment', require('./routes/priority_service_170705/no-appointment'));
+        app.use('/priority_service_170705/service-intro', require('./routes/priority_service_170705/service-intro'));
 
 
 
