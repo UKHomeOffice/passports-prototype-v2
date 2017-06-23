@@ -29,9 +29,6 @@ module.exports = {
     },
     '/give-csig-details': {
       backLink: 'track',
-        next: '/confirm'
-    },
-    '/confirm': {
         next: '/tracking-waiting'
     },
     '/tracking-waiting': {
