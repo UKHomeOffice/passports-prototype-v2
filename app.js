@@ -184,6 +184,7 @@ function init(sessionStore) {
             app.use('/prototype_170331/photo-url', require('./routes/prototype_170331/photo-url'));
             app.use('/prototype_170331/photo-code', require('./routes/prototype_170331/photo-code'));
             app.use('/prototype_170331/mismatch', require('./routes/prototype_170331/mismatch'));
+            app.use('/prototype_170331/redirect-tracking', require('./routes/prototype_170331/redirect-tracking'));
 
 
 
