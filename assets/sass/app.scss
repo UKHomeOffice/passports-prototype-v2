@@ -1263,11 +1263,10 @@ padding: 10px;
 
 
 /* get your digital photo - choose your photo methdo page */
-.guide-box{
-  width:47%;
+.guide-box, .guide-box-photo-hub{
   background:#005EA5;
   box-sizing: border-box;
-  padding:30px;
+
   padding-bottom:17px;
   float:left;
   margin-right:30px;
@@ -1275,7 +1274,12 @@ padding: 10px;
   text-decoration: none!important;
 }
 
-.guide-box img{
+.guide-box{
+  width:47%;
+  padding:30px;
+}
+
+.guide-box img, .guide-box-photo-hub img{
   width:30%;
   float:left;
   margin-right:20px;
@@ -1285,13 +1289,13 @@ padding: 10px;
   margin-right:0!important;
 }
 
-.guide-box h3{
+.guide-box h3, .guide-box-photo-hub h3{
   color:#fff!important;
   text-decoration:underline!important;
 
 }
 
-.guide-box p{
+.guide-box p, .guide-box-photo-hub p{
   color:#fff;
   text-decoration: none!important;
   display:block;
