@@ -7,6 +7,10 @@
 @import "modules/tabs";
 
 /* additional css to match production prototype */
+.alert-default {
+  border-color: $light-blue;
+  background-color: mix(white, $light-blue, 90%);
+}
 
 /* photo guide styles */
 .panel-photo-pass {
