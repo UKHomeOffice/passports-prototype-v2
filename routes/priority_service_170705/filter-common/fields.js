@@ -2,6 +2,25 @@ const _ = require('lodash');
 const countries = require('../../../config/countries');
 
 module.exports = {
+  'lost-stolen': {
+    legend: {
+      value: 'Do you have your passport?',
+      className: 'visuallyhidden'
+    },
+    options: [
+      {value: 'Yes', label: 'Yes'},
+      {value: 'No', label: 'No'},
+    ],
+    validate: [
+      'required',
+      {
+        type:'equal',
+        arguments:['No'], /* if the arguments are NOT selected */
+        redirect:'/../not-eligible/lost'
+      }
+    ],
+    className: 'inline'
+  },
   'what-to-do': {
     legend: {
       value: 'What to you want to do?',

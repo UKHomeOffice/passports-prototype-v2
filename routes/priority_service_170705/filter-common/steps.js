@@ -17,8 +17,13 @@ module.exports = {
       fields: ['age-day', 'age-year', 'age-month'],
       controller: require('../../../controllers/go-overseas'),
       backLink: './what-do-you-want-to-do',
-      next: '/../filter', /* if they are from the UK */
+      next: '/lost-stolen', /* if they are from the UK */
       nextAlt: '../overseas', /* if they are from Germany/France */
       nextAltAlt:'../overseas-not-eligible' /* if they are from Afganistan */
+    },
+    '/lost-stolen': {
+      fields: ['lost-stolen'],
+      backLink: './',
+      next: '/../filter'
     }
 };
