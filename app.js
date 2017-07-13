@@ -510,8 +510,8 @@ function init(sessionStore) {
     app.use('/csig_170601/referee', require('./routes/csig_170601/referee'));
 
     //Csig 170731
-    app.use('/csig_170731/user', require('./routes/csig_170601/user'));
-    app.use('/csig_170731/referee', require('./routes/csig_170601/referee'));
+    app.use('/csig_170731/user', require('./routes/csig_170731/user'));
+    app.use('/csig_170731/referee', require('./routes/csig_170731/referee'));
 
 
     //3rd party shops photo checker
