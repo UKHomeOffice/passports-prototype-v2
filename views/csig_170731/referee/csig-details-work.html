@@ -11,15 +11,18 @@
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
+
+    <p>To confirm someone's identity, you must work in or be retired from a <a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories" target="_blank">recognised profession</a>.</p>
+
     <div id="profession-group" class="form-group">
         <label for="profession" class="form-label-bold">
             Profession
-            <span class="form-hint">You must work in or be retired from a <a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories" target="_blank">recognised profession</a>.</span>
         </label>
         <span>
             <input type="text" id="profession" class="form-control" name="profession" value="" maxlength="16" aria-describedby="profession" aria-required="true">
         </span>
     </div>
+
     <div id="employer-group" class="form-group">
         <label for="employer" class="form-label-bold">
             Employer's name
@@ -28,18 +31,12 @@
             <input type="text" id="employer" class="form-control" name="employer" value="" maxlength="16" aria-describedby="profession" aria-required="true">
         </span>
     </div>
-    <div id="employer-group" class="form-group">
-        <label for="employer" class="form-label-bold">
-            Employer's phone number
-        </label>
-        <span>
-            <input type="text" id="employer" class="form-control" name="employer" value="" maxlength="16" aria-describedby="profession" aria-required="true">
-        </span>
-    </div>
+
     <div id="employeraddress-group" class="form-group">
         <label for="employeraddress" class="form-label-bold">
-            Employer's address
+            The address where you work
         </label>
+        <p class="form-hint" id="dob-hint">If you're retired or self-employed enter your private address.</p>
         <span>
             <input type="text" id="employeraddress" class="form-control" name="employeraddress" value="" maxlength="16" aria-describedby="profession" aria-required="true" style="margin-bottom:10px;">
             <input type="text" id="employeraddress" class="form-control" name="employeraddress" value="" maxlength="16" aria-describedby="profession" aria-required="true">
@@ -50,6 +47,16 @@
             Postcode
         </label>
         <input type="text" name="address-postcode" id="address-postcode" class="form-control input-code" aria-required="true">
+    </div>
+
+    <div id="employer-group" class="form-group">
+        <label for="employer" class="form-label-bold">
+            Employer's phone number
+            <p class="form-hint" id="dob-hint">We'll only contact your employer if we need to check any details.</p>
+        </label>
+        <span>
+            <input type="text" id="employer" class="form-control" name="employer" value="" maxlength="16" aria-describedby="profession" aria-required="true">
+        </span>
     </div>
 
             {{#input-submit}}{{/input-submit}}
