@@ -7,6 +7,8 @@ module.exports = {
       '/declaration': {
       },
       '/confirmation': {
+      },
+      '/place-and-date': {
       }
 
 };
