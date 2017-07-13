@@ -1,0 +1,43 @@
+{{< layout}}
+{{$propositionHeader}}Renew {{/propositionHeader}}
+
+{{$pageTitle}}Give a countersignature{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Sign in</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+
+    <div id="reference-number-group" class="form-group">
+        <fieldset>
+          <fieldset>
+              <legend><span class="form-label-bold">Your passport number</span></legend>
+                <p class="form-hint" id="dob-hint">For example 502135326</p>
+                  {{#input-text}}passport-number{{/input-text}}
+          </fieldset>
+          <div id="phoneno-group" class="form-group">
+              <label for="phoneno" class="form-label-bold">
+                  Your phone number
+                  <span class="form-hint">We'll only contact you if there's a problem.</span>
+              </label>
+              <span>
+                  <input type="text" id="phoneno" class="form-control phoneno" name="phoneno" value="" maxlength="16" aria-describedby="phoneno-prefix" aria-required="true">
+              </span>
+          </div>
+        </fieldset>
+          {{#input-submit}}{{/input-submit}}
+      </div>
+
+
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+
+
+{{/content}}
+
+{{/ layout}}
