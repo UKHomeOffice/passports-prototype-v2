@@ -1,0 +1,56 @@
+{{< layout}}
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Prove your identity{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Your details</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+        <fieldset>
+            <legend><span class="form-label-bold">First and middle names</span></legend>
+              <p class="form-hint" id="dob-hint">As written on your passport</p>
+              {{#input-text}}name{{/input-text}}
+        </fieldset>
+        <fieldset>
+            <legend><span class="form-label-bold">Last name</span></legend>
+              <p class="form-hint" id="dob-hint">As written on your passport</p>
+              {{#input-text}}lastname{{/input-text}}
+        </fieldset>
+        <div id="date-birth-group" class="form-group">
+            <fieldset>
+                <legend><span class="form-label-bold form-group">Date of birth</span></legend>
+                <div class="form-date">
+                  <p class="form-hint" id="dob-hint">For example 20 01 2004</p>
+                    {{#input-text}}age-day{{/input-text}}
+                    {{#input-text}}age-month{{/input-text}}
+                    {{#input-text}}age-year{{/input-text}}
+                </div>
+            </fieldset>
+        </div>
+        <div id="expiry-date-group" class="form-group">
+            <fieldset>
+                <legend><span class="form-label-bold">Passport expiry date</span></legend>
+                <div class="form-date">
+                  <p class="form-hint" id="dob-hint">For example 08 2015</p>
+                    {{#input-text}}expiry-month{{/input-text}}
+                    {{#input-text}}expiry-year{{/input-text}}
+                </div>
+            </fieldset>
+        </div>
+
+            {{#input-text}}national-insurance{{/input-text}}
+            {{#input-submit}}{{/input-submit}}
+        </div>
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+
+
+{{/content}}
+
+{{/ layout}}

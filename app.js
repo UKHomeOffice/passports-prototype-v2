@@ -505,10 +505,13 @@ function init(sessionStore) {
     app.use('/tracking-email', require('./routes/tracking-email'));
     app.use('/tracking-dps', require('./routes/tracking-dps'));
 
-    //Csig
+    //Csig 170601
     app.use('/csig_170601/user', require('./routes/csig_170601/user'));
     app.use('/csig_170601/referee', require('./routes/csig_170601/referee'));
 
+    //Csig 170731
+    app.use('/csig_170731/user', require('./routes/csig_170601/user'));
+    app.use('/csig_170731/referee', require('./routes/csig_170601/referee'));
 
 
     //3rd party shops photo checker
