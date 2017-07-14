@@ -59,6 +59,7 @@ module.exports = {
       ]
   },
   'national-insurance': {
+      hint: 'We use this for stuff and nonsense',
       validate:[
           'required',
           function ninoformat(val) {
@@ -72,7 +73,7 @@ module.exports = {
       },
       validate: 'required',
       options: [
-          { value: 'Yes', label: 'Yes', toggle: 'declarations' },
+          { value: 'Yes', label: 'Yes' },
           { value: 'No', label: 'No' }
       ],
       className: 'inline'

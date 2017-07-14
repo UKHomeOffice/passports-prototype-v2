@@ -12,9 +12,69 @@
 {{< hmpo-partials-form}}
     {{$form}}
       <img src="../../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
-      {{#radio-group}}applicant-check{{/radio-group}}
+      <br>
+      <br>
+      <div id="applicant-check-group" class="form-group inline ">
+          <fieldset role="radiogroup" aria-required="true">
+              <legend>
+                  <span class="form-label-bold">Is this Jane Smith?</span>
+              </legend>
+                  <label class="block-label" for="applicant-check-Yes">
+                      <input type="radio" name="applicant-check" id="applicant-check-Yes" value="Yes" required="true" data-toggle="declarations" aria-controls="declarations" aria-expanded="false">
+                      Yes
+                  </label>
+                  <label class="block-label" for="applicant-check-No">
+                      <input type="radio" name="applicant-check" id="applicant-check-No" value="No" required="true">
+                      No
+                  </label>
+          </fieldset>
+      </div>
+      <div id="declarations" class="panel panel-border-narrow js-hidden">
+        <div id="applicant-check-group" class="form-group inline">
+            <fieldset role="radiogroup" aria-required="true">
+                <!-- <legend>
+                    <span class="form-label-bold">Is Jane a friend, neighbour or colleague?</span>
+                </legend> -->
+                <label class="form-label" for="">Is Jane a friend, neighbour or colleague?</label>
+                    <label class="block-label" for="applicant-check-Yes">
+                        <input type="radio" name="applicant-check" id="" value="Yes" required="true" data-toggle="declarations" aria-controls="declarations" aria-expanded="false">
+                        Yes
+                    </label>
+                    <label class="block-label" for="applicant-check-No">
+                        <input type="radio" name="applicant-check" id="" value="No" required="true">
+                        No
+                    </label>
+            </fieldset>
+        </div>
+        <div id="applicant-check-group" class="form-group inline ">
+            <fieldset role="radiogroup" aria-required="true">
+                <!-- <legend>
+                    <span class="form-label-bold">Are you related to or living at the same address as Jane?</span>
+                </legend> -->
+                  <label class="form-label" for="">Are you related to or living at the same address as Jane?</label>
+                    <label class="block-label" for="applicant-check-Yes">
+                        <input type="radio" name="applicant-check" id="" value="Yes" required="true" data-toggle="declarations" aria-controls="declarations" aria-expanded="false">
+                        Yes
+                    </label>
+                    <label class="block-label" for="applicant-check-No">
+                        <input type="radio" name="applicant-check" id="" value="No" required="true">
+                        No
+                    </label>
+            </fieldset>
+        </div>
+        <div id="knowntime-group" class="form-group">
+            <!-- <label for="knowntime" class="form-label-bold">
+                How many years have you known Jane?
+            </label> -->
+            <label class="form-label" for="">How many years have you known Jane?</label>
+            <span>
+                <input type="text" id="knowntime" class="form-control date" name="knowntime" value="" maxlength="2" aria-describedby="knowntime" aria-required="true" style="width:70px;">
+                <span id="reference-prefix" class="prefix"></span>
+            </span>
+        </div>
+      </div>
 
-      <div id="declarations" class="reveal js-hidden" style="margin-top:-30px;margin-bottom:20px">
+      <!-- <div id="declarations" class="reveal js-hidden" style="margin-top:-30px;margin-bottom:20px">
           <div class="panel panel-border-narrow">
             <fieldset>
                 <legend class="visuallyhidden">You must agree in order to continue.</legend>
@@ -33,19 +93,11 @@
                 </div>
           </fieldset>
           </div>
-      </div>
+      </div> -->
 
 
 
-      <div id="knowntime-group" class="form-group">
-          <label for="knowntime" class="form-label-bold">
-              How many years have you known Jane?
-          </label>
-          <span>
-              <input type="text" id="knowntime" class="form-control date" name="knowntime" value="" maxlength="2" aria-describedby="knowntime" aria-required="true" style="width:70px;">
-              <span id="reference-prefix" class="prefix"></span>
-          </span>
-      </div>
+
 
 
 
