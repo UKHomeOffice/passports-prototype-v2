@@ -78,6 +78,44 @@ module.exports = {
       ],
       className: 'inline'
   },
+  'applicant-check-friend': {
+      options: [
+          { value: 'Yes', label: 'Yes' },
+          { value: 'No', label: 'No' }
+      ],
+      validate: [
+        'required',
+        {
+          type:'equal',
+          arguments:['Yes'], /* if the arguments are NOT selected */
+          redirect:'/../referee/exceptions.html'
+        }
+      ],
+  },
+  'applicant-check-address': {
+      options: [
+          { value: 'Yes', label: 'Yes' },
+          { value: 'No', label: 'No' }
+      ],
+      validate: [
+        'required',
+        {
+          type:'equal',
+          arguments:['No'],
+          redirect:'/../referee/exceptions.html'
+        }
+      ],
+  },
+  'knowntime': {
+      hint: 'We use this for stuff and nonsense',
+      validate:[
+          'numeric',
+          'required'
+          // function knownYears(val) {
+          //   if (val < 2) return true;
+          // }
+      ]
+  },
   'title':{
     legend: {
       value: 'Your title',

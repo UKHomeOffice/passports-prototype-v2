@@ -12,7 +12,7 @@ module.exports = {
         next: '/confirm-applicant'
     },
     '/confirm-applicant': {
-        fields: ['applicant-check'],
+        fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime'],
         next: '/csig-details-work'
     },
     '/csig-details': {

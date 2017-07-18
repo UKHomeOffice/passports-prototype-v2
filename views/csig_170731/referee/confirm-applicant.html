@@ -14,7 +14,7 @@
       <img src="../../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
       <br>
       <br>
-      <div id="applicant-check-group" class="form-group inline ">
+      <div id="applicant-check-group" class="form-group inline">
           <fieldset role="radiogroup" aria-required="true">
               <legend>
                   <span class="form-label-bold">Is this Jane Smith?</span>
@@ -30,34 +30,37 @@
           </fieldset>
       </div>
       <div id="declarations" class="panel panel-border-narrow js-hidden">
-        <div id="applicant-check-group" class="form-group inline">
+        <div id="applicant-check-friend" class="form-group inline">
             <fieldset role="radiogroup" aria-required="true">
                 <!-- <legend>
                     <span class="form-label-bold">Is Jane a friend, neighbour or colleague?</span>
                 </legend> -->
-                <label class="form-label" for="">Is Jane a friend, neighbour or colleague?</label>
-                    <label class="block-label" for="applicant-check-Yes">
-                        <input type="radio" name="applicant-check" id="" value="Yes" required="true" data-toggle="declarations" aria-controls="declarations" aria-expanded="false">
+                <label class="form-label" for="">Do you know Jane as a friend, neighbour or colleague?</label>
+                <!-- <span class="form-hint">
+                  Not just
+                </span> -->
+                    <label class="block-label" for="applicant-check-friend-Yes">
+                        <input type="radio" name="applicant-check-friend" id="applicant-check-friend-Yes" value="Yes" required="true">
                         Yes
                     </label>
-                    <label class="block-label" for="applicant-check-No">
-                        <input type="radio" name="applicant-check" id="" value="No" required="true">
+                    <label class="block-label" for="applicant-check-friend-No">
+                        <input type="radio" name="applicant-check-friend" id="applicant-check-friend-No" value="No" required="true">
                         No
                     </label>
             </fieldset>
         </div>
-        <div id="applicant-check-group" class="form-group inline ">
+        <div id="applicant-check-address" class="form-group inline ">
             <fieldset role="radiogroup" aria-required="true">
                 <!-- <legend>
                     <span class="form-label-bold">Are you related to or living at the same address as Jane?</span>
                 </legend> -->
-                  <label class="form-label" for="">Are you related to or living at the same address as Jane?</label>
-                    <label class="block-label" for="applicant-check-Yes">
-                        <input type="radio" name="applicant-check" id="" value="Yes" required="true" data-toggle="declarations" aria-controls="declarations" aria-expanded="false">
+                  <label class="form-label" for="">Are you related to, in a relationship with or living at the same address as Jane?</label>
+                    <label class="block-label" for="applicant-check-address-Yes">
+                        <input type="radio" name="applicant-check-address" id="applicant-check-address-Yes" value="Yes" required="true">
                         Yes
                     </label>
-                    <label class="block-label" for="applicant-check-No">
-                        <input type="radio" name="applicant-check" id="" value="No" required="true">
+                    <label class="block-label" for="applicant-check-address-No">
+                        <input type="radio" name="applicant-check-address" id="applicant-check-address-No" value="No" required="true">
                         No
                     </label>
             </fieldset>
