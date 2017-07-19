@@ -2,7 +2,7 @@
 
 {{$pageTitle}}Give details{{/pageTitle}}
 {{$header}}
-    <h1>Who will confirm your identity?</h1>
+    <h1>Who will confirm your identity</h1>
 {{/header}}
 
 {{$content}}
@@ -11,9 +11,9 @@
 
   <p>They must:</p>
     <ul class="list-bullet">
-      <li>works in or is retired from a <a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories" target="_blank">recognised profession</a></li>
-      <li>lives in the UK and has a UK passport</li>
-      <li>has known you as a friend, neighbour or colleague for at least 2 years</li>
+      <li>have a current UK passport</li>
+      <li>work in or be retired from a <a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories" target="_blank">recognised profession</a></li>
+      <li>have known you as a friend, neighbour or colleague for at least 2 years</li>
     </ul>
 
 <p>You must contact this person before entering their details. You also need to ask them for their UK passport number.</p>
@@ -30,7 +30,7 @@
             <div id="email-group" class="form-group">
                 <label for="email" class="form-label-bold">
                     Email
-                    <span class="form-hint">We'll send an email with a link to confirm your identity online.</span>
+                    <span class="form-hint">We'll send them an email with more information.</span>
 
                 </label>
                 <span>
@@ -40,14 +40,13 @@
             <div id="phoneno-group" class="form-group">
                 <label for="phoneno" class="form-label-bold">
                     Phone number
-                    <span class="form-hint">We'll only call if there's a problem.</span>
                 </label>
                 <span>
                     <input type="text" id="phoneno" class="form-control phoneno" name="phoneno" value="" maxlength="16" aria-describedby="phoneno-prefix" aria-required="true">
                 </span>
             </div>
             <fieldset>
-                <legend><span class="form-label-bold">Their UK passport number</span></legend>
+                <legend><span class="form-label-bold">This person's UK passport number</span></legend>
                   <p class="form-hint" id="dob-hint">For example 502135326</p>
                     {{#input-text}}passport-number{{/input-text}}
             </fieldset>
