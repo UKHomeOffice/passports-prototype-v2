@@ -59,6 +59,7 @@ module.exports = {
       ]
   },
   'national-insurance': {
+      hint: 'We use this for stuff and nonsense',
       validate:[
           'required',
           function ninoformat(val) {
@@ -70,12 +71,66 @@ module.exports = {
       legend: {
           className: 'form-label-bold'
       },
-      validate: 'required',
       options: [
-          { value: 'Yes', label: 'Yes', toggle: 'declarations' },
+        { value: true, label: 'Yes', toggle: 'declarations', child: 'select' },
+        { value: false, label: 'No' }
+      ],
+      formatter: ['boolean'],
+      validate: [
+        'required',
+        {
+          type:'equal',
+          arguments:[true], /* if the arguments are NOT selected */
+          redirect:'/../referee/exceptions'
+        }
+      ],
+  },
+  'applicant-check-friend': {
+      options: [
+          { value: 'Yes', label: 'Yes' },
           { value: 'No', label: 'No' }
       ],
-      className: 'inline'
+      validate: [
+        'required',
+        {
+          type:'equal',
+          arguments:['Yes'], /* if the arguments are NOT selected */
+          redirect:'/../referee/exceptions'
+        }
+      ],
+      dependent: {
+        field: 'applicant-check',
+        value: true
+      },
+  },
+  'applicant-check-address': {
+      options: [
+          { value: 'Yes', label: 'Yes' },
+          { value: 'No', label: 'No' }
+      ],
+      validate: [
+        'required',
+        {
+          type:'equal',
+          arguments:['No'],
+          redirect:'/../referee/exceptions'
+        }
+      ],
+      dependent: {
+        field: 'applicant-check',
+        value: true
+      },
+  },
+  'knowntime': {
+      hint: 'We use this for stuff and nonsense',
+      validate:[
+          'numeric',
+          'required'
+      ],
+      dependent: {
+        field: 'applicant-check',
+        value: true
+      },
   },
   'title':{
     legend: {

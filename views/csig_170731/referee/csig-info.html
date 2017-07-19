@@ -13,14 +13,25 @@
     {{$form}}
 
     <div id="reference-number-group" class="form-group">
-        <fieldset>
           <fieldset>
               <legend><span class="form-label-bold">Passport number</span></legend>
                 <p class="form-hint" id="dob-hint">For example 502135326</p>
                   {{#input-text}}passport-number{{/input-text}}
           </fieldset>
 
-<p>We need your phone number but we'll only call you if there's a problem.</p>
+          <div id="expiry-date-group" class="form-group">
+              <fieldset>
+                  <legend><span class="form-label-bold">Passport expiry date</span></legend>
+                  <div class="form-date">
+                    <p class="form-hint" id="dob-hint">For example 08 2015</p>
+                      {{#input-text}}expiry-month{{/input-text}}
+                      {{#input-text}}expiry-year{{/input-text}}
+                  </div>
+              </fieldset>
+          </div>
+
+          <p>We need your phone number but we'll only call you if there's a problem.</p>
+
           <div id="phoneno-group" class="form-group">
               <label for="phoneno" class="form-label-bold">
                   Your phone number
@@ -30,7 +41,6 @@
                   <input type="text" id="phoneno" class="form-control phoneno" name="phoneno" value="" maxlength="16" aria-describedby="phoneno-prefix" aria-required="true">
               </span>
           </div>
-        </fieldset>
           {{#input-submit}}{{/input-submit}}
       </div>
 
