@@ -68,6 +68,9 @@ function init(sessionStore) {
         next();
     });
 
+    //create static folder for email templates etc
+    app.use('/static', express.static(path.join(__dirname, '/static')));
+
     // prototype views
     // app.set('views', __dirname + '/views/prototype_161025');
 
@@ -538,6 +541,7 @@ function init(sessionStore) {
     //Csig 170731
     app.use('/csig_170731/user', require('./routes/csig_170731/user'));
     app.use('/csig_170731/referee', require('./routes/csig_170731/referee'));
+    app.use('/csig_170731/referee-5', require('./routes/csig_170731/referee-5'));
 
 
     //3rd party shops photo checker

@@ -1,0 +1,54 @@
+{{< layout}}
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Prove your identity{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Your details</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+
+
+    <p>We need a few details before we can show you a photo of the person.</p>
+        <fieldset>
+            <legend><span class="form-label-bold">First and middle names</span></legend>
+              <p class="form-hint" id="dob-hint">As written on your passport</p>
+              {{#input-text}}name{{/input-text}}
+        </fieldset>
+        <fieldset>
+            <legend><span class="form-label-bold">Last name</span></legend>
+              <p class="form-hint" id="dob-hint">As written on your passport</p>
+              {{#input-text}}lastname{{/input-text}}
+        </fieldset>
+        <div id="date-birth-group" class="form-group">
+            <fieldset>
+                <legend><span class="form-label-bold form-group">Date of birth</span></legend>
+                <div class="form-date">
+                  <p class="form-hint" id="dob-hint">For example 20 01 2004</p>
+                    {{#input-text}}age-day{{/input-text}}
+                    {{#input-text}}age-month{{/input-text}}
+                    {{#input-text}}age-year{{/input-text}}
+                </div>
+            </fieldset>
+        </div>
+        <div id="national-insurance-group" class="form-group">
+          <label for="national-insurance" class="form-label-bold">
+              National insurance number
+          </label>
+          <p class="form-hint" id="nino-hint">For example JL123456C</p>
+          <input type="text" name="national-insurance" id="national-insurance" class="form-control" aria-required="true">
+          </div>
+            {{#input-submit}}{{/input-submit}}
+        </div>
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+
+
+{{/content}}
+
+{{/ layout}}
