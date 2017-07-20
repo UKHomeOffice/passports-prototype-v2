@@ -1,0 +1,40 @@
+{{< layout}}
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Your details{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Your details</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+        <fieldset class="inline">
+            {{#radio-group}}title{{/radio-group}}
+            <div id="other-titles" class="reveal js-hidden" style="margin-top:-30px;margin-bottom:20px">
+                <div class="panel panel-border-narrow">
+                  <p>You can only use a different title if it’s written on your passport.</p>
+                  <div id="other-title-group" class="form-group" >
+                      <label for="other-title" class="form-label-bold">
+                          Title on your passport
+                      </label>
+                      <input type="text" name="other-title" id="other-title" class="form-control" aria-required="true" maxlength="20">
+                  </div>
+                </div>
+            </div>
+        </fieldset>
+        {{#input-text}}name{{/input-text}}
+        {{#input-text}}lastname{{/input-text}}
+
+
+            {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+
+
+{{/content}}
+
+{{/ layout}}
