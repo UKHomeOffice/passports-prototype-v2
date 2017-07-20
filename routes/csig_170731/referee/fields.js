@@ -73,7 +73,7 @@ module.exports = {
       },
       options: [
         { value: true, label: 'Yes', toggle: 'declarations', child: 'select' },
-        { value: false, label: 'No' }
+        { value: false, label: 'No', toggle: 'declarations-2', child: 'select'}
       ],
       formatter: ['boolean'],
       validate: [
