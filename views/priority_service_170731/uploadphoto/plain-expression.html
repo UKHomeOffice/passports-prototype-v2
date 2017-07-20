@@ -1,0 +1,43 @@
+{{< layout}}
+
+{{$pageTitle}}Do you have a plain expression?{{/pageTitle}}
+
+{{$header}}
+    <h1>Do you have a plain expression?</h1>
+{{/header}}
+
+{{$content}}
+
+        <p>Your mouth must be closed and you must not be smiling, frowning or raising your eyebrows.</p>
+
+        {{< hmpo-partials-form}}
+        {{$form}}
+            {{#radio-group}}plain-expression{{/radio-group}}
+
+            <div class="panel panel-border-wide">
+                <p>
+                  Your application could be delayed if your photo doesn’t follow the rules.
+                </p>
+            </div>
+
+            {{#input-submit}}{{/input-submit}}
+        {{/form}}
+        {{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{$sidebar}}
+<div class="column-one-third">
+    <div class="sidebar related">
+      <div class="photo-preview-inner">
+          <h2 class="heading-medium">Your photo</h2>
+          <div class="photo">
+              <img src="../../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+          </div>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}
