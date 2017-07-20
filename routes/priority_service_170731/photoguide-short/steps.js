@@ -1,7 +1,7 @@
 module.exports = {
   '/': {
     next: '/short-plain-bg',
-    backLink: '/../priority_service_170705/intro/choose-photo-method'
+    backLink: '/../priority_service_170731/intro/choose-photo-method'
   },
   '/short-plain-bg': {
     next: '/short-lighting'
@@ -22,6 +22,6 @@ module.exports = {
     next: '/short-rules-2'
   },
   '/short-rules-2': {
-    next: '/../priority_service_170705/takephoto'
+    next: '/../priority_service_170731/takephoto'
   }
 };
