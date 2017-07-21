@@ -13,11 +13,14 @@ module.exports = {
     '/csig-identity-check': {
         fields: ['name', 'lastname','age-day','age-month','age-year','national-insurance'],
         back:'csig-info',
-        next: '/confirm-applicant'
+        next: '/csig-summary'
+    },
+    '/csig-summary':{
+      next: '/confirm-applicant'
     },
     '/confirm-applicant': {
         fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime'],
-        next: '/csig-details-work'
+        next: '/csig-summary'
     },
     '/csig-details': {
         fields: ['title'],
