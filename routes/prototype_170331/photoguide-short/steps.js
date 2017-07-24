@@ -13,12 +13,12 @@ module.exports = {
     next: '/short-right-position'
   },
   '/short-right-position': {
+      next: '/short-crop'
+  },
+  '/short-crop': {
     next: '/short-noshadows'
   },
   '/short-noshadows': {
-    next: '/short-crop'
-  },
-  '/short-crop': {
     next: '/short-rules-1'
   },
   '/short-rules-1': {
