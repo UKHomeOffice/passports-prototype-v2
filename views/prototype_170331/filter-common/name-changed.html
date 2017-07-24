@@ -1,0 +1,21 @@
+{{< layout}}
+
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Has your name changed?{{/pageTitle}}
+
+{{$header}}
+    <h1>Has your name changed?</h1>
+    <p>For example, you spell your name differently or changed your last name.</p>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+        {{#radio-group}}name-changed{{/radio-group}}
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}

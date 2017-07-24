@@ -62,6 +62,66 @@ module.exports = {
   ],
   className: 'inline'
 },
+'passport-before': {
+  legend: {
+    value: 'Have you had a passport before?',
+    className: 'visuallyhidden'
+  },
+  options: [
+    { value: true, label: 'Yes' },
+    { value: false, label: 'No' }
+  ],
+  formatter: ['boolean'],
+  validate: [
+    'required',
+    {
+      type:'equal',
+      arguments:[true], /* if the arguments are NOT selected */
+      redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+    }
+  ],
+  className: 'inline'
+},
+'lost-stolen': {
+  legend: {
+    value: 'Lost stolen?',
+    className: 'visuallyhidden'
+  },
+  options: [
+    { value: true, label: 'Yes' },
+    { value: false, label: 'No' }
+  ],
+  formatter: ['boolean'],
+  validate: [
+    'required',
+    {
+      type:'equal',
+      arguments:[false], /* if the arguments are NOT selected */
+      redirect:'/lost'
+    }
+  ],
+  className: 'inline'
+},
+'name-changed': {
+  legend: {
+    value: 'Lost stolen?',
+    className: 'visuallyhidden'
+  },
+  options: [
+    { value: true, label: 'Yes' },
+    { value: false, label: 'No' }
+  ],
+  formatter: ['boolean'],
+  validate: [
+    'required',
+    {
+      type:'equal',
+      arguments:[false], /* if the arguments are NOT selected */
+      redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+    }
+  ],
+  className: 'inline'
+},
 'application-country': {
   options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
     return {
