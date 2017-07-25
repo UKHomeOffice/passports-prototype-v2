@@ -20,7 +20,7 @@ module.exports = {
     },
     '/confirm-applicant': {
         fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime'],
-        next: '/csig-summary'
+        next: '/csig-details-work'
     },
     '/csig-details': {
         fields: ['title'],
