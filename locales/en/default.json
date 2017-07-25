@@ -74,7 +74,7 @@
           "label": "Mobile or home phone"
         },
         "passport-options":{
-          "label": "Select passport size:"
+          "label": "Passport size"
         },
         "typeahead": {
           "label": "Country"

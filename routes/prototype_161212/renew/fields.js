@@ -196,7 +196,7 @@ module.exports = {
   },
   'passport-options':{
     legend: {
-      value: 'Select passport size'
+      value: 'Passport size'
     },
     options: [
       {value: '32', label: 'Standard adult 32-page passport (£72.50)'},
