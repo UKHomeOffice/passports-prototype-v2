@@ -117,7 +117,7 @@ module.exports = {
     {
       type:'equal',
       arguments:[false], /* if the arguments are NOT selected */
-      redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+      redirect:'/application-method'
     }
   ],
   className: 'inline'

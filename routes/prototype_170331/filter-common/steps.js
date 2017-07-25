@@ -28,6 +28,8 @@ module.exports = {
     },
     '/lost': {
     },
+    '/application-method': {
+    },
     '/what-do-you-want-to-do-overseas': {
         controller: require('../../../controllers/go-overseas'),
         fields: ['what-to-do-overseas'],
