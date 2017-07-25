@@ -3,6 +3,7 @@ module.exports = {
         next: '/applicant-info'
     },
     '/applicant-info': {
+        fields: ['pex-number','age-day','age-month','age-year'],
         next: '/csig-info'
     },
     '/csig-info': {
@@ -12,7 +13,10 @@ module.exports = {
     '/csig-identity-check': {
         fields: ['name', 'lastname','age-day','age-month','age-year','national-insurance'],
         back:'csig-info',
-        next: '/confirm-applicant'
+        next: '/csig-summary'
+    },
+    '/csig-summary':{
+      next: '/confirm-applicant'
     },
     '/confirm-applicant': {
         fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime'],
