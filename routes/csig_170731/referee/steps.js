@@ -21,6 +21,7 @@ module.exports = {
         next: '/csig-details-work'
     },
     '/csig-details-work': {
+        fields: ['profession', 'employer', 'employer-address', 'address-postcode', 'employer-phone'],
         back:'confirm-applicant',
         next: '/declaration'
     },
@@ -33,7 +34,7 @@ module.exports = {
         next: '/confirmation'
     },
     '/exceptions': {
-      
+
     }
 
 };
