@@ -1,8 +1,5 @@
 module.exports = {
     '/': {
-        next: '/csig-info'
-    },
-    '/csig-info': {
         fields: ['passport-number','expiry-month','expiry-year', 'phoneno'],
         next: '/csig-identity-check'
     },
