@@ -99,7 +99,7 @@
             "label": "Company name"
         },
         "pex-reference": {
-            "legend": "Does your reference number begin with PEX?",
+            "legend": "Does your application reference begin with PEX?",
             "hint": "For example PEX 123 456 7890"
         },
         "reference-no":{
