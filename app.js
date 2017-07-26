@@ -540,6 +540,7 @@ function init(sessionStore) {
 
     //Csig 170731
     app.use('/csig_170731/user', require('./routes/csig_170731/user'));
+    app.use('/csig_170731/start', require('./routes/csig_170731/start'));
     app.use('/csig_170731/referee', require('./routes/csig_170731/referee'));
     app.use('/csig_170731/referee-5', require('./routes/csig_170731/referee-5'));
 

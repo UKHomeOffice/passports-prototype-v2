@@ -99,7 +99,7 @@
             "label": "Company name"
         },
         "pex-reference": {
-            "legend": "Does your reference number begin with PEX?",
+            "legend": "Does your application reference begin with PEX?",
             "hint": "For example PEX 123 456 7890"
         },
         "reference-no":{
@@ -136,6 +136,15 @@
         "applicant-check": {
             "legend": "Is this Jane Smith?",
             "label": "Is this Jane Smith?"
+        },
+        "applicant-check-friend": {
+          "label": "Do you know Jane as a friend, neighbour or colleague?"
+        },
+        "applicant-check-address": {
+          "label": "Are you related to, in a relationship with or living at the same address as Jane?"
+        },
+        "knowntime": {
+          "label": "How many years have you known Jane?"
         }
     },
     "validation": {
