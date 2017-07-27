@@ -8,6 +8,9 @@ module.exports = {
         back:'csig-info',
         next: '/confirm-applicant'
     },
+    '/csig-summary': {
+        next: '/confirm-applicant'
+    },
     '/confirm-applicant': {
         fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime'],
         next: '/csig-details-work'
@@ -32,6 +35,6 @@ module.exports = {
     },
     '/exceptions': {
 
-    }
+    },
 
 };
