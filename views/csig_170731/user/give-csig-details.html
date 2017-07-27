@@ -2,18 +2,18 @@
 
 {{$pageTitle}}Give details{{/pageTitle}}
 {{$header}}
-    <h1>Who will confirm your identity</h1>
+    <h1>Tell us who'll confirm your identity</h1>
 {{/header}}
 
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-<p>You must contact this person before entering their details. You also need to ask them for their UK passport number.</p>
       <div id="csig-number-group" class="form-group">
           <fieldset>
             <div id="name-group" class="form-group">
                 <label for="name" class="form-label-bold">
                     Full name
+                    <span class="form-hint">As written on their passport.</span>
                 </label>
                 <span>
                     <input type="text" id="name" class="form-control name" name="name" value="" maxlength="16" aria-describedby="name-prefix" aria-required="true">
@@ -64,7 +64,7 @@
 <div class="column-one-third">
     <div class="sidebar" style="margin-top:50px">
       <div class="photo-preview-inner">
-          <h2 class="heading-medium">They must:</h2>
+          <h2 class="heading-medium">This person must:</h2>
           <ul class="list-bullet">
             <li>have a current UK passport</li>
             <li>work in or be retired from a <a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories" target="_blank">recognised profession</a></li>
