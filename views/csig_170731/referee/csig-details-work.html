@@ -12,7 +12,7 @@
 {{< hmpo-partials-form}}
     {{$form}}
 
-    <p>We need to confirm that you have a <a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories" target="_blank">recognised profession</a>. We'll only contact your employer if we have to check any details.</p>
+    <p>We need to confirm that you have a <a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories" target="_blank">recognised profession</a>. We'll only write to your employer if we have to check any details.</p>
 
     <div id="profession-group" class="form-group">
         <label for="profession" class="form-label-bold">
@@ -50,14 +50,7 @@
         <input type="text" name="address-postcode" id="address-postcode" class="form-control input-code" aria-required="true">
     </div>
 
-    <div id="employer-group" class="form-group">
-        <label for="employer" class="form-label-bold">
-            Employer's phone number
-        </label>
-        <span>
-            <input type="text" id="employer-phone" class="form-control" name="employer-phone" value="" maxlength="16" aria-describedby="profession" aria-required="true">
-        </span>
-    </div>
+
 
             {{#input-submit}}{{/input-submit}}
     {{/form}}
