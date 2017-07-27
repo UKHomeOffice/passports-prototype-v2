@@ -51,6 +51,17 @@ module.exports = {
       validate: [
           'required'
         ]
+  },
+  'expiry-month': {
+      labelClassName: 'form-label',
+      validate: [
+          'required'
+        ]
+  },
+  'expiry-year': {
+      labelClassName: 'form-label',
+      validate: [
+          'required'
+        ]
   }
-
 };

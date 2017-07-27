@@ -29,20 +29,22 @@
                     <input type="text" id="email" class="form-control name" name="name" value="" maxlength="16" aria-describedby="name-prefix" aria-required="true">
                 </span>
             </div>
-            <div id="phoneno-group" class="form-group">
-                <label for="phoneno" class="form-label-bold">
-                    Phone number
-                </label>
-                <span>
-                    <input type="text" id="phoneno" class="form-control phoneno" name="phoneno" value="" maxlength="16" aria-describedby="phoneno-prefix" aria-required="true">
-                </span>
-            </div>
             <fieldset>
                 <legend><span class="form-label-bold">This person's UK passport number</span></legend>
                   <p class="form-hint" id="dob-hint">For example 502135326</p>
                     {{#input-text}}passport-number{{/input-text}}
             </fieldset>
           </fieldset>
+          <div id="expiry-date-group" class="form-group">
+              <fieldset>
+                  <legend><span class="form-label-bold">Passport expiry date</span></legend>
+                  <div class="form-date">
+                    <p class="form-hint" id="dob-hint">For example 08 2015</p>
+                      {{#input-text}}expiry-month{{/input-text}}
+                      {{#input-text}}expiry-year{{/input-text}}
+                  </div>
+              </fieldset>
+          </div>
           <a href="/csig_170731/user/tracking-waiting" class="button">Submit</a><br>
 
           <!--  {{#input-submit}}{{/input-submit}}-->
