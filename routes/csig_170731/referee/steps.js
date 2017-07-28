@@ -26,7 +26,7 @@ module.exports = {
         next: '/csig-details-contact'
     },
     '/csig-details-contact': {
-        fields: ['employer-phone'],
+        fields: ['phone-number', 'email-address'],
         next: '/declaration'
     },
     '/declaration': {

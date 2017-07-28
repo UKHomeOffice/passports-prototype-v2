@@ -145,6 +145,21 @@
         },
         "knowntime": {
           "label": "How many years have you known Jane?"
+        },
+        "profession": {
+          "label": "Profession"
+        },
+        "employer": {
+          "label": "Employer's name"
+        },
+        "address-postcode": {
+          "label": "Postcode"
+        },
+        "phone-number": {
+          "label": "Mobile or home phone number"
+        },
+        "email-address": {
+          "label": "Email"
         }
     },
     "validation": {

@@ -184,7 +184,14 @@ module.exports = {
           'required'
         ]
   },
-  'employer-phone': {
+  'phone-number': {
+      labelClassName: 'visuallyhidden',
+      validate: [
+          'numeric',
+          'required'
+        ]
+  },
+  'email-address': {
       labelClassName: 'visuallyhidden',
       validate: [
           'required'
