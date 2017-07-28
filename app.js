@@ -528,6 +528,9 @@ function init(sessionStore) {
     //How to
     app.use('/how-to', require('./routes/how-to'));
 
+    //Gov.uk pages
+    app.use('/govuk', require('./routes/govuk'));
+
     //Tracking
     app.use('/tracking', require('./routes/tracking'));
     app.use('/tracking-ovs', require('./routes/tracking-ovs'));
