@@ -8,6 +8,9 @@ module.exports = {
         back:'csig-info',
         next: '/confirm-applicant'
     },
+    '/csig-summary': {
+        next: '/confirm-applicant'
+    },
     '/confirm-applicant': {
         fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime'],
         next: '/csig-details-work'
@@ -18,8 +21,12 @@ module.exports = {
         next: '/csig-details-work'
     },
     '/csig-details-work': {
-        fields: ['profession', 'employer', 'employer-address', 'address-postcode', 'employer-phone'],
+        fields: ['profession', 'employer', 'employer-address', 'address-postcode', ],
         back:'confirm-applicant',
+        next: '/csig-details-contact'
+    },
+    '/csig-details-contact': {
+        fields: ['phone-number', 'email-address'],
         next: '/declaration'
     },
     '/declaration': {
@@ -32,6 +39,6 @@ module.exports = {
     },
     '/exceptions': {
 
-    }
+    },
 
 };
