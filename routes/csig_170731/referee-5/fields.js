@@ -12,6 +12,12 @@ module.exports = {
           { value: 'No', label: 'No' }
       ]
   },
+  'pex-number': {
+      labelClassName: 'visuallyhidden',
+      validate: [
+          'required'
+        ]
+  },
   'passport-number': {
       labelClassName: 'visuallyhidden',
       validate: [

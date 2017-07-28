@@ -159,5 +159,42 @@ module.exports = {
       validate: [
           'required'
         ]
+  },
+  'profession': {
+      labelClassName: 'visuallyhidden',
+      validate: [
+          'required'
+        ]
+  },
+  'employer': {
+      labelClassName: 'visuallyhidden',
+      validate: [
+          'required'
+        ]
+  },
+  'employer-address': {
+      labelClassName: 'visuallyhidden',
+      validate: [
+          'required'
+        ]
+  },
+  'address-postcode': {
+      labelClassName: 'visuallyhidden',
+      validate: [
+          'required'
+        ]
+  },
+  'phone-number': {
+      labelClassName: 'visuallyhidden',
+      validate: [
+          'numeric',
+          'required'
+        ]
+  },
+  'email-address': {
+      labelClassName: 'visuallyhidden',
+      validate: [
+          'required'
+        ]
   }
 };

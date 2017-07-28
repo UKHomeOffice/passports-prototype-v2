@@ -1,14 +1,14 @@
 module.exports = {
     '/': {
-        next: '/csig-info'
-    },
-    '/csig-info': {
         fields: ['passport-number','expiry-month','expiry-year', 'phoneno'],
         next: '/csig-identity-check'
     },
     '/csig-identity-check': {
         fields: ['name', 'lastname','age-day','age-month','age-year','national-insurance'],
         back:'csig-info',
+        next: '/confirm-applicant'
+    },
+    '/csig-summary': {
         next: '/confirm-applicant'
     },
     '/confirm-applicant': {
@@ -21,7 +21,12 @@ module.exports = {
         next: '/csig-details-work'
     },
     '/csig-details-work': {
+        fields: ['profession', 'employer', 'employer-address', 'address-postcode', ],
         back:'confirm-applicant',
+        next: '/csig-details-contact'
+    },
+    '/csig-details-contact': {
+        fields: ['phone-number', 'email-address'],
         next: '/declaration'
     },
     '/declaration': {
@@ -33,7 +38,7 @@ module.exports = {
         next: '/confirmation'
     },
     '/exceptions': {
-      
-    }
+
+    },
 
 };

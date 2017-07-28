@@ -1,0 +1,40 @@
+{{< layout}}
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Your details{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Your contact details</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+
+    <div id="employer-group" class="form-group">
+        <label for="employer" class="form-label-bold">
+            Mobile or home phone number
+        </label>
+        <span>
+            <input type="text" id="phone-number" class="form-control" name="phone-number" value="">
+        </span>
+    </div>
+    <div id="employer-group" class="form-group">
+        <label for="employer" class="form-label-bold">
+            Email
+        </label>
+        <span>
+            <input type="text" id="email-address" class="form-control" name="email-address" value="">
+        </span>
+    </div>
+
+            {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+
+
+{{/content}}
+
+{{/ layout}}

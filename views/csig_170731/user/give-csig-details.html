@@ -2,26 +2,18 @@
 
 {{$pageTitle}}Give details{{/pageTitle}}
 {{$header}}
-    <h1>Who will confirm your identity</h1>
+    <h1>Tell us who'll confirm your identity</h1>
 {{/header}}
 
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-
-  <p>They must:</p>
-    <ul class="list-bullet">
-      <li>have a current UK passport</li>
-      <li>work in or be retired from a <a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories" target="_blank">recognised profession</a></li>
-      <li>have known you as a friend, neighbour or colleague for at least 2 years</li>
-    </ul>
-
-<p>You must contact this person before entering their details. You also need to ask them for their UK passport number.</p>
       <div id="csig-number-group" class="form-group">
           <fieldset>
             <div id="name-group" class="form-group">
                 <label for="name" class="form-label-bold">
                     Full name
+                    <span class="form-hint">As written on their passport.</span>
                 </label>
                 <span>
                     <input type="text" id="name" class="form-control name" name="name" value="" maxlength="16" aria-describedby="name-prefix" aria-required="true">
@@ -37,20 +29,22 @@
                     <input type="text" id="email" class="form-control name" name="name" value="" maxlength="16" aria-describedby="name-prefix" aria-required="true">
                 </span>
             </div>
-            <div id="phoneno-group" class="form-group">
-                <label for="phoneno" class="form-label-bold">
-                    Phone number
-                </label>
-                <span>
-                    <input type="text" id="phoneno" class="form-control phoneno" name="phoneno" value="" maxlength="16" aria-describedby="phoneno-prefix" aria-required="true">
-                </span>
-            </div>
             <fieldset>
                 <legend><span class="form-label-bold">This person's UK passport number</span></legend>
                   <p class="form-hint" id="dob-hint">For example 502135326</p>
                     {{#input-text}}passport-number{{/input-text}}
             </fieldset>
           </fieldset>
+          <div id="expiry-date-group" class="form-group">
+              <fieldset>
+                  <legend><span class="form-label-bold">Passport expiry date</span></legend>
+                  <div class="form-date">
+                    <p class="form-hint" id="dob-hint">For example 08 2015</p>
+                      {{#input-text}}expiry-month{{/input-text}}
+                      {{#input-text}}expiry-year{{/input-text}}
+                  </div>
+              </fieldset>
+          </div>
           <a href="/csig_170731/user/tracking-waiting" class="button">Submit</a><br>
 
           <!--  {{#input-submit}}{{/input-submit}}-->
@@ -66,5 +60,22 @@
 
 
 {{/content}}
+
+{{$sidebar}}
+
+<div class="column-one-third">
+    <div class="sidebar" style="margin-top:50px">
+      <div class="photo-preview-inner">
+          <h2 class="heading-medium">This person must:</h2>
+          <ul class="list-bullet">
+            <li>have a current UK passport</li>
+            <li>work in or be retired from a <a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories" target="_blank">recognised profession</a></li>
+            <li>have known you as a friend, neighbour or colleague for at<br>least 2 years</li>
+          </ul>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
 
 {{/ layout}}
