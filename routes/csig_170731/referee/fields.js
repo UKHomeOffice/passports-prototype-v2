@@ -60,6 +60,7 @@ module.exports = {
   },
   'national-insurance': {
       hint: 'We use this for stuff and nonsense',
+      labelClassName: 'visuallyhidden',
       validate:[
           'required',
           function ninoformat(val) {
