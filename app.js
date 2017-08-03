@@ -547,6 +547,11 @@ function init(sessionStore) {
     app.use('/csig_170731/referee', require('./routes/csig_170731/referee'));
     app.use('/csig_170731/referee-5', require('./routes/csig_170731/referee-5'));
 
+    //Csig 170731
+    app.use('/csig_170810/user', require('./routes/csig_170810/user'));
+    app.use('/csig_170810/start', require('./routes/csig_170810/start'));
+    app.use('/csig_170810/referee', require('./routes/csig_170810/referee'));
+    app.use('/csig_170810/referee-5', require('./routes/csig_170810/referee-5'));
 
     //3rd party shops photo checker
     app.use('/shops-photo-checker', require('./routes/shops-photo-checker'));

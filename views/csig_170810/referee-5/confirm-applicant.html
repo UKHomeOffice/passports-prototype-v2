@@ -1,0 +1,131 @@
+{{< layout}}
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Confirm applicant{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Confirm this person's identity</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+      <img src="../../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+      <br>
+      <br>
+      <div id="applicant-check-group" class="form-group inline">
+          <fieldset role="radiogroup" aria-required="true">
+              <legend>
+                  <span class="form-label-bold">Is this Adrian Smith?</span>
+              </legend>
+                  <label class="block-label" for="applicant-check-Yes">
+                      <input type="radio" name="applicant-check" id="applicant-check-Yes" value="true" required="true" data-toggle="declarations" aria-controls="declarations" aria-expanded="false">
+                      Yes
+                  </label>
+                  <label class="block-label" for="applicant-check-No">
+                      <input type="radio" name="applicant-check" id="applicant-check-No" value="false" required="true">
+                      No
+                  </label>
+          </fieldset>
+      </div>
+      <div id="declarations" class="panel panel-border-narrow js-hidden">
+        <div id="applicant-check-friend" class="form-group inline">
+            <fieldset role="radiogroup" aria-required="true">
+                <!-- <legend>
+                    <span class="form-label-bold">Is Adrian a friend, neighbour or colleague?</span>
+                </legend> -->
+                <label class="form-label" for="">Do you know Adrian as a friend, neighbour or colleague?</label>
+                <!-- <span class="form-hint">
+                  Not just
+                </span> -->
+                    <label class="block-label" for="applicant-check-friend-Yes">
+                        <input type="radio" name="applicant-check-friend" id="applicant-check-friend-Yes" value="Yes" required="true">
+                        Yes
+                    </label>
+                    <label class="block-label" for="applicant-check-friend-No">
+                        <input type="radio" name="applicant-check-friend" id="applicant-check-friend-No" value="No" required="true">
+                        No
+                    </label>
+            </fieldset>
+        </div>
+        <div id="applicant-check-address" class="form-group inline ">
+            <fieldset role="radiogroup" aria-required="true">
+                <!-- <legend>
+                    <span class="form-label-bold">Are you related to or living at the same address as Adrian?</span>
+                </legend> -->
+                  <label class="form-label" for="">Are you related to, in a relationship with or living at the same address as Adrian?</label>
+                    <label class="block-label" for="applicant-check-address-Yes">
+                        <input type="radio" name="applicant-check-address" id="applicant-check-address-Yes" value="Yes" required="true">
+                        Yes
+                    </label>
+                    <label class="block-label" for="applicant-check-address-No">
+                        <input type="radio" name="applicant-check-address" id="applicant-check-address-No" value="No" required="true">
+                        No
+                    </label>
+            </fieldset>
+        </div>
+        <div id="knowntime-group" class="form-group">
+            <!-- <label for="knowntime" class="form-label-bold">
+                How many years have you known Adrian?
+            </label> -->
+            <label class="form-label" for="">How many years have you known Adrian?</label>
+            <span>
+                <input type="text" id="knowntime" class="form-control date" name="knowntime" value="" maxlength="2" aria-describedby="knowntime" aria-required="true" style="width:70px;">
+                <span id="reference-prefix" class="prefix"></span>
+            </span>
+        </div>
+      </div>
+
+      <!-- <div id="declarations" class="reveal js-hidden" style="margin-top:-30px;margin-bottom:20px">
+          <div class="panel panel-border-narrow">
+            <fieldset>
+                <legend class="visuallyhidden">You must agree in order to continue.</legend>
+                <div id="contact-prefs-email-group" class="form-group form-group-compound">
+                    <label for="contact-prefs-email" class="block-label ">
+                        <input type="checkbox" id="contact-prefs-email" name="contact-prefs-email" value="true" aria-required="false" required="true">
+                            I can identify Adrian, for example as a friend, neighbour or colleague (not someone I only know professionally, like a doctor).
+                    </label>
+                </div>
+                <legend class="visuallyhidden">You must agree in order to continue.</legend>
+                <div id="contact-prefs-email2-group" class="form-group form-group-compound">
+                    <label for="contact-prefs-email2" class="block-label ">
+                        <input type="checkbox" id="contact-prefs-email2" name="contact-prefs-email2" value="true" aria-required="false" required="true">
+                            I am not related to, in a relationship with or living at the same address as Adrian.
+                    </label>
+                </div>
+          </fieldset>
+          </div>
+      </div> -->
+
+
+
+
+
+
+
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+
+
+{{/content}}
+{{$sidebar}}
+<div class="column-one-third">
+    <div class="sidebar " style="margin-top:30px">
+      <div class="photo-preview-inner">
+          <h2 class="heading-medium">You must:</h2>
+          <ul class="list-bullet" >
+            <li style="list-style-type: disc;">have known the person applying for at least 2 years</li>
+            <li>not be related to them by birth or marriage</li>
+            <li>not be in a relationship with them or living at the same address</li>
+          </ul>
+          <a href="">I don't meet the criteria</a>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}

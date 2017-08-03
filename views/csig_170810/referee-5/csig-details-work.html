@@ -1,0 +1,69 @@
+{{< layout}}
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Your details{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Your work</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+
+    <p>We need to know where you work to confirm you have a recognised profession. We'll only contact your employer if we need to check any details.</p>
+
+    <div id="profession-group" class="form-group">
+        <label for="profession" class="form-label-bold">
+            Profession
+        </label>
+        <span>
+            <input type="text" id="profession" class="form-control" name="profession" value="" maxlength="16" aria-describedby="profession" aria-required="true">
+        </span>
+            <p><a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories" target="_blank">What are the recognised professions?</a></p>
+    </div>
+    <div id="employer-group" class="form-group">
+        <label for="employer" class="form-label-bold">
+            Employer's name
+        </label>
+        <span>
+            <input type="text" id="employer" class="form-control" name="employer" value="" maxlength="16" aria-describedby="profession" aria-required="true">
+        </span>
+    </div>
+
+    <div id="employeraddress-group" class="form-group">
+        <label for="employeraddress" class="form-label-bold">
+            Your work address
+        </label>
+        <p class="form-hint" id="dob-hint">If you're retired or self-employed enter your home address.</p>
+        <span>
+            <input type="text" id="employeraddress" class="form-control" name="employeraddress" value="" maxlength="16" aria-describedby="profession" aria-required="true" style="margin-bottom:10px;">
+            <input type="text" id="employeraddress" class="form-control" name="employeraddress" value="" maxlength="16" aria-describedby="profession" aria-required="true">
+        </span>
+    </div>
+    <div id="address-postcode-group" class="form-group">
+        <label for="address-postcode" class="form-label-bold">
+            Postcode
+        </label>
+        <input type="text" name="address-postcode" id="address-postcode" class="form-control input-code" aria-required="true">
+    </div>
+
+    <div id="employer-group" class="form-group">
+        <label for="employer" class="form-label-bold">
+            Employer's phone number
+        </label>
+        <span>
+            <input type="text" id="employer" class="form-control" name="employer" value="" maxlength="16" aria-describedby="profession" aria-required="true">
+        </span>
+    </div>
+
+            {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+
+
+{{/content}}
+
+{{/ layout}}
