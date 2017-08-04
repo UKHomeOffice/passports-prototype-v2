@@ -134,17 +134,17 @@
             "label": "reason for rejecting the countersignature"
         },
         "applicant-check": {
-            "legend": "Is this Adrian Smith?",
-            "label": "Is this Adrian Smith?"
+            "legend": "Is this David Smith?",
+            "label": "Is this David Smith?"
         },
         "applicant-check-friend": {
-          "label": "Do you know Adrian as a friend, neighbour or colleague?"
+          "label": "Do you know David as a friend, neighbour or colleague?"
         },
         "applicant-check-address": {
-          "label": "Are you related to, in a relationship with or living at the same address as Adrian?"
+          "label": "Are you related to, in a relationship with or living at the same address as David?"
         },
         "knowntime": {
-          "label": "How many years have you known Adrian?"
+          "label": "How many years have you known David?"
         },
         "profession": {
           "label": "Profession"
