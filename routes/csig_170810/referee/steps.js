@@ -6,9 +6,12 @@ module.exports = {
     '/csig-identity-check': {
         fields: ['name', 'lastname','age-day','age-month','age-year','national-insurance'],
         back:'csig-info',
-        next: '/confirm-applicant'
+        next: '/csig-identity-auth'
     },
     '/csig-summary': {
+        next: '/confirm-applicant'
+    },
+    '/csig-identity-auth': {
         next: '/confirm-applicant'
     },
     '/confirm-applicant': {
