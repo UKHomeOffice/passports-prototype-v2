@@ -9,6 +9,7 @@
 {{/header}}
 
 {{$content}}
+<p>Your details don't match our records. Please check what you've entered and try again.</p>
 <!-- <h2 class="heading-medium">Your UK passport</h2> -->
 <br>
 <dl class="govuk-check-your-answers cya-questions-short">
@@ -18,10 +19,10 @@
             Passport number
           </dt>
           <dd class="cya-answer">
-            502135326
+            {{values.passport-number}}
           </dd>
           <dd class="cya-change">
-            <a href="/csig_170731/referee-5/csig-info">
+            <a href="/csig_170810/referee">
               Change<span class="visually-hidden"> passport number</span>
             </a>
           </dd>
@@ -32,10 +33,11 @@
             Passport expiry date
           </dt>
           <dd class="cya-answer">
-            12 21
+            {{values.expiry-month}}&nbsp;
+            {{values.expiry-year}}
           </dd>
           <dd class="cya-change">
-            <a href="#">
+            <a href="/csig_170810/referee">
               Change<span class="visually-hidden"> passport expiry date</span>
             </a>
           </dd>
@@ -50,10 +52,10 @@
             First and middle names
           </dt>
           <dd class="cya-answer">
-            David
+            {{values.name}}
           </dd>
           <dd class="cya-change">
-            <a href="/csig_170731/referee-5/csig-identity-check">
+            <a href="/csig_170810/referee/csig-identity-check">
               Change<span class="visually-hidden"> name</span>
             </a>
           </dd>
@@ -64,10 +66,10 @@
             Last name
           </dt>
           <dd class="cya-answer">
-            Brereton
+            {{values.lastname}}
           </dd>
           <dd class="cya-change">
-            <a href="#">
+            <a href="/csig_170810/referee/csig-identity-check">
               Change<span class="visually-hidden"> name</span>
             </a>
           </dd>
@@ -78,10 +80,12 @@
             Date of birth
           </dt>
           <dd class="cya-answer">
-            12 07 1979
+            {{values.age-day}}&nbsp;
+            {{values.age-month}}&nbsp;
+            {{values.age-year}}
           </dd>
           <dd class="cya-change">
-            <a href="#">
+            <a href="/csig_170810/referee/csig-identity-check">
               Change<span class="visually-hidden"> date of birth</span>
             </a>
           </dd>
@@ -91,10 +95,10 @@
           <dt class="cya-question">
             National insurance number
           <dd class="cya-answer">
-            JL123456C
+            {{values.national-insurance}}
           </dd>
           <dd class="cya-change">
-            <a href="#">
+            <a href="/csig_170810/referee/csig-identity-check">
               Change<span class="visually-hidden"> national insurance number</span>
             </a>
           </dd>
@@ -102,7 +106,7 @@
 
       </dl>
 <p></p>
-<a href="/csig_170731/referee-5/confirm-applicant" class="button">Continue</a>
+<a href="/csig_170810/referee-5/confirm-applicant" class="button">Try again</a>
 
 {{/content}}
 
