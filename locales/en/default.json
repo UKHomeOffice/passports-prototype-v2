@@ -158,6 +158,9 @@
         "phone-number": {
           "label": "Mobile or home phone number"
         },
+        "retired": {
+          "label": "I am retired"
+        },
         "email-address": {
           "label": "Email"
         }

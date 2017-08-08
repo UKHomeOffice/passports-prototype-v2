@@ -161,6 +161,13 @@ module.exports = {
           'required'
         ]
   },
+  'retired': {
+    formatter: 'boolean-strict',
+    labelClassName: 'visuallyhidden',
+    legend: {
+      value: 'I am retired'
+    },
+  },
   'profession': {
       labelClassName: 'visuallyhidden',
       validate: [
