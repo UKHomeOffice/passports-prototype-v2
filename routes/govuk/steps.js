@@ -1,8 +1,10 @@
 module.exports = {
     '/': {
         template: 'index',
-        next: '/next'
+        next: '/how-confirm'
     },
-    '/next': {
+    '/how-confirm': {
+    },
+    '/recognised-professions': {
     }
 };
