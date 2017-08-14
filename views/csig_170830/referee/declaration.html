@@ -1,0 +1,41 @@
+{{< layout}}
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Declaration{{/pageTitle}}
+
+{{$header}}
+    <h1>Declaration</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+      <p>By continuing you confirm that the information you've given is correct.</p>
+
+      </ul>
+      <div class="panel-important">
+                <p>You could be prosecuted if you deliberately give untrue or misleading information.</p>
+      </div>
+
+      <fieldset>
+          <legend class="visuallyhidden">You must agree in order to continue.</legend>
+          <div id="contact-prefs-email-group" class="form-group form-group-compound">
+              <label for="contact-prefs-email" class="block-label ">
+                  <input type="checkbox" id="contact-prefs-email" name="contact-prefs-email" value="true" aria-required="false" required="true">
+                      I agree
+              </label>
+          </div>
+    </fieldset>
+    {{#input-submit}}{{/input-submit}}
+    <br/><br/>
+   <!-- <a href="confirmation" class="button">Submit</a><br/><br/>-->
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+
+{{/ layout}}
