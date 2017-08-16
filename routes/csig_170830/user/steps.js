@@ -12,7 +12,7 @@ module.exports = {
     '/track-postcode': {
         fields: ['age-day', 'age-month', 'age-year'],
         next: '/need-csig',
-        backLink: 'track'
+        backLink: '/'
     },
     '/waiting-for-old-pass': {
         next: '/track'
