@@ -1,12 +1,5 @@
 module.exports = {
     '/': {
-        fields: ['pex-reference'],
-        next: '/track'
-    },
-    '/track-a-application': {
-        next: '/track'
-    },
-    '/track': {
       controller: require('../../../controllers/tracking'),
       fields: ['reference'],
         next: '/track-postcode'
