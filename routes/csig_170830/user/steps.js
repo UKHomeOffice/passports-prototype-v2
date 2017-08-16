@@ -1,12 +1,5 @@
 module.exports = {
     '/': {
-        fields: ['pex-reference'],
-        next: '/track'
-    },
-    '/track-a-application': {
-        next: '/track'
-    },
-    '/track': {
       controller: require('../../../controllers/tracking'),
       fields: ['reference'],
         next: '/track-postcode'
@@ -28,7 +21,7 @@ module.exports = {
         next: '/track'
     },
     '/give-csig-details': {
-      backLink: 'track',
+      backLink: 'need-csig',
         next: '/tracking-waiting'
     },
     '/tracking-waiting': {

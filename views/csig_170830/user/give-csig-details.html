@@ -2,53 +2,65 @@
 
 {{$pageTitle}}Give details{{/pageTitle}}
 {{$header}}
-    <h1>Tell us who'll confirm your identity</h1>
+    <h1>What you need to send</h1>
 {{/header}}
 
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-      <div id="csig-number-group" class="form-group">
-          <fieldset>
-            <div id="name-group" class="form-group">
-                <label for="name" class="form-label-bold">
-                    Full name
-                    <span class="form-hint">As written on their passport.</span>
-                </label>
-                <span>
-                    <input type="text" id="name" class="form-control name" name="name" value="" aria-describedby="name-prefix" aria-required="true">
-                </span>
-            </div>
-            <div id="email-group" class="form-group">
-                <label for="email" class="form-label-bold">
-                    Email
-                    <span class="form-hint">We'll send them an email with more information.</span>
+    <!-- <div role="note" aria-label="Information" class="panel panel-border-wide application-notice info-notice">
+      <p>You need to contact this person and ask them to confirm your identity</p>
+    </div> -->
+    <!-- <fieldset>
+      <label class="block-label" for="contact-myself">
+          <input type="radio" name="what-to-do" id="contact-myself" value="contact-myself" required="true">
+          I'll contact this person myself
+      </label>
+      <label class="block-label" for="contact-for-me">
+          <input type="radio" name="what-to-do" id="contact-for-me" value="contact-for-me" required="true">
+          Contact this person for me
+      </label>
+    </fieldset> -->
 
-                </label>
-                <span>
-                    <input type="text" id="email" class="form-control name" name="name" value="" aria-describedby="name-prefix" aria-required="true">
-                </span>
-            </div>
-            <fieldset>
-                <legend><span class="form-label-bold">This person's UK passport number</span></legend>
-                  <p class="form-hint" id="dob-hint">For example 502135326</p>
-                    {{#input-text}}passport-number{{/input-text}}
-            </fieldset>
-          </fieldset>
-          <div id="expiry-date-group" class="form-group">
+    <p>Once you've spoken to the person confirming your identity, you need to email them:</p>
+    <ul class="list-bullet">
+      <li>Applicant's date of birth: {{values.age-day}}/{{values.age-month}}/{{values.age-year}}</li>
+      <li>Application reference: {{values.reference}}</li>
+      <li>Link: <a href="#">http://www.gov.uk/confirm-identity</a></li>
+    </ul>
+    <p>Remember to tell the person that they'll need their passport and national insurance numbers.</p>
+    <details>
+        <summary><span class="summary">Email this person for me</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>We'll send them an email requesting to confirm your identity. You must inform this person before we email them.</p>
+          <div id="csig-number-group" class="form-group">
               <fieldset>
-                  <legend><span class="form-label-bold">Passport expiry date</span></legend>
-                  <div class="form-date">
-                    <p class="form-hint" id="dob-hint">For example 08 2015</p>
-                      {{#input-text}}expiry-month{{/input-text}}
-                      {{#input-text}}expiry-year{{/input-text}}
-                  </div>
-              </fieldset>
-          </div>
+                <div id="name-group" class="form-group">
+                    <label for="name" class="form-label">
+                        Full name
+                    </label>
+                    <span>
+                        <input type="text" id="name" class="form-control name" name="name" value="" aria-describedby="name-prefix" aria-required="true">
+                    </span>
+                </div>
+                <div id="email-group" class="form-group">
+                    <label for="email" class="form-label">
+                        Email
+                    </label>
+                    <span>
+                        <input type="text" id="email" class="form-control name" name="name" value="" aria-describedby="name-prefix" aria-required="true">
+                    </span>
+                </div>
+        </div>
+        <a href="#" class="button">Send email</a><br>
+    </details>
+      <!--
+
+
           <a href="/csig_170830/user/tracking-waiting" class="button">Submit</a><br>
 
-          <!--  {{#input-submit}}{{/input-submit}}-->
-        </div>
+            {{#input-submit}}{{/input-submit}}
+        </div> -->
 
 
 
@@ -63,7 +75,7 @@
 
 {{$sidebar}}
 
-<div class="column-one-third">
+<!-- <div class="column-one-third">
     <div class="sidebar" style="margin-top:50px">
       <div class="photo-preview-inner">
           <h2 class="heading-medium">This person must:</h2>
@@ -75,7 +87,7 @@
       </div>
 
     </div>
-</div>
+</div> -->
 {{/sidebar}}
 
 {{/ layout}}
