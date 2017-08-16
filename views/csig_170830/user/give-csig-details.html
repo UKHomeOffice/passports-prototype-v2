@@ -2,7 +2,7 @@
 
 {{$pageTitle}}Give details{{/pageTitle}}
 {{$header}}
-    <h1>What you need to send</h1>
+    <h1>When you've asked someone</h1>
 {{/header}}
 
 {{$content}}
@@ -22,13 +22,16 @@
       </label>
     </fieldset> -->
 
-    <p>Once you've spoken to the person confirming your identity, you need to email them:</p>
+    <p>You need to email the person who's agreed to confirm your identity some details and a link.</p>
+
+    <p>Copy and paste this information into your email:</p>
+
     <ul class="list-bullet">
       <li>Applicant's date of birth: {{values.age-day}}/{{values.age-month}}/{{values.age-year}}</li>
       <li>Application reference: {{values.reference}}</li>
+      <li>You'll need your passport and national insurance numbers</li>
       <li>Link: <a href="#">http://www.gov.uk/confirm-identity</a></li>
     </ul>
-    <p>Remember to tell the person that they'll need their passport and national insurance numbers.</p>
     <details>
         <summary><span class="summary">Email this person for me</span></summary>
         <div class="panel panel-border-narrow">
