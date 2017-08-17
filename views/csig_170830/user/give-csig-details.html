@@ -8,19 +8,17 @@
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-    <div id="contact-csig-group" class="form-group">
-        <fieldset role="radiogroup" aria-required="true">
-            <legend>
-            </legend>
-            <label class="block-label" for="contact-csig-Yes">
-                <input type="radio" name="contact-csig" id="contact-csig-Yes" value="true" required="true" data-toggle="email-form" aria-controls="email-form" aria-expanded="false">
-                I'd like Her Majesty's Passport Office to send it
-            </label>
-            <label class="block-label" for="contact-csig-No">
-                <input type="radio" name="contact-csig" id="contact-csig-No" value="false" required="true" data-toggle="contact-details" aria-controls="contact-details">
-                I'll send it &ndash; show me the what to include
-            </label>
-        </fieldset>
+    <div id="contact-csig-group" class="form-group inline">
+      <fieldset role="radiogroup" aria-required="true">
+        <label class="block-label" for="contact-csig-No">
+          <input type="radio" name="contact-csig" id="contact-csig-No" value="false" required="true" data-toggle="contact-details" aria-controls="contact-details">
+          I'll send it
+        </label>
+          <label class="block-label" for="contact-csig-Yes">
+              <input type="radio" name="contact-csig" id="contact-csig-Yes" value="true" required="true" data-toggle="email-form" aria-controls="email-form" aria-expanded="false">
+              Send it for me
+          </label>
+      </fieldset>
     </div>
     <div id="email-form" class="panel panel-border-narrow js-hidden">
       <p>We'll send you a copy of the email.</p>
