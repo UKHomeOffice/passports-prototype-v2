@@ -8,55 +8,67 @@
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-    <!-- <div role="note" aria-label="Information" class="panel panel-border-wide application-notice info-notice">
-      <p>You need to contact this person and ask them to confirm your identity</p>
-    </div> -->
-    <!-- <fieldset>
-      <label class="block-label" for="contact-myself">
-          <input type="radio" name="what-to-do" id="contact-myself" value="contact-myself" required="true">
-          I'll contact this person myself
-      </label>
-      <label class="block-label" for="contact-for-me">
-          <input type="radio" name="what-to-do" id="contact-for-me" value="contact-for-me" required="true">
-          Contact this person for me
-      </label>
-    </fieldset> -->
+    <p>Once someone has agreed to confirm your identity, they need an email with your application.</p>
+    <div id="contact-csig-group" class="form-group">
+        <fieldset role="radiogroup" aria-required="true">
+            <legend>
+                <span class="form-label-bold">How do you want to send the email?</span>
+            </legend>
+            <label class="block-label" for="contact-csig-Yes">
+                <input type="radio" name="contact-csig" id="contact-csig-Yes" value="true" required="true" data-toggle="email-form" aria-controls="email-form" aria-expanded="false">
+                I'd like HM Passport Office to send it
+            </label>
+            <label class="block-label" for="contact-csig-No">
+                <input type="radio" name="contact-csig" id="contact-csig-No" value="false" required="true" data-toggle="contact-details" aria-controls="contact-details">
+                I'll send it, show me the what to include
+            </label>
+        </fieldset>
+    </div>
+    <div id="email-form" class="panel panel-border-narrow js-hidden">
+      <p>We'll send them an email requesting to confirm your identity.</p>
 
-    <p>You need to email the person who's agreed to confirm your identity some details and a link.</p>
+      <div id="csig-number-group" class="form-group">
+          <fieldset>
+            <div id="name-group" class="form-group">
+                <label for="name" class="form-label">
+                    Full name
+                </label>
+                <span>
+                    <input type="text" id="name" class="form-control name" name="name" value="" aria-describedby="name-prefix" aria-required="true">
+                </span>
+            </div>
+            <div id="email-group" class="form-group">
+                <label for="email" class="form-label">
+                    Email
+                </label>
+                <span>
+                    <input type="text" id="email" class="form-control name" name="name" value="" aria-describedby="name-prefix" aria-required="true">
+                </span>
+            </div>
+      </div>
+      <div id="contact-prefs-email-group" class="form-group form-group-compound">
+          <label for="contact-prefs-email" class="block-label ">
+              <input type="checkbox" id="contact-prefs-email" name="contact-prefs-email" value="true" aria-required="false" required="true">
+                  I have informed this person
+          </label>
+      </div>
+      <br>
+      <a href="#" class="button">Send email</a><br>
+    </div>
+    <div id="contact-details" class="panel panel-border-narrow js-hidden">
+      <p>You need to email the person who's agreed to confirm your identity some details and a link.</p>
 
-    <p>Copy and paste this information into your email:</p>
+      <p>Copy and paste this information into your email:</p>
 
-    <ul class="list-bullet">
-      <li>Applicant's date of birth: {{values.age-day}}/{{values.age-month}}/{{values.age-year}}</li>
-      <li>Application reference: {{values.reference}}</li>
-      <li>You'll need your passport and national insurance numbers</li>
-      <li>Link: <a href="#">http://www.gov.uk/confirm-identity</a></li>
-    </ul>
-    <details>
-        <summary><span class="summary">Email this person for me</span></summary>
-        <div class="panel panel-border-narrow">
-          <p>We'll send them an email requesting to confirm your identity. You must inform this person before we email them.</p>
-          <div id="csig-number-group" class="form-group">
-              <fieldset>
-                <div id="name-group" class="form-group">
-                    <label for="name" class="form-label">
-                        Full name
-                    </label>
-                    <span>
-                        <input type="text" id="name" class="form-control name" name="name" value="" aria-describedby="name-prefix" aria-required="true">
-                    </span>
-                </div>
-                <div id="email-group" class="form-group">
-                    <label for="email" class="form-label">
-                        Email
-                    </label>
-                    <span>
-                        <input type="text" id="email" class="form-control name" name="name" value="" aria-describedby="name-prefix" aria-required="true">
-                    </span>
-                </div>
-        </div>
-        <a href="#" class="button">Send email</a><br>
-    </details>
+      <ul class="list-bullet">
+        <li>Applicant's date of birth: {{values.age-day}}&nbsp;{{values.age-month}}&nbsp;{{values.age-year}}</li>
+        <li>Application reference: {{values.reference}}</li>
+        <li>You'll need your passport and national insurance numbers</li>
+        <li>Link: <a href="#">http://www.gov.uk/confirm-identity</a></li>
+      </ul>
+
+    </div>
+
       <!--
 
 
