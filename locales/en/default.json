@@ -150,7 +150,7 @@
           "label": "Profession"
         },
         "employer": {
-          "label": "Employer's name"
+          "label": "Employer’s name"
         },
         "address-postcode": {
           "label": "Postcode"
@@ -163,6 +163,12 @@
         },
         "email-address": {
           "label": "Email"
+        },
+        "csig-name": {
+          "label": "The person’s full name"
+        },
+        "csig-email": {
+          "label": "The person’s email"
         }
 
     },
