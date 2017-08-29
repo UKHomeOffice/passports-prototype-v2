@@ -49,14 +49,16 @@
       {{#input-submit}}{{/input-submit}}
     </div>
     <div id="contact-details" class="panel panel-border-narrow js-hidden">
-      <p>You need to copy and paste these details into your email.</p>
-      <ul class="list-bullet" id="stuff">
-        <li>Applicant's date of birth: {{values.age-day}}&nbsp;{{values.age-month}}&nbsp;{{values.age-year}}</li>
-        <li>Application reference: {{values.reference}}</li>
-        <li>You'll need your passport and national insurance numbers</li>
-        <li>Link: <a href="#">http://www.gov.uk/confirm-identity</a></li>
-      </ul>
-      <!-- <a href="#" class="btn" data-clipboard-target="#stuff">Copy text to clipboard</a> -->
+      <p>You need to copy and paste these details into your email:</p>
+        <div style="border: 2px solid #DEE0E2; padding: 30px;">
+          <ul class="list-bullet" id="stuff">
+            <li>Applicant's date of birth: {{values.age-day}}&nbsp;{{values.age-month}}&nbsp;{{values.age-year}}</li>
+            <li>Application reference: {{values.reference}}</li>
+            <li>You'll need your passport and national insurance numbers</li>
+            <li>Link: <a href="#">http://www.gov.uk/confirm-identity</a></li>
+          </ul>
+          <!-- <a href="#" class="btn" data-clipboard-target="#stuff">Copy text to clipboard</a> -->
+        </div>
     </div>
 
         {{/form}}
