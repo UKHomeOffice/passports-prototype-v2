@@ -164,6 +164,7 @@
         "email-address": {
           "label": "Email"
         }
+
     },
     "validation": {
         "required": "Please enter {{label}}.",
@@ -187,6 +188,9 @@
         "apply-uk": {
           "required": "Please tell us if you're applying from the UK"
         },
+        "contact-csig": {
+          "required": "You must contact the person before sending them an email with your application details"
+         },
         "application-country": {
           "required": "You must answer this question"
         },

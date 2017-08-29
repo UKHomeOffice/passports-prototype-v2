@@ -25,17 +25,20 @@
 <div class="panel panel-border-wide application-notice info-notice">
   <p>Before sending the person an email, you must contact them to check they are happy to do this.</p>
 </div>
-<!-- <p>You must contact the person before sharing your application details.</p> -->
+{{< hmpo-partials-form}}
+    {{$form}}
+      <div id="contact-csig-group" class="form-group form-group-compound">
+          <label for="contact-csig" class="block-label">
+              <input type="checkbox" id="contact-csig" name="contact-csig" value="true" aria-required="false" required="true">
+                  I've contacted the person and they have agreed to confirm <br>
+                  my identity.
+          </label>
+      </div>
+      <br>
+      {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
 
-  <div id="contact-prefs-email-group" class="form-group form-group-compound">
-      <label for="contact-prefs-email" class="block-label ">
-          <input type="checkbox" id="contact-prefs-email" name="contact-prefs-email" value="true" aria-required="false" required="true">
-              I've contacted the person and they have agreed to confirm <br>
-              my identity.
-      </label>
-  </div>
-<br>
-  <p><a href="/csig_170830/user/give-csig-details" class="button">Continue</a></p>
 
 <!--
 
