@@ -561,6 +561,37 @@ function init(sessionStore) {
     app.use('/csig_170830/referee-5', require('./routes/csig_170830/referee-5'));
     app.use('/confirm-identity', require('./routes/csig_170830/referee-5'));
 
+    // damaged_170830
+    app.use('/damaged_170830/overseas', require('./routes/damaged_170830/overseas'));
+    app.use('/damaged_170830/overseas-not-eligible', require('./routes/damaged_170830/overseas-not-eligible'));
+    app.use('/damaged_170830/overseas-first', require('./routes/damaged_170830/overseas-first'));
+    app.use('/damaged_170830/overseas-lost-change', require('./routes/damaged_170830/overseas-lost-change'));
+    app.use('/damaged_170830/uploadphoto', require('./routes/damaged_170830/uploadphoto'));
+    app.use('/damaged_170830/filter-common', require('./routes/damaged_170830/filter-common'));
+    app.use('/damaged_170830/renew', require('./routes/damaged_170830/renew'));
+    app.use('/damaged_170830/intro', require('./routes/damaged_170830/intro'));
+    app.use('/damaged_170830/filter', require('./routes/damaged_170830/filter'));
+    app.use('/damaged_170830/startpage', require('./routes/damaged_170830/startpage'));
+    app.use('/damaged_170830/startpage-overseas', require('./routes/damaged_170830/startpage-overseas'));
+    app.use('/damaged_170830/photoguide-short', require('./routes/damaged_170830/photoguide-short'));
+    app.use('/damaged_170830/photoguide-static', require('./routes/damaged_170830/photoguide-static'));
+    app.use('/damaged_170830/photoguide-shop', require('./routes/damaged_170830/photoguide-shop'));
+    app.use('/damaged_170830/takephoto', require('./routes/damaged_170830/takephoto'));
+    app.use('/damaged_170830/upload', require('./routes/damaged_170830/upload'));
+    app.use('/damaged_170830/rejectedphoto', require('./routes/damaged_170830/rejectedphoto'));
+    app.use('/damaged_170830/filter-common-temp', require('./routes/damaged_170830/filter-common-temp'));
+    app.use('/damaged_170830/startpage-temp', require('./routes/damaged_170830/startpage-temp'));
+    app.use('/damaged_170830/overseas-not-available', require('./routes/damaged_170830/overseas-not-available'));
+    app.use('/damaged_170830/throttle', require('./routes/damaged_170830/throttle'));
+    app.use('/damaged_170830/payment', require('./routes/damaged_170830/payment'));
+    app.use('/damaged_170830/submission-failed', require('./routes/damaged_170830/submission-failed'));
+    app.use('/damaged_170830/sar', require('./routes/damaged_170830/sar'));
+    app.use('/damaged_170830/photo-url', require('./routes/damaged_170830/photo-url'));
+    app.use('/damaged_170830/photo-code', require('./routes/damaged_170830/photo-code'));
+    app.use('/damaged_170830/mismatch', require('./routes/damaged_170830/mismatch'));
+    app.use('/damaged_170830/redirect-tracking', require('./routes/damaged_170830/redirect-tracking'));
+
+
     //3rd party shops photo checker
     app.use('/shops-photo-checker', require('./routes/shops-photo-checker'));
 

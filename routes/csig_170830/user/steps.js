@@ -18,13 +18,18 @@ module.exports = {
         next: '/track'
     },
     '/need-csig': {
-        next: '/track'
+        fields: ['contact-csig'],
+        next: '/give-csig-details'
     },
     '/give-csig-details': {
+      fields: ['csig-email', 'csig-name'],
       backLink: 'need-csig',
-        next: '/tracking-waiting'
+        next: '/email-confirmation'
     },
     '/tracking-waiting': {
         next: '/track'
+    },
+    '/email-confirmation': {
+
     }
 };

@@ -63,5 +63,23 @@ module.exports = {
       validate: [
           'required'
         ]
+  },
+  'contact-csig': {
+      labelClassName: 'visuallyhidden',
+      validate: [
+          'required'
+        ]
+  },
+  'csig-email': {
+      labelClassName: 'visuallyhidden',
+      validate: [
+          'required'
+        ]
+  },
+  'csig-name': {
+      labelClassName: 'visuallyhidden',
+      validate: [
+          'required'
+        ]
   }
 };

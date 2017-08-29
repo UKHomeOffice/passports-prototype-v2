@@ -150,7 +150,7 @@
           "label": "Profession"
         },
         "employer": {
-          "label": "Employer's name"
+          "label": "Employer’s name"
         },
         "address-postcode": {
           "label": "Postcode"
@@ -163,7 +163,14 @@
         },
         "email-address": {
           "label": "Email"
+        },
+        "csig-name": {
+          "label": "The person’s full name"
+        },
+        "csig-email": {
+          "label": "The person’s email"
         }
+
     },
     "validation": {
         "required": "Please enter {{label}}.",
@@ -187,6 +194,9 @@
         "apply-uk": {
           "required": "Please tell us if you're applying from the UK"
         },
+        "contact-csig": {
+          "required": "You must contact the person before sending them an email with your application details"
+         },
         "application-country": {
           "required": "You must answer this question"
         },

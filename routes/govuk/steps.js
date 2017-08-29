@@ -5,6 +5,6 @@ module.exports = {
     },
     '/how-confirm': {
     },
-    '/recognised-professions': {
+    '/who-can-do-this': {
     }
 };

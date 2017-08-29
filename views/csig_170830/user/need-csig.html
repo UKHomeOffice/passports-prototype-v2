@@ -21,21 +21,23 @@
 <h2>What they need</h2>
 
 <p>They need an email with your application details and a link to go online. We'll show you what to include in your email, or we can send it for you.</p>
-
-<div class="panel panel-border-wide application-notice info-notice">
+<div class="panel panel-border-wide application-notice info-notice" style="margin: 20px 0 10px 0">
   <p>Before sending the person an email, you must contact them to check they are happy to do this.</p>
 </div>
-<!-- <p>You must contact the person before sharing your application details.</p> -->
+{{< hmpo-partials-form}}
+    {{$form}}
+      <div id="contact-csig-group" class="form-group form-group-compound">
+          <label for="contact-csig" class="block-label">
+              <input type="checkbox" id="contact-csig" name="contact-csig" value="true" aria-required="false" required="true">
+                  I've contacted the person and they have agreed to confirm <br>
+                  my identity.
+          </label>
+      </div>
+      <br>
+      {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
 
-  <div id="contact-prefs-email-group" class="form-group form-group-compound">
-      <label for="contact-prefs-email" class="block-label ">
-          <input type="checkbox" id="contact-prefs-email" name="contact-prefs-email" value="true" aria-required="false" required="true">
-              I've contacted the person and they have agreed to confirm <br>
-              my identity.
-      </label>
-  </div>
-<br>
-  <p><a href="/csig_170830/user/give-csig-details" class="button">Continue</a></p>
 
 <!--
 
@@ -67,7 +69,7 @@ URL: <a href="#">http://www.gov.uk/confirm-identity</a>
 
 
 <div class="panel-important">
-  <p>We need to confirm your identity before 14 August 2017 or you’ll need to start a new application.</p>
+  <p>We need to confirm your identity before 14 September 2017 or you’ll need to start a new application.</p>
 </div>
 
     <h2>Application history</h2>
