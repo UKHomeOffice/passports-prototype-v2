@@ -28,25 +28,25 @@
     <div id="email-form" class="panel panel-border-narrow js-hidden">
       <p>We'll send you a copy of the email.</p>
       <div id="csig-number-group" class="form-group">
-        <div id="name-group" class="form-group">
+        <div id="csig-name-group" class="form-group">
             <label for="name" class="form-label">
                 The person's full name
             </label>
             <span>
-                <input type="text" id="name" class="form-control name" name="name" value="" aria-describedby="name-prefix" aria-required="true">
+                <input type="text" id="csig-name" class="form-control name" name="csig-name" value="" aria-describedby="name-prefix" aria-required="true">
             </span>
         </div>
-        <div id="email-group" class="form-group">
-            <label for="email" class="form-label">
+        <div id="csig-email-group" class="form-group">
+            <label for="csig-email" class="form-label">
                 The person's email
             </label>
             <span>
-                <input type="text" id="email" class="form-control name" name="name" value="" aria-describedby="name-prefix" aria-required="true">
+                <input type="text" id="csig-email" class="form-control name" name="csig-email" value="" aria-describedby="name-prefix" aria-required="true">
             </span>
         </div>
       </div>
       <br>
-      <a href="#" class="button">Send email</a><br>
+      {{#input-submit}}{{/input-submit}}
     </div>
     <div id="contact-details" class="panel panel-border-narrow js-hidden">
       <p>You need to copy and paste these details into your email.</p>
