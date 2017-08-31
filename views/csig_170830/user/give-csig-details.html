@@ -2,30 +2,21 @@
 
 {{$pageTitle}}Give details{{/pageTitle}}
 {{$header}}
-    <h1>Who do you want to send the email?</h1>
+    <h1>Contact countersignature</h1>
 {{/header}}
 
 {{$content}}
-<h2>What they need</h2>
-
-<p>They need an email with your application details and a link to go online. We'll show you what to include in your email, or we can send it for you.</p>
+<p>We can send an email to the person confirming your identity. <br>We'll send you a copy of the email.</p>
 {{< hmpo-partials-form}}
     {{$form}}
-
-    <div id="contact-csig-group" class="form-group inline">
-      <fieldset role="radiogroup" aria-required="true">
-        <label class="block-label" for="contact-csig-No">
-          <input type="radio" name="contact-csig" id="contact-csig-No" value="false" required="true" data-toggle="contact-details" aria-controls="contact-details">
-          I'll send it
-        </label>
-          <label class="block-label" for="contact-csig-Yes">
-              <input type="radio" name="contact-csig" id="contact-csig-Yes" value="true" required="true" data-toggle="email-form" aria-controls="email-form" aria-expanded="false">
-              Send it for me
+      <div id="contact-csig-group" class="form-group form-group-compound">
+          <label for="contact-csig" class="block-label">
+              <input type="checkbox" id="contact-csig" name="contact-csig" value="true" aria-required="false" required="true">
+                  I've contacted the person and they have agreed to confirm <br>
+                  my identity.
           </label>
-      </fieldset>
-    </div>
-    <div id="email-form" class="panel panel-border-narrow js-hidden">
-      <p>We'll send you a copy of the email.</p>
+      </div>
+      <br>
       <div id="csig-number-group" class="form-group">
         <div id="csig-name-group" class="form-group">
             <label for="name" class="form-label">
@@ -44,23 +35,19 @@
             </span>
         </div>
       </div>
-      <br>
       {{#input-submit}}{{/input-submit}}
-    </div>
-    <div id="contact-details" class="panel panel-border-narrow js-hidden">
-      <p>You need to copy and paste these details into your email:</p>
-        <div style="border: 2px solid #DEE0E2; padding: 30px; margin-bottom: 30px">
-          <ul class="list-bullet" id="stuff">
-            <li>Applicant's date of birth: {{values.age-day}}&nbsp;{{values.age-month}}&nbsp;{{values.age-year}}</li>
-            <li>Application reference: {{values.reference}}</li>
-            <li>You'll need your passport and national insurance numbers</li>
-            <li>Link: <a href="#">http://www.gov.uk/confirm-identity</a></li>
+      <details>
+        <summary><span class="summary">I'll send the countersignature email myself</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>You need to copy and paste these details into your email:</p>
+          <ul class="list-bullet">
+            <li>your date of birth: {{values.age-day}}&nbsp;{{values.age-month}}&nbsp;{{values.age-year}}</li>
+            <li>your application reference: {{values.reference}}</li>
+            <li>their passport and national insurance numbers</li>
+            <li>this link: <a href="#">http://www.gov.uk/confirm-identity</a></li>
           </ul>
-          <!-- <a href="#" class="btn" data-clipboard-target="#stuff">Copy text to clipboard</a> -->
         </div>
-        <a href="/csig_170830/user/tracking-waiting" class="button">I've sent an email</a><br>
-    </div>
-
+      </details>
         {{/form}}
     {{/ hmpo-partials-form}}
 

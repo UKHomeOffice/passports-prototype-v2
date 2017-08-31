@@ -17,25 +17,19 @@
     <li>has a current UK passport</li>
   </ul>
 
-<h2>The person confirming your identity needs:</h2>
+<!-- <h2>The person confirming your identity needs:</h2>
 
-      <ul class="list-bullet" id="stuff">
+      <ul class="list-bullet">
         <li>your date of birth: {{values.age-day}}&nbsp;{{values.age-month}}&nbsp;{{values.age-year}}</li>
         <li>your application reference: {{values.reference}}</li>
         <li>their passport and national insurance numbers</li>
         <li>this link: <a href="#">http://www.gov.uk/confirm-identity</a></li>
-      </ul>
+      </ul> -->
       <!-- <a href="#" class="btn" data-clipboard-target="#stuff">Copy text to clipboard</a> -->
 
 {{< hmpo-partials-form}}
     {{$form}}
-      <div id="contact-csig-group" class="form-group form-group-compound">
-          <label for="contact-csig" class="block-label">
-              <input type="checkbox" id="contact-csig" name="contact-csig" value="true" aria-required="false" required="true">
-                  I've contacted the person and they have agreed to confirm <br>
-                  my identity.
-          </label>
-      </div>
+
       <br>
       {{#input-submit}}{{/input-submit}}
     {{/form}}

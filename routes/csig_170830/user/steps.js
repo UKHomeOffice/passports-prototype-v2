@@ -18,8 +18,8 @@ module.exports = {
         next: '/track'
     },
     '/need-csig': {
-        fields: ['contact-csig'],
-        next: '/tracking-waiting'
+      
+        next: '/give-csig-details'
     },
     '/give-csig-details': {
       fields: ['csig-email', 'csig-name'],
