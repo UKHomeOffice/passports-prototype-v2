@@ -9,20 +9,24 @@
   <h1>Ask someone to confirm <br>your identity</h1>
   <p>You need to do this as your passport is damaged.</p>
 </header>
-
-<H2>You must ask someone who:</H2>
+<h2>You must ask someone who:</h2>
 
   <ul class="list-bullet">
     <li>has known you as a friend, neighbour or colleague for at least 2 years</li>
     <li>works in or is retired from a <a href="/govuk/" target="_blank">recognised profession</a></li>
     <li>has a current UK passport</li>
   </ul>
-<h2>What they need</h2>
 
-<p>They need an email with your application details and a link to go online. We'll show you what to include in your email, or we can send it for you.</p>
-<div class="panel panel-border-wide application-notice info-notice" style="margin: 20px 0 10px 0">
-  <p>Before sending the person an email, you must contact them to check they are happy to do this.</p>
-</div>
+<h2>The person confirming your identity needs:</h2>
+
+      <ul class="list-bullet" id="stuff">
+        <li>your date of birth: {{values.age-day}}&nbsp;{{values.age-month}}&nbsp;{{values.age-year}}</li>
+        <li>your application reference: {{values.reference}}</li>
+        <li>their passport and national insurance numbers</li>
+        <li>this link: <a href="#">http://www.gov.uk/confirm-identity</a></li>
+      </ul>
+      <!-- <a href="#" class="btn" data-clipboard-target="#stuff">Copy text to clipboard</a> -->
+
 {{< hmpo-partials-form}}
     {{$form}}
       <div id="contact-csig-group" class="form-group form-group-compound">

@@ -19,7 +19,7 @@ module.exports = {
     },
     '/need-csig': {
         fields: ['contact-csig'],
-        next: '/give-csig-details'
+        next: '/tracking-waiting'
     },
     '/give-csig-details': {
       fields: ['csig-email', 'csig-name'],
