@@ -2,21 +2,13 @@
 
 {{$pageTitle}}Give details{{/pageTitle}}
 {{$header}}
-    <h1>Contact countersignature</h1>
+    <h1>Countersignatory details</h1>
 {{/header}}
 
 {{$content}}
-<p>We can send an email to the person confirming your identity. <br>We'll send you a copy of the email.</p>
+<p>We need the person's full name and email to contact them.</p>
 {{< hmpo-partials-form}}
     {{$form}}
-      <div id="contact-csig-group" class="form-group form-group-compound">
-          <label for="contact-csig" class="block-label">
-              <input type="checkbox" id="contact-csig" name="contact-csig" value="true" aria-required="false" required="true">
-                  I've contacted the person and they have agreed to confirm <br>
-                  my identity.
-          </label>
-      </div>
-      <br>
       <div id="csig-number-group" class="form-group">
         <div id="csig-name-group" class="form-group">
             <label for="name" class="form-label">
@@ -36,10 +28,10 @@
         </div>
       </div>
       {{#input-submit}}{{/input-submit}}
-      <details>
-        <summary><span class="summary">I'll send the countersignature email myself</span></summary>
+      <!-- <details>
+        <summary><span class="summary">I'll send the email myself</span></summary>
         <div class="panel panel-border-narrow">
-          <p>You need to copy and paste these details into your email:</p>
+          <p>You need to share these details with the person confirming your identity:</p>
           <ul class="list-bullet">
             <li>your date of birth: {{values.age-day}}&nbsp;{{values.age-month}}&nbsp;{{values.age-year}}</li>
             <li>your application reference: {{values.reference}}</li>
@@ -47,7 +39,7 @@
             <li>this link: <a href="#">http://www.gov.uk/confirm-identity</a></li>
           </ul>
         </div>
-      </details>
+      </details> -->
         {{/form}}
     {{/ hmpo-partials-form}}
 
