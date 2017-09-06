@@ -26,15 +26,12 @@ redis.getClient(function (err, client) {
 });
 
 function init(sessionStore) {
+
     // auth
    if (process.env.NODE_ENV && process.env.NODE_ENV.toLowerCase() === 'heroku') {
         var auth = require('express-basic-auth');
 
        function authoriser(user, pass) {
-            return (user === process.env.USER || user === 'fish') && (pass === process.env.PASS || pass === process.env.PASSWORD || pass === 'chips');
-        };
-
-        function authoriser(user, pass) {
             return (user === process.env.USER || user === 'fish') && (pass === process.env.PASS || pass === process.env.PASSWORD || pass === 'chips');
         };
 
