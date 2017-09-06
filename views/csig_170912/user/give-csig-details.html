@@ -1,0 +1,48 @@
+{{< layout}}
+
+{{$pageTitle}}Give details{{/pageTitle}}
+{{$header}}
+    <h1>Countersignatory details</h1>
+{{/header}}
+
+{{$content}}
+<p>We need the person's full name and email to contact them.</p>
+{{< hmpo-partials-form}}
+    {{$form}}
+      <div id="csig-number-group" class="form-group">
+        <div id="csig-name-group" class="form-group">
+            <label for="name" class="form-label">
+                The person's full name
+            </label>
+            <span>
+                <input type="text" id="csig-name" class="form-control name" name="csig-name" value="" aria-describedby="name-prefix" aria-required="true">
+            </span>
+        </div>
+        <div id="csig-email-group" class="form-group">
+            <label for="csig-email" class="form-label">
+                The person's email
+            </label>
+            <span>
+                <input type="text" id="csig-email" class="form-control name" name="csig-email" value="" aria-describedby="name-prefix" aria-required="true">
+            </span>
+        </div>
+      </div>
+      {{#input-submit}}{{/input-submit}}
+      <!-- <details>
+        <summary><span class="summary">I'll send the email myself</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>You need to share these details with the person confirming your identity:</p>
+          <ul class="list-bullet">
+            <li>your date of birth: {{values.age-day}}&nbsp;{{values.age-month}}&nbsp;{{values.age-year}}</li>
+            <li>your application reference: {{values.reference}}</li>
+            <li>their passport and national insurance numbers</li>
+            <li>this link: <a href="#">http://www.gov.uk/confirm-identity</a></li>
+          </ul>
+        </div>
+      </details> -->
+        {{/form}}
+    {{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}
