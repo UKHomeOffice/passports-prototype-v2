@@ -2,6 +2,9 @@
   "name": "passports-prototype",
   "version": "0.0.0",
   "description": "Passport journeys",
+  "engines": {
+    "node": "6.11.0"
+  },
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
