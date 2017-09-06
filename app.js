@@ -27,7 +27,7 @@ redis.getClient(function (err, client) {
 
 function init(sessionStore) {
     // auth
-  /*  if (process.env.NODE_ENV && process.env.NODE_ENV.toLowerCase() === 'heroku') {
+   if (process.env.NODE_ENV && process.env.NODE_ENV.toLowerCase() === 'heroku') {
         var auth = require('express-basic-auth');
 
        function authoriser(user, pass) {
@@ -42,7 +42,7 @@ function init(sessionStore) {
             authorizer: authoriser,
             challenge: true
         }));
-    }*/
+    }
 
     // session
     app.use(require('cookie-parser')());
