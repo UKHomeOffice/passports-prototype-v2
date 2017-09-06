@@ -1,0 +1,32 @@
+{{< layout}}
+
+{{$pageTitle}}Track a passport application{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Track your passport application</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+      <div id="passport-number-group" class="form-group">
+          <fieldset>
+            <div id="reference-group" class="form-group">
+                <label for="reference" class="form-label-bold">
+                    Application reference
+                    <span class="form-hint">You’ll find this in your confirmation email, for example PEX 123 456 7890.</span>
+                </label>
+
+                <span>
+                    <input type="text" id="reference" class="form-control reference" name="reference" value="" maxlength="16" aria-describedby="reference-prefix" aria-required="true">
+                </span>
+            </div>
+      </div>
+
+      {{#input-submit}}{{/input-submit}}
+      {{/form}}
+  {{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}

@@ -2,32 +2,106 @@
 
 {{$pageTitle}}Track a passport application{{/pageTitle}}
 
+
 {{$content}}
-  <header class="update-notice">
-    <h1>Ask someone to confirm <br>your identity</h1>
-    <p>You need to do this as your passport is damaged.</p>
-  </header>
-  <h2>You must ask someone who:</h2>
+
+<header class="update-notice">
+  <h1>Ask someone to confirm <br>your identity</h1>
+  <p>You need to do this as your passport is damaged.</p>
+</header>
+
+<H2>You must ask someone who:</H2>
 
   <ul class="list-bullet">
     <li>has known you as a friend, neighbour or colleague for at least 2 years</li>
     <li>works in or is retired from a <a href="/govuk/" target="_blank">recognised profession</a></li>
     <li>has a current UK passport</li>
   </ul>
-  <h2>Contact the countersignatory</h2>
-  <p>You must contact the countersignatory before continuing your application. We'll send them an email on your behalf once they've agreed.</p>
-  {{< hmpo-partials-form}}
+<h2>What they need</h2>
+
+<p>They need an email with your application details and a link to go online. We'll show you what to include in your email, or we can send it for you.</p>
+<div class="panel panel-border-wide application-notice info-notice" style="margin: 20px 0 10px 0">
+  <p>Before sending the person an email, you must contact them to check they are happy to do this.</p>
+</div>
+{{< hmpo-partials-form}}
     {{$form}}
       <div id="contact-csig-group" class="form-group form-group-compound">
-        <label for="contact-csig" class="block-label">
-          <input type="checkbox" id="contact-csig" name="contact-csig" value="true" aria-required="false" required="true">
-            I've contacted my countersignatory and they have agreed to confirm my identity.
-        </label>
+          <label for="contact-csig" class="block-label">
+              <input type="checkbox" id="contact-csig" name="contact-csig" value="true" aria-required="false" required="true">
+                  I've contacted the person and they have agreed to confirm <br>
+                  my identity.
+          </label>
       </div>
       <br>
       {{#input-submit}}{{/input-submit}}
     {{/form}}
-  {{/ hmpo-partials-form}}
+{{/ hmpo-partials-form}}
+
+
+<!--
+
+
+Date of birth: {{values.age-day}}/{{values.age-month}}/{{values.age-year}}<br>
+Application reference: {{values.reference}}<br>
+URL: <a href="#">http://www.gov.uk/confirm-identity</a>
+
+<p>You need to ask someone to confirm your identity. This is like a countersignature but they can do it online. They must:
+
+  <ul class="list-bullet">
+    <li>have a current UK passport</li>
+    <li>work in or be retired from a <a href="/govuk/" target="_blank">recognised profession</a></li>
+    <li>have known you as a friend, neighbour or colleague for at<br>least 2 years</li>
+  </ul>
+
+<h2>What you'll need</h2>
+  <p>You'll need this person's:</p>
+
+    <ul class="list-bullet">
+      <li>UK passport number</li>
+      <li>full name (as written on their passport)</a></li>
+      <li>phone number and email address</li>
+    </ul>
+
+<p>We'll send them an email with a link to confirm your identity online.</p>
+<p><a href="/csig_170830/user/give-csig-details" class="button">Tell us who'll do this for you</a></p>
+
+
+
+<div class="panel-important">
+  <p>We need to confirm your identity before 14 September 2017 or you’ll need to start a new application.</p>
+</div>
+
+    <h2>Application history</h2>
+    <article>
+    <table>
+        <tbody>
+          <tr>
+            <td>Identity needs confirming</td>
+            <td>07:30pm on 10th of June 2017 </td>
+          </tr>
+          <tr>
+            <td>Old passport received</td>
+            <td>06:30pm on 10th of June 2017 </td>
+          </tr>
+          <tr>
+            <td>Joined processing queue</td>
+            <td>10:05am on 5th of June 2017 </td>
+          </tr>
+          <tr>
+            <td>Application received</td>
+            <td>10:05am on 5th of June 2017 </td>
+          </tr>
+          <tr>
+            <td>Application submitted</td>
+            <td>10:03am on 5th of June 2017 </td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+      <br/>
+      <a href="/tracking" class="button-secondary">Sign out</a><br> -->
+
+
 {{/content}}
 
 
