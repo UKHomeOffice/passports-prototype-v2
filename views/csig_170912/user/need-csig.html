@@ -7,33 +7,33 @@
     <h1>Ask someone to confirm <br>your identity</h1>
   </header>
 
-    <p>You need to do this because your passport is damaged.</p>
-
-  <h2>The person confirming your identity must:</h2>
-
-  <ul class="list-bullet">
-    <li>have known you personally for at least 2 years, for example as a friend <br>or neighbour</li>
-    <li>work in or be retired from a <a href="/govuk/" target="_blank">recognised profession</a></li>
-    <li>have a current UK passport</li>
-  </ul>
-  <h2>You need to contact the person</h2>
-  <p>We'll send them an email with all the details but you must contact them first. When you speak to them, make sure they:</p>
-  <li>are happy to confirm your identity</li>
-  <li>can go online to do this in the next few days</li>
-  <li>know your date of birth including the year</li>
-  <p></p>
-  {{< hmpo-partials-form}}
-    {{$form}}
-      <div id="contact-csig-group" class="form-group form-group-compound">
-        <label for="contact-csig" class="block-label">
-          <input type="checkbox" id="contact-csig" name="contact-csig" value="true" aria-required="false" required="true">
-            I've contacted the person and they agree to confirm my identity.
-        </label>
-      </div>
-      <br>
-      {{#input-submit}}{{/input-submit}}
-    {{/form}}
-  {{/ hmpo-partials-form}}
+  <p>You need to do this because your passport is damaged.</p>
+  <a href="csig-requirements" class="button">Continue</a>
+  <br><br>
+  <h2>Application history</h2>
+  <article>
+  <table>
+      <tbody>
+        <tr>
+          <td>Old passport received</td>
+          <td>06:30pm on 10th of August 2017 </td>
+        </tr>
+        <tr>
+          <td>Joined processing queue</td>
+          <td>10:05am on 5th of August 2017 </td>
+        </tr>
+        <tr>
+          <td>Application received</td>
+          <td>10:05am on 5th of August 2017 </td>
+        </tr>
+        <tr>
+          <td>Application submitted</td>
+          <td>10:03am on 5th of August 2017 </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <a href="csig-requirements" class="button-secondary">Sign out</a>
 {{/content}}
 
 

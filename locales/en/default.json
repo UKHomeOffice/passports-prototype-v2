@@ -195,7 +195,7 @@
           "required": "Please tell us if you're applying from the UK"
         },
         "contact-csig": {
-          "required": "You must contact the person before sending them an email with your application details"
+          "required": "You need to contact the person"
          },
         "application-country": {
           "required": "You must answer this question"

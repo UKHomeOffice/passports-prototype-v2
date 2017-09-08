@@ -18,7 +18,10 @@ module.exports = {
         next: '/track'
     },
     '/need-csig': {
-      
+        next: '/csig-requirements'
+    },
+    '/csig-requirements': {
+        fields: ['contact-csig'],
         next: '/give-csig-details'
     },
     '/give-csig-details': {
