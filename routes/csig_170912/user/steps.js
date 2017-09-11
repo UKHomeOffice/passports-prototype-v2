@@ -21,13 +21,14 @@ module.exports = {
         next: '/csig-requirements'
     },
     '/csig-requirements': {
+        backLink: 'need-csig',
         fields: ['contact-csig'],
         next: '/give-csig-details'
     },
     '/give-csig-details': {
       fields: ['csig-email', 'csig-name'],
       backLink: 'need-csig',
-        next: '/email-confirmation'
+        next: '/tracking-waiting'
     },
     '/tracking-waiting': {
         next: '/track'
