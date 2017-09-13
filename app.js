@@ -564,6 +564,7 @@ function init(sessionStore) {
     app.use('/csig_170912/referee', require('./routes/csig_170912/referee'));
     app.use('/csig_170912/referee-5', require('./routes/csig_170912/referee-5'));
     app.use('/confirm-identity', require('./routes/csig_170912/referee-5'));
+    app.use('/track', require('./routes/csig_170912/user'));
 
     // damaged_170830
     app.use('/damaged_170830/overseas', require('./routes/damaged_170830/overseas'));
