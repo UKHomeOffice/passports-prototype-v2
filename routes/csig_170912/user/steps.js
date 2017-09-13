@@ -22,6 +22,11 @@ module.exports = {
     },
     '/csig-requirements': {
         backLink: 'need-csig',
+        // fields: ['contact-csig'],
+        next: '/csig-contact'
+    },
+    '/csig-contact': {
+        backLink: 'need-csig',
         fields: ['contact-csig'],
         next: '/give-csig-details'
     },
