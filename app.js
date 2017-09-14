@@ -566,6 +566,14 @@ function init(sessionStore) {
     app.use('/confirm-identity', require('./routes/csig_170912/referee-5'));
     app.use('/track', require('./routes/csig_170912/user'));
 
+    //csig_170921
+    app.use('/csig_170921/user', require('./routes/csig_170921/user'));
+    app.use('/csig_170921/start', require('./routes/csig_170921/start'));
+    app.use('/csig_170921/referee', require('./routes/csig_170921/referee'));
+    app.use('/csig_170921/referee-5', require('./routes/csig_170921/referee-5'));
+    app.use('/confirm-identity', require('./routes/csig_170921/referee-5'));
+    app.use('/track', require('./routes/csig_170921/user'));
+
     // damaged_170830
     app.use('/damaged_170830/overseas', require('./routes/damaged_170830/overseas'));
     app.use('/damaged_170830/overseas-not-eligible', require('./routes/damaged_170830/overseas-not-eligible'));

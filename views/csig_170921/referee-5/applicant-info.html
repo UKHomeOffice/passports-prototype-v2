@@ -1,0 +1,39 @@
+{{< layout}}
+{{$propositionHeader}}Renew {{/propositionHeader}}
+
+{{$pageTitle}}Give a countersignature{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Applicant's details</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+
+    <p>You should have be given these details by the applicant.</p>
+      <div id="pex-number-group" class="form-group">
+          <fieldset>
+              <legend><span class="form-label-bold">Application reference</span></legend>
+              <p class="form-hint" id="pex-hint">For example PEX 123 456 7890</p>
+                {{#input-text}}pex-number{{/input-text}}
+          </fieldset>
+          <fieldset>
+            <legend><span class="form-label-bold">Applicant's date of birth</span></legend>
+            <div class="form-date">
+              <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
+                {{#input-text}}age-day{{/input-text}}
+                {{#input-text}}age-month{{/input-text}}
+                {{#input-text}}age-year{{/input-text}}
+            </div>
+          </fieldset>
+      </div>
+      {{#input-submit}}{{/input-submit}}
+
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}
