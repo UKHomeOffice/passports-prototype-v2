@@ -24,7 +24,8 @@ module.exports = {
         next: '/csig-details-work'
     },
     '/csig-details-work': {
-        fields: ['profession', 'employer', 'employer-address', 'address-postcode', ],
+        fields: ['profession', 'retired' ],
+        //fields: ['profession', 'employer', 'employer-address', 'address-postcode', ],
         back:'confirm-applicant',
         next: '/csig-details-contact'
     },

@@ -162,11 +162,22 @@ module.exports = {
         ]
   },
   'retired': {
-    formatter: 'boolean-strict',
-    labelClassName: 'visuallyhidden',
-    legend: {
-      value: 'I am retired'
-    },
+      legend: {
+          className: 'form-label-bold'
+      },
+      options: [
+        { value: true, label: 'Yes' },
+        { value: false, label: 'No' }
+      ],
+      formatter: ['boolean'],
+      validate: [
+        'required',
+        {
+          type:'equal',
+          arguments:[true], /* if the arguments are NOT selected */
+          redirect:'/../referee/csig-details-work-address'
+        }
+      ],
   },
   'profession': {
       labelClassName: 'visuallyhidden',
