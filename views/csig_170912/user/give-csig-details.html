@@ -6,7 +6,7 @@
 {{/header}}
 
 {{$content}}
-<p><p>We'll send them an email with your application details and a link to go online.</p>
+<p>We'll send them an email with your application details and a link to go online.</p>
 {{< hmpo-partials-form}}
     {{$form}}
       <div id="csig-number-group" class="form-group">
@@ -27,21 +27,17 @@
             </span>
         </div>
       </div>
+      <br>
+      <div id="contact-csig-group" class="form-group form-group-compound" style="margin-top:-15px">
+        <label for="contact-csig" class="block-label">
+          <input type="checkbox" id="contact-csig" name="contact-csig" value="true" aria-required="false" required="true">
+            I've contacted the person and they agree to confirm my identity.
+        </label>
+      </div>
+      <br>
       {{#input-submit}}{{/input-submit}}
-      <!-- <details>
-        <summary><span class="summary">I'll send the email myself</span></summary>
-        <div class="panel panel-border-narrow">
-          <p>You need to share these details with the person confirming your identity:</p>
-          <ul class="list-bullet">
-            <li>your date of birth: {{values.age-day}}&nbsp;{{values.age-month}}&nbsp;{{values.age-year}}</li>
-            <li>your application reference: {{values.reference}}</li>
-            <li>their passport and national insurance numbers</li>
-            <li>this link: <a href="#">http://www.gov.uk/confirm-identity</a></li>
-          </ul>
-        </div>
-      </details> -->
-        {{/form}}
-    {{/ hmpo-partials-form}}
+    {{/form}}
+{{/ hmpo-partials-form}}
 
 {{/content}}
 

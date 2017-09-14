@@ -23,15 +23,10 @@ module.exports = {
     '/csig-requirements': {
         backLink: 'need-csig',
         // fields: ['contact-csig'],
-        next: '/csig-contact'
-    },
-    '/csig-contact': {
-        backLink: 'need-csig',
-        fields: ['contact-csig'],
         next: '/give-csig-details'
     },
     '/give-csig-details': {
-      fields: ['csig-email', 'csig-name'],
+      fields: ['csig-email', 'csig-name', 'contact-csig'],
       backLink: 'csig-requirements',
         next: '/tracking-waiting'
     },
