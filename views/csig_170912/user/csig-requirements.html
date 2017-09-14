@@ -2,48 +2,36 @@
 
 {{$pageTitle}}Track a passport application{{/pageTitle}}
 
-{{$main-content}}
-<div class="column-full">
-  <div class="flash-card">
-    <header>
-      <h1>Confirming your identity</h1>
-    </header>
-  <div class="grid-row">
-      <div class="column-two-thirds">
-        <ul>
-            <li><span class="circle circle-step">1</span><h2>You need to ask someone who:</h2>
-              <ul class="list-bullet" style="margin-left:32px;">
-                <li>has known you personally for at least 2 years, for example as a friend or neighbour</li>
-                <li>works in or is retired from a <a href="/govuk/" target="_blank">recognised profession</a></li>
-                <li>has a current UK passport</li>
-              </ul>
-           </li>
-            <li><span class="circle circle-step">2</span><h2>Contact the person</h2>
-            <p style="margin-left:32px;">We'll send the person confirming your identity an email. You must contact them before we send the email.</p>
-            </li>
-            <li><span class="circle circle-step">3</span><h2>Enter their name and email address</h2>
-              <p style="margin-left:32px;">We need the person's name and email so we can contact them.</p>
-            </li>
-            <li><span class="circle circle-step">4</span><h2>Check that they've received the email</h2>
-              <p style="margin-left:32px;">We'll update you when this is done or if you need to ask someone else.<br>
-            </li>
-        </ul>
-        <div class="form-group">
-          <a href="give-csig-details" class="button">Continue</a>
-        </div>
-        <p><a href="http://www.gov.uk">Sign out - I'll do this later</a></p>
-        </br>
-      </div>
-      <!-- passport image -->
-      <div class="column-one-third">
-          <!-- <object type="image/svg+xml" data="../../public/images/passport_open_final.svg"type="image/svg+xml" class="svg" tabindex="-1" style="padding-top:30px">
-              <img src="../../public/images/passport_open_final.png" width="206" height="215" alt="">
-          </object> -->
-      </div>
-    </div>
+{{$content}}
+  <h1>Contacting the person</h1>
+
+  <p>We'll send the person confirming your identity an email. You must contact them before we send the email.</p>
+
+  <h2>You need to ask someone who:</h2>
+
+  <ul class="list-bullet">
+    <li>has known you personally for at least 2 years, for example as a friend <br>or neighbour</li>
+    <li>works in or is retired from a <a href="/govuk/" target="_blank">recognised profession</a></li>
+    <li>has a current UK passport</li>
+  </ul>
+
+
+  <div class="panel panel-border-wide">
+    <p>Make sure the person knows your date of birth, including the year.</p>
   </div>
-</div>
-{{/main-content}}
+  {{< hmpo-partials-form}}
+    {{$form}}
+      <div id="contact-csig-group" class="form-group form-group-compound" style="margin-top:-15px">
+        <label for="contact-csig" class="block-label">
+          <input type="checkbox" id="contact-csig" name="contact-csig" value="true" aria-required="false" required="true">
+            I've contacted the person and they agree to confirm my identity.
+        </label>
+      </div>
+      <br>
+      {{#input-submit}}{{/input-submit}}
+    {{/form}}
+  {{/ hmpo-partials-form}}
+{{/content}}
 
 
 {{/ layout}}
