@@ -5,24 +5,17 @@
 
 
 {{$header}}
-    <h1>Your work address</h1>
+    <h1>Your home address</h1>
 {{/header}}
 
 {{$content}}
   {{< hmpo-partials-form}}
     {{$form}}
 
-      <div id="employer-group" class="form-group">
-          <label for="employer" class="form-label-bold">
-              Employer's name
-          </label>
-          {{#input-text}}employer{{/input-text}}
-      </div>
       <div id="employeraddress-group" class="form-group">
           <label for="employeraddress" class="form-label-bold">
-              Your work address
+              Address
           </label>
-          <p class="form-hint">We'll only write to your employer if we have to check any details.</p>
           <span>
               <input type="text" id="employer-address-1" class="form-control" name="employer-address" style="margin-bottom:10px;">
               <input type="text" id="employer-address-2" class="form-control" name="employer-address" style="margin-bottom:10px;">

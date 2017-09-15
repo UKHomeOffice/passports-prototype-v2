@@ -1,11 +1,12 @@
 module.exports = {
     '/': {
-        fields: ['passport-number','expiry-month','expiry-year', 'phoneno'],
+        fields: ['passport-number','expiry-month','expiry-year'],
+        back: '/',
         next: '/csig-identity-check'
     },
     '/csig-identity-check': {
         fields: ['name', 'lastname','age-day','age-month','age-year','national-insurance'],
-        back:'csig-info',
+        back: 'csig-info',
         next: '/csig-identity-auth'
     },
     '/csig-summary': {
@@ -20,17 +21,24 @@ module.exports = {
     },
     '/csig-details': {
         fields: ['title'],
-        back:'confirm-applicant',
+        back: 'confirm-applicant',
         next: '/csig-details-work'
     },
     '/csig-details-work': {
         fields: ['profession', 'retired' ],
-        //fields: ['profession', 'employer', 'employer-address', 'address-postcode', ],
         back:'confirm-applicant',
-        next: '/csig-details-contact'
+        next: '/csig-details-home-address'
     },
     '/csig-details-contact': {
         fields: ['phone-number', 'email-address'],
+        next: '/declaration'
+    },
+    '/csig-details-home-address': {
+        back: '/csig-details-work',
+        next: '/declaration'
+    },
+    '/csig-details-work-address': {
+        back: '/csig-details-work',
         next: '/declaration'
     },
     '/declaration': {
@@ -38,7 +46,6 @@ module.exports = {
         next: '/confirmation'
     },
     '/confirmation': {
-        back:'declaration',
         next: '/confirmation'
     },
     '/exceptions': {
