@@ -35,11 +35,11 @@ module.exports = {
     },
     '/csig-details-home-address': {
         backLink: 'csig-details-work',
-        next: '/declaration'
+        next: '/csig-details-contact'
     },
     '/csig-details-work-address': {
         backLink: 'csig-details-work',
-        next: '/declaration'
+        next: '/csig-details-contact'
     },
     '/declaration': {
         backLink:'csig-details-work',
