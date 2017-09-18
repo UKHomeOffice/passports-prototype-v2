@@ -11,82 +11,31 @@
 {{$content}}
   {{< hmpo-partials-form}}
     {{$form}}
-
       <p>We need to confirm that you have a <a href="/govuk" target="_blank">recognised profession</a>.</p>
       <div id="profession-group" class="form-group">
-          <label for="profession" class="form-label-bold">
-              Profession
-          </label>
-          {{#input-text}}profession{{/input-text}}
+        <label for="profession" class="form-label-bold">
+            Profession
+        </label>
+        {{#input-text}}profession{{/input-text}}
       </div>
       <div id="retired-check-group" class="form-group inline">
-          <fieldset role="radiogroup" aria-required="true">
-              <legend>
-                  <span class="form-label-bold">Are you retired?</span>
-              </legend>
-                  <label class="block-label" for="retired-check-Yes">
-                      <input type="radio" name="retired-check" id="retired-check-Yes" value="true" required="true" data-toggle="retired-yes" aria-controls="declarations" aria-expanded="false">
-                      Yes
-                  </label>
-                  <label class="block-label" for="retired-check-No">
-                      <input type="radio" name="retired-check" id="retired-check-No" value="false" data-toggle="retired-no" required="true">
-                      No
-                  </label>
-          </fieldset>
-      </div>
-      <div id="retired-yes" class="panel panel-border-narrow js-hidden">
-
-        <div id="employeraddress-group" class="form-group">
-            <label for="employeraddress" class="form-label-bold">
-                Home address
-            </label>
-            <span>
-                <input type="text" id="employer-address-1" class="form-control" name="employer-address" style="margin-bottom:10px;">
-                <input type="text" id="employer-address-2" class="form-control" name="employer-address" style="margin-bottom:10px;">
-                <input type="text" id="employer-address-3" class="form-control" name="employer-address">
-            </span>
-        </div>
-        <div id="address-postcode-group" class="form-group">
-            <label for="address-postcode">
-                Postcode
-            </label>
-            <br>
-            <input type="text" name="address-postcode" id="address-postcode" class="form-control input-code">
-        </div>
-      </div>
-      <div id="retired-no" class="panel panel-border-narrow js-hidden">
-
-        <div id="employer-group" class="form-group">
-            <label for="employer" class="form-label-bold">
-                Employer's name
-            </label>
-            {{#input-text}}employer{{/input-text}}
-        </div>
-        <div id="employeraddress-group" class="form-group">
-            <label for="employeraddress" class="form-label-bold">
-                Your work address
-            </label>
-            <p class="form-hint">We'll only write to your employer if we have to check any details.</p>
-            <span>
-                <input type="text" id="employer-address-1" class="form-control" name="employer-address" style="margin-bottom:10px;">
-                <input type="text" id="employer-address-2" class="form-control" name="employer-address" style="margin-bottom:10px;">
-                <input type="text" id="employer-address-3" class="form-control" name="employer-address">
-            </span>
-        </div>
-        <div id="address-postcode-group" class="form-group">
-            <label for="address-postcode">
-                Postcode
-            </label>
-            <br>
-            <input type="text" name="address-postcode" id="address-postcode" class="form-control input-code">
-        </div>
+        <fieldset role="radiogroup" aria-required="true">
+          <legend>
+              <span class="form-label-bold">Are you retired?</span>
+          </legend>
+          <label class="block-label" for="retired-check-Yes">
+              <input type="radio" name="retired" id="retired-check-Yes" value="true" required="true" aria-controls="declarations" aria-expanded="false">
+              Yes
+          </label>
+          <label class="block-label" for="retired-check-No">
+              <input type="radio" name="retired" id="retired-check-No" value="false" required="true">
+              No
+          </label>
+        </fieldset>
       </div>
       {{#input-submit}}{{/input-submit}}
-
     {{/form}}
   {{/ hmpo-partials-form}}
-
-
 
 {{/content}}
 

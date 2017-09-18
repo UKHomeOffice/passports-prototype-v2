@@ -1,11 +1,12 @@
 module.exports = {
     '/': {
-        fields: ['passport-number','expiry-month','expiry-year', 'phoneno'],
+        fields: ['passport-number','expiry-month','expiry-year'],
+        backLink: '../referee-5/applicant-info',
         next: '/csig-identity-check'
     },
     '/csig-identity-check': {
         fields: ['name', 'lastname','age-day','age-month','age-year','national-insurance'],
-        back:'csig-info',
+        backLink: './',
         next: '/csig-identity-auth'
     },
     '/csig-summary': {
@@ -20,25 +21,32 @@ module.exports = {
     },
     '/csig-details': {
         fields: ['title'],
-        back:'confirm-applicant',
+        backLink: 'confirm-applicant',
         next: '/csig-details-work'
     },
     '/csig-details-work': {
-        fields: ['profession', 'employer', 'employer-address', 'address-postcode', ],
-        back:'confirm-applicant',
-        next: '/csig-details-contact'
+        fields: ['profession', 'retired' ],
+        backLink:'confirm-applicant',
+        next: '/csig-details-home-address'
     },
     '/csig-details-contact': {
         fields: ['phone-number', 'email-address'],
         next: '/declaration'
     },
+    '/csig-details-home-address': {
+        backLink: 'csig-details-work',
+        next: '/csig-details-contact'
+    },
+    '/csig-details-work-address': {
+        backLink: 'csig-details-work',
+        next: '/csig-details-contact'
+    },
     '/declaration': {
-        back:'csig-details-work',
+        backLink:'csig-details-work',
         next: '/confirmation'
     },
     '/confirmation': {
-        back:'declaration',
-        next: '/confirmation'
+
     },
     '/exceptions': {
 
