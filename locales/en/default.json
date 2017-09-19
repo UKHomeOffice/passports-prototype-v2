@@ -194,6 +194,9 @@
         "apply-uk": {
           "required": "Please tell us if you're applying from the UK"
         },
+        "applicant-check": {
+          "required": "Is this David Smith?"
+        },
         "contact-csig": {
           "required": "You need to contact the person"
          },
