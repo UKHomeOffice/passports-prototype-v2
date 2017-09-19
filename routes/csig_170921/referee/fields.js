@@ -82,7 +82,7 @@ module.exports = {
         {
           type:'equal',
           arguments:[true], /* if the arguments are NOT selected */
-          redirect:'/../referee/exceptions'
+          redirect:'/../referee/confirm-applicant#openModal'
         }
       ],
   },
