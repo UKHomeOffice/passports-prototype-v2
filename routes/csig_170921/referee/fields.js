@@ -82,7 +82,7 @@ module.exports = {
         {
           type:'equal',
           arguments:[true], /* if the arguments are NOT selected */
-          redirect:'/../referee/confirm-applicant#openModal'
+          redirect:'/../referee/applicant-not-applicant'
         }
       ],
   },
@@ -96,7 +96,7 @@ module.exports = {
         {
           type:'equal',
           arguments:['Yes'], /* if the arguments are NOT selected */
-          redirect:'/../referee/exceptions'
+          redirect:'/../referee/applicant-summary'
         }
       ],
       dependent: {
@@ -114,7 +114,7 @@ module.exports = {
         {
           type:'equal',
           arguments:['No'],
-          redirect:'/../referee/exceptions'
+          redirect:'/../referee/applicant-summary'
         }
       ],
       dependent: {

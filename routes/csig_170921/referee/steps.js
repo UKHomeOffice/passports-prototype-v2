@@ -54,4 +54,10 @@ module.exports = {
     '/exceptions': {
 
     },
+    '/applicant-summary': {
+
+    },
+    '/applicant-not-applicant': {
+
+    }
 };
