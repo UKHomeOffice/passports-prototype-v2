@@ -54,10 +54,13 @@ module.exports = {
     '/exceptions': {
 
     },
+    '/exceptions-not-applicant': {
+
+    },
     '/applicant-summary': {
 
     },
     '/applicant-not-applicant': {
-
+      backLink: 'confirm-applicant'
     }
 };
