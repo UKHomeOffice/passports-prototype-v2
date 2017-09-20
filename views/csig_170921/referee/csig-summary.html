@@ -9,9 +9,14 @@
 {{/header}}
 
 {{$content}}
-<p>Your details don't match our records. Please check what you've entered and try again.</p>
-<!-- <h2 class="heading-medium">Your UK passport</h2> -->
-<br>
+<div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+  <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+    Your details don't match our records.
+  </h2>
+  <p>
+    Please check what you've entered and try again. <br>You have 2 attempts left.
+  </p>
+</div>
 <dl class="govuk-check-your-answers cya-questions-short">
 
         <div>
