@@ -488,6 +488,14 @@ app.use('/csig_170921/referee-5', require('./routes/csig_170921/referee-5'));
 app.use('/confirm-identity', require('./routes/csig_170921/referee-5'));
 app.use('/track', require('./routes/csig_170921/user'));
 
+//csig_171101
+app.use('/csig_171101/user', require('./routes/csig_171101/user'));
+app.use('/csig_171101/start', require('./routes/csig_171101/start'));
+app.use('/csig_171101/referee', require('./routes/csig_171101/referee'));
+app.use('/csig_171101/referee-5', require('./routes/csig_171101/referee-5'));
+app.use('/confirm-identity', require('./routes/csig_171101/referee-5'));
+app.use('/track', require('./routes/csig_171101/user'));
+
 // damaged_170830
 app.use('/damaged_170830/overseas', require('./routes/damaged_170830/overseas'));
 app.use('/damaged_170830/overseas-not-eligible', require('./routes/damaged_170830/overseas-not-eligible'));
