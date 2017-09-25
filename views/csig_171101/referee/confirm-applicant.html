@@ -1,0 +1,87 @@
+{{< layout}}
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Confirm applicant{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Is this David Smith?</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+    {{$form}}
+      <img src="../../public/images/photoguide/image-m2-plain.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+      <br>
+      <br>
+      <div id="applicant-check-group" class="form-group inline">
+        <fieldset role="radiogroup" aria-required="true">
+          <!-- <legend>
+              <span class="form-label-bold">Is this David Smith?</span>
+          </legend> -->
+          <label class="block-label" for="applicant-check-Yes">
+              <input type="radio" name="applicant-check" id="applicant-check-Yes" value="true" required="true" data-toggle="declarations" aria-controls="declarations" aria-expanded="false">
+              Yes
+          </label>
+          <label class="block-label" for="applicant-check-No">
+              <input type="radio" name="applicant-check" id="applicant-check-No" value="false" required="true">
+              No
+          </label>
+        </fieldset>
+      </div>
+      <div id="declarations" class="panel panel-border-narrow js-hidden">
+        <div id="applicant-check-friend" class="form-group inline">
+          <fieldset role="radiogroup" aria-required="true">
+              <label class="form-label" for="">Do you know David personally, for example as a friend or neighbour?</label>
+              <label class="block-label" for="applicant-check-friend-Yes">
+                  <input type="radio" name="applicant-check-friend" id="applicant-check-friend-Yes" value="Yes" required="true">
+                  Yes
+              </label>
+              <label class="block-label" for="applicant-check-friend-No">
+                  <input type="radio" name="applicant-check-friend" id="applicant-check-friend-No" value="No" required="true">
+                  No
+              </label>
+          </fieldset>
+        </div>
+        <div id="applicant-check-address" class="form-group inline ">
+          <fieldset role="radiogroup" aria-required="true">
+            <label class="form-label" for="">Are you related to, in a relationship with or living at the same address <br>as David?</label>
+              <label class="block-label" for="applicant-check-address-Yes">
+                  <input type="radio" name="applicant-check-address" id="applicant-check-address-Yes" value="Yes" required="true">
+                  Yes
+              </label>
+              <label class="block-label" for="applicant-check-address-No">
+                  <input type="radio" name="applicant-check-address" id="applicant-check-address-No" value="No" required="true">
+                  No
+              </label>
+          </fieldset>
+        </div>
+        <div id="knowntime-group" class="form-group">
+          <label class="form-label" for="">How many years have you known David?</label>
+          <span>
+              <input type="text" id="knowntime" class="form-control date" name="knowntime" value="" maxlength="2" aria-describedby="knowntime" aria-required="true" style="width:70px;">
+              <span id="reference-prefix" class="prefix"></span>
+          </span>
+        </div>
+      </div>
+      {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+<!-- modal box
+<br/><br/><br/>
+<div id="openModal" class="modalDialog">
+  <div class="timeout_content" style="padding: 5px 20px 20px">
+      <h2>Are you sure?</h2>
+      <p>Generic message here about how you can't continue</p>
+      <a href="exceptions" class="button" title="Close">Sorry Dave</a>
+      <a href="#close" style="display: inline-block; margin:10px 0 0 10px">Ooops, my mistake</a>
+    </div>
+  </div>
+</div>
+-->
+
+
+{{/content}}
+
+{{/ layout}}

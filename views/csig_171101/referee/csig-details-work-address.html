@@ -1,0 +1,54 @@
+{{< layout}}
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Your work address{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Your work address</h1>
+{{/header}}
+
+{{$content}}
+  {{< hmpo-partials-form}}
+    {{$form}}
+
+      <div id="employer-group" class="form-group">
+          <label for="employer" class="form-label-bold">
+              Employer's name
+          </label>
+          {{#input-text}}employer{{/input-text}}
+      </div>
+      <div id="employeraddress-group" class="form-group">
+          <label for="employeraddress" class="form-label-bold">
+              Your work address
+          </label>
+          <p class="form-hint">We'll only write to your employer if we have to check any details.</p>
+          <span>
+              <input type="text" id="employer-address-1" class="form-control" name="employer-address" style="margin-bottom:10px;">
+              <input type="text" id="employer-address-2" class="form-control" name="employer-address" style="margin-bottom:10px;">
+              <input type="text" id="employer-address-3" class="form-control" name="employer-address" style="margin-bottom:10px;">
+              <input type="text" id="employer-address-4" class="form-control" name="employer-address" style="margin-bottom:10px;">
+              <input type="text" id="employer-address-5" class="form-control" name="employer-address">
+          </span>
+      </div>
+      <div id="address-postcode-group" class="form-group">
+          <label for="address-postcode" class="form-label-bold">
+              Town or city
+          </label>
+          <input type="text" name="town-city" id="town-city" class="form-control">
+      </div>
+      <div id="address-postcode-group" class="form-group">
+          <label for="address-postcode" class="form-label-bold">
+              Postcode
+          </label>
+          <input type="text" name="address-postcode" id="address-postcode" class="form-control input-code">
+      </div>
+      {{#input-submit}}{{/input-submit}}
+
+    {{/form}}
+  {{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+{{/ layout}}
