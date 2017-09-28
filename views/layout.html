@@ -1,13 +1,22 @@
 {{< hmpo-layout}}
+{{$main}}
+    {{$breadcrumb}}{{/breadcrumb}}
+    <main id="content" class="main-content" role="main">
+      <div class="fill-banner">
+        <a class="button__fill" id="populate"/>Fill</a>
+        <a class="button__fill" href="/">Home</a>
+      </div>
+        {{> hmpo-partials-betatag}}
+        {{> hmpo-partials-back}}
+        <div class="grid-row">
+            {{> hmpo-partials-maincontent}}
+        </div>
+    </main>
+{{/main}}
 
-{{$propositionHeader}}
-<div class="header-proposition">
-    <div class="content">
-        <nav id="proposition-menu">
-            <a href="/" title="Renew your passport home" id="proposition-name">Renew your passport</a>
-        </nav>
-    </div>
-</div>
-{{/propositionHeader}}
+{{$bodyEnd}}
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  {{> hmpo-partials-body-end}}
+{{/bodyEnd}}
 
 {{/ hmpo-layout}}
