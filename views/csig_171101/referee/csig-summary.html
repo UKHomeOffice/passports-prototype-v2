@@ -17,7 +17,70 @@
     Check what you've entered and try again. <br>You can try 2 more times.
   </p>
 </div>
-<dl class="govuk-check-your-answers cya-questions-short">
+<div class="confirmation">
+  <div class="section old-passport-details">
+      <dl class="passport-number">
+          <dt class="column-one-third">Passport number</dt>
+          <dd class="column-two-thirds">
+            <p>{{values.passport-number}}</p>
+            <!-- <div class="button-wrapper">
+                <a href="/csig_171101/referee">Change<span class="visuallyhidden"> passport number</span></a>
+            </div> -->
+          </dd>
+      </dl>
+      <dl class="expiry-date">
+          <dt class="column-one-third">Expiry date</dt>
+          <dd class="column-two-thirds">
+            <p>{{values.expiry-month}}&nbsp;
+            {{values.expiry-year}}</p>
+            <!-- <div class="button-wrapper">
+                <a href="/csig_171101/referee">Change<span class="visuallyhidden"> expiry date</span></a>
+            </div> -->
+          </dd>
+      </dl>
+  </div>
+  <div class="section old-passport-details">
+      <dl class="passport-number">
+          <dt class="column-one-third">First and middle names</dt>
+          <dd class="column-two-thirds">
+            <p>{{values.name}}</p>
+            <!-- <div class="button-wrapper">
+                <a href="/csig_171101/referee/csig-identity-check">Change<span class="visuallyhidden"> first and middle names</span></a>
+            </div> -->
+          </dd>
+      </dl>
+      <dl class="expiry-date">
+          <dt class="column-one-third">Last name</dt>
+          <dd class="column-two-thirds">
+            <p>{{values.lastname}}</p>
+            <!-- <div class="button-wrapper">
+                <a href="/csig_171101/referee/csig-identity-check">Change<span class="visuallyhidden"> last name</span></a>
+            </div> -->
+          </dd>
+      </dl>
+      <dl class="passport-number">
+          <dt class="column-one-third">Date of birth</dt>
+          <dd class="column-two-thirds">
+            <p>{{values.age-day}}&nbsp;
+            {{values.age-month}}&nbsp;
+            {{values.age-year}}</p>
+            <!-- <div class="button-wrapper">
+                <a href="/csig_171101/referee/csig-identity-check">Change<span class="visuallyhidden"> date of birth</span></a>
+            </div> -->
+          </dd>
+      </dl>
+      <dl class="expiry-date">
+          <dt class="column-one-third">National insurance number</dt>
+          <dd class="column-two-thirds">
+            <p>{{values.national-insurance}}</p>
+            <!-- <div class="button-wrapper">
+                <a href="/csig_171101/referee/csig-identity-check">Change<span class="visuallyhidden"> national insurance number</span></a>
+            </div> -->
+          </dd>
+      </dl>
+  </div>
+</div>
+<!-- <dl class="govuk-check-your-answers cya-questions-short">
 
         <div>
           <dt class="cya-question">
@@ -48,9 +111,7 @@
           </dd>
         </div>
 </dl>
-<br>
-<!-- <h2 class="heading-medium">Your details</h2> -->
-<br>
+
 <dl class="govuk-check-your-answers cya-questions-short">
         <div>
           <dt class="cya-question">
@@ -109,9 +170,9 @@
           </dd>
         </div>
 
-      </dl>
+      </dl> -->
 <p></p>
-<a href="/csig_171101/referee-5/confirm-applicant" class="button">Try again</a>
+<a href="/csig_171101/referee" class="button">Try again</a>
 
 {{/content}}
 
