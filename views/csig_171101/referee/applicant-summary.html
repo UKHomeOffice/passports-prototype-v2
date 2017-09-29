@@ -13,54 +13,50 @@
 <img src="../../public/images/photoguide/image-m2-plain.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
 <br>
 <br>
-<style>
-  .cya-question {width: 70%!important; font-weight: normal!important;}
-</style>
-<dl class="govuk-check-your-answers cya-questions-short">
+<dl class="govuk-check-your-answers cya-questions-long">
+  <div>
+    <dt class="cya-question">
+      Do you know David personally, for example as a friend or neighbour?
+    </dt>
+    <dd class="cya-answer">
+      {{values.applicant-check-friend}}
+    </dd>
+    <dd class="cya-change">
+      <a href="/csig_171101/referee/confirm-applicant">
+        Change<span class="visually-hidden"> passport number</span>
+      </a>
+    </dd>
+  </div>
 
-        <div>
-          <dt class="cya-question">
-            Do you know David personally, for example as a friend or neighbour?
-          </dt>
-          <dd class="cya-answer">
-            {{values.applicant-check-friend}}
-          </dd>
-          <dd class="cya-change">
-            <a href="/csig_171101/referee/confirm-applicant">
-              Change<span class="visually-hidden"> passport number</span>
-            </a>
-          </dd>
-        </div>
-
-        <div>
-          <dt class="cya-question">
-            Are you related to, in a relationship with or living at the same address
+  <div>
+    <dt class="cya-question">
+      Are you related to, in a relationship with or living at the same address
 as David?
-          </dt>
-          <dd class="cya-answer">
-            {{values.applicant-check-address}}
+    </dt>
+    <dd class="cya-answer">
+      {{values.applicant-check-address}}
 
-          </dd>
-          <dd class="cya-change">
-            <a href="/csig_171101/referee/confirm-applicant">
-              Change<span class="visually-hidden"> passport expiry date</span>
-            </a>
-          </dd>
-        </div>
-        <div>
-          <dt class="cya-question">
-            How many years have you known David?
-          </dt>
-          <dd class="cya-answer">
-            {{values.knowntime}}
+    </dd>
+    <dd class="cya-change">
+      <a href="/csig_171101/referee/confirm-applicant">
+        Change<span class="visually-hidden"> passport expiry date</span>
+      </a>
+    </dd>
+  </div>
+  <div>
+    <dt class="cya-question">
+      How many years have you known David?
+    </dt>
+    <dd class="cya-answer">
+      {{values.knowntime}}
 
-          </dd>
-          <dd class="cya-change">
-            <a href="/csig_171101/referee/confirm-applicant">
-              Change<span class="visually-hidden"> passport expiry date</span>
-            </a>
-          </dd>
-        </div>
+    </dd>
+    <dd class="cya-change">
+      <a href="/csig_171101/referee/confirm-applicant">
+        Change<span class="visually-hidden"> passport expiry date</span>
+      </a>
+    </dd>
+  </div>
 </dl>
 <p></p>
 <a href="/csig_171101/referee/exceptions" class="button">Continue</a>

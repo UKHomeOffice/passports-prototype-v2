@@ -79,4 +79,11 @@
     }
   }
 
+  //prototype overrides to match style of existing confirmation
+  &.cya-questions-long .cya-question {
+    width: 70%;
+    color: #6f777b;
+    font-weight: normal;
+  }
+
 }
