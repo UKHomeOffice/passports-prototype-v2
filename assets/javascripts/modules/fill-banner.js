@@ -20,13 +20,40 @@
       "reference": "1234567890",
       "email-address": "test@thundercats.com",
       "csig-name": "Adrian",
-      "csig-email": "test@thundercats.com"
+      "csig-email": "test@thundercats.com",
+      "town-of-birth": "The promised land",
+      "town": "Londinium",
+      "address1": "10 Liono Street",
+      "postcode": "SE1 1QW",
+      "email": "test@thundercats.com",
+      "mobile": "07999123456"
   };
 
   $("#populate").on("click", function(){
       Object.keys(values).forEach(function(key){
           $("#" + key).val(values[key]);
       });
+
+      //damaged
+      $('#apply-uk-true').click();
+      $('#passport-before-true').click();
+      $('#lost-stolen-false').click();
+      $('#name-changed-false').click();
+      $('#uncancelled-No').click();
+      $('#passport-damaged-No').click();
+      $('#choose-photo-upload').click();
+      $('#plain-expression-Yes').click();
+      $('#shadows-face-Yes').click();
+      $('#yes').click();
+      $('#title-Mr').click();
+      $('#previous-name-false').click();
+      $('#gender-M').click();
+      $('#born-in-uk-true').click();
+      $('#passport-options-32').click();
+      $('#can-sign-true').click();
+      $('#secure-return-false').click();
+
+
       $(':checkbox').click();
       $('#applicant-check-Yes').click();
       $('#applicant-check-friend-Yes').click();
@@ -34,5 +61,7 @@
       $('#retired-check-Yes').click();
       $('#knowntime').val('2');
       $('.button')[0].click();
+
+
   });
 })();
