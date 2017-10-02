@@ -8,7 +8,7 @@ module.exports = {
         controller: require('../../../controllers/go-overseas'),
         fields: ['uncancelled'],
         backLink: './',
-        next: '/passport-damaged',
+        next: '/../intro',
         nextAlt: '../overseas'
     },
     '/passport-damaged': {
