@@ -1,0 +1,41 @@
+{{< layout}}
+
+{{$pageTitle}}Your old passport{{/pageTitle}}
+
+{{$header}}
+    <h1>Can you read your passport number?</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+<fieldset class="inline">
+    {{#radio-group}}read-passport-number{{/radio-group}}
+    <div id="read-number" class="panel panel-border-narrow js-hidden">
+      <fieldset>
+         <legend><span class="form-label-bold">Passport number</span></legend>
+        <p class="form-hint" id="dob-hint">For example 502135326</p>
+          {{#input-text}}passport-number{{/input-text}}
+          <!-- {{#checkbox}}number-illegible{{/checkbox}} -->
+      </fieldset>
+    </div>
+    <details>
+        <summary><span class="summary">Where can I find my passport number?</span></summary>
+        <div class="panel panel-border-narrow">
+          <p></p>
+          <ul class="list-bullet">
+            <li>my passport has had it</li>
+            <li>where can i find my passport number?</li>
+            <li>other than on the main page?</li>
+          </ul>
+        </div>
+    </details>
+  {{#input-submit}}{{/input-submit}}
+</fieldset>
+{{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}

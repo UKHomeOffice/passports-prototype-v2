@@ -1,11 +1,49 @@
 var _ = require('underscore');
 
 module.exports = {
+  'passport-damaged': {
+    legend: {
+      value: 'Is your passport damaged?',
+      className: 'visuallyhidden'
+    },
+    options: [
+      {value: 'Yes', label: 'Yes', toggle: 'how-damaged'},
+      {value: 'No', label: 'No'}
+    ],
+    validate: [
+      'required',
+      {
+        type:'equal',
+        arguments:['No'], /* if Yes is selected */
+        redirect:'/read-passport-number'
+      }
+    ]
+  },
+  'read-passport-number': {
+    legend: {
+      value: 'Is your passport damaged?',
+      className: 'visuallyhidden'
+    },
+    options: [
+      {value: 'Yes', label: 'Yes', toggle: 'read-number'},
+      {value: 'No', label: 'No'}
+    ],
+    validate: [
+      'required'
+
+    ]
+  },
   'passport-number': {
       labelClassName: 'visuallyhidden',
       validate: [
           'required'
         ]
+  },
+  'number-illegible': {
+    formatter: 'boolean-strict',
+    legend: {
+      value: 'I can’t read my old passport number'
+    },
   },
   'can-sign': {
     legend: {
