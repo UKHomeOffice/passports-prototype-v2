@@ -169,6 +169,9 @@
         },
         "csig-email": {
           "label": "The person’s email"
+        },
+        "number-illegible": {
+          "label": "I can’t read my old passport number"
         }
 
     },

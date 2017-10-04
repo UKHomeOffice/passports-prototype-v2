@@ -1,0 +1,37 @@
+{{< layout}}
+
+
+{{$pageTitle}}Is your passport damaged?{{/pageTitle}}
+
+{{$header}}
+    <h1>Is your passport damaged?</h1>
+{{/header}}
+
+{{$content}}
+
+    {{< hmpo-partials-form}}
+    {{$form}}
+      <fieldset class="inline">
+          {{#radio-group}}passport-damaged{{/radio-group}}
+          <details>
+              <summary><span class="summary">I'm not sure if my passport is damaged</span></summary>
+              <div class="panel panel-border-narrow">
+                <p>Her Majesty's Passport Office classes your passport as damaged if:</p>
+                <ul class="list-bullet">
+                  <li>you can't read any of your details</li>
+                  <li>the laminate cover has come away</li>
+                  <li>there's ink or chemical spillage on any of the pages</li>
+                  <li>there's discolouring of the biodata (eg your name or date of birth)</li>
+                  <li>any of the pages missing</li>
+                  <li>the chip is damaged or showing through the back cover (e-passports only)</li>
+                  <li>there's excess water damage (eg your passport has been through a wash)</li>
+                </ul>
+              </div>
+          </details>
+        {{#input-submit}}{{/input-submit}}
+      </fieldset>
+    {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
