@@ -2,8 +2,9 @@
   var values = {
       "pex-number": "1234567890",
       "passport-number": "502135326",
+      "expiry-day": "27",
       "expiry-month": "12",
-      "expiry-year": "21",
+      "expiry-year": "2019",
       "phoneno": "0208 123 4567",
       "name": "Adrian",
       "lastname": "Brereton",

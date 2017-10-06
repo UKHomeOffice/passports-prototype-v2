@@ -21,6 +21,9 @@
         "age-year":{
           "label": "Year"
         },
+        "expiry-day":{
+          "label": "Day"
+        },
         "expiry-month":{
           "label": "Month"
         },
