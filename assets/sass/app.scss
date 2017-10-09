@@ -12,6 +12,7 @@
 @import "modules/timeline-2";
 @import "modules/fill-banner";
 
+
 /* additional css to match production prototype */
 .alert-default {
   border-color: $light-blue;
@@ -312,6 +313,13 @@ details {
     content: "";
     display: block;
     clear: both;
+}
+
+.confirmation dl .column-long {
+  padding-right: $gutter-half;
+  @media (max-width: 769px) {
+    width: 70%;
+  }
 }
 
 .panel-important {
