@@ -316,10 +316,8 @@ details {
 }
 
 .confirmation dl .column-long {
+  width: 66.6666%;
   padding-right: $gutter-half;
-  @media (max-width: 769px) {
-    width: 70%;
-  }
 }
 
 .panel-important {
