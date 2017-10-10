@@ -62,29 +62,26 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
       }
     );
 
-    if(values['passport-damaged']=='Yes') {
+    if(values['what-damaged']){
+      oldPassportFields.push(
+        {
+            step: this.getEditStep('what-damaged'),
+            title: 'What is damaged on your passport?',
+            value: values['what-damaged']
+        }
+      );
+    };
 
-      if(values['what-damaged']){
-        oldPassportFields.push(
-          {
-              step: this.getEditStep('what-damaged'),
-              title: 'What is damaged on your passport?',
-              value: values['what-damaged']
-          }
-        );
-      };
+    if(values['how-damaged']){
+      oldPassportFields.push(
+        {
+            step: this.getEditStep('how-damaged'),
+            title: 'How is your passport damaged?',
+            value: values['how-damaged']
+        }
+      );
+    };
 
-      if(values['how-damaged']){
-        oldPassportFields.push(
-          {
-              step: this.getEditStep('how-damaged'),
-              title: 'How is your passport damaged?',
-              value: values['how-damaged']
-          }
-        );
-      };
-
-    }
     response.sections.push({
         className: 'old-passport-details',
         title: 'Old passport',

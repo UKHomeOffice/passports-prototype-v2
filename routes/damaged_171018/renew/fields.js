@@ -7,7 +7,7 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [
-      {value: 'Yes', label: 'Yes'},
+      {value: 'Yes', label: 'Yes', toggle: 'damaged-info'},
       {value: 'No', label: 'No'}
     ],
     validate: [

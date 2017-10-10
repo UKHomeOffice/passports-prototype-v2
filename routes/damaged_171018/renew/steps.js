@@ -7,10 +7,12 @@ module.exports = {
     '/read-passport-number':{
         backLink: './',
         fields: ['what-damaged', 'how-damaged'],
-        next: '/old-pass-details'
+        next: '/old-pass-details-damaged'
     },
-    '/damaged-requirements':{
-        next: '/old-pass-details',
+    '/old-pass-details-damaged': {
+        backLink: './',
+        fields: ['passport-number'],
+        next: '/title'
     },
     '/old-pass-details': {
         backLink: './',
