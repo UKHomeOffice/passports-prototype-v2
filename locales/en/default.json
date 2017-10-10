@@ -175,6 +175,9 @@
         },
         "number-illegible": {
           "label": "I can’t read my old passport number"
+        },
+        "what-damaged": {
+          "label": "What is damaged?"
         }
 
     },

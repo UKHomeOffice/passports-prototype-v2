@@ -6,11 +6,11 @@ module.exports = {
     },
     '/read-passport-number':{
         backLink: './',
-        next: '/damaged-requirements'
+        fields: ['what-damaged', 'how-damaged'],
+        next: '/old-pass-details'
     },
     '/damaged-requirements':{
         next: '/old-pass-details',
-        next: '/title'
     },
     '/old-pass-details': {
         backLink: './',

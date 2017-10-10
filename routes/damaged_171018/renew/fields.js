@@ -7,7 +7,7 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [
-      {value: 'Yes', label: 'Yes', toggle: 'how-damaged'},
+      {value: 'Yes', label: 'Yes'},
       {value: 'No', label: 'No'}
     ],
     validate: [
@@ -18,6 +18,20 @@ module.exports = {
         redirect:'/read-passport-number'
       }
     ]
+  },
+  'what-damaged': {
+    labelClassName: 'visuallyhidden',
+    validate: [
+        'required'
+      ]
+  },
+  'how-damaged': {
+    labelClassName: 'visuallyhidden',
+    className: 'textarea',
+    validate: [
+      'required',
+      { type: 'maxlength', arguments: 250 }
+    ],
   },
   'read-passport-number': {
     legend: {
