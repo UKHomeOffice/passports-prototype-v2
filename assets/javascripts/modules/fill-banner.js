@@ -27,7 +27,9 @@
       "address1": "10 Liono Street",
       "postcode": "SE1 1QW",
       "email": "test@thundercats.com",
-      "mobile": "07999123456"
+      "mobile": "07999123456",
+      "what-damaged": "The chip",
+      "how-damaged": "My dastardly dog, woof woof woof woof woof woof woof. The canine horror ate my passport."
   };
 
   $("#populate").on("click", function(){
