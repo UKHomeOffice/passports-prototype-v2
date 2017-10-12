@@ -18,6 +18,6 @@ module.exports = {
         next: '/track'
     },
     '/need-csig': {
-        next: '../csig/csig-requirements'
+        next: '../csig/'
     }
 };
