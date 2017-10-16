@@ -11,16 +11,11 @@ module.exports = {
     },
     '/track-postcode': {
         fields: ['age-day', 'age-month', 'age-year'],
-        next: '/need-csig',
+        next: '/send-book',
         backLink: '/'
     },
-    '/waiting-for-old-pass': {
-        next: '/track'
-    },
-    '/need-csig': {
-        next: '../csig/'
-    },
     '/send-book': {
+      backLink: 'track-postcode',
       next: '../csig/'
     }
 };
