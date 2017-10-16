@@ -19,5 +19,8 @@ module.exports = {
     },
     '/need-csig': {
         next: '../csig/'
+    },
+    '/send-book': {
+      next: '../csig/'
     }
 };
