@@ -10,5 +10,7 @@ module.exports = {
     '/damaged': {
     },
     '/damaged-renew': {
+    },
+    '/damaged-examples': {
     }
 };
