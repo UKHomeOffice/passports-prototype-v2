@@ -3,13 +3,16 @@
 {{$pageTitle}}Your old passport{{/pageTitle}}
 
 {{$header}}
-    <h1>Your old passport</h1>
+    <h1>Your damaged passport</h1>
 {{/header}}
 
 {{$content}}
 
 {{< hmpo-partials-form}}
 {{$form}}
+
+<p>You must enter these details if they are still visible on your passport.</p>
+
   <div id="passport-number-group" class="form-group">
     <fieldset>
        <legend><span class="form-label-bold">Passport number</span></legend>
@@ -28,15 +31,9 @@
     </fieldset>
     <br>
     <div class="panel-important">
-      <p>You'll need to send us your old passport so we can cancel it.</p>
+      <p>You'll need to send us your damaged passport so we can cancel it.</p>
     </div>
-    <details>
-        <summary><span class="summary">My passport is lost or stolen</span></summary>
-        <div class="panel panel-border-narrow">
-          <p>If you don’t have your old passport you must <a href="https://www.gov.uk/report-a-lost-or-stolen-passport">report it lost or stolen</a>.</p>
-        </div>
-    </details>
-  </div>
+
   {{#input-submit}}{{/input-submit}}
 {{/form}}
 {{/ hmpo-partials-form}}
