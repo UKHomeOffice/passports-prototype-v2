@@ -6,11 +6,5 @@ module.exports = {
     '/how-confirm': {
     },
     '/who-can-do-this': {
-    },
-    '/damaged': {
-    },
-    '/damaged-renew': {
-    },
-    '/damaged-examples': {
     }
 };
