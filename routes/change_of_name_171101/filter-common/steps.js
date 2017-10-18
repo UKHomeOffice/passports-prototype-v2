@@ -15,10 +15,6 @@ module.exports = {
     },
     '/lost-stolen': {
         fields: ['lost-stolen'],
-        next: '/name-changed'
-    },
-    '/name-changed': {
-        fields: ['name-changed'],
         next: '/dob'
     },
     '/what-do-you-want-to-do': {
