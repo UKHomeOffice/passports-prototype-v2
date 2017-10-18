@@ -1,0 +1,20 @@
+{{< layout}}
+
+{{$pageTitle}}Do you want to try the new digital service?{{/pageTitle}}
+
+{{$header}}
+    <h1>Do you want to try the new service?</h1>
+{{/header}}
+
+{{$content}}
+    {{< hmpo-partials-form}}
+    {{$form}}
+        <p>You'll need to upload a digital photo as part of your application. You won't need to post 2 printed photos.</p>
+       <p>We'll show you how to take and upload your photo.</p>
+          {{#radio-group}}try-service{{/radio-group}}
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
