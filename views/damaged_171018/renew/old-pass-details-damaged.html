@@ -10,7 +10,9 @@
 
 {{< hmpo-partials-form}}
 {{$form}}
-
+<style>
+#expiry-year-damaged {width: 70px}
+</style>
 <p>You must enter these details if they are still visible on your passport.</p>
 
   <div id="passport-number-group" class="form-group">
@@ -23,10 +25,10 @@
     <fieldset>
       <legend><span class="form-label-bold">Passport expiry date</span></legend>
       <div class="form-date">
-        <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
-          {{#input-text}}age-day{{/input-text}}
-          {{#input-text}}age-month{{/input-text}}
-          {{#input-text}}age-year{{/input-text}}
+        <p class="form-hint" id="dob-hint">For example 31 08 2015</p>
+          {{#input-text}}expiry-day-damaged{{/input-text}}
+          {{#input-text}}expiry-month-damaged{{/input-text}}
+          {{#input-text}}expiry-year-damaged{{/input-text}}
       </div>
     </fieldset>
     <br>

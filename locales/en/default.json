@@ -178,6 +178,15 @@
         },
         "what-damaged": {
           "label": "What is damaged?"
+        },
+        "expiry-day-damaged":{
+          "label": "Day"
+        },
+        "expiry-month-damaged":{
+          "label": "Month"
+        },
+        "expiry-year-damaged":{
+          "label": "Year"
         }
 
     },

@@ -88,6 +88,30 @@ module.exports = {
       value: false
     }
   },
+  'expiry-year-damaged': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
+  'expiry-month-damaged': {
+      labelClassName: 'form-label',
+      formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
+  'expiry-day-damaged': {
+      labelClassName: 'form-label',
+      formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
   'age-year': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',

@@ -29,7 +29,10 @@
       "email": "test@thundercats.com",
       "mobile": "07999123456",
       "what-damaged": "The chip",
-      "how-damaged": "My dastardly dog, woof woof woof woof woof woof woof. The canine horror ate my passport."
+      "how-damaged": "My dastardly dog, woof woof woof woof woof woof woof. The canine horror ate my passport.",
+      "expiry-day-damaged": "12",
+      "expiry-month-damaged": "07",
+      "expiry-year-damaged": "2010"
   };
 
   $("#populate").on("click", function(){
