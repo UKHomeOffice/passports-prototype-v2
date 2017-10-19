@@ -87,34 +87,34 @@ app.use('/prototype_170123/startpage-temp', require('./routes/prototype_170123/s
 app.use('/prototype_170123/overseas-not-available', require('./routes/prototype_170123/overseas-not-available'));
 
 //prototype ovs - or 170331
-app.use('/prototype_170331/overseas', require('./routes/prototype_170331/overseas'));
-app.use('/prototype_170331/overseas-not-eligible', require('./routes/prototype_170331/overseas-not-eligible'));
-app.use('/prototype_170331/overseas-first', require('./routes/prototype_170331/overseas-first'));
-app.use('/prototype_170331/overseas-lost-change', require('./routes/prototype_170331/overseas-lost-change'));
-app.use('/prototype_170331/uploadphoto', require('./routes/prototype_170331/uploadphoto'));
-app.use('/prototype_170331/filter-common', require('./routes/prototype_170331/filter-common'));
-app.use('/prototype_170331/renew', require('./routes/prototype_170331/renew'));
-app.use('/prototype_170331/intro', require('./routes/prototype_170331/intro'));
-app.use('/prototype_170331/filter', require('./routes/prototype_170331/filter'));
-app.use('/prototype_170331/startpage', require('./routes/prototype_170331/startpage'));
-app.use('/prototype_170331/startpage-overseas', require('./routes/prototype_170331/startpage-overseas'));
-app.use('/prototype_170331/photoguide-short', require('./routes/prototype_170331/photoguide-short'));
-app.use('/prototype_170331/photoguide-static', require('./routes/prototype_170331/photoguide-static'));
-app.use('/prototype_170331/photoguide-shop', require('./routes/prototype_170331/photoguide-shop'));
-app.use('/prototype_170331/takephoto', require('./routes/prototype_170331/takephoto'));
-app.use('/prototype_170331/upload', require('./routes/prototype_170331/upload'));
-app.use('/prototype_170331/rejectedphoto', require('./routes/prototype_170331/rejectedphoto'));
-app.use('/prototype_170331/filter-common-temp', require('./routes/prototype_170331/filter-common-temp'));
-app.use('/prototype_170331/startpage-temp', require('./routes/prototype_170331/startpage-temp'));
-app.use('/prototype_170331/overseas-not-available', require('./routes/prototype_170331/overseas-not-available'));
-app.use('/prototype_170331/throttle', require('./routes/prototype_170331/throttle'));
-app.use('/prototype_170331/payment', require('./routes/prototype_170331/payment'));
-app.use('/prototype_170331/submission-failed', require('./routes/prototype_170331/submission-failed'));
-app.use('/prototype_170331/sar', require('./routes/prototype_170331/sar'));
-app.use('/prototype_170331/photo-url', require('./routes/prototype_170331/photo-url'));
-app.use('/prototype_170331/photo-code', require('./routes/prototype_170331/photo-code'));
-app.use('/prototype_170331/mismatch', require('./routes/prototype_170331/mismatch'));
-app.use('/prototype_170331/redirect-tracking', require('./routes/prototype_170331/redirect-tracking'));
+app.use('/change_of_name_171101/overseas', require('./routes/change_of_name_171101/overseas'));
+app.use('/change_of_name_171101/overseas-not-eligible', require('./routes/change_of_name_171101/overseas-not-eligible'));
+app.use('/change_of_name_171101/overseas-first', require('./routes/change_of_name_171101/overseas-first'));
+app.use('/change_of_name_171101/overseas-lost-change', require('./routes/change_of_name_171101/overseas-lost-change'));
+app.use('/change_of_name_171101/uploadphoto', require('./routes/change_of_name_171101/uploadphoto'));
+app.use('/change_of_name_171101/filter-common', require('./routes/change_of_name_171101/filter-common'));
+app.use('/change_of_name_171101/renew', require('./routes/change_of_name_171101/renew'));
+app.use('/change_of_name_171101/intro', require('./routes/change_of_name_171101/intro'));
+app.use('/change_of_name_171101/filter', require('./routes/change_of_name_171101/filter'));
+app.use('/change_of_name_171101/startpage', require('./routes/change_of_name_171101/startpage'));
+app.use('/change_of_name_171101/startpage-overseas', require('./routes/change_of_name_171101/startpage-overseas'));
+app.use('/change_of_name_171101/photoguide-short', require('./routes/change_of_name_171101/photoguide-short'));
+app.use('/change_of_name_171101/photoguide-static', require('./routes/change_of_name_171101/photoguide-static'));
+app.use('/change_of_name_171101/photoguide-shop', require('./routes/change_of_name_171101/photoguide-shop'));
+app.use('/change_of_name_171101/takephoto', require('./routes/change_of_name_171101/takephoto'));
+app.use('/change_of_name_171101/upload', require('./routes/change_of_name_171101/upload'));
+app.use('/change_of_name_171101/rejectedphoto', require('./routes/change_of_name_171101/rejectedphoto'));
+app.use('/change_of_name_171101/filter-common-temp', require('./routes/change_of_name_171101/filter-common-temp'));
+app.use('/change_of_name_171101/startpage-temp', require('./routes/change_of_name_171101/startpage-temp'));
+app.use('/change_of_name_171101/overseas-not-available', require('./routes/change_of_name_171101/overseas-not-available'));
+app.use('/change_of_name_171101/throttle', require('./routes/change_of_name_171101/throttle'));
+app.use('/change_of_name_171101/payment', require('./routes/change_of_name_171101/payment'));
+app.use('/change_of_name_171101/submission-failed', require('./routes/change_of_name_171101/submission-failed'));
+app.use('/change_of_name_171101/sar', require('./routes/change_of_name_171101/sar'));
+app.use('/change_of_name_171101/photo-url', require('./routes/change_of_name_171101/photo-url'));
+app.use('/change_of_name_171101/photo-code', require('./routes/change_of_name_171101/photo-code'));
+app.use('/change_of_name_171101/mismatch', require('./routes/change_of_name_171101/mismatch'));
+app.use('/change_of_name_171101/redirect-tracking', require('./routes/change_of_name_171101/redirect-tracking'));
 
 //prototype OIX 120518
 app.use('/prototype_oix_170518/uploadphoto', require('./routes/prototype_oix_170518/uploadphoto'));
@@ -558,6 +558,37 @@ app.use('/damaged_171018/photo-url', require('./routes/damaged_171018/photo-url'
 app.use('/damaged_171018/photo-code', require('./routes/damaged_171018/photo-code'));
 app.use('/damaged_171018/mismatch', require('./routes/damaged_171018/mismatch'));
 app.use('/damaged_171018/redirect-tracking', require('./routes/damaged_171018/redirect-tracking'));
+
+// change_of_name_171101 Change of name and dual nationality
+app.use('/change_of_name_171101/overseas', require('./routes/change_of_name_171101/overseas'));
+app.use('/change_of_name_171101/overseas-not-eligible', require('./routes/change_of_name_171101/overseas-not-eligible'));
+app.use('/change_of_name_171101/overseas-first', require('./routes/change_of_name_171101/overseas-first'));
+app.use('/change_of_name_171101/overseas-lost-change', require('./routes/change_of_name_171101/overseas-lost-change'));
+app.use('/change_of_name_171101/uploadphoto', require('./routes/change_of_name_171101/uploadphoto'));
+app.use('/change_of_name_171101/filter-common', require('./routes/change_of_name_171101/filter-common'));
+app.use('/change_of_name_171101/renew', require('./routes/change_of_name_171101/renew'));
+app.use('/change_of_name_171101/intro', require('./routes/change_of_name_171101/intro'));
+app.use('/change_of_name_171101/filter', require('./routes/change_of_name_171101/filter'));
+app.use('/change_of_name_171101/startpage', require('./routes/change_of_name_171101/startpage'));
+app.use('/change_of_name_171101/startpage-overseas', require('./routes/change_of_name_171101/startpage-overseas'));
+app.use('/change_of_name_171101/photoguide-short', require('./routes/change_of_name_171101/photoguide-short'));
+app.use('/change_of_name_171101/photoguide-static', require('./routes/change_of_name_171101/photoguide-static'));
+app.use('/change_of_name_171101/photoguide-shop', require('./routes/change_of_name_171101/photoguide-shop'));
+app.use('/change_of_name_171101/takephoto', require('./routes/change_of_name_171101/takephoto'));
+app.use('/change_of_name_171101/upload', require('./routes/change_of_name_171101/upload'));
+app.use('/change_of_name_171101/rejectedphoto', require('./routes/change_of_name_171101/rejectedphoto'));
+app.use('/change_of_name_171101/filter-common-temp', require('./routes/change_of_name_171101/filter-common-temp'));
+app.use('/change_of_name_171101/startpage-temp', require('./routes/change_of_name_171101/startpage-temp'));
+app.use('/change_of_name_171101/overseas-not-available', require('./routes/change_of_name_171101/overseas-not-available'));
+app.use('/change_of_name_171101/throttle', require('./routes/change_of_name_171101/throttle'));
+app.use('/change_of_name_171101/payment', require('./routes/change_of_name_171101/payment'));
+app.use('/change_of_name_171101/submission-failed', require('./routes/change_of_name_171101/submission-failed'));
+app.use('/change_of_name_171101/sar', require('./routes/change_of_name_171101/sar'));
+app.use('/change_of_name_171101/photo-url', require('./routes/change_of_name_171101/photo-url'));
+app.use('/change_of_name_171101/photo-code', require('./routes/change_of_name_171101/photo-code'));
+app.use('/change_of_name_171101/mismatch', require('./routes/change_of_name_171101/mismatch'));
+app.use('/change_of_name_171101/redirect-tracking', require('./routes/change_of_name_171101/redirect-tracking'));
+
 
 //3rd party shops photo checker
 app.use('/shops-photo-checker', require('./routes/shops-photo-checker'));

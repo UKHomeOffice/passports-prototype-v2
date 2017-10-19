@@ -8,8 +8,10 @@ var formFocus = require('hmpo-frontend-toolkit').formFocus,
     anchorButton = require('hmpo-frontend-toolkit').anchorButton,
     closeWindow = require('hmpo-frontend-toolkit').close,
     typeahead = require('./modules/typeahead'),
+    duplicateItem = require('./modules/duplicate-item'),
     fillBanner = require('./modules/fill-banner');
 
+helpers.documentReady(duplicateItem);
 helpers.documentReady(fillBanner);
 helpers.documentReady(formFocus);
 helpers.documentReady(reveal);

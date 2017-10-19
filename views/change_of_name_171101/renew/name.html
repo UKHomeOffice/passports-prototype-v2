@@ -1,0 +1,29 @@
+{{< layout}}
+
+{{$pageTitle}}Your name{{/pageTitle}}
+
+{{$header}}
+    <h1>Your name</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+    {{#input-text}}name{{/input-text}}
+    {{#input-text}}lastname{{/input-text}}
+    <fieldset class="inline">
+        <legend><span class="form-label-bold">Does this match the name on your old passport?</span></legend>
+        {{#radio-group}}change-name{{/radio-group}}
+    </fieldset>
+
+    <!-- {{#radio-group}}previous-name{{/radio-group}} -->
+    {{#input-submit}}{{/input-submit}}
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+
+{{/ layout}}
