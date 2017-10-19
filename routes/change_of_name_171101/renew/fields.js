@@ -125,7 +125,7 @@ module.exports = {
       },
       className: 'inline',
       options: [
-          { value: true, label: 'Yes', toggle: 'previous-names', child: 'input-text' },
+          { value: true, label: 'Yes', toggle: 'previous-names' },
           { value: false, label: 'No' }
       ]
   },
@@ -134,10 +134,6 @@ module.exports = {
           'required',
           { type: 'maxlength', arguments: 100 }
       ],
-      dependent: {
-          field: 'previous-name',
-          value: true
-      }
   },
   'gender': {
       validate: [

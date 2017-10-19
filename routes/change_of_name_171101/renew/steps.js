@@ -23,6 +23,7 @@ module.exports = {
         next: '/previous-names'
     },
     '/previous-names':{
+        fields: ['previous-name'],
         backLink: 'name',
         next: '/gender'
     },
