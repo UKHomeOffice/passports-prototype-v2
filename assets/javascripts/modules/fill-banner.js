@@ -59,7 +59,9 @@
       $('#can-sign-true').click();
       $('#secure-return-false').click();
 
-
+      //change name
+      $('#change-name-true').click();
+      
       $(':checkbox').click();
       $('#applicant-check-Yes').click();
       $('#applicant-check-friend-Yes').click();

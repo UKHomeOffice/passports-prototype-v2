@@ -13,10 +13,17 @@ module.exports = {
         fields: [
             'name',
             'lastname',
-            'previous-name',
-            'previous-names',
             'change-name'
         ],
+        next: '/previous-names'
+    },
+    '/change-of-name':{
+        backLink: 'name',
+        fields: ['change-of-name-reason'],
+        next: '/previous-names'
+    },
+    '/previous-names':{
+        backLink: 'name',
         next: '/gender'
     },
     '/gender':{

@@ -84,18 +84,38 @@ module.exports = {
   },
   'change-name': {
       legend: {
+        value: 'Does this match the name on your old passport?',
         className: 'visuallyhidden'
       },
-      formatter: 'boolean',
-      validate: 'required',
-      legend: {
-          className: 'form-label-bold'
-      },
-      className: 'inline',
       options: [
-          { value: true, label: 'Yes', toggle: '', child: '' },
-          { value: false, label: 'No' }
-      ]
+          { value: true, label: 'Yes, it matches the name in my old passport', toggle: '', child: '' },
+          { value: false, label: 'No, my name has changed' }
+      ],
+      formatter: ['boolean'],
+      validate: [
+        'required',
+        {
+          type:'equal',
+          arguments:[true], /* if the arguments are NOT selected */
+          redirect:'/change-of-name'
+        }
+      ],
+  },
+  'change-of-name-reason':{
+    legend: {
+      value: 'Your title',
+      className: 'visuallyhidden'
+    },
+    options: [
+      {value: 'Marriage', label: 'Through marriage or civil partnership'},
+      {value: 'Divorce', label: 'I’m divorced and want to go back to a previous name'},
+      {value: 'Small', label: 'I want to make a small change to my forenames'},
+      {value: 'Gender', label: 'I’ve changed my name and gender'},
+      {value: 'Other', label: 'Other type of name change '}
+    ],
+    validate: [
+      'required'
+    ]
   },
   'previous-name': {
       formatter: 'boolean',
