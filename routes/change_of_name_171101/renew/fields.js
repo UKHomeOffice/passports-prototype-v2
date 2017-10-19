@@ -82,6 +82,21 @@ module.exports = {
   'lastname': {
 
   },
+  'change-name': {
+      legend: {
+        className: 'visuallyhidden'
+      },
+      formatter: 'boolean',
+      validate: 'required',
+      legend: {
+          className: 'form-label-bold'
+      },
+      className: 'inline',
+      options: [
+          { value: true, label: 'Yes', toggle: '', child: '' },
+          { value: false, label: 'No' }
+      ]
+  },
   'previous-name': {
       formatter: 'boolean',
       validate: 'required',

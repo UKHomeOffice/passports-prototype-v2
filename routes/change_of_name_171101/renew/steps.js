@@ -14,7 +14,8 @@ module.exports = {
             'name',
             'lastname',
             'previous-name',
-            'previous-names'
+            'previous-names',
+            'change-name'
         ],
         next: '/gender'
     },
