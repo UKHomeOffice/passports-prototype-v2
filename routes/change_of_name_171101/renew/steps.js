@@ -2,10 +2,15 @@ module.exports = {
     '/':{
         backLink: '../uploadphoto/check-photo-and-submit',
         fields: ['passport-number'],
+        next: '/dual-national'
+    },
+    '/dual-national':{
+        backLink: './',
+        fields: ['uncancelled'],
         next: '/title'
     },
     '/title':{
-        backLink: './',
+        backLink: 'dual-national',
         fields: ['title'],
         next: '/name'
     },

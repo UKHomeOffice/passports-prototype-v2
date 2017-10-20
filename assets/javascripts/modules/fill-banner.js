@@ -60,8 +60,8 @@
       $('#secure-return-false').click();
 
       //change name
-      $('#change-name-true').click();
-      
+      $('#change-name-false').click();
+
       $(':checkbox').click();
       $('#applicant-check-Yes').click();
       $('#applicant-check-friend-Yes').click();

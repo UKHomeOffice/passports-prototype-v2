@@ -1,4 +1,5 @@
-var _ = require('underscore');
+const _ = require('lodash');
+const countries = require('../../../config/countries');
 
 module.exports = {
   'passport-number': {
@@ -6,6 +7,44 @@ module.exports = {
       validate: [
           'required'
         ]
+  },
+  'uncancelled': {
+  legend: {
+    value: 'Do you have any uncancelled passport from a different country?',
+    className: 'visuallyhidden'
+  },
+  options: [
+    {value: 'Yes', label: 'Yes', toggle: 'which-passport'},
+    {value: 'No', label: 'No'}
+    ],
+    validate: [
+      'required',
+      // {
+      //   type:'equal',
+      //   arguments:['No'], /* if Yes is selected */
+      //   redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+      // }
+  ]
+  },
+  'application-country': {
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.id,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    })),
+    validate: [
+      'required'
+    ],
+    dependent: {
+      field: 'apply-uk',
+      value: false
+    }
   },
   'can-sign': {
     legend: {
@@ -195,6 +234,14 @@ module.exports = {
   'expiry-month': {
       labelClassName: 'form-label',
       formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
+  'expiry-day': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
       validate: [
           'numeric',
           'required'
