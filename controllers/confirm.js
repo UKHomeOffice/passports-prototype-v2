@@ -89,6 +89,9 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     });
 
     var newPassportFields = [];
+    var previousName1 = values['previous-first-name-1'] + ' ' + values['previous-last-name-1'];
+    var previousName2 = '<br>' + values['previous-first-name-2'] + ' ' + values['previous-last-name-2'];
+
     newPassportFields.push(
         {
             step: this.getEditStep('title'),
@@ -104,7 +107,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         {
             step: this.getEditStep('previous-names'),
             title: 'Previous names',
-            value: values['previous-name'] ? values['previous-names'] : 'You have never been known by any other names'
+            value: values['previous-name'] ? previousName1 + previousName2 : 'You have never been known by any other names'
         },
         {
             step: this.getEditStep('gender'),
@@ -160,7 +163,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         },*/
         {
             title: 'Your photo',
-            custom: '<div class="photo"><img src="../../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150"></div>'
+            custom: '<div class="photo"><img src="../../public/images/thumbnail.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150"></div>'
         },
         {
             step: this.getEditStep('recognisable'),

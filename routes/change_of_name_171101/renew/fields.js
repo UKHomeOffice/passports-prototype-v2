@@ -129,11 +129,23 @@ module.exports = {
           { value: false, label: 'No' }
       ]
   },
-  'previous-names': {
-      validate: [
-          'required',
-          { type: 'maxlength', arguments: 100 }
-      ],
+  'previous-last-name-1': {
+
+  },
+  'previous-first-name-1': {
+
+  },
+  'previous-last-name-2': {
+
+  },
+  'previous-first-name-2': {
+
+  },
+  'previous-last-name-3': {
+
+  },
+  'previous-first-name-3': {
+
   },
   'gender': {
       validate: [

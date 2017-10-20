@@ -11,6 +11,7 @@ $(document).ready(function() {
             x++; //text box increment
             $(wrapper).append(template.html()); //add input box
         }
+
     });
 
     $(wrapper).on("click",".remove-field", function(e){ //user click on remove text
