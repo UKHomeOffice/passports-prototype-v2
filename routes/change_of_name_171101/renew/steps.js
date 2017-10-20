@@ -9,6 +9,10 @@ module.exports = {
         fields: ['uncancelled'],
         next: '/title'
     },
+    '/dual-national-details':{
+        backLink: 'dual-national',
+        next: '/title'
+    },
     '/title':{
         backLink: 'dual-national',
         fields: ['title'],

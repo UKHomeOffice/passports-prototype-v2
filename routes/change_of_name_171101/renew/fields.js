@@ -19,11 +19,11 @@ module.exports = {
     ],
     validate: [
       'required',
-      // {
-      //   type:'equal',
-      //   arguments:['No'], /* if Yes is selected */
-      //   redirect:'https://passportapplication.service.gov.uk/ips-olc/'
-      // }
+      {
+        type:'equal',
+        arguments:['No'], /* if Yes is selected */
+        redirect:'/dual-national-details'
+      }
   ]
   },
   'application-country': {
