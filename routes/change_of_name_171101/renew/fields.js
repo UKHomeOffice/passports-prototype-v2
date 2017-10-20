@@ -88,15 +88,15 @@ module.exports = {
         className: 'visuallyhidden'
       },
       options: [
-          { value: true, label: 'Yes, it matches the name in my old passport', toggle: '', child: '' },
-          { value: false, label: 'No, my name has changed' }
+          { value: false, label: 'Yes, it matches the name in my old passport', toggle: '', child: '' },
+          { value: true, label: 'No, my name has changed' }
       ],
       formatter: ['boolean'],
       validate: [
         'required',
         {
           type:'equal',
-          arguments:[true], /* if the arguments are NOT selected */
+          arguments:[false], /* if the arguments are NOT selected */
           redirect:'/change-of-name'
         }
       ],

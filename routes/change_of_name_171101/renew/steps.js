@@ -94,6 +94,9 @@ module.exports = {
     '/summary':{
         controller: require('../../../controllers/confirm'),
         template: 'confirm',
+        next: '/required-documents'
+    },
+    '/required-documents':{
         next: '/declaration'
     },
     '/declaration':{

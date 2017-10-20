@@ -108,7 +108,20 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             step: this.getEditStep('previous-names'),
             title: 'Previous names',
             value: values['previous-name'] ? previousName1 + previousName2 : 'You have never been known by any other names'
-        },
+        }
+    );
+
+    if(values['change-of-name-reason']){
+      newPassportFields.push(
+        {
+          step: this.getEditStep('change-of-name'),
+          title: 'Name change',
+          value: 'Yes'
+      }
+      );
+    }
+
+    newPassportFields.push(
         {
             step: this.getEditStep('gender'),
             title: 'Gender',
