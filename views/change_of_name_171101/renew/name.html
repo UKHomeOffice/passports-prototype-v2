@@ -5,13 +5,23 @@
 {{$header}}
     <h1>Your name</h1>
 {{/header}}
-
 {{$content}}
+
+<p>Enter your name exactly as you want it to appear on your passport.</p>
 
 {{< hmpo-partials-form}}
 {{$form}}
     {{#input-text}}name{{/input-text}}
     {{#input-text}}lastname{{/input-text}}
+
+    <details class="">
+        <summary><span class="summary">My name won’t fit in the boxes</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>Shorten your name in the way you want it shown in your passport. We’ll add a note showing your full name on the observation page in your passport.</p>
+        </div>
+    </details>
+
+    
     <fieldset class="inline">
         <legend><span class="form-label-bold">Does this match the name on your old passport?</span></legend>
         {{#radio-group}}change-name{{/radio-group}}

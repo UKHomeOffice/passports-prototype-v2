@@ -4,18 +4,16 @@
 {{$pexpiryTitle}}Do you have dual nationality?{{/pexpiryTitle}}
 
 {{$header}}
-    <h1>Dual nationality passport questions</h1>
+    <h1>Details of your foreign passport</h1>
 {{/header}}
 
 {{$content}}
 
     {{< hmpo-partials-form}}
     {{$form}}
-
+<p>Enter your details exactly as they appear on your foreign passport.</p>
           {{#select}}application-country{{/select}}
-
-          {{#input-text}}name{{/input-text}}
-          {{#input-text}}lastname{{/input-text}}
+        
           <div class="form-group">
             <fieldset>
               <legend><span class="form-label-bold">Passport number</span></legend>
@@ -24,7 +22,7 @@
             </fieldset>
           </div>
           <div class="form-group">
-            <fieldset>
+           
               <legend><span class="form-label-bold">Issue date</span></legend>
               <div class="form-date">
                 <p class="form-hint">For example 31 08 1970</p>
@@ -44,9 +42,16 @@
                   {{#input-text}}expiry-year{{/input-text}}
               </div>
             </fieldset>
-          </div
+            <div>
+              <br>
+              <h2>Name on your passport</h2>
+<p>This should match the name you want on your UK passport. If it doesn’t match, update your foreign passport before you apply for a UK passport.</p>
 
-
+          {{#input-text}}name{{/input-text}}
+          {{#input-text}}lastname{{/input-text}}
+        </div>
+          </div>
+          <p class="panel panel-border-wide">You’ll need to send us your foreign passport – we’ll check it and return it to you.</p>
 
         {{#input-submit}}{{/input-submit}}
     {{/form}}

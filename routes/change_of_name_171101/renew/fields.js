@@ -148,7 +148,7 @@ module.exports = {
     options: [
       {value: 'Marriage', label: 'Through marriage or civil partnership'},
       {value: 'Divorce', label: 'I’m divorced and want to go back to a previous name'},
-      {value: 'Small', label: 'I want to make a small change to my forenames'},
+      {value: 'Small', label: 'I want to make a small change to my first names'},
       {value: 'Gender', label: 'I’ve changed my name and gender'},
       {value: 'Other', label: 'Other type of name change '}
     ],

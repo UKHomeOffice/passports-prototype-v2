@@ -3,7 +3,7 @@
 {{$pageTitle}}Your name{{/pageTitle}}
 
 {{$header}}
-    <h1>About your change of name</h1>
+    <h1>How did you change your name?</h1>
 {{/header}}
 
 {{$content}}
@@ -11,11 +11,11 @@
 {{< hmpo-partials-form}}
   {{$form}}
     <fieldset class="inline">
-        <legend><span class="form-label-bold">How did you change your name?</span></legend>
+        <p>We need to know <a href="https://www.gov.uk/changing-passport-information">how you changed your name</a> so we can tell you which documents you’ll need to send.
         {{#radio-group}}change-of-name-reason{{/radio-group}}
     </fieldset>
 
-    <p>You’ll need to send us proof of your new name. We’ll tell you what document you’ll need to provide.</p>
+    <!--<p>You’ll need to send us proof of your new name. We’ll tell you what document you’ll need to provide.</p>-->
     {{#input-submit}}{{/input-submit}}
   {{/form}}
 {{/ hmpo-partials-form}}
