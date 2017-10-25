@@ -160,7 +160,7 @@ module.exports = {
       formatter: 'boolean',
       validate: 'required',
       legend: {
-          className: 'form-label-bold'
+          className: 'visually-hidden'
       },
       className: 'inline',
       options: [

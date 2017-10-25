@@ -106,6 +106,21 @@ module.exports = {
         next: '/required-documents'
     },
     '/required-documents':{
+        controller: require('../../../controllers/change-of-name-docs')
+    },
+    '/name-change-docs-for-marriage':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-divorce':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-small-changes':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-gender-change':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-other-changes':{
         next: '/declaration'
     },
     '/declaration':{

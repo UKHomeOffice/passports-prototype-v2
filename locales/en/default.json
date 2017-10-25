@@ -86,7 +86,7 @@
           "label": "Explain why you can’t sign your passport"
         },
         "previous-name": {
-            "legend": "Have you ever been known by any other names?",
+            "legend": "",
             "hint": "For example, a maiden name, names from previous marriages or a different name at birth."
         },
         "previous-names": {
