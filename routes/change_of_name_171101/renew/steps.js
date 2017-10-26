@@ -5,7 +5,7 @@ module.exports = {
         next: '/title'
     },
     '/dual-national':{
-        backLink: '/contact-details',
+        backLink: './contact-details',
     },
     '/dual-national-details':{
         backLink: 'dual-national',
