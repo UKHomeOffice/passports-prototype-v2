@@ -22,7 +22,23 @@
 </style>
 {{< hmpo-partials-form}}
 {{$form}}
+
 {{#radio-group}}previous-name{{/radio-group}}
+
+<div id="previous-name-group" class="form-group{{#className}} {{className}} {{/className}}{{#error}} error{{/error}}{{#groupClassName}} {{groupClassName}}{{/groupClassName}}"
+{{#groupAttributes}}
+    {{attribute}}="{{value}}"
+{{/groupAttributes}}
+>
+    <fieldset role="radiogroup" aria-required="true">
+        <legend>
+            <span{{#legendClassName}} class="{{legendClassName}}"{{/legendClassName}}>{{legend}}</span>
+            {{#hint}}<span id="previous-name-hint" class="form-hint">{{hint}}</span>{{/hint}}
+            {{#error}}<span id="previous-name-error" class="error-message">{{error.message}}</span>{{/error}}
+        </legend>
+    </fieldset>
+</div>
+
 
 <div id="previous-names" class="js-hidden reveal">
   <div class="grid-row duplicate-row">

@@ -127,8 +127,8 @@ module.exports = {
         className: 'visuallyhidden'
       },
       options: [
-          { value: false, label: 'Yes, it matches the name in my old passport', toggle: '', child: '' },
-          { value: true, label: 'No, my name has changed' }
+          { value: false, label: 'Yes, it matches the name in my old passport' },
+          { value: true, label: 'No, my name has changed', toggle: 'note-regarding-name-change' }
       ],
       formatter: ['boolean'],
       validate: [

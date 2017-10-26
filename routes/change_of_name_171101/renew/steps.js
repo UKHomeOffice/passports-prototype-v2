@@ -2,12 +2,10 @@ module.exports = {
     '/':{
         backLink: '../uploadphoto/check-photo-and-submit',
         fields: ['passport-number'],
-        next: '/dual-national'
+        next: '/title'
     },
     '/dual-national':{
-        backLink: './',
-        fields: ['uncancelled'],
-        next: '/title'
+        backLink: '/contact-details',
     },
     '/dual-national-details':{
         backLink: 'dual-national',
@@ -68,7 +66,7 @@ module.exports = {
     },
     '/contact-details':{
         fields:['email', 'mobile'],
-        next: '/get-updates'
+        next: '/dual-national'
     },
     '/get-updates-overseas':{
         next: '/passport-options-overseas'

@@ -1,0 +1,52 @@
+From 19ccaf21077e1aae6880101781f500e89ee69d73 Mon Sep 17 00:00:00 2001
+From: tav <tav@espians.com>
+Date: Wed, 25 Oct 2017 15:20:53 +0100
+Subject: [PATCH] Reveal info panel when user selects name has changed
+
+---
+ routes/change_of_name_171101/renew/fields.js | 4 ++--
+ views/change_of_name_171101/renew/name.html  | 7 ++++++-
+ 2 files changed, 8 insertions(+), 3 deletions(-)
+
+diff --git a/routes/change_of_name_171101/renew/fields.js b/routes/change_of_name_171101/renew/fields.js
+index fc631b1..028b413 100644
+--- a/routes/change_of_name_171101/renew/fields.js
++++ b/routes/change_of_name_171101/renew/fields.js
+@@ -127,8 +127,8 @@ module.exports = {
+         className: 'visuallyhidden'
+       },
+       options: [
+-          { value: false, label: 'Yes, it matches the name in my old passport', toggle: '', child: '' },
+-          { value: true, label: 'No, my name has changed' }
++          { value: false, label: 'Yes, it matches the name in my old passport' },
++          { value: true, label: 'No, my name has changed', toggle: 'note-regarding-name-change' }
+       ],
+       formatter: ['boolean'],
+       validate: [
+diff --git a/views/change_of_name_171101/renew/name.html b/views/change_of_name_171101/renew/name.html
+index fb21f20..317a2ce 100644
+--- a/views/change_of_name_171101/renew/name.html
++++ b/views/change_of_name_171101/renew/name.html
+@@ -20,13 +20,18 @@
+           <p>Shorten your name in the way you want it shown in your passport. We’ll add a note showing your full name on the observation page in your passport.</p>
+         </div>
+     </details>
+-
+     
+     <fieldset class="inline">
+         <legend><span class="form-label-bold">Does this match the name on your old passport?</span></legend>
+         {{#radio-group}}change-name{{/radio-group}}
+     </fieldset>
+ 
++    <div id="note-regarding-name-change" class="reveal js-hidden">
++        <div class="panel panel-border-narrow">
++            <p>Content goes here with <a href="">link</a>.</p>
++        </div>
++    </div>
++
+     <!-- {{#radio-group}}previous-name{{/radio-group}} -->
+     {{#input-submit}}{{/input-submit}}
+ {{/form}}
+-- 
+2.14.2
+

@@ -4,56 +4,58 @@
 {{$pexpiryTitle}}Do you have dual nationality?{{/pexpiryTitle}}
 
 {{$header}}
-    <h1>Do you have a passport from another country?</h1>
+    <h1>Do you have any other passports?</h1>
+    <p>For example, from another country if you have dual nationality.</p>
 {{/header}}
 
 {{$content}}
 
     {{< hmpo-partials-form}}
     {{$form}}
-      <fieldset class="inline">
-      <!-- <p>You have dual nationality if you're a British citizen and a citizen of another country. For example, if you have a passport from another country.</p>-->
-        {{#radio-group}}uncancelled{{/radio-group}}
-
-  
 
 
-<!--        <div id="which-passport" class="reveal js-hidden" style="margin-top:-25px; margin-bottom:20px">
-            <div class="panel panel-border-narrow">
-              <legend><span class="form-label-bold">Which country is it for?</span></legend>
-              <div class="form-date">
-                <div id="country-code-group" class="form-group">
-                  <label for="country-code" class="visuallyhidden"></label>
-                  {{#select}}dual-national-country{{/select}}
-                </div>
-              </div>
-        </div>
-        </div>
--->
-      <!--  <div id="which-passport" class="reveal js-hidden" style="margin-top:-20px;">
-          <div class="panel-indent">
-              <fieldset>
-                  <legend><h2>Which additional passports do you have?</h2></legend>
-                  <div id="contact-prefs-email-group" class="form-group form-group-compound">
-                      <label for="contact-prefs-email" class="block-label ">
-                          <input type="checkbox" id="contact-prefs-email" name="contact-prefs-email" value="true" aria-required="false">
-                              Another British passport
-                      </label>
-                  </div>
-                  <div class="form-group">
-                      <label for="contact-prefs-sms" class="block-label">
-                          <input type="checkbox" id="contact-prefs-sms" name="contact-prefs-sms" value="true" aria-required="false" data-toggle="contact-sms" aria-controls="contact-sms" aria-expanded="false">
-                              Passport from another country
-                      </label>
-                 </div>
-            </fieldset>
-          </div>
-        </div> -->
-      </fieldset>
+    <!-- RADIO TOGGLE OPTIONS-->
 
-        {{#input-submit}}{{/input-submit}}
-    {{/form}}
+
+  <div class="form-group" style="margin-top:50px">
+    <fieldset>
+
+      <div class="block-label" data-target="contact-by-email">
+        <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes" aria-controls="override" aria-expanded="false">
+        <label for="example-contact-by-email">Yes</label>
+      </div>
+      
+
+
+      <div class="block-label" data-target="contact-by-phone" style="margin-left: 10px;
+    clear: none;}">
+        <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+        <label for="example-contact-by-phone">No</label>
+      </div>
+     
+      <div class="panel panel-border-narrow js-hidden" id="override" aria-hidden="true">
+        <label class="form-label" for="contact-phone">
+
+            <p>Your name must match your other passports. If it does not, you have to update your other passports first before applying for a British passport. You’ll also have to send us your other passports.</p>
+                        </label>
+      </div>
+
+
+    </fieldset>
+  </div>
+</form>
+
+<div class="form-group">
+                <a href="./get-updates" class="button" role="button">Continue</a>
+            </div>
+
+
+<!-- END OF TOGGLE -->
+
+  {{/form}}
     {{/ hmpo-partials-form}}
 {{/content}}
+
+
 
 {{/ layout}}
