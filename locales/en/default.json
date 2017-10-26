@@ -87,7 +87,7 @@
         },
         "previous-name": {
             "legend": "",
-            "hint": "For example, a maiden name, names from previous marriages or a different name at birth."
+            "hint": "For example a maiden name, names from previous marriages or a different name at birth."
         },
         "previous-names": {
             "label": "All of your previous names"
@@ -107,7 +107,7 @@
         },
         "reference-no":{
             "label": "Reference",
-            "hint": "You’ll find this in your confirmation email, eg PEX 123 456 7890"
+            "hint": "You’ll find this in your confirmation email, for example PEX 123 456 7890"
         },
         "dual-national-country":{
           "label": "Which country is it for?"

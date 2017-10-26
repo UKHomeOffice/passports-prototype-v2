@@ -123,11 +123,11 @@ module.exports = {
   },
   'change-name': {
       legend: {
-        value: 'Does this match the name on your old passport?',
+        value: 'Does this name match the one on your old passport?',
         className: 'visuallyhidden'
       },
       options: [
-          { value: false, label: 'Yes, it matches the name in my old passport' },
+          { value: false, label: 'Yes, my name matches my old passport' },
           { value: true, label: 'No, my name has changed', toggle: 'note-regarding-name-change' }
       ],
       formatter: ['boolean'],
