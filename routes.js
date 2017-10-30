@@ -417,6 +417,36 @@ app.use('/priority_service_170731/timeout', require('./routes/priority_service_1
 app.use('/priority_service_170731/no-appointment', require('./routes/priority_service_170731/no-appointment'));
 app.use('/priority_service_170731/service-intro', require('./routes/priority_service_170731/service-intro'));
 
+// prototype_170331
+app.use('/prototype_170331/overseas', require('./routes/prototype_170331/overseas'));
+app.use('/prototype_170331/overseas-not-eligible', require('./routes/prototype_170331/overseas-not-eligible'));
+app.use('/prototype_170331/overseas-first', require('./routes/prototype_170331/overseas-first'));
+app.use('/prototype_170331/overseas-lost-change', require('./routes/prototype_170331/overseas-lost-change'));
+app.use('/prototype_170331/uploadphoto', require('./routes/prototype_170331/uploadphoto'));
+app.use('/prototype_170331/filter-common', require('./routes/prototype_170331/filter-common'));
+app.use('/prototype_170331/renew', require('./routes/prototype_170331/renew'));
+app.use('/prototype_170331/intro', require('./routes/prototype_170331/intro'));
+app.use('/prototype_170331/filter', require('./routes/prototype_170331/filter'));
+app.use('/prototype_170331/startpage', require('./routes/prototype_170331/startpage'));
+app.use('/prototype_170331/startpage-overseas', require('./routes/prototype_170331/startpage-overseas'));
+app.use('/prototype_170331/photoguide-short', require('./routes/prototype_170331/photoguide-short'));
+app.use('/prototype_170331/photoguide-static', require('./routes/prototype_170331/photoguide-static'));
+app.use('/prototype_170331/photoguide-shop', require('./routes/prototype_170331/photoguide-shop'));
+app.use('/prototype_170331/takephoto', require('./routes/prototype_170331/takephoto'));
+app.use('/prototype_170331/upload', require('./routes/prototype_170331/upload'));
+app.use('/prototype_170331/rejectedphoto', require('./routes/prototype_170331/rejectedphoto'));
+app.use('/prototype_170331/filter-common-temp', require('./routes/prototype_170331/filter-common-temp'));
+app.use('/prototype_170331/startpage-temp', require('./routes/prototype_170331/startpage-temp'));
+app.use('/prototype_170331/overseas-not-available', require('./routes/prototype_170331/overseas-not-available'));
+app.use('/prototype_170331/throttle', require('./routes/prototype_170331/throttle'));
+app.use('/prototype_170331/payment', require('./routes/prototype_170331/payment'));
+app.use('/prototype_170331/submission-failed', require('./routes/prototype_170331/submission-failed'));
+app.use('/prototype_170331/sar', require('./routes/prototype_170331/sar'));
+app.use('/prototype_170331/photo-url', require('./routes/prototype_170331/photo-url'));
+app.use('/prototype_170331/photo-code', require('./routes/prototype_170331/photo-code'));
+app.use('/prototype_170331/mismatch', require('./routes/prototype_170331/mismatch'));
+app.use('/prototype_170331/redirect-tracking', require('./routes/prototype_170331/redirect-tracking'));
+
 //Priority service
 app.use('/priority-service', require('./routes/priority-service'));
 app.use('/priority-service-filter-common', require('./routes/priority-service/filter-common'));
