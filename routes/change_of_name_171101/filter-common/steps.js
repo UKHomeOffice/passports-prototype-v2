@@ -47,7 +47,7 @@ module.exports = {
     '/dob': {
       fields: ['16-or-older'],
       controller: require('../../../controllers/go-overseas'),
-      backLink: './',
+      backLink: './lost-stolen',
       next: '/../filter', /* if they are from the UK */
     }
 };

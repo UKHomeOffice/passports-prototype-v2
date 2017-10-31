@@ -12,7 +12,7 @@ module.exports = {
         next: '/title'
     },
     '/title':{
-        backLink: 'dual-national',
+        backLink: './',
         fields: ['title'],
         next: '/name'
     },
@@ -73,6 +73,7 @@ module.exports = {
     },
     '/get-updates':{
         next: '/passport-options'
+
     },
     '/passport-options-overseas':{
         fields: ['passport-options-overseas', 'braille'],
@@ -84,7 +85,7 @@ module.exports = {
     },
     '/sign': {
         fields: ['can-sign', 'no-sign-reason'],
-        backLink: './',
+        backLink: 'passport-options',
         next: '/passport-special-delivery', /* if they are from the UK */
         controller: require('../../../controllers/go-overseas'),
         nextAlt: './summary-overseas'

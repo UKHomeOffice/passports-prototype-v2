@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-        backLink: '../intro/you-need-a-photo-v2',
+        backLink: '../intro/you-need-a-photo',
         next: '/processing-image'
     },
     '/uploading': {
@@ -11,7 +11,7 @@ module.exports = {
         backLink: './uploading'
     },
     '/photo-uploaded-success': {
-        backLink: './'
+        backLink: '../upload'
     },
     '/plain-expression': {
         fields: ['plain-expression'],
@@ -28,6 +28,6 @@ module.exports = {
         next: './'
     },
     '/check-photo-and-submit': {
-        backLink: './photo-uploaded-sucess'
+        backLink: './photo-uploaded-success'
     }
 };

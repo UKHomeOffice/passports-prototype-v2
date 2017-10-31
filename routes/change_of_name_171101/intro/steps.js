@@ -16,7 +16,7 @@ module.exports = {
       next: '/you-need-a-photo'
     },
     '/you-need-a-photo': {
-      backLink: './what-you-need-overseas',
+      backLink: './what-you-need',
       next: '/choose-photo-method'
     },
     '/you-need-a-photo-overseas': {
