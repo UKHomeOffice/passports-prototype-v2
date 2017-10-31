@@ -45,7 +45,7 @@ module.exports = {
       nextAltAlt:'../overseas-not-eligible', /* if they are from Afganistan */
     },
     '/dob': {
-      fields: ['age-day', 'age-year', 'age-month'],
+      fields: ['16-or-older'],
       controller: require('../../../controllers/go-overseas'),
       backLink: './',
       next: '/../filter', /* if they are from the UK */
