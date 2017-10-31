@@ -62,6 +62,26 @@ module.exports = {
   ],
   className: 'inline'
 },
+'16-or-older': {
+  legend: {
+    value: 'Are you 16 or older?',
+    className: 'visuallyhidden'
+  },
+  options: [
+    { value: true, label: 'Yes' },
+    { value: false, label: 'No' }
+  ],
+  formatter: ['boolean'],
+  validate: [
+    'required',
+    {
+      type:'equal',
+      arguments:[true], /* if the arguments are NOT selected */
+      redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+    }
+  ],
+  className: 'inline'
+},
 'passport-before': {
   legend: {
     value: 'Have you had a passport before?',
