@@ -23,7 +23,37 @@ module.exports = {
     formatter: 'boolean-strict',
     legend: {
       value: 'Front cover'
-    },
+    }
+  },
+  'back-cover-damaged': {
+    formatter: 'boolean-strict',
+    legend: {
+      value: 'Back cover'
+    }
+  },
+  'photo-page-damaged': {
+    formatter: 'boolean-strict',
+    legend: {
+      value: 'Photo page'
+    }
+  },
+  'emergency-contact-damaged': {
+    formatter: 'boolean-strict',
+    legend: {
+      value: 'Emergency contact page'
+    }
+  },
+  'other-pages-damaged': {
+    formatter: 'boolean-strict',
+    legend: {
+      value: 'Any other pages'
+    }
+  },
+  'chip-damaged': {
+    formatter: 'boolean-strict',
+    legend: {
+      value: 'Chip (e-passports only)'
+    }
   },
   'what-damaged': {
     labelClassName: 'visuallyhidden',

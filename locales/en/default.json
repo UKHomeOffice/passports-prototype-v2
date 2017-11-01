@@ -185,6 +185,9 @@
         "expiry-month-damaged":{
           "label": "Month"
         },
+        "expiry-year-damaged":{
+          "label": "Year"
+        },
         "front-cover-damaged":{
           "label": "Front cover"
         },
