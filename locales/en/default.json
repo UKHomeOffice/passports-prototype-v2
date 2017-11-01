@@ -185,10 +185,24 @@
         "expiry-month-damaged":{
           "label": "Month"
         },
-        "expiry-year-damaged":{
-          "label": "Year"
+        "front-cover-damaged":{
+          "label": "Front cover"
+        },
+        "back-cover-damaged":{
+          "label": "Back cover"
+        },
+        "photo-page-damaged":{
+          "label": "Photo page"
+        },
+        "emergency-contact-damaged":{
+          "label": "Emergency contact page"
+        },
+        "other-pages-damaged":{
+          "label": "Any other pages"
+        },
+        "chip-damaged":{
+          "label": "Chip (e-passports only)"
         }
-
     },
     "validation": {
         "required": "Please enter {{label}}.",

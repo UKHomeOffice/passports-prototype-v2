@@ -19,6 +19,12 @@ module.exports = {
       }
     ]
   },
+  'front-cover-damaged': {
+    formatter: 'boolean-strict',
+    legend: {
+      value: 'Front cover'
+    },
+  },
   'what-damaged': {
     labelClassName: 'visuallyhidden',
     validate: [
