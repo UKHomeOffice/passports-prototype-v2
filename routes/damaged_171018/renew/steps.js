@@ -6,7 +6,7 @@ module.exports = {
     },
     '/read-passport-number':{
         backLink: './',
-        fields: ['what-damaged', 'how-damaged'],
+        fields: ['front-cover-damaged','back-cover-damaged','photo-page-damaged','front-cover-damaged','emergency-contact-damaged','other-pages-damaged', 'chip-damaged'],
         next: '/old-pass-details-damaged'
     },
     '/old-pass-details-damaged': {
@@ -103,6 +103,9 @@ module.exports = {
         next: '/confirmation'
     },
     '/confirmation':{
+        next: '/title'
+    },
+    '/next-steps':{
         next: '/title'
     }
 };

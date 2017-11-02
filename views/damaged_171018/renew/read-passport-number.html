@@ -7,16 +7,37 @@
 {{/header}}
 
 {{$content}}
+<style>
+  .checkbox-group .form-group:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+  .column-half {
+    padding: 0 15px 0 0;
+  }
+  .column-half label {
+    float: none;
+  }
+</style>
 
 {{< hmpo-partials-form}}
   {{$form}}
 
-    <div class="form-group">
-    <label class="form-label-bold" for="what-damaged">
-      What is damaged on your passport?
-    </label>
-    <span class="form-hint">For example the cover, photo page or any of the other other pages.</span>
-      {{#input-text}}what-damaged{{/input-text}}
+    <div class="checkbox-group">
+      <label class="form-label-bold" for="what-damaged">
+        What is damaged on your passport?
+      </label>
+      <span class="form-hint">Select all that apply</span>
+      <div class="column-half">
+        {{#checkbox}}front-cover-damaged{{/checkbox}}
+        {{#checkbox}}back-cover-damaged{{/checkbox}}
+        {{#checkbox}}photo-page-damaged{{/checkbox}}
+      </div>
+      <div class="column-half">
+        {{#checkbox}}emergency-contact-damaged{{/checkbox}}
+        {{#checkbox}}other-pages-damaged{{/checkbox}}
+        {{#checkbox}}chip-damaged{{/checkbox}}
+      </div>
+    </div>
     <div class="form-group">
       <label class="form-label-bold" for="textarea">
         Describe what happened to your passport
