@@ -1,0 +1,29 @@
+{{< layout}}
+
+{{$pageTitle}}Delivering your new passport{{/pageTitle}}
+
+{{$header}}
+    <h1>Delivering your new passport</h1>
+{{/header}}
+
+{{$content}}
+    {{< hmpo-partials-form}}
+        {{$form}}
+            <p>We’ll send your new passport by special delivery (included in the passport&nbsp;fee) to:
+                <strong>
+                    {{values.address1}},
+                    {{#values.address2}}
+                        {{values.address2}},
+                    {{/values.address2}}
+                    {{values.town}},
+                    {{values.postcode}}</strong>.
+            </p>
+            <div class="panel panel-border-wide">
+                <p>We’ll send your new passport at a different time and from a different location to your old one.</p>
+            </div>
+            {{#input-submit}}{{/input-submit}}
+        {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
