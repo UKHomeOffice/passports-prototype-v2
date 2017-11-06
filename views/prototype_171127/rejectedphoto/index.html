@@ -1,0 +1,50 @@
+{{< layout}}
+
+{{$pageTitle}}You need another photo{{/pageTitle}}
+
+{{$header}}
+    <h1>You need another photo</h1>
+{{/header}}
+
+{{$content}}
+
+      <p>Your photo has failed for the following reasons:</p>
+      <div class="panel-indent panel-photo-result panel-photo-error">
+          <h2>It looks like your mouth is open</h2>
+          <p>Sometimes this is caused by facial hair or shadows near your mouth. Please try different lighting.</p>
+          <p>If there’s a medical reason why your mouth appears to be open, override this message and submit your photo.</p>
+      </div>
+      <details>
+        <summary><span class="summary">Can I use this photo?</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>You can only use this photo if you:</p>
+            <ul>
+                <li>have a medical or religious reason why it doesn't meet the rules</li>
+                <li>think that the reason it failed is not correct</li>
+            </ul>
+            <p>Your application will be detayed if we have to ask you for a different photo</p>
+            <a href="" class="button">I understand - use this photo</a><br/><br/>
+          </div>
+      </details>
+      <a href="" class="button">Try another photo</a><br/><br/>
+
+        <p>Find out <a href="">how to get another photo</a>.</p>
+
+{{/content}}
+{{$sidebar}}
+<div class="column-one-third">
+  <br/>
+    <br/>
+      <div class="sidebar related">
+        <div class="photo-preview-inner">
+          <h2 class="heading-medium">Your photo</h2>
+            <div class="photo">
+              <img src="../../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+          </div>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}
