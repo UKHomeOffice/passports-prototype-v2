@@ -61,6 +61,7 @@
 
       //change name
       $('#change-name-false').click();
+      $('#16-or-older-true').click();
 
       $(':checkbox').click();
       $('#applicant-check-Yes').click();

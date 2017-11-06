@@ -2,7 +2,7 @@ module.exports = {
     '/':{
       fields: ['apply-uk', 'application-country'],
       controller: require('../../../controllers/go-overseas'),
-      backLink: '/../prototype_171127/startpage',
+      backLink: '/../change_of_name_171101/startpage',
       next: '/first-uk', /* if Yes is selected */
       nextAlt: 'what-do-you-want-to-do-overseas', /* if they are from Germany/France */
       nextAltAlt:'what-do-you-want-to-do-overseas',/* if they are from Afganistan */
@@ -10,15 +10,12 @@ module.exports = {
       nextAltAltAltAlt:'../overseas-not-available' /* if they are from Syria - not available */
     },
     '/first-uk': {
+        backLink: './',
         fields: ['passport-before'],
         next: '/lost-stolen'
     },
     '/lost-stolen': {
         fields: ['lost-stolen'],
-        next: '/name-changed'
-    },
-    '/name-changed': {
-        fields: ['name-changed'],
         next: '/dob'
     },
     '/what-do-you-want-to-do': {
@@ -48,9 +45,9 @@ module.exports = {
       nextAltAlt:'../overseas-not-eligible', /* if they are from Afganistan */
     },
     '/dob': {
-      fields: ['age-day', 'age-year', 'age-month'],
+      fields: ['16-or-older'],
       controller: require('../../../controllers/go-overseas'),
-      backLink: './',
+      backLink: './lost-stolen',
       next: '/../filter', /* if they are from the UK */
     }
 };
