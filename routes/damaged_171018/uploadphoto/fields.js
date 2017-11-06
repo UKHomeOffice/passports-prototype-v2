@@ -44,6 +44,29 @@ module.exports = {
           redirect:'/you-need-another-photo'
         }
       ]
+    },
+    'submit-photo': {
+      legend: {
+        value: 'Do you want to submit this photo?',
+        className: 'visuallyhidden'
+      },
+      options: [
+        {value: 'Yes', label: 'Yes, my photo meets the rules'},
+        {value: 'No', label: 'No, I want to use a different photo'}
+      ],
+      validate: [
+        'required',
+        {
+          type:'equal',
+          arguments:['Yes'],
+          redirect:'/../upload'
+        },
+        {
+          type:'equal',
+          arguments:['No'],
+          redirect:'/../renew'
+        }
+      ]
     }
 
 };
