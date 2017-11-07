@@ -51,8 +51,8 @@ module.exports = {
         className: 'visuallyhidden'
       },
       options: [
-        {value: 'Yes', label: 'Yes, my photo meets the rules'},
-        {value: 'No', label: 'No, I want to use a different photo'}
+        {value: 'Yes', label: 'Yes, this photo meets the rules'},
+        {value: 'No', label: 'No, I want to submit a different photo'}
       ],
       validate: [
         'required',
