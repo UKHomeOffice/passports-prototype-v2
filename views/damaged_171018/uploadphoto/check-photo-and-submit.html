@@ -44,14 +44,13 @@
         </div>
 
 <h2>Do you want to submit this photo?</h2>
-
-
-
-
-
-            <a href="/../damaged_171018/renew/" class="button">Continue</a><br/><br/>
-
-
+{{< hmpo-partials-form}}
+{{$form}}
+    {{#radio-group}}submit-photo{{/radio-group}}
+    {{#input-submit}}{{/input-submit}}
+{{/form}}
+{{/ hmpo-partials-form}}
+<!-- <a href="/../damaged_171018/renew/" class="button">Continue</a><br/><br/> -->
 
 {{/content}}
 
