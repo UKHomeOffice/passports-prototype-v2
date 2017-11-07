@@ -41,6 +41,10 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     if (req.sessionModel.get('application-country') && notAvailableCountries.indexOf(req.sessionModel.get('application-country')) > -1) {
         return res.redirect(this.options.nextAltAltAltAlt);
     }
+    if (req.sessionModel.get('age-year') > '2001') {
+        return res.redirect('./below-16');
+    }
+
     Base.prototype.successHandler.call(this, req, res, callback);
 };
 
