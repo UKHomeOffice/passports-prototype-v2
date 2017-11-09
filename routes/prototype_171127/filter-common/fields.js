@@ -77,7 +77,7 @@ module.exports = {
     {
       type:'equal',
       arguments:[true], /* if the arguments are NOT selected */
-      redirect:'/below-16'
+      redirect:'https://passportapplication.service.gov.uk/ips-olc/'
     }
   ],
   className: 'inline'

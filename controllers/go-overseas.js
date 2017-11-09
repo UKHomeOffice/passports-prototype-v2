@@ -1,4 +1,5 @@
 var util = require('util'),
+    moment = require('moment'),
     _ = require('underscore');
 
 var Base = require('./form'),
@@ -41,7 +42,11 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     if (req.sessionModel.get('application-country') && notAvailableCountries.indexOf(req.sessionModel.get('application-country')) > -1) {
         return res.redirect(this.options.nextAltAltAltAlt);
     }
-    if (req.sessionModel.get('age-year') > '2001') {
+    // format dob for below 16 page
+    var formatDob = moment(req.form.values['age-year'] + '-' + req.form.values['age-month'] + '-' + req.form.values['age-day'], 'YYYY-MM-DD').format('D MMMM YYYY');
+    req.sessionModel.set('date-of-birth', formatDob);
+
+    if (req.form.values['age-year'] > '2001') {
         return res.redirect('./below-16');
     }
 
