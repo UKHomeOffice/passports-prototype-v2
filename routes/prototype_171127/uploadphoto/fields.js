@@ -52,14 +52,14 @@ module.exports = {
       },
       options: [
         {value: 'Yes', label: 'Yes, this photo meets the rules'},
-        {value: 'No', label: 'No, I want to submit a different photo'}
+        {value: 'No', label: 'No, I want to get a different photo'}
       ],
       validate: [
         'required',
         {
           type:'equal',
           arguments:['Yes'],
-          redirect:'/../upload'
+          redirect:'/../choose-photo-method'
         },
         {
           type:'equal',
