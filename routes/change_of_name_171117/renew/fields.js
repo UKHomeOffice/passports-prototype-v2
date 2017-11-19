@@ -127,7 +127,7 @@ module.exports = {
         className: 'visuallyhidden'
       },
       options: [
-          { value: false, label: 'Yes, my name matches my old passport' },
+          { value: false, label: 'Yes, my old passport was in the same name' },
           { value: true, label: 'No, my name has changed', toggle: 'note-regarding-name-change' }
       ],
       formatter: ['boolean'],
@@ -147,8 +147,8 @@ module.exports = {
     },
     options: [
       {value: 'Marriage', label: 'Through marriage or civil partnership'},
-      {value: 'Divorce', label: 'I’m divorced and want to go back to a previous name'},
-      {value: 'Small', label: 'I want to make a small change to my first names'},
+      {value: 'Divorce', label: 'I got divorced and want to go back to a previous name'},
+      {value: 'Small', label: 'I made a small change to my first names'},
       {value: 'Gender', label: 'I’ve changed my name and gender'},
       {value: 'Other', label: 'Other type of name change '}
     ],
