@@ -508,6 +508,7 @@ app.use('/tracking', require('./routes/tracking'));
 app.use('/tracking-ovs', require('./routes/tracking-ovs'));
 app.use('/tracking-email', require('./routes/tracking-email'));
 app.use('/tracking-dps', require('./routes/tracking-dps'));
+app.use('/tracking-change-of-name', require('./routes/tracking-change-of-name'));
 
 //Csig 170601
 app.use('/csig_170601/user', require('./routes/csig_170601/user'));
