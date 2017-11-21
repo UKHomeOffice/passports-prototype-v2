@@ -5,7 +5,7 @@ module.exports = {
         next: '/title'
     },
     '/dual-national':{
-        backLink: './contact-details',
+        backLink: './get-updates',
     },
     '/dual-national-details':{
         backLink: 'dual-national',
@@ -66,13 +66,13 @@ module.exports = {
     },
     '/contact-details':{
         fields:['email', 'mobile'],
-        next: '/dual-national'
+        next: '/get-updates'
     },
     '/get-updates-overseas':{
         next: '/passport-options-overseas'
     },
     '/get-updates':{
-        next: '/passport-options'
+        next: '/dual-national'
 
     },
     '/passport-options-overseas':{
@@ -81,7 +81,8 @@ module.exports = {
     },
     '/passport-options':{
         fields: ['passport-options', 'braille'],
-        next: '/sign'
+        next: '/sign',
+        backLink: './dual-national'
     },
     '/sign': {
         fields: ['can-sign', 'no-sign-reason'],

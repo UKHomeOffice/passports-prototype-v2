@@ -13,7 +13,10 @@
     {{$form}}
       <fieldset class="inline">
           {{#radio-group}}passport-damaged{{/radio-group}}
-          <details>
+          
+        {{#input-submit}}{{/input-submit}}
+
+        <details>
               <summary><span class="summary">I'm not sure if my passport is damaged</span></summary>
               <div class="panel panel-border-narrow">
                 <p>Her Majesty's Passport Office classes your passport as damaged if:</p>
@@ -28,7 +31,8 @@
                 </ul>
               </div>
           </details>
-        {{#input-submit}}{{/input-submit}}
+
+          
       </fieldset>
     {{/form}}
     {{/ hmpo-partials-form}}

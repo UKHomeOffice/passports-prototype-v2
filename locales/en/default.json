@@ -71,8 +71,7 @@
           "value": "Country code"
         },
         "mobile":{
-          "label": "Mobile or home phone",
-          "hint": "It's best to use a phone that you'll have access to."
+          "label": "Mobile or home phone"
         },
         "mobile-overseas":{
           "label": "Mobile or home phone"

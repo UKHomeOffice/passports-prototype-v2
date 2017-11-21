@@ -3,26 +3,54 @@
 {{$pageTitle}}Your old passport{{/pageTitle}}
 
 {{$header}}
-    <h1>Your old passport number</h1>
+    <h1>Your old passport details</h1>
 {{/header}}
 
 {{$content}}
-<p>You'll need to send us your old passport so we can cancel it.</p>
 
+<div class="panel panel-border-wide alert-default">
+                  <p>        You'll need to send us your old passport so we can cancel it.
+    </p>
+        </div>
 {{< hmpo-partials-form}}
 {{$form}}
 
   <div id="passport-number-group" class="form-group">
         <fieldset>
+          <h2>Passport number</h2>
               <p class="form-hint" id="dob-hint">For example 502135326</p>
                 {{#input-text}}passport-number{{/input-text}}
         </fieldset>
  
+<fieldset>
+                    <legend>
+                        <span class="form-label-bold">Expiry date</span>
+                        <span id="passport-expiry-hint" class="form-hint">For example 08 2017</span>
+                        
+                    </legend>
+                    <div class="form-date">
+                        <div id="passport-expiry-month-group" class="form-group">
+    <label for="passport-expiry-month" class="form-label">
+        Month
+        
+        
+    </label>
+    <input type="text" name="passport-expiry-month" id="passport-expiry-month" class="form-control" aria-required="true" min="1" max="12" maxlength="2" pattern="[0-9]*" aria-describedby="passport-expiry-hint" autocomplete="hmpo-passport-expiry-month">
+<span style="opacity: 1; background-size: 19px 13px; left: 51px; top: 324px; width: 14px; min-width: 14px; height: 13px; position: absolute; background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTciIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxNyAxMiI+IDxkZWZzPiA8cGF0aCBpZD0iYSIgZD0iTTcuOTA5IDEuNDYybDIuMTIxLjg2NHMtLjY3MS4xMy0xLjIwOS4yOTRjMCAwIC40MzcuNjM0Ljc3LjkzOC4zOTEtLjE4LjY1Ny0uMjQ4LjY1Ny0uMjQ4LS44MTEgMS42NjgtMi45NzkgMi43MDMtNC41MyAyLjcwMy0uMDkzIDAtLjQ4Mi0uMDA2LS43MjcuMDE1LS40MzUuMDIxLS41ODEuMzgtLjM3NC40NzMuMzczLjIwMSAxLjE0My42NjIuOTU4IDEuMDA5QzUuMiA4LjAwMy45OTkgMTEgLjk5OSAxMWwuNjQ4Ljg4Nkw2LjEyOSA4LjYzQzguNjAyIDYuOTQ4IDEyLjAwNiA2IDE1IDZoM1Y1aC00LjAwMWMtMS4wNTggMC0yLjA0LjEyMi0yLjQ3My0uMDItLjQwMi0uMTMzLS41MDItLjY3OS0uNDU1LTEuMDM1YTcuODcgNy44NyAwIDAgMSAuMTg3LS43MjljLjAyOC0uMDk5LjA0Ni0uMDc3LjE1NS0uMDk5LjU0LS4xMTIuNzc3LS4wOTUuODIxLS4xNi4xNDYtLjI0NS4yNTQtLjk3NC4yNTQtLjk3NEw3LjU2OS4zODlzLjIwMiAxLjAxMy4zNCAxLjA3M3oiLz4gPC9kZWZzPiA8dXNlIGZpbGw9IiNiNmI2YjYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEpIiB4bGluazpocmVmPSIjYSIvPiA8L3N2Zz4=&quot;); background-repeat: no-repeat; background-position: 0px 0px; border: none; display: inline; visibility: visible; z-index: auto;"></span></div>
 
-<!--<div class="panel-important" style="margin-bottom:0;">
-                  <p>        You'll need to send us your old passport so we can cancel it
-    </p>
-        </div>-->
+<div id="passport-expiry-year-group" class="form-group">
+    <label for="passport-expiry-year" class="form-label">
+        Year
+        
+        
+    </label>
+    <input type="text" name="passport-expiry-year" id="passport-expiry-year" class="form-control" aria-required="true" maxlength="4" pattern="[0-9]*" aria-describedby="passport-expiry-hint" autocomplete="hmpo-passport-expiry-year">
+<span style="opacity: 1; background-size: 19px 13px; left: 133px; top: 324px; width: 19px; min-width: 19px; height: 13px; position: absolute; background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTciIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxNyAxMiI+IDxkZWZzPiA8cGF0aCBpZD0iYSIgZD0iTTcuOTA5IDEuNDYybDIuMTIxLjg2NHMtLjY3MS4xMy0xLjIwOS4yOTRjMCAwIC40MzcuNjM0Ljc3LjkzOC4zOTEtLjE4LjY1Ny0uMjQ4LjY1Ny0uMjQ4LS44MTEgMS42NjgtMi45NzkgMi43MDMtNC41MyAyLjcwMy0uMDkzIDAtLjQ4Mi0uMDA2LS43MjcuMDE1LS40MzUuMDIxLS41ODEuMzgtLjM3NC40NzMuMzczLjIwMSAxLjE0My42NjIuOTU4IDEuMDA5QzUuMiA4LjAwMy45OTkgMTEgLjk5OSAxMWwuNjQ4Ljg4Nkw2LjEyOSA4LjYzQzguNjAyIDYuOTQ4IDEyLjAwNiA2IDE1IDZoM1Y1aC00LjAwMWMtMS4wNTggMC0yLjA0LjEyMi0yLjQ3My0uMDItLjQwMi0uMTMzLS41MDItLjY3OS0uNDU1LTEuMDM1YTcuODcgNy44NyAwIDAgMSAuMTg3LS43MjljLjAyOC0uMDk5LjA0Ni0uMDc3LjE1NS0uMDk5LjU0LS4xMTIuNzc3LS4wOTUuODIxLS4xNi4xNDYtLjI0NS4yNTQtLjk3NC4yNTQtLjk3NEw3LjU2OS4zODlzLjIwMiAxLjAxMy4zNCAxLjA3M3oiLz4gPC9kZWZzPiA8dXNlIGZpbGw9IiNiNmI2YjYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEpIiB4bGluazpocmVmPSIjYSIvPiA8L3N2Zz4=&quot;); background-repeat: no-repeat; background-position: 0px 0px; border: none; display: inline; visibility: visible; z-index: auto;"></span></div>
+
+                    </div>
+                </fieldset>
+<br>
+
 <!--
         <fieldset>
             <legend><span class="form-label-bold">Expiry date</span></legend>
