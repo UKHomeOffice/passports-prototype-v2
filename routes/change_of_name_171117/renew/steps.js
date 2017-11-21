@@ -27,11 +27,23 @@ module.exports = {
     '/change-of-name':{
         backLink: 'name',
         fields: ['change-of-name-reason'],
-        next: '/previous-names'
+        next: '/previous-names-change'
     },
     '/previous-names':{
         fields: [
                 'previous-name',
+                'previous-first-name-1',
+                'previous-last-name-1',
+                'previous-first-name-2',
+                'previous-last-name-2',
+                'previous-first-name-3',
+                'previous-last-name-3'
+                 ],
+        backLink: 'name',
+        next: '/gender'
+    },
+   '/previous-names-change':{
+        fields: [
                 'previous-first-name-1',
                 'previous-last-name-1',
                 'previous-first-name-2',

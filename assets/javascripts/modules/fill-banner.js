@@ -60,7 +60,8 @@
       $('#secure-return-false').click();
 
       //change name
-      $('#change-name-false').click();
+      $('#change-name-true').click();
+      $('#change-of-name-reason-Marriage').click();
       $('#16-or-older-true').click();
 
       $(':checkbox').click();

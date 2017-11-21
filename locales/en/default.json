@@ -89,6 +89,9 @@
             "legend": "Have you ever been known by any other names?",
             "hint": "For example a maiden name, names from previous marriages or a different name at birth."
         },
+        "previous-name-change": {
+            "legend": "Have you ever been known by any other names?"
+        },
         "previous-names": {
             "label": "All of your previous names"
         },
