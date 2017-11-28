@@ -4,13 +4,6 @@ module.exports = {
         fields: ['passport-number'],
         next: '/title'
     },
-    '/dual-national':{
-        backLink: './get-updates',
-    },
-    '/dual-national-details':{
-        backLink: 'dual-national',
-        next: '/title'
-    },
     '/title':{
         backLink: './',
         fields: ['title'],
@@ -84,8 +77,14 @@ module.exports = {
         next: '/passport-options-overseas'
     },
     '/get-updates':{
-        next: '/dual-national'
-
+        next: '/passport-options'
+    },
+    '/dual-national':{
+        backLink: './get-updates',
+    },
+    '/dual-national-details':{
+        backLink: 'dual-national',
+        next: '/title'
     },
     '/passport-options-overseas':{
         fields: ['passport-options-overseas', 'braille'],
