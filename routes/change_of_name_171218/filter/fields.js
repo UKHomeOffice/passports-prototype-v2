@@ -50,7 +50,7 @@ validate: [
   {
     type:'equal',
     arguments:['No'], /* if Yes is selected */
-    redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+    redirect:'/dual-national'
   }
 ]
 }
