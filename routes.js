@@ -680,7 +680,35 @@ app.use('/change_of_name_171117/photo-code', require('./routes/change_of_name_17
 app.use('/change_of_name_171117/mismatch', require('./routes/change_of_name_171117/mismatch'));
 app.use('/change_of_name_171117/redirect-tracking', require('./routes/change_of_name_171117/redirect-tracking'));
 
-
+// change_of_name_171218 Change of name and dual nationality
+app.use('/change_of_name_171218/overseas', require('./routes/change_of_name_171218/overseas'));
+app.use('/change_of_name_171218/overseas-not-eligible', require('./routes/change_of_name_171218/overseas-not-eligible'));
+app.use('/change_of_name_171218/overseas-first', require('./routes/change_of_name_171218/overseas-first'));
+app.use('/change_of_name_171218/overseas-lost-change', require('./routes/change_of_name_171218/overseas-lost-change'));
+app.use('/change_of_name_171218/uploadphoto', require('./routes/change_of_name_171218/uploadphoto'));
+app.use('/change_of_name_171218/filter-common', require('./routes/change_of_name_171218/filter-common'));
+app.use('/change_of_name_171218/renew', require('./routes/change_of_name_171218/renew'));
+app.use('/change_of_name_171218/intro', require('./routes/change_of_name_171218/intro'));
+app.use('/change_of_name_171218/filter', require('./routes/change_of_name_171218/filter'));
+app.use('/change_of_name_171218/startpage', require('./routes/change_of_name_171218/startpage'));
+app.use('/change_of_name_171218/startpage-overseas', require('./routes/change_of_name_171218/startpage-overseas'));
+app.use('/change_of_name_171218/photoguide-short', require('./routes/change_of_name_171218/photoguide-short'));
+app.use('/change_of_name_171218/photoguide-static', require('./routes/change_of_name_171218/photoguide-static'));
+app.use('/change_of_name_171218/photoguide-shop', require('./routes/change_of_name_171218/photoguide-shop'));
+app.use('/change_of_name_171218/takephoto', require('./routes/change_of_name_171218/takephoto'));
+app.use('/change_of_name_171218/upload', require('./routes/change_of_name_171218/upload'));
+app.use('/change_of_name_171218/rejectedphoto', require('./routes/change_of_name_171218/rejectedphoto'));
+app.use('/change_of_name_171218/filter-common-temp', require('./routes/change_of_name_171218/filter-common-temp'));
+app.use('/change_of_name_171218/startpage-temp', require('./routes/change_of_name_171218/startpage-temp'));
+app.use('/change_of_name_171218/overseas-not-available', require('./routes/change_of_name_171218/overseas-not-available'));
+app.use('/change_of_name_171218/throttle', require('./routes/change_of_name_171218/throttle'));
+app.use('/change_of_name_171218/payment', require('./routes/change_of_name_171218/payment'));
+app.use('/change_of_name_171218/submission-failed', require('./routes/change_of_name_171218/submission-failed'));
+app.use('/change_of_name_171218/sar', require('./routes/change_of_name_171218/sar'));
+app.use('/change_of_name_171218/photo-url', require('./routes/change_of_name_171218/photo-url'));
+app.use('/change_of_name_171218/photo-code', require('./routes/change_of_name_171218/photo-code'));
+app.use('/change_of_name_171218/mismatch', require('./routes/change_of_name_171218/mismatch'));
+app.use('/change_of_name_171218/redirect-tracking', require('./routes/change_of_name_171218/redirect-tracking'));
 
 //3rd party shops photo checker
 app.use('/shops-photo-checker', require('./routes/shops-photo-checker'));
