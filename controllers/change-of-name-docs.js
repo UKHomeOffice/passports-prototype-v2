@@ -8,9 +8,10 @@ var Controller = function() {
 util.inherits(Controller, Base)
 
 Controller.prototype.get = function successHandler(req, res, callback) {
+
 	if (req.sessionModel.get('change-of-name-reason') == undefined){
 		return res.redirect('./declaration')
-	}
+	} else {
 	switch (req.sessionModel.get('change-of-name-reason')) {
 		case 'Marriage':
 			return res.redirect('./name-change-docs-for-marriage')
@@ -22,6 +23,7 @@ Controller.prototype.get = function successHandler(req, res, callback) {
 			return res.redirect('./name-change-docs-for-gender-change')
 		case 'Other':
 			return res.redirect('./name-change-docs-for-other-changes')
+	}
 	}
 }
 
