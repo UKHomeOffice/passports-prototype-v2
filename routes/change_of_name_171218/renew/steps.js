@@ -135,6 +135,7 @@ module.exports = {
         next: '/declaration'
     },
     '/declaration':{
+        prereqs: [ '/summary' ],
         next: '/payment'
     },
     '/payment':{
