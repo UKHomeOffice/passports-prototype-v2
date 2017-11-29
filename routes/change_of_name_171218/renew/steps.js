@@ -2,7 +2,7 @@ module.exports = {
     '/':{
         backLink: '../uploadphoto/check-photo-and-submit',
         fields: ['passport-number'],
-        next: '/title'
+        next: '/name'
     },
     '/dual-national':{
         backLink: './get-updates',
@@ -22,12 +22,13 @@ module.exports = {
             'lastname',
             'change-name'
         ],
-        next: '/previous-names'
+        next: '/previous-names',
+        backLink: '../renew'
     },
     '/change-of-name':{
         backLink: 'name',
         fields: ['change-of-name-reason'],
-        next: '/previous-names-change'
+        next: '/previous-names'
     },
     '/previous-names':{
         fields: [
@@ -51,7 +52,7 @@ module.exports = {
                 'previous-first-name-3',
                 'previous-last-name-3'
                  ],
-        backLink: 'name',
+        backLink: 'change-of-name',
         next: '/gender'
     },
     '/gender':{

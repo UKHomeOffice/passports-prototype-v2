@@ -11,7 +11,7 @@
 {{< hmpo-partials-form}}
   {{$form}}
     <fieldset class="inline">
-        <p>We need to know <a href="https://www.gov.uk/changing-passport-information">how you changed your name</a> so we can tell you which documents to send.
+        <p>We need to know how you changed your name so we can tell you which documents to send.
         {{#radio-group}}change-of-name-reason{{/radio-group}}
     </fieldset>
 
@@ -22,6 +22,27 @@
 
 
 {{/content}}
+
+{{$sidebar}}
+    <div class="column-one-third">
+        <div class="sidebar related GDS">
+          <div class="photo-preview-inner">
+            <div class="inner group related-subsection">
+            <h2 id="parent-subsection">Title?</h2>
+            <nav role="navigation" aria-labelledby="parent-subsection">
+              <ul>
+                <li>
+                  <a href="https://www.gov.uk/changing-passport-information" target="blank">How did you change your name</a>
+                </li>
+                
+            </ul>
+            </nav>
+          </div>
+          </div>
+        </div>
+    </div>
+{{/sidebar}}
+
 
 
 {{/ layout}}
