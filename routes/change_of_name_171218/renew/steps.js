@@ -15,7 +15,7 @@ module.exports = {
             'lastname',
             'change-name'
         ],
-        next: '/previous-names'
+        next: '/previous-names',
     },
     '/change-of-name':{
         backLink: 'name',

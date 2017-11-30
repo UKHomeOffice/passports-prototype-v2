@@ -116,10 +116,14 @@ module.exports = {
     ]
   },
   'name': {
-
+    validate: [
+      'required'
+    ]
   },
   'lastname': {
-
+    validate: [
+      'required'
+    ]
   },
   'change-name': {
       legend: {
