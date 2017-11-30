@@ -84,8 +84,15 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   });
 
   var newPassportFields = [];
-  var previousName1 = values['previous-first-name-1'] + ' ' + values['previous-last-name-1'];
-  var previousName2 = '<br>' + values['previous-first-name-2'] + ' ' + values['previous-last-name-2'];
+  // var previousName1 = values['previous-first-name'][0] + ' ' + values['previous-last-name'][0];
+  // var previousName2 = '<br>' + values['previous-first-name'][1] + ' ' + values['previous-last-name'][1];
+  // var previousName3 = '<br>' + values['previous-first-name'][2] + ' ' + values['previous-last-name'][2];
+
+  var allPreviousNames = _.zip(values['previous-first-name'],values['previous-last-name']);
+  var previousNamesList = "";
+  for (i = 0; i < allPreviousNames.length; i++) {
+  	previousNamesList += allPreviousNames[i].join(' ') + "<br>";
+	}
 
   newPassportFields.push({
     step: this.getEditStep('title'),
@@ -107,9 +114,9 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   }
 
   newPassportFields.push({
-    step: this.getEditStep('previous-names'),
+    step: this.getEditStep('previous-first-name'),
     title: 'Previous names',
-    value: values['previous-name'] ? previousName1 + previousName2 : 'You have never been known by any other names'
+    value: values['previous-name'] ? previousNamesList : 'You have never been known by any other names'
   });
 
   newPassportFields.push({

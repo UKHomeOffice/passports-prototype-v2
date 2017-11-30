@@ -172,24 +172,24 @@ module.exports = {
           { value: false, label: 'No' }
       ]
   },
-  'previous-last-name-1': {
+  'previous-last-name': {
 
   },
-  'previous-first-name-1': {
+  'previous-first-name': {
 
   },
-  'previous-last-name-2': {
-
-  },
-  'previous-first-name-2': {
-
-  },
-  'previous-last-name-3': {
-
-  },
-  'previous-first-name-3': {
-
-  },
+  // 'previous-last-name-2': {
+  //
+  // },
+  // 'previous-first-name-2': {
+  //
+  // },
+  // 'previous-last-name-3': {
+  //
+  // },
+  // 'previous-first-name-3': {
+  //
+  // },
   'gender': {
       validate: [
           'required'
