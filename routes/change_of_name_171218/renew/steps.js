@@ -16,6 +16,13 @@ module.exports = {
             'change-name'
         ],
         next: '/previous-names',
+        forks: [{
+            target: '/change-of-name',
+            condition: {
+                field: 'change-name',
+                value: true
+            }
+        }]
     },
     '/change-of-name':{
         backLink: 'name',

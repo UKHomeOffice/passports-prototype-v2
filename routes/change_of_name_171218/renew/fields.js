@@ -136,12 +136,7 @@ module.exports = {
       ],
       formatter: ['boolean'],
       validate: [
-        'required',
-        {
-          type:'equal',
-          arguments:[false], /* if the arguments are NOT selected */
-          redirect:'/change-of-name'
-        }
+        'required'
       ],
   },
   'change-of-name-reason':{

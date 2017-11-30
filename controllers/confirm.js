@@ -84,10 +84,6 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   });
 
   var newPassportFields = [];
-  // var previousName1 = values['previous-first-name'][0] + ' ' + values['previous-last-name'][0];
-  // var previousName2 = '<br>' + values['previous-first-name'][1] + ' ' + values['previous-last-name'][1];
-  // var previousName3 = '<br>' + values['previous-first-name'][2] + ' ' + values['previous-last-name'][2];
-
   var allPreviousNames = _.zip(values['previous-first-name'],values['previous-last-name']);
   var previousNamesList = "";
   for (i = 0; i < allPreviousNames.length; i++) {
@@ -105,7 +101,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     value: join(values, ['name', 'lastname'])
   });
 
-  if (values['change-of-name-reason']) {
+  if (values['change-name'] == true) {
     newPassportFields.push({
       step: this.getEditStep('change-of-name-reason'),
       title: 'Name change',
