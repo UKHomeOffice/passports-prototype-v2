@@ -14,6 +14,13 @@ module.exports = {
         fields: ['uncancelled'],
         backLink: './passport-damaged',
         next: '/../intro',
+        forks: [{
+            target: '/dual-national',
+            condition: {
+                field: 'uncancelled',
+                value: 'Yes'
+            }
+        }],
         nextAlt: '../overseas'
     },
     '/dual-national': {
