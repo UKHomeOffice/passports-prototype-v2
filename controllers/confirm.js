@@ -100,7 +100,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
 
   if (values['change-of-name-reason']) {
     newPassportFields.push({
-      step: this.getEditStep('change-of-name'),
+      step: this.getEditStep('change-of-name-reason'),
       title: 'Name change',
       value: values['change-of-name-reason']
     });
