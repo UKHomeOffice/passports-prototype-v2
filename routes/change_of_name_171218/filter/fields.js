@@ -47,11 +47,6 @@ options: [
 ],
 validate: [
   'required',
-  {
-    type:'equal',
-    arguments:['No'], /* if Yes is selected */
-    redirect:'https://passportapplication.service.gov.uk/ips-olc/'
-  }
 ]
 }
 

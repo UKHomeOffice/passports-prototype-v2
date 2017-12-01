@@ -7,6 +7,23 @@ module.exports = {
     '/passport-damaged': {
       fields: ['passport-damaged'],
         backLink: './',
-        next: '/../intro' /* if No is selected */
+        next: '/uncancelled' /* if No is selected */
+    },
+    '/uncancelled': {
+        controller: require('../../../controllers/go-overseas'),
+        fields: ['uncancelled'],
+        backLink: './passport-damaged',
+        next: '/../intro',
+        forks: [{
+            target: '/dual-national',
+            condition: {
+                field: 'uncancelled',
+                value: 'Yes'
+            }
+        }],
+        nextAlt: '../overseas'
+    },
+    '/dual-national': {
+      backLink: './uncancelled',
     }
 };

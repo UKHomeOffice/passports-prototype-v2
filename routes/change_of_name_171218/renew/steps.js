@@ -4,13 +4,6 @@ module.exports = {
         fields: ['passport-number'],
         next: '/name'
     },
-    '/dual-national':{
-        backLink: './get-updates',
-    },
-    '/dual-national-details':{
-        backLink: 'dual-national',
-        next: '/title'
-    },
     '/title':{
         backLink: './',
         fields: ['title'],
@@ -23,7 +16,13 @@ module.exports = {
             'change-name'
         ],
         next: '/previous-names',
-        backLink: '../renew'
+        forks: [{
+            target: '/change-of-name',
+            condition: {
+                field: 'change-name',
+                value: true
+            }
+        }]
     },
     '/change-of-name':{
         backLink: 'name',
@@ -33,24 +32,16 @@ module.exports = {
     '/previous-names':{
         fields: [
                 'previous-name',
-                'previous-first-name-1',
-                'previous-last-name-1',
-                'previous-first-name-2',
-                'previous-last-name-2',
-                'previous-first-name-3',
-                'previous-last-name-3'
+                'previous-first-name',
+                'previous-last-name'
                  ],
         backLink: 'name',
         next: '/gender'
     },
    '/previous-names-change':{
         fields: [
-                'previous-first-name-1',
-                'previous-last-name-1',
-                'previous-first-name-2',
-                'previous-last-name-2',
-                'previous-first-name-3',
-                'previous-last-name-3'
+                'previous-first-name',
+                'previous-last-name'
                  ],
         backLink: 'change-of-name',
         next: '/gender'
@@ -85,8 +76,14 @@ module.exports = {
         next: '/passport-options-overseas'
     },
     '/get-updates':{
-        next: '/dual-national'
-
+        next: '/passport-options'
+    },
+    '/dual-national':{
+        backLink: './get-updates',
+    },
+    '/dual-national-details':{
+        backLink: 'dual-national',
+        next: '/title'
     },
     '/passport-options-overseas':{
         fields: ['passport-options-overseas', 'braille'],
@@ -137,6 +134,7 @@ module.exports = {
         next: '/declaration'
     },
     '/declaration':{
+        prereqs: [ '/summary' ],
         next: '/payment'
     },
     '/payment':{

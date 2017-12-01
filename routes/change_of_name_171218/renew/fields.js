@@ -116,10 +116,14 @@ module.exports = {
     ]
   },
   'name': {
-
+    validate: [
+      'required'
+    ]
   },
   'lastname': {
-
+    validate: [
+      'required'
+    ]
   },
   'change-name': {
       legend: {
@@ -132,12 +136,7 @@ module.exports = {
       ],
       formatter: ['boolean'],
       validate: [
-        'required',
-        {
-          type:'equal',
-          arguments:[false], /* if the arguments are NOT selected */
-          redirect:'/change-of-name'
-        }
+        'required'
       ],
   },
   'change-of-name-reason':{
@@ -168,24 +167,24 @@ module.exports = {
           { value: false, label: 'No' }
       ]
   },
-  'previous-last-name-1': {
+  'previous-last-name': {
 
   },
-  'previous-first-name-1': {
+  'previous-first-name': {
 
   },
-  'previous-last-name-2': {
-
-  },
-  'previous-first-name-2': {
-
-  },
-  'previous-last-name-3': {
-
-  },
-  'previous-first-name-3': {
-
-  },
+  // 'previous-last-name-2': {
+  //
+  // },
+  // 'previous-first-name-2': {
+  //
+  // },
+  // 'previous-last-name-3': {
+  //
+  // },
+  // 'previous-first-name-3': {
+  //
+  // },
   'gender': {
       validate: [
           'required'
