@@ -2,7 +2,7 @@ module.exports = {
     '/':{
         backLink: '../uploadphoto/check-photo-and-submit',
         fields: ['passport-number'],
-        next: '/title'
+        next: '/name'
     },
     '/title':{
         backLink: './',
@@ -27,7 +27,7 @@ module.exports = {
     '/change-of-name':{
         backLink: 'name',
         fields: ['change-of-name-reason'],
-        next: '/previous-names-change'
+        next: '/previous-names'
     },
     '/previous-names':{
         fields: [
@@ -43,7 +43,7 @@ module.exports = {
                 'previous-first-name',
                 'previous-last-name'
                  ],
-        backLink: 'name',
+        backLink: 'change-of-name',
         next: '/gender'
     },
     '/gender':{
