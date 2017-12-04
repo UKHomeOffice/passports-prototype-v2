@@ -37,17 +37,15 @@ module.exports = {
     ]
 },
 'uncancelled': {
-legend: {
-  value: 'Do you have any uncancelled passport from a different country?',
-  className: 'visuallyhidden'
-},
-options: [
-  {value: 'Yes', label: 'Yes', toggle: 'which-passport'},
-  {value: 'No', label: 'No'}
-],
-validate: [
-  'required',
-]
-}
-
+    formatter: 'boolean',
+    validate: 'required',
+    legend: {
+      value: 'Do you have any uncancelled passport from a different country?',
+      className: 'visuallyhidden'
+    },
+    options: [
+      {value: true, label: 'Yes', toggle: 'which-passport'},
+      {value: false, label: 'No'}
+    ]
+  }
 };

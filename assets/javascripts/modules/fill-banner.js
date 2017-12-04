@@ -45,7 +45,7 @@
       $('#passport-before-true').click();
       $('#lost-stolen-false').click();
       $('#name-changed-false').click();
-      $('#uncancelled-No').click();
+      $('#uncancelled-false').click();
       $('#passport-damaged-No').click();
       $('#choose-photo-upload').click();
       $('#plain-expression-Yes').click();

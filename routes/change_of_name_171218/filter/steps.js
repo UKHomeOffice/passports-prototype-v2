@@ -18,7 +18,7 @@ module.exports = {
             target: '/dual-national',
             condition: {
                 field: 'uncancelled',
-                value: 'Yes'
+                value: true
             }
         }],
         nextAlt: '../overseas'
