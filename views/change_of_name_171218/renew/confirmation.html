@@ -14,7 +14,7 @@
         Email confirmation sent to test@thundercats.com</br>
       </br>
           <a href="">Download PDF receipt</a></p>
-              
+
     </div>
 
     <h1>What you need to do next</h1>
@@ -30,7 +30,11 @@
     </p>
     <p>You don’t need to include a covering letter. It’s your choice if you use standard post or a secure service.</p>
 
-   
+    {{#values.dual-nationality}}
+      <h2> This should only show for dual nationals</h2>
+      <p> Make sure you return all of your passports</p>
+    {{/values.dual-nationality}}
+
    <h2>How long it takes</h2>
     <p>It should take 3 weeks to get your new passport. It may take longer if we need more information or documents - we'll tell you if that happens.</p>
 

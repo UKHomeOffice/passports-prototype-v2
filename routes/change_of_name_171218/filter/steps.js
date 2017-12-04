@@ -18,12 +18,13 @@ module.exports = {
             target: '/dual-national',
             condition: {
                 field: 'uncancelled',
-                value: 'Yes'
+                value: true
             }
         }],
         nextAlt: '../overseas'
     },
     '/dual-national': {
       backLink: './uncancelled',
+      controller: require('../../../controllers/dual-national')
     }
 };

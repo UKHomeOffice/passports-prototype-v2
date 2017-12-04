@@ -1,6 +1,7 @@
 module.exports = {
     '/':{
         backLink: '../uploadphoto/check-photo-and-submit',
+        controller: require('../../../controllers/dual-national'),
         fields: ['passport-number'],
         next: '/name'
     },
