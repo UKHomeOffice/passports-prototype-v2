@@ -25,5 +25,6 @@ module.exports = {
     },
     '/dual-national': {
       backLink: './uncancelled',
+      controller: require('../../../controllers/dual-national')
     }
 };
