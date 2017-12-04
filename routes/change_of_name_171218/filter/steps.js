@@ -25,6 +25,17 @@ module.exports = {
     },
     '/dual-national': {
       backLink: './uncancelled',
-      controller: require('../../../controllers/dual-national')
+      fields: ['uncancelled-check'],
+      next: '/../intro',
+      forks: [{
+          target: '/passports-different-name',
+          condition: {
+              field: 'uncancelled-check',
+              value: false
+          }
+      }],
+    },
+    '/passports-different-name': {
+
     }
 };

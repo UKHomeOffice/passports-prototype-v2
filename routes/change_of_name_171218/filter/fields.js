@@ -44,7 +44,19 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [
-      {value: true, label: 'Yes', toggle: 'which-passport'},
+      {value: true, label: 'Yes'},
+      {value: false, label: 'No'}
+    ]
+  },
+'uncancelled-check': {
+    formatter: 'boolean',
+    validate: 'required',
+    legend: {
+      value: '',
+      className: 'visuallyhidden'
+    },
+    options: [
+      {value: true, label: 'Yes'},
       {value: false, label: 'No'}
     ]
   }
