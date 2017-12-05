@@ -10,6 +10,7 @@ module.exports = {
         next: '/name'
     },
     '/name':{
+        backLink: './renew',
         fields: [
             'name',
             'lastname',
@@ -27,7 +28,7 @@ module.exports = {
     '/change-of-name':{
         backLink: 'name',
         fields: ['change-of-name-reason'],
-        next: '/previous-names'
+        next: '/previous-names-change'
     },
     '/previous-names':{
         fields: [
