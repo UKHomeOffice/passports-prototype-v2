@@ -91,7 +91,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
 	}
 
   newPassportFields.push({
-    step: this.getEditStep('title'),
+    step: this.getEditStep('name'),
     title: 'Title',
     value: values['title']
     //  value: values['title'] === 'Other' ? values['other-title'] : values['title']
@@ -102,10 +102,12 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   });
 
   if (values['change-name'] == true) {
+    var str = values['change-of-name-reason'];
+    reason = str.replace(/-/g, ' ');
     newPassportFields.push({
       step: this.getEditStep('change-of-name-reason'),
       title: 'Name change',
-      value: values['change-of-name-reason']
+      value: reason
     });
   }
 

@@ -145,10 +145,10 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [
-      {value: 'Marriage', label: 'Marriage or civil partnership'},
+      {value: 'Marriage-or-civil-partnership', label: 'Marriage or civil partnership'},
       {value: 'Divorce', label: 'Divorce'},
-      {value: 'Gender', label: 'Gender reassignment'},
-      {value: 'Other', label: 'I changed my name another way'}
+      {value: 'Gender-reassigment', label: 'Gender reassignment'},
+      {value: 'I-changed-my-name-another-way', label: 'I changed my name another way'}
     ],
     validate: [
       'required'

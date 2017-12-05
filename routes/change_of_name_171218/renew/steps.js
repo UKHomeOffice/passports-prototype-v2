@@ -12,6 +12,7 @@ module.exports = {
     '/name':{
         backLink: './renew',
         fields: [
+            'title',
             'name',
             'lastname',
             'change-name'
