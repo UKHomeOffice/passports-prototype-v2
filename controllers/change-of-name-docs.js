@@ -8,7 +8,6 @@ var Controller = function() {
 util.inherits(Controller, Base)
 
 Controller.prototype.get = function successHandler(req, res, callback) {
-
 	if (req.sessionModel.get('change-of-name-reason') == undefined){
 		return res.redirect('./declaration')
 	} else {

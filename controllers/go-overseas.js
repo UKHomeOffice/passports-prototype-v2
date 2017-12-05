@@ -30,6 +30,7 @@ Controller.prototype.saveValues = function (req, res, callback) {
 };
 
 Controller.prototype.successHandler = function successHandler(req, res, callback) {
+    req.sessionModel.set('required-documents', false);
     if (req.sessionModel.get('application-country') && orCountries.indexOf(req.sessionModel.get('application-country')) > -1) {
         return res.redirect(this.options.nextAlt);
     }

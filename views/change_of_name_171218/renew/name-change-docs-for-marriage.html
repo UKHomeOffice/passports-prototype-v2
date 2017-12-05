@@ -10,7 +10,7 @@
 <p>Before we can send your new passport we need to see extra documents.</br>We’ll check and return them to you.</p>
 
 <div class="panel panel-border-wide alert-default">
-  You must send original documents - we can't accept photocopies. Your application will be delayed if you don't send everything we need. 
+  You must send original documents - we can't accept photocopies. Your application will be delayed if you don't send everything we need.
 </div>
 
 {{< hmpo-partials-form}}
@@ -36,8 +36,12 @@
 <div class="panel panel-border-wide">
                     <p>If your documents aren't in English or Welsh you also need to get a <a href="https://www.gov.uk/certifying-a-document">certified translation.</a></p>
                 </div>
-
-    <a href="/change_of_name_171218/renew/declaration" class="button">Continue</a><br/><br/>
+    {{#values.required-documents}}
+      <a href="#" class="button">Print</a><br/><br/>
+    {{/values.required-documents}}
+    {{^values.required-documents}}
+      <a href="/change_of_name_171218/renew/declaration" class="button">Continue</a><br/><br/>
+    {{/values.required-documents}}
 {{/form}}
 {{/ hmpo-partials-form}}
 

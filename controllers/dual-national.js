@@ -8,8 +8,11 @@ var Controller = function() {
 util.inherits(Controller, Base)
 
 Controller.prototype.successHandler = function successHandler(req, res, callback) {
-		console.log(req.session);
-    req.sessionModel.set('dual-nationality', req.session['hmpo-wizard-496']['uncancelled']);
+		console.log(req.session)
+		if (req.session['hmpo-wizard-496']) {
+    	req.sessionModel.set('dual-nationality', req.session['hmpo-wizard-496']['uncancelled']);
+		}
+		req.sessionModel.set('required-documents', true);
     Base.prototype.successHandler.call(this, req, res, callback);
 };
 
