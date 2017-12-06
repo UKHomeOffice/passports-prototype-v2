@@ -14,9 +14,27 @@
         <div id="date-group" class="form-group">
             <fieldset>
                 <div class="form-date">
-                  <p class="form-hint" id="dob-hint">For example 08 2007</p>
-                    {{#input-text}}expiry-month{{/input-text}}
-                    {{#input-text}}expiry-year{{/input-text}}
+                  <p class="form-hint" id="dob-hint">For example 21 08 07</p>
+               <div class="form-date">
+  <div id="passport-expiry-day-group" class="form-group">
+    <label for="passport-expiry-day" class="form-label">
+      Day
+    </label>
+    <input type="text" name="passport-expiry-day" id="passport-expiry-day" class="form-control" aria-required="true" min="1" max="12" maxlength="2" pattern="[0-9]*" aria-describedby="passport-expiry-hint" autocomplete="hmpo-passport-expiry-day">
+  </div>
+  <div class="form-date">
+    <div id="passport-expiry-month-group" class="form-group">
+      <label for="passport-expiry-month" class="form-label">
+        Month
+      </label>
+      <input type="text" name="passport-expiry-month" id="passport-expiry-month" class="form-control" aria-required="true" min="1" max="12" maxlength="4" pattern="[0-9]*" aria-describedby="passport-expiry-hint" autocomplete="hmpo-passport-expiry-month">
+    </div>
+    <div id="passport-expiry-year-group" class="form-group">
+      <label for="passport-expiry-year" class="form-label">
+        Year
+      </label>
+      <input type="text" name="passport-expiry-year" id="passport-expiry-year" class="form-control" aria-required="true" maxlength="4" pattern="[0-9]*" aria-describedby="passport-expiry-hint" autocomplete="hmpo-passport-expiry-year">
+    </div>
                 </div>
             </fieldset>
         </div>
