@@ -11,11 +11,15 @@ $(document).ready(function() {
       x++;
       $(wrapper).append(template.html());
     }
+    if (x == maxFields) {
+      addButton.hide();
+    }
   });
 
   $(wrapper).on("click", ".remove-field", function(e) {
     e.preventDefault();
     $(this).parents()[1].remove();
     x--;
+    addButton.show();
   })
 });
