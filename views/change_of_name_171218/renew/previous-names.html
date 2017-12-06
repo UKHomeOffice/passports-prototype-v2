@@ -23,22 +23,16 @@
 {{< hmpo-partials-form}}
 {{$form}}
 
-{{#radio-group}}previous-name{{/radio-group}}
+{{#values.change-name}}
+  <p>Tell us the name on your old passport and any other names you've been known by, for example a name from a previous marriage.</p>
+  <input type="hidden" name="previous-name" value="true" required="true">
+{{/values.change-name}}
 
-<div id="previous-name-group" class="form-group{{#className}} {{className}} {{/className}}{{#error}} error{{/error}}{{#groupClassName}} {{groupClassName}}{{/groupClassName}}"
-{{#groupAttributes}}
-    {{attribute}}="{{value}}"
-{{/groupAttributes}}
->
-    <fieldset role="radiogroup" aria-required="true">
-        <legend>
-            <span{{#legendClassName}} class="{{legendClassName}}"{{/legendClassName}}>{{legend}}</span>
-            {{#hint}}<span id="previous-name-hint" class="form-hint">{{hint}}</span>{{/hint}}
-            {{#error}}<span id="previous-name-error" class="error-message">{{error.message}}</span>{{/error}}
-        </legend>
-    </fieldset>
-</div>
-<div id="previous-names" class="js-hidden reveal">
+{{^values.change-name}}
+  {{#radio-group}}previous-name{{/radio-group}}
+{{/values.change-name}}
+
+<div id="previous-names" class="{{^values.change-name}}js-hidden{{/values.change-name}} reveal">
   <h2>List all your previous names</h2>
   <br>
   <div class="grid-row duplicate-row">

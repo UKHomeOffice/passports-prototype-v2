@@ -155,8 +155,10 @@ module.exports = {
     ]
   },
   'previous-name': {
-      formatter: 'boolean',
-      validate: 'required',
+      formatter: ['boolean'],
+      validate: [
+        'required'
+      ],
       legend: {
           className: 'visually-hidden'
       },
@@ -172,18 +174,6 @@ module.exports = {
   'previous-first-name': {
 
   },
-  // 'previous-last-name-2': {
-  //
-  // },
-  // 'previous-first-name-2': {
-  //
-  // },
-  // 'previous-last-name-3': {
-  //
-  // },
-  // 'previous-first-name-3': {
-  //
-  // },
   'gender': {
       validate: [
           'required'

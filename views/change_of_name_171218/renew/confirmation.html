@@ -18,9 +18,10 @@
     </div>
 
     <h1>What you need to do next</h1>
-<h2>Send us your old passport and extra documents</h2>
+<h2>Send us your old passport {{#values.change-name}}and extra documents{{/values.change-name}}</h2>
+{{#values.change-name}}
   <p><a href="required-documents">Check what you need to send</a></p>
-
+{{/values.change-name}}
     <p>HM Passport Office<br/>
        Ref: PEX 319 825 680X<br/>
        Aragon Court<br/>
