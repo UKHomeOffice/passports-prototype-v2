@@ -10,7 +10,7 @@ module.exports = {
         next: '/name'
     },
     '/name':{
-        backLink: './renew',
+        backLink: '../renew',
         fields: [
             'title',
             'name',
