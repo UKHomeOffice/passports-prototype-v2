@@ -36,6 +36,14 @@ module.exports = {
         'required'
     ]
 },
+'expiry-day': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    validate: [
+        'numeric',
+        'required'
+    ]
+},
 'uncancelled': {
     formatter: 'boolean',
     validate: 'required',
