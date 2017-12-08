@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   $(wrapper).on("click", ".remove-field", function(e) {
     e.preventDefault();
-    $(this).parents()[1].remove();
+    $(this).parent().remove();
     x--;
     addButton.show();
   })
