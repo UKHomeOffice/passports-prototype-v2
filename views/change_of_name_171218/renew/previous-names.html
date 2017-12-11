@@ -7,19 +7,6 @@
 {{/header}}
 
 {{$content}}
-<style>
-.column-half {
-  position: relative;
-}
-.form-control {
-  width: 100%;
-}
-.remove-field {
-  position: absolute;
-  top: 5px;
-  right: -60px;
-}
-</style>
 {{< hmpo-partials-form}}
 {{$form}}
 
@@ -32,29 +19,30 @@
   {{#radio-group}}previous-name{{/radio-group}}
 {{/values.change-name}}
 
-<div id="previous-names" class="{{^values.change-name}}js-hidden{{/values.change-name}} reveal">
+<div id="previous-names" class="previous-names-form {{^values.change-name}}js-hidden{{/values.change-name}} reveal">
   <h2>List all your previous names</h2>
   <br>
   <div class="grid-row duplicate-row">
-    <div class="column-half">
-
-      <div>
-        <label for="previous-first-name-1" class="form-label-bold">
-            First and middle names
-        </label>
+    <div class="fields-wrap">
+      <div class="column-half">
+        <div>
+          <label for="previous-first-name-1" class="form-label-bold">
+              First and middle names
+          </label>
+        </div>
+        <div class="form-group">
+          <input type="text" name="previous-first-name" class="form-control" aria-required="false">
+        </div>
       </div>
-      <div class="form-group">
-        <input type="text" name="previous-first-name" id='previous-first-name-1' class="form-control" aria-required="false">
-      </div>
-    </div>
-    <div class="column-half">
-      <div>
-        <label for="previous-last-name-1" class="form-label-bold">
-            Last name
-        </label>
-      </div>
-      <div class="form-group">
-        <input type="text" name="previous-last-name" id="previous-last-name-1" class="form-control" aria-required="false">
+      <div class="column-half">
+        <div>
+          <label for="previous-last-name-1" class="form-label-bold">
+              Last name
+          </label>
+        </div>
+        <div class="form-group">
+          <input type="text" name="previous-last-name" class="form-control" aria-required="false">
+        </div>
       </div>
     </div>
   </div>
@@ -62,20 +50,29 @@
   <div class="grid-row duplicate-row-template js-hidden">
     <div class="fields-wrap">
       <div class="column-half">
+        <div>
+          <label for="previous-first-name-1" class="form-label-bold">
+              First and middle names
+          </label>
+        </div>
         <div class="form-group">
           <input type="text" name="previous-first-name" class="form-control" aria-required="false">
         </div>
       </div>
       <div class="column-half">
+        <div>
+          <label for="previous-last-name-1" class="form-label-bold">
+              Last name
+          </label>
+        </div>
         <div class="form-group">
           <input type="text" name="previous-last-name" class="form-control" aria-required="false">
         </div>
-        <a class="remove-field" href="#">remove</a>
       </div>
+      <a class="remove-field" href="#">Remove</a>
     </div>
   </div>
-  <a class="add_field_button" href="#">Add another name</a>
-  <br><br>
+  <a class="add-row" href="#">Add another name</a>
 </div>
 
 {{#input-submit}}{{/input-submit}}
