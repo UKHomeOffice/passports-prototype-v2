@@ -1,0 +1,41 @@
+{{< layout}}
+
+{{$pageTitle}}Photo uploaded{{/pageTitle}}
+
+{{$header}}
+    <h1>Photo retrieved</h1>
+{{/header}}
+
+{{$content}}
+
+
+<div class="panel-indent panel-photo-result panel-photo-pass">
+            <h2>Passed first check</h2>
+            <p>Your photo has been checked for common mistakes.</p>
+        </div>
+
+        <p>We still need to check your photo manually. We may ask you for a new photo if something isn't right.</p>
+
+        <a href="./check-photo-and-submit" class="button">Use this photo</a><br/><br/>
+
+
+{{/content}}
+
+{{$sidebar}}
+<div class="column-one-third" style="margin-top:50px">
+    <div class="sidebar related">
+      <div class="photo-preview-inner">
+<h2 class="heading-medium">Your photo</h2>
+          <div class="photo">
+            <object type="image/jpg" data="/public/images/thumbnail.jpeg" type="image/svg+xml" tabindex="-1" style="width:150px">
+            <img src="/public/images/thumbnail.jpeg" alt="Head and shoulder image of a woman with light brown, slightly greyish hair standing in front of a grey background with neutral expression.">
+            </object>
+            <p style="font-size:16px; font-weight:bold; color:grey">abc.de/2pNfHiz</p>
+        </div>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}

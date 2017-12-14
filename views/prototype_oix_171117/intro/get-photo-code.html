@@ -1,0 +1,58 @@
+{{< layout}}
+
+{{$pageTitle}}Upload your photo{{/pageTitle}}
+
+{{$header}}
+    <h1>Retrieve your digital photo</h1>
+{{/header}}
+
+{{$content}}
+    {{< hmpo-partials-form}}
+    {{$form}}
+        <div id="photo-code-group" class="form-group">
+            
+            <h2 class="heading-medium">Photo code</h2>
+            <p class="form-hint" id="dob-hint" style="margin-bottom:10px">This is case-sensitive, for example abc.de/1fG2h3i4
+</p>
+            <input type="text" name="photo-code" id="photo-code-bit" class="form-control input-code photo-code" aria-required="true">
+            <span id="reference-prefix" class="prefix">.</span>
+            <input type="text" name="photo-code" id="photo-code-ly" class="form-control input-code  photo-code" aria-required="true">
+            <span id="reference-prefix" class="prefix">/</span>
+            <input type="text" name="photo-code-photo" id="photo-code-photo" class="form-control input-code  photo-code-long" aria-required="true">
+
+
+        </div>
+
+        <!--<a href="retrieving" class="button">Get your photo</a><br/><br/>-->
+        {{#input-submit}}{{/input-submit}}
+
+
+    {{/form}}
+    {{/ hmpo-partials-form}}
+
+
+
+{{/content}}
+<br/><br/>
+{{$sidebar}}
+<div class="column-one-third">
+  <br/><br/>
+    <div class="sidebar related">
+      <div class="photo-preview-inner">
+          <h2 class="heading-medium">Where to find your code</h2>
+          <div class="photo">
+              <img src="../../public/images/printed-photo-code3.png" alt="Your uploaded photo" title="Your uploaded photo" width="300">
+          </div>
+           <!--
+           <p>Or, in an email from a shop</p>
+           <div class="photo">
+               <img src="../../public/images/email-photo-code.png" alt="Your uploaded photo" title="Your uploaded photo" width="300">
+           </div>
+         -->
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}
