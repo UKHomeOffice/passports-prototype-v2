@@ -1,29 +1,13 @@
 module.exports = {
     '/': {
-        backLink: '/../prototype_171127/filter/uncancelled',
+        backLink: '../filter-common',
         next: '/what-you-need'
-    },
-    '/before-you-continue-overseas': {
-        backLink: '/../prototype_171127/overseas/give-contact-details',
-        next: '/what-you-need-overseas'
     },
     '/what-you-need': {
       backLink: './',
-      next: '/you-need-a-photo'
-    },
-    '/what-you-need-overseas': {
-      backLink: './before-you-continue-overseas',
-      next: '/you-need-a-photo'
+      next: '/photo-retrieved'
     },
     '/you-need-a-photo': {
-      backLink: './what-you-need-overseas',
-      next: '/choose-photo-method'
-    },
-    '/you-need-a-photo-overseas': {
-      backLink: './what-you-need-overseas',
-      next: '/choose-photo-method'
-    },
-    '/you-need-a-photo-v3': {
       backLink: './what-you-need',
       next: '/choose-photo-method'
     },
@@ -31,8 +15,21 @@ module.exports = {
       fields: ['choose-photo'],
       next: '/../upload'
     },
-    '/choose-photo-method-overseas': {
-      fields: ['choose-photo-overseas'],
-      next: '/../upload'
+    '/photo-retrieved': {
+      next: '/../uploadphoto'
+    },
+    '/get-photo-code': {
+      fields: ['photo-code-photo'],
+      backLink: './choose-photo-method',
+      next: '/retrieving'
+    },
+    '/retrieving': {
+      backLink: './get-photo-code',
+    },
+    '/fetch-result': {
+      controller: require('../../../controllers/fetch-result')
+    },
+    '/error': {
+        backLink: './get-photo-code',
     }
 };
