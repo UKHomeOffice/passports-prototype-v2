@@ -1,4 +1,57 @@
 module.exports = {
+    'oix-override': {
+      legend: {
+        value: 'Do you want to use this photo?',
+        className: 'visuallyhidden'
+      },
+      options: [
+        {value: 'Yes'},
+        {value: 'No'}
+      ],
+      validate: [
+        'required',
+        {
+          type: 'equal',
+          arguments: ['Yes'],
+          redirect: '/../intro/choose-photo-method'
+        }
+      ]
+    },
+    'oix-override-reason': {
+      legend: {
+        value: 'Do you want to use this photo?',
+        className: 'visuallyhidden'
+      },
+      dependent: {
+        field: 'oix-override',
+        value: 'Yes'
+      },
+      validate: 'required'
+    },
+    'override': {
+      legend: {
+        value: 'Do you want to use this photo?',
+        className: 'visuallyhidden'
+      },
+      options: [
+        {value: 'Yes', label: 'Yes, I do'},
+        {value: 'No', label: 'No, I dont'}
+      ],
+      validate: [
+        'required',
+        {
+          type:'equal',
+          arguments:['No','No'],
+          redirect:'/intro/choose-photo-method'
+        },
+        {
+          type:'equal',
+          arguments:['No','Yes'],
+          redirect:'/photo/question-expression'
+        }
+      ]
+    },
+
     'plain-expression': {
       legend: {
         value: 'Do you have a plain expression?',
@@ -42,29 +95,6 @@ module.exports = {
           type:'equal',
           arguments:['No','Yes'],
           redirect:'/you-need-another-photo'
-        }
-      ]
-    },
-    'submit-photo': {
-      legend: {
-        value: 'Do you want to submit this photo?',
-        className: 'visuallyhidden'
-      },
-      options: [
-        {value: 'Yes', label: 'Yes, this photo meets the rules'},
-        {value: 'No', label: 'No, I want to get a different photo'}
-      ],
-      validate: [
-        'required',
-        {
-          type:'equal',
-          arguments:['Yes'],
-          redirect:'/../choose-photo-method'
-        },
-        {
-          type:'equal',
-          arguments:['No'],
-          redirect:'/../renew'
         }
       ]
     }
