@@ -453,6 +453,7 @@ app.use('/prototype_171127/overseas-not-eligible', require('./routes/prototype_1
 app.use('/prototype_171127/overseas-first', require('./routes/prototype_171127/overseas-first'));
 app.use('/prototype_171127/overseas-lost-change', require('./routes/prototype_171127/overseas-lost-change'));
 app.use('/prototype_171127/uploadphoto', require('./routes/prototype_171127/uploadphoto'));
+app.use('/prototype_171127/uploadphoto-oix', require('./routes/prototype_171127/uploadphoto-oix'));
 app.use('/prototype_171127/filter-common', require('./routes/prototype_171127/filter-common'));
 app.use('/prototype_171127/renew', require('./routes/prototype_171127/renew'));
 app.use('/prototype_171127/intro', require('./routes/prototype_171127/intro'));

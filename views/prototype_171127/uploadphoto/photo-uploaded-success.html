@@ -3,35 +3,37 @@
 {{$pageTitle}}Photo uploaded{{/pageTitle}}
 
 {{$header}}
-    <h1>Photo retrieved</h1>
+    <h1>Photo uploaded</h1>
 {{/header}}
 
 {{$content}}
 
+        <div class="panel-indent panel-photo-result panel-photo-pass">
+            <h2>Your photo has passed the automated checks</h2>
+            <p>Next, you'll check your photo for common mistakes.</p>
+        </div>
+        <p>We may also check your photo manually. If something doesn't look right, we'll ask you for a different photo.</p>
+<br>
+        <a href="/prototype_171127/uploadphoto/check-photo-and-submit" class="button">Continue</a><br/><br/>
 
-<div class="panel-indent panel-photo-result panel-photo-pass">
-            <h2>Passed first check</h2>
-            <p>Your photo has been checked for common mistakes.</p>
+        <div class="">
+            <p>
+        <a href="/uploadphoto">Upload a different photo</a>
+            </p>
         </div>
 
-        <p>We still need to check your photo manually. We may ask you for a new photo if something isn't right.</p>
-
-        <a href="./check-photo-and-submit" class="button">Use this photo</a><br/><br/>
 
 
 {{/content}}
 
 {{$sidebar}}
-<div class="column-one-third" style="margin-top:50px">
+<div class="column-one-third">
     <div class="sidebar related">
       <div class="photo-preview-inner">
-<h2 class="heading-medium">Your photo</h2>
+          <h2 class="heading-medium">Your photo</h2>
           <div class="photo">
-            <object type="image/jpg" data="/public/images/thumbnail.jpeg" type="image/svg+xml" tabindex="-1" style="width:150px">
-            <img src="/public/images/thumbnail.jpeg" alt="Head and shoulder image of a woman with light brown, slightly greyish hair standing in front of a grey background with neutral expression.">
-            </object>
-            <p style="font-size:16px; font-weight:bold; color:grey">abc.de/2pNfHiz</p>
-        </div>
+              <img src="../../public/images/thumbnail.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+          </div>
       </div>
 
     </div>
