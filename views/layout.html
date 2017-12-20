@@ -1,35 +1,21 @@
 {{< hmpo-layout}}
-{{$main}}
-    {{$breadcrumb}}{{/breadcrumb}}
-    <main id="content" class="main-content" role="main">
-      <div class="fill-banner">
-        <a class="button__fill" id="populate"/>Fill</a>
-        <a class="button__fill" href="/">Home</a>
-      </div>
-        {{> hmpo-partials-betatag}}
-        {{> hmpo-partials-back}}
-        <div class="grid-row">
-            {{> hmpo-partials-maincontent}}
+  {{$main}}
+      {{$breadcrumb}}{{/breadcrumb}}
+      <main id="content" class="main-content" role="main">
+        <div class="fill-banner">
+          <a class="button__fill" id="populate"/>Fill</a>
+          <a class="button__fill" href="/">Home</a>
         </div>
-    </main>
-{{/main}}
+          {{> hmpo-partials-betatag}}
+          {{> hmpo-partials-back}}
+          <div class="grid-row">
+              {{> hmpo-partials-maincontent}}
+          </div>
+      </main>
+  {{/main}}
 
-{{$bodyEnd}}
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <!-- begin olark code
-    <script type="text/javascript" async> ;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");
-    /* custom configuration goes here (www.olark.com/documentation) */
-    olark.identify('4050-102-10-9496');</script>
-    <style>
-    #olark-container,
-    #olark-container .olark-top-bar-text,
-    #olark-container .olark-chat-input,
-    .olark-launch-button .olark-button-text {font-family: "nta", Arial, sans-serif!important;}
-    #olark-wrapper svg {display: none!important}
-    .olark-launch-button .olark-button-text {margin:0!important; font-size: 1.5em!important;}
-    </style>
-  -->
-  {{> hmpo-partials-body-end}}
-{{/bodyEnd}}
-
+  {{$bodyEnd}}
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    {{> hmpo-partials-body-end}}
+  {{/bodyEnd}}
 {{/ hmpo-layout}}
