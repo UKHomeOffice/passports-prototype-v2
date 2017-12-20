@@ -1,0 +1,82 @@
+{{< layout}}
+
+{{$pageTitle}}You need another photo{{/pageTitle}}
+
+{{$header}}
+    <h1>You need another photo</h1>
+{{/header}}
+
+{{$content}}
+<form action="/" method="POST" autocomplete="off" novalidate="true" spellcheck="false">
+        <p>You’ve told us you don’t have a plain expression.</p>
+
+<p>You must have a plain or ‘neutral’ expression in your passport photo.</p>
+
+    
+
+    <!-- RADIO TOGGLE OPTIONS-->
+
+
+  <div class="form-group" style="margin-top:50px">
+    <fieldset>
+
+      <legend>
+        <h2 class="heading-medium" style="padding-bottom:15px">
+          Do you want to use this photo?
+        </h2>
+
+      </legend>
+
+      <div class="block-label" data-target="contact-by-email">
+        <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes" aria-controls="contact-by-phone" aria-expanded="false">
+        <label for="example-contact-by-email">Yes</label>
+      </div>
+      
+
+
+      <div class="block-label" data-target="contact-by-phone" style="margin-left: 10px;
+    clear: none;}">
+        <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+        <label for="example-contact-by-phone">No</label>
+      </div>
+     
+      <div class="panel panel-border-narrow js-hidden" id="contact-by-phone" aria-hidden="true">
+        <label class="form-label" for="contact-phone">
+        <p>You can only use this photo if there’s a reason why you can’t make a plain expression.</p>
+
+<p>We may contact you when we’ve reviewed your photo.</p>
+                        </label>
+      </div>
+
+
+    </fieldset>
+  </div>
+</form>
+
+<div class="form-group">
+                <a href="./shadows-face" class="button" role="button">Continue</a>
+            </div>
+
+            <!--<p>Find out <a href="../intro/choose-photo-method">how to get another photo</a>.</p>-->
+
+
+{{/content}}
+
+{{$sidebar}}
+<div class="column-one-third" style="margin-top:50px">
+    <div class="sidebar related">
+      <div class="photo-preview-inner">
+<h2 class="heading-medium">Your photo</h2>
+          <div class="photo">
+            <object type="image/jpg" data="/public/images/thumbnail.jpeg"type="image/svg+xml" tabindex="-1" style="width:150px">
+            <img src="/public/images/woman-with-reddish-hair_ex@2x.jpg" alt="Head nad shoulder image of a woman with reddish hair standing in front of a grey background with neutral expression.">
+            </object>
+            
+        </div>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}

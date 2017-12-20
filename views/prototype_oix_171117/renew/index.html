@@ -1,0 +1,55 @@
+{{< layout}}
+
+{{$pageTitle}}Compare your old and new photos{{/pageTitle}}
+
+{{$header}}
+    <h1>Check the photo in your old passport</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+    <p>We'll compare your photo with the one in your old passport.</p>
+
+    <fieldset>
+      <legend><span class="form-label-bold">Do you look like the same person in your old and new photos?</span></legend>
+      <label for="yes" class="block-label selected">
+            <input type="radio" name="title" id="yes" value="Other" aria-required="true" data-toggle="yes-title" aria-controls="yes-title" aria-expanded="true">
+            Yes, I look like the same person
+      </label>
+        <label for="no" class="block-label selected">
+              <input type="radio" name="title" id="no" value="Other" aria-required="true" data-toggle="no-title" aria-controls="no-title" aria-expanded="true">
+              No, my appearance has changed a lot
+        </label>
+        <div id="no-title" class="reveal" aria-hidden="false">
+            <div class="panel-indent">
+                <p>You'll need to get your photo signed by somebody else to confirm that it's you. To do this, you'll need to <a href="https://passportapplication.service.gov.uk/ips-olc/">renew your passport a different way</a>.</p>
+            </div>
+        </div>
+    </fieldset><br/>
+    {{#input-submit}}{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+{{$sidebar}}
+<div class="column-one-third">
+    <div class="sidebar related">
+      <div class="photo-preview-inner">
+          <h2 class="heading-medium">Your photo</h2>
+          <div class="img">
+            <object type="image/jpg" data="/public/images/lady-cropped.jpeg"type="image/svg+xml" tabindex="-1" style="width:70%">
+            <img src="/public/images/woman-with-reddish-hair_ex@2x.jpg" alt="Head nad shoulder image of a woman with reddish hair standing in front of a grey background with neutral expression.">
+            </object>
+       
+        </div>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}

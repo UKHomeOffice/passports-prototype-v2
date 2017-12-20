@@ -453,6 +453,7 @@ app.use('/prototype_171127/overseas-not-eligible', require('./routes/prototype_1
 app.use('/prototype_171127/overseas-first', require('./routes/prototype_171127/overseas-first'));
 app.use('/prototype_171127/overseas-lost-change', require('./routes/prototype_171127/overseas-lost-change'));
 app.use('/prototype_171127/uploadphoto', require('./routes/prototype_171127/uploadphoto'));
+app.use('/prototype_171127/uploadphoto-oix', require('./routes/prototype_171127/uploadphoto-oix'));
 app.use('/prototype_171127/filter-common', require('./routes/prototype_171127/filter-common'));
 app.use('/prototype_171127/renew', require('./routes/prototype_171127/renew'));
 app.use('/prototype_171127/intro', require('./routes/prototype_171127/intro'));
@@ -709,6 +710,32 @@ app.use('/change_of_name_171218/photo-url', require('./routes/change_of_name_171
 app.use('/change_of_name_171218/photo-code', require('./routes/change_of_name_171218/photo-code'));
 app.use('/change_of_name_171218/mismatch', require('./routes/change_of_name_171218/mismatch'));
 app.use('/change_of_name_171218/redirect-tracking', require('./routes/change_of_name_171218/redirect-tracking'));
+
+// oix_171117
+app.use('/prototype_oix_171117/uploadphoto', require('./routes/prototype_oix_171117/uploadphoto'));
+app.use('/prototype_oix_171117/filter-common', require('./routes/prototype_oix_171117/filter-common'));
+app.use('/prototype_oix_171117/renew', require('./routes/prototype_oix_171117/renew'));
+app.use('/prototype_oix_171117/intro', require('./routes/prototype_oix_171117/intro'));
+app.use('/prototype_oix_171117/filter', require('./routes/prototype_oix_171117/filter'));
+app.use('/prototype_oix_171117/startpage', require('./routes/prototype_oix_171117/startpage'));
+app.use('/prototype_oix_171117/photoguide-short', require('./routes/prototype_oix_171117/photoguide-short'));
+app.use('/prototype_oix_171117/photoguide-static', require('./routes/prototype_oix_171117/photoguide-static'));
+app.use('/prototype_oix_171117/photoguide-shop', require('./routes/prototype_oix_171117/photoguide-shop'));
+app.use('/prototype_oix_171117/takephoto', require('./routes/prototype_oix_171117/takephoto'));
+app.use('/prototype_oix_171117/upload', require('./routes/prototype_oix_171117/upload'));
+app.use('/prototype_oix_171117/rejectedphoto', require('./routes/prototype_oix_171117/rejectedphoto'));
+app.use('/prototype_oix_171117/throttle', require('./routes/prototype_oix_171117/throttle'));
+app.use('/prototype_oix_171117/payment', require('./routes/prototype_oix_171117/payment'));
+app.use('/prototype_oix_171117/submission-failed', require('./routes/prototype_oix_171117/submission-failed'));
+app.use('/prototype_oix_171117/sar', require('./routes/prototype_oix_171117/sar'));
+app.use('/prototype_oix_171117/photo-url', require('./routes/prototype_oix_171117/photo-url'));
+app.use('/prototype_oix_171117/photo-code', require('./routes/prototype_oix_171117/photo-code'));
+app.use('/prototype_oix_171117/oix', require('./routes/prototype_oix_171117/oix'));
+app.use('/prototype_oix_171117/intro-oix', require('./routes/prototype_oix_171117/intro-oix'));
+app.use('/prototype_oix_171117/photo-retrieved', require('./routes/prototype_oix_171117/photo-retrieved'));
+app.use('/prototype_oix_171117/startpage-oix', require('./routes/prototype_oix_171117/startpage-oix'));
+app.use('/prototype_oix_171117/filter-oix', require('./routes/prototype_oix_171117/filter-oix'));
+app.use('/prototype_oix_171117/filter-common-oix', require('./routes/prototype_oix_171117/filter-common-oix'));
 
 //3rd party shops photo checker
 app.use('/shops-photo-checker', require('./routes/shops-photo-checker'));
