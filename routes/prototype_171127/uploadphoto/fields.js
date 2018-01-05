@@ -59,7 +59,7 @@ module.exports = {
         {
           type:'equal',
           arguments:['Yes'],
-          redirect:'/../choose-photo-method'
+          redirect:'/../intro/choose-photo-method'
         },
         {
           type:'equal',

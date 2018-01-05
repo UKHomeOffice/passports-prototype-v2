@@ -45,7 +45,7 @@
       $('#passport-before-true').click();
       $('#lost-stolen-false').click();
       $('#name-changed-false').click();
-      $('#uncancelled-false').click();
+      $('#uncancelled-No').click();
       $('#passport-damaged-No').click();
       $('#choose-photo-upload').click();
       $('#plain-expression-Yes').click();
@@ -58,6 +58,8 @@
       $('#passport-options-32').click();
       $('#can-sign-true').click();
       $('#secure-return-false').click();
+      $('#submit-photo-Yes').click();
+
 
       //change name
       $('#change-name-true').click();
