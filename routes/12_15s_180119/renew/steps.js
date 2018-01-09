@@ -22,13 +22,17 @@ module.exports = {
         next: '/date-and-place-birth'
     },
     '/date-and-place-birth':{
-        next: '/home-address',
+        next: '/parents-details',
         fields:['age-day', 'age-month', 'age-year', 'born-in-uk', 'town-of-birth', 'country-of-birth'],
         controller: require('../../../controllers/go-overseas'),
         nextAlt: './home-address-overseas'
       },
     '/below-16':{
       backLink: './date-and-place-birth',
+    },
+    '/parents-details':{
+        fields:[],
+        next: '/contact-details'
     },
     '/home-address-overseas':{
         fields:['address1', 'address2','address3','address4','address5', 'town', 'postcode'],
