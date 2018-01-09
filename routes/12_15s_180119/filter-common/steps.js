@@ -1,8 +1,13 @@
 module.exports = {
     '/':{
+      fields: ['application-for'],
+      next: '/apply-uk',
+      backLink: '../startpage'
+    },
+    '/apply-uk':{
       fields: ['apply-uk', 'application-country'],
       controller: require('../../../controllers/go-overseas'),
-      backLink: '/../change_of_name_171101/startpage',
+      backLink: './',
       next: '/first-uk', /* if Yes is selected */
       nextAlt: 'what-do-you-want-to-do-overseas', /* if they are from Germany/France */
       nextAltAlt:'what-do-you-want-to-do-overseas',/* if they are from Afganistan */

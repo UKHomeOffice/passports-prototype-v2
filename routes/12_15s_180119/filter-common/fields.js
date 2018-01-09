@@ -2,6 +2,21 @@ const _ = require('lodash');
 const countries = require('../../../config/countries');
 
 module.exports = {
+  'application-for': {
+    legend: {
+      value: 'Who is the new passport for?',
+      className: 'visuallyhidden'
+    },
+    options: [
+      { value: true, label: 'Myself' },
+      { value: false, label: 'Someone else'}
+    ],
+    formatter: ['boolean'],
+    validate: [
+      'required'
+    ],
+    className: 'inline'
+  },
   'what-to-do': {
     legend: {
       value: 'What to you want to do?',
