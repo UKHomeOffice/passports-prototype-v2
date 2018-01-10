@@ -54,6 +54,18 @@ module.exports = {
       controller: require('../../../controllers/go-overseas'),
       backLink: './lost-stolen',
       next: '/passport-expiry', /* if they are from the UK */
+      forks: [{
+        target: '/dob-below-16',
+        condition: {
+          field: '16-or-older',
+          value: false
+        }
+      }],
+    },
+    '/dob-below-16': {
+      fields: ['age-day', 'age-year', 'age-month'],
+      backLink: '/dob',
+      next: '/passport-expiry'
     },
     '/passport-expiry': {
       fields: ['expiry-year', 'expiry-month'],
@@ -92,7 +104,8 @@ module.exports = {
     '/parental-responsibility': {
       fields: ['parental-responsibility'],
       backLink: './relationship-applicant',
-      next: '/third-party-name'
+      next: '/../intro'
+
     },
     '/third-party-name': {
       fields: ['third-party-first-name', 'third-party-last-name'],
