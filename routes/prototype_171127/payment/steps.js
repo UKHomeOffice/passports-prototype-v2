@@ -5,7 +5,7 @@ module.exports = {
     },
     '/passport-damaged': {
         backLink: './',
-        next: '/filter-common' /* if No is selected */
+        next: '/filter' /* if No is selected */
     },
     '/premium-offline': {
         backLink: './'
