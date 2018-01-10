@@ -1,7 +1,7 @@
 module.exports = {
     '/':{
       fields: ['age-day', 'age-year', 'age-month'],
-      backLink: '../filter-common/what-do-you-want-to-do-overseas',
+      backLink: '../filter/what-do-you-want-to-do-overseas',
       next: '/issued'
     },
     '/issued':{

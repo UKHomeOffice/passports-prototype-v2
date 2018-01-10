@@ -9,7 +9,6 @@ app.use('/prototype_171127/overseas-first', require('./routes/prototype_171127/o
 app.use('/prototype_171127/overseas-lost-change', require('./routes/prototype_171127/overseas-lost-change'));
 app.use('/prototype_171127/uploadphoto', require('./routes/prototype_171127/uploadphoto'));
 app.use('/prototype_171127/uploadphoto-oix', require('./routes/prototype_171127/uploadphoto-oix'));
-app.use('/prototype_171127/filter-common', require('./routes/prototype_171127/filter-common'));
 app.use('/prototype_171127/renew', require('./routes/prototype_171127/renew'));
 app.use('/prototype_171127/intro', require('./routes/prototype_171127/intro'));
 app.use('/prototype_171127/filter', require('./routes/prototype_171127/filter'));
@@ -40,7 +39,6 @@ app.use('/12_15s_180119/overseas-first', require('./routes/12_15s_180119/oversea
 app.use('/12_15s_180119/overseas-lost-change', require('./routes/12_15s_180119/overseas-lost-change'));
 app.use('/12_15s_180119/uploadphoto', require('./routes/12_15s_180119/uploadphoto'));
 app.use('/12_15s_180119/uploadphoto-oix', require('./routes/12_15s_180119/uploadphoto-oix'));
-app.use('/12_15s_180119/filter-common', require('./routes/12_15s_180119/filter-common'));
 app.use('/12_15s_180119/renew', require('./routes/12_15s_180119/renew'));
 app.use('/12_15s_180119/intro', require('./routes/12_15s_180119/intro'));
 app.use('/12_15s_180119/filter', require('./routes/12_15s_180119/filter'));

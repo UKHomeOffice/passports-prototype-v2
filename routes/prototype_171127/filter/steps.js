@@ -1,7 +1,7 @@
 module.exports = {
     '/': {
       fields: ['expiry-year', 'expiry-month'],
-      backLink: '../filter-common/dob',
+      backLink: '../filter/dob',
       next: '/passport-damaged'
     },
     '/passport-damaged': {

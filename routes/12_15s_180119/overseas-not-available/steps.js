@@ -1,5 +1,5 @@
 module.exports = {
     '/':{
-        backLink: '../filter-common',
+        backLink: '../filter',
     }
 };
