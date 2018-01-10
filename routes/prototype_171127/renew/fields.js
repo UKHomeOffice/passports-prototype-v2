@@ -20,7 +20,7 @@ module.exports = {
       },
       {
         value: false,
-        label: 'I can’t sign my name',
+        label: 'I can't sign my name',
         toggle: 'no-sign'
       }
     ]

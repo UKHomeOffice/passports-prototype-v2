@@ -16,11 +16,11 @@ module.exports = {
     options: [
       {
         value: true,
-        label: 'I understand and will sign my passport',
+        label: 'I will tell the passport holder to sign their passport',
       },
       {
         value: false,
-        label: 'I can’t sign my name',
+        label: 'The passport holder can't sign their name',
         toggle: 'no-sign'
       }
     ]
