@@ -275,14 +275,36 @@ module.exports = {
       { value: 'Other', label: 'Other' }
     ],
     validate: [
-      'required',
-      {
-        // type: 'equal',
-        // arguments: ['No'],
-        // /* if Yes is selected */
-        // redirect: 'https://passportapplication.service.gov.uk/ips-olc/'
-      }
+      'required'
     ]
   },
+  'parental-responsibility': {
+    legend: {
+      value: 'Do you have parental responsibility?',
+      className: 'visuallyhidden'
+    },
+    options: [
+      { value: true, label: 'Yes' },
+      { value: false, label: 'No' }
+    ],
+    formatter: ['boolean'],
+    validate: [
+      'required'
+    ],
+    className: 'inline'
+  },
+  'third-party-first-name': {
+    labelClassName: 'form-label-bold',
+    validate: [
+      'required'
+    ]
+  },
+  'third-party-last-name': {
+    labelClassName: 'form-label-bold',
+    validate: [
+      'required'
+    ]
+  }
+
 
 };

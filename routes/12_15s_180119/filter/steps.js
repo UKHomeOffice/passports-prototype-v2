@@ -81,6 +81,16 @@ module.exports = {
     '/relationship-applicant': {
         fields: ['relationship-applicant'],
         backLink: './uncancelled',
+        next: '/parental-responsibility',
+    },
+    '/parental-responsibility': {
+        fields: ['parental-responsibility'],
+        backLink: './relationship-applicant',
+        next: '/third-party-name',
+    },
+    '/third-party-name': {
+        fields: ['third-party-first-name', 'third-party-last-name'],
+        backLink: './parental-responsibility',
         next: '/../intro',
     }
 };
