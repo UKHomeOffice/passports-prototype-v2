@@ -62,14 +62,25 @@ module.exports = {
     },
     '/passport-damaged': {
       fields: ['passport-damaged'],
-        backLink: './',
-        next: '/uncancelled' /* if No is selected */
+      backLink: './',
+      next: '/uncancelled' /* if No is selected */
     },
     '/uncancelled': {
         controller: require('../../../controllers/go-overseas'),
         fields: ['uncancelled'],
         backLink: './passport-damaged',
         next: '/../intro',
-        nextAlt: '../overseas'
+        nextAlt: '../overseas',
+        forks: [{
+          target: '/relationship-applicant',
+          condition: function (req, res) {
+            return req.session['hmpo-wizard-common']['application-for'] == false;
+        }
+      }],
+    },
+    '/relationship-applicant': {
+        fields: ['relationship-applicant'],
+        backLink: './uncancelled',
+        next: '/../intro',
     }
 };

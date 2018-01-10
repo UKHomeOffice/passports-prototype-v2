@@ -12,9 +12,7 @@ module.exports = {
       { value: false, label: 'Someone else'}
     ],
     formatter: ['boolean'],
-    validate: [
-      'required'
-    ],
+    validate: ['required'],
     className: 'inline'
   },
   'what-to-do': {
@@ -265,5 +263,26 @@ module.exports = {
         redirect: 'https://passportapplication.service.gov.uk/ips-olc/'
       }
     ]
-  }
+  },
+  'relationship-applicant': {
+    legend: {
+      value: 'What is your relationship to the applicant?',
+      className: 'visuallyhidden'
+    },
+    options: [
+      { value: 'Mother', label: 'Mother' },
+      { value: 'Father', label: 'Father' },
+      { value: 'Other', label: 'Other' }
+    ],
+    validate: [
+      'required',
+      {
+        // type: 'equal',
+        // arguments: ['No'],
+        // /* if Yes is selected */
+        // redirect: 'https://passportapplication.service.gov.uk/ips-olc/'
+      }
+    ]
+  },
+
 };
