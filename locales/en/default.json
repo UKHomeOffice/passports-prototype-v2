@@ -223,6 +223,13 @@
         },
         "parents-nationality":{
           "label": "Nationality"
+        },
+        "third-party-first-name":{
+          "label": "First and middle names"
+        },
+        "third-party-last-name":{
+          "label": "Last name"
+
         }
     },
     "validation": {

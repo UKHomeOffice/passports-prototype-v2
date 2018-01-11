@@ -2,16 +2,17 @@
 
 {{$propositionHeader}}{{/propositionHeader}}
 
-{{$pageTitle}}Is your passport lost or stolen?{{/pageTitle}}
+{{$pageTitle}}Your name{{/pageTitle}}
 
 {{$header}}
-    <h1>Is your passport lost or stolen?</h1>
+    <h1>Your name</h1>
 {{/header}}
 
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-        {{#radio-group}}lost-stolen{{/radio-group}}
+        {{#input-text}}third-party-first-name{{/input-text}}
+        {{#input-text}}third-party-last-name{{/input-text}}
         {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}

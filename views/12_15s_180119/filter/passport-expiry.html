@@ -4,7 +4,7 @@
 {{$pageTitle}}When does your passport expire?{{/pageTitle}}
 
 {{$header}}
-    <h1>When does your passport expire?</h1>
+    <h1>When was {{> partials-applicant-your-their}} passport issued?</h1>
 {{/header}}
 
 {{$content}}
@@ -14,7 +14,7 @@
         <div id="date-group" class="form-group">
             <fieldset>
                 <div class="form-date">
-                  <p class="form-hint" id="dob-hint">For example 08 2015</p>
+                  <p class="form-hint" id="dob-hint">For example 08 2007</p>
                     {{#input-text}}expiry-month{{/input-text}}
                     {{#input-text}}expiry-year{{/input-text}}
                 </div>
