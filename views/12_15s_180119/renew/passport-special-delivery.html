@@ -1,30 +1,26 @@
 {{< layout}}
 
-{{$title}}Receiving your old and new passports{{/title}}
+{{$title}}Delivery options{{/title}}
 
 {{$header}}
-    <h1>Receiving your old and new passports</h1>
+    <h1>Delivery options</h1>
 {{/header}}
 
 {{$content}}
     {{< hmpo-partials-form}}
         {{$form}}
-                <p>We have to send your old and new passports separately. Your new passport will be sent by special delivery. This is included in the passport fee. </p>
-            {{^values.veteran}}
-                {{#radio-group}}secure-return{{/radio-group}}
+          <h2>New passport</h2>
+          <p>Your new passport will be sent by special delivery. The cost is already included in the passport fee.</p>
 
+          <h2>Old passport and any extra documents</h2>
 
-                <p>We’ll send your old and new passport to
-            {{/values.veteran}}
+          <p>Choose how your old passport and any extra documents are returned. They won't be in the same envelope as your new passport.</p>
 
-                    {{values.address1}},
-                    {{#values.address2}}
-                        {{values.address2}},
-                    {{/values.address2}}
-                    {{values.town}},
-                    {{values.postcode}}.
-            </p>
-            {{#input-submit}}{{/input-submit}}
+          {{#radio-group}}secure-return{{/radio-group}}
+
+          <p>We’ll send everything to {{values.address1}}, {{#values.address2}} {{values.address2}}, {{/values.address2}} {{values.town}}, {{values.postcode}}.
+          </p>
+          {{#input-submit}}{{/input-submit}}
         {{/form}}
     {{/ hmpo-partials-form}}
 {{/content}}
