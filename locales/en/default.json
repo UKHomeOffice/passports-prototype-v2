@@ -209,11 +209,27 @@
         "chip-damaged":{
           "label": "Chip (e-passports only)"
         },
+        "parents-first-names":{
+          "label": "First and middle names"
+        },
+        "parents-last-name":{
+          "label": "Last name"
+        },
+        "parents-town":{
+          "label": "Town of birth"
+        },
+        "parents-country":{
+          "label": "Country of birth"
+        },
+        "parents-nationality":{
+          "label": "Nationality"
+        },
         "third-party-first-name":{
           "label": "First and middle names"
         },
         "third-party-last-name":{
           "label": "Last name"
+
         }
     },
     "validation": {
