@@ -83,7 +83,7 @@
           "label": "Country"
         },
         "no-sign-reason": {
-          "label": "Explain why you can’t sign your passport"
+          "label": "Explain why they can’t sign their passport"
         },
         "previous-name": {
             "legend": "Have you ever been known by any other names?",
