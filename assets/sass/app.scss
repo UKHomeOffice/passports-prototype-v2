@@ -32,6 +32,12 @@
 }
 
 /* additional css to match production prototype */
+
+
+.heading-xlarge {
+  margin: 0.8em 0 0.6em 0;
+}
+
 .alert-default {
   border-color: $light-blue;
   background-color: mix(white, $light-blue, 90%);
