@@ -245,8 +245,8 @@ module.exports = {
       value: 'Passport size'
     },
     options: [
-      {value: '32', label: 'Standard adult 32-page passport (£72.50)'},
-      {value: '48', label: 'Jumbo adult 48-page passport (£85.50)'}
+      {value: '32', label: 'Standard 32-page passport (£46)'},
+      {value: '48', label: 'Jumbo adult 48-page passport (£59)'}
     ],
     validate: [
       'required'
