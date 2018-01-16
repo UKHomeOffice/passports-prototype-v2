@@ -1,0 +1,55 @@
+{{< layout}}
+
+{{$pageTitle}}Mother or parents 1's details{{/pageTitle}}
+
+{{$header}}
+    <h1>Mother or parents 1's details</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+      {{#input-text}}parents-first-names{{/input-text}}
+      {{#input-text}}parents-last-name{{/input-text}}
+
+      {{#input-text}}parents-town{{/input-text}}
+      {{#input-text}}parents-country{{/input-text}}
+
+      <fieldset>
+          <div class="form-date">
+            <legend><span class="form-label-bold">Date of birth</span></legend>
+            <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
+              {{#input-text}}age-day{{/input-text}}
+              {{#input-text}}age-month{{/input-text}}
+              {{#input-text}}age-year{{/input-text}}
+          </div>
+      </fieldset>
+      <br>
+      {{#input-text}}parents-nationality{{/input-text}}
+      <fieldset>
+        <legend><span class="form-label-bold">Passport number</span></legend>
+            <p class="form-hint" id="dob-hint">For example 502135326</p>
+              {{#input-text}}passport-number{{/input-text}}
+      </fieldset>
+
+      <fieldset>
+          <div class="form-date">
+            <legend><span class="form-label-bold">Date of issue</span></legend>
+            <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
+              {{#input-text}}age-day{{/input-text}}
+              {{#input-text}}age-month{{/input-text}}
+              {{#input-text}}age-year{{/input-text}}
+          </div>
+      </fieldset>
+      <br>
+    {{#input-submit}}{{/input-submit}}
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+
+{{/ layout}}

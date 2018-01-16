@@ -157,6 +157,26 @@ module.exports = {
           'required'
       ]
   },
+  'parents-married':{
+    legend: {
+      value: 'Your title',
+      className: 'visuallyhidden'
+    },
+    options: [
+      {value: 'Yes', label: 'Yes', toggle: 'marriage-date'},
+      {value: 'No', label: 'No'},
+      {value: 'Don’t know', label: 'Don’t know'}
+    ],
+    validate: [
+      'required'
+    ]
+  },
+  'name': {
+
+  },
+  'lastname': {
+
+  },
   'address1': {
       validate: [
           'required'
