@@ -14,17 +14,18 @@ _.extend(Form.prototype, {
 
     getValues: function (req, res, callback) {
         Base.prototype.getValues.call(this, req, res, function (err, values) {
-console.log('GET', values);
-            var model = new Model(values);
-            callback(err, model.toJSON());
+          console.log('GET', values);
+          var model = new Model(values);
+          callback(err, model.toJSON());
         });
     },
 
     saveValues: function (req, res, callback) {
         Base.prototype.saveValues.call(this, req, res, function (err) {
+          console.log('\n\n**************************\n', 'SESSION', req.session, '\n**************************\n');
           console.log('SAVE', req.form.values);
           console.log('VALUES', req.sessionModel.toJSON());
-            callback(err);
+          callback(err);
         });
     },
 
