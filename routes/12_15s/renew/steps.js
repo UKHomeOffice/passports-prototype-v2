@@ -33,8 +33,8 @@ module.exports = {
         next: '/parent-2-details',
     },
     '/parent-2-details':{
-        fields:[],
-        next: '/parents-married',
+        fields:['parent2-first-names'],
+        next: '/home-address',
         controller: require('../../../controllers/go-overseas'),
         nextAlt: './home-address-overseas'
     },

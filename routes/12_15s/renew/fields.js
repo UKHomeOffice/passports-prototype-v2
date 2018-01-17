@@ -157,6 +157,12 @@ module.exports = {
           'required'
       ]
   },
+  'parent1-first-names': {
+
+  },
+  'parent2-first-names': {
+    value: 'false'
+  },
   'parents-married':{
     legend: {
       value: 'Your title',
@@ -165,11 +171,12 @@ module.exports = {
     options: [
       {value: 'Yes', label: 'Yes', toggle: 'marriage-date'},
       {value: 'No', label: 'No'},
-      {value: 'Don’t know', label: 'Don’t know'}
+      {value: 'I don’t know', label: 'I don’t know'}
     ],
     validate: [
       'required'
-    ]
+    ],
+    className: 'inline'
   },
   'name': {
 
