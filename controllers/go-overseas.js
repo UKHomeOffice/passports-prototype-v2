@@ -51,6 +51,10 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
         return res.redirect('./below-16');
     }
 
+    if (req.form.values['parent2-first-names'] != '') {
+        return res.redirect('./parents-married');
+    }
+
     Base.prototype.successHandler.call(this, req, res, callback);
 };
 

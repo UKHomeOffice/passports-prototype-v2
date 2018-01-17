@@ -157,6 +157,12 @@ module.exports = {
           'required'
       ]
   },
+  'parent1-first-names': {
+
+  },
+  'parent2-first-names': {
+    value: 'false'
+  },
   'parents-married':{
     legend: {
       value: 'Your title',
@@ -169,7 +175,8 @@ module.exports = {
     ],
     validate: [
       'required'
-    ]
+    ],
+    className: 'inline'
   },
   'name': {
 

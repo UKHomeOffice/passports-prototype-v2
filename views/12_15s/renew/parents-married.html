@@ -12,7 +12,18 @@
 {{$form}}
 
     {{#radio-group}}parents-married{{/radio-group}}
-
+    <div id="marriage-date" class="reveal js-hidden">
+      <fieldset>
+          <div class="form-date panel panel-border-narrow">
+            <legend><span class="form-label-bold">Date of marriage</span></legend>
+            <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
+              {{#input-text}}age-day{{/input-text}}
+              {{#input-text}}age-month{{/input-text}}
+              {{#input-text}}age-year{{/input-text}}
+          </div>
+      </fieldset>
+      <br>
+    </div>
     {{#input-submit}}{{/input-submit}}
 {{/form}}
 {{/ hmpo-partials-form}}
