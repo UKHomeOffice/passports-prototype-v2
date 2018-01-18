@@ -218,6 +218,14 @@ module.exports = {
       }
     ]
   },
+  'expiry-day': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    validate: [
+      'numeric',
+      'required'
+    ]
+  },
   'expiry-year': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',

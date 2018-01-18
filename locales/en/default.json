@@ -241,7 +241,30 @@
         },
         "third-party-last-name":{
           "label": "Last name"
-
+        },
+        "parent1-age-day":{
+          "label": "Day"
+        },
+        "parent1-age-month":{
+          "label": "Month"
+        },
+        "parent1-age-year":{
+          "label": "Year"
+        },
+        "parent2-age-day":{
+          "label": "Day"
+        },
+        "parent2-age-month":{
+          "label": "Month"
+        },
+        "parent2-age-year":{
+          "label": "Year"
+        },
+        "parent1-passport-number":{
+          "label": "Passport Number"
+        },
+        "parent2-passport-number":{
+          "label": "Passport Number"
         }
     },
     "validation": {
