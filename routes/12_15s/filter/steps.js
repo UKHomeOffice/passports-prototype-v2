@@ -64,11 +64,11 @@ module.exports = {
     },
     '/dob-below-16': {
       fields: ['age-day', 'age-year', 'age-month'],
-      backLink: '/dob',
+      backLink: './dob',
       next: '/passport-expiry'
     },
     '/passport-expiry': {
-      fields: ['expiry-year', 'expiry-month'],
+      fields: ['issue-day', 'issue-year', 'issue-month'],
       backLink: '../filter/dob',
       next: '/passport-damaged'
     },

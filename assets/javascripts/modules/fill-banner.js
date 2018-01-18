@@ -5,6 +5,9 @@
       "expiry-day": "27",
       "expiry-month": "12",
       "expiry-year": "07",
+      "issue-day": "27",
+      "issue-month": "12",
+      "issue-year": "07",
       "phoneno": "0208 123 4567",
       "name": "Adrian",
       "lastname": "Brereton",
@@ -40,12 +43,14 @@
           $("#" + key).val(values[key]);
       });
 
-      //damaged
+      //filter questions
+      $('#application-for-false').click();
       $('#apply-uk-true').click();
       $('#passport-before-true').click();
       $('#lost-stolen-false').click();
       $('#name-changed-false').click();
       $('#uncancelled-No').click();
+      $('#relationship-applicant-Mother').click();
       $('#passport-damaged-No').click();
       $('#choose-photo-upload').click();
       $('#plain-expression-Yes').click();
@@ -59,7 +64,6 @@
       $('#can-sign-true').click();
       $('#secure-return-false').click();
       $('#submit-photo-Yes').click();
-
 
       //change name
       $('#change-name-true').click();
