@@ -104,8 +104,17 @@ module.exports = {
     '/parental-responsibility': {
       fields: ['parental-responsibility'],
       backLink: './relationship-applicant',
-      next: '/../intro'
-
+      next: '/../intro',
+      forks: [{
+        target: '/parental-responsibility-no',
+        condition: {
+          field: 'parental-responsibility',
+          value: false
+        }
+      }],
+    },
+    '/parental-responsibility-no': {
+      backLink: './parental-responsibility'
     },
     '/third-party-name': {
       fields: ['third-party-first-name', 'third-party-last-name'],
