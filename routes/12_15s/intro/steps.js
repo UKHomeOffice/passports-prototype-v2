@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-      backLink: '../filter/parental-responsibility',
+      backLink: '../filter/relationship-applicant',
         next: '/what-you-need'
     },
     '/what-you-need': {
