@@ -380,7 +380,7 @@ module.exports = {
       validate: 'required',
       legend: {
           value: 'How would you like us to send your old passport back to you?',
-          className: 'form-label-bold'
+          className: 'visuallyhidden'
       },
       options: [
           { value: true, label: 'Special delivery (&#163;3 extra)' },
