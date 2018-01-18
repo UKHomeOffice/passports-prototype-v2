@@ -36,6 +36,9 @@
         "issue-month":{
           "label": "Month"
         },
+        "issue-day":{
+          "label": "Day"
+        },
         "name":{
           "label": "First and middle names"
         },

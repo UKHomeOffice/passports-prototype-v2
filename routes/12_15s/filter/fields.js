@@ -218,7 +218,7 @@ module.exports = {
       }
     ]
   },
-  'expiry-day': {
+  'issue-day': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
     validate: [
@@ -226,7 +226,7 @@ module.exports = {
       'required'
     ]
   },
-  'expiry-year': {
+  'issue-year': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
     validate: [
@@ -234,7 +234,7 @@ module.exports = {
       'required'
     ]
   },
-  'expiry-month': {
+  'issue-month': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
     validate: [
