@@ -166,9 +166,19 @@ module.exports = {
       ]
   },
   'parent1-first-names': {
+    labelClassName: 'form-label'
+
+  },
+  'parent1-last-name': {
+    labelClassName: 'form-label'
 
   },
   'parent2-first-names': {
+    labelClassName: 'form-label'
+
+  },
+  'parent2-last-name': {
+    labelClassName: 'form-label'
 
   },
   'parent1-age-year': {

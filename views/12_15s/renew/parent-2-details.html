@@ -3,7 +3,7 @@
 {{$pageTitle}}Father or parent 2{{/pageTitle}}
 
 {{$header}}
-    <h1>Father or parent 2</h1>
+    <h1>{{values.parent2-first-names}}'s details</h1>
 {{/header}}
 
 {{$content}}
@@ -12,9 +12,6 @@
 
 {{< hmpo-partials-form}}
 {{$form}}
-
-      {{#input-text}}parent2-first-names{{/input-text}}
-      {{#input-text}}parent2-last-name{{/input-text}}
 
       {{#input-text}}parent2-town{{/input-text}}
       {{#input-text}}parent2-country{{/input-text}}

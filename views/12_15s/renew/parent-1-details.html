@@ -3,18 +3,15 @@
 {{$pageTitle}}Mother or parent 1{{/pageTitle}}
 
 {{$header}}
-    <h1>Mother or parent 1</h1>
+    <h1>{{values.parent1-first-names}}'s details</h1>
 {{/header}}
 
 {{$content}}
 
-<p>You need to enter the details of the person with <a href="https://www.gov.uk/parental-rights-responsibilities">parental responsibility</a>.</p>
+<p>Your application may be delayed if you don't enter as many details as you can.</p>
 
 {{< hmpo-partials-form}}
 {{$form}}
-
-      {{#input-text}}parent1-first-names{{/input-text}}
-      {{#input-text}}parent1-last-name{{/input-text}}
 
       {{#input-text}}parent1-town{{/input-text}}
       {{#input-text}}parent1-country{{/input-text}}

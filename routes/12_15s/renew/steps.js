@@ -22,14 +22,19 @@ module.exports = {
         next: '/date-and-place-birth'
     },
     '/date-and-place-birth':{
-        next: '/parent-1-details',
+        next: '/parents-details',
         fields:['age-day', 'age-month', 'age-year', 'born-in-uk', 'town-of-birth', 'country-of-birth'],
     },
     '/below-16':{
       backLink: './date-and-place-birth',
     },
+    '/parents-details':{
+        fields:['parent1-first-names','parent2-first-names'],
+        next: '/parent-1-details',
+    },
     '/parent-1-details':{
         fields:[],
+        //controller: require('../../../controllers/parents-details'),
         next: '/parent-2-details',
     },
     '/parent-2-details':{
