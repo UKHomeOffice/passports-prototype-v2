@@ -20,7 +20,7 @@ module.exports = {
       },
       {
         value: false,
-        label: 'The passport holder can’t sign their name',
+        label: 'They can’t sign their name',
         toggle: 'no-sign'
       }
     ]
