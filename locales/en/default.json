@@ -47,13 +47,13 @@
         },
         "town-of-birth": {
             "label": "Town of birth",
-            "hint": "As written on your old passport"
+            "hint": "As written on the old passport"
         },
         "country-of-birth": {
             "label": "Country of birth"
         },
         "born-in-uk": {
-            "legend": "Were you born in the UK?"
+            "legend": "Were they born in the UK?"
         },
         "address1":{
           "label": "Address"
@@ -89,14 +89,14 @@
           "label": "Explain why they can’t sign their passport"
         },
         "previous-name": {
-            "legend": "Have you ever been known by any other names?",
-            "hint": "For example a maiden name, names from previous marriages or a different name at birth."
+            "legend": "Have they ever been known by any other names?",
+            "hint": "For example names from previous marriages or a different name at birth."
         },
         "previous-name-change": {
             "legend": "Have you ever been known by any other names?"
         },
         "previous-names": {
-            "label": "All of your previous names"
+            "label": "List all previous names"
         },
         "braille": {
             "label": "I need a braille sticker."
