@@ -35,7 +35,9 @@
       "how-damaged": "My dastardly dog, woof woof woof woof woof woof woof. The canine horror ate my passport.",
       "expiry-day-damaged": "12",
       "expiry-month-damaged": "07",
-      "expiry-year-damaged": "17"
+      "expiry-year-damaged": "17",
+      "parent1-first-names": "Victoria",
+      "parent2-first-names": "Daniel"
   };
 
   $("#populate").on("click", function(){
