@@ -1,0 +1,44 @@
+{{< layout}}
+
+{{$pageTitle}}Give details{{/pageTitle}}
+{{$header}}
+    <h1>The person's contact details</h1>
+{{/header}}
+
+{{$content}}
+<p>We'll only contact this person about confirming your identity.</p>
+{{< hmpo-partials-form}}
+    {{$form}}
+      <div id="csig-number-group" class="form-group">
+        <div id="csig-name-group" class="form-group">
+            <label for="name" class="form-label-bold">
+                Their full name
+            </label>
+            <span>
+                <input type="text" id="csig-name" class="form-control name" name="csig-name" value="" aria-describedby="name-prefix" aria-required="true">
+            </span>
+        </div>
+        <div id="csig-email-group" class="form-group">
+            <label for="csig-email" class="form-label-bold">
+                Their email
+            </label>
+            <span>
+                <input type="text" id="csig-email" class="form-control name" name="csig-email" value="" aria-describedby="name-prefix" aria-required="true">
+            </span>
+        </div>
+      </div>
+      <p>You must contact this person before we send them an email with your details.</p>
+      <div id="contact-csig-group" class="form-group form-group-compound" style="margin-top:-15px">
+        <label for="contact-csig" class="block-label">
+          <input type="checkbox" id="contact-csig" name="contact-csig" value="true" aria-required="false" required="true">
+            I've contacted this person
+        </label>
+      </div>
+      <br>
+    <input type="submit" id="Send" value="Send the email" class="button">
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}
