@@ -19,6 +19,10 @@ module.exports = {
     },
     '/confirm-applicant': {
         fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime'],
+        next: '/confirm-applicant-address'
+    },
+    '/confirm-applicant-address': {
+        fields: ['applicant-check-home-address', 'applicant-check-names'],
         next: '/csig-details-work'
     },
     '/csig-details': {

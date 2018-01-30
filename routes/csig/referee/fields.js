@@ -141,6 +141,44 @@ module.exports = {
         value: true
       },
   },
+  'applicant-check-home-address': {
+      legend: {
+        value: '',
+        className: 'visuallyhidden'
+      },
+      options: [
+          { value: 'Yes', label: 'Yes' },
+          { value: 'No', label: 'No' }
+      ],
+      validate: [
+        'required',
+        {
+          type:'equal',
+          arguments:['Yes'], /* if the arguments are NOT selected */
+          redirect:'/../referee/applicant-summary'
+        }
+      ],
+      className: 'inline'
+  },
+  'applicant-check-names': {
+      legend: {
+        value: '',
+        className: 'visuallyhidden'
+      },
+      options: [
+          { value: 'Yes', label: 'Yes' },
+          { value: 'No', label: 'No' }
+      ],
+      validate: [
+        'required',
+        {
+          type:'equal',
+          arguments:['Yes'], /* if the arguments are NOT selected */
+          redirect:'/../referee/applicant-summary'
+        }
+      ],
+      className: 'inline'
+  },
   'title':{
     legend: {
       value: 'Your title',
