@@ -72,6 +72,10 @@
       $('#change-of-name-reason-Marriage-or-civil-partnership').click();
       $('#16-or-older-true').click();
 
+      //csig
+      $('#applicant-check-home-address-Yes').click();
+      $('#applicant-check-names-Yes').click();
+      
       $(':checkbox').click();
       $('#applicant-check-Yes').click();
       $('#applicant-check-friend-Yes').click();

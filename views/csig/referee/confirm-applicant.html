@@ -5,20 +5,24 @@
 
 
 {{$header}}
-    <h1>Is this David Smith?</h1>
+  <h1>Is this Susan Howard?</h1>
 {{/header}}
 
 {{$content}}
 
 {{< hmpo-partials-form}}
     {{$form}}
-      <img src="../../public/images/photoguide/image-m2-plain.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
-      <br>
-      <br>
+    <div class="grid-row">
+      <div class="column-one-third">
+        <img src="../../public/images/photoguide/csig-confirm.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+      </div>
+    
+    </div>
+
       <div id="applicant-check-group" class="form-group inline">
         <fieldset role="radiogroup" aria-required="true">
           <!-- <legend>
-              <span class="form-label-bold">Is this David Smith?</span>
+              <span class="form-label-bold">Is this Susan Smith?</span>
           </legend> -->
           <label class="block-label" for="applicant-check-Yes">
               <input type="radio" name="applicant-check" id="applicant-check-Yes" value="true" required="true" data-toggle="declarations" aria-controls="declarations" aria-expanded="false">
@@ -33,7 +37,7 @@
       <div id="declarations" class="panel panel-border-narrow js-hidden">
         <div id="applicant-check-friend" class="form-group inline">
           <fieldset role="radiogroup" aria-required="true">
-              <label class="form-label" for="">Do you know David personally, for example as a friend or neighbour?</label>
+              <label class="form-label" for="">Do you know Susan personally, for example as a friend or neighbour?</label>
               <label class="block-label" for="applicant-check-friend-Yes">
                   <input type="radio" name="applicant-check-friend" id="applicant-check-friend-Yes" value="Yes" required="true">
                   Yes
@@ -46,7 +50,7 @@
         </div>
         <div id="applicant-check-address" class="form-group inline ">
           <fieldset role="radiogroup" aria-required="true">
-            <label class="form-label" for="">Are you related to, in a relationship with or living at the same address <br>as David?</label>
+            <label class="form-label" for="">Are you related to, in a relationship with or living at the same address <br>as Susan?</label>
               <label class="block-label" for="applicant-check-address-Yes">
                   <input type="radio" name="applicant-check-address" id="applicant-check-address-Yes" value="Yes" required="true">
                   Yes
@@ -58,7 +62,7 @@
           </fieldset>
         </div>
         <div id="knowntime-group" class="form-group">
-          <label class="form-label" for="">How many years have you known David?</label>
+          <label class="form-label" for="">How many years have you known Susan?</label>
           <span>
               <input type="text" id="knowntime" class="form-control date" name="knowntime" value="" maxlength="2" aria-describedby="knowntime" aria-required="true" style="width:70px;">
               <span id="reference-prefix" class="prefix"></span>
