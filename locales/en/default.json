@@ -145,17 +145,17 @@
             "label": "reason for rejecting the countersignature"
         },
         "applicant-check": {
-            "legend": "Is this David Smith?",
-            "label": "Is this David Smith?"
+            "legend": "Is this Susan Smith?",
+            "label": "Is this Susan Smith?"
         },
         "applicant-check-friend": {
-          "label": "Do you know David as a friend, neighbour or colleague?"
+          "label": "Do you know Susan as a friend, neighbour or colleague?"
         },
         "applicant-check-address": {
-          "label": "Are you related to, in a relationship with or living at the same address as David?"
+          "label": "Are you related to, in a relationship with or living at the same address as Susan?"
         },
         "knowntime": {
-          "label": "How many years have you known David?"
+          "label": "How many years have you known Susan?"
         },
         "profession": {
           "label": "Profession"
@@ -295,7 +295,7 @@
           "required": "Please tell us if you're applying from the UK"
         },
         "applicant-check": {
-          "required": "Is this David Smith?"
+          "required": "Is this Susan Smith?"
         },
         "contact-csig": {
           "required": "You need to contact the person"

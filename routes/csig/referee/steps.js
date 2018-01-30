@@ -1,11 +1,10 @@
 module.exports = {
     '/': {
-        fields: ['passport-number','expiry-day','expiry-month','expiry-year'],
+        fields: ['name', 'lastname','age-day','age-month','age-year','passport-number','expiry-day','expiry-month','expiry-year'],
         backLink: '../referee-5/applicant-info',
-        next: '/csig-identity-check'
+        next: '/csig-address-check'
     },
-    '/csig-identity-check': {
-        fields: ['name', 'lastname','age-day','age-month','age-year','national-insurance'],
+    '/csig-address-check': {
         backLink: './',
         next: '/csig-identity-auth'
     },
