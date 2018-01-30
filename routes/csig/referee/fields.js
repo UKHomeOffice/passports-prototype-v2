@@ -66,14 +66,47 @@ module.exports = {
           'required'
       ]
   },
-  'national-insurance': {
-      hint: 'We use this for stuff and nonsense',
+  'identity-options': {
+      legend: {
+          className: 'visuallyhidden'
+      },
+      options: [
+        { value: true, label: 'Check address'},
+        { value: false, label: 'Check address and bank'}
+      ],
+      formatter: ['boolean'],
+
+  },
+  'account-number': {
+    labelClassName: 'visuallyhidden',
+    formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
+  'sort-1': {
+    labelClassName: 'visuallyhidden',
+    formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
+  'sort-2': {
       labelClassName: 'visuallyhidden',
-      validate:[
-          'required',
-          function ninoformat(val) {
-            return val.match('^[A-z]{2}[0-9]{6}[A-z]{1}$');
-          }
+      formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
+  'sort-3': {
+      labelClassName: 'visuallyhidden',
+      formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
       ]
   },
   'applicant-check': {

@@ -1,0 +1,42 @@
+{{< layout}}
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Your details{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Your bank details</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+
+    <p>mwhahaha, account and sort and pin please</p>
+    <fieldset>
+      <legend><span class="form-label-bold">Account number</span></legend>
+      <p class="form-hint" id="dob-hint">hint text</p>
+      {{#input-text}}account-number{{/input-text}}
+    </fieldset>
+
+    <div id="date-group" class="form-group">
+        <fieldset>
+            <legend><span class="form-label-bold">Sort code</span></legend>
+            <div class="form-date">
+              <p class="form-hint" id="dob-hint">For example 20 01 23</p>
+                {{#input-text}}sort-1{{/input-text}}
+                {{#input-text}}sort-2{{/input-text}}
+                {{#input-text}}sort-3{{/input-text}}
+            </div>
+        </fieldset>
+    </div>
+    {{#input-submit}}{{/input-submit}}
+
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+
+
+{{/content}}
+
+{{/ layout}}

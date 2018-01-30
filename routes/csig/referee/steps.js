@@ -2,10 +2,23 @@ module.exports = {
     '/': {
         fields: ['name', 'lastname','age-day','age-month','age-year','passport-number','expiry-day','expiry-month','expiry-year'],
         backLink: '../referee-5/applicant-info',
+        next: '/csig-identity-options'
+    },
+    '/csig-identity-options': {
+        fields: ['identity-options'],
+        backLink: './',
         next: '/csig-address-check'
     },
     '/csig-address-check': {
-        backLink: './',
+        next: '/csig-identity-auth',
+        forks: [{
+          target: '/csig-bank-check',
+          condition: function(req, res) {
+            return req.session['hmpo-wizard-52']['identity-options'] == false;
+          }
+        }],
+    },
+    '/csig-bank-check': {
         next: '/csig-identity-auth'
     },
     '/csig-summary': {

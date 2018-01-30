@@ -1,26 +1,43 @@
 {{< layout}}
 {{$propositionHeader}}{{/propositionHeader}}
 
-{{$pageTitle}}Your details{{/pageTitle}}
+{{$pageTitle}}Check your identity{{/pageTitle}}
 
 
 {{$header}}
-    <h1>Your address</h1>
+    <h1>Check your identity</h1>
 {{/header}}
 
 {{$content}}
+<p>We need to check your identity before we can show you a photo of the person applying.</p>
+
+<p>Like many online services, HM Passport Office uses Experian to check your identity. Experian can search details linked to your address or your bank account.</p>
 {{< hmpo-partials-form}}
     {{$form}}
-
-
+    <legend><span class="form-label-bold">How would you like to do this?</span></legend>
+    {{#radio-group}}identity-options{{/radio-group}}
     {{#input-submit}}{{/input-submit}}
+    <div class="grid-row">
 
+      <div class="column-one-third">
+        <!-- nothing here but keep it -->
+      </div>
+      <!-- <div class="column-full">
+        <a href="../photoguide-short" class="guide-box">
 
+        <h3 style="margin-top:0;">Get a friend to take one</h3>
+        <p>Follow the step-by-step guide to taking a good digital passport photo.</p>
+        </a>
+        <a href="../photoguide-shop" class="guide-box last">
 
+        <h3 style="margin-top:0;">Go to a booth or a shop</h3>
+        <p>Check what you'll get from a booth and what to ask for at a shop.</p>
+        </a>
+      </div>
+    </div> -->
     {{/form}}
+
 {{/ hmpo-partials-form}}
-
-
 
 {{/content}}
 
