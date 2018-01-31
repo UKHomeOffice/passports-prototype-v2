@@ -11,14 +11,13 @@
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-      <p>Before you can confirm someone's identity, we need to check who you are.</p>
       <fieldset>
-        <legend><span class="form-label-bold">Given names</span></legend>
+        <legend><span class="form-label-bold">First and middle names</span></legend>
         <p class="form-hint" id="dob-hint">As written on your passport</p>
         {{#input-text}}name{{/input-text}}
       </fieldset>
       <fieldset>
-        <legend><span class="form-label-bold">Surname</span></legend>
+        <legend><span class="form-label-bold">Last name</span></legend>
         <p class="form-hint" id="dob-hint">As written on your passport</p>
         {{#input-text}}lastname{{/input-text}}
       </fieldset>
@@ -42,7 +41,7 @@
         <fieldset>
           <legend><span class="form-label-bold">Passport expiry date</span></legend>
           <div class="form-date">
-            <p class="form-hint" id="dob-hint">For example 08 2019</p>
+            <p class="form-hint" id="dob-hint">For example 11 08 2019</p>
             {{#input-text}}expiry-day{{/input-text}} {{#input-text}}expiry-month{{/input-text}} {{#input-text}}expiry-year{{/input-text}}
           </div>
         </fieldset>
