@@ -1,0 +1,53 @@
+{{< layout}}
+
+{{$pageTitle}}Your old passport{{/pageTitle}}
+
+{{$header}}
+    <h1>Your old passport</h1>
+{{/header}}
+
+{{$content}}
+
+    {{< hmpo-partials-form}}
+    {{$form}}
+
+        <div id="age-group" class="form-group">
+            <fieldset>
+                <legend><span class="form-label-bold">When was your passport issued?</span></legend>
+                <div class="form-date">
+                  <p class="form-hint" id="dob-hint">For example 01 2004</p>
+                    {{#input-text}}issue-month{{/input-text}}
+                    {{#input-text}}issue-year{{/input-text}}
+                </div>
+            </fieldset>
+        </div>
+
+        <fieldset class="inline">
+            <legend><span class="form-label-bold">Which is your passport issuing authority?</span></legend>
+          <!--  <p class="form-hint" id="dob-hint">Check the photo page of your passport.</p>-->
+            {{#radio-group}}issuing-authority{{/radio-group}}
+        </fieldset>
+
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+
+{{$sidebar}}
+
+<div class="column-one-third">
+  <br/>
+  <br/>
+    <div class="sidebar related">
+      <div class="photo-preview-inner">
+        <h2 class="heading-medium">Check here</h2>
+        <div class="photo">
+            <img src="../../public/images/issuing-authority.png" alt="where to check your issuing authority" title="where to check your  issuing authority" width="203">
+          </div>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}
