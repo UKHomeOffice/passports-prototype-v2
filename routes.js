@@ -104,3 +104,31 @@ app.use('/address/photo-url', require('./routes/address/photo-url'));
 app.use('/address/photo-code', require('./routes/address/photo-code'));
 app.use('/address/mismatch', require('./routes/address/mismatch'));
 app.use('/address/redirect-tracking', require('./routes/address/redirect-tracking'));
+
+
+// Priority Service (DPS)
+app.use('/priority-service/overseas', require('./routes/priority-service/overseas'));
+app.use('/priority-service/overseas-not-eligible', require('./routes/priority-service/overseas-not-eligible'));
+app.use('/priority-service/overseas-first', require('./routes/priority-service/overseas-first'));
+app.use('/priority-service/overseas-lost-change', require('./routes/priority-service/overseas-lost-change'));
+app.use('/priority-service/uploadphoto', require('./routes/priority-service/uploadphoto'));
+app.use('/priority-service/filter-common', require('./routes/priority-service/filter-common'))
+app.use('/priority-service/renew', require('./routes/priority-service/renew'));
+app.use('/priority-service/intro', require('./routes/priority-service/intro'));
+app.use('/priority-service/filter', require('./routes/priority-service/filter'));
+app.use('/priority-service/startpage', require('./routes/priority-service/startpage'));
+app.use('/priority-service/startpage-overseas', require('./routes/priority-service/startpage-overseas'));
+app.use('/priority-service/photoguide-short', require('./routes/priority-service/photoguide-short'));
+app.use('/priority-service/photoguide-static', require('./routes/priority-service/photoguide-static'));
+app.use('/priority-service/photoguide-shop', require('./routes/priority-service/photoguide-shop'));
+app.use('/priority-service/takephoto', require('./routes/priority-service/takephoto'));
+app.use('/priority-service/upload', require('./routes/priority-service/upload'));
+app.use('/priority-service/rejectedphoto', require('./routes/priority-service/rejectedphoto'));
+app.use('/priority-service/filter-common-temp', require('./routes/priority-service/filter-common-temp'));
+app.use('/priority-service/startpage-temp', require('./routes/priority-service/startpage-temp'));
+app.use('/priority-service/get-urgent-passport', require('./routes/priority-service/get-urgent-passport'));
+app.use('/priority-service/book-appointment', require('./routes/priority-service/book-appointment'));
+app.use('/priority-service/not-eligible', require('./routes/priority-service/not-eligible'));
+app.use('/priority-service/timeout', require('./routes/priority-service/timeout'));
+app.use('/priority-service/no-appointment', require('./routes/priority-service/no-appointment'));
+app.use('/priority-service/service-intro', require('./routes/priority-service/service-intro'));

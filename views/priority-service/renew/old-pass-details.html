@@ -1,0 +1,46 @@
+{{< layout}}
+
+{{$pageTitle}}Your old passport{{/pageTitle}}
+
+{{$header}}
+    <h1>Your old passport</h1>
+{{/header}}
+
+{{$content}}
+
+    <p>This passport will be cancelled on the day of your collection appointment. You won't be able to use it.</p>
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+
+    <div id="passport-number-group" class="form-group">
+        <fieldset>
+            <legend><span class="form-label-bold">Passport number</span></legend>
+              <p class="form-hint" id="dob-hint">For example 502135326</p>
+                {{#input-number}}passport-number{{/input-number}}
+        </fieldset>
+        <fieldset>
+            <legend><span class="form-label-bold">Expiry date</span></legend>
+            <div class="form-date">
+              <p class="form-hint" id="dob-hint">For example 08 2015</p>
+                {{#input-number}}expiry-month{{/input-number}}
+                {{#input-number}}expiry-year{{/input-number}}
+            </div>
+        </fieldset>
+    </div>
+
+    <details>
+        <summary><span class="summary">My passport is lost or stolen</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>You must <a href="https://www.gov.uk/report-a-lost-or-stolen-passport">cancel your old passport</a>. You can't apply with Online Premium, but you can still get your passport urgently with Fast Track.</p>
+        </div>
+    </details>
+    {{#input-submit}}{{/input-submit}}
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+{{/ layout}}
