@@ -1,0 +1,39 @@
+{{< layout}}
+
+{{$pageTitle}}Your date and place of birth{{/pageTitle}}
+
+{{$header}}
+    <h1>Date and place of birth</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+    <div id="date-group" class="form-group">
+        <fieldset>
+            <div class="form-date">
+              <legend><span class="form-label-bold">Date of birth</span></legend>
+              <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
+                {{#input-text}}age-day{{/input-text}}
+                {{#input-text}}age-month{{/input-text}}
+                {{#input-text}}age-year{{/input-text}}
+            </div>
+        </fieldset>
+    </div>
+    {{#radio-group}}born-in-uk{{/radio-group}}
+    <div id="birth-country" class="reveal js-hidden">
+        <div class="panel-indent">
+            {{#input-text}}country-of-birth{{/input-text}}
+        </div>
+    </div>
+    {{#input-text}}town-of-birth{{/input-text}}
+    {{#input-submit}}{{/input-submit}}
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+
+{{/ layout}}
