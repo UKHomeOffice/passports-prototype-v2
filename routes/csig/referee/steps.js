@@ -5,7 +5,7 @@ module.exports = {
         next: '/csig-identity-options'
     },
     '/csig-identity-options': {
-        fields: ['identity-options'],
+        //fields: ['identity-options'],
         backLink: './',
         next: '/home-address-postcode'
     },
