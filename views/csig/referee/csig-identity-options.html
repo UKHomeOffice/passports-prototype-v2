@@ -3,64 +3,69 @@
 
 {{$pageTitle}}Confirm your identity{{/pageTitle}}
 
-
-{{$header}}
-    <h1>Confirm your identity</h1>
-{{/header}}
-
-{{$content}}
+{{$main-content}}
+<div class="grid-row" style="margin:15px;">
+<h1>Confirm your identity</h1>
 
 <style>
-.column-full {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-.option-box {
-  display: flex;
-  flex-flow: column wrap;
-  flex: 1 0 300px;
-  padding: 25px;
-  background: #eee;
-  box-sizing: border-box;
-  float: left;
-  margin-right: 30px;
-  text-decoration: none !important;
+  .column-full {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .option-box {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 0 300px;
+    padding: 25px;
+    background: #eee;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 30px;
+    text-decoration: none !important;
 
-}
-.option-box p {
-  flex: 1;
-}
+  }
+  .option-box p {
+    flex: 1;
+  }
 </style>
-
-
-
-
 <p>We use Experian to confirm your identity. They can do this in 2 ways.</p>
 <div class="grid-row">
   <div class="column-full">
     <div class="option-box">
-        <h3 style="margin-top:0;">Using your address<br> </h3>
+        <h3 style="margin-top:0;">Using your address </h3>
         <p> Your credit report will show 'Searched by HM Passport Office'. It doesn't affect your credit rating.</p>
-        <div><a class="button" href="./home-address-postcode">Continue</a></div>
+        <div><a class="button" id="address" href="./home-address-postcode">Continue</a></div>
     </div>
 
     <div class="option-box last">
         <h3 style="margin-top:0;">Using your address and bank details</h3>
         <p> The search doesn't show on your credit report. We don't store your bank details or take any money. It doesn't affect your credit rating.</p>
-        <div><a class="button" href="./home-address-postcode?check=bank">Continue</a></div>
+        <div><a class="button" id="bank" href="./home-address-postcode">Continue</a></div>
     </div>
   </div>
 </div>
-<!-- {{< hmpo-partials-form}}
-    {{$form}}
-    <legend><span class="form-label-bold">How would you like to do this?</span></legend>
-    {{#radio-group}}identity-options{{/radio-group}}
-    {{#input-submit}}{{/input-submit}}
-
-    {{/form}}
-{{/ hmpo-partials-form}} -->
-
-{{/content}}
+<div class="visuallyhidden">
+  {{< hmpo-partials-form}}
+      {{$form}}
+      {{#radio-group}}identity-options{{/radio-group}}
+      {{#input-submit}}{{/input-submit}}
+      {{/form}}
+  {{/ hmpo-partials-form}}
+</div>
+<script>
+  $("#bank").click(function(e){
+    e.preventDefault();
+    $("#identity-options-false").click();
+    $(".form-group .button").click();
+  })
+  $("#address").click(function(e){
+    e.preventDefault();
+    $("#identity-options-true").click();
+    $(".form-group .button").click();
+  })
+</script>
+</div>
+{{/main-content}}
 
 {{/ layout}}
