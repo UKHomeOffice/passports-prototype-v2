@@ -1,11 +1,11 @@
 {{< layout}}
 {{$propositionHeader}}{{/propositionHeader}}
 
-{{$pageTitle}}Confirm your identity{{/pageTitle}}
+{{$pageTitle}}Checking your identity{{/pageTitle}}
 
 {{$main-content}}
 <div class="grid-row" style="margin:15px;">
-<h1>Confirm your identity</h1>
+<h1>Checking your details</h1>
 
 <style>
   .column-full {
@@ -29,18 +29,24 @@
     flex: 1;
   }
 </style>
-<p>We use Experian to confirm your identity. They can do this in 2 ways.</p>
+
+<div class="grid-row">
+
+  <div class="column-two-thirds
+  ">
+<p>We need to check some additional details about you. We use Experian to do this &ndash; it doesn't affect your credit rating.</p>
+</div>
 <div class="grid-row">
   <div class="column-full">
     <div class="option-box">
-        <h3 style="margin-top:0;">Using your address </h3>
-        <p> Your credit report will show 'Searched by HM Passport Office'. It doesn't affect your credit rating.</p>
+        <h3 style="margin-top:0;">Use your address </h3>
+        <p> Your credit report will show 'Searched by HM Passport Office'. </p>
         <div><a class="button" id="address" href="./home-address-postcode">Continue</a></div>
     </div>
 
     <div class="option-box last">
-        <h3 style="margin-top:0;">Using your address and bank details</h3>
-        <p> The search doesn't show on your credit report. We don't store your bank details or take any money. It doesn't affect your credit rating.</p>
+        <h3 style="margin-top:0;">Use your address and bank details</h3>
+        <p> This doesn't show on your credit report. We don't take any money or store your bank details.</p>
         <div><a class="button" id="bank" href="./home-address-postcode">Continue</a></div>
     </div>
   </div>
