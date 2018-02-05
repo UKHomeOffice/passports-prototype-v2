@@ -14,20 +14,21 @@ module.exports = {
     },
     '/home-address-select':{
         backLink: './home-address-postcode',
+        next: '/home-address-filled'
+    },
+    '/home-address-manual':{
+        backLink: './home-address-select'
+    },
+    '/home-address-filled':{
+        fields:['address1', 'address2', 'town', 'postcode'],
+        backLink: './home-address-select',
         next: '/csig-identity-auth',
         forks: [{
           target: '/csig-bank-check',
           condition: function(req, res) {
             return req.session['hmpo-wizard-52']['identity-options'] == false;
           }
-        }],
-    },
-    '/home-address-manual':{
-        backLink: './home-address-select'
-    },
-    '/home-address-filled':{
-        backLink: './home-address-select',
-        fields:['address1', 'address2', 'town', 'postcode']
+        }]
     },
     '/csig-bank-check': {
         next: '/csig-identity-auth'
@@ -67,15 +68,11 @@ module.exports = {
     '/csig-details-work': {
         fields: ['profession', 'retired' ],
         backLink:'confirm-applicant',
-        next: '/csig-details-home-address'
+        next: '/csig-details-contact'
     },
     '/csig-details-contact': {
         fields: ['phone-number', 'email-address'],
         next: '/declaration'
-    },
-    '/csig-details-home-address': {
-        backLink: 'csig-details-work',
-        next: '/csig-details-contact'
     },
     '/csig-details-work-address': {
         backLink: 'csig-details-work',
