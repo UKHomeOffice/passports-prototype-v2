@@ -68,15 +68,11 @@ module.exports = {
     '/csig-details-work': {
         fields: ['profession', 'retired' ],
         backLink:'confirm-applicant',
-        next: '/csig-details-home-address'
+        next: '/csig-details-contact'
     },
     '/csig-details-contact': {
         fields: ['phone-number', 'email-address'],
         next: '/declaration'
-    },
-    '/csig-details-home-address': {
-        backLink: 'csig-details-work',
-        next: '/csig-details-contact'
     },
     '/csig-details-work-address': {
         backLink: 'csig-details-work',
