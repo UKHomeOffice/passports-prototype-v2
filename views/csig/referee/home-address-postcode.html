@@ -1,0 +1,32 @@
+{{< layout}}
+
+{{$pageTitle}}Home address{{/pageTitle}}
+
+{{$header}}
+    <h1>Your home address</h1>
+{{/header}}
+
+{{$content}}
+
+
+ <form action="/renew/address" method="POST" autocomplete="off" novalidate="true" spellcheck="false">
+            <div id="address-postcode-group" class="form-group">
+    <label for="address-postcode" class="form-label-bold">
+        Postcode
+
+
+    </label>
+    <input type="text" name="address-postcode" id="address-postcode" class="form-control input-code" aria-required="true">
+</div>
+
+            <div class="form-group">
+    <a href="./home-address-select" class="button">Find address</a>
+</div>
+<input type="hidden" name="x-csrf-token" value="Cfc4KkI5-nqA9MdxHXwd7OZIJmK_NzIN7-KA">
+</form>
+
+
+{{/content}}
+
+
+{{/ layout}}

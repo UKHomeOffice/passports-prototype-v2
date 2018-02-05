@@ -1,44 +1,77 @@
 {{< layout}}
 {{$propositionHeader}}{{/propositionHeader}}
 
-{{$pageTitle}}Check your identity{{/pageTitle}}
+{{$pageTitle}}Checking your identity{{/pageTitle}}
 
+{{$main-content}}
+<div class="grid-row" style="margin:15px;">
+<h1>Checking your details</h1>
 
-{{$header}}
-    <h1>Check your identity</h1>
-{{/header}}
+<style>
+  .column-full {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .option-box {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 0 300px;
+    padding: 25px;
+    background: #eee;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 30px;
+    text-decoration: none !important;
 
-{{$content}}
-<p>We need to check your identity before we can show you a photo of the person applying.</p>
+  }
+  .option-box p {
+    flex: 1;
+  }
+</style>
 
-<p>Like many online services, HM Passport Office uses Experian to check your identity. Experian can search details linked to your address or your bank account.</p>
-{{< hmpo-partials-form}}
-    {{$form}}
-    <legend><span class="form-label-bold">How would you like to do this?</span></legend>
-    {{#radio-group}}identity-options{{/radio-group}}
-    {{#input-submit}}{{/input-submit}}
-    <div class="grid-row">
+<div class="grid-row">
 
-      <div class="column-one-third">
-        <!-- nothing here but keep it -->
-      </div>
-      <!-- <div class="column-full">
-        <a href="../photoguide-short" class="guide-box">
+  <div class="column-two-thirds
+  ">
+<p>We need to check some additional details about you. We use Experian to do this &ndash; it doesn't affect your credit rating.</p>
+</div>
+<div class="grid-row">
+  <div class="column-full">
+    <div class="option-box">
+        <h3 style="margin-top:0;">Use your address </h3>
+        <p> Your credit report will show 'Searched by HM Passport Office'. </p>
+        <div><a class="button" id="address" href="./home-address-postcode">Continue</a></div>
+    </div>
 
-        <h3 style="margin-top:0;">Get a friend to take one</h3>
-        <p>Follow the step-by-step guide to taking a good digital passport photo.</p>
-        </a>
-        <a href="../photoguide-shop" class="guide-box last">
-
-        <h3 style="margin-top:0;">Go to a booth or a shop</h3>
-        <p>Check what you'll get from a booth and what to ask for at a shop.</p>
-        </a>
-      </div>
-    </div> -->
-    {{/form}}
-
-{{/ hmpo-partials-form}}
-
-{{/content}}
+    <div class="option-box last">
+        <h3 style="margin-top:0;">Use your address and bank details</h3>
+        <p> This doesn't show on your credit report. We don't take any money or store your bank details.</p>
+        <div><a class="button" id="bank" href="./home-address-postcode">Continue</a></div>
+    </div>
+  </div>
+</div>
+<div class="visuallyhidden">
+  {{< hmpo-partials-form}}
+      {{$form}}
+      {{#radio-group}}identity-options{{/radio-group}}
+      {{#input-submit}}{{/input-submit}}
+      {{/form}}
+  {{/ hmpo-partials-form}}
+</div>
+<script>
+  $("#bank").click(function(e){
+    e.preventDefault();
+    $("#identity-options-false").click();
+    $(".form-group .button").click();
+  })
+  $("#address").click(function(e){
+    e.preventDefault();
+    $("#identity-options-true").click();
+    $(".form-group .button").click();
+  })
+</script>
+</div>
+{{/main-content}}
 
 {{/ layout}}

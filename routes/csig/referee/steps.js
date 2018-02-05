@@ -7,7 +7,30 @@ module.exports = {
     '/csig-identity-options': {
         fields: ['identity-options'],
         backLink: './',
-        next: '/csig-address-check'
+        next: '/home-address-postcode'
+    },
+    '/home-address-postcode':{
+        backLink: './csig-identity-options'
+    },
+    '/home-address-select':{
+        backLink: './home-address-postcode',
+        next: '/csig-identity-auth',
+        forks: [{
+          target: '/csig-bank-check',
+          condition: function(req, res) {
+            return req.session['hmpo-wizard-52']['identity-options'] == false;
+          }
+        }],
+    },
+    '/home-address-manual':{
+        backLink: './home-address-select'
+    },
+    '/home-address-filled':{
+        backLink: './home-address-select',
+        fields:['address1', 'address2', 'town', 'postcode']
+    },
+    '/csig-bank-check': {
+        next: '/csig-identity-auth'
     },
     '/csig-address-check': {
         next: '/csig-identity-auth',
@@ -18,9 +41,7 @@ module.exports = {
           }
         }],
     },
-    '/csig-bank-check': {
-        next: '/csig-identity-auth'
-    },
+
     '/csig-summary': {
         next: '/confirm-applicant'
     },
