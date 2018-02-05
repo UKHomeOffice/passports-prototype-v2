@@ -1,0 +1,32 @@
+{{< layout}}
+
+{{$title}}Receiving your old and new passports{{/title}}
+
+{{$header}}
+    <h1>Receiving your old and new passports</h1>
+{{/header}}
+
+{{$content}}
+    {{< hmpo-partials-form}}
+        {{$form}}
+                <p>We have to send your old and new passports separately. Your new passport will be sent by special delivery. This is included in the passport fee. </p>
+            {{^values.veteran}}
+                {{#radio-group}}secure-return{{/radio-group}}
+
+
+                <p>We’ll send your old and new passport to
+            {{/values.veteran}}
+
+                    {{values.address1}},
+                    {{#values.address2}}
+                        {{values.address2}},
+                    {{/values.address2}}
+                    {{values.town}},
+                    {{values.postcode}}.
+            </p>
+            {{#input-submit}}{{/input-submit}}
+        {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}

@@ -1,0 +1,41 @@
+{{< layout}}
+
+{{$pageTitle}}Signing your new passport{{/pageTitle}}
+
+{{$header}}
+    <h1>Signing your new passport</h1>
+{{/header}}
+
+{{$content}}
+    {{< hmpo-partials-form}}
+        {{$form}}
+            <p>When you get your new passport, you need to sign it.</p>
+            {{#radio-group}}can-sign{{/radio-group}}
+            <div id="no-sign" class="reveal js-hidden">
+                <div class="panel panel-border-narrow">
+                    <p>You must explain why you can’t sign your passport, for example if there’s a medical reason or you can’t write. If you can, provide supporting evidence.</p>
+                    {{#textarea}}no-sign-reason{{/textarea}}
+                </div>
+            </div>
+            {{#input-submit}}{{/input-submit}}
+        {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+{{$sidebar}}
+
+<div class="column-one-third">
+  <br/>
+  <br/>
+    <div class="sidebar related">
+      <div class="photo-preview-inner">
+        <h2 class="heading-medium">Where to sign</h2>
+        <div class="photo">
+            <img src="../../public/images/sign-passport-sm.png" alt="where to sign your passport" title="where to sign your passport" width="190">
+          </div>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}
