@@ -14,20 +14,21 @@ module.exports = {
     },
     '/home-address-select':{
         backLink: './home-address-postcode',
+        next: '/home-address-filled'
+    },
+    '/home-address-manual':{
+        backLink: './home-address-select'
+    },
+    '/home-address-filled':{
+        fields:['address1', 'address2', 'town', 'postcode'],
+        backLink: './home-address-select',
         next: '/csig-identity-auth',
         forks: [{
           target: '/csig-bank-check',
           condition: function(req, res) {
             return req.session['hmpo-wizard-52']['identity-options'] == false;
           }
-        }],
-    },
-    '/home-address-manual':{
-        backLink: './home-address-select'
-    },
-    '/home-address-filled':{
-        backLink: './home-address-select',
-        fields:['address1', 'address2', 'town', 'postcode']
+        }]
     },
     '/csig-bank-check': {
         next: '/csig-identity-auth'
