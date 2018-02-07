@@ -8,7 +8,7 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [
-      { value: true, label: 'Myself' },
+      { value: true, label: 'Me' },
       { value: false, label: 'Someone else'}
     ],
     formatter: ['boolean'],
