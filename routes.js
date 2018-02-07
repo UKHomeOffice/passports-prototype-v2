@@ -135,3 +135,7 @@ app.use('/priority-service/not-eligible', require('./routes/priority-service/not
 app.use('/priority-service/timeout', require('./routes/priority-service/timeout'));
 app.use('/priority-service/no-appointment', require('./routes/priority-service/no-appointment'));
 app.use('/priority-service/service-intro', require('./routes/priority-service/service-intro'));
+
+//Gov.uk pages
+app.use('/govuk', require('./routes/govuk'));
+app.use('/govuk/damaged', require('./routes/govuk/damaged'));
