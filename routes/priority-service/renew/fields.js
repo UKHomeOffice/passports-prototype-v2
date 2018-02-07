@@ -144,18 +144,10 @@ module.exports = {
   'expiry-year': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
-      validate: [
-          'numeric',
-          'required'
-      ]
   },
   'expiry-month': {
       labelClassName: 'form-label',
       formatter: 'removehyphens',
-      validate: [
-          'numeric',
-          'required'
-      ]
   },
   'address1': {
       validate: [

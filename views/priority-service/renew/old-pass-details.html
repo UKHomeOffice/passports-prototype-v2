@@ -1,9 +1,9 @@
 {{< layout}}
 
-{{$pageTitle}}Your old passport{{/pageTitle}}
+{{$pageTitle}}Your old passport details{{/pageTitle}}
 
 {{$header}}
-    <h1>Your old passport</h1>
+    <h1>Your old passport details</h1>
 {{/header}}
 
 {{$content}}
@@ -17,17 +17,43 @@
     <div id="passport-number-group" class="form-group">
         <fieldset>
             <legend><span class="form-label-bold">Passport number</span></legend>
-              <p class="form-hint" id="dob-hint">For example 502135326</p>
+              <p class="form-hint" id="dob-hint">For example, 502135326</p>
                 {{#input-number}}passport-number{{/input-number}}
         </fieldset>
         <fieldset>
-            <legend><span class="form-label-bold">Expiry date</span></legend>
-            <div class="form-date">
-              <p class="form-hint" id="dob-hint">For example 08 2015</p>
-                {{#input-number}}expiry-month{{/input-number}}
-                {{#input-number}}expiry-year{{/input-number}}
-            </div>
-        </fieldset>
+                    <legend>
+                        <span class="form-label-bold">Expiry date</span>
+                        <span id="passport-expiry-hint" class="form-hint">For example, 01 08 2017</span>
+                        
+                    </legend>
+                    <div class="form-date">
+                        <div id="passport-expiry-day-group" class="form-group">
+    <label for="expiry-day" class="form-label">
+        Day
+        
+        
+    </label>
+    <input type="text" name="passport-expiry-day" id="passport-expiry-day" class="form-control" aria-required="true" min="1" max="31" maxlength="2" pattern="[0-9]*" aria-describedby="passport-expiry-hint" autocomplete="hmpo-passport-expiry-day"></div>
+
+<div id="passport-expiry-month-group" class="form-group">
+    <label for="expiry-month" class="form-label">
+        Month
+        
+        
+    </label>
+    <input type="text" name="passport-expiry-month" id="passport-expiry-month" class="form-control" aria-required="true" min="1" max="12" maxlength="2" pattern="[0-9]*" aria-describedby="passport-expiry-hint" autocomplete="hmpo-passport-expiry-month"></div>
+
+    <div id="passport-expiry-year-group" class="form-group">
+    <label for="expiry-year" class="form-label">
+        Year
+        
+        
+    </label>
+    <input type="text" name="passport-expiry-year" id="passport-expiry-year" class="form-control" aria-required="true" maxlength="4" pattern="[0-9]*" aria-describedby="passport-expiry-hint" autocomplete="hmpo-passport-expiry-year">
+    </div>
+
+                    </div>
+                </fieldset>
     </div>
 
     <details>
