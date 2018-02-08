@@ -1,5 +1,8 @@
 module.exports = {
     '/': {
+        next: '/csig-intro'
+    },
+    '/csig-intro': {
         next: '/applicant-info'
     },
     '/applicant-info': {
