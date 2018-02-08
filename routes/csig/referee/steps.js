@@ -19,7 +19,7 @@ module.exports = {
     },
     '/home-address-select':{
         backLink: './home-address-postcode',
-        next: '/home-address-filled'
+        next: '/csig-identity-auth'
     },
     '/home-address-manual':{
         backLink: './home-address-select'
