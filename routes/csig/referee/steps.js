@@ -1,20 +1,25 @@
 module.exports = {
     '/': {
-        fields: ['name', 'lastname','age-day','age-month','age-year','passport-number','expiry-day','expiry-month','expiry-year'],
+        fields: ['age-day','age-month','age-year','passport-number','expiry-day','expiry-month','expiry-year'],
         backLink: '../referee-5/applicant-info',
-        next: '/csig-identity-options'
+        next: '/name-address'
     },
-    '/csig-identity-options': {
-        fields: ['identity-options'],
+    '/name-address': {
+        fields: ['name', 'lastname'],
         backLink: './',
-        next: '/home-address-postcode'
+        next: '/home-address-select'
     },
+    // '/csig-identity-options': {
+    //     fields: ['identity-options'],
+    //     backLink: './',
+    //     next: '/home-address-postcode'
+    // },
     '/home-address-postcode':{
         backLink: './csig-identity-options'
     },
     '/home-address-select':{
         backLink: './home-address-postcode',
-        next: '/home-address-filled'
+        next: '/csig-identity-auth'
     },
     '/home-address-manual':{
         backLink: './home-address-select'
@@ -96,5 +101,8 @@ module.exports = {
     },
     '/applicant-not-applicant': {
       backLink: 'confirm-applicant'
-    }
+    },
+    '/terms-and-conditions': {
+
+    },
 };

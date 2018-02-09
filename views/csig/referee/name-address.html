@@ -1,0 +1,36 @@
+{{< layout}}
+{{$propositionHeader}}Renew {{/propositionHeader}}
+
+{{$pageTitle}}Your UK passport{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Your name and address</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+      <fieldset>
+        <legend><span class="form-label-bold">First and middle names</span></legend>
+        <p class="form-hint" id="dob-hint">As written on your passport</p>
+        {{#input-text}}name{{/input-text}}
+      </fieldset>
+      <fieldset>
+        <legend><span class="form-label-bold">Last name</span></legend>
+        <p class="form-hint" id="dob-hint">As written on your passport</p>
+        {{#input-text}}lastname{{/input-text}}
+      </fieldset>
+      <div id="address-postcode-group" class="form-group">
+        <label for="address-postcode" class="form-label-bold">
+          Postcode
+        </label>
+        <input type="text" name="address-postcode" id="address-postcode" class="form-control input-code" aria-required="true">
+      </div>
+      {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}
