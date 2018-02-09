@@ -11,7 +11,23 @@
 
     {{< hmpo-partials-form}}
     {{$form}}
-        {{#radio-group}}16-or-older{{/radio-group}}
+       <div id="over-sixteen-group" class="form-group inline js-gaevent" data-gakey="eligibility">
+    <fieldset role="radiogroup" aria-required="true">
+        <legend>
+   
+            
+            
+        </legend>
+            <label class="block-label" for="over-sixteen-true">
+                <input type="radio" name="over-sixteen" id="over-sixteen-true" value="true" required="true" data-galabel="sixteen-or-older">
+                Yes
+            </label>
+            <label class="block-label" for="over-sixteen-false">
+                <input type="radio" name="over-sixteen" id="over-sixteen-false" value="false" required="true" data-galabel="under-sixteen">
+                No
+            </label>
+    </fieldset>
+</div>
 
         <details>
             <summary><span class="summary">I'll be 16 in the next 3 weeks</span></summary>

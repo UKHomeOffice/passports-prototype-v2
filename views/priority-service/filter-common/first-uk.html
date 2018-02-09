@@ -11,7 +11,22 @@
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-        {{#radio-group}}passport-before{{/radio-group}}
+    <div id="previous-passport-group" class="form-group inline js-gaevent" data-gakey="eligibility">
+    <fieldset role="radiogroup" aria-required="true">
+        <legend>
+            
+            
+        </legend>
+            <label class="block-label" for="previous-passport-true">
+                <input type="radio" name="previous-passport" id="previous-passport-true" value="true" required="true" data-galabel="not first">
+                Yes
+            </label>
+            <label class="block-label" for="previous-passport-false">
+                <input type="radio" name="previous-passport" id="previous-passport-false" value="false" required="true" data-galabel="first">
+                No
+            </label>
+    </fieldset>
+</div>
         {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}
