@@ -101,5 +101,8 @@ module.exports = {
     },
     '/applicant-not-applicant': {
       backLink: 'confirm-applicant'
-    }
+    },
+    '/terms-and-conditions': {
+
+    },
 };
