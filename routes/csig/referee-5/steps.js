@@ -4,10 +4,14 @@ module.exports = {
     },
     '/csig-intro': {
         backLink: './',
-        next: '/applicant-info'
+        next: '/declaration'
+    },
+    '/declaration': {
+      backLink: './csig-intro',
+      next: '/applicant-info'
     },
     '/applicant-info': {
-        backLink: './csig-intro',
+        backLink: './declaration',
         fields: ['pex-number','age-day','age-month','age-year'],
         next: '/../referee/'
     },

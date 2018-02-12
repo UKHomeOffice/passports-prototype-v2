@@ -9,13 +9,8 @@ module.exports = {
         backLink: './',
         next: '/home-address-select'
     },
-    // '/csig-identity-options': {
-    //     fields: ['identity-options'],
-    //     backLink: './',
-    //     next: '/home-address-postcode'
-    // },
     '/home-address-postcode':{
-        backLink: './csig-identity-options'
+        backLink: './name-address'
     },
     '/home-address-select':{
         backLink: './home-address-postcode',
@@ -47,7 +42,6 @@ module.exports = {
           }
         }],
     },
-
     '/csig-summary': {
         next: '/confirm-applicant'
     },
@@ -77,16 +71,16 @@ module.exports = {
     },
     '/csig-details-contact': {
         fields: ['phone-number', 'email-address'],
-        next: '/declaration'
+        next: '/confirmation'
     },
     '/csig-details-work-address': {
         backLink: 'csig-details-work',
         next: '/csig-details-contact'
     },
-    '/declaration': {
-        backLink:'csig-details-work',
-        next: '/confirmation'
-    },
+    // '/declaration': {
+    //     backLink:'csig-details-work',
+    //     next: '/confirmation'
+    // },
     '/confirmation': {
 
     },
@@ -97,6 +91,9 @@ module.exports = {
 
     },
     '/applicant-summary': {
+
+    },
+    '/applicant-summary-name-address': {
 
     },
     '/applicant-not-applicant': {
