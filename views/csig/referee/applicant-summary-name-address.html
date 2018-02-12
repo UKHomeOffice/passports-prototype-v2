@@ -1,0 +1,43 @@
+{{< layout}}
+{{$propositionHeader}}Renew {{/propositionHeader}}
+
+{{$pageTitle}}Check your answers{{/pageTitle}}
+
+
+{{$header}}
+    <h1 class="heading-large">Confirm your answers</h1>
+{{/header}}
+{{$content}}
+<p>It looks like you're not eligible to do this for Susan. Please confirm your answers before we let her know.</p>
+
+<img src="../../public/images/photoguide/csig-confirm.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+<br>
+<br>
+<div class="confirmation">
+  <div class="section old-passport-details">
+      <dl class="passport-number">
+          <dt class="column-two-thirds column-long">Do you know Susan personally, for example as a friend or neighbour?</dt>
+          <dd class="column-one-third">
+            <p>{{values.applicant-check-friend}}</p>
+            <div class="button-wrapper">
+                <a href="/csig/referee">Change<span class="visuallyhidden"> passport number</span></a>
+            </div>
+          </dd>
+      </dl>
+      <dl class="expiry-date">
+          <dt class="column-two-thirds column-long">Are you related to, in a relationship with or living at the same address
+    as Susan?</dt>
+          <dd class="column-one-third">
+            <p>{{values.applicant-check-address}}</p>
+            <div class="button-wrapper">
+                <a href="/csig/referee">Change<span class="visuallyhidden"> expiry date</span></a>
+            </div>
+          </dd>
+      </dl>
+  </div>
+</div>
+<a href="/csig/referee/exceptions" class="button">Continue</a>
+
+{{/content}}
+
+{{/ layout}}

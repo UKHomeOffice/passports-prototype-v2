@@ -93,6 +93,9 @@ module.exports = {
     '/applicant-summary': {
 
     },
+    '/applicant-summary-name-address': {
+
+    },
     '/applicant-not-applicant': {
       backLink: 'confirm-applicant'
     },
