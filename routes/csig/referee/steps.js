@@ -46,7 +46,7 @@ module.exports = {
         next: '/confirm-applicant'
     },
     '/csig-identity-auth': {
-        next: '/confirm-applicant'
+        next: '/csig-identity-confirmed'
     },
     '/csig-identity-confirmed': {
         next: '/confirm-applicant'
