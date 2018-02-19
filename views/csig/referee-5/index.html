@@ -12,29 +12,39 @@
 {{< hmpo-partials-form}}
     {{$form}}
 
-      <p>To confirm someone's identity for a UK passport, you must:</p>
+      <p>Before you start, you need to know the person's:</p>
         <ul class="list-bullet">
 
-          <li>have known them personally for at least 2 years, for example as a friend <br>
-            or neighbour</li>
-          <li>and work in or be retired from a <a href="/govuk">recognised profession</a></li>
-          <li>and live in the UK with a current UK passport</li>
+          <li>date of birth, including the year</li>
+          <li>current address</li>
+          <li>previous names (if any)</li>
         </ul>
-        <p>It takes about 10 minutes.</p>
+        <p>This takes about 10 minutes.</p>
 
 
-        <a href="/csig/referee-5/applicant-info" class="button">Start</a>
+        <a href="/csig/referee-5/declaration" class="button">I have these details</a>
 
         <br/><br/>
 
-          <p><a href="referee-5/i-dont-meet-the-criteria">I don't meet the criteria</a></p>
+        <p><a href="http://www.gov.uk">I need to get these details (sign out)</a></p>
 
 
 
-    {{/form}}
-{{/ hmpo-partials-form}}
-{{/content}}
+        {{/form}}
+    {{/ hmpo-partials-form}}
+    {{/content}}
 
+    {{$sidebar}}
+    <div class="column-one-third">
+        <div class="sidebar" style="margin-top:50px">
+          <div class="photo-preview-inner">
+              <h2 class="heading-medium">Who can do this</h2>
 
+              <p>You can check who can do this on <a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories">GOV.UK<a>.</p>
+          </div>
 
-{{/ layout}}
+        </div>
+    </div>
+    {{/sidebar}}
+
+    {{/ layout}}
