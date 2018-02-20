@@ -2,7 +2,8 @@ module.exports = {
     '/': {
         fields: ['age-day','age-month','age-year','passport-number','expiry-day','expiry-month','expiry-year'],
         backLink: '../referee-5/applicant-info',
-        next: '/name-address'
+        next: '/name-address',
+        controller: require('../../../controllers/csig-email')
     },
     '/name-address': {
         fields: ['name', 'lastname'],
