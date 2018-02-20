@@ -75,12 +75,12 @@
       //csig
       $('#applicant-check-home-address-Yes').click();
       $('#applicant-check-names-Yes').click();
-      
+
       $(':checkbox').click();
       $('#applicant-check-Yes').click();
       $('#applicant-check-friend-Yes').click();
       $('#applicant-check-address-No').click();
-      $('#retired-check-Yes').click();
+      $('#retired-check-No').click();
       $('#knowntime').val('2');
       $('.button')[0].click();
 
