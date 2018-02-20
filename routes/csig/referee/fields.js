@@ -268,6 +268,7 @@ module.exports = {
   },
   'employer': {
       labelClassName: 'visuallyhidden',
+      className: 'form-control-3-4',
       validate: [
           'required'
         ]
