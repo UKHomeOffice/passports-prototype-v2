@@ -189,7 +189,7 @@ module.exports = {
         {
           type:'equal',
           arguments:['Yes'], /* if the arguments are NOT selected */
-          redirect:'/../referee/exceptions'
+          redirect:'/../referee/applicant-summary-name-address'
         }
       ],
       className: 'inline'
@@ -209,7 +209,7 @@ module.exports = {
         {
           type:'equal',
           arguments:['Yes'], /* if the arguments are NOT selected */
-          redirect:'/../referee/exceptions'
+          redirect:'/../referee/applicant-summary-name-address'
         }
       ],
       className: 'inline'
