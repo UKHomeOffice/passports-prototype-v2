@@ -14,4 +14,7 @@ module.exports = {
     '/i-dont-meet-the-criteria': {
       backLink: './',
     },
+    '/i-need-these-details': {
+      backLink: './',
+    },
 };
