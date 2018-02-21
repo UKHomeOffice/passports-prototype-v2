@@ -86,13 +86,13 @@ module.exports = {
 
     },
     '/exceptions': {
-
+      backLink: 'confirm-applicant'
     },
     '/exceptions-not-applicant': {
 
     },
     '/applicant-summary': {
-
+      backLink: 'confirm-applicant-address'
     },
     '/applicant-summary-name-address': {
       backLink: 'confirm-applicant-address'
