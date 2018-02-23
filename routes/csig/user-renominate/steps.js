@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-      controller: require('../../../controllers/tracking'),
+      controller: require('../../../controllers/csig-email'),
       fields: ['reference'],
         next: '/track-postcode',
     },
@@ -11,17 +11,12 @@ module.exports = {
     },
     '/track-postcode': {
         fields: ['age-day', 'age-month', 'age-year'],
-        next: '/need-csig',
+        next: '/renominate',
         backLink: '/'
     },
-    '/waiting-for-old-pass': {
-        next: '/track'
-    },
-    '/need-csig': {
-        fields: ['renominate'],
-        next: '/../user-contact'
-    },
-    '/send-book': {
-      next: '../csig/'
+    '/renominate': {
+      fields: ['renominate'],
+      backLink: 'track-postcode',
+      next: '/../user-contact/'
     }
 };

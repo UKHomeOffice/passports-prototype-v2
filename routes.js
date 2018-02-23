@@ -65,6 +65,7 @@ app.use('/12_15s/redirect-tracking', require('./routes/12_15s/redirect-tracking'
 //csig
 app.use('/csig/user', require('./routes/csig/user'));
 app.use('/csig/user-send-book', require('./routes/csig/user-send-book'));
+app.use('/csig/user-renominate', require('./routes/csig/user-renominate'));
 app.use('/csig/user-contact', require('./routes/csig/user-contact'));
 app.use('/csig/start', require('./routes/csig/start'));
 app.use('/csig/referee', require('./routes/csig/referee'));
