@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-      controller: require('../../../controllers/tracking'),
+      controller: require('../../../controllers/csig-email'),
       fields: ['reference'],
         next: '/track-postcode',
     },
