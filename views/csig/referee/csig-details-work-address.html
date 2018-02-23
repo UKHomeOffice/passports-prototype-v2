@@ -12,11 +12,11 @@
   {{< hmpo-partials-form}}
     {{$form}}
 
-<p>We'll only write to you at this address if we need to check any details.</p>
+<p>We'll only write to you at this address if we need to check any details. If you're self-employed, enter your name and home address.</p>
       <div id="employer-group" class="form-group">
           <label for="employer" class="form-label-bold">
-              Employer's name
-              <p class="form-hint" id="dob-hint">Enter your name if you're self-employed.</p>
+              Employer
+
 
           </label>
           {{#input-text}}employer{{/input-text}}
@@ -24,6 +24,7 @@
       <div id="employeraddress-group" class="form-group">
           <label for="employeraddress" class="form-label-bold">
               Your work address
+
           </label>
           <span>
               <input type="text" id="employer-address-1" class="form-control form-control-3-4" name="employer-address" style="margin-bottom:10px;" maxlength="40">
