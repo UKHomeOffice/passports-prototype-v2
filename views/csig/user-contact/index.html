@@ -3,6 +3,8 @@
 {{$pageTitle}}Track a passport application{{/pageTitle}}
 
 {{$main-content}}
+{{< hmpo-partials-form}}
+    {{$form}}
 <div class="column-full">
   <div class="flash-card">
     <header>
@@ -33,9 +35,8 @@
             </li>
         <br>
         </ul>
-        <div class="form-group">
-          <a href="./give-csig-details" class="button">Continue</a>
-        </div>
+
+        {{#input-submit}}{{/input-submit}}
         <p><a href="http://www.gov.uk">I'll do this later (sign out)</a></p>
         </br>
       </div>
@@ -48,6 +49,9 @@
     </div>
   </div>
 </div>
+
+{{/form}}
+{{/ hmpo-partials-form}}
 {{/main-content}}
 
 

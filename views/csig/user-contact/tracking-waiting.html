@@ -4,6 +4,8 @@
 
 
 {{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
     <header class="update-notice">
           <h1>Email sent</h1>
           <p>Sent to <strong>{{values.csig-email}}</strong></p>
@@ -11,29 +13,23 @@
     <h2>What happens next</h2>
     <p>You&rsquo;ll get an email when your identity has been confirmed. If you don&rsquo;t get an update in the next few days, remind the person confirming your identity.</p>
 
-
-    <!-- <h2>Remember to send back your old passport</h2>
-    <p>HM Passport Office<br/>
-       Ref: PEX 319 825 680X<br/>
-       Aragon Court<br/>
-       Northminster Road<br/>
-       Peterborough<br/>
-       PE1 1QG
-    </p>
-    <p>You don’t need to include a covering letter. It’s up to you whether you use standard post or a secure service.</p> -->
     <h2>Your application history</h2>
     <article>
+
       <table>
          <tbody>
-          {{#values.renominate}}
              <tr>
-               <td>Email sent to: {{values.csig-email}}</td>
-               <td>2:30pm on 21 February 2018  </td>
+               <td>Email sent to {{values.csig-email}}</td>
+               <td>5:30pm on 24 February 2018  </td>
              </tr>
-           {{/values.renominate}}
+             <tr>
+               <td>C Moore not eligible</td>
+               <td>9:14am on 24 February 2018  </td>
+             </tr>
+
            <tr>
-             <td>Email sent to: {{values.csig-email}}</td>
-             <td>2:30pm on 21 February 2018  </td>
+             <td>Email sent to {{values.csig-email-old}}</td>
+             <td>2:30pm on 21 February 2018</td>
            </tr>
            <tr>
              <td>Application received</td>
@@ -45,10 +41,13 @@
            </tr>
          </tbody>
        </table>
+
+
     </article>
       <br/>
       <a href="http://www.gov.uk">Sign out</a><br>
-
+      {{/form}}
+      {{/ hmpo-partials-form}}
 
 {{/content}}
 
