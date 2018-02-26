@@ -8,15 +8,12 @@ module.exports = {
       fields: ['csig-email', 'csig-name', 'contact-csig'],
       controller: require('../../../controllers/csig-email'),
       backLink: './',
-      next: '/tracking-waiting',
-      forks: [{
-        target: '/tracking-waiting-renominate',
-        condition: function(req, res) {
-          return req.session['hmpo-wizard-common']['renominate'] == true;
-        }
-      }],
+      next: '/tracking-waiting'
     },
     '/tracking-waiting': {
+        next: '/track'
+    },
+    '/tracking-waiting-renominate': {
         next: '/track'
     },
     '/email-confirmation': {
