@@ -6,15 +6,25 @@
 {{< hmpo-partials-form}}
     {{$form}}
   <header class="update-notice" style="background: #DEE0E2; color: #0B0C0C">
-    <h1>You need to ask someone to<br>confirm your identity</h1>
+    <h1>Ask someone else to confirm <br> your identity</h1>
   </header>
+  <p>C Moore isn't eligible to do this for you. You need to ask someone else.</p>
   <p>We can't print your new passport until your identity is confirmed.</p>
-  <input type="hidden" name="renominate" id="renominate" value="false">
+  <input type="hidden" name="renominate" id="renominate" value="true">
   {{#input-submit}}{{/input-submit}}
+  <hr>
   <h2>Your application history</h2>
   <article>
   <table>
       <tbody>
+        <tr>
+          <td>C Moore not eligible</td>
+          <td>7:30pm on 22 February 2017</td>
+        </tr>
+        <tr>
+          <td>Email sent to {{values.csig-email}}</td>
+          <td>2:30pm on 21 February 2018</td>
+        </tr>
         <tr>
           <td>Application received</td>
           <td>10:05am on 19 February 2018</td>
@@ -26,7 +36,7 @@
       </tbody>
     </table>
     <br>
-    <a href="http://www.gov.uk">Sign out</a>
+    <a href="/csig">Sign out</a>
     {{/form}}
 {{/ hmpo-partials-form}}
 {{/content}}

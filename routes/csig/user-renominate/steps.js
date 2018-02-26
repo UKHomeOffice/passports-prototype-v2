@@ -11,11 +11,13 @@ module.exports = {
     },
     '/track-postcode': {
         fields: ['age-day', 'age-month', 'age-year'],
-        next: '/send-book',
+        next: '/renominate',
         backLink: '/'
     },
-    '/send-book': {
+    '/renominate': {
+      fields: ['renominate'],
       backLink: 'track-postcode',
-      next: '../csig/'
+      next: '/../user-contact/',
+      controller: require('../../../controllers/csig-email-pre'),
     }
 };

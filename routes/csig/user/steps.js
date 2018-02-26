@@ -18,7 +18,8 @@ module.exports = {
         next: '/track'
     },
     '/need-csig': {
-        next: '../csig/'
+        fields: ['renominate'],
+        next: '/../user-contact'
     },
     '/send-book': {
       next: '../csig/'
