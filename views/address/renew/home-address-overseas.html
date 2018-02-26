@@ -8,25 +8,68 @@
 
 {{$content}}
 
-{{< hmpo-partials-form}}
-{{$form}}
+<!--<p>We've shortened your address so that it fits on an address label.
+<br>Check your address is still correct. You may need to edit it.</p>-->
+            <fieldset>
+                <legend class="visually-hidden">Home address</legend>
 
-      <p>This is the address we will post your passport to.</p>
-      {{#input-text-compound}}address1{{/input-text-compound}}
-      {{#input-text-compound}}address2{{/input-text-compound}}
-      {{#input-text-compound}}address3{{/input-text-compound}}
-      {{#input-text-compound}}address4{{/input-text-compound}}
-      {{#input-text}}address5{{/input-text}}
-      {{#input-text}}town{{/input-text}}
-      {{#input-text}}postcode{{/input-text}}
+                <div id="address-line-1-group" class="form-group form-group-compound">
+    <label for="address-line-1" class="form-label-bold">
+        Address<span class="visuallyhidden"> line 1</span>
+       <!-- <p class="form-hint" id="dob-hint">There is a limit of 40 characters in each line.</p>-->
 
-      <label for="state-title" class="form-label-bold">
-          Country
-      </label>
-      <p>{{values.application-country-label}}</p>
-    {{#input-submit}}{{/input-submit}}
-{{/form}}
-{{/ hmpo-partials-form}}
+
+    </label>
+    <input type="text" name="address-line-1" id="address-line-1" class="form-control form-control-3-4" aria-required="true" value="" maxlength="40"></div>
+
+                <div id="address-line-2-group" class="form-group form-group-compound">
+    <label for="address-line-2" class="visually-hidden">
+        Address line 2
+
+
+    </label>
+    <input type="text" name="address-line-2" id="address-line-2" class="form-control form-control-3-4" aria-required="false" value="" maxlength="40"></div>
+
+
+<br>
+
+                <div id="address-town-group" class="form-group">
+    <label for="address-town" class="form-label-bold">
+        Town or city
+
+
+    </label>
+    <input type="text" name="address-town" id="address-town" class="form-control" aria-required="true" value="" maxlength="30"></div>
+
+                    <div id="address-postcode-group" class="form-group">
+    <label for="address-postcode" class="form-label-bold">
+        Postcode
+
+
+    </label>
+    <input type="text" name="address-postcode" id="address-postcode" class="form-control input-code" aria-required="true" value=""></div>
+
+
+                <div id="address-town-group" class="form-group">
+    <label for="address-town" class="form-label-bold">
+        State/ province
+
+
+    </label>
+    <input type="text" name="address-town" id="address-town" class="form-control" aria-required="true" value="" maxlength="30"></div>
+
+
+                    <div class="form-group">
+                        <label class="form-label-bold">
+                            Country
+                        </label>
+                        Australia
+                    </div>
+            </fieldset>
+
+    <a href="./contact-details" class="button">Continue</a>
+
+</div>
 
 {{/content}}
 
