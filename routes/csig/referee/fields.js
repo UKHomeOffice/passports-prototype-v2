@@ -194,26 +194,7 @@ module.exports = {
       ],
       className: 'inline'
   },
-  'applicant-check-names': {
-      legend: {
-        value: '',
-        className: 'visuallyhidden'
-      },
-      options: [
-          { value: 'Yes', label: 'Yes' },
-          { value: 'No', label: 'No' },
-          { value: 'I don’t know', label: 'I don’t know'}
-      ],
-      validate: [
-        'required',
-        {
-          type:'equal',
-          arguments:['Yes'], /* if the arguments are NOT selected */
-          redirect:'/../referee/applicant-summary-name-address'
-        }
-      ],
-      className: 'inline'
-  },
+  
   'title':{
     legend: {
       value: 'Your title',
