@@ -194,7 +194,7 @@ module.exports = {
       ],
       className: 'inline'
   },
-  
+
   'title':{
     legend: {
       value: 'Your title',
