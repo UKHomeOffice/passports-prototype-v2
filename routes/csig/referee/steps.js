@@ -15,39 +15,27 @@ module.exports = {
     },
     '/home-address-select':{
         backLink: './name-address',
-        next: '/csig-identity-auth'
+        next: '/csig-identity-auth',
+        forks: [{
+          target: '/csig-identity-auth-fail',
+          condition: function(req, res) {
+            return req.session['hmpo-wizard-50']['address-postcode'].startsWith('N');
+          }
+        }],
     },
     '/home-address-manual':{
         backLink: './home-address-select'
-    },
-    '/home-address-filled':{
-        fields:['address1', 'address2', 'town', 'postcode'],
-        backLink: './home-address-select',
-        next: '/csig-identity-auth',
-        forks: [{
-          target: '/csig-bank-check',
-          condition: function(req, res) {
-            return req.session['hmpo-wizard-52']['identity-options'] == false;
-          }
-        }]
-    },
-    '/csig-bank-check': {
-        next: '/csig-identity-auth'
-    },
-    '/csig-address-check': {
-        next: '/csig-identity-auth',
-        forks: [{
-          target: '/csig-bank-check',
-          condition: function(req, res) {
-            return req.session['hmpo-wizard-52']['identity-options'] == false;
-          }
-        }],
     },
     '/csig-summary': {
         next: '/confirm-applicant'
     },
     '/csig-identity-auth': {
-        next: '/csig-identity-confirmed'
+        next: '/csig-identity-confirmed',
+    },
+    '/csig-identity-auth-fail': {
+        next: '/csig-identity-confirmed',
+    },
+    '/csig-identity-fail': {
     },
     '/csig-identity-confirmed': {
         next: '/confirm-applicant'
@@ -84,10 +72,6 @@ module.exports = {
         backLink: 'csig-details-work',
         next: '/csig-details-contact'
     },
-    // '/declaration': {
-    //     backLink:'csig-details-work',
-    //     next: '/confirmation'
-    // },
     '/confirmation': {
 
     },
