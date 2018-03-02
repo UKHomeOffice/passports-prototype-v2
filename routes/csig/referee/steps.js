@@ -54,7 +54,13 @@ module.exports = {
     },
     '/confirm-applicant': {
         fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime'],
-        next: '/confirm-applicant-address'
+        next: '/confirm-applicant-address',
+        forks: [{
+          target: '/applicant-summary',
+          condition: function(req, res) {
+            return req.session['hmpo-wizard-50']['knowntime'] < 2;
+          }
+        }]
     },
     '/confirm-applicant-address': {
         fields: ['applicant-check-home-address'],
@@ -92,7 +98,7 @@ module.exports = {
 
     },
     '/applicant-summary': {
-      backLink: 'confirm-applicant-address'
+      backLink: 'confirm-applicant'
     },
     '/applicant-summary-name-address': {
       backLink: 'confirm-applicant-address'

@@ -110,21 +110,22 @@ module.exports = {
       ]
   },
   'applicant-check': {
+      className: 'inline',
       legend: {
-          className: 'form-label-bold'
+          className: 'visuallyhidden'
       },
       options: [
-        { value: true, label: 'Yes', toggle: 'declarations', child: 'select' },
-        { value: false, label: 'No', toggle: 'declarations-2', child: 'select'}
+        { value: true, label: 'Yes' },
+        { value: false, label: 'No' }
       ],
       formatter: ['boolean'],
       validate: [
         'required',
-        {
-          type:'equal',
-          arguments:[true], /* if the arguments are NOT selected */
-          redirect:'/../referee/applicant-not-applicant'
-        }
+        // {
+        //   type:'equal',
+        //   arguments:[true], /* if the arguments are NOT selected */
+        //   redirect:'/../referee/applicant-not-applicant'
+        // }
       ],
   },
   'applicant-check-friend': {
@@ -132,6 +133,10 @@ module.exports = {
           { value: 'Yes', label: 'Yes' },
           { value: 'No', label: 'No' }
       ],
+      className: 'inline',
+      legend: {
+          className: 'visuallyhidden'
+      },
       validate: [
         'required',
         {
@@ -140,16 +145,20 @@ module.exports = {
           redirect:'/../referee/applicant-summary'
         }
       ],
-      dependent: {
-        field: 'applicant-check',
-        value: true
-      },
+      // dependent: {
+      //   field: 'applicant-check',
+      //   value: true
+      // },
   },
   'applicant-check-address': {
       options: [
           { value: 'Yes', label: 'Yes' },
           { value: 'No', label: 'No' }
       ],
+      className: 'inline',
+      legend: {
+          className: 'visuallyhidden'
+      },
       validate: [
         'required',
         {
@@ -158,21 +167,22 @@ module.exports = {
           redirect:'/../referee/applicant-summary'
         }
       ],
-      dependent: {
-        field: 'applicant-check',
-        value: true
-      },
+      // dependent: {
+      //   field: 'applicant-check',
+      //   value: true
+      // },
   },
   'knowntime': {
+      labelClassName: 'visuallyhidden',
       hint: 'We use this for stuff and nonsense',
       validate:[
           'numeric',
           'required'
       ],
-      dependent: {
-        field: 'applicant-check',
-        value: true
-      },
+      // dependent: {
+      //   field: 'applicant-check',
+      //   value: true
+      // },
   },
   'applicant-check-home-address': {
       legend: {
