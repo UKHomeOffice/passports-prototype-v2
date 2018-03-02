@@ -25,9 +25,11 @@
         <label for="address-postcode" class="form-label-bold">
           Postcode
         </label>
-        <input type="text" name="address-postcode" id="address-postcode" class="form-control input-code" aria-required="true">
+        {{#input-text}}address-postcode{{/input-text}}
       </div>
       {{#input-submit}}{{/input-submit}}
+      <br>
+      <a href="./csig-summary">Fail MI check</a>
     {{/form}}
 {{/ hmpo-partials-form}}
 

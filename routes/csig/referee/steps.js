@@ -14,7 +14,7 @@ module.exports = {
         backLink: './name-address'
     },
     '/home-address-select':{
-        backLink: './home-address-postcode',
+        backLink: './name-address',
         next: '/csig-identity-auth'
     },
     '/home-address-manual':{

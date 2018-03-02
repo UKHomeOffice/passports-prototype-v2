@@ -261,6 +261,7 @@ module.exports = {
         ]
   },
   'address-postcode': {
+      className: 'input-code',
       labelClassName: 'visuallyhidden',
       validate: [
           'required'
