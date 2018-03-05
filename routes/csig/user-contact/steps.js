@@ -16,6 +16,9 @@ module.exports = {
     '/tracking-waiting-renominate': {
         next: '/track'
     },
+    '/tracking-waiting-renominate-anytime': {
+        next: '/track'
+    },
     '/email-confirmation': {
 
     }

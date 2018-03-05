@@ -8,7 +8,13 @@ module.exports = {
     '/name-address': {
         fields: ['name', 'lastname', 'address-postcode'],
         backLink: './',
-        next: '/home-address-select'
+        next: '/home-address-select',
+        forks: [{
+          target: '/csig-identity-auth-fail',
+          condition: function(req, res) {
+            return req.session['hmpo-wizard-50']['passport-number'].startsWith('FAIL');
+          }
+        }],
     },
     '/home-address-postcode':{
         backLink: './name-address'
@@ -19,7 +25,7 @@ module.exports = {
         forks: [{
           target: '/csig-identity-auth-fail',
           condition: function(req, res) {
-            return req.session['hmpo-wizard-50']['address-postcode'].startsWith('N');
+            return req.session['hmpo-wizard-50']['address-postcode'].startsWith('FAIL');
           }
         }],
     },
@@ -41,14 +47,9 @@ module.exports = {
         next: '/confirm-applicant'
     },
     '/confirm-applicant': {
-        fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime'],
-        next: '/confirm-applicant-address',
-        forks: [{
-          target: '/applicant-summary',
-          condition: function(req, res) {
-            return req.session['hmpo-wizard-50']['knowntime'] < 2;
-          }
-        }]
+      fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime'],
+      next: '/confirm-applicant-address',
+      controller: require('../../../controllers/check-csig')
     },
     '/confirm-applicant-address': {
         fields: ['applicant-check-home-address'],
