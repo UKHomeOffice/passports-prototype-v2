@@ -1,0 +1,45 @@
+{{< layout}}
+
+{{$pageTitle}}Track a passport application{{/pageTitle}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+  <header class="update-notice" style="background: #DEE0E2; color: #0B0C0C">
+    <h1>Waiting for your identity<br> to be confirmed</h1>
+    Email was sent to test@thundercats.com
+  </header>
+
+  <p>We can't print your new passport until your identity is confirmed.</p>
+  <input type="hidden" name="renominate" id="renominate" value="true">
+
+  <p>If you need to, you can <a href="/csig/user-contact/">ask someone else to do this</a>.</p>
+
+  <hr>
+  <h2>Application history</h2>
+  <article>
+  <table>
+      <tbody>
+        
+        <tr>
+          <td>Email sent to {{values.csig-email}}</td>
+          <td>2:30pm on 21 February 2018</td>
+        </tr>
+        <tr>
+          <td>Application received</td>
+          <td>10:05am on 19 February 2018</td>
+        </tr>
+        <tr>
+          <td>Application submitted</td>
+          <td>10:03am on 19 February 2018</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <a href="/csig">Sign out</a>
+    {{/form}}
+{{/ hmpo-partials-form}}
+{{/content}}
+
+
+{{/ layout}}
