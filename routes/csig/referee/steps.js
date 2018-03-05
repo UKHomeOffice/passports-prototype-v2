@@ -8,13 +8,7 @@ module.exports = {
     '/name-address': {
         fields: ['name', 'lastname', 'address-postcode'],
         backLink: './',
-        next: '/home-address-select',
-        forks: [{
-          target: '/csig-identity-auth-fail',
-          condition: function(req, res) {
-            return req.session['hmpo-wizard-50']['passport-number'].startsWith('FAIL');
-          }
-        }],
+        next: '/home-address-select'
     },
     '/home-address-postcode':{
         backLink: './name-address'
@@ -25,7 +19,7 @@ module.exports = {
         forks: [{
           target: '/csig-identity-auth-fail',
           condition: function(req, res) {
-            return req.session['hmpo-wizard-50']['address-postcode'].startsWith('FAIL');
+            return req.session['hmpo-wizard-50']['address-postcode'].startsWith('NG1');
           }
         }],
     },
@@ -62,7 +56,7 @@ module.exports = {
     },
     '/csig-details-work': {
         fields: ['profession', 'retired' ],
-        backLink:'confirm-applicant',
+        backLink:'confirm-applicant-address',
         next: '/csig-details-contact'
     },
     '/csig-details-contact': {
