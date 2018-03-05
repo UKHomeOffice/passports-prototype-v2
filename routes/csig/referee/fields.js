@@ -115,18 +115,12 @@ module.exports = {
           className: 'visuallyhidden'
       },
       options: [
-        { value: true, label: 'Yes' },
-        { value: false, label: 'No' }
+        { value: 'Yes', label: 'Yes' },
+        { value: 'No', label: 'No' }
       ],
-      formatter: ['boolean'],
       validate: [
-        'required',
-        // {
-        //   type:'equal',
-        //   arguments:[true], /* if the arguments are NOT selected */
-        //   redirect:'/../referee/applicant-not-applicant'
-        // }
-      ],
+        'required'
+      ]
   },
   'applicant-check-friend': {
       options: [
@@ -144,11 +138,7 @@ module.exports = {
           arguments:['Yes'], /* if the arguments are NOT selected */
           redirect:'/../referee/applicant-summary'
         }
-      ],
-      // dependent: {
-      //   field: 'applicant-check',
-      //   value: true
-      // },
+      ]
   },
   'applicant-check-address': {
       options: [
@@ -166,11 +156,7 @@ module.exports = {
           arguments:['No'],
           redirect:'/../referee/applicant-summary'
         }
-      ],
-      // dependent: {
-      //   field: 'applicant-check',
-      //   value: true
-      // },
+      ]
   },
   'knowntime': {
       labelClassName: 'visuallyhidden',
@@ -178,11 +164,7 @@ module.exports = {
       validate:[
           'numeric',
           'required'
-      ],
-      // dependent: {
-      //   field: 'applicant-check',
-      //   value: true
-      // },
+      ]
   },
   'applicant-check-home-address': {
       legend: {
