@@ -115,8 +115,8 @@ module.exports = {
           className: 'visuallyhidden'
       },
       options: [
-        { value: 'Yes', label: 'Yes' },
-        { value: 'No', label: 'No' }
+        { value: 'Yes', label: 'Yes', toggle: 'declarations' },
+        { value: 'No', label: 'No', toggle: 'declarations' }
       ],
       validate: [
         'required'
