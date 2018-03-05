@@ -18,6 +18,9 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
 			if (req.session['hmpo-wizard-common']['renominate'] == 'true') {
 				return res.redirect('tracking-waiting-renominate')
 			}
+			if (req.session['hmpo-wizard-common']['renominate'] == 'anytime') {
+				return res.redirect('tracking-waiting-renominate-anytime')
+			}
 		}
 
     Base.prototype.successHandler.call(this, req, res, callback);

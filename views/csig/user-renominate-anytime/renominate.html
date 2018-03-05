@@ -11,16 +11,16 @@
   </header>
 
   <p>We can't print your new passport until your identity is confirmed.</p>
-  <input type="hidden" name="renominate" id="renominate" value="true">
+  <input type="hidden" name="renominate" id="renominate" value="anytime">
 
-  <p>If you need to, you can <a href="/csig/user-contact/">ask someone else to do this</a>.</p>
-
+  <p>If you need to, you can ask someone else to do this</p>
+  {{#input-submit}}{{/input-submit}}
   <hr>
   <h2>Application history</h2>
   <article>
   <table>
       <tbody>
-        
+
         <tr>
           <td>Email sent to {{values.csig-email}}</td>
           <td>2:30pm on 21 February 2018</td>
