@@ -1,9 +1,13 @@
 module.exports = {
     '/': {
-        next: '/declaration'
+        next: '/csig-intro'
+    },
+    '/csig-intro': {
+      backLink: './',
+      next: './declaration',
     },
     '/declaration': {
-      backLink: './',
+      backLink: './csig-intro',
       next: '/applicant-info'
     },
     '/applicant-info': {
