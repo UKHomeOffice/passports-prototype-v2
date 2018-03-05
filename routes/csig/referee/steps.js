@@ -6,7 +6,7 @@ module.exports = {
         controller: require('../../../controllers/csig-email')
     },
     '/name-address': {
-        fields: ['name', 'lastname'],
+        fields: ['name', 'lastname', 'address-postcode'],
         backLink: './',
         next: '/home-address-select'
     },
@@ -14,47 +14,41 @@ module.exports = {
         backLink: './name-address'
     },
     '/home-address-select':{
-        backLink: './home-address-postcode',
-        next: '/csig-identity-auth'
+        backLink: './name-address',
+        next: '/csig-identity-auth',
+        forks: [{
+          target: '/csig-identity-auth-fail',
+          condition: function(req, res) {
+            return req.session['hmpo-wizard-50']['address-postcode'].startsWith('N');
+          }
+        }],
     },
     '/home-address-manual':{
         backLink: './home-address-select'
-    },
-    '/home-address-filled':{
-        fields:['address1', 'address2', 'town', 'postcode'],
-        backLink: './home-address-select',
-        next: '/csig-identity-auth',
-        forks: [{
-          target: '/csig-bank-check',
-          condition: function(req, res) {
-            return req.session['hmpo-wizard-52']['identity-options'] == false;
-          }
-        }]
-    },
-    '/csig-bank-check': {
-        next: '/csig-identity-auth'
-    },
-    '/csig-address-check': {
-        next: '/csig-identity-auth',
-        forks: [{
-          target: '/csig-bank-check',
-          condition: function(req, res) {
-            return req.session['hmpo-wizard-52']['identity-options'] == false;
-          }
-        }],
     },
     '/csig-summary': {
         next: '/confirm-applicant'
     },
     '/csig-identity-auth': {
-        next: '/csig-identity-confirmed'
+        next: '/csig-identity-confirmed',
+    },
+    '/csig-identity-auth-fail': {
+        next: '/csig-identity-confirmed',
+    },
+    '/csig-identity-fail': {
     },
     '/csig-identity-confirmed': {
         next: '/confirm-applicant'
     },
     '/confirm-applicant': {
         fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime'],
-        next: '/confirm-applicant-address'
+        next: '/confirm-applicant-address',
+        forks: [{
+          target: '/applicant-summary',
+          condition: function(req, res) {
+            return req.session['hmpo-wizard-50']['knowntime'] < 2;
+          }
+        }]
     },
     '/confirm-applicant-address': {
         fields: ['applicant-check-home-address'],
@@ -78,10 +72,6 @@ module.exports = {
         backLink: 'csig-details-work',
         next: '/csig-details-contact'
     },
-    // '/declaration': {
-    //     backLink:'csig-details-work',
-    //     next: '/confirmation'
-    // },
     '/confirmation': {
 
     },
@@ -92,7 +82,7 @@ module.exports = {
 
     },
     '/applicant-summary': {
-      backLink: 'confirm-applicant-address'
+      backLink: 'confirm-applicant'
     },
     '/applicant-summary-name-address': {
       backLink: 'confirm-applicant-address'

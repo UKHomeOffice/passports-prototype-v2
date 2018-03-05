@@ -77,7 +77,7 @@
       $('#applicant-check-names-Yes').click();
 
       $(':checkbox').click();
-      $('#applicant-check-Yes').click();
+      $('#applicant-check-true').click();
       $('#applicant-check-friend-Yes').click();
       $('#applicant-check-address-No').click();
       $('#retired-check-No').click();
