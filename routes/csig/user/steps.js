@@ -21,6 +21,9 @@ module.exports = {
         fields: ['renominate'],
         next: '/../user-contact'
     },
+    '/need-csig-complete': {
+        next: '/../user-contact'
+    },
     '/send-book': {
       next: '../csig/'
     }
