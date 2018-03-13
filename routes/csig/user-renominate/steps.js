@@ -19,5 +19,11 @@ module.exports = {
       backLink: 'track-postcode',
       next: '/../user-contact/',
       controller: require('../../../controllers/csig-email-pre'),
+    },
+    '/renominate-complete': {
+      fields: ['renominate'],
+      backLink: 'track-postcode',
+      next: '/../user-contact/',
+      controller: require('../../../controllers/csig-email-pre'),
     }
 };

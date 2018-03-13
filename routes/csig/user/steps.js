@@ -22,6 +22,7 @@ module.exports = {
         next: '/../user-contact'
     },
     '/need-csig-complete': {
+        fields: ['renominate'],
         next: '/../user-contact'
     },
     '/send-book': {
