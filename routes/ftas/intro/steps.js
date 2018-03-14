@@ -1,10 +1,10 @@
 module.exports = {
     '/': {
-        backLink: '/../change_of_name_180122/filter/uncancelled',
+        backLink: '/../ftas/filter/uncancelled',
         next: '/what-you-need'
     },
     '/before-you-continue-overseas': {
-        backLink: '/../change_of_name_180122/overseas/give-contact-details',
+        backLink: '/../ftas/overseas/give-contact-details',
         next: '/what-you-need-overseas'
     },
     '/what-you-need': {

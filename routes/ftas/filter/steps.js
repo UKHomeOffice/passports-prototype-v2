@@ -2,7 +2,7 @@ module.exports = {
     '/': {
       fields: ['expiry-year', 'expiry-month', 'expiry-day'],
       backLink: '../filter-common/dob',
-      next: '/passport-damaged'
+      next: '/uncancelled'
     },
     '/passport-damaged': {
       fields: ['passport-damaged'],
@@ -12,7 +12,7 @@ module.exports = {
     '/uncancelled': {
         controller: require('../../../controllers/go-overseas'),
         fields: ['uncancelled'],
-        backLink: './passport-damaged',
+        backLink: './',
         next: '/../intro',
         forks: [{
             target: '/dual-national',
