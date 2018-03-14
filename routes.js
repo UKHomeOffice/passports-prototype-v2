@@ -62,6 +62,37 @@ app.use('/12_15s/photo-code', require('./routes/12_15s/photo-code'));
 app.use('/12_15s/mismatch', require('./routes/12_15s/mismatch'));
 app.use('/12_15s/redirect-tracking', require('./routes/12_15s/redirect-tracking'));
 
+// FTAs
+app.use('/ftas/overseas', require('./routes/ftas/overseas'));
+app.use('/ftas/overseas-not-eligible', require('./routes/ftas/overseas-not-eligible'));
+app.use('/ftas/overseas-first', require('./routes/ftas/overseas-first'));
+app.use('/ftas/overseas-lost-change', require('./routes/ftas/overseas-lost-change'));
+app.use('/ftas/uploadphoto', require('./routes/ftas/uploadphoto'));
+app.use('/ftas/filter-common', require('./routes/ftas/filter-common'));
+app.use('/ftas/renew', require('./routes/ftas/renew'));
+app.use('/ftas/intro', require('./routes/ftas/intro'));
+app.use('/ftas/filter', require('./routes/ftas/filter'));
+app.use('/ftas/startpage', require('./routes/ftas/startpage'));
+app.use('/ftas/startpage-overseas', require('./routes/ftas/startpage-overseas'));
+app.use('/ftas/photoguide-short', require('./routes/ftas/photoguide-short'));
+app.use('/ftas/photoguide-static', require('./routes/ftas/photoguide-static'));
+app.use('/ftas/photoguide-shop', require('./routes/ftas/photoguide-shop'));
+app.use('/ftas/takephoto', require('./routes/ftas/takephoto'));
+app.use('/ftas/upload', require('./routes/ftas/upload'));
+app.use('/ftas/rejectedphoto', require('./routes/ftas/rejectedphoto'));
+app.use('/ftas/filter-common-temp', require('./routes/ftas/filter-common-temp'));
+app.use('/ftas/startpage-temp', require('./routes/ftas/startpage-temp'));
+app.use('/ftas/overseas-not-available', require('./routes/ftas/overseas-not-available'));
+app.use('/ftas/throttle', require('./routes/ftas/throttle'));
+app.use('/ftas/payment', require('./routes/ftas/payment'));
+app.use('/ftas/submission-failed', require('./routes/ftas/submission-failed'));
+app.use('/ftas/sar', require('./routes/ftas/sar'));
+app.use('/ftas/photo-url', require('./routes/ftas/photo-url'));
+app.use('/ftas/photo-code', require('./routes/ftas/photo-code'));
+app.use('/ftas/mismatch', require('./routes/ftas/mismatch'));
+app.use('/ftas/redirect-tracking', require('./routes/ftas/redirect-tracking'));
+
+
 //csig
 app.use('/csig/user', require('./routes/csig/user'));
 app.use('/csig/user-send-book', require('./routes/csig/user-send-book'));

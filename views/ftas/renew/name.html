@@ -1,0 +1,59 @@
+{{< layout}}
+
+{{$pageTitle}}New passport details{{/pageTitle}}
+
+{{$header}}
+    <h1>New passport details</h1>
+{{/header}}
+{{$content}}
+{{< hmpo-partials-form}}
+{{$form}}
+<fieldset class="inline">
+    <h2>Title</h2>
+    {{#radio-group}}title{{/radio-group}}
+    <div id="other-titles" class="reveal js-hidden">
+        <div class="panel panel-border-narrow">
+          <div id="other-title-group" class="form-group">
+              <label for="other-title" class="form-label-bold">
+                  Other title
+              </label>
+              <input type="text" name="other-title" id="other-title" class="form-control" aria-required="true" maxlength="20">
+                 <p><p>If you want to add a new professional or honourary title to your passport you need to <a href="https://passportapplication.service.gov.uk/ips-olc/" target='blank'>apply in a different way.</a></p>
+                 <!-- check it is only professional and hnonourary titles -->
+          </div>
+        </div>
+    </div>
+</fieldset>
+<br/>
+    {{#input-text}}name{{/input-text}}
+    {{#input-text}}lastname{{/input-text}}
+
+    <!--<details class="">
+        <summary><span class="summary">My name won’t fit in the boxes</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>Shorten your name in the way you want it shown in your passport. We’ll add a note showing your full name on the observation page in your passport.</p>
+        </div>
+    </details>-->
+    <br>
+
+    <fieldset>
+        <legend><span class="form-label-bold">Did you use this name on your old passport?</span></legend>
+        {{#radio-group}}change-name{{/radio-group}}
+    </fieldset>
+
+    <div id="note-regarding-name-change" class="reveal js-hidden">
+        <div class="panel panel-border-narrow">
+            <p>You’ll need to send extra documents to prove your change of name.</p>
+        </div>
+    </div>
+
+    <!-- {{#radio-group}}previous-name{{/radio-group}} -->
+    {{#input-submit}}{{/input-submit}}
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+
+{{/ layout}}
