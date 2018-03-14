@@ -1,0 +1,80 @@
+{{< layout}}
+
+{{$pageTitle}}Track your application{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Track your application</h1>
+{{/header}}
+
+{{$content}}
+<h2>Which application reference number do you have?</h2>
+<h2>What does your reference number start with?</h2>
+<span id="previous-name-hint" class="form-hint">You'll find this in your confirmation email</span>
+
+
+
+{{< hmpo-partials-form}}
+    {{$form}}
+    <fieldset>
+      <label for="yes" class="block-label selected">
+            <input type="radio" name="title" id="yes" value="Other" aria-required="true" data-toggle="yes-title" aria-controls="yes-title" aria-expanded="true">
+            PEX
+      </label>
+
+<!-- PEX Reveal -->
+        <div id="yes-title" class="reveal" aria-hidden="false">
+            <div class="panel panel-border-narrow">
+          <div id="other-title-group" class="form-group">
+              <label for="other-title" class="form-label-bold">
+                  Enter your number
+              </label>
+               <span id="reference-prefix" class="prefix" style="margin-right:5px">PEX</span><input type="text" name="other-title" id="other-title" class="form-control" aria-required="true" maxlength="20">
+          </div>
+        </div>
+        </div>
+
+
+
+
+        <label for="no" class="block-label selected">
+              <input type="radio" name="title" id="no" value="Other" aria-required="true" data-toggle="no-title" aria-controls="no-title" aria-expanded="true">
+              POD
+        </label>
+
+
+
+ <!-- POD Reveal -->
+        <div id="no-title" class="reveal" aria-hidden="false">
+            <div class="panel panel-border-narrow">
+          <div id="other-title-group" class="form-group">
+              <label for="other-title" class="form-label-bold">
+                  Enter your number
+              </label>
+              <span id="reference-prefix" class="prefix" style="margin-right:5px">POD</span><input type="text" name="other-title" id="other-title" class="form-control" aria-required="true" maxlength="20">
+          </div>
+        </div>
+        </div>
+
+    </fieldset><br/>
+
+
+    <details>
+              <summary><span class="summary">My number doesn't start with PEX or POD</span></summary>
+              <div class="panel panel-border-narrow">
+                <p>You need to track your application a <a href="/">different way</a>.</p>
+                If you can't find your reference contact HM Passport Office.
+              </div>
+          </details>
+
+
+    {{#input-submit}}{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+
+{{/content}}
+
+{{/ layout}}
