@@ -45,6 +45,10 @@ module.exports = {
       next: '/confirm-applicant-address',
       controller: require('../../../controllers/check-csig')
     },
+    '/applicant-photo-fail': {
+      backLink: './confirm-applicant',
+      next: '/confirm-applicant-address'
+    },
     '/confirm-applicant-address': {
         fields: ['applicant-check-home-address'],
         next: '/csig-details-work'
