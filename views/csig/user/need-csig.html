@@ -3,32 +3,30 @@
 {{$pageTitle}}Track a passport application{{/pageTitle}}
 
 {{$content}}
+<h1>Track your passport application</h1>
 {{< hmpo-partials-form}}
     {{$form}}
-  <header class="update-notice" style="background: #DEE0E2; color: #0B0C0C">
-    <h1>You need to ask someone to<br>confirm your identity</h1>
-  </header>
-  <p>We can't print your new passport until your identity is confirmed.</p>
   <input type="hidden" name="renominate" id="renominate" value="false">
-  {{#input-submit}}{{/input-submit}}
-  <h2>Application history</h2>
-  <article>
-  <table>
-      <tbody>
-        <tr>
-          <td>Ask someone to confirm your identity</td>
-          <td>10:05am on 21 February 2018</td>
-        </tr>
-        <tr>
-          <td>Application received</td>
-          <td>10:05am on 19 February 2018</td>
-        </tr>
-        <tr>
-          <td>Application submitted</td>
-          <td>10:03am on 19 February 2018</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="timeline">
+      <ul>
+        <li class="action_needed">
+          <h2>Ask someone to confirm your identity</h2>
+          <p class="time">21 February 2018 10:05am</p>
+          <p>Your old passport is damaged. We can't print your new passport until your identity is confirmed.</p>
+          {{#input-submit}}{{/input-submit}}
+        </li>
+        <li>
+          <h2>Application received</h2>
+          <p class="time">19 February 2018 10:05am</p>
+        </li>
+        </li>
+        <li>
+          <h2>Application submitted</h2>
+          <p class="time">19 February 2018 10:03am</p>
+        </li>
+      </ul>
+    </div>
+
     <br>
     <a href="http://www.gov.uk">Sign out</a>
     {{/form}}
