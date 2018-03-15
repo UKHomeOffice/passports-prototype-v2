@@ -19,7 +19,7 @@ module.exports = {
         forks: [{
           target: '/csig-identity-auth-fail',
           condition: function(req, res) {
-            return req.session['hmpo-wizard-50']['address-postcode'].startsWith('NG1');
+            return req.session['hmpo-wizard-common']['address-postcode'].startsWith('NG1');
           }
         }],
     },

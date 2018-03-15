@@ -10,13 +10,13 @@ util.inherits(Controller, Base)
 Controller.prototype.successHandler = function successHandler(req, res, callback) {
 		console.log(req.session)
 
-  	if (req.session['hmpo-wizard-50']['knowntime'] < 2) {
+  	if (req.session['hmpo-wizard-common']['knowntime'] < 2) {
 			return res.redirect('./applicant-summary')
 		};
 
-		if (req.session['hmpo-wizard-50']['applicant-check'] == "No") {
-			return res.redirect('./applicant-photo-fail')
-		};
+		// if (req.session['hmpo-wizard-74']['applicant-check'] == false) {
+		// 	return res.redirect('./applicant-photo-fail')
+		// };
 
     Base.prototype.successHandler.call(this, req, res, callback);
 };
