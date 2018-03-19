@@ -1,22 +1,48 @@
-
 {{< layout}}
 
 {{$pageTitle}}Track a passport application{{/pageTitle}}
 
 {{$content}}
+<h1>Track your passport application</h1>
+<h2>Reference: PEX7381672568</h2>
 {{< hmpo-partials-form}}
     {{$form}}
-  <header class="update-notice" style="background: #DEE0E2; color: #0B0C0C">
-    <h1>Waiting for your identity<br> to be confirmed</h1>
-    <!-- Email sent to {{values.csig-email}} -->
-  </header>
 
-  <p>We can't print your new passport until your identity is confirmed. You need to remind the person confirming your identity to go online and do it.</p>
   <input type="hidden" name="renominate" id="renominate" value="anytime">
 
-  <p>If you need to, you can <a href="/csig/user-contact/" id="someone-else">ask someone else to do this</a>.</p>
-  <hr>
-  <h2>Application history</h2>
+  <div class="timeline">
+      <ul>
+        <li class="action_needed">
+          <h2>Waiting for your identity to be confirmed</h2>
+          <p class="time">1 March 2018 5:20pm</p>
+          <p>Email sent to {{values.csig-email}}<br>
+          You need to remind {{values.csig-name}} or <a href="/csig/user-contact/" id="someone-else">ask someone else</a>.</p>
+        </li>
+        <li>
+          <h2>C Moore not eligible</h2>
+          <p class="time">27 February 2018 7:30pm</p>
+        </li>
+        <li>
+          <h2>Email sent to {{values.csig-email-old}}</h2>
+          <p class="time">21 February 2018 2:30pm</p>
+        </li>
+        <li>
+          <h2>Ask someone to confirm your identity</h2>
+          <p class="time">21 February 2018 10:05am</p>
+        </li>
+        <li>
+          <h2>Application received</h2>
+          <p class="time">19 February 2018 10:05am</p>
+        </li>
+        </li>
+        <li>
+          <h2>Application submitted</h2>
+          <p class="time">19 February 2018 10:03am</p>
+        </li>
+      </ul>
+    </div>
+
+  <!-- <h2>Application history</h2>
   <article>
 
     <table>
@@ -49,7 +75,7 @@
        </tbody>
      </table>
 
-  </article>
+  </article> -->
   <br>
     <a href="/csig">Sign out</a>
     <input type="submit" value="Continue" id="submit-hidden" class="button visuallyhidden">
