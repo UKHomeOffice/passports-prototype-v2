@@ -1,4 +1,3 @@
-var _ = require('underscore');
 
 module.exports = {
   'pex-reference': {
@@ -161,6 +160,13 @@ module.exports = {
   'knowntime': {
       labelClassName: 'visuallyhidden',
       hint: 'We use this for stuff and nonsense',
+      validate:[
+          'numeric',
+          'required'
+      ]
+  },
+  'describe-photo': {
+      labelClassName: 'visuallyhidden',
       validate:[
           'numeric',
           'required'
