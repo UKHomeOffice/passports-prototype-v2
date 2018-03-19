@@ -7,13 +7,7 @@
 <h2>Reference: PEX7381672568</h2>
 {{< hmpo-partials-form}}
     {{$form}}
-  <!-- <header class="update-notice" style="background: #DEE0E2; color: #0B0C0C">
-    <h1>Ask someone else to confirm <br> your identity</h1>
-  </header>
-  <p>C Moore isn't eligible to do this for you. You need to ask someone else.</p>
-  <p>We can't print your new passport until your identity is confirmed.</p> -->
   <input type="hidden" name="renominate" id="renominate" value="true">
-
   <div class="timeline">
       <ul>
         <li class="action_needed">
@@ -23,7 +17,7 @@
           {{#input-submit}}{{/input-submit}}
         </li>
         <li>
-          <h2>Email sent to {{values.csig-email-old}}</h2>
+          <h2>Email sent to {{values.csig-email}}</h2>
           <p class="time">21 February 2018 2:30pm</p>
         </li>
         <li>
@@ -41,30 +35,6 @@
         </li>
       </ul>
     </div>
-  <!-- <table>
-      <tbody>
-        <tr>
-          <td>C Moore not eligible</td>
-          <td>7:30pm on 27 February 2018</td>
-        </tr>
-        <tr>
-          <td>Email sent to {{values.csig-email}}</td>
-          <td>2:30pm on 25 February 2018</td>
-        </tr>
-        <tr>
-            <td>Ask someone to confirm your identity</td>
-            <td>10:05am on 21 February 2018</td>
-          </tr>
-        <tr>
-          <td>Application received</td>
-          <td>10:05am on 19 February 2018</td>
-        </tr>
-        <tr>
-          <td>Application submitted</td>
-          <td>10:03am on 19 February 2018</td>
-        </tr>
-      </tbody>
-    </table> -->
     <br>
     <a href="/csig/user">Sign out</a>
     {{/form}}
