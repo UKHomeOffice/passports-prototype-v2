@@ -3,19 +3,45 @@
 {{$pageTitle}}Track a passport application{{/pageTitle}}
 
 {{$content}}
+<h1>Track your passport application</h1>
+<h2>Reference: PEX7381672568</h2>
 {{< hmpo-partials-form}}
     {{$form}}
-  <header class="update-notice" style="background: #DEE0E2; color: #0B0C0C">
+  <!-- <header class="update-notice" style="background: #DEE0E2; color: #0B0C0C">
     <h1>Ask someone else to confirm <br> your identity</h1>
   </header>
   <p>C Moore isn't eligible to do this for you. You need to ask someone else.</p>
-  <p>We can't print your new passport until your identity is confirmed.</p>
+  <p>We can't print your new passport until your identity is confirmed.</p> -->
   <input type="hidden" name="renominate" id="renominate" value="true">
-  {{#input-submit}}{{/input-submit}}
-  <hr>
-  <h2>Your application history</h2>
-  <article>
-  <table>
+
+  <div class="timeline">
+      <ul>
+        <li class="action_needed">
+          <h2>Ask someone else to confirm your identity</h2>
+          <p class="time">25 February 2018 4:30pm</p>
+          <p>{{values.csig-name}} isn't eligible to do this for you. You need to ask someone else.</p>
+          {{#input-submit}}{{/input-submit}}
+        </li>
+        <li>
+          <h2>Email sent to {{values.csig-email-old}}</h2>
+          <p class="time">21 February 2018 2:30pm</p>
+        </li>
+        <li>
+          <h2>Ask someone to confirm your identity</h2>
+          <p class="time">21 February 2018 10:05am</p>
+        </li>
+        <li>
+          <h2>Application received</h2>
+          <p class="time">19 February 2018 10:05am</p>
+        </li>
+        </li>
+        <li>
+          <h2>Application submitted</h2>
+          <p class="time">19 February 2018 10:03am</p>
+        </li>
+      </ul>
+    </div>
+  <!-- <table>
       <tbody>
         <tr>
           <td>C Moore not eligible</td>
@@ -38,9 +64,9 @@
           <td>10:03am on 19 February 2018</td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
     <br>
-    <a href="/csig">Sign out</a>
+    <a href="/csig/user">Sign out</a>
     {{/form}}
 {{/ hmpo-partials-form}}
 {{/content}}
