@@ -1,5 +1,9 @@
 module.exports = {
     '/': {
+        next: '/track',
+        fields: ['pex-reference']
+    },
+    '/index-alt': {
         next: '/track'
     },
     '/track-a-application': {

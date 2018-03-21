@@ -2,16 +2,19 @@ var _ = require('underscore');
 
 module.exports = {
   'pex-reference': {
-
-      legend: {
-          className: 'form-label-bold'
-      },
-
-      options: [
-          { value: 'Yes', label: 'PEX' },
-          { value: 'No', label: 'POD' }
-      ]
+  legend: {
+    value: 'Does your application start with PEX or POD?',
+    className: 'visuallyhidden'
   },
+  options: [
+    { value: true, label: 'Yes' },
+    { value: false, label: 'No' }
+  ]
+},
+
+
+
+
   'reference-no': {
       validate: [
           'required'
