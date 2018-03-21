@@ -10,9 +10,6 @@ module.exports = {
         backLink: './',
         next: '/home-address-select'
     },
-    '/home-address-postcode':{
-        backLink: './name-address'
-    },
     '/home-address-select':{
         backLink: './name-address',
         next: '/csig-identity-auth',
