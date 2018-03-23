@@ -2,19 +2,42 @@ module.exports = {
     '/':{
         backLink: '../uploadphoto/check-photo-and-submit',
         fields: ['passport-number'],
-        next: '/title'
+        next: '/name'
     },
     '/title':{
+        backLink: './',
         fields: ['title'],
         next: '/name'
     },
     '/name':{
+        backLink: '../renew',
         fields: [
+            'title',
             'name',
             'lastname',
-            'previous-name',
-            'previous-names'
+            'change-name'
         ],
+        next: '/previous-names',
+        forks: [{
+            target: '/change-of-name',
+            condition: {
+                field: 'change-name',
+                value: true
+            }
+        }]
+    },
+    '/change-of-name':{
+        backLink: 'name',
+        fields: ['change-of-name-reason'],
+        next: '/previous-names'
+    },
+    '/previous-names':{
+        fields: [
+                'previous-name',
+                'previous-first-name',
+                'previous-last-name'
+                 ],
+        backLink: 'name',
         next: '/gender'
     },
     '/gender':{
@@ -22,31 +45,11 @@ module.exports = {
         next: '/date-and-place-birth'
     },
     '/date-and-place-birth':{
-        next: '/parents-details',
-        fields:['age-day', 'age-month', 'age-year', 'born-in-uk', 'town-of-birth', 'country-of-birth'],
-    },
-    '/below-16':{
-      backLink: './date-and-place-birth',
-    },
-    '/parents-details':{
-        fields:['parent1-first-names','parent2-first-names'],
-        next: '/parent-1-details',
-    },
-    '/parent-1-details':{
-        fields:[],
-        //controller: require('../../../controllers/parents-details'),
-        next: '/parent-2-details',
-    },
-    '/parent-2-details':{
-        fields:['parent2-first-names'],
         next: '/home-address',
+        fields:['age-day', 'age-month', 'age-year', 'born-in-uk', 'town-of-birth', 'country-of-birth'],
         controller: require('../../../controllers/go-overseas'),
         nextAlt: './home-address-overseas'
-    },
-    '/parents-married':{
-        fields:[],
-        next: '/home-address',
-    },
+      },
     '/home-address-overseas':{
         fields:['address1', 'address2','address3','address4','address5', 'town', 'postcode'],
         next: '/contact-details-overseas'
@@ -69,17 +72,25 @@ module.exports = {
     '/get-updates':{
         next: '/passport-options'
     },
+    '/dual-national':{
+        backLink: './get-updates',
+    },
+    '/dual-national-details':{
+        backLink: 'dual-national',
+        next: '/title'
+    },
     '/passport-options-overseas':{
         fields: ['passport-options-overseas', 'braille'],
         next: '/sign'
     },
     '/passport-options':{
         fields: ['passport-options', 'braille'],
-        next: '/sign'
+        next: '/sign',
+        backLink: './dual-national'
     },
     '/sign': {
         fields: ['can-sign', 'no-sign-reason'],
-        backLink: './',
+        backLink: 'passport-options',
         next: '/passport-special-delivery', /* if they are from the UK */
         controller: require('../../../controllers/go-overseas'),
         nextAlt: './summary-overseas'
@@ -96,12 +107,35 @@ module.exports = {
     '/summary':{
         controller: require('../../../controllers/confirm'),
         template: 'confirm',
+        next: '/required-documents'
+    },
+    '/required-documents':{
+        controller: require('../../../controllers/change-of-name-docs')
+    },
+    '/name-change-docs':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-marriage':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-divorce':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-small-changes':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-gender-change':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-other-changes':{
         next: '/declaration'
     },
     '/declaration':{
+        prereqs: [ '/summary' ],
         next: '/payment'
     },
     '/payment':{
+        controller: require('../../../controllers/dual-national'),
         next: '/processing-payment'
     },
     '/processing-payment':{

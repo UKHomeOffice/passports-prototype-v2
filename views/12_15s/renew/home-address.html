@@ -3,7 +3,7 @@
 {{$pageTitle}}Home address{{/pageTitle}}
 
 {{$header}}
-    <h1>Home address</h1>
+    <h1>What is your home address?</h1>
 {{/header}}
 
 {{$content}}
@@ -11,7 +11,7 @@
 {{< hmpo-partials-form}}
 {{$form}}
 
-      <p>This is the address we'll send your new passport to. We'll also return your old passport to this address. They will arrive separately.</p>
+      <p>This is the address we’ll send your new passport to. We’ll also return your old passport and any extra documents to this address.</p>
       {{#input-text-compound}}address1{{/input-text-compound}}
       {{#input-text-compound}}address2{{/input-text-compound}}
       {{#input-text-compound}}address3{{/input-text-compound}}
@@ -23,6 +23,14 @@
       {{#input-text}}postcode{{/input-text}}
 
     {{#input-submit}}{{/input-submit}}
+
+    <details role="group" class="">
+            <summary role="button" aria-controls="details-content-0" aria-expanded="false"><span class="summary">I live outside the UK</span></summary>
+            <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+                <p>You’ll need to use <a href="https://www.gov.uk/overseas-passports">another service</a> to renew your passport.</p>
+            </div>
+        </details>
+        
 {{/form}}
 {{/ hmpo-partials-form}}
 
