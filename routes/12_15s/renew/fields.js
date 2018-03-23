@@ -55,11 +55,11 @@ module.exports = {
     options: [
       {
         value: true,
-        label: 'I understand and will sign my passport',
+        label: 'I’ll tell the passport holder to sign their passport',
       },
       {
         value: false,
-        label: 'I can’t sign my name',
+        label: 'They can’t physically sign their name',
         toggle: 'no-sign'
       }
     ]
@@ -287,6 +287,7 @@ module.exports = {
     ]
   },
   'mobile': {
+    labelClassName: 'visuallyhidden',
     validate: [
         'numeric',
         'required'
@@ -304,8 +305,8 @@ module.exports = {
       value: 'Passport size'
     },
     options: [
-      {value: '32', label: 'Standard adult 32-page passport (£72.50)'},
-      {value: '48', label: 'Jumbo adult 48-page passport (£85.50)'}
+      {value: '32', label: 'Standard 32-page passport (£72.50)'},
+      {value: '48', label: 'Jumbo 48-page passport (£85.50)'}
     ],
     validate: [
       'required'
