@@ -298,7 +298,7 @@
           "required": "Is this Susan Smith?"
         },
         "contact-csig": {
-          "required": "You need to contact the person"
+          "required": "You need to contact this person before we send them an email."
          },
         "application-country": {
           "required": "You must answer this question"
