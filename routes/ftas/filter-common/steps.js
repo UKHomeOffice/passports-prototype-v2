@@ -3,7 +3,7 @@ module.exports = {
       fields: ['apply-uk', 'application-country'],
       controller: require('../../../controllers/go-overseas'),
       backLink: '/../ftas/startpage',
-      next: '/dob', /* if Yes is selected */
+      next: '/first-uk', /* if Yes is selected */
       nextAlt: 'what-do-you-want-to-do-overseas', /* if they are from Germany/France */
       nextAltAlt:'what-do-you-want-to-do-overseas',/* if they are from Afganistan */
       nextAltAltAlt:'what-do-you-want-to-do-overseas', /* if they are from Spain - first hidden as renewal */
@@ -11,8 +11,7 @@ module.exports = {
     },
     '/first-uk': {
         backLink: './',
-        fields: ['passport-before'],
-        next: '/lost-stolen'
+        next: '/dob'
     },
     '/lost-stolen': {
         fields: ['lost-stolen'],
@@ -47,7 +46,7 @@ module.exports = {
     '/dob': {
       fields: ['16-or-older'],
       controller: require('../../../controllers/go-overseas'),
-      backLink: './',
-      next: '/../filter', /* if they are from the UK */
+      backLink: './first-uk',
+      next: '/../filter/uncancelled', /* if they are from the UK */
     }
 };

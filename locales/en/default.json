@@ -47,7 +47,7 @@
         },
         "town-of-birth": {
             "label": "Town of birth",
-            "hint": "As written on your old passport"
+            "hint": "As written on your birth, naturalisation or registration certificate"
         },
         "country-of-birth": {
             "label": "Country of birth"

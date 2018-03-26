@@ -14,17 +14,9 @@ module.exports = {
         fields: [
             'title',
             'name',
-            'lastname',
-            'change-name'
+            'lastname'
         ],
-        next: '/previous-names',
-        forks: [{
-            target: '/change-of-name',
-            condition: {
-                field: 'change-name',
-                value: true
-            }
-        }]
+        next: '/previous-names'
     },
     '/change-of-name':{
         backLink: 'name',
