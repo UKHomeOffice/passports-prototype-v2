@@ -99,27 +99,10 @@ module.exports = {
     '/summary':{
         controller: require('../../../controllers/confirm'),
         template: 'confirm',
-        next: '/required-documents'
+        next: '/fta-docs'
     },
-    '/required-documents':{
-        controller: require('../../../controllers/change-of-name-docs')
-    },
-    '/name-change-docs':{
-        next: '/declaration'
-    },
-    '/name-change-docs-for-marriage':{
-        next: '/declaration'
-    },
-    '/name-change-docs-for-divorce':{
-        next: '/declaration'
-    },
-    '/name-change-docs-for-small-changes':{
-        next: '/declaration'
-    },
-    '/name-change-docs-for-gender-change':{
-        next: '/declaration'
-    },
-    '/name-change-docs-for-other-changes':{
+    '/fta-docs':{
+        backLink: 'summary',
         next: '/declaration'
     },
     '/declaration':{

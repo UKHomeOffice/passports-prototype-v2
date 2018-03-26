@@ -10,18 +10,8 @@ module.exports = {
         next: '/uncancelled' /* if No is selected */
     },
     '/uncancelled': {
-        controller: require('../../../controllers/go-overseas'),
-        fields: ['uncancelled'],
         backLink: './',
-        next: '/../intro',
-        forks: [{
-            target: '/dual-national',
-            condition: {
-                field: 'uncancelled',
-                value: true
-            }
-        }],
-        nextAlt: '../overseas'
+        next: '/../intro'
     },
     '/dual-national': {
       backLink: './uncancelled',
