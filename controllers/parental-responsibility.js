@@ -9,10 +9,10 @@ util.inherits(Controller, Base)
 
 Controller.prototype.successHandler = function successHandler(req, res, callback) {
 
-    if (req.session['hmpo-wizard-common']['16-or-older'] == false) {
+    if (req.session['hmpo-wizard-common']['parental-responsibility'] == false) {
         return res.redirect(this.options.nextAlt);
     }
-    if (req.session['hmpo-wizard-common']['relationship-applicant'] != "Other") {
+    if (req.session['hmpo-wizard-common']['relationship-applicant'] == "Other") {
         return res.redirect(this.options.nextAltAlt);
     }
 

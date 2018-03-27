@@ -70,7 +70,7 @@
       //change name
       $('#change-name-true').click();
       $('#change-of-name-reason-Marriage-or-civil-partnership').click();
-      $('#16-or-older-true').click();
+      $('#16-or-older-false').click();
 
       //csig
       $('#applicant-check-home-address-Yes').click();

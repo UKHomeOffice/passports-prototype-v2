@@ -105,13 +105,9 @@ module.exports = {
       fields: ['parental-responsibility'],
       backLink: './relationship-applicant',
       next: '/../intro',
-      forks: [{
-        target: '/parental-responsibility-no',
-        condition: {
-          field: 'parental-responsibility',
-          value: false
-        }
-      }],
+      controller: require('../../../controllers/parental-responsibility'),
+      nextAlt: 'parental-responsibility-no',
+      nextAltAlt: 'third-party-name'
     },
     '/parental-responsibility-no': {
       backLink: './parental-responsibility'
