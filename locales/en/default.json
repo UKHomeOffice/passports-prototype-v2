@@ -270,6 +270,15 @@
         },
         "parent2-passport-number":{
           "label": "Passport Number"
+        },
+        "marriage-day":{
+          "label": "Day"
+        },
+        "marriage-month":{
+          "label": "Month"
+        },
+        "marriage-year":{
+          "label": "Year"
         }
     },
     "validation": {

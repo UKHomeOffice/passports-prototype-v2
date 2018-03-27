@@ -194,6 +194,7 @@ module.exports = {
           'required'
       ]
   },
+  
   'passport-damaged': {
     legend: {
       value: 'Is your passport damaged?',

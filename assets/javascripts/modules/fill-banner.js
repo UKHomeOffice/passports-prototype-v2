@@ -68,7 +68,7 @@
       $('#submit-photo-Yes').click();
 
       //change name
-      $('#change-name-true').click();
+      $('#change-name-false').click();
       $('#change-of-name-reason-Marriage-or-civil-partnership').click();
       $('#16-or-older-false').click();
 

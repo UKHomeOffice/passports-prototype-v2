@@ -236,6 +236,15 @@ module.exports = {
           'required'
       ]
   },
+  'marriage-day': {
+    labelClassName: 'form-label',
+  },
+  'marriage-year': {
+    labelClassName: 'form-label',
+  },
+  'marriage-month': {
+    labelClassName: 'form-label',
+  },
   'parent1-first-names': {
     labelClassName: 'form-label'
 
