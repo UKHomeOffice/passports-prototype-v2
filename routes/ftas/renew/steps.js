@@ -37,7 +37,7 @@ module.exports = {
         next: '/date-and-place-birth'
     },
     '/date-and-place-birth':{
-        next: '/home-address',
+        next: '/parents-details',
         fields:['age-day', 'age-month', 'age-year', 'born-in-uk', 'town-of-birth', 'country-of-birth'],
         controller: require('../../../controllers/go-overseas'),
         nextAlt: './home-address-overseas'
@@ -118,5 +118,17 @@ module.exports = {
     },
     '/confirmation':{
         next: '/title'
+    },
+        '/parents-details':{
+        fields:['parent1-first-names','parent2-first-names'],
+        next: '/parent-1-details'
+    },
+        '/parent-1-details':{
+        fields:[],
+        next: '/parent-2-details'
+    },
+        '/parent-2-details':{
+        fields:['parent2-first-names'],
+        next: '/home-address'
     }
 };
