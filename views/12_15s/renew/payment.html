@@ -1,6 +1,6 @@
 {{< layout}}
 
-{{$pageTitle}}Payment for UK adult passport renewal{{/pageTitle}}
+{{$pageTitle}}Payment{{/pageTitle}}
 
 {{$header}}
     <h1>Payment</h1>
@@ -61,7 +61,8 @@
       <span> <a href="">Help?</a></span>
 
       <br/>
-    <a href="/12_15s/renew/processing-payment" class="button">Confirm</a><br/><br/>
+    {{#input-submit}}{{/input-submit}}
+
     <a href="/12_15s/renew/declaration">Cancel</a>
     <hr>
 {{/form}}

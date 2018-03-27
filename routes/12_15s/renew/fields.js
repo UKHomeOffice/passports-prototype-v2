@@ -1,4 +1,5 @@
-var _ = require('underscore');
+const _ = require('lodash');
+const countries = require('../../../config/countries');
 
 module.exports = {
   'passport-number': {
@@ -6,6 +7,44 @@ module.exports = {
       validate: [
           'required'
         ]
+  },
+  'uncancelled': {
+  legend: {
+    value: 'Do you have any uncancelled passport from a different country?',
+    className: 'visuallyhidden'
+  },
+  options: [
+    {value: 'Yes', label: 'Yes', toggle: 'which-passport'},
+    {value: 'No', label: 'No'}
+    ],
+    validate: [
+      'required',
+      {
+        type:'equal',
+        arguments:['No'], /* if Yes is selected */
+        redirect:'/dual-national-details'
+      }
+  ]
+  },
+  'application-country': {
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.id,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    })),
+    validate: [
+      'required'
+    ],
+    dependent: {
+      field: 'apply-uk',
+      value: false
+    }
   },
   'can-sign': {
     legend: {
@@ -77,32 +116,63 @@ module.exports = {
     ]
   },
   'name': {
-
+    validate: [
+      'required'
+    ]
   },
   'lastname': {
-
+    validate: [
+      'required'
+    ]
+  },
+  'change-name': {
+      legend: {
+        value: 'Does this name match the one on your old passport?',
+        className: 'visuallyhidden'
+      },
+      options: [
+          { value: false, label: 'Yes' },
+          { value: true, label: 'No, my name has changed', toggle: 'note-regarding-name-change' }
+      ],
+      formatter: ['boolean'],
+      validate: [
+        'required'
+      ],
+  },
+  'change-of-name-reason':{
+    legend: {
+      value: 'Your title',
+      className: 'visuallyhidden'
+    },
+    options: [
+      {value: 'Marriage-or-civil-partnership', label: 'Marriage or civil partnership'},
+      {value: 'Divorce', label: 'Divorce'},
+      {value: 'Gender-reassigment', label: 'Gender transition'},
+      {value: 'I-changed-my-name-another-way', label: 'I changed my name another way'}
+    ],
+    validate: [
+      'required'
+    ]
   },
   'previous-name': {
-      formatter: 'boolean',
-      validate: 'required',
+      formatter: ['boolean'],
+      validate: [
+        'required'
+      ],
       legend: {
-          className: 'form-label-bold'
+          className: 'visually-hidden'
       },
       className: 'inline',
       options: [
-          { value: true, label: 'Yes', toggle: 'previous-names', child: 'input-text' },
+          { value: true, label: 'Yes', toggle: 'previous-names' },
           { value: false, label: 'No' }
       ]
   },
-  'previous-names': {
-      validate: [
-          'required',
-          { type: 'maxlength', arguments: 100 }
-      ],
-      dependent: {
-          field: 'previous-name',
-          value: true
-      }
+  'previous-last-name': {
+
+  },
+  'previous-first-name': {
+
   },
   'gender': {
       validate: [
@@ -112,6 +182,7 @@ module.exports = {
           value: 'Your gender',
           className: 'visuallyhidden'
       },
+      className: "inline",
       options: [
           { value: 'F', label: 'Female' },
           { value: 'M', label: 'Male' }
@@ -141,14 +212,6 @@ module.exports = {
           value: false
       },
   },
-  'expiry-day': {
-    labelClassName: 'form-label',
-    formatter: 'removehyphens',
-      validate: [
-          'numeric',
-          'required'
-      ]
-  },
   'expiry-year': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
@@ -160,6 +223,14 @@ module.exports = {
   'expiry-month': {
       labelClassName: 'form-label',
       formatter: 'removehyphens',
+      validate: [
+          'numeric',
+          'required'
+      ]
+  },
+  'expiry-day': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
       validate: [
           'numeric',
           'required'
@@ -256,12 +327,6 @@ module.exports = {
     ],
     className: 'inline'
   },
-  'name': {
-
-  },
-  'lastname': {
-
-  },
   'address1': {
       validate: [
           'required'
@@ -331,8 +396,8 @@ module.exports = {
       value: 'Passport size'
     },
     options: [
-      {value: '32', label: 'Standard 32-page passport (£46)'},
-      {value: '48', label: 'Jumbo 48-page passport (£59)'}
+      {value: '32', label: 'Standard 32-page passport (£72.50)'},
+      {value: '48', label: 'Jumbo 48-page passport (£85.50)'}
     ],
     validate: [
       'required'
@@ -378,7 +443,7 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [
-      {value: 'Special-delivery', label: 'Special delivery (£3 extra)'},
+      {value: 'Special-delivery', label: 'Secure delivery (£3 extra)'},
       {value: 'Standard', label: 'Standard post (free)'}
     ],
     validate: [
@@ -389,11 +454,11 @@ module.exports = {
       formatter: 'boolean',
       validate: 'required',
       legend: {
-          value: 'How would you like us to send your old passport back to you?',
-          className: 'visuallyhidden'
+          value: '',
+          className: 'form-label-bold'
       },
       options: [
-          { value: true, label: 'Special delivery (&#163;3 extra)' },
+          { value: true, label: 'Secure delivery (&#163;3 extra)' },
           { value: false, label: 'Standard post (free)' }
       ]
   },

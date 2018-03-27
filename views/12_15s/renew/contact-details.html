@@ -1,6 +1,6 @@
 {{< layout}}
 
-{{$pageTitle}}Your contact details{{/pageTitle}}
+{{$pageTitle}}Contact details{{/pageTitle}}
 
 {{$header}}
     <h1>Contact details</h1>
@@ -11,17 +11,17 @@
 {{< hmpo-partials-form}}
 {{$form}}
 
-      <p>We’ll only use these details to contact you about this application.</p>
+      <p>We’ll only use these details to contact you about your application.</p>
       {{#input-text}}email{{/input-text}}
-            <p></p>
+      <legend><span class="form-label-bold">Mobile or home number</span></legend>
+      <p class="form-hint" id="dob-hint">Use a phone you have access to – we may call you if there's a problem.</p>
+      {{#input-text}}mobile{{/input-text}}
 
-      <fieldset>
-        <legend><span class="form-label-bold">Mobile or home number</span></legend>
-            <p class="form-hint" id="dob-hint">Use a phone you have access to &ndash; we may call you if there's a problem.</p>
-              {{#input-text}}mobile{{/input-text}}
-      </fieldset>
+
+    </fieldset>
 
     {{#input-submit}}{{/input-submit}}
+
 {{/form}}
 {{/ hmpo-partials-form}}
 

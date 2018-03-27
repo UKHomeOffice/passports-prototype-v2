@@ -7,6 +7,15 @@
 
 {{< hmpo-partials-form}}
 {{$form}}
+<br>
+<!--    <div class="panel panel-border-wide alert-success">
+          <h2>Payment recieved</h2>
+          <p><strong>Application reference: PEX 319 825 680X</strong></br>
+        Email confirmation sent to test@thundercats.com</br>
+      </br>
+          <a href="">Download PDF receipt</a></p>
+
+    </div>-->
 
     <header class="update-notice">
           <h1><span class="icon-tick"></span> Application submitted</h1>
@@ -15,15 +24,18 @@
           <p>Email confirmation sent to <strong>{{values.email}}</strong></p>
           <a href="" class="download">Download PDF receipt</a>
     </header>
-    <br/>
+
     <div class="panel-important">
-              <p>We can't start your application until we receive your old passport.</p>
+        <p>We can't start your application until we receive your old passport and extra documents.</p>
     </div>
-    <h2>Send back your old passport now</h2>
-
-    <p>Use a strong envelope that is the right size for your documents. You don’t need to include a covering letter.</p>
 
 
+    <h1>What you need to do</h1>
+<h2>Send us your old passport {{#values.change-name}}and extra documents{{/values.change-name}}</h2>
+{{#values.change-name}}
+  <p><a href="required-documents">Check what you need to send</a></p>
+{{/values.change-name}}
+<p>You don’t need to include a covering letter.</p>
     <p>HM Passport Office<br/>
        Ref: PEX 319 825 680X<br/>
        Aragon Court<br/>
@@ -31,10 +43,11 @@
        Peterborough<br/>
        PE1 1QG
     </p>
-    <p>You can use standard post or special delivery.</p>
+    <p>Use a strong envelope that is the right size for your documents. You can use standard post or special delivery.</p>
 
-    <h2>Track your application</h2>
-    It should take 4 weeks to get your new passport. Use your reference <strong>PEX 319 825 680X</strong> to <a href="/../tracking">track your application</a>.</p>
+
+     <h2>Track your application</h2>
+    <p>It should take 3 weeks to get your new passport. Use your reference <strong>PEX 319 825 680X</strong> to <a href="/tracking-change-of-name">track your application</a>.</p>
     <p>If you have questions contact <a href="https://www.gov.uk/browse/abroad/passports" class="new-window" target="_blank">contact HM Passport Office<span class="visuallyhidden">(Opens in a new window)</span></a></p>
 
     <a href="" class="button">Give feedback</a><br/><br/>
