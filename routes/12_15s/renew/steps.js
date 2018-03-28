@@ -51,7 +51,7 @@ module.exports = {
         nextAlt: './home-address-overseas'
       },
     '/parents-details':{
-        fields:['parent1-first-names','parent2-first-names'],
+        fields:['parent1-first-names','parent2-first-names', 'marriage-day', 'marriage-month', 'marriage-year'],
         next: '/parent-1-details',
     },
     '/parent-1-details':{
@@ -143,6 +143,9 @@ module.exports = {
         next: '/declaration'
     },
     '/name-change-docs-for-other-changes':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-parents':{
         next: '/declaration'
     },
     '/declaration':{

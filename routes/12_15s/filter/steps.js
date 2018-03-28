@@ -94,6 +94,19 @@ module.exports = {
       fields: ['relationship-applicant'],
       backLink: './uncancelled',
       next: '/../intro',
+      nextAlt: 'parental-responsibility',
+      //controller: require('../../../controllers/applicant-relationship'),
+      forks: [{
+        target: '/parental-responsibility',
+        condition: function(req, res) {
+          return req.session['hmpo-wizard-common']['16-or-older'] == false;
+        }
+      }],
+    },
+    '/relationship-applicant-other': {
+      fields: ['relationship-applicant-other'],
+      backLink: './relationship-applicant',
+      next: '/../intro',
       forks: [{
         target: '/parental-responsibility',
         condition: function(req, res) {
@@ -105,13 +118,8 @@ module.exports = {
       fields: ['parental-responsibility'],
       backLink: './relationship-applicant',
       next: '/../intro',
-      forks: [{
-        target: '/parental-responsibility-no',
-        condition: {
-          field: 'parental-responsibility',
-          value: false
-        }
-      }],
+      controller: require('../../../controllers/parental-responsibility'),
+      nextAlt: 'third-party-name'
     },
     '/parental-responsibility-no': {
       backLink: './parental-responsibility'
