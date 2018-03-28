@@ -194,7 +194,7 @@ module.exports = {
           'required'
       ]
   },
-  
+
   'passport-damaged': {
     legend: {
       value: 'Is your passport damaged?',
@@ -276,7 +276,26 @@ module.exports = {
     options: [
       { value: 'Mother', label: 'Mother' },
       { value: 'Father', label: 'Father' },
-      { value: 'Other', label: 'Other' }
+      { value: 'Other', label: 'Other', toggle: "relationship-other" }
+    ],
+    validate: [
+      'required'
+    ]
+  },
+  'relationship-other': {
+    labelClassName: 'visuallyhidden',
+  },
+  'relationship-applicant-other': {
+    legend: {
+      value: 'What is your relationship to the applicant?',
+      className: 'visuallyhidden'
+    },
+    options: [
+      { value: 'Social Worker', label: 'Social Worker' },
+      { value: 'Carer', label: 'Carer' },
+      { value: 'Solicitor', label: 'Solicitor' },
+      { value: 'Social Worker', label: 'Social Worker' },
+      { value: 'Other', label: 'Other', toggle: 'relationship-other', }
     ],
     validate: [
       'required'
@@ -289,7 +308,7 @@ module.exports = {
     },
     options: [
       { value: true, label: 'Yes' },
-      { value: false, label: 'No' }
+      { value: false, label: 'No', toggle: "parental-no" }
     ],
     formatter: ['boolean'],
     validate: [

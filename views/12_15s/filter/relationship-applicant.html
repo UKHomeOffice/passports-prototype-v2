@@ -12,6 +12,13 @@
     {{< hmpo-partials-form}}
     {{$form}}
       {{#radio-group}}relationship-applicant{{/radio-group}}
+      <div class="panel panel-border-narrow js-hidden" id="relationship-other">
+        <label for="relationship-other" class="visuallyhidden">
+        fields.relationship-other.label
+        </label>
+        {{#input-text}}relationship-other{{/input-text}}
+      </div>
+
       {{#input-submit}}{{/input-submit}}
     {{/form}}
     {{/ hmpo-partials-form}}
