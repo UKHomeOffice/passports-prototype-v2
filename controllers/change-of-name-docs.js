@@ -8,10 +8,11 @@ var Controller = function() {
 util.inherits(Controller, Base)
 
 Controller.prototype.get = function successHandler(req, res, callback) {
-	console.log('this', req.sessionModel.get('16-or-older'))
-	if (req.sessionModel.get('16-or-older') == false){
-		return res.redirect('./name-change-docs-for-parents')
-	}
+	return res.redirect('./declaration')
+	// console.log('this', req.sessionModel.get('16-or-older'))
+	// if (req.sessionModel.get('16-or-older') == false){
+	// 	return res.redirect('./name-change-docs-for-parents')
+	// }
 }
 
 module.exports = Controller
