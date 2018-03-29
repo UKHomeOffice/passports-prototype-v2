@@ -47,9 +47,9 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     var formatDob = moment(req.form.values['age-year'] + '-' + req.form.values['age-month'] + '-' + req.form.values['age-day'], 'YYYY-MM-DD').format('D MMMM YYYY');
     req.sessionModel.set('date-of-birth', formatDob);
 
-    if (req.form.values['age-year'] > '2001') {
-        return res.redirect('./below-16');
-    }
+    // if (req.form.values['age-year'] > '2001') {
+    //     return res.redirect('./below-16');
+    // }
 
     if (req.url =='/parent-2-details') {
       if (req.form.values['parent2-first-names'] != '') {
