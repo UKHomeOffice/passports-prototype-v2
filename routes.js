@@ -114,6 +114,9 @@ app.use('/tracking-dps', require('./routes/tracking-dps'));
 //Post Office Digital (POD) tracking
 app.use('/pod', require('./routes/pod'));
 
+//How to
+app.use('/how-to', require('./routes/how-to'));
+
 // Address Capture
 app.use('/address/overseas', require('./routes/address/overseas'));
 app.use('/address/overseas-not-eligible', require('./routes/address/overseas-not-eligible'));
