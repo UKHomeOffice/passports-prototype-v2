@@ -1,73 +1,73 @@
 {{< layout}}
 
-{{$pageTitle}}Get your digital photo{{/pageTitle}}
+{{$pageTitle}}Get a digital photo{{/pageTitle}}
 
 {{$header}}
-    <h1>Get your digital passport photo</h1>
+    <h1>Get a digital photo</h1>
 {{/header}}
 
 <!-- content changes made to you-need-a-photo.html -->
-{{$content}}
+{{$main-content}}
+<div class="grid-row" style="margin:15px;">
+<h1>Get your digital photo</h1>
 
     {{< hmpo-partials-form}}
     {{$form}}
-
     <div class="grid-row">
-        <div class="column-half">
-            <a href="photo-guide" class="guide-box" id="get-a-friend-to-take-one-photo-link">
-                <div class="column-one-third img">
-                    <img src="../../public/images/photo-guide-myself.png" alt="Get a friend to take one" title="Get a friend to take one" width="100">
-                </div>
-                <div class="column-two-thirds guide-box-text">
-                    <h3>Get a friend to take one</h3>
-                    <p>Follow the step-by-step guide to taking a good digital passport photo.</p>
-                </div>
-            </a>
-        </div>
 
-        <div class="column-half">
-            <a href="photo-booth-shop" class="guide-box" id="go-to-a-booth-or-shop-photo-link">
-                <div class="column-one-third img">
-                    <img src="../../public/images/photo-guide-shop.png" alt="Go to a booth or a shop" title="Go to a booth or a shop" width="105">
-                </div>
-                <div class="column-two-thirds guide-box-text">
-                    <h3>Go to a booth or a shop</h3>
-                    <p>Check what you’ll get from a booth and what to ask for at a shop.</p>
-                </div>
-            </a>
-        </div>
-    </div>
-
-<form action="/photo/choose-photo-method" method="POST" autocomplete="off" novalidate="true" spellcheck="false">
-            <div id="choose-photo-group" class="form-group js-gaevent" data-gakey="photo method">
-    <fieldset role="radiogroup" aria-required="true">
-        <legend>
-            <span class="form-label-bold">I already have a digital photo</span>
-            
-            
-        </legend>
-            <label class="block-label" for="choose-photo-photo-upload">
-                <input type="radio" name="choose-photo" id="choose-photo-photo-upload" value="photo-upload" required="true" data-galabel="upload">
-                I have a digital photo to upload
-            </label>
-            <label class="block-label" for="choose-photo-photo-code">
-                <input type="radio" name="choose-photo" id="choose-photo-photo-code" value="photo-code" required="true" data-toggle="choose-photo-toggle" data-galabel="code" aria-controls="choose-photo-toggle" aria-expanded="false">
-                I have a code to enter
-            </label>
-<div class="panel panel-border-narrow js-hidden" id="choose-photo-toggle" aria-hidden="true">
-    <div class="column-two-thirds">
-        <p>Check if your printed photos have a photo code - you’ll need to enter this code to retrieve your photo.</p>
-        <p>The photo code is a new service and may not be available yet from photo booths or shops in your area.</p>
-    </div>
+            <div class="column-one-third">
+              <!-- nothing here but keep it -->
+            </div>
+            <div class="column-full">
+                <a href="../photoguide-short" class="guide-box">
+                        <img src="../../public/images/photo-guide-myself.png" alt="Your uploaded photo" title="Your uploaded photo" style="width:25.2%">
+                        <h3 style="margin-top:0;">Get a friend to take one</h3>
+                        <p>Follow the step-by-step guide to taking a good digital passport photo.</p>
+                </a>
+                <a href="../photoguide-shop" class="guide-box last">
+                        <img src="../../public/images/photo-guide-shop.png" alt="Your uploaded photo" title="Your uploaded photo" width="200">
+                        <h3 style="margin-top:0;">Go to a booth or a shop</h3>
+                        <p>Check what you'll get from a booth and what to ask for at a shop.</p>
+                </a>
+      </div>
 </div>
-    </fieldset>
-</div>
+      <br/>
 
-<a href="../upload" class="button">Continue</a>
+      <div class="grid-row">
+          <div class="column-two-thirds" >
+            <h2>I already have a digital photo</h2>
+            <div id="choose-photo-group" class="form-group{{#errors.choose-photo}} error{{/errors.choose-photo}}">
+                <fieldset role="radiogroup" aria-required="upload">
+                 
+                   <label class="block-label" for="choose-photo-upload">
+                        <input type="radio" name="choose-photo" id="choose-photo-upload" value="upload" aria-required="upload"{{#selected}}choose-photo=upload{{/selected}}{{#errors.choose-photo}} aria-describedby="{{key}}-error" aria-invalid="upload"{{/errors.choose-photo}}>
+                        I have a digital photo to upload
+                    </label>
 
+
+                    <div style="clear:both"></div>
+                    <label class="block-label" for="choose-photo-code">
+                        <input type="radio" name="choose-photo" id="choose-photo-code" value="code" aria-controls="choose-photo-toggle" aria-expanded="true" aria-required="upload"{{#selected}}choose-photo=code{{/selected}}{{#errors.choose-photo}} aria-describedby="{{key}}-error" aria-invalid="upload"{{/errors.choose-photo}}>
+                        I have a code to enter
+                    </label>
+                    
+
+                    <div class="panel panel-border-narrow js-hidden" id="choose-photo-toggle">Check if your printed photos have a photo code - you'll need to enter this code to retrieve your photo.<br><br>The photo code is a new service and may not be available yet from photo booths or shops in your area.</div>
+                    
+                </fieldset>
+            </div>
+
+
+            
+          
+            {{#input-submit}}{{/input-submit}}
+      </div>
+      </div>
         {{/form}}
     {{/ hmpo-partials-form}}
+</div>
+{{/main-content}}
 
-{{/content}}
+
 
 {{/ layout}}
