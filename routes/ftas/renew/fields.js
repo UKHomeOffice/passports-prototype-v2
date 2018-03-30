@@ -127,7 +127,7 @@ module.exports = {
   },
   'change-name': {
       legend: {
-        value: 'Does this name match the one on your old passport?',
+        value: 'Does this name match the one on your birth certificate?',
         className: 'visuallyhidden'
       },
       options: [
@@ -137,7 +137,7 @@ module.exports = {
       formatter: ['boolean'],
       validate: [
         'required'
-      ],
+      ]
   },
   'change-of-name-reason':{
     legend: {
