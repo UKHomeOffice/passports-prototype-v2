@@ -50,6 +50,21 @@ module.exports = {
         controller: require('../../../controllers/go-overseas'),
         nextAlt: './home-address-overseas'
       },
+    '/parents-details':{
+        fields:['parent1-first-names','parent2-first-names', 'marriage-day', 'marriage-month', 'marriage-year'],
+        next: '/parent-1-details',
+    },
+    '/parent-1-details':{
+        fields:[],
+        //controller: require('../../../controllers/parents-details'),
+        next: '/parent-2-details',
+    },
+    '/parent-2-details':{
+        fields:['parent2-first-names'],
+        next: '/home-address',
+        controller: require('../../../controllers/go-overseas'),
+        nextAlt: './home-address-overseas'
+    },
     '/home-address-overseas':{
         fields:['address1', 'address2','address3','address4','address5', 'town', 'postcode'],
         next: '/contact-details-overseas'
@@ -109,8 +124,31 @@ module.exports = {
         template: 'confirm',
         next: '/fta-docs'
     },
+    '/required-documents':{
+        controller: require('../../../controllers/change-of-name-docs')
+    },
     '/fta-docs':{
-        backLink: 'summary',
+        next: '/required-documents'
+    },
+    '/name-change-docs':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-marriage':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-divorce':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-small-changes':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-gender-change':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-other-changes':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-parents':{
         next: '/declaration'
     },
     '/declaration':{
@@ -126,17 +164,5 @@ module.exports = {
     },
     '/confirmation':{
         next: '/title'
-    },
-        '/parents-details':{
-        fields:['parent1-first-names','parent2-first-names'],
-        next: '/parent-1-details'
-    },
-        '/parent-1-details':{
-        fields:[],
-        next: '/parent-2-details'
-    },
-        '/parent-2-details':{
-        fields:['parent2-first-names'],
-        next: '/home-address'
     }
 };
