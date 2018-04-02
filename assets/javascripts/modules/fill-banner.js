@@ -27,6 +27,7 @@
       "csig-email": "c.moore@test-corp.co.uk",
       "town-of-birth": "The promised land",
       "town": "Londinium",
+      "naturalisation-certificate-number": "0123456789",
       "address1": "10 Liono Street",
       "postcode": "SE1 1QW",
       "email": "c.moore@test-corp.co.uk",

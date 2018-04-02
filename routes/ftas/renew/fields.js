@@ -189,28 +189,45 @@ module.exports = {
       ]
   },
   'town-of-birth': {
-      validate: [
-          'required'
-        ]
+    // validate: [
+    //   'required'
+    // ]
   },
   'born-in-uk': {
-      formatter: 'boolean',
-      validate: 'required',
-      legend: {
-          className: 'form-label-bold'
-      },
-      options: [
-          { value: true, label: 'Yes' },
-          { value: false, label: 'No', toggle: 'birth-country' }
-      ],
-      className: 'inline'
+    formatter: 'boolean',
+    validate: 'required',
+    legend: {
+        className: 'form-label-bold'
+    },
+    options: [
+        { value: true, label: 'Yes', toggle: 'birth-town' },
+        { value: false, label: 'No' }
+    ],
+    className: 'inline'
+  },
+  'naturalisation-certificate': {
+    formatter: 'boolean',
+    validation: 'default',
+    legend: {
+      className: 'visuallyhidden'
+    },
+    options: [
+      { value: true, label: 'Yes', toggle: 'naturalisation-certificate-number' },
+      { value: false, label: 'No' }
+    ],
+    className: 'inline'
+  },
+  'naturalisation-certificate-number': {
+    // validate: [
+    //     'required'
+    //   ]
   },
   'country-of-birth': {
-      validate: 'required',
-      dependent: {
-          field: 'born-in-uk',
-          value: false
-      },
+    // validate: 'required',
+    dependent: {
+      field: 'born-in-uk',
+      value: false
+    },
   },
   'expiry-year': {
     labelClassName: 'form-label',

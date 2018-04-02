@@ -50,37 +50,49 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     sections: []
   });
 
-  var oldPassportFields = [];
-  oldPassportFields.push({
-    step: this.getEditStep('passport-number'),
-    title: 'Passport number',
-    value: values['passport-number']
-  }, {
-    step: this.getEditStep('expiry-year'),
-    title: 'Expiry date',
-    value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
+  // var oldPassportFields = [];
+  // oldPassportFields.push({
+  //   step: this.getEditStep('passport-number'),
+  //   title: 'Passport number',
+  //   value: values['passport-number']
+  // }, {
+  //   step: this.getEditStep('expiry-year'),
+  //   title: 'Expiry date',
+  //   value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
+  // });
+
+  // if (values['what-damaged']) {
+  //   oldPassportFields.push({
+  //     step: this.getEditStep('what-damaged'),
+  //     title: 'What is damaged on your passport?',
+  //     value: values['what-damaged']
+  //   });
+  // };
+
+  // if (values['how-damaged']) {
+  //   oldPassportFields.push({
+  //     step: this.getEditStep('how-damaged'),
+  //     title: 'How is your passport damaged?',
+  //     value: values['how-damaged']
+  //   });
+  // };
+
+  // response.sections.push({
+  //   className: 'old-passport-details',
+  //   title: 'Old passport',
+  //   fields: oldPassportFields
+  // });
+
+  var naturalisationFields = [];
+  naturalisationFields.push({
+    step: this.getEditStep('naturalisation-certificate-number'),
+    title: 'Certificate number',
+    value: values['naturalisation-certificate-number']
   });
-
-  if (values['what-damaged']) {
-    oldPassportFields.push({
-      step: this.getEditStep('what-damaged'),
-      title: 'What is damaged on your passport?',
-      value: values['what-damaged']
-    });
-  };
-
-  if (values['how-damaged']) {
-    oldPassportFields.push({
-      step: this.getEditStep('how-damaged'),
-      title: 'How is your passport damaged?',
-      value: values['how-damaged']
-    });
-  };
-
   response.sections.push({
-    className: 'old-passport-details',
-    title: 'Old passport',
-    fields: oldPassportFields
+    className: 'naturalisation-details',
+    title: 'Naturalisation details',
+    fields: naturalisationFields
   });
 
   var newPassportFields = [];

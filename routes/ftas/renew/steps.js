@@ -17,7 +17,7 @@ module.exports = {
             'lastname',
             'change-name'
         ],
-        next: '/previous-names',
+        next: '/gender',
         forks: [{
             target: '/change-of-name',
             condition: {
@@ -48,7 +48,25 @@ module.exports = {
         next: '/parents-details',
         fields:['age-day', 'age-month', 'age-year', 'born-in-uk', 'town-of-birth', 'country-of-birth'],
         controller: require('../../../controllers/go-overseas'),
-        nextAlt: './home-address-overseas'
+        nextAlt: './home-address-overseas',
+        forks: [{
+            target: '/naturalisation-details',
+            condition: {
+                field: 'born-in-uk',
+                value: false
+            }
+        }]
+      },
+    '/naturalisation-details':{
+        next: '/home-address',
+        fields:['naturalisation-certificate', 'naturalisation-certificate-number'],
+        forks: [{
+            target: '/parents-details',
+            condition: {
+                field: 'naturalisation-certificate',
+                value: false
+            }
+        }]
       },
     '/parents-details':{
         fields:['parent1-first-names','parent2-first-names', 'marriage-day', 'marriage-month', 'marriage-year'],
