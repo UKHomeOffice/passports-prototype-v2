@@ -232,26 +232,174 @@ module.exports = {
   'expiry-year': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
-      validate: [
-          'numeric',
-          'required'
-      ]
+    validate: [
+      'numeric',
+      'required'
+    ]
   },
   'expiry-month': {
-      labelClassName: 'form-label',
-      formatter: 'removehyphens',
-      validate: [
-          'numeric',
-          'required'
-      ]
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    validate: [
+      'numeric',
+      'required'
+    ]
   },
   'expiry-day': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
-      validate: [
-          'numeric',
-          'required'
-      ]
+    validate: [
+      'numeric',
+      'required'
+    ]
+  },
+  'parents-married': {
+    legend: {
+      value: 'Your title',
+      className: 'visuallyhidden'
+    },
+    options: [
+      {value: 'Yes', label: 'Yes', toggle: 'marriage-date'},
+      {value: 'No', label: 'No'},
+      {value: 'I don’t know', label: 'I don’t know'}
+    ],
+    validate: [
+      'required'
+    ],
+    className: 'inline'
+  },
+  'marriage-day': {
+    labelClassName: 'form-label',
+  },
+  'marriage-year': {
+    labelClassName: 'form-label',
+  },
+  'marriage-month': {
+    labelClassName: 'form-label',
+  },
+  'parent1-first-names': {
+    labelClassName: 'form-label'
+
+  },
+  'parent1-last-name': {
+    labelClassName: 'form-label'
+
+  },
+  'parent1-age-year': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    // validate: [
+    //   'numeric',
+    //   'required'
+    // ]
+  },
+  'parent1-age-month': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    // validate: [
+    //   'numeric',
+    //   'required'
+    // ]
+  },
+  'parent1-age-day': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    // validate: [
+    //   'numeric',
+    //   'required'
+    // ]
+  },
+  'parent1-passport-number': {
+    labelClassName: 'visuallyhidden',
+    // validate: [
+    //   'required'
+    // ]
+  },
+  'parent1-passport-issue-year': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+      // validate: [
+      //     'numeric',
+      //     'required'
+      // ]
+  },
+  'parent1-passport-issue-month': {
+      labelClassName: 'form-label',
+      formatter: 'removehyphens',
+      // validate: [
+      //     'numeric',
+      //     'required'
+      // ]
+  },
+  'parent1-passport-issue-day': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+      // validate: [
+      //     'numeric',
+      //     'required'
+      // ]
+  },
+  'parent2-first-names': {
+    labelClassName: 'form-label'
+
+  },
+  'parent2-last-name': {
+    labelClassName: 'form-label'
+
+  },
+  'parent2-age-year': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    // validate: [
+    //   'numeric',
+    //   'required'
+    // ]
+  },
+  'parent2-age-month': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    // validate: [
+    //   'numeric',
+    //   'required'
+    // ]
+  },
+  'parent2-age-day': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    // validate: [
+    //   'numeric',
+    //   'required'
+    // ]
+  },
+  'parent2-passport-number': {
+    labelClassName: 'visuallyhidden',
+    // validate: [
+    //   'required'
+    // ]
+  },
+  'parent2-passport-issue-year': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+      // validate: [
+      //     'numeric',
+      //     'required'
+      // ]
+  },
+  'parent2-passport-issue-month': {
+      labelClassName: 'form-label',
+      formatter: 'removehyphens',
+      // validate: [
+      //     'numeric',
+      //     'required'
+      // ]
+  },
+  'parent2-passport-issue-day': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+      // validate: [
+      //     'numeric',
+      //     'required'
+      // ]
   },
   'address1': {
       validate: [
