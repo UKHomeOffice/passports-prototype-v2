@@ -234,6 +234,30 @@
         "parent1-country":{
           "label": "Country of birth"
         },
+        "parent1-nationality":{
+          "label": "Nationality"
+        },
+        "parent1-age-day":{
+          "label": "Day"
+        },
+        "parent1-age-month":{
+          "label": "Month"
+        },
+        "parent1-age-year":{
+          "label": "Year"
+        },
+        "parent1-passport-number":{
+          "label": "Passport Number"
+        },
+        "parent1-passport-issue-day":{
+          "label": "Day"
+        },
+        "parent1-passport-issue-month":{
+          "label": "Month"
+        },
+        "parent1-passport-issue-year":{
+          "label": "Year"
+        },
         "parent2-first-names":{
           "label": "First and middle names"
         },
@@ -246,23 +270,8 @@
         "parent2-country":{
           "label": "Country of birth"
         },
-        "parent1-nationality":{
+        "parent2-nationality":{
           "label": "Nationality"
-        },
-        "third-party-first-name":{
-          "label": "First and middle names"
-        },
-        "third-party-last-name":{
-          "label": "Last name"
-        },
-        "parent1-age-day":{
-          "label": "Day"
-        },
-        "parent1-age-month":{
-          "label": "Month"
-        },
-        "parent1-age-year":{
-          "label": "Year"
         },
         "parent2-age-day":{
           "label": "Day"
@@ -273,11 +282,17 @@
         "parent2-age-year":{
           "label": "Year"
         },
-        "parent1-passport-number":{
-          "label": "Passport Number"
-        },
         "parent2-passport-number":{
           "label": "Passport Number"
+        },
+        "parent2-passport-issue-day":{
+          "label": "Day"
+        },
+        "parent2-passport-issue-month":{
+          "label": "Month"
+        },
+        "parent2-passport-issue-year":{
+          "label": "Year"
         },
         "marriage-day":{
           "label": "Day"
@@ -287,6 +302,12 @@
         },
         "marriage-year":{
           "label": "Year"
+        },
+        "third-party-first-name":{
+          "label": "First and middle names"
+        },
+        "third-party-last-name":{
+          "label": "Last name"
         }
     },
     "error": {
