@@ -50,52 +50,9 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     sections: []
   });
 
-  // var oldPassportFields = [];
-  // oldPassportFields.push({
-  //   step: this.getEditStep('passport-number'),
-  //   title: 'Passport number',
-  //   value: values['passport-number']
-  // }, {
-  //   step: this.getEditStep('expiry-year'),
-  //   title: 'Expiry date',
-  //   value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
-  // });
 
-  // if (values['what-damaged']) {
-  //   oldPassportFields.push({
-  //     step: this.getEditStep('what-damaged'),
-  //     title: 'What is damaged on your passport?',
-  //     value: values['what-damaged']
-  //   });
-  // };
-
-  // if (values['how-damaged']) {
-  //   oldPassportFields.push({
-  //     step: this.getEditStep('how-damaged'),
-  //     title: 'How is your passport damaged?',
-  //     value: values['how-damaged']
-  //   });
-  // };
-
-  // response.sections.push({
-  //   className: 'old-passport-details',
-  //   title: 'Old passport',
-  //   fields: oldPassportFields
-  // });
-
-  var naturalisationFields = [];
-  if (values['naturalisation-certificate'] == true) {
-    response.sections.push({
-      className: 'naturalisation-details',
-      title: 'Naturalisation details',
-      fields: naturalisationFields
-    });
-    naturalisationFields.push({
-      step: this.getEditStep('naturalisation-certificate-number'),
-      title: 'Certificate number',
-      value: values['naturalisation-certificate-number']
-    });
-  }
+// TODO:
+// - Conditional logic for Parents details, so they don't appear in non-FTA flows
 
   var parentsFields = [];
   if (values['parent1-first-names']) {
@@ -187,7 +144,51 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     });
   }
 
-  // newpassport below
+  var naturalisationFields = [];
+  if (values['naturalisation-certificate'] == true) {
+    response.sections.push({
+      className: 'naturalisation-details',
+      title: 'Naturalisation details',
+      fields: naturalisationFields
+    });
+    naturalisationFields.push({
+      step: this.getEditStep('naturalisation-certificate-number'),
+      title: 'Certificate number',
+      value: values['naturalisation-certificate-number']
+    });
+  }
+
+  var oldPassportFields = [];
+  if (values['passport-number']) {
+    response.sections.push({
+      className: 'old-passport-details',
+      title: 'Old passport',
+      fields: oldPassportFields
+    });
+    oldPassportFields.push({
+      step: this.getEditStep('passport-number'),
+      title: 'Passport number',
+      value: values['passport-number']
+    }, {
+      step: this.getEditStep('expiry-year'),
+      title: 'Expiry date',
+      value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
+    });
+    if (values['what-damaged']) {
+      oldPassportFields.push({
+        step: this.getEditStep('what-damaged'),
+        title: 'What is damaged on your passport?',
+        value: values['what-damaged']
+      });
+    };
+    if (values['how-damaged']) {
+      oldPassportFields.push({
+        step: this.getEditStep('how-damaged'),
+        title: 'How is your passport damaged?',
+        value: values['how-damaged']
+      });
+    };
+  }
 
   var newPassportFields = [];
   var allPreviousNames = _.zip(values['previous-first-name'],values['previous-last-name']);
