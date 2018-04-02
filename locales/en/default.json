@@ -55,6 +55,14 @@
         "born-in-uk": {
             "legend": "Were you born in the UK?"
         },
+        "naturalisation-certificate": {
+          "label": "Naturalisation certificate",
+          "legend": "Do you have a naturalisation certificate?"
+        },
+        "naturalisation-certificate-number": {
+            "label": "Naturalisation certificate number",
+            "hint": "As written on your naturalisation certificate"
+        },
         "address1":{
           "label": "Address"
         },
@@ -226,6 +234,30 @@
         "parent1-country":{
           "label": "Country of birth"
         },
+        "parent1-nationality":{
+          "label": "Nationality"
+        },
+        "parent1-age-day":{
+          "label": "Day"
+        },
+        "parent1-age-month":{
+          "label": "Month"
+        },
+        "parent1-age-year":{
+          "label": "Year"
+        },
+        "parent1-passport-number":{
+          "label": "Passport Number"
+        },
+        "parent1-passport-issue-day":{
+          "label": "Day"
+        },
+        "parent1-passport-issue-month":{
+          "label": "Month"
+        },
+        "parent1-passport-issue-year":{
+          "label": "Year"
+        },
         "parent2-first-names":{
           "label": "First and middle names"
         },
@@ -238,23 +270,8 @@
         "parent2-country":{
           "label": "Country of birth"
         },
-        "parent1-nationality":{
+        "parent2-nationality":{
           "label": "Nationality"
-        },
-        "third-party-first-name":{
-          "label": "First and middle names"
-        },
-        "third-party-last-name":{
-          "label": "Last name"
-        },
-        "parent1-age-day":{
-          "label": "Day"
-        },
-        "parent1-age-month":{
-          "label": "Month"
-        },
-        "parent1-age-year":{
-          "label": "Year"
         },
         "parent2-age-day":{
           "label": "Day"
@@ -265,11 +282,17 @@
         "parent2-age-year":{
           "label": "Year"
         },
-        "parent1-passport-number":{
-          "label": "Passport Number"
-        },
         "parent2-passport-number":{
           "label": "Passport Number"
+        },
+        "parent2-passport-issue-day":{
+          "label": "Day"
+        },
+        "parent2-passport-issue-month":{
+          "label": "Month"
+        },
+        "parent2-passport-issue-year":{
+          "label": "Year"
         },
         "marriage-day":{
           "label": "Day"
@@ -279,12 +302,13 @@
         },
         "marriage-year":{
           "label": "Year"
+        },
+        "third-party-first-name":{
+          "label": "First and middle names"
+        },
+        "third-party-last-name":{
+          "label": "Last name"
         }
-    },
-    "validation": {
-        "required": "Please enter {{label}}.",
-        "numeric": "{{label}} must only contain numbers.",
-        "default": "You must answer this question."
     },
     "error": {
         "default": "An unknown error occured",

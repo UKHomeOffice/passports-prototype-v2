@@ -1,0 +1,30 @@
+{{< layout}}
+
+{{$pageTitle}}Naturalisation details{{/pageTitle}}
+
+{{$header}}
+    <h1>Naturalisation details</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+<fieldset class="inline">
+    <h2>Do you have a naturalisation certificate?</h2>
+    {{#radio-group}}naturalisation-certificate{{/radio-group}}
+
+    <div id="naturalisation-certificate-number" class="reveal js-hidden">
+        {{#input-text}}naturalisation-certificate-number{{/input-text}}
+    </div>
+</fieldset>
+
+{{#input-submit}}{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}

@@ -14,9 +14,17 @@ module.exports = {
         fields: [
             'title',
             'name',
-            'lastname'
+            'lastname',
+            'change-name'
         ],
-        next: '/previous-names'
+        next: '/gender',
+        forks: [{
+            target: '/change-of-name',
+            condition: {
+                field: 'change-name',
+                value: true
+            }
+        }]
     },
     '/change-of-name':{
         backLink: 'name',
@@ -40,8 +48,41 @@ module.exports = {
         next: '/parents-details',
         fields:['age-day', 'age-month', 'age-year', 'born-in-uk', 'town-of-birth', 'country-of-birth'],
         controller: require('../../../controllers/go-overseas'),
-        nextAlt: './home-address-overseas'
+        nextAlt: './home-address-overseas',
+        forks: [{
+            target: '/naturalisation-details',
+            condition: {
+                field: 'born-in-uk',
+                value: false
+            }
+        }]
       },
+    '/naturalisation-details':{
+        next: '/home-address',
+        fields:['naturalisation-certificate', 'naturalisation-certificate-number'],
+        forks: [{
+            target: '/parents-details',
+            condition: {
+                field: 'naturalisation-certificate',
+                value: false
+            }
+        }]
+      },
+    '/parents-details':{
+        fields:['parent1-first-names', 'parent1-last-name', 'parent2-first-names', 'parent2-last-name', 'marriage-day', 'marriage-month', 'marriage-year'],
+        next: '/parent-1-details'
+    },
+    '/parent-1-details':{
+        fields:['parent1-town', 'parent1-country', 'parent1-age-day', 'parent1-age-month', 'parent1-age-year', 'parent1-nationality', 'parent1-passport-number', 'parent1-passport-issue-day', 'parent1-passport-issue-month', 'parent1-passport-issue-year'],
+        // controller: require('../../../controllers/parents-details'),
+        next: '/parent-2-details'
+    },
+    '/parent-2-details':{
+        fields:['parent2-town', 'parent2-country', 'parent2-age-day', 'parent2-age-month', 'parent2-age-year', 'parent2-nationality', 'parent2-passport-number', 'parent2-passport-issue-day', 'parent2-passport-issue-month', 'parent2-passport-issue-year'],
+        next: '/home-address',
+        // controller: require('../../../controllers/go-overseas'),
+        nextAlt: './home-address-overseas'
+    },
     '/home-address-overseas':{
         fields:['address1', 'address2','address3','address4','address5', 'town', 'postcode'],
         next: '/contact-details-overseas'
@@ -101,8 +142,31 @@ module.exports = {
         template: 'confirm',
         next: '/fta-docs'
     },
+    '/required-documents':{
+        controller: require('../../../controllers/change-of-name-docs')
+    },
     '/fta-docs':{
-        backLink: 'summary',
+        next: '/required-documents'
+    },
+    '/name-change-docs':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-marriage':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-divorce':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-small-changes':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-gender-change':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-other-changes':{
+        next: '/declaration'
+    },
+    '/name-change-docs-for-parents':{
         next: '/declaration'
     },
     '/declaration':{
@@ -118,17 +182,5 @@ module.exports = {
     },
     '/confirmation':{
         next: '/title'
-    },
-        '/parents-details':{
-        fields:['parent1-first-names','parent2-first-names'],
-        next: '/parent-1-details'
-    },
-        '/parent-1-details':{
-        fields:[],
-        next: '/parent-2-details'
-    },
-        '/parent-2-details':{
-        fields:['parent2-first-names'],
-        next: '/home-address'
     }
 };

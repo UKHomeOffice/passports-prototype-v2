@@ -50,38 +50,144 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     sections: []
   });
 
-  var oldPassportFields = [];
-  oldPassportFields.push({
-    step: this.getEditStep('passport-number'),
-    title: 'Passport number',
-    value: values['passport-number']
-  }, {
-    step: this.getEditStep('expiry-year'),
-    title: 'Expiry date',
-    value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
-  });
+  // var oldPassportFields = [];
+  // oldPassportFields.push({
+  //   step: this.getEditStep('passport-number'),
+  //   title: 'Passport number',
+  //   value: values['passport-number']
+  // }, {
+  //   step: this.getEditStep('expiry-year'),
+  //   title: 'Expiry date',
+  //   value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
+  // });
 
-  if (values['what-damaged']) {
-    oldPassportFields.push({
-      step: this.getEditStep('what-damaged'),
-      title: 'What is damaged on your passport?',
-      value: values['what-damaged']
+  // if (values['what-damaged']) {
+  //   oldPassportFields.push({
+  //     step: this.getEditStep('what-damaged'),
+  //     title: 'What is damaged on your passport?',
+  //     value: values['what-damaged']
+  //   });
+  // };
+
+  // if (values['how-damaged']) {
+  //   oldPassportFields.push({
+  //     step: this.getEditStep('how-damaged'),
+  //     title: 'How is your passport damaged?',
+  //     value: values['how-damaged']
+  //   });
+  // };
+
+  // response.sections.push({
+  //   className: 'old-passport-details',
+  //   title: 'Old passport',
+  //   fields: oldPassportFields
+  // });
+
+  var naturalisationFields = [];
+  if (values['naturalisation-certificate'] == true) {
+    response.sections.push({
+      className: 'naturalisation-details',
+      title: 'Naturalisation details',
+      fields: naturalisationFields
     });
-  };
-
-  if (values['how-damaged']) {
-    oldPassportFields.push({
-      step: this.getEditStep('how-damaged'),
-      title: 'How is your passport damaged?',
-      value: values['how-damaged']
+    naturalisationFields.push({
+      step: this.getEditStep('naturalisation-certificate-number'),
+      title: 'Certificate number',
+      value: values['naturalisation-certificate-number']
     });
-  };
+  }
 
-  response.sections.push({
-    className: 'old-passport-details',
-    title: 'Old passport',
-    fields: oldPassportFields
-  });
+  var parentsFields = [];
+  if (values['parent1-first-names']) {
+    response.sections.push({
+      className: 'parents-details',
+      title: 'Parents’ details',
+      fields: parentsFields
+    });
+    parentsFields.push({
+      step: this.getEditStep('parents-details'),
+      title: 'Parent 1’s name',
+      value: join(values, ['parent1-first-names', 'parent1-last-name'])
+    }, {
+      step: this.getEditStep('parents-details'),
+      title: 'Parent 2’s name',
+      value: join(values, ['parent2-first-names', 'parent2-last-name'])
+    }, {
+      step: this.getEditStep('parents-details'),
+      title: 'Marriage date',
+      value: moment(values['marriage-year'] + '-' + values['marriage-month'] + '-' + values['marriage-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+    });
+  }
+
+  var parent1Fields = [];
+  if (values['parent1-first-names']) {
+    response.sections.push({
+      className: 'parent1-details',
+      title: values['parent1-first-names'].concat('’s details'),
+      fields: parent1Fields
+    });
+    parent1Fields.push({
+      step: this.getEditStep('parent-1-details'),
+      title: 'Town of birth',
+      value: values['parent1-town']
+    }, {
+      step: this.getEditStep('parent-1-details'),
+      title: 'Country of birth',
+      value: values['parent1-country']
+    }, {
+      step: this.getEditStep('parent-1-details'),
+      title: 'Date of birth',
+      value: moment(values['parent1-age-year'] + '-' + values['parent1-age-month'] + '-' + values['parent1-age-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+    }, {
+      step: this.getEditStep('parent-1-details'),
+      title: 'Nationality',
+      value: values['parent1-nationality']
+    }, {
+      step: this.getEditStep('parent-1-details'),
+      title: 'Passport number',
+      value: values['parent1-passport-number']
+    }, {
+      step: this.getEditStep('parent-1-details'),
+      title: 'Date of issue',
+      value: moment(values['parent1-passport-issue-year'] + '-' + values['parent1-passport-issue-month'] + '-' + values['parent1-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+    });
+  }
+
+  var parent2Fields = [];
+  if (values['parent2-first-names']) {
+    response.sections.push({
+      className: 'parent2-details',
+      title: values['parent2-first-names'].concat('’s details'),
+      fields: parent2Fields
+    });
+    parent2Fields.push({
+      step: this.getEditStep('parent-2-details'),
+      title: 'Town of birth',
+      value: values['parent2-town']
+    }, {
+      step: this.getEditStep('parent-2-details'),
+      title: 'Country of birth',
+      value: values['parent2-country']
+    }, {
+      step: this.getEditStep('parent-2-details'),
+      title: 'Date of birth',
+      value: moment(values['parent2-age-year'] + '-' + values['parent2-age-month'] + '-' + values['parent2-age-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+    }, {
+      step: this.getEditStep('parent-2-details'),
+      title: 'Nationality',
+      value: values['parent2-nationality']
+    }, {
+      step: this.getEditStep('parent-2-details'),
+      title: 'Passport number',
+      value: values['parent2-passport-number']
+    }, {
+      step: this.getEditStep('parent-2-details'),
+      title: 'Date of issue',
+      value: moment(values['parent2-passport-issue-year'] + '-' + values['parent2-passport-issue-month'] + '-' + values['parent2-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+    });
+  }
+
+  // newpassport below
 
   var newPassportFields = [];
   var allPreviousNames = _.zip(values['previous-first-name'],values['previous-last-name']);
@@ -145,7 +251,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     newPassportFields.push({
       step: this.getEditStep('can-sign'),
       title: 'Signature',
-      value: 'You&#39;ll sign your passport when you receive it.'
+      value: 'You&rsquo;ll sign your passport when you receive it.'
     });
   } else {
     newPassportFields.push({

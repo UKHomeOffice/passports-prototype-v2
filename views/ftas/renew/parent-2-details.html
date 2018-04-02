@@ -3,7 +3,7 @@
 {{$pageTitle}}Father or parent 2{{/pageTitle}}
 
 {{$header}}
-    <h1>{{values.parent2-first-names}}'s details</h1>
+    <h1>{{values.parent2-first-names}}&rsquo;s details</h1>
 {{/header}}
 
 {{$content}}
@@ -13,42 +13,44 @@
 {{< hmpo-partials-form}}
 {{$form}}
 
-      {{#input-text}}parent2-town{{/input-text}}
-      {{#input-text}}parent2-country{{/input-text}}
+    {{#input-text}}parent2-town{{/input-text}}
+    {{#input-text}}parent2-country{{/input-text}}
 
-      <fieldset>
-          <div class="form-date">
-            <legend><span class="form-label-bold">Date of birth</span></legend>
-            <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
-              {{#input-text}}parent1-age-day{{/input-text}}
-              {{#input-text}}parent1-age-month{{/input-text}}
-              {{#input-text}}parent1-age-year{{/input-text}}
-          </div>
-      </fieldset>
-      <br>
-      {{#input-text}}parent1-nationality{{/input-text}}
-      <fieldset>
-        <legend><span class="form-label-bold">Passport number</span></legend>
-            <p class="form-hint" id="dob-hint">For example 502135326</p>
-              {{#input-text}}parent2-passport-number{{/input-text}}
-      </fieldset>
+    <fieldset>
+        <div class="form-date">
+        <legend><span class="form-label-bold">Date of birth</span></legend>
+        <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
+            {{#input-text}}parent2-age-day{{/input-text}}
+            {{#input-text}}parent2-age-month{{/input-text}}
+            {{#input-text}}parent2-age-year{{/input-text}}
+        </div>
+    </fieldset>
+    <br>
 
-      <fieldset>
-          <div class="form-date">
+    {{#input-text}}parent2-nationality{{/input-text}}
+
+    <fieldset>
+    <legend><span class="form-label-bold">Passport number</span></legend>
+        <p class="form-hint" id="dob-hint">For example 502135326</p>
+            {{#input-text}}parent2-passport-number{{/input-text}}
+    </fieldset>
+
+    <fieldset>
+        <div class="form-date">
             <legend><span class="form-label-bold">Date of issue</span></legend>
             <p class="form-hint" id="dob-hint">For example 12 04 2007</p>
-              {{#input-text}}parent1-age-day{{/input-text}}
-              {{#input-text}}parent1-age-month{{/input-text}}
-              {{#input-text}}parent1-age-year{{/input-text}}
-          </div>
-      </fieldset>
-      <br>
+            {{#input-text}}parent2-passport-issue-day{{/input-text}}
+            {{#input-text}}parent2-passport-issue-month{{/input-text}}
+            {{#input-text}}parent2-passport-issue-year{{/input-text}}
+        </div>
+    </fieldset>
+    <br>
+    
     {{#input-submit}}{{/input-submit}}
+
 {{/form}}
 {{/ hmpo-partials-form}}
 
-
 {{/content}}
-
 
 {{/ layout}}
