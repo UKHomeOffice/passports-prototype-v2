@@ -30,9 +30,9 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "browserify": "^13.1.0",
-    "connect-redis": "^3.1.0",
+    "connect-redis": "^3.3.3",
     "cookie-parser": "^1.4.3",
-    "express": "^4.14.0",
+    "express": "^4.16.3",
     "express-basic-auth": "^0.2.3",
     "express-partial-templates": "^0.2.0",
     "express-session": "^1.14.0",
@@ -43,13 +43,13 @@
     "hmpo-templates": "^1.0.0",
     "hogan-express-strict": "^0.5.4",
     "i18n-future": "^1.0.0",
-    "jquery": "^3.1.1",
-    "lodash": "^4.16.4",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.5",
     "npm-sass": "^1.2.0",
     "redis": "^2.6.2",
-    "typeahead-aria": "https://github.com/UKHomeOffice/typeahead-aria",
-    "uglify-js": "^3.0.0",
-    "van11y-accessible-tab-panel-aria": "https://github.com/gavboulton/van11y-accessible-tab-panel-aria#feature/keep-href"
+    "typeahead-aria": "git+https://github.com/UKHomeOffice/typeahead-aria.git",
+    "uglify-js": "^3.3.16",
+    "van11y-accessible-tab-panel-aria": "git+https://github.com/gavboulton/van11y-accessible-tab-panel-aria.git#feature/keep-href"
   },
   "devDependencies": {
     "watch": "^1.0.1"

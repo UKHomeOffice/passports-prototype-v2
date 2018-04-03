@@ -214,7 +214,6 @@ details {
       margin: 0.7em 0 0.3em 0; } }
 
 .list-bullet, .list-number {
-    margin-top: 5px;
     margin-bottom: 20px;
 }
 .list-bullet {
@@ -256,6 +255,25 @@ details {
 .list-item-bold p {
     margin-top: 1em;
     margin-bottom: 0;
+}
+
+.list-icon-tick li:before {
+  background-image: url('../images/icon_thin_tick-white.svg');
+  content: '';
+  background-size: 18px;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  margin-left: -28px;
+  margin-top: 2px;
+}
+
+.list-icon-tick li {
+  margin-bottom: 10px;
+}
+
+.list-icon-tick li:last-child {
+    margin-bottom: 30px;
 }
 
 /* renew */
