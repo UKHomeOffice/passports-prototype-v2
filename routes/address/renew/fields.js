@@ -378,7 +378,7 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [
-      {value: 'Special-delivery', label: 'Special delivery (£3 extra)'},
+      {value: 'Special-delivery', label: 'Special delivery (£5 extra)'},
       {value: 'Standard', label: 'Standard post (free)'}
     ],
     validate: [
