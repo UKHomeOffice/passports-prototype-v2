@@ -70,9 +70,9 @@ module.exports = {
     { value: false, label: 'No', toggle: 'application-country', child: 'select' }
   ],
   formatter: ['boolean'],
-  validate: [
+  /*validate: [
     'required'
-  ],
+  ],*/
   className: 'inline'
 },
 '16-or-older': {
