@@ -100,7 +100,7 @@
         },
         "previous-name": {
             "legend": "Have you ever been known by any other names?",
-            "hint": "For example a different name at birth."
+            "hint": "For example a different name at birth or last name."
         },
         "previous-name-change": {
             "legend": "Have you ever been known by any other names?"
