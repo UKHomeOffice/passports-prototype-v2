@@ -122,7 +122,17 @@ module.exports = {
     '/summary':{
         controller: require('../../../controllers/confirm'),
         template: 'confirm',
-        next: '/required-documents'
+        next: '/required-documents',
+
+        // TODO: CHANGE ROUTING.
+
+        forks: [{
+            target: '/declaration-other',
+            condition: {
+                field: 'relationship-applicant',
+                value: 'Other'
+            }
+          }]
     },
     '/required-documents':{
         controller: require('../../../controllers/change-of-name-docs')
