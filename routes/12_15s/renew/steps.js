@@ -123,16 +123,6 @@ module.exports = {
         controller: require('../../../controllers/confirm'),
         template: 'confirm',
         next: '/required-documents',
-
-        // TODO: CHANGE ROUTING.
-
-        forks: [{
-            target: '/declaration-other',
-            condition: {
-                field: 'relationship-applicant',
-                value: 'Other'
-            }
-          }]
     },
     '/required-documents':{
         controller: require('../../../controllers/change-of-name-docs')
@@ -160,6 +150,10 @@ module.exports = {
     },
     '/declaration':{
         prereqs: [ '/summary' ],
+        next: '/payment'
+    },
+    '/declaration-other':{
+        // prereqs: [ '/summary' ],
         next: '/payment'
     },
     '/payment':{

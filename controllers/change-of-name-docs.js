@@ -8,11 +8,16 @@ var Controller = function() {
 util.inherits(Controller, Base)
 
 Controller.prototype.get = function successHandler(req, res, callback) {
-	return res.redirect('./declaration')
 	// console.log('this', req.sessionModel.get('16-or-older'))
 	// if (req.sessionModel.get('16-or-older') == false){
 	// 	return res.redirect('./name-change-docs-for-parents')
 	// }
+	if (req.sessionModel.get('relationship-applicant') == 'Other'){
+		return res.redirect('./declaration-other')
+	}
+	else {
+		return res.redirect('./declaration')
+	}
 }
 
 module.exports = Controller
