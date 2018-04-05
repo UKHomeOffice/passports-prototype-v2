@@ -15,8 +15,21 @@
     <h2>Do you have a naturalisation certificate?</h2>
     {{#radio-group}}naturalisation-certificate{{/radio-group}}
 
-    <div id="naturalisation-certificate-number" class="reveal js-hidden">
+    <div id="naturalisation-certificate-details" class="reveal js-hidden">
         {{#input-text}}naturalisation-certificate-number{{/input-text}}
+
+        <fieldset>
+            <legend>
+                <span class="form-label-bold">Date of issue</span>
+            </legend>
+            <div class="form-date">
+                <p class="form-hint" id="dob-hint">For example 25 08 2017.</p>
+                {{#input-text}}naturalisation-certificate-issue-day{{/input-text}}
+                {{#input-text}}naturalisation-certificate-issue-month{{/input-text}}
+                {{#input-text}}naturalisation-certificate-issue-year{{/input-text}}
+            </div>
+        </fieldset>
+        <br>
     </div>
 </fieldset>
 

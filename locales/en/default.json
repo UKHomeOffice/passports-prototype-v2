@@ -63,6 +63,15 @@
             "label": "Naturalisation certificate number",
             "hint": "As written on your naturalisation certificate"
         },
+        "naturalisation-certificate-issue-day":{
+          "label": "Day"
+        },
+        "naturalisation-certificate-issue-month":{
+          "label": "Month"
+        },
+        "naturalisation-certificate-issue-year":{
+          "label": "Year"
+        },
         "address1":{
           "label": "Address"
         },

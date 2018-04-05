@@ -212,7 +212,7 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [
-      { value: true, label: 'Yes', toggle: 'naturalisation-certificate-number' },
+      { value: true, label: 'Yes', toggle: 'naturalisation-certificate-details' },
       { value: false, label: 'No' }
     ],
     className: 'inline'
@@ -221,6 +221,15 @@ module.exports = {
     // validate: [
     //     'required'
     //   ]
+  },
+  'naturalisation-certificate-issue-day': {
+    labelClassName: 'form-label',
+  },
+  'naturalisation-certificate-issue-year': {
+    labelClassName: 'form-label',
+  },
+  'naturalisation-certificate-issue-month': {
+    labelClassName: 'form-label',
   },
   'country-of-birth': {
     // validate: 'required',
