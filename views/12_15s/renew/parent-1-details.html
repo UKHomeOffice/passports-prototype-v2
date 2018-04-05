@@ -28,18 +28,25 @@
           </div>
       </fieldset>
       <br>
-      {{#input-text}}parent1-nationality{{/input-text}}
+
+      <!-- {{#input-text}}parent1-nationality{{/input-text}} -->
 
       <fieldset>
-        <legend><span class="form-label-bold">Passport number</span></legend>
-            <p class="form-hint" id="dob-hint">For example 502135326</p>
+        <legend><span class="form-label-bold">Nationality</span></legend>
+            <p class="form-hint" id="dob-hint">At the time of the passport holder's birth</p>
+              {{#input-text}}parent1-passport-number{{/input-text}}
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="form-label-bold">UK passport number</span></legend>
+            <p class="form-hint" id="dob-hint">If applicable, for example 502135326</p>
               {{#input-text}}parent1-passport-number{{/input-text}}
       </fieldset>
 
       <fieldset>
           <div class="form-date">
             <legend><span class="form-label-bold">Date of issue</span></legend>
-            <p class="form-hint" id="dob-hint">For example 12 04 2007</p>
+            <p class="form-hint" id="dob-hint">If applicable, for example 12 04 2007</p>
               {{#input-text}}parent1-age-day{{/input-text}}
               {{#input-text}}parent1-age-month{{/input-text}}
               {{#input-text}}parent1-age-year{{/input-text}}
