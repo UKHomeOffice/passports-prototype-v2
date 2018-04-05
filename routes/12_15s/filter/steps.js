@@ -97,8 +97,13 @@ module.exports = {
       nextAlt: 'parental-responsibility',
       //controller: require('../../../controllers/applicant-relationship'),
       forks: [{
+        target: '/third-party-name',
+        condition: function (req, res) {
+          return req.session['hmpo-wizard-common']['relationship-applicant'] == "Other" && req.session['hmpo-wizard-common']['16-or-older'] == true;
+        }
+      }, {
         target: '/parental-responsibility',
-        condition: function(req, res) {
+        condition: function (req, res) {
           return req.session['hmpo-wizard-common']['16-or-older'] == false;
         }
       }],
