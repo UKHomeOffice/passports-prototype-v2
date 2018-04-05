@@ -105,12 +105,8 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [
-      {value: 'Mr', label: 'Mr'},
-      {value: 'Mrs', label: 'Mrs'},
       {value: 'Miss', label: 'Miss'},
       {value: 'Master', label: 'Master'},
-      {value: 'Ms', label: 'Ms'},
-      {value: 'Other', label: 'Other', toggle: 'other-titles'}
     ],
     validate: [
       'required'
