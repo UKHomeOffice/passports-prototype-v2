@@ -105,6 +105,9 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [
+      {value: 'Mr', label: 'Mr'},
+      {value: 'Mrs', label: 'Mrs'},
+      {value: 'Ms', label: 'Ms'},
       {value: 'Miss', label: 'Miss'},
       {value: 'Master', label: 'Master'},
       {value: 'Other', label: 'Other', toggle: 'other-titles'},
