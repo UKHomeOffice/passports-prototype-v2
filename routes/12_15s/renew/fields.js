@@ -107,6 +107,7 @@ module.exports = {
     options: [
       {value: 'Miss', label: 'Miss'},
       {value: 'Master', label: 'Master'},
+      {value: 'Other', label: 'Other', toggle: 'other-titles'},
     ],
     validate: [
       'required'
