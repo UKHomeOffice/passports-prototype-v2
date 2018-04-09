@@ -8,18 +8,21 @@
 
 {{$content}}
 
-<p>You need to provide all the details that you know.</p>
+<div class="panel panel-border-wide alert-default">
+    <p>You need to enter as much information as you can or your application may be delayed.</p>
+</div>
 
 {{< hmpo-partials-form}}
 {{$form}}
 
     {{#input-text}}parent2-town{{/input-text}}
+
     {{#input-text}}parent2-country{{/input-text}}
 
     <fieldset>
         <div class="form-date">
-        <legend><span class="form-label-bold">Date of birth</span></legend>
-        <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
+            <legend><span class="form-label-bold">Date of birth</span></legend>
+            <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
             {{#input-text}}parent2-age-day{{/input-text}}
             {{#input-text}}parent2-age-month{{/input-text}}
             {{#input-text}}parent2-age-year{{/input-text}}
@@ -29,16 +32,12 @@
 
     {{#input-text}}parent2-nationality{{/input-text}}
 
-    <fieldset>
-    <legend><span class="form-label-bold">Passport number</span></legend>
-        <p class="form-hint" id="dob-hint">For example 502135326</p>
-            {{#input-text}}parent2-passport-number{{/input-text}}
-    </fieldset>
+    {{#input-text}}parent2-passport-number{{/input-text}}
 
     <fieldset>
         <div class="form-date">
             <legend><span class="form-label-bold">Date of issue</span></legend>
-            <p class="form-hint" id="dob-hint">For example 12 04 2007</p>
+            <p class="form-hint" id="dob-hint">If applicable, for example 12 04 2007</p>
             {{#input-text}}parent2-passport-issue-day{{/input-text}}
             {{#input-text}}parent2-passport-issue-month{{/input-text}}
             {{#input-text}}parent2-passport-issue-year{{/input-text}}

@@ -13,10 +13,14 @@ module.exports = {
         backLink: './',
         next: '/dob'
     },
-    '/lost-stolen': {
-        fields: ['lost-stolen'],
-        next: '/dob'
-    },
+
+    // Not needed in FTA flow (non-Blue passport)
+    // 
+    // '/lost-stolen': {
+    //     fields: ['lost-stolen'],
+    //     next: '/dob'
+    // },
+
     '/what-do-you-want-to-do': {
         fields: ['what-to-do'],
         backLink: './',

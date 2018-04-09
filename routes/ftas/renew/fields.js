@@ -212,15 +212,49 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [
-      { value: true, label: 'Yes', toggle: 'naturalisation-certificate-number' },
+      { value: true, label: 'Yes', toggle: 'naturalisation-certificate-details' },
       { value: false, label: 'No' }
     ],
     className: 'inline'
   },
   'naturalisation-certificate-number': {
-    // validate: [
-    //     'required'
-    //   ]
+    validate: [
+        'required'
+      ],
+    dependent: {
+      field: 'naturalisation-certificate',
+      value: true
+    }
+  },
+  'naturalisation-certificate-issue-day': {
+    labelClassName: 'form-label',
+    validate: [
+        'required'
+      ],
+    dependent: {
+      field: 'naturalisation-certificate',
+      value: true
+    }
+  },
+  'naturalisation-certificate-issue-month': {
+    labelClassName: 'form-label',
+    validate: [
+        'required'
+      ],
+    dependent: {
+      field: 'naturalisation-certificate',
+      value: true
+    }
+  },
+  'naturalisation-certificate-issue-year': {
+    labelClassName: 'form-label',
+    validate: [
+        'required'
+      ],
+    dependent: {
+      field: 'naturalisation-certificate',
+      value: true
+    }
   },
   'country-of-birth': {
     // validate: 'required',
@@ -310,7 +344,7 @@ module.exports = {
     // ]
   },
   'parent1-passport-number': {
-    labelClassName: 'visuallyhidden',
+    labelClassName: 'form-label-bold',
     // validate: [
     //   'required'
     // ]
@@ -372,7 +406,7 @@ module.exports = {
     // ]
   },
   'parent2-passport-number': {
-    labelClassName: 'visuallyhidden',
+    labelClassName: 'form-label-bold',
     // validate: [
     //   'required'
     // ]
@@ -452,6 +486,7 @@ module.exports = {
     ]
   },
   'mobile': {
+    labelClassName: 'visuallyhidden',
     validate: [
         'numeric',
         'required'
@@ -469,8 +504,8 @@ module.exports = {
       value: 'Passport size'
     },
     options: [
-      {value: '32', label: 'Standard adult 32-page passport (£72.50)'},
-      {value: '48', label: 'Jumbo adult 48-page passport (£85.50)'}
+      {value: '34', label: 'Standard adult 34-page passport (£75.50)'},
+      {value: '50', label: 'Jumbo adult 50-page passport (£85.50)'}
     ],
     validate: [
       'required'
@@ -531,7 +566,7 @@ module.exports = {
           className: 'form-label-bold'
       },
       options: [
-          { value: true, label: 'Secure delivery (&#163;3 extra)' },
+          { value: true, label: 'Secure delivery (£5 extra)' },
           { value: false, label: 'Standard post (free)' }
       ]
   },
