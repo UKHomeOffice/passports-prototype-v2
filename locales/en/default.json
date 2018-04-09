@@ -244,7 +244,8 @@
           "label": "Country of birth"
         },
         "parent1-nationality":{
-          "label": "Nationality"
+          "label": "Nationality",
+          "hint": "At the time of the passport holder's birth"
         },
         "parent1-age-day":{
           "label": "Day"
@@ -256,7 +257,8 @@
           "label": "Year"
         },
         "parent1-passport-number":{
-          "label": "Passport Number"
+          "label": "Passport Number",
+          "hint": "If applicable, for example 502135326"
         },
         "parent1-passport-issue-day":{
           "label": "Day"
@@ -280,7 +282,8 @@
           "label": "Country of birth"
         },
         "parent2-nationality":{
-          "label": "Nationality"
+          "label": "Nationality",
+          "hint": "At the time of the passport holder's birth"
         },
         "parent2-age-day":{
           "label": "Day"
@@ -292,7 +295,8 @@
           "label": "Year"
         },
         "parent2-passport-number":{
-          "label": "Passport Number"
+          "label": "Passport Number",
+          "hint": "If applicable, for example 502135326"
         },
         "parent2-passport-issue-day":{
           "label": "Day"

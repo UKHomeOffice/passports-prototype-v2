@@ -59,7 +59,7 @@ module.exports = {
       },
     '/naturalisation-details':{
         next: '/home-address',
-        fields:['naturalisation-certificate', 'naturalisation-certificate-number'],
+        fields:['naturalisation-certificate', 'naturalisation-certificate-number', 'naturalisation-certificate-issue-day', 'naturalisation-certificate-issue-month', 'naturalisation-certificate-issue-year'],
         forks: [{
             target: '/parents-details',
             condition: {
