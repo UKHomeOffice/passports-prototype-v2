@@ -53,21 +53,21 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
 // TODO:
 // - Add in Date of issue
 
-  var naturalisationFields = [];
-  if (values['naturalisation-certificate'] == true) {
+  var naturalisationRegistrationFields = [];
+  if (values['naturalisation-registration-certificate'] == true) {
     response.sections.push({
-      className: 'naturalisation-details',
-      title: 'Naturalisation details',
-      fields: naturalisationFields
+      className: 'naturalisation-registration-details',
+      title: 'Naturalisation or registration details',
+      fields: naturalisationRegistrationFields
     });
-    naturalisationFields.push({
-      step: this.getEditStep('naturalisation-certificate-number'),
+    naturalisationRegistrationFields.push({
+      step: this.getEditStep('naturalisation-registration-certificate-number'),
       title: 'Certificate number',
-      value: values['naturalisation-certificate-number']
+      value: values['naturalisation-registration-certificate-number']
     }, {
-      step: this.getEditStep('naturalisation-certificate-issue-year'),
+      step: this.getEditStep('naturalisation-registration-certificate-issue-year'),
       title: 'Date of issue',
-      value: moment(values['naturalisation-certificate-issue-year'] + '-' + values['naturalisation-certificate-issue-month'] + '-' + values['naturalisation-certificate-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+      value: moment(values['naturalisation-registration-certificate-issue-year'] + '-' + values['naturalisation-registration-certificate-issue-month'] + '-' + values['naturalisation-registration-certificate-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     });
   }
 

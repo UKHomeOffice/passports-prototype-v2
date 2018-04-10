@@ -205,54 +205,54 @@ module.exports = {
     ],
     className: 'inline'
   },
-  'naturalisation-certificate': {
+  'naturalisation-registration-certificate': {
     formatter: 'boolean',
     validation: 'default',
     legend: {
       className: 'visuallyhidden'
     },
     options: [
-      { value: true, label: 'Yes', toggle: 'naturalisation-certificate-details' },
+      { value: true, label: 'Yes', toggle: 'naturalisation-registration-certificate-details' },
       { value: false, label: 'No' }
     ],
     className: 'inline'
   },
-  'naturalisation-certificate-number': {
+  'naturalisation-registration-certificate-number': {
     validate: [
         'required'
       ],
     dependent: {
-      field: 'naturalisation-certificate',
+      field: 'naturalisation-registration-certificate',
       value: true
     }
   },
-  'naturalisation-certificate-issue-day': {
+  'naturalisation-registration-certificate-issue-day': {
     labelClassName: 'form-label',
     validate: [
         'required'
       ],
     dependent: {
-      field: 'naturalisation-certificate',
+      field: 'naturalisation-registration-certificate',
       value: true
     }
   },
-  'naturalisation-certificate-issue-month': {
+  'naturalisation-registration-certificate-issue-month': {
     labelClassName: 'form-label',
     validate: [
         'required'
       ],
     dependent: {
-      field: 'naturalisation-certificate',
+      field: 'naturalisation-registration-certificate',
       value: true
     }
   },
-  'naturalisation-certificate-issue-year': {
+  'naturalisation-registration-certificate-issue-year': {
     labelClassName: 'form-label',
     validate: [
         'required'
       ],
     dependent: {
-      field: 'naturalisation-certificate',
+      field: 'naturalisation-registration-certificate',
       value: true
     }
   },

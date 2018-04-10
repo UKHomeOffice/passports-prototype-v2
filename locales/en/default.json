@@ -55,21 +55,20 @@
         "born-in-uk": {
             "legend": "Were you born in the UK?"
         },
-        "naturalisation-certificate": {
-          "label": "Naturalisation certificate",
-          "legend": "Do you have a naturalisation certificate?"
+        "naturalisation-registration-certificate": {
+          "label": "Naturalisation or registration certificate"
         },
-        "naturalisation-certificate-number": {
-            "label": "Naturalisation certificate number",
-            "hint": "As written on your naturalisation certificate"
+        "naturalisation-registration-certificate-number": {
+            "label": "Certificate number",
+            "hint": "As written on your certificate"
         },
-        "naturalisation-certificate-issue-day":{
+        "naturalisation-registration-certificate-issue-day":{
           "label": "Day"
         },
-        "naturalisation-certificate-issue-month":{
+        "naturalisation-registration-certificate-issue-month":{
           "label": "Month"
         },
-        "naturalisation-certificate-issue-year":{
+        "naturalisation-registration-certificate-issue-year":{
           "label": "Year"
         },
         "address1":{
