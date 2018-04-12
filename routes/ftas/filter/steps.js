@@ -17,7 +17,14 @@ module.exports = {
     '/first-uk': {
         backLink: './',
         fields: ['passport-before'],
-        next: '/lost-stolen'
+        next: '/lost-stolen',
+        forks: [{
+          target: '/dob',
+          condition: {
+            field: 'passport-before',
+            value: false
+          }
+        }]
     },
     '/lost-stolen': {
         fields: ['lost-stolen'],
@@ -56,16 +63,26 @@ module.exports = {
       next: '/passport-expiry', /* if they are from the UK */
       forks: [{
         target: '/dob-below-16',
-        condition: {
-          field: '16-or-older',
-          value: false
+        condition: function (req, res) {
+          return req.session['hmpo-wizard-common']['16-or-older'] == false; // If they are BELOW 16
         }
-      }],
+      }, {
+        target: '/uncancelled',
+        condition: function (req, res) {
+          return req.session['hmpo-wizard-common']['16-or-older'] == true && req.session['hmpo-wizard-common']['passport-before'] == false; // If they are OVER 16 + NOT had UK passport before
+        }
+      }]
     },
     '/dob-below-16': {
       fields: ['age-day', 'age-year', 'age-month'],
       backLink: './dob',
-      next: '/passport-expiry'
+      next: '/passport-expiry',
+      forks: [{
+        target: '/uncancelled',
+        condition: function (req, res) {
+          return req.session['hmpo-wizard-common']['passport-before'] == false; // If they are BELOW 16 + NOT had UK passport before
+        }
+      }]
     },
     '/passport-expiry': {
       fields: ['issue-day', 'issue-year', 'issue-month'],

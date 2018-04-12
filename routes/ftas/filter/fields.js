@@ -101,12 +101,7 @@ module.exports = {
   ],
   formatter: ['boolean'],
   validate: [
-    'required',
-    {
-      type:'equal',
-      arguments:[true], /* if the arguments are NOT selected */
-      redirect:'https://passportapplication.service.gov.uk/ips-olc/'
-    }
+    'required'
   ],
   className: 'inline'
 },
@@ -256,15 +251,6 @@ module.exports = {
       {
         value: 'No',
         label: 'No'
-      }
-    ],
-    validate: [
-      'required',
-      {
-        type: 'equal',
-        arguments: ['No'],
-        /* if Yes is selected */
-        redirect: 'https://passportapplication.service.gov.uk/ips-olc/'
       }
     ]
   },
