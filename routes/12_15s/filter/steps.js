@@ -93,7 +93,7 @@ module.exports = {
     '/relationship-applicant': {
       fields: ['relationship-applicant'],
       backLink: '/uncancelled',
-      next: '/../intro',
+      next: '/third-party-name',
       forks: [{
         target: '/parental-responsibility',
         condition: function (req, res) {
@@ -108,7 +108,7 @@ module.exports = {
     },
     '/third-party-name': {
       fields: ['third-party-first-name', 'third-party-last-name'],
-      backLink: './parental-responsibility',
+      backLink: './relationship-applicant',
       next: '/../intro'
     }
 };
