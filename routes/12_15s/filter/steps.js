@@ -92,29 +92,11 @@ module.exports = {
     },
     '/relationship-applicant': {
       fields: ['relationship-applicant'],
-      backLink: './uncancelled',
-      next: '/../intro',
-      nextAlt: 'parental-responsibility',
-      //controller: require('../../../controllers/applicant-relationship'),
-      forks: [{
-        target: '/third-party-name',
-        condition: function (req, res) {
-          return req.session['hmpo-wizard-common']['relationship-applicant'] == "Other" && req.session['hmpo-wizard-common']['16-or-older'] == true;
-        }
-      }, {
-        target: '/parental-responsibility',
-        condition: function (req, res) {
-          return req.session['hmpo-wizard-common']['16-or-older'] == false;
-        }
-      }],
-    },
-    '/relationship-applicant-other': {
-      fields: ['relationship-applicant-other'],
-      backLink: './relationship-applicant',
+      backLink: '/uncancelled',
       next: '/../intro',
       forks: [{
         target: '/parental-responsibility',
-        condition: function(req, res) {
+        condition: function (req, res) {
           return req.session['hmpo-wizard-common']['16-or-older'] == false;
         }
       }],
@@ -122,12 +104,7 @@ module.exports = {
     '/parental-responsibility': {
       fields: ['parental-responsibility'],
       backLink: './relationship-applicant',
-      next: '/../intro',
-      controller: require('../../../controllers/parental-responsibility'),
-      nextAlt: 'third-party-name'
-    },
-    '/parental-responsibility-no': {
-      backLink: './parental-responsibility'
+      next: '/third-party-name'
     },
     '/third-party-name': {
       fields: ['third-party-first-name', 'third-party-last-name'],
