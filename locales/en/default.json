@@ -47,13 +47,13 @@
         },
         "town-of-birth": {
             "label": "Town of birth",
-            "hint": "As written on your birth, naturalisation or registration certificate"
+            "hint": "As written on their birth, naturalisation or registration certificate"
         },
         "country-of-birth": {
             "label": "Country of birth"
         },
         "born-in-uk": {
-            "legend": "Were you born in the UK?"
+            "legend": "Was {{values.name}} born in the UK?"
         },
         "naturalisation-registration-certificate": {
           "label": "Naturalisation or registration certificate"
@@ -117,7 +117,7 @@
             "label": "All of your previous names"
         },
         "braille": {
-            "label": "I need a braille sticker."
+            "label": "They need a braille sticker."
         },
         "title": {
             "label": "your title"
