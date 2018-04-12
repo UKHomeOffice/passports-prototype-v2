@@ -11,7 +11,7 @@ module.exports = {
         backLink: './uploading'
     },
     '/photo-uploaded-success': {
-        backLink: '../upload'
+        backLink: './'
     },
     '/plain-expression': {
         fields: ['plain-expression'],
@@ -28,6 +28,26 @@ module.exports = {
         next: './'
     },
     '/check-photo-and-submit': {
-        backLink: './photo-uploaded-success'
+        fields: ['submit-photo'],
+        backLink: './shadows-face',
+        next: '/../renew',
+        forks: [{
+            target: '/../renew/name',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
+            }
+        }, {
+            target: '/../renew',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
+            }
+        }, {
+            target: '/../intro/choose-photo-method',
+            condition: {
+                field: 'submit-photo',
+                value: 'No'
+            }
+        }]
     }
+    
 };
