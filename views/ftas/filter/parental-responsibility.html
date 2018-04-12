@@ -1,0 +1,42 @@
+{{< layout}}
+
+
+{{$pageTitle}}What is your relationship to the passport holder?{{/pageTitle}}
+
+{{$header}}
+    <h1>Do you have parental responsibility?</h1>
+{{/header}}
+
+{{$content}}
+
+<p>This means you can legally act for this child. It's best to <a href="https://www.gov.uk/parental-rights-responsibilities/who-has-parental-responsibility">check you have parental responsibility</a>.</p>
+
+
+    {{< hmpo-partials-form}}
+    {{$form}}
+      {{#radio-group}}parental-responsibility{{/radio-group}}
+      <div class="panel panel-border-narrow js-hidden" id="parental-no">
+            <p>To continue with this application, you'll need a letter from a person with parental responsibility.</p>
+
+      </div>
+      {{#input-submit}}{{/input-submit}}
+    {{/form}}
+    {{/ hmpo-partials-form}}
+
+<!--
+    <details>
+        <summary><span class="summary">I'm not sure if I have parental responsibility</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>A mother automatically has the legal right to act for her child, this is known as parental responsibility.</p>
+          <p>A father usually has parental responsibility if he's either:</p>
+          <ul class="list-bullet">
+            <li>married to the child's mother</li>
+            <li>listed on the birth certificate (after a certain date depending on which part of the UK the child was born)</li>
+          </ul>
+          <p><a href="https://www.gov.uk/parental-rights-responsibilities">Read more on parental responsibility</a></p>
+        </div>
+    </details>
+-->
+{{/content}}
+
+{{/ layout}}
