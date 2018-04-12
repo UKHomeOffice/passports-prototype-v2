@@ -48,30 +48,48 @@ module.exports = {
         next: '/parents-details',
         fields:['age-day', 'age-month', 'age-year', 'born-in-uk', 'town-of-birth', 'country-of-birth'],
         controller: require('../../../controllers/go-overseas'),
-        nextAlt: './home-address-overseas'
+        nextAlt: './home-address-overseas',
+        forks: [{
+          target: '/home-address',
+          condition: function(req, res) {
+            return req.session['hmpo-wizard-common']['16-or-older'] == true;
+          }
+        }],
       },
     '/parents-details':{
         fields:['parent1-first-names','parent2-first-names', 'marriage-day', 'marriage-month', 'marriage-year'],
+        forks: [{
+          target: '/parent-2-details',
+          condition: function(req, res) {
+            return req.session['hmpo-wizard-common']['parent1-first-names'] == "";
+          }
+        }],
         next: '/parent-1-details',
     },
     '/parent-1-details':{
         fields:[],
-        //controller: require('../../../controllers/parents-details'),
+        forks: [{
+          target: '/home-address',
+          condition: function(req, res) {
+            return req.session['hmpo-wizard-common']['parent2-first-names'] == "";
+          }
+        }],
         next: '/parent-2-details',
     },
     '/parent-2-details':{
-        fields:['parent2-first-names'],
+        fields:[],
         next: '/home-address',
-        controller: require('../../../controllers/go-overseas'),
+        backLink: 'parents-details',
         nextAlt: './home-address-overseas'
+    },
+    '/home-address':{
+        fields:['address1', 'address2','address3','address4','address5', 'town', 'postcode'],
+        backLink: 'parents-details',
+        next: '/contact-details'
     },
     '/home-address-overseas':{
         fields:['address1', 'address2','address3','address4','address5', 'town', 'postcode'],
         next: '/contact-details-overseas'
-    },
-    '/home-address':{
-        fields:['address1', 'address2','address3','address4','address5', 'town', 'postcode'],
-        next: '/contact-details'
     },
     '/contact-details-overseas':{
         fields:['email','application-country-code' ,'mobile-overseas'],
