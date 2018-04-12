@@ -58,6 +58,7 @@ module.exports = {
       },
     '/parents-details':{
         fields:['parent1-first-names','parent2-first-names', 'marriage-day', 'marriage-month', 'marriage-year'],
+        controller: require('../../../controllers/parents-details'),
         forks: [{
           target: '/parent-2-details',
           condition: function(req, res) {

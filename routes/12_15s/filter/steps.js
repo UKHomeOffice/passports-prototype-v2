@@ -108,7 +108,7 @@ module.exports = {
     },
     '/third-party-name': {
       fields: ['third-party-first-name', 'third-party-last-name'],
-      backLink: './parental-responsibility',
+      backLink: './relationship-applicant',
       next: '/../intro'
     }
 };

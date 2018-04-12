@@ -9,8 +9,8 @@
       "issue-month": "12",
       "issue-year": "07",
       "phoneno": "0208 123 4567",
-      "name": "Adrian",
-      "lastname": "Brereton",
+      "name": "Mark",
+      "lastname": "Tangerine",
       "age-day": "12",
       "age-month": "07",
       "age-year": "1979",
@@ -38,7 +38,9 @@
       "expiry-month-damaged": "07",
       "expiry-year-damaged": "17",
       "parent1-first-names": "Victoria",
-      "parent2-first-names": "Daniel"
+      "parent2-first-names": "Daniel",
+      "third-party-first-name": "Sarah",
+      "third-party-last-name": "Singleton"
   };
 
   $("#populate").on("click", function(){
@@ -67,6 +69,7 @@
       $('#can-sign-true').click();
       $('#secure-return-false').click();
       $('#submit-photo-Yes').click();
+      $('#parental-responsibility-true').click();
 
       //change name
       $('#change-name-false').click();
