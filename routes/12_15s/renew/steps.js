@@ -48,7 +48,13 @@ module.exports = {
         next: '/parents-details',
         fields:['age-day', 'age-month', 'age-year', 'born-in-uk', 'town-of-birth', 'country-of-birth'],
         controller: require('../../../controllers/go-overseas'),
-        nextAlt: './home-address-overseas'
+        nextAlt: './home-address-overseas',
+        forks: [{
+          target: '/home-address',
+          condition: function(req, res) {
+            return req.session['hmpo-wizard-common']['16-or-older'] == true;
+          }
+        }],
       },
     '/parents-details':{
         fields:['parent1-first-names','parent2-first-names', 'marriage-day', 'marriage-month', 'marriage-year'],
@@ -58,7 +64,6 @@ module.exports = {
             return req.session['hmpo-wizard-common']['parent1-first-names'] == "";
           }
         }],
-        //controller: require('../../../controllers/parents-details'),
         next: '/parent-1-details',
     },
     '/parent-1-details':{
@@ -69,7 +74,6 @@ module.exports = {
             return req.session['hmpo-wizard-common']['parent2-first-names'] == "";
           }
         }],
-        //controller: require('../../../controllers/parents-details-2'),
         next: '/parent-2-details',
     },
     '/parent-2-details':{
