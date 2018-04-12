@@ -55,11 +55,11 @@ module.exports = {
     options: [
       {
         value: true,
-        label: 'I’ll tell the passport holder to sign their passport',
+        label: 'I’ll tell {{values.name}} to sign the new passport',
       },
       {
         value: false,
-        label: 'They can’t physically sign their name',
+        label: '{{values.name}} can’t physically sign',
         toggle: 'no-sign'
       }
     ]
@@ -133,7 +133,7 @@ module.exports = {
       },
       options: [
           { value: false, label: 'Yes' },
-          { value: true, label: 'No, their name has changed', toggle: 'note-regarding-name-change' }
+          { value: true, label: 'No,  name has changed', toggle: 'note-regarding-name-change' }
       ],
       formatter: ['boolean'],
       validate: [
