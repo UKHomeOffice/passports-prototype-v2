@@ -8,37 +8,43 @@
 
 {{$content}}
 
-<p>We need to confirm that {{values.name}} is eligible to get a UK passport.</p>
+<p>We need these details to confirm {{values.name}} is eligible for a UK passport.</p>
+
+<div class="panel panel-border-wide alert-default">
+    <p>You need to enter parents as listed on your birth certificate.</p>
+</div>
 
 {{< hmpo-partials-form}}
 {{$form}}
-      <h2>Mother or parent 1</h2>
-      {{#input-text}}parent1-first-names{{/input-text}}
-      {{#input-text}}parent1-last-name{{/input-text}}
 
-      <h2>Father or parent 2</h2>
-      {{#input-text}}parent2-first-names{{/input-text}}
-      {{#input-text}}parent2-last-name{{/input-text}}
+<h2>Mother or parent 1</h2>
+{{#input-text}}parent1-first-names{{/input-text}}
+{{#input-text}}parent1-last-name{{/input-text}}
 
-      <div id="marriage-date">
-        <fieldset>
-            <div class="form-date">
-              <legend><span class="form-label-bold">Date of marriage or civil partnership</span></legend>
-              <p class="form-hint" id="dob-hint">For example 25 08 2012. Leave this blank if it doesn't apply.</p>
-                {{#input-text}}marriage-day{{/input-text}}
-                {{#input-text}}marriage-month{{/input-text}}
-                {{#input-text}}marriage-year{{/input-text}}
-            </div>
-        </fieldset>
-        <br>
-      </div>
+<h2>Father or parent 2</h2>
+{{#input-text}}parent2-first-names{{/input-text}}
+{{#input-text}}parent2-last-name{{/input-text}}
 
-    {{#input-submit}}{{/input-submit}}
+<div id="marriage-date">
+    <fieldset>
+        <div class="form-date">
+            <legend>
+                <span class="form-label-bold">Date of marriage or civil partnership</span>
+            </legend>
+            <p class="form-hint" id="dob-hint">If applicable, for example 25 08 2012</p>
+            {{#input-text}}marriage-day{{/input-text}}
+            {{#input-text}}marriage-month{{/input-text}}
+            {{#input-text}}marriage-year{{/input-text}}
+        </div>
+    </fieldset>
+    <br>
+</div>
+
+{{#input-submit}}{{/input-submit}}
+
 {{/form}}
 {{/ hmpo-partials-form}}
 
-
 {{/content}}
-
 
 {{/ layout}}

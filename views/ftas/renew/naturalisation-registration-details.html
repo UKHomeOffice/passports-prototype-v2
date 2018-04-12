@@ -1,0 +1,42 @@
+{{< layout}}
+
+{{$pageTitle}}Naturalisation or registration details{{/pageTitle}}
+
+{{$header}}
+    <h1>Do you have a naturalisation or registration certificate?</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+<fieldset class="inline">
+    {{#radio-group}}naturalisation-registration-certificate{{/radio-group}}
+
+    <div id="naturalisation-registration-certificate-details" class="reveal js-hidden">
+        {{#input-text}}naturalisation-registration-certificate-number{{/input-text}}
+
+        <fieldset>
+            <legend>
+                <span class="form-label-bold">Date of issue</span>
+            </legend>
+            <div class="form-date">
+                <p class="form-hint" id="dob-hint">For example 25 08 2017.</p>
+                {{#input-text}}naturalisation-registration-certificate-issue-day{{/input-text}}
+                {{#input-text}}naturalisation-registration-certificate-issue-month{{/input-text}}
+                {{#input-text}}naturalisation-registration-certificate-issue-year{{/input-text}}
+            </div>
+        </fieldset>
+        <br>
+    </div>
+</fieldset>
+
+{{#input-submit}}{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}

@@ -50,20 +50,20 @@ module.exports = {
         controller: require('../../../controllers/go-overseas'),
         nextAlt: './home-address-overseas',
         forks: [{
-            target: '/naturalisation-details',
+            target: '/naturalisation-registration-details',
             condition: {
                 field: 'born-in-uk',
                 value: false
             }
         }]
       },
-    '/naturalisation-details':{
+    '/naturalisation-registration-details':{
         next: '/home-address',
-        fields:['naturalisation-certificate', 'naturalisation-certificate-number'],
+        fields:['naturalisation-registration-certificate', 'naturalisation-registration-certificate-number', 'naturalisation-registration-certificate-issue-day', 'naturalisation-registration-certificate-issue-month', 'naturalisation-registration-certificate-issue-year'],
         forks: [{
             target: '/parents-details',
             condition: {
-                field: 'naturalisation-certificate',
+                field: 'naturalisation-registration-certificate',
                 value: false
             }
         }]

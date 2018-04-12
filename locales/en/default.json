@@ -55,13 +55,21 @@
         "born-in-uk": {
             "legend": "Were you born in the UK?"
         },
-        "naturalisation-certificate": {
-          "label": "Naturalisation certificate",
-          "legend": "Do you have a naturalisation certificate?"
+        "naturalisation-registration-certificate": {
+          "label": "Naturalisation or registration certificate"
         },
-        "naturalisation-certificate-number": {
-            "label": "Naturalisation certificate number",
-            "hint": "As written on your naturalisation certificate"
+        "naturalisation-registration-certificate-number": {
+            "label": "Certificate number",
+            "hint": "As written on your certificate"
+        },
+        "naturalisation-registration-certificate-issue-day":{
+          "label": "Day"
+        },
+        "naturalisation-registration-certificate-issue-month":{
+          "label": "Month"
+        },
+        "naturalisation-registration-certificate-issue-year":{
+          "label": "Year"
         },
         "address1":{
           "label": "Address"
@@ -235,7 +243,8 @@
           "label": "Country of birth"
         },
         "parent1-nationality":{
-          "label": "Nationality"
+          "label": "Nationality",
+          "hint": "At the time of the passport holder's birth"
         },
         "parent1-age-day":{
           "label": "Day"
@@ -247,7 +256,8 @@
           "label": "Year"
         },
         "parent1-passport-number":{
-          "label": "Passport Number"
+          "label": "Passport Number",
+          "hint": "If applicable, for example 502135326"
         },
         "parent1-passport-issue-day":{
           "label": "Day"
@@ -271,7 +281,8 @@
           "label": "Country of birth"
         },
         "parent2-nationality":{
-          "label": "Nationality"
+          "label": "Nationality",
+          "hint": "At the time of the passport holder's birth"
         },
         "parent2-age-day":{
           "label": "Day"
@@ -283,7 +294,8 @@
           "label": "Year"
         },
         "parent2-passport-number":{
-          "label": "Passport Number"
+          "label": "Passport Number",
+          "hint": "If applicable, for example 502135326"
         },
         "parent2-passport-issue-day":{
           "label": "Day"

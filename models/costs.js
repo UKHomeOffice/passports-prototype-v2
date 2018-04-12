@@ -32,22 +32,22 @@ Costs.prototype.getCost = function () {
     } else {
         cost += this.get('veteran') ? 0 : config.costs['standard-service'];
     }
-    if (this.get('passport-options') == '48') {
+    if (this.get('passport-options') == '50') {
         cost += this.largePassport();
     }
-    if (this.get('passport-options-overseas') == '48') {
+    if (this.get('passport-options-overseas') == '50') {
         cost += this.largePassport() + 25.36;
     }
-    if (this.get('passport-options-overseas') == '32') {
+    if (this.get('passport-options-overseas') == '34') {
         cost += 30.36;
     }
     if (this.get('secure-return')) {
         cost += this.delivery();
     }
-    if (this.get('passport-options-dps') == '48') {
+    if (this.get('passport-options-dps') == '50') {
         cost += this.largePassport() + 51.5;
     }
-    if (this.get('passport-options-dps') == '32') {
+    if (this.get('passport-options-dps') == '34') {
         cost += 55.5;
         console.log(cost);
     }
