@@ -7,7 +7,7 @@ var Controller = function() {
 
 util.inherits(Controller, Base)
 
-Controller.prototype.get = function successHandler(req, res, callback) {  
+Controller.prototype.get = function successHandler(req, res, callback) {
   if (req.sessionModel.get('relationship-applicant') == "Mother") {
     req.sessionModel.set('parent1-first-names', req.sessionModel.get('third-party-first-name'));
     req.sessionModel.set('parent1-last-name', req.sessionModel.get('third-party-last-name'));
