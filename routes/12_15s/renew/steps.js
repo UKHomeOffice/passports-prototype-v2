@@ -165,6 +165,7 @@ module.exports = {
         next: '/declaration'
     },
     '/name-change-docs-for-parents':{
+        backLink: 'summary',
         next: '/declaration'
     },
     '/declaration':{
