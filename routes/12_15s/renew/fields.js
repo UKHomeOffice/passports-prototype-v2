@@ -469,7 +469,7 @@ module.exports = {
           className: 'form-label-bold'
       },
       options: [
-          { value: true, label: 'Secure delivery (&#163;3 extra)' },
+          { value: true, label: 'Secure delivery (&#163;5 extra)' },
           { value: false, label: 'Standard post (free)' }
       ]
   },
