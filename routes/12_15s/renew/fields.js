@@ -27,6 +27,7 @@ module.exports = {
   ]
   },
   'application-country': {
+    labelClassName: 'visuallyhidden',
     options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
       return {
         value: c.id,
