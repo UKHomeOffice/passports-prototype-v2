@@ -168,6 +168,10 @@ module.exports = {
         backLink: 'summary',
         next: '/declaration'
     },
+    '/documents-other':{
+        backLink: 'summary',
+        next: '/declaration'
+    },
     '/declaration':{
         prereqs: [ '/summary' ],
         next: '/payment'
