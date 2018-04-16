@@ -1,5 +1,17 @@
 [
     {
+        "id": "UK",
+        "name": "United Kingdom",
+        "altName": [
+            "GB",
+            "Great Britain",
+            "England",
+            "Wales",
+            "Scotland",
+            "Northern Ireland"
+        ]
+    },
+    {
         "id": "AF",
         "name": "Afghanistan",
         "altName": ""
