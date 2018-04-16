@@ -172,6 +172,10 @@ module.exports = {
         backLink: 'summary',
         next: '/declaration'
     },
+    '/documents-thirdparty-over16':{
+        backLink: 'summary',
+        next: '/declaration'
+    },
     '/documents-thirdparty-under16':{
         backLink: 'summary',
         next: '/declaration'
