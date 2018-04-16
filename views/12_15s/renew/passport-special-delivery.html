@@ -9,37 +9,29 @@
 {{$content}}
     {{< hmpo-partials-form}}
         {{$form}}
-       <!-- <h2>New passport</h2>
+          <div class="panel panel-border-wide alert-default">
+            <h2>New passport</h2>
+            <p>This will be sent by secure delivery. The cost is included in the passport fee.</p>
+          </div>
 
-                <p>Your new passport will be sent by secure delivery. The cost is already included in the passport fee.</p>-->
+          <h2>Old passport and any extra documents</h2>
 
-                      <div class="panel panel-border-wide alert-default">
-          <h2>New passport</h2>
-          <p>This will be sent by secure delivery. The cost is included in the passport fee.</p>
+          <p>Choose how the old passport and any extra documents are returned. They won't be in the same envelope as the new passport.</p>
 
-
-    </div>
-
-                <h2>Old passport and any extra documents</h2>
-
-                <p>Choose how the old passport and any extra documents are returned. They won't be in the same envelope as the new passport.</p>
-
-
-            {{^values.veteran}}
-                {{#radio-group}}secure-return{{/radio-group}}
-
-
-                <p>We’ll send everything to
+          {{^values.veteran}}
+            {{#radio-group}}secure-return{{/radio-group}}
+          <p>
+            We’ll send everything to
             {{/values.veteran}}
 
-                    {{values.address1}},
-                    {{#values.address2}}
-                        {{values.address2}},
-                    {{/values.address2}}
-                    {{values.town}},
-                    {{values.postcode}}.
-            </p>
-            {{#input-submit}}{{/input-submit}}
+            {{values.address1}},
+            {{#values.address2}}
+            {{values.address2}},
+            {{/values.address2}}
+            {{values.town}},
+            {{values.postcode}}.
+          </p>
+          {{#input-submit}}{{/input-submit}}
         {{/form}}
     {{/ hmpo-partials-form}}
 {{/content}}
