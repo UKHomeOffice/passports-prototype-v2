@@ -64,7 +64,7 @@ module.exports = {
       forks: [{
         target: '/dob-below-16',
         condition: function (req, res) {
-          return req.session['hmpo-wizard-common']['16-or-older'] == false; // If they are BELOW 16
+          return req.session['hmpo-wizard-common']['16-or-older'] == false; /* If they are BELOW 16 */
         }
       }, {
         target: '/../intro',
@@ -80,19 +80,19 @@ module.exports = {
       forks: [{
         target: '/../intro',
         condition: function (req, res) {
-          return req.session['hmpo-wizard-common']['passport-before'] == false; // If they are BELOW 16 + NOT had UK passport before
+          return req.session['hmpo-wizard-common']['passport-before'] == false; /* If they are BELOW 16 + NOT had UK passport before */
         }
       }]
     },
     '/passport-expiry': {
       fields: ['issue-day', 'issue-year', 'issue-month'],
       backLink: '../filter/dob',
-      next: '/passport-damaged'
+      next: '/../intro' /* If they have had a UK passport before */
     },
     '/passport-damaged': {
       fields: ['passport-damaged'],
       backLink: './',
-      next: '/../intro' // If their passport is NOT damaged
+      next: '/../intro' /* If their passport is NOT damaged */
     },
     '/uncancelled': {
       controller: require('../../../controllers/go-overseas'),
