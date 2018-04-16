@@ -9,8 +9,6 @@ Old passport details
 
 {{$content}}
 
-<p>You need to send us this passport so we can cancel it. If you don't have this passport, you need to <a href="https://www.gov.uk/report-a-lost-or-stolen-passport">report it lost or stolen</a>.</p>
-
 {{< hmpo-partials-form}}
 {{$form}}
 
@@ -51,14 +49,18 @@ Old passport details
 </fieldset>
 <br>
 
-  <!-- <details>
-    <summary>
-      <span class="summary">This passport is lost or stolen</span></summary>
+<div class="panel-important">
+<p>You need to send us this passport so we can cancel it.</p>
+</div>
+
+<details>
+    <summary><span class="summary">This passport is lost or stolen</span></summary>
     <div class="panel panel-border-narrow">
-      <p>If you don’t have this passport you must
-        <a href="https://www.gov.uk/report-a-lost-or-stolen-passport">report it lost or stolen</a>.</p>
-    </div>
-</details> -->
+      <p>If you don’t have this passport, you must <a href="https://www.gov.uk/report-a-lost-or-stolen-passport">report it lost or stolen</a>.</p>
+  </div>
+</details>
+
+<br>
 
   {{#input-submit}}{{/input-submit}}
 
