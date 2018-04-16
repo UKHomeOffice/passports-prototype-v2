@@ -47,7 +47,7 @@
         },
         "town-of-birth": {
             "label": "Town of birth",
-            "hint": "As written on their birth, naturalisation or registration certificate"
+            "hint": "As written on {{values.name}}'s birth, naturalisation or registration certificate"
         },
         "country-of-birth": {
             "label": "Country of birth"
