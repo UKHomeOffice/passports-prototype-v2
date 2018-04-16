@@ -3,10 +3,10 @@
 {{$pageTitle}}Mother or parent 1{{/pageTitle}}
 
 {{$header}}
-    <h1>
-      <span class="heading-secondary">Mother or parent 1</span>
-      {{values.parent1-first-names}}'s details
-    </h1>
+  <h1>
+    <span class="heading-secondary">Mother or parent 1</span>
+    {{values.parent1-first-names}}'s details
+  </h1>
 {{/header}}
 
 {{$content}}
@@ -17,7 +17,11 @@
 {{$form}}
 
       {{#input-text}}parent1-town{{/input-text}}
-      {{#input-text}}parent1-country{{/input-text}}
+      <fieldset>
+        <legend><span class="form-label-bold">Country of birth</span></legend>
+              {{#select}}application-country{{/select}}
+      </fieldset>
+
 
       <fieldset>
           <div class="form-date">
@@ -29,25 +33,22 @@
           </div>
       </fieldset>
       <br>
-
-      <!-- {{#input-text}}parent1-nationality{{/input-text}} -->
-
       <fieldset>
-        <legend><span class="form-label-bold">Nationality</span></legend>
+        <legend><span class="form-label-bold">Country of nationality</span></legend>
             <p class="form-hint" id="dob-hint">At the time of {{values.name}}'s birth</p>
-              {{#input-text}}parent1-passport-number{{/input-text}}
+              {{#select}}application-country{{/select}}
       </fieldset>
 
       <fieldset>
         <legend><span class="form-label-bold">UK passport number</span></legend>
-            <p class="form-hint" id="dob-hint">If applicable, for example 502135326</p>
+            <p class="form-hint" id="dob-hint">For example 502135326, leave this blank if it doesn't apply</p>
               {{#input-text}}parent1-passport-number{{/input-text}}
       </fieldset>
 
       <fieldset>
           <div class="form-date">
             <legend><span class="form-label-bold">Date of issue</span></legend>
-            <p class="form-hint" id="dob-hint">If applicable, for example 12 04 2007</p>
+            <p class="form-hint" id="dob-hint">For example 12 04 2007, leave this blank if it doesn't apply</p>
               {{#input-text}}parent1-age-day{{/input-text}}
               {{#input-text}}parent1-age-month{{/input-text}}
               {{#input-text}}parent1-age-year{{/input-text}}
