@@ -44,30 +44,23 @@ module.exports = {
         fields: ['gender'],
         next: '/date-and-place-birth'
     },
-    '/date-and-place-birth':{
+    '/date-and-place-birth': {
         next: '/parents-details',
-        fields:['age-day', 'age-month', 'age-year', 'born-in-uk', 'town-of-birth', 'country-of-birth'],
+        fields: ['age-day', 'age-month', 'age-year', 'born-in-uk', 'town-of-birth', 'country-of-birth'],
         controller: require('../../../controllers/go-overseas'),
         nextAlt: './home-address-overseas',
-        forks: [{
+        forks: [{ /* If they were NOT born in the UK */
             target: '/naturalisation-registration-details',
             condition: {
                 field: 'born-in-uk',
                 value: false
             }
         }]
-      },
-    '/naturalisation-registration-details':{
-        next: '/home-address',
-        fields:['naturalisation-registration-certificate', 'naturalisation-registration-certificate-number', 'naturalisation-registration-certificate-issue-day', 'naturalisation-registration-certificate-issue-month', 'naturalisation-registration-certificate-issue-year'],
-        forks: [{
-            target: '/parents-details',
-            condition: {
-                field: 'naturalisation-registration-certificate',
-                value: false
-            }
-        }]
-      },
+    },
+    '/naturalisation-registration-details': {
+        next: '/parents-details',
+        fields: ['naturalisation-registration-certificate', 'naturalisation-registration-certificate-number', 'naturalisation-registration-certificate-issue-day', 'naturalisation-registration-certificate-issue-month', 'naturalisation-registration-certificate-issue-year']
+    },
     '/parents-details':{
         fields:['parent1-first-names', 'parent1-last-name', 'parent2-first-names', 'parent2-last-name', 'marriage-day', 'marriage-month', 'marriage-year'],
         next: '/parent-1-details'
