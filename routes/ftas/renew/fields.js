@@ -373,6 +373,17 @@ module.exports = {
       //     'required'
       // ]
   },
+  'additional-information': {
+    className: 'textarea',
+    validate: [
+      'required',
+      { type: 'maxlength', arguments: 250 }
+    ],
+    // dependent: {
+    //   field: 'can-sign',
+    //   value: false
+    // }
+  },
   'parent2-first-names': {
     labelClassName: 'form-label'
 
