@@ -65,6 +65,11 @@ module.exports = {
         fields:['parent1-first-names', 'parent1-last-name', 'parent2-first-names', 'parent2-last-name', 'marriage-day', 'marriage-month', 'marriage-year'],
         next: '/parent-1-details'
     },
+    // '/relationship-applicant': {
+    //     fields: ['parents-married'],
+    //     backLink: '/parents-details',
+    //     next: '/parent-1-details'
+    //   },
     '/parent-1-details':{
         fields:['parent1-town', 'parent1-country', 'parent1-age-day', 'parent1-age-month', 'parent1-age-year', 'parent1-nationality', 'parent1-passport-number', 'parent1-passport-issue-day', 'parent1-passport-issue-month', 'parent1-passport-issue-year'],
         // controller: require('../../../controllers/parents-details'),

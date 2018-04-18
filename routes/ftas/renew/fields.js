@@ -289,7 +289,7 @@ module.exports = {
   },
   'parents-married': {
     legend: {
-      value: 'Your title',
+      value: 'Parents married',
       className: 'visuallyhidden'
     },
     options: [
