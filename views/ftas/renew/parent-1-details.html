@@ -35,7 +35,7 @@
     {{#input-text}}parent1-passport-number{{/input-text}}
 
     <fieldset>
-        <div class="form-date">
+        <div class="form-date form-group">
             <legend><span class="form-label-bold">Date of issue</span></legend>
             <p class="form-hint" id="dob-hint">If applicable, for example 12 04 2007</p>
             {{#input-text}}parent1-passport-issue-day{{/input-text}}
@@ -43,6 +43,8 @@
             {{#input-text}}parent1-passport-issue-year{{/input-text}}
         </div>
     </fieldset>
+
+    {{#textarea}}additional-information{{/textarea}}
     <br>
 
     {{#input-submit}}{{/input-submit}}
