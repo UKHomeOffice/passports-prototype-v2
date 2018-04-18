@@ -1,31 +1,16 @@
 {{< layout}}
 
-{{$pageTitle}}Parents&rsquo; details{{/pageTitle}}
+{{$pageTitle}}Were your parents married?{{/pageTitle}}
 
 {{$header}}
-    <h1>Parents' details</h1>
+    <h1>Were your parents married or in a civil partnership at the time of your birth?</h1>
 {{/header}}
 
 {{$content}}
 
-<p>We need these details to confirm {{values.name}} is eligible for a UK passport.</p>
-
-<div class="panel panel-border-wide alert-default">
-    <p>You need to enter parents as listed on your birth certificate.</p>
-</div>
-
 {{< hmpo-partials-form}}
 {{$form}}
 
-<h2>Mother or parent 1</h2>
-{{#input-text}}parent1-first-names{{/input-text}}
-{{#input-text}}parent1-last-name{{/input-text}}
-
-<h2>Father or parent 2</h2>
-{{#input-text}}parent2-first-names{{/input-text}}
-{{#input-text}}parent2-last-name{{/input-text}}
-
-<h2>Were your parents married or in a civil partnership?</h2>
 {{#radio-group}}parents-married{{/radio-group}}
 <div id="marriage-date" class="reveal js-hidden">
     <fieldset>
