@@ -224,6 +224,9 @@ module.exports = {
           'required'
         ]
   },
+  'relationship': {
+      labelClassName: 'visuallyhidden',
+  },
   'retired': {
       legend: {
           className: 'form-label-bold'

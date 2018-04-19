@@ -38,7 +38,7 @@ module.exports = {
         next: '/confirm-applicant'
     },
     '/confirm-applicant': {
-      fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime'],
+      fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime', 'relationship'],
       next: '/confirm-applicant-address',
       controller: require('../../../controllers/check-csig')
     },
