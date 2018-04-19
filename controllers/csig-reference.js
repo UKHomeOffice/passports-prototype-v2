@@ -9,10 +9,12 @@ var Controller = function () {
 util.inherits(Controller, Base);
 
 Controller.prototype.successHandler = function successHandler(req, res, callback) {
-    var url = req.sessionModel.get('pex-number');
-    if (url.startsWith('2')) return res.redirect('./csig-expired');
-    if (url.startsWith('3')) return res.redirect('./csig-invalid');
-    res.redirect('../referee/');
+    var referenceNumber = req.sessionModel.get('pex-number');
+    if (referenceNumber.startsWith('2')) return res.redirect('./csig-expired');
+    if (referenceNumber.startsWith('3')) return res.redirect('./csig-invalid');
+    res.redirect('./declaration');
+
+    Base.prototype.successHandler.call(this, req, res, callback);
 };
 
 module.exports = Controller;
