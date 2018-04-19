@@ -71,7 +71,7 @@ module.exports = {
     //     next: '/parent-1-details'
     //   },
     '/parent-1-details':{
-        fields:['parent1-town', 'parent1-country', 'parent1-age-day', 'parent1-age-month', 'parent1-age-year', 'parent1-nationality', 'parent1-passport-number', 'parent1-passport-issue-day', 'parent1-passport-issue-month', 'parent1-passport-issue-year'],
+        fields:['parent1-town', 'parent1-country-of-birth', 'parent1-age-day', 'parent1-age-month', 'parent1-age-year', 'parent1-country-of-nationality', 'parent1-passport-number', 'parent1-passport-issue-day', 'parent1-passport-issue-month', 'parent1-passport-issue-year'],
         // controller: require('../../../controllers/parents-details'),
         // forks: [{
         //     target: '/home-address', /* If parent 2 has NOT been filled in */
@@ -82,7 +82,49 @@ module.exports = {
           next: '/parent-2-details'
     },
     '/parent-2-details':{
-        fields:['parent2-town', 'parent2-country', 'parent2-age-day', 'parent2-age-month', 'parent2-age-year', 'parent2-nationality', 'parent2-passport-number', 'parent2-passport-issue-day', 'parent2-passport-issue-month', 'parent2-passport-issue-year'],
+        fields:['parent2-town', 'parent2-country-of-birth', 'parent2-age-day', 'parent2-age-month', 'parent2-age-year', 'parent2-country-of-nationality', 'parent2-passport-number', 'parent2-passport-issue-day', 'parent2-passport-issue-month', 'parent2-passport-issue-year'],
+        next: '/parent-1-parents-details',
+        // controller: require('../../../controllers/go-overseas'),
+        nextAlt: './home-address-overseas'
+    },
+    '/parent-1-parents-details':{
+        fields:['parent1-parent1-first-names', 'parent1-parent1-last-name', 'parent1-parent2-first-names', 'parent1-parent2-last-name', 'parent1-parents-marriage-day', 'parent1-parents-marriage-month', 'parent1-parents-marriage-year'],
+        next: '/parent-1-parent-1-details'
+    },
+    '/parent-1-parent-1-details':{
+        fields:['parent1-parent1-town', 'parent1-parent1-country-of-birth', 'parent1-parent1-age-day', 'parent1-parent1-age-month', 'parent1-parent1-age-year', 'parent1-parent1-country-of-nationality', 'parent1-parent1-passport-number', 'parent1-parent1-passport-issue-day', 'parent1-parent1-passport-issue-month', 'parent1-parent1-passport-issue-year'],
+        // controller: require('../../../controllers/parents-details'),
+        // forks: [{
+        //     target: '/home-address', /* If parent 2 has NOT been filled in */
+        //     condition: function(req, res) {
+        //       return req.session['hmpo-wizard-common']['parent1-parent2-first-names'] == "";
+        //     }
+        //   }],
+          next: '/parent-1-parent-2-details'
+    },
+    '/parent-1-parent-2-details':{
+        fields:['parent1-parent2-town', 'parent1-parent2-country-of-birth', 'parent1-parent2-age-day', 'parent1-parent2-age-month', 'parent1-parent2-age-year', 'parent1-parent2-country-of-nationality', 'parent1-parent2-passport-number', 'parent1-parent2-passport-issue-day', 'parent1-parent2-passport-issue-month', 'parent1-parent2-passport-issue-year'],
+        next: '/parent-2-parents-details',
+        // controller: require('../../../controllers/go-overseas'),
+        nextAlt: './home-address-overseas'
+    },
+    '/parent-2-parents-details':{
+        fields:['parent2-parent1-first-names', 'parent2-parent1-last-name', 'parent2-parent2-first-names', 'parent2-parent2-last-name', 'parent2-parents-marriage-day', 'parent2-parents-marriage-month', 'parent2-parents-marriage-year'],
+        next: '/parent-2-parent-1-details'
+    },
+    '/parent-2-parent-1-details':{
+        fields:['parent2-parent1-town', 'parent2-parent1-country-of-birth', 'parent2-parent1-age-day', 'parent2-parent1-age-month', 'parent2-parent1-age-year', 'parent2-parent1-country-of-nationality', 'parent2-parent1-passport-number', 'parent2-parent1-passport-issue-day', 'parent2-parent1-passport-issue-month', 'parent2-parent1-passport-issue-year'],
+        // controller: require('../../../controllers/parents-details'),
+        // forks: [{
+        //     target: '/home-address', /* If parent 2 has NOT been filled in */
+        //     condition: function(req, res) {
+        //       return req.session['hmpo-wizard-common']['parent2-parent2-first-names'] == "";
+        //     }
+        //   }],
+          next: '/parent-2-parent-2-details'
+    },
+    '/parent-2-parent-2-details':{
+        fields:['parent2-parent2-town', 'parent2-parent2-country-of-birth', 'parent2-parent2-age-day', 'parent2-parent2-age-month', 'parent2-parent2-age-year', 'parent2-parent2-country-of-nationality', 'parent2-parent2-passport-number', 'parent2-parent2-passport-issue-day', 'parent2-parent2-passport-issue-month', 'parent2-parent2-passport-issue-year'],
         next: '/home-address',
         // controller: require('../../../controllers/go-overseas'),
         nextAlt: './home-address-overseas'
