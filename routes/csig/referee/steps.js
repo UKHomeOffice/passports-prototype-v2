@@ -6,7 +6,7 @@ module.exports = {
         controller: require('../../../controllers/csig-email')
     },
     '/name-address': {
-        fields: ['name', 'lastname', 'address-postcode'],
+        fields: ['name', 'middlename', 'lastname', 'address-postcode'],
         backLink: './',
         next: '/home-address-select'
     },
@@ -38,7 +38,7 @@ module.exports = {
         next: '/confirm-applicant'
     },
     '/confirm-applicant': {
-      fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime'],
+      fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime', 'relationship'],
       next: '/confirm-applicant-address',
       controller: require('../../../controllers/check-csig')
     },

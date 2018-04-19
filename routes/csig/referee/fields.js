@@ -215,11 +215,17 @@ module.exports = {
           'required'
         ]
   },
+  'middlename': {
+      labelClassName: 'visuallyhidden',
+  },
   'lastname': {
       labelClassName: 'visuallyhidden',
       validate: [
           'required'
         ]
+  },
+  'relationship': {
+      labelClassName: 'visuallyhidden',
   },
   'retired': {
       legend: {

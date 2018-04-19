@@ -1,16 +1,16 @@
 module.exports = {
     '/': {
-        next: '/declaration'
-    },
-    '/declaration': {
-      backLink: './',
-      next: '/applicant-info'
+        next: '/applicant-info'
     },
     '/applicant-info': {
-        backLink: './declaration',
+        backLink: './',
         fields: ['pex-number','age-day','age-month','age-year'],
-        next: '/../referee/',
+        //next: '/declaration',
         controller: require('../../../controllers/csig-reference')
+    },
+    '/declaration': {
+      backLink: './applicant-info',
+      next: '/../referee/'
     },
     '/csig-expired': {
       backLink: './applicant-info',

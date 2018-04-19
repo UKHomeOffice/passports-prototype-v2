@@ -34,6 +34,11 @@
         <label class="form-label" for="">Are you related to, in a relationship with or living at the same address <br>as Susan?</label>
         {{#radio-group}}applicant-check-address{{/radio-group}}
 
+        <div class="form-group">
+          <label class="form-label" for="">How do you know Susan?</label>
+          {{#input-text}}relationship{{/input-text}}
+        </div>
+
         <div class="form-group form-date">
           <label class="form-label" for="">How many years have you known Susan?</label>
           {{#input-text}}knowntime{{/input-text}}
