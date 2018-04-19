@@ -215,6 +215,9 @@ module.exports = {
           'required'
         ]
   },
+  'middlename': {
+      labelClassName: 'visuallyhidden',
+  },
   'lastname': {
       labelClassName: 'visuallyhidden',
       validate: [

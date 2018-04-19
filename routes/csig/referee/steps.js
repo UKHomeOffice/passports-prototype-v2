@@ -6,7 +6,7 @@ module.exports = {
         controller: require('../../../controllers/csig-email')
     },
     '/name-address': {
-        fields: ['name', 'lastname', 'address-postcode'],
+        fields: ['name', 'middlename', 'lastname', 'address-postcode'],
         backLink: './',
         next: '/home-address-select'
     },
