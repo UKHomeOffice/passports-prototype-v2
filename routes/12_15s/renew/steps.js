@@ -168,10 +168,6 @@ module.exports = {
         backLink: 'summary',
         next: '/declaration'
     },
-    '/documents-other':{
-        backLink: 'summary',
-        next: '/declaration'
-    },
     '/documents-thirdparty-over16':{
         backLink: 'summary',
         next: '/declaration'

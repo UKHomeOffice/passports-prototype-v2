@@ -134,7 +134,7 @@ module.exports = {
       },
       options: [
           { value: false, label: 'Yes' },
-          { value: true, label: 'No, their name has changed', toggle: 'note-regarding-name-change' }
+          { value: true, label: 'No, thier name has changed', toggle: 'note-regarding-name-change' }
       ],
       formatter: ['boolean'],
       validate: [
