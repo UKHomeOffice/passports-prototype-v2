@@ -180,7 +180,6 @@ module.exports = {
       options: [
           { value: 'Yes', label: 'Yes' },
           { value: 'No', label: 'No' },
-          { value: 'I don’t know', label: 'I don’t know'}
       ],
       // validate: [
       //   'required',
