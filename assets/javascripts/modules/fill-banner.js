@@ -65,7 +65,7 @@
       $('#previous-name-false').click();
       $('#gender-M').click();
       $('#born-in-uk-true').click();
-      $('#passport-options-32').click();
+      $('#passport-options-34').click();
       $('#can-sign-true').click();
       $('#secure-return-false').click();
       $('#submit-photo-Yes').click();
