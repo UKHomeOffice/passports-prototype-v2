@@ -108,7 +108,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     }, {
       step: this.getEditStep('parent-1-details'),
       title: 'Additional information',
-      value: values['additional-information']
+      value: values['parent1-additional-information']
     });
   }
 
@@ -147,7 +147,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     }, {
       step: this.getEditStep('parent-2-details'),
       title: 'Additional information',
-      value: values['additional-information']
+      value: values['parent2-additional-information']
     });
   }
 
@@ -209,7 +209,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     }, {
       step: this.getEditStep('parent-1-parent-1-details'),
       title: 'Additional information',
-      value: values['additional-information']
+      value: values['parent1-parent1-additional-information']
     });
   }
 
@@ -248,7 +248,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     }, {
       step: this.getEditStep('parent-1-parent-2-details'),
       title: 'Additional information',
-      value: values['additional-information']
+      value: values['parent1-parent2-additional-information']
     });
   }
 
@@ -310,7 +310,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     }, {
       step: this.getEditStep('parent-2-parent-1-details'),
       title: 'Additional information',
-      value: values['additional-information']
+      value: values['parent2-parent1-additional-information']
     });
   }
 
@@ -349,7 +349,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     }, {
       step: this.getEditStep('parent-2-parent-2-details'),
       title: 'Additional information',
-      value: values['additional-information']
+      value: values['parent2-parent2-additional-information']
     });
   }
 

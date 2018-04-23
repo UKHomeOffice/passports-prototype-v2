@@ -64,9 +64,15 @@
         </div>
     </fieldset>
 
-    {{#textarea}}additional-information{{/textarea}}
-    <br>
-    
+    <details>
+        <summary>
+            <span class="summary">I can't provide all the details</span>
+        </summary>
+        <div class="panel panel-border-narrow">
+            {{#textarea}}parent2-parent2-additional-information{{/textarea}}
+        </div>
+    </details>
+
     {{#input-submit}}{{/input-submit}}
 
 {{/form}}
