@@ -302,6 +302,8 @@ module.exports = {
     ],
     className: 'inline'
   },
+
+  // Parents
   'marriage-day': {
     labelClassName: 'form-label',
   },
@@ -311,6 +313,8 @@ module.exports = {
   'marriage-month': {
     labelClassName: 'form-label',
   },
+
+  // Parent 1
   'parent1-first-names': {
     labelClassName: 'form-label'
 
@@ -412,6 +416,8 @@ module.exports = {
     //   value: false
     // }
   },
+
+  // Parent 2
   'parent2-first-names': {
     labelClassName: 'form-label'
 
@@ -502,6 +508,8 @@ module.exports = {
       //     'required'
       // ]
   },
+
+  // Parent 1's parents
   'parent1-parents-married': {
     legend: {
       value: 'Parents married',
@@ -526,6 +534,8 @@ module.exports = {
   'parent1-parents-marriage-month': {
     labelClassName: 'form-label',
   },
+
+  // Parent 1's parent 1
   'parent1-parent1-first-names': {
     labelClassName: 'form-label'
 
@@ -616,6 +626,8 @@ module.exports = {
       //     'required'
       // ]
   },
+
+  // Parent 1's parent 2
   'parent1-parent2-first-names': {
     labelClassName: 'form-label'
 
@@ -706,6 +718,8 @@ module.exports = {
       //     'required'
       // ]
   },
+
+  // Parent 2's parents
   'parent2-parents-married': {
     legend: {
       value: 'Parents married',
@@ -730,6 +744,8 @@ module.exports = {
   'parent2-parents-marriage-month': {
     labelClassName: 'form-label',
   },
+
+  // Parent 2's parent 1
   'parent2-parent1-first-names': {
     labelClassName: 'form-label'
 
@@ -820,6 +836,8 @@ module.exports = {
       //     'required'
       // ]
   },
+
+  // Parent 2's parent 2
   'parent2-parent2-first-names': {
     labelClassName: 'form-label'
 
@@ -910,6 +928,8 @@ module.exports = {
       //     'required'
       // ]
   },
+
+  
   'address1': {
       validate: [
           'required'
