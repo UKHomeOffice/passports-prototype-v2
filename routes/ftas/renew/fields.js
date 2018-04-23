@@ -407,10 +407,10 @@ module.exports = {
   },
   'parent1-additional-information': {
     className: 'textarea',
-    validate: [
-      'required',
-      { type: 'maxlength', arguments: 250 }
-    ],
+    // validate: [
+    //   'required',
+    //   { type: 'maxlength', arguments: 250 }
+    // ],
     // dependent: {
     //   field: 'can-sign',
     //   value: false
@@ -510,10 +510,10 @@ module.exports = {
   },
   'parent2-additional-information': {
     className: 'textarea',
-    validate: [
-      'required',
-      { type: 'maxlength', arguments: 250 }
-    ],
+    // validate: [
+    //   'required',
+    //   { type: 'maxlength', arguments: 250 }
+    // ],
     // dependent: {
     //   field: 'can-sign',
     //   value: false
@@ -639,10 +639,10 @@ module.exports = {
   },
   'parent1-parent1-additional-information': {
     className: 'textarea',
-    validate: [
-      'required',
-      { type: 'maxlength', arguments: 250 }
-    ],
+    // validate: [
+    //   'required',
+    //   { type: 'maxlength', arguments: 250 }
+    // ],
     // dependent: {
     //   field: 'can-sign',
     //   value: false
@@ -742,10 +742,10 @@ module.exports = {
   },
   'parent1-parent2-additional-information': {
     className: 'textarea',
-    validate: [
-      'required',
-      { type: 'maxlength', arguments: 250 }
-    ],
+    // validate: [
+    //   'required',
+    //   { type: 'maxlength', arguments: 250 }
+    // ],
     // dependent: {
     //   field: 'can-sign',
     //   value: false
@@ -871,10 +871,10 @@ module.exports = {
   },
   'parent2-parent1-additional-information': {
     className: 'textarea',
-    validate: [
-      'required',
-      { type: 'maxlength', arguments: 250 }
-    ],
+    // validate: [
+    //   'required',
+    //   { type: 'maxlength', arguments: 250 }
+    // ],
     // dependent: {
     //   field: 'can-sign',
     //   value: false
@@ -974,10 +974,10 @@ module.exports = {
   },
   'parent2-parent2-additional-information': {
     className: 'textarea',
-    validate: [
-      'required',
-      { type: 'maxlength', arguments: 250 }
-    ],
+    // validate: [
+    //   'required',
+    //   { type: 'maxlength', arguments: 250 }
+    // ],
     // dependent: {
     //   field: 'can-sign',
     //   value: false
