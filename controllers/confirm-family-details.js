@@ -93,16 +93,20 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       value: moment(values['parent1-age-year'] + '-' + values['parent1-age-month'] + '-' + values['parent1-age-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     }, {
       step: this.getEditStep('parent-1-details'),
-      title: 'Nationality',
+      title: 'Country of nationality',
       value: values['parent1-nationality']
     }, {
       step: this.getEditStep('parent-1-details'),
-      title: 'Passport number',
+      title: 'UK passport number',
       value: values['parent1-passport-number']
     }, {
       step: this.getEditStep('parent-1-details'),
       title: 'Date of issue',
       value: moment(values['parent1-passport-issue-year'] + '-' + values['parent1-passport-issue-month'] + '-' + values['parent1-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+    }, {
+      step: this.getEditStep('parent-1-details'),
+      title: 'Additional information',
+      value: values['additional-information']
     });
   }
 
@@ -127,16 +131,42 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       value: moment(values['parent2-age-year'] + '-' + values['parent2-age-month'] + '-' + values['parent2-age-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     }, {
       step: this.getEditStep('parent-2-details'),
-      title: 'Nationality',
+      title: 'Country of nationality',
       value: values['parent2-nationality']
     }, {
       step: this.getEditStep('parent-2-details'),
-      title: 'Passport number',
+      title: 'UK passport number',
       value: values['parent2-passport-number']
     }, {
       step: this.getEditStep('parent-2-details'),
       title: 'Date of issue',
       value: moment(values['parent2-passport-issue-year'] + '-' + values['parent2-passport-issue-month'] + '-' + values['parent2-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+    }, {
+      step: this.getEditStep('parent-2-details'),
+      title: 'Additional information',
+      value: values['additional-information']
+    });
+  }
+
+  var parent1ParentsFields = [];
+  if (values['parent1-parent1-first-names']) {
+    response.sections.push({
+      className: 'parent1-parents-details',
+      title: 'Parent 1’s parents’ details',
+      fields: parent1ParentsFields
+    });
+    parent1ParentsFields.push({
+      step: this.getEditStep('parent1-parents-details'),
+      title: 'Parent 1’s parent 1’s name',
+      value: join(values, ['parent1-parent1-first-names', 'parent1-parent1-last-name'])
+    }, {
+      step: this.getEditStep('parent1-parents-details'),
+      title: 'Parent 1’s parent 2’s name',
+      value: join(values, ['parent1-parent2-first-names', 'parent1-parent2-last-name'])
+    }, {
+      step: this.getEditStep('parent1-parents-details'),
+      title: 'Parent 1’s parents’ marriage date',
+      value: moment(values['parent1-parents-marriage-year'] + '-' + values['parent1-parents-marriage-month'] + '-' + values['parent1-parents-marriage-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     });
   }
 

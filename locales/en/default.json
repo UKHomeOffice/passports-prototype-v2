@@ -395,13 +395,13 @@
         "parent1-parent2-passport-issue-year":{
           "label": "Year"
         },
-        "parent2-parents-marriage-day":{
+        "parent1-parents-marriage-day":{
           "label": "Day"
         },
-        "parent2-parents-marriage-month":{
+        "parent1-parents-marriage-month":{
           "label": "Month"
         },
-        "parent2-parents-marriage-year":{
+        "parent1-parents-marriage-year":{
           "label": "Year"
         },
         "parent2-parent1-first-names":{
