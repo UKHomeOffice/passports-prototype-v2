@@ -405,7 +405,7 @@ module.exports = {
       //     'required'
       // ]
   },
-  'additional-information': {
+  'parent1-additional-information': {
     className: 'textarea',
     validate: [
       'required',
@@ -507,6 +507,17 @@ module.exports = {
       //     'numeric',
       //     'required'
       // ]
+  },
+  'parent2-additional-information': {
+    className: 'textarea',
+    validate: [
+      'required',
+      { type: 'maxlength', arguments: 250 }
+    ],
+    // dependent: {
+    //   field: 'can-sign',
+    //   value: false
+    // }
   },
 
   // Parent 1's parents
@@ -626,6 +637,17 @@ module.exports = {
       //     'required'
       // ]
   },
+  'parent1-parent1-additional-information': {
+    className: 'textarea',
+    validate: [
+      'required',
+      { type: 'maxlength', arguments: 250 }
+    ],
+    // dependent: {
+    //   field: 'can-sign',
+    //   value: false
+    // }
+  },
 
   // Parent 1's parent 2
   'parent1-parent2-first-names': {
@@ -717,6 +739,17 @@ module.exports = {
       //     'numeric',
       //     'required'
       // ]
+  },
+  'parent1-parent2-additional-information': {
+    className: 'textarea',
+    validate: [
+      'required',
+      { type: 'maxlength', arguments: 250 }
+    ],
+    // dependent: {
+    //   field: 'can-sign',
+    //   value: false
+    // }
   },
 
   // Parent 2's parents
@@ -836,6 +869,17 @@ module.exports = {
       //     'required'
       // ]
   },
+  'parent2-parent1-additional-information': {
+    className: 'textarea',
+    validate: [
+      'required',
+      { type: 'maxlength', arguments: 250 }
+    ],
+    // dependent: {
+    //   field: 'can-sign',
+    //   value: false
+    // }
+  },
 
   // Parent 2's parent 2
   'parent2-parent2-first-names': {
@@ -927,6 +971,17 @@ module.exports = {
       //     'numeric',
       //     'required'
       // ]
+  },
+  'parent2-parent2-additional-information': {
+    className: 'textarea',
+    validate: [
+      'required',
+      { type: 'maxlength', arguments: 250 }
+    ],
+    // dependent: {
+    //   field: 'can-sign',
+    //   value: false
+    // }
   },
 
   

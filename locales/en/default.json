@@ -270,7 +270,7 @@
         "parent1-passport-issue-year":{
           "label": "Year"
         },
-        "additional-information": {
+        "parent1-additional-information": {
           "label": "Additional information",
           "hint": "Why can't you provide all the information?"
         },
@@ -313,6 +313,10 @@
         },
         "parent2-passport-issue-year":{
           "label": "Year"
+        },
+        "parent2-additional-information": {
+          "label": "Additional information",
+          "hint": "Why can't you provide all the information?"
         },
 
 
@@ -365,6 +369,10 @@
         "parent1-parent1-passport-issue-year":{
           "label": "Year"
         },
+        "parent1-parent1-additional-information": {
+          "label": "Additional information",
+          "hint": "Why can't you provide all the information?"
+        },
 
 
         "parent1-parent2-first-names":{
@@ -404,6 +412,10 @@
         },
         "parent1-parent2-passport-issue-year":{
           "label": "Year"
+        },
+        "parent1-parent2-additional-information": {
+          "label": "Additional information",
+          "hint": "Why can't you provide all the information?"
         },
 
 
@@ -456,6 +468,10 @@
         "parent2-parent1-passport-issue-year":{
           "label": "Year"
         },
+        "parent2-parent1-additional-information": {
+          "label": "Additional information",
+          "hint": "Why can't you provide all the information?"
+        },
 
 
         "parent2-parent2-first-names":{
@@ -495,6 +511,10 @@
         },
         "parent2-parent2-passport-issue-year":{
           "label": "Year"
+        },
+        "parent2-parent2-additional-information": {
+          "label": "Additional information",
+          "hint": "Why can't you provide all the information?"
         },
 
 
