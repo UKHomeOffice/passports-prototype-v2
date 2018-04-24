@@ -83,6 +83,10 @@ module.exports = {
         backLink: 'parents-details',
         nextAlt: './home-address-overseas'
     },
+    '/parents-additional-details': {
+      fields:['additional-information'],
+      next: '/home-address'
+    },
     '/home-address':{
         fields:['address1', 'address2','address3','address4','address5', 'town', 'postcode'],
         backLink: 'parents-details',

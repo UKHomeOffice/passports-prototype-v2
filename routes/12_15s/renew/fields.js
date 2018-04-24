@@ -338,6 +338,10 @@ module.exports = {
     ],
     className: 'inline'
   },
+  'additional-information':{
+    className: 'textarea',
+    labelClassName: 'visuallyhidden'
+  },
   'address1': {
       validate: [
           'required'
@@ -407,8 +411,8 @@ module.exports = {
       value: 'Passport size'
     },
     options: [
-      {value: '32', label: 'Standard 32-page passport (£75.50)'},
-      {value: '48', label: 'Jumbo 48-page passport (£85.50)'}
+      {value: '34', label: 'Standard 34-page passport (£75.50)'},
+      {value: '50', label: 'Jumbo 50-page passport (£85.50)'}
     ],
     validate: [
       'required'
