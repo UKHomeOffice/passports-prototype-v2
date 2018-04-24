@@ -11,15 +11,14 @@
 
 {{$content}}
 
-<div class="panel panel-border-wide alert-default">
-    <p>You need to enter as much information as you can or your application may be delayed.</p>
-</div>
+<p>You need to enter as much information as you can or your application may<br>be delayed.</p>
+
 
 {{< hmpo-partials-form}}
 {{$form}}
 
     {{#input-text}}parent1-parent1-town{{/input-text}}
-    
+
     <fieldset>
         <legend>
             <span class="form-label-bold">Country of birth</span>
@@ -37,7 +36,7 @@
         </div>
     </fieldset>
     <br>
-    
+
     <fieldset>
         <legend>
             <span class="form-label-bold">Country of nationality</span>
@@ -45,7 +44,7 @@
         <p class="form-hint" id="dob-hint">At the time of {{values.parent1-first-names}}'s birth</p>
         {{#select}}parent1-parent1-country-of-nationality{{/select}}
     </fieldset>
-    
+
     <fieldset>
         <legend>
             <span class="form-label-bold">UK passport number</span>
