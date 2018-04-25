@@ -108,7 +108,7 @@
         },
         "previous-name": {
             "legend": "Have you ever been known by any other names?",
-            "hint": "For example a different last name or name at birth."
+            "hint": "For example a maiden name, names from previous marriages or a different name at birth."
         },
         "previous-name-change": {
             "legend": "Have you ever been known by any other names?"
@@ -528,7 +528,7 @@
           "label": "Year"
         },
 
-        
+
         "third-party-first-name":{
           "label": "First and middle names"
         },
