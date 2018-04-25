@@ -1,31 +1,27 @@
 {{< layout}}
 
-{{$pageTitle}}Parent 2&rsquo;s arents&rsquo; details{{/pageTitle}}
+{{$pageTitle}}Paternal grandparents’ details{{/pageTitle}}
 
 {{$header}}
-    <h1>Parent 2's parents' details</h1>
+    <h1>Paternal grandparents' details</h1>
 {{/header}}
 
 {{$content}}
 
-<p>We need these details to confirm {{values.name}} is eligible for a UK passport.</p>
-
-<div class="panel panel-border-wide alert-default">
-    <p>You need to enter parent 2's parents as listed on their birth certificate.</p>
-</div>
+<p>We need to know about the applicant's grandparents on their father's side.</p>
 
 {{< hmpo-partials-form}}
 {{$form}}
 
-<h2>Mother or parent 1</h2>
+<h2>Paternal grandmother</h2>
 {{#input-text}}parent2-parent1-first-names{{/input-text}}
 {{#input-text}}parent2-parent1-last-name{{/input-text}}
 
-<h2>Father or parent 2</h2>
+<h2>Paternal grandfather</h2>
 {{#input-text}}parent2-parent2-first-names{{/input-text}}
 {{#input-text}}parent2-parent2-last-name{{/input-text}}
 
-<h2>Were their parents married or in a civil partnership?</h2>
+<h2>Were they married or in a civil partnership?</h2>
 {{#radio-group}}parent2-parents-married{{/radio-group}}
 <div id="marriage-date" class="reveal js-hidden">
     <fieldset>
