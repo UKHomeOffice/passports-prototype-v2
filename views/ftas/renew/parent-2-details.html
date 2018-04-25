@@ -3,17 +3,15 @@
 {{$pageTitle}}Father or parent 2{{/pageTitle}}
 
 {{$header}}
-    <h1>
-        <span class="heading-secondary">Father or parent 2</span>
-        {{values.parent2-first-names}}'s details
-    </h1>
+
+<h1>{{values.name}}'s father or parent 2</h1>
+
 {{/header}}
 
 {{$content}}
 
-<div class="panel panel-border-wide alert-default">
-    <p>You need to enter as much information as you can or your application may be delayed.</p>
-</div>
+<p>You need to enter as much information as you can or this application may <br>be delayed.</p>
+
 
 {{< hmpo-partials-form}}
 {{$form}}
@@ -72,7 +70,7 @@
             {{#textarea}}parent2-additional-information{{/textarea}}
         </div>
     </details>
-    
+
     {{#input-submit}}{{/input-submit}}
 
 {{/form}}
