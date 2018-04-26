@@ -295,6 +295,10 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     });
   // }
 
+
+  // TODO:
+  // - Add conditional logic so grandparents don't appear in non-FTA flows
+
   // Parent 1's parents
   var parent1ParentsFields = [];
   // if (values['parent1-parent1-first-names']) { /* If parent 1's parent 1 first name is NOT empty */
