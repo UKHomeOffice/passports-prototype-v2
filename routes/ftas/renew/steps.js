@@ -190,7 +190,7 @@ module.exports = {
     //     next: '/summary'
     // },
     '/summary':{
-        controller: require('../../../controllers/confirm'),
+        controller: require('../../../controllers/confirmFTA'),
         template: 'confirm',
         next: '/fta-docs'
     },
