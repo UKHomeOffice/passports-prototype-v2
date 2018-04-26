@@ -276,6 +276,7 @@ module.exports = {
     options: [
       { value: 'Mother', label: 'Mother' },
       { value: 'Father', label: 'Father' },
+      { value: 'Social Worker', label: 'Social Worker' }, 
       { value: 'Other', label: 'Other', toggle: "relationship-other" }
     ],
     validate: [

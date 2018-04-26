@@ -93,18 +93,13 @@ module.exports = {
     '/relationship-applicant': {
       fields: ['relationship-applicant'],
       backLink: '/uncancelled',
-      next: '/third-party-name'
+      next: '/third-party-name',
+      controller: require('../../../controllers/social-worker')
     },
     '/third-party-name': {
       fields: ['third-party-first-name', 'third-party-last-name'],
       backLink: './relationship-applicant',
-      next: '/../intro',
-      forks: [{
-        target: '/parental-responsibility',
-        condition: function (req, res) {
-          return req.session['hmpo-wizard-common']['16-or-older'] == false;
-        }
-      }],
+      controller: require('../../../controllers/parental-responsibility')
     },
     '/parental-responsibility': {
       fields: ['parental-responsibility'],
