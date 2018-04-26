@@ -87,6 +87,10 @@ module.exports = {
     '/passport-expiry': {
       fields: ['issue-day', 'issue-year', 'issue-month'],
       backLink: '../filter/dob',
+      next: '/dual-national'
+    },
+    '/dual-national': {
+      backLink: '../filter/passport-expiry',
       next: '/../intro' /* If they have had a UK passport before */
     },
     '/passport-damaged': {

@@ -238,6 +238,26 @@ module.exports = {
       'required'
     ]
   },
+  'dual-nationality': {
+    legend: {
+      value: 'Do you have any uncancelled passport from other countries?',
+      className: 'visuallyhidden'
+    },
+    options: [{
+          value: true,
+          label: 'Yes',
+          toggle: 'same-name'
+        },
+        {
+          value: false,
+          label: 'No'
+        }
+      ],
+      formatter: ['boolean'],
+      validate: [
+        'required'
+      ]
+  },
   'uncancelled': {
     legend: {
       value: 'Do you have any uncancelled passport from a different country?',

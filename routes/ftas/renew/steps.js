@@ -180,14 +180,15 @@ module.exports = {
         next: '/declaration'
     },
     '/passport-special-delivery': {
-        next: '/summary-family-details',
+        // next: '/summary-family-details',
+        next: '/summary',
         fields: ['secure-return']
     },
-    '/summary-family-details': {
-        controller: require('../../../controllers/confirm-family-details'),
-        template: 'confirm-family-details',
-        next: '/summary'
-    },
+    // '/summary-family-details': {
+    //     controller: require('../../../controllers/confirm-family-details'),
+    //     template: 'confirm-family-details',
+    //     next: '/summary'
+    // },
     '/summary':{
         controller: require('../../../controllers/confirm'),
         template: 'confirm',
