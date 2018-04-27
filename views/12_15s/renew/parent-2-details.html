@@ -57,6 +57,18 @@
           </div>
       </fieldset>
       <br>
+      <details>
+          <summary>
+              <span class="summary">I can't provide all the details</span>
+          </summary>
+          <label class="form-label-bold">
+            Additional information
+            <span class="form-hint">Why can't you provide all the information?</span>
+          </label>
+          <div class="panel panel-border-narrow">
+              {{#textarea}}additional-information{{/textarea}}
+          </div>
+      </details>
     {{#input-submit}}{{/input-submit}}
 {{/form}}
 {{/ hmpo-partials-form}}
