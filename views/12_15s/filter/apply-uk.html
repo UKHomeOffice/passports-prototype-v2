@@ -13,7 +13,8 @@
     {{$form}}
         {{#radio-group}}application-for{{/radio-group}}
         <div class="panel panel-border-narrow js-hidden" id="someone-else">
-          You need to complete this application as if you're the passport holder. For example, when you're asked 'Were you born in the UK?' you need to answer as the passport holder.
+          You need to complete this application as the passport holder.
+          <p class="form-hint" id="dob-hint">For example, when you're asked 'Were you born in the UK?' you need to answer as the passport holder.</p>
         </div>
         {{#input-submit}}{{/input-submit}}
     {{/form}}
