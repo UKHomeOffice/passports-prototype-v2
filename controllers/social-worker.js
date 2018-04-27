@@ -8,15 +8,11 @@ var Controller = function() {
 util.inherits(Controller, Base)
 
 Controller.prototype.successHandler = function successHandler(req, res, callback) {
-
-    if (req.session['hmpo-wizard-common']['relationship-applicant'] == "Social Worker") {
-      return res.redirect('./../intro/');
-    } else if (req.session['hmpo-wizard-common']['16-or-older'] == false) {
-      return res.redirect('./parental-responsibility');
-    } else {
-      return res.redirect('./../intro/');
-    }
-
+		if (req.sessionModel.get('relationship-applicant') == "Social Worker" &&  req.session['hmpo-wizard-common']['16-or-older'] == false) {
+			req.sessionModel.set('social-worker', true)
+		} else {
+			req.sessionModel.set('social-worker', false)
+		}
     Base.prototype.successHandler.call(this, req, res, callback);
 }
 

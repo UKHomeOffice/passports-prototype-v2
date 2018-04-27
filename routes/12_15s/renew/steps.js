@@ -59,22 +59,22 @@ module.exports = {
     '/parents-details':{
         fields:['parent1-first-names','parent2-first-names', 'marriage-day', 'marriage-month', 'marriage-year'],
         controller: require('../../../controllers/parents-details'),
-        forks: [{
-          target: '/parent-2-details',
-          condition: function(req, res) {
-            return req.session['hmpo-wizard-common']['parent1-first-names'] == "";
-          }
-        }],
+        // forks: [{
+        //   target: '/parent-2-details',
+        //   condition: function(req, res) {
+        //     return req.session['hmpo-wizard-common']['parent1-first-names'] == "";
+        //   }
+        // }],
         next: '/parent-1-details',
     },
     '/parent-1-details':{
         fields:[],
-        forks: [{
-          target: '/home-address',
-          condition: function(req, res) {
-            return req.session['hmpo-wizard-common']['parent2-first-names'] == "";
-          }
-        }],
+        // forks: [{
+        //   target: '/home-address',
+        //   condition: function(req, res) {
+        //     return req.session['hmpo-wizard-common']['parent2-first-names'] == "";
+        //   }
+        // }],
         next: '/parent-2-details',
     },
     '/parent-2-details':{
@@ -82,6 +82,10 @@ module.exports = {
         next: '/home-address',
         backLink: 'parents-details',
         nextAlt: './home-address-overseas'
+    },
+    '/parents-additional-details': {
+      fields:['additional-information'],
+      next: '/home-address'
     },
     '/home-address':{
         fields:['address1', 'address2','address3','address4','address5', 'town', 'postcode'],

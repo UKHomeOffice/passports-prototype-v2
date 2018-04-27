@@ -5,12 +5,21 @@
 {{$pageTitle}}Your name{{/pageTitle}}
 
 {{$header}}
-    <h1>Your name</h1>
+    {{#values.social-worker}}
+      <h1>Parental responsibility</h1>
+    {{/values.social-worker}}
+    {{^values.social-worker}}
+      <h1>Your name</h1>
+    {{/values.social-worker}}
 {{/header}}
 
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
+    {{#values.social-worker}}
+      <p>We need the name of the person who has parental responsibility for the applicant.</p>
+    {{/values.social-worker}}
+
         {{#input-text}}third-party-first-name{{/input-text}}
         {{#input-text}}third-party-last-name{{/input-text}}
         {{#input-submit}}{{/input-submit}}
