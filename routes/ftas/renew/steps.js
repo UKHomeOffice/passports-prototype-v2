@@ -45,17 +45,18 @@ module.exports = {
         next: '/date-and-place-birth'
     },
     '/date-and-place-birth': {
-        next: '/parents-details',
+        next: '/naturalisation-registration-details',
+        // next: '/parents-details',
         fields: ['age-day', 'age-month', 'age-year', 'born-in-uk', 'town-of-birth', 'country-of-birth'],
         controller: require('../../../controllers/go-overseas'),
         nextAlt: './home-address-overseas',
-        forks: [{ /* If they were NOT born in the UK */
-            target: '/naturalisation-registration-details',
-            condition: {
-                field: 'born-in-uk',
-                value: false
-            }
-        }]
+        // forks: [{ /* If they were NOT born in the UK */
+        //     target: '/naturalisation-registration-details',
+        //     condition: {
+        //         field: 'born-in-uk',
+        //         value: false
+        //     }
+        // }]
     },
     '/naturalisation-registration-details': {
         next: '/parents-details',
