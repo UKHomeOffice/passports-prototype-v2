@@ -47,13 +47,13 @@
         },
         "town-of-birth": {
             "label": "Town of birth",
-            "hint": "As written on the birth, naturalisation or registration certificate"
+            "hint": "As written on your birth, naturalisation or registration certificate"
         },
         "country-of-birth": {
             "label": "Country of birth"
         },
         "born-in-uk": {
-            "legend": "Was {{values.name}} born in the UK?"
+            "legend": "Were you born in the UK?"
         },
         "naturalisation-registration-certificate": {
           "label": "Naturalisation or registration certificate"
