@@ -283,6 +283,14 @@ module.exports = {
       'required'
     ]
   },
+  'other-why-apply': {
+    labelClassName: 'visuallyhidden',
+    className: 'textarea',
+    validate: [
+      'required',
+      { type: 'maxlength', arguments: 250 }
+    ],
+  },
   'relationship-other': {
     labelClassName: 'visuallyhidden',
   },
