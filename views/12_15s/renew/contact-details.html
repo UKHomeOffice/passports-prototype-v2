@@ -11,16 +11,21 @@
 {{< hmpo-partials-form}}
 {{$form}}
 
-    <p>We'll only use these details to send you updates about your application.</p>
+    {{#values.social-worker}}
+    <div class="panel panel-border-wide alert-default">
+      <p>We need your contact details instead of the applicant's. We'll only send you updates about this application.</p>
+    </div>
+    {{/values.social-worker}}
 
-      {{#input-text}}email{{/input-text}}
+    {{^values.social-worker}}
+      <p>We'll only use these details to send you updates about your application.</p>
+    {{/values.social-worker}}
 
-      <legend><span class="form-label-bold">Mobile or home number</span></legend>
-      <p class="form-hint" id="dob-hint">Use a phone you have access to – we may call you if there's a problem.</p>
-      {{#input-text}}mobile{{/input-text}}
+    {{#input-text}}email{{/input-text}}
 
-
-    </fieldset>
+    <legend><span class="form-label-bold">Mobile or home number</span></legend>
+    <p class="form-hint" id="dob-hint">Use a phone you have access to – we may call you if there's a problem.</p>
+    {{#input-text}}mobile{{/input-text}}
 
     {{#input-submit}}{{/input-submit}}
 
