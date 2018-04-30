@@ -59,8 +59,15 @@ module.exports = {
         // }]
     },
     '/naturalisation-registration-details': {
-        next: '/parents-details',
-        fields: ['naturalisation-registration-certificate', 'naturalisation-registration-certificate-number', 'naturalisation-registration-certificate-issue-day', 'naturalisation-registration-certificate-issue-month', 'naturalisation-registration-certificate-issue-year']
+        next: '/home-address',
+        fields: ['naturalisation-registration-certificate', 'naturalisation-registration-certificate-number', 'naturalisation-registration-certificate-issue-day', 'naturalisation-registration-certificate-issue-month', 'naturalisation-registration-certificate-issue-year'],
+        forks: [{ /* If they do NOT have a certificate */
+            target: '/parents-details',
+            condition: {
+                field: 'naturalisation-registration-certificate',
+                value: false
+            }
+        }]
     },
     '/parents-details':{
         fields:['parent1-first-names', 'parent1-last-name', 'parent2-first-names', 'parent2-last-name', 'marriage-day', 'marriage-month', 'marriage-year'],
