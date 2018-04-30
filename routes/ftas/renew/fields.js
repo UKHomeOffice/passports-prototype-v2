@@ -201,8 +201,8 @@ module.exports = {
         className: 'form-label-bold'
     },
     options: [
-        { value: true, label: 'Yes', toggle: 'birth-town' },
-        { value: false, label: 'No' }
+        { value: true, label: 'Yes' },
+        { value: false, label: 'No', toggle: 'birth-country' }
     ],
     className: 'inline'
   },
