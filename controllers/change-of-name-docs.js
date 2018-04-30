@@ -8,15 +8,19 @@ var Controller = function() {
 util.inherits(Controller, Base)
 
 Controller.prototype.get = function successHandler(req, res, callback) {
-	if (req.sessionModel.get('parental-responsibility') == false && req.sessionModel.get('relationship-applicant') != "Other") {
-	  return res.redirect('./name-change-docs-for-parents')
-	} else if (req.sessionModel.get('parental-responsibility') == true && req.sessionModel.get('relationship-applicant') != "Other") {
-	  return res.redirect('./declaration')
-	}	else if (req.sessionModel.get('16-or-older') == false && req.sessionModel.get('relationship-applicant') == "Other") {
-	  return res.redirect('./documents-thirdparty-under16')
-	}	else {
-	  return res.redirect('./documents-thirdparty-over16')
-	}
+  req.sessionModel.set('document-list', true);
+  if (req.sessionModel.get('parental-responsibility') == false && req.sessionModel.get('relationship-applicant') != "Other") {
+    req.sessionModel.set('document-link', 'name-change-docs-for-parents')
+    return res.redirect('name-change-docs-for-parents')
+  } else if (req.sessionModel.get('parental-responsibility') == true && req.sessionModel.get('relationship-applicant') != "Other") {
+    req.sessionModel.set('document-list', false);
+    return res.redirect('./declaration')
+  } else if (req.sessionModel.get('16-or-older') == false && req.sessionModel.get('relationship-applicant') == "Other") {
+    req.sessionModel.set('document-link', 'documents-thirdparty-under16')
+    return res.redirect('./documents-thirdparty-under16')
+  } else {
+    req.sessionModel.set('document-link', 'documents-thirdparty-over16')
+    return res.redirect('./documents-thirdparty-over16')
+  }
 }
-
 module.exports = Controller
