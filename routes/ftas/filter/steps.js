@@ -28,8 +28,27 @@ module.exports = {
     },
     '/lost-stolen': {
         fields: ['lost-stolen'],
-        next: '/dob'
+        next: '/passport-colour',
+        forks: [{
+          target: '/dob',
+          condition: {
+            field: 'lost-stolen',
+            value: false
+          }
+        }]
     },
+    '/passport-colour': {
+      backLink: './',
+      fields: ['passport-colour'],
+      next: '/dob',
+      forks: [{
+        target: '/lost',
+        condition: {
+          field: 'passport-colour',
+          value: 'red'
+        }
+      }]
+  },
     '/what-do-you-want-to-do': {
         fields: ['what-to-do'],
         backLink: './',

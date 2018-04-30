@@ -116,12 +116,22 @@ module.exports = {
   ],
   formatter: ['boolean'],
   validate: [
-    'required',
-    {
-      type:'equal',
-      arguments:[false], /* if the arguments are NOT selected */
-      redirect:'/lost'
-    }
+    'required'
+  ],
+  className: 'inline'
+},
+'passport-colour': {
+  legend: {
+    value: 'What colour of UK passport did you have before?',
+    className: 'visuallyhidden'
+  },
+  options: [
+    { value: 'red', label: 'Red' },
+    { value: 'black-blue', label: 'Black/Blue' }
+  ],
+  // formatter: ['boolean'],
+  validate: [
+    'required'
   ],
   className: 'inline'
 },
