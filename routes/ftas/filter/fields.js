@@ -127,7 +127,7 @@ module.exports = {
   },
   options: [
     { value: 'red', label: 'Red' },
-    { value: 'black-blue', label: 'Black/Blue' }
+    { value: 'black-blue', label: 'Dark blue' }
   ],
   // formatter: ['boolean'],
   validate: [

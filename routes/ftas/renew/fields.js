@@ -127,8 +127,8 @@ module.exports = {
   },
   'change-name': {
       legend: {
-        value: 'Does this name match the one on your birth certificate?',
-        className: 'visuallyhidden'
+        value: 'If you\'ve been naturalised or registered, tell us if this name is on your UK citizenship certificate.',
+        className: 'form-hint'
       },
       options: [
           { value: false, label: 'Yes' },
@@ -197,6 +197,7 @@ module.exports = {
     formatter: 'boolean',
     validate: 'required',
     legend: {
+        value: 'Were you born in the UK?',
         className: 'form-label-bold'
     },
     options: [
@@ -407,6 +408,7 @@ module.exports = {
   },
   'parent1-additional-information': {
     className: 'textarea',
+    labelClassName: 'form-label-bold'
     // validate: [
     //   'required',
     //   { type: 'maxlength', arguments: 250 }
@@ -510,6 +512,7 @@ module.exports = {
   },
   'parent2-additional-information': {
     className: 'textarea',
+    labelClassName: 'visuallyhidden'
     // validate: [
     //   'required',
     //   { type: 'maxlength', arguments: 250 }
@@ -639,6 +642,7 @@ module.exports = {
   },
   'parent1-parent1-additional-information': {
     className: 'textarea',
+    labelClassName: 'visuallyhidden'
     // validate: [
     //   'required',
     //   { type: 'maxlength', arguments: 250 }
@@ -742,6 +746,7 @@ module.exports = {
   },
   'parent1-parent2-additional-information': {
     className: 'textarea',
+    labelClassName: 'visuallyhidden'
     // validate: [
     //   'required',
     //   { type: 'maxlength', arguments: 250 }
@@ -871,6 +876,7 @@ module.exports = {
   },
   'parent2-parent1-additional-information': {
     className: 'textarea',
+    labelClassName: 'visuallyhidden'
     // validate: [
     //   'required',
     //   { type: 'maxlength', arguments: 250 }
@@ -974,6 +980,7 @@ module.exports = {
   },
   'parent2-parent2-additional-information': {
     className: 'textarea',
+    labelClassName: 'visuallyhidden'
     // validate: [
     //   'required',
     //   { type: 'maxlength', arguments: 250 }

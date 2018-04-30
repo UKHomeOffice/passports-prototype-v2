@@ -204,11 +204,11 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     });
     parentsFields.push({
       step: this.getEditStep('parents-details'),
-      title: 'Parent 1’s name',
+      title: 'Mother',
       value: join(values, ['parent1-first-names', 'parent1-last-name'])
     }, {
       step: this.getEditStep('parents-details'),
-      title: 'Parent 2’s name',
+      title: 'Father',
       value: join(values, ['parent2-first-names', 'parent2-last-name'])
     }, {
       step: this.getEditStep('parents-details'),
@@ -222,7 +222,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   // if (values['parent1-first-names']) { /* If parent 1 first name is NOT empty */
     response.sections.push({
       className: 'parent1-details',
-      title: values['parent1-first-names'].concat('\'s details'),
+      title: 'Mother',
       fields: parent1Fields
     });
     parent1Fields.push({
@@ -261,7 +261,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   // if (values['parent2-first-names']) { /* If parent 2 first name is NOT empty */
     response.sections.push({
       className: 'parent2-details',
-      title: values['parent2-first-names'].concat('\'s details'),
+      title: 'Father',
       fields: parent2Fields
     });
     parent2Fields.push({
@@ -300,16 +300,16 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   // if (values['parent1-parent1-first-names']) { /* If parent 1's parent 1 first name is NOT empty */
     response.sections.push({
       className: 'parent1-parents-details',
-      title: 'Maternal grandparents\'',
+      title: 'Maternal grandparents',
       fields: parent1ParentsFields
     });
     parent1ParentsFields.push({
       step: this.getEditStep('parent1-parents-details'),
-      title: 'Parent 1’s mother or parent 1 name',
+      title: 'Grandmother',
       value: join(values, ['parent1-parent1-first-names', 'parent1-parent1-last-name'])
     }, {
       step: this.getEditStep('parent1-parents-details'),
-      title: 'Parent 1’s father or parent 2',
+      title: 'Grandfather',
       value: join(values, ['parent1-parent2-first-names', 'parent1-parent2-last-name'])
     }, {
       step: this.getEditStep('parent1-parents-details'),
@@ -323,7 +323,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   // if (values['parent1-parent1-first-names']) { /* If parent 1's parent 1 first name is NOT empty */
     response.sections.push({
       className: 'parent1-parent1-details',
-      title: values['parent1-parent1-first-names'].concat('\'s details'),
+      title: 'Maternal grandmother',
       fields: parent1Parent1Fields
     });
     parent1Parent1Fields.push({
@@ -364,7 +364,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   // if (values['parent1-parent2-first-names']) { /* If parent 1's parent 2 first name is NOT empty */
     response.sections.push({
       className: 'parent1-parent2-details',
-      title: values['parent1-parent2-first-names'].concat('\'s details'),
+      title: 'Maternal grandfather',
       fields: parent1Parent2Fields
     });
     parent1Parent2Fields.push({
@@ -405,16 +405,16 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   // if (values['parent2-parent1-first-names']) { /* If parent 2's parent 1 first name is NOT empty */
     response.sections.push({
       className: 'parent2-parents-details',
-      title: 'Paternal grandparents\'',
+      title: 'Paternal grandparents',
       fields: parent2ParentsFields
     });
     parent2ParentsFields.push({
       step: this.getEditStep('parent2-parents-details'),
-      title: 'Parent 2’s mother or parent 1 name',
+      title: 'Grandmother',
       value: join(values, ['parent2-parent1-first-names', 'parent2-parent1-last-name'])
     }, {
       step: this.getEditStep('parent2-parents-details'),
-      title: 'Parent 2’s father or parent 2 name',
+      title: 'Grandfather',
       value: join(values, ['parent2-parent2-first-names', 'parent2-parent2-last-name'])
     }, {
       step: this.getEditStep('parent2-parents-details'),
@@ -428,7 +428,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   // if (values['parent2-parent1-first-names']) { /* If parent 2's parent 1 first name is NOT empty */
     response.sections.push({
       className: 'parent2-parent1-details',
-      title: values['parent2-parent1-first-names'].concat('\'s details'),
+      title: 'Paternal grandmother',
       fields: parent2Parent1Fields
     });
     parent2Parent1Fields.push({
@@ -469,7 +469,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   // if (values['parent2-parent2-first-names']) { /* If parent 2's parent 2 first name is NOT empty */
     response.sections.push({
       className: 'parent2-parent2-details',
-      title: values['parent2-parent2-first-names'].concat('\'s details'),
+      title: 'Paternal grandfather',
       fields: parent2Parent2Fields
     });
     parent2Parent2Fields.push({

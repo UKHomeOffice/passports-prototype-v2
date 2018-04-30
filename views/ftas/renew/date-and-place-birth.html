@@ -1,9 +1,9 @@
 {{< layout}}
 
-{{$pageTitle}}Your date and place of birth{{/pageTitle}}
+{{$pageTitle}}Date and place of birth{{/pageTitle}}
 
 {{$header}}
-    <h1>Your date and place of birth</h1>
+    <h1>Date and place of birth</h1>
 {{/header}}
 
 {{$content}}
@@ -15,7 +15,9 @@
     <fieldset>
         <div class="form-date">
             <p class="form-hint" id="dob-hint">For example 20 01 2004</p>
-            {{#input-text}}age-day{{/input-text}} {{#input-text}}age-month{{/input-text}} {{#input-text}}age-year{{/input-text}}
+            {{#input-text}}age-day{{/input-text}}
+            {{#input-text}}age-month{{/input-text}}
+            {{#input-text}}age-year{{/input-text}}
         </div>
     </fieldset>
 </div>

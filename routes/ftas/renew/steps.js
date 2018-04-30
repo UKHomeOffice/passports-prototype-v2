@@ -196,7 +196,7 @@ module.exports = {
         next: '/fta-docs'
     },
     '/required-documents':{
-        controller: require('../../../controllers/change-of-name-docs')
+        controller: require('../../../controllers/change-of-name-docsFTA')
     },
     '/fta-docs':{
         next: '/required-documents'

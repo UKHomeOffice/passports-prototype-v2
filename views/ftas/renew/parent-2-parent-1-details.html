@@ -1,11 +1,11 @@
 {{< layout}}
 
-{{$pageTitle}}Parent 2’s mother or parent 1{{/pageTitle}}
+{{$pageTitle}}Paternal grandmother{{/pageTitle}}
 
 {{$header}}
     <h1>
-        <span class="heading-secondary">Parent 2's mother or parent 1</span>
-        {{values.parent2-parent1-first-names}}'s details
+        <!-- <span class="heading-secondary">Parent 2's mother or parent 1</span> -->
+        Paternal grandmother
     </h1>
 {{/header}}
 
@@ -64,9 +64,10 @@
 
     <details>
         <summary>
-            <span class="summary">I can't provide all the details</span>
+            <span class="summary">I don't know these details</span>
         </summary>
         <div class="panel panel-border-narrow">
+            <span class="form-hint">You need to provide as much information as you can, but if you don't know these details, tell us why.</span>
             {{#textarea}}parent2-parent1-additional-information{{/textarea}}
         </div>
     </details>

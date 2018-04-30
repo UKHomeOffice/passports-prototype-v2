@@ -4,13 +4,13 @@
 
 {{$header}}
 
-<h1>{{values.name}}'s father or parent 2</h1>
+<h1>Father or parent 2</h1>
 
 {{/header}}
 
 {{$content}}
 
-<p>You need to enter as much information as you can or this application may <br>be delayed.</p>
+<p>We need to confirm that you have British nationality. This may depend on your parents – provide as many details as you can.</p>
 
 
 {{< hmpo-partials-form}}
@@ -40,7 +40,7 @@
         <legend>
             <span class="form-label-bold">Country of nationality</span>
         </legend>
-        <p class="form-hint" id="dob-hint">At the time of {{values.name}}'s birth</p>
+        <p class="form-hint" id="dob-hint">At the time of your birth</p>
         {{#select}}parent2-country-of-nationality{{/select}}
     </fieldset>
 
@@ -64,9 +64,10 @@
 
     <details>
         <summary>
-            <span class="summary">I can't provide all the details</span>
+            <span class="summary">I don't know these details</span>
         </summary>
         <div class="panel panel-border-narrow">
+            <span class="form-hint">You need to provide as much information as you can, but if you don't know these details, tell us why.</span>
             {{#textarea}}parent2-additional-information{{/textarea}}
         </div>
     </details>

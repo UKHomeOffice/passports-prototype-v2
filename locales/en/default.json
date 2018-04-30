@@ -47,7 +47,7 @@
         },
         "town-of-birth": {
             "label": "Town of birth",
-            "hint": "As written on the birth, naturalisation or registration certificate"
+            "hint": "As written on your birth, adoption, naturalisation or registration certificate"
         },
         "country-of-birth": {
             "label": "Country of birth"
@@ -102,9 +102,8 @@
           "label": "Country"
         },
         "no-sign-reason": {
-          "label": "Explain why they can’t sign",
-          "hint": "If you have evidence, include it when you send the old passport."
-
+          "label": "Explain why you can’t sign",
+          "hint": "If you have evidence, include it when you send your documents"
         },
         "previous-name": {
             "legend": "Have you ever been known by any other names?",
@@ -271,8 +270,7 @@
           "label": "Year"
         },
         "parent1-additional-information": {
-          "label": "Additional information",
-          "hint": "Why can't you provide all the information?"
+          "label": "Tell us why"
         },
 
 
@@ -315,8 +313,7 @@
           "label": "Year"
         },
         "parent2-additional-information": {
-          "label": "Additional information",
-          "hint": "Why can't you provide all the information?"
+          "hint": "Tell us why"
         },
 
 
@@ -370,8 +367,7 @@
           "label": "Year"
         },
         "parent1-parent1-additional-information": {
-          "label": "Additional information",
-          "hint": "Why can't you provide all the information?"
+          "hint": "Tell us why"
         },
 
 
@@ -414,8 +410,7 @@
           "label": "Year"
         },
         "parent1-parent2-additional-information": {
-          "label": "Additional information",
-          "hint": "Why can't you provide all the information?"
+          "hint": "Tell us why"
         },
 
 
@@ -469,8 +464,7 @@
           "label": "Year"
         },
         "parent2-parent1-additional-information": {
-          "label": "Additional information",
-          "hint": "Why can't you provide all the information?"
+          "hint": "Tell us why"
         },
 
 
@@ -513,8 +507,7 @@
           "label": "Year"
         },
         "parent2-parent2-additional-information": {
-          "label": "Additional information",
-          "hint": "Why can't you provide all the information?"
+          "hint": "Tell us why"
         },
 
 
