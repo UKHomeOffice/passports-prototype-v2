@@ -86,7 +86,7 @@ module.exports = {
           return req.session['hmpo-wizard-common']['16-or-older'] == false; /* If they are BELOW 16 */
         }
       }, {
-        target: '/../intro',
+        target: '/dual-national',
         condition: function (req, res) {
           return req.session['hmpo-wizard-common']['16-or-older'] == true && req.session['hmpo-wizard-common']['passport-before'] == false; // If they are OVER 16 + NOT had UK passport before
         }
@@ -110,7 +110,7 @@ module.exports = {
     },
     '/dual-national': {
       backLink: '../filter/passport-expiry',
-      next: '/../intro' /* If they have had a UK passport before */
+      next: '/../intro'
     },
     '/passport-damaged': {
       fields: ['passport-damaged'],
