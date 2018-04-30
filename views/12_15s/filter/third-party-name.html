@@ -22,6 +22,11 @@
 
         {{#input-text}}third-party-first-name{{/input-text}}
         {{#input-text}}third-party-last-name{{/input-text}}
+        {{#values.third-party}}
+
+          <span class="">Describe why you're making this application</span>
+          {{#textarea}}other-why-apply{{/textarea}}
+        {{/values.third-party}}
         {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}
