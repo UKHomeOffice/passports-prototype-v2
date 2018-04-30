@@ -103,7 +103,8 @@
         },
         "no-sign-reason": {
           "label": "Explain why you can’t sign",
-          "hint": "If you have evidence, include it when you send your documents"
+          "hint": "If you have evidence, include it when you send the old passport."
+
         },
         "previous-name": {
             "legend": "Have you ever been known by any other names?",
