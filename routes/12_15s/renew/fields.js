@@ -338,7 +338,11 @@ module.exports = {
     ],
     className: 'inline'
   },
-  'additional-information':{
+  'additional-information-parent-1':{
+    className: 'textarea',
+    labelClassName: 'visuallyhidden'
+  },
+  'additional-information-parent-2':{
     className: 'textarea',
     labelClassName: 'visuallyhidden'
   },
