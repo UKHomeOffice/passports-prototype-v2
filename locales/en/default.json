@@ -102,7 +102,7 @@
           "label": "Country"
         },
         "no-sign-reason": {
-          "label": "Explain why they can’t sign",
+          "label": "Explain why you can’t sign",
           "hint": "If you have evidence, include it when you send the old passport."
 
         },
