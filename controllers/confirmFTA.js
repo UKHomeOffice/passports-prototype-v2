@@ -554,19 +554,35 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
           return output.join('<br>');
         }
       },
-      {
+      // { /* Keep this here for old blues */
+      //   step: values.veteran ? null : this.getEditStep('secure-return'),
+      //   title: values.veteran ? 'Delivery' : 'Old passport',
+      //   value: function () {
+      //     if (values['secure-return']) {
+      //       var output = 'You need to post your old passport to us. We’ll return it to you by ';
+      //       var cost = model.delivery();
+      //       if (cost) {
+      //         output += ' secure delivery. <br/>£5.00 ';
+      //       }
+      //       return output;
+      //     } else {
+      //       return 'You need to post your old passport to us. We’ll return it to you by standard post. <br/>£0.00';
+      //     }
+      //   }
+      // },
+      { /* FTA docs */
         step: values.veteran ? null : this.getEditStep('secure-return'),
-        title: values.veteran ? 'Delivery' : 'Old passport',
+        title: values.veteran ? 'Delivery' : 'Documents',
         value: function () {
           if (values['secure-return']) {
-            var output = 'You need to post your old passport to us. We’ll return it to you by ';
+            var output = 'You need to post your documents to us. We’ll return them to you by ';
             var cost = model.delivery();
             if (cost) {
-              output += ' special delivery. <br/>£5.00 ';
+              output += ' secure delivery. <br/>£5.00 ';
             }
             return output;
           } else {
-            return 'You need to post your old passport to us. We’ll return it to you by standard post. <br/>£0.00';
+            return 'You need to post your documents to us. We’ll return them to you by standard post. <br/>£0.00';
           }
         }
       },
