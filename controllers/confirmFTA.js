@@ -82,7 +82,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     }, {
       step: this.getEditStep('expiry-year'),
       title: 'Expiry date',
-      value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
+      value: moment(values['passport-number'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
     });
     if (values['what-damaged']) {
       oldPassportFields.push({
@@ -203,15 +203,15 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       fields: parentsFields
     });
     parentsFields.push({
-      step: this.getEditStep('parents-details'),
+      step: this.getEditStep('parent1-first-names'),
       title: 'Mother',
       value: join(values, ['parent1-first-names', 'parent1-last-name'])
     }, {
-      step: this.getEditStep('parents-details'),
+      step: this.getEditStep('parent2-first-names'),
       title: 'Father',
       value: join(values, ['parent2-first-names', 'parent2-last-name'])
     }, {
-      step: this.getEditStep('parents-details'),
+      step: this.getEditStep('marriage-year'),
       title: 'Marriage date',
       value: moment(values['marriage-year'] + '-' + values['marriage-month'] + '-' + values['marriage-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     });
@@ -226,31 +226,31 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       fields: parent1Fields
     });
     parent1Fields.push({
-      step: this.getEditStep('parent-1-details'),
+      step: this.getEditStep('parent1-town'),
       title: 'Town of birth',
       value: values['parent1-town']
     }, {
-      step: this.getEditStep('parent-1-details'),
+      step: this.getEditStep('parent1-country-of-birth'),
       title: 'Country of birth',
-      value: values['parent1-country']
+      value: values['parent1-country-of-birth']
     }, {
-      step: this.getEditStep('parent-1-details'),
+      step: this.getEditStep('parent1-age-year'),
       title: 'Date of birth',
       value: moment(values['parent1-age-year'] + '-' + values['parent1-age-month'] + '-' + values['parent1-age-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     }, {
-      step: this.getEditStep('parent-1-details'),
+      step: this.getEditStep('parent1-country-of-nationality'),
       title: 'Country of nationality',
-      value: values['parent1-nationality']
+      value: values['parent1-country-of-nationality']
     }, {
-      step: this.getEditStep('parent-1-details'),
+      step: this.getEditStep('parent1-passport-number'),
       title: 'UK passport number',
       value: values['parent1-passport-number']
     }, {
-      step: this.getEditStep('parent-1-details'),
+      step: this.getEditStep('parent1-passport-issue-year'),
       title: 'Date of issue',
       value: moment(values['parent1-passport-issue-year'] + '-' + values['parent1-passport-issue-month'] + '-' + values['parent1-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     }, {
-      step: this.getEditStep('parent-1-details'),
+      step: this.getEditStep('parent1-additional-information'),
       title: 'Additional information',
       value: values['parent1-additional-information']
     });
@@ -265,31 +265,31 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       fields: parent2Fields
     });
     parent2Fields.push({
-      step: this.getEditStep('parent-2-details'),
+      step: this.getEditStep('parent2-town'),
       title: 'Town of birth',
       value: values['parent2-town']
     }, {
-      step: this.getEditStep('parent-2-details'),
+      step: this.getEditStep('parent2-country-of-birth'),
       title: 'Country of birth',
-      value: values['parent2-country']
+      value: values['parent2-country-of-birth']
     }, {
-      step: this.getEditStep('parent-2-details'),
+      step: this.getEditStep('parent2-age-year'),
       title: 'Date of birth',
       value: moment(values['parent2-age-year'] + '-' + values['parent2-age-month'] + '-' + values['parent2-age-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     }, {
-      step: this.getEditStep('parent-2-details'),
+      step: this.getEditStep('parent2-country-of-nationality'),
       title: 'Country of nationality',
-      value: values['parent2-nationality']
+      value: values['parent2-country-of-nationality']
     }, {
-      step: this.getEditStep('parent-2-details'),
+      step: this.getEditStep('parent2-passport-number'),
       title: 'UK passport number',
       value: values['parent2-passport-number']
     }, {
-      step: this.getEditStep('parent-2-details'),
+      step: this.getEditStep('parent2-passport-issue-year'),
       title: 'Date of issue',
       value: moment(values['parent2-passport-issue-year'] + '-' + values['parent2-passport-issue-month'] + '-' + values['parent2-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     }, {
-      step: this.getEditStep('parent-2-details'),
+      step: this.getEditStep('parent2-additional-information'),
       title: 'Additional information',
       value: values['parent2-additional-information']
     });
@@ -304,15 +304,15 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       fields: parent1ParentsFields
     });
     parent1ParentsFields.push({
-      step: this.getEditStep('parent1-parents-details'),
+      step: this.getEditStep('parent1-parent1-first-names'),
       title: 'Grandmother',
       value: join(values, ['parent1-parent1-first-names', 'parent1-parent1-last-name'])
     }, {
-      step: this.getEditStep('parent1-parents-details'),
+      step: this.getEditStep('parent1-parent2-first-names'),
       title: 'Grandfather',
       value: join(values, ['parent1-parent2-first-names', 'parent1-parent2-last-name'])
     }, {
-      step: this.getEditStep('parent1-parents-details'),
+      step: this.getEditStep('parent1-parents-marriage-year'),
       title: 'Marriage date',
       value: moment(values['parent1-parents-marriage-year'] + '-' + values['parent1-parents-marriage-month'] + '-' + values['parent1-parents-marriage-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     });
@@ -327,22 +327,22 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       fields: parent1Parent1Fields
     });
     parent1Parent1Fields.push({
-      step: this.getEditStep('parent-1-parent-1-details'),
+      step: this.getEditStep('parent1-parent1-town'),
       title: 'Town of birth',
       value: values['parent1-parent1-town']
     }, {
-      step: this.getEditStep('parent-1-parent-1-details'),
+      step: this.getEditStep('parent1-parent1-country-of-birth'),
       title: 'Country of birth',
-      value: values['parent1-parent1-country']
+      value: values['parent1-parent1-country-of-birth']
     }, {
-      step: this.getEditStep('parent-1-parent-1-details'),
+      step: this.getEditStep('parent1-parent1-age-year'),
       title: 'Date of birth',
       value: moment(values['parent1-parent1-age-year'] + '-' + values['parent1-parent1-age-month'] + '-' + values['parent1-parent1-age-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     },
     // {
     //   step: this.getEditStep('parent-1-parent-1-details'),
     //   title: 'Country of nationality',
-    //   value: values['parent1-parent1-nationality']
+    //   value: values['parent1-parent1-country-of-nationality']
     // }, {
     //   step: this.getEditStep('parent-1-parent-1-details'),
     //   title: 'UK passport number',
@@ -353,7 +353,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     //   value: moment(values['parent1-parent1-passport-issue-year'] + '-' + values['parent1-parent1-passport-issue-month'] + '-' + values['parent1-parent1-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     // },
     {
-      step: this.getEditStep('parent-1-parent-1-details'),
+      step: this.getEditStep('parent1-parent1-additional-information'),
       title: 'Additional information',
       value: values['parent1-parent1-additional-information']
     });
@@ -368,22 +368,22 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       fields: parent1Parent2Fields
     });
     parent1Parent2Fields.push({
-      step: this.getEditStep('parent-1-parent-2-details'),
+      step: this.getEditStep('parent1-parent2-town'),
       title: 'Town of birth',
       value: values['parent1-parent2-town']
     }, {
-      step: this.getEditStep('parent-1-parent-2-details'),
+      step: this.getEditStep('parent1-parent2-country-of-birth'),
       title: 'Country of birth',
-      value: values['parent1-parent2-country']
+      value: values['parent1-parent2-country-of-birth']
     }, {
-      step: this.getEditStep('parent-1-parent-2-details'),
+      step: this.getEditStep('parent1-parent2-age-year'),
       title: 'Date of birth',
       value: moment(values['parent1-parent2-age-year'] + '-' + values['parent1-parent2-age-month'] + '-' + values['parent1-parent2-age-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     },
     // {
     //   step: this.getEditStep('parent-1-parent-2-details'),
     //   title: 'Country of nationality',
-    //   value: values['parent1-parent2-nationality']
+    //   value: values['parent1-parent2-country-of-nationality']
     // }, {
     //   step: this.getEditStep('parent-1-parent-2-details'),
     //   title: 'UK passport number',
@@ -394,7 +394,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     //   value: moment(values['parent1-parent2-passport-issue-year'] + '-' + values['parent1-parent2-passport-issue-month'] + '-' + values['parent1-parent2-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     // },
     {
-      step: this.getEditStep('parent-1-parent-2-details'),
+      step: this.getEditStep('parent1-parent2-additional-information'),
       title: 'Additional information',
       value: values['parent1-parent2-additional-information']
     });
@@ -409,15 +409,15 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       fields: parent2ParentsFields
     });
     parent2ParentsFields.push({
-      step: this.getEditStep('parent2-parents-details'),
+      step: this.getEditStep('parent2-parent1-first-names'),
       title: 'Grandmother',
       value: join(values, ['parent2-parent1-first-names', 'parent2-parent1-last-name'])
     }, {
-      step: this.getEditStep('parent2-parents-details'),
+      step: this.getEditStep('parent2-parent2-first-names'),
       title: 'Grandfather',
       value: join(values, ['parent2-parent2-first-names', 'parent2-parent2-last-name'])
     }, {
-      step: this.getEditStep('parent2-parents-details'),
+      step: this.getEditStep('parent2-parents-marriage-year'),
       title: 'Marriage date',
       value: moment(values['parent2-parents-marriage-year'] + '-' + values['parent2-parents-marriage-month'] + '-' + values['parent2-parents-marriage-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     });
@@ -432,22 +432,22 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       fields: parent2Parent1Fields
     });
     parent2Parent1Fields.push({
-      step: this.getEditStep('parent-2-parent-1-details'),
+      step: this.getEditStep('parent2-parent1-town'),
       title: 'Town of birth',
       value: values['parent2-parent1-town']
     }, {
-      step: this.getEditStep('parent-2-parent-1-details'),
+      step: this.getEditStep('parent2-parent1-country-of-birth'),
       title: 'Country of birth',
-      value: values['parent2-parent1-country']
+      value: values['parent2-parent1-country-of-birth']
     }, {
-      step: this.getEditStep('parent-2-parent-1-details'),
+      step: this.getEditStep('parent2-parent1-age-year'),
       title: 'Date of birth',
       value: moment(values['parent2-parent1-age-year'] + '-' + values['parent2-parent1-age-month'] + '-' + values['parent2-parent1-age-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     },
     // {
     //   step: this.getEditStep('parent-2-parent-1-details'),
     //   title: 'Country of nationality',
-    //   value: values['parent2-parent1-nationality']
+    //   value: values['parent2-parent1-country-of-nationality']
     // }, {
     //   step: this.getEditStep('parent-2-parent-1-details'),
     //   title: 'UK passport number',
@@ -458,7 +458,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     //   value: moment(values['parent2-parent1-passport-issue-year'] + '-' + values['parent2-parent1-passport-issue-month'] + '-' + values['parent2-parent1-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     // },
     {
-      step: this.getEditStep('parent-2-parent-1-details'),
+      step: this.getEditStep('parent2-parent1-additional-information'),
       title: 'Additional information',
       value: values['parent2-parent1-additional-information']
     });
@@ -473,22 +473,22 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       fields: parent2Parent2Fields
     });
     parent2Parent2Fields.push({
-      step: this.getEditStep('parent-2-parent-2-details'),
+      step: this.getEditStep('parent2-parent2-town'),
       title: 'Town of birth',
       value: values['parent2-parent2-town']
     }, {
-      step: this.getEditStep('parent-2-parent-2-details'),
+      step: this.getEditStep('parent2-parent2-country-of-birth'),
       title: 'Country of birth',
-      value: values['parent2-parent2-country']
+      value: values['parent2-parent2-country-of-birth']
     }, {
-      step: this.getEditStep('parent-2-parent-2-details'),
+      step: this.getEditStep('parent2-parent2-age-year'),
       title: 'Date of birth',
       value: moment(values['parent2-parent2-age-year'] + '-' + values['parent2-parent2-age-month'] + '-' + values['parent2-parent2-age-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     },
     // {
     //   step: this.getEditStep('parent-2-parent-2-details'),
     //   title: 'Country of nationality',
-    //   value: values['parent2-parent2-nationality']
+    //   value: values['parent2-parent2-country-of-nationality']
     // }, {
     //   step: this.getEditStep('parent-2-parent-2-details'),
     //   title: 'UK passport number',
@@ -499,7 +499,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     //   value: moment(values['parent2-parent2-passport-issue-year'] + '-' + values['parent2-parent2-passport-issue-month'] + '-' + values['parent2-parent2-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     // },
     {
-      step: this.getEditStep('parent-2-parent-2-details'),
+      step: this.getEditStep('parent2-parent2-additional-information'),
       title: 'Additional information',
       value: values['parent2-parent2-additional-information']
     });
