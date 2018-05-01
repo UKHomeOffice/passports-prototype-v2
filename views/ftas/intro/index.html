@@ -1,31 +1,42 @@
 {{< layout}}
 
 {{$main-content}}
-    <div class="column-full">
-        <div class="flash-card">
+
+<div class="column-full">
+    <div class="flash-card">
+
         <header>
-        <h1>Before you continue</h1>
+            <h1>Before you continue</h1>
         </header>
 
         <div class="grid-row">
             <div class="column-two-thirds">
-              {{#values.uncancelled}}
-                <h2> This should only show for dual nationals</h2>
-                <p> Make sure you return all of your passports</p>
-              {{/values.uncancelled}}
-              {{values.uncancelled}}
-              <p>It should take around 6 weeks to get your new passport, but some applications may take longer.</p>
-              
-              <h2>Identity interview</h2>
-              <p>You might need to have an identity interview after we've checked your application.</p>
 
-              <a href="/ftas/intro/what-you-need" class="button">Continue</a><br>
+                {{#values.uncancelled}}
+                    <h2>This should only show for dual nationals</h2>
+                    <p>Make sure you return all of your passports</p>
+                {{/values.uncancelled}}
 
+                <h2>What it costs</h2>
+                <p>A standard passport costs £75.50 including secure delivery.</p>
+
+                <h2>What you'll need</h2>
+                <ul class="list-bullet">
+                    <li>a credit or debit card</li>
+                    <li>your birth, adoption, naturalisation or registration certificate</li>
+                </ul>
+
+                <h2>How long it takes</h2>
+                <p>It should take around 6 weeks to get your new passport, but some applications may take longer.</p>
+                <br>
+
+                <a href="/ftas/intro/what-you-need" class="button">Continue</a>
+                <br>
             </div>
         </div>
 
-        </div>
     </div>
+</div>
 
 {{/ main-content}}
 

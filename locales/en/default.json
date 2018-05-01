@@ -313,7 +313,7 @@
           "label": "Year"
         },
         "parent2-additional-information": {
-          "hint": "Tell us why"
+          "label": "Tell us why"
         },
 
 
@@ -367,7 +367,7 @@
           "label": "Year"
         },
         "parent1-parent1-additional-information": {
-          "hint": "Tell us why"
+          "label": "Tell us why"
         },
 
 
@@ -410,7 +410,7 @@
           "label": "Year"
         },
         "parent1-parent2-additional-information": {
-          "hint": "Tell us why"
+          "label": "Tell us why"
         },
 
 
@@ -464,7 +464,7 @@
           "label": "Year"
         },
         "parent2-parent1-additional-information": {
-          "hint": "Tell us why"
+          "label": "Tell us why"
         },
 
 
@@ -507,7 +507,7 @@
           "label": "Year"
         },
         "parent2-parent2-additional-information": {
-          "hint": "Tell us why"
+          "label": "Tell us why"
         },
 
 

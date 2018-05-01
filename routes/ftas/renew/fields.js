@@ -512,7 +512,7 @@ module.exports = {
   },
   'parent2-additional-information': {
     className: 'textarea',
-    labelClassName: 'visuallyhidden'
+    labelClassName: 'form-label-bold'
     // validate: [
     //   'required',
     //   { type: 'maxlength', arguments: 250 }
@@ -642,7 +642,7 @@ module.exports = {
   },
   'parent1-parent1-additional-information': {
     className: 'textarea',
-    labelClassName: 'visuallyhidden'
+    labelClassName: 'form-label-bold'
     // validate: [
     //   'required',
     //   { type: 'maxlength', arguments: 250 }
@@ -746,7 +746,7 @@ module.exports = {
   },
   'parent1-parent2-additional-information': {
     className: 'textarea',
-    labelClassName: 'visuallyhidden'
+    labelClassName: 'form-label-bold'
     // validate: [
     //   'required',
     //   { type: 'maxlength', arguments: 250 }
@@ -876,7 +876,7 @@ module.exports = {
   },
   'parent2-parent1-additional-information': {
     className: 'textarea',
-    labelClassName: 'visuallyhidden'
+    labelClassName: 'form-label-bold'
     // validate: [
     //   'required',
     //   { type: 'maxlength', arguments: 250 }
@@ -980,7 +980,7 @@ module.exports = {
   },
   'parent2-parent2-additional-information': {
     className: 'textarea',
-    labelClassName: 'visuallyhidden'
+    labelClassName: 'form-label-bold'
     // validate: [
     //   'required',
     //   { type: 'maxlength', arguments: 250 }
