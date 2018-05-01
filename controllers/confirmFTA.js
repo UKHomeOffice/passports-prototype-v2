@@ -545,10 +545,10 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
             if (!values.veteran) {
               cost += '&nbsp;extra';
             }
-            output.push('Jumbo passport with special delivery included.');
+            output.push('Jumbo passport with secure delivery included.');
             output.push('£85.50');
           } else {
-            output.push('Standard passport with special delivery included.');
+            output.push('Standard passport with secure delivery included.');
             output.push('£75.50');
           }
           return output.join('<br>');
