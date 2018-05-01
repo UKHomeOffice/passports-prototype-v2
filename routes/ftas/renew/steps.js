@@ -137,21 +137,21 @@ module.exports = {
         // controller: require('../../../controllers/go-overseas'),
         nextAlt: './home-address-overseas'
     },
-    '/home-address-overseas':{
-        fields:['address1', 'address2','address3','address4','address5', 'town', 'postcode'],
-        next: '/contact-details-overseas'
-    },
     '/home-address':{
         fields:['address1', 'address2','address3','address4','address5', 'town', 'postcode'],
         next: '/contact-details'
     },
-    '/contact-details-overseas':{
-        fields:['email','application-country-code' ,'mobile-overseas'],
-        next: '/get-updates-overseas'
+    '/home-address-overseas':{
+        fields:['address1', 'address2','address3','address4','address5', 'town', 'postcode'],
+        next: '/contact-details-overseas'
     },
     '/contact-details':{
         fields:['email', 'mobile'],
         next: '/get-updates'
+    },
+    '/contact-details-overseas':{
+        fields:['email','application-country-code' ,'mobile-overseas'],
+        next: '/get-updates-overseas'
     },
     '/get-updates-overseas':{
         next: '/passport-options-overseas'
@@ -166,14 +166,14 @@ module.exports = {
         backLink: 'dual-national',
         next: '/title'
     },
-    '/passport-options-overseas':{
-        fields: ['passport-options-overseas', 'braille'],
-        next: '/sign'
-    },
     '/passport-options':{
         fields: ['passport-options', 'braille'],
         next: '/sign',
         backLink: './dual-national'
+    },
+    '/passport-options-overseas':{
+        fields: ['passport-options-overseas', 'braille'],
+        next: '/sign'
     },
     '/sign': {
         fields: ['can-sign', 'no-sign-reason'],

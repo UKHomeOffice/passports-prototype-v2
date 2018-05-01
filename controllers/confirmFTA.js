@@ -535,7 +535,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     className: 'cost-details',
     title: 'Cost',
     fields: [{
-        step: this.getEditStep('braille'),
+        step: this.getEditStep('passport-options'),
         title: 'New passport',
         value: function () {
           var output = [];
