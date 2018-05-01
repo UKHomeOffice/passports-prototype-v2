@@ -50,24 +50,6 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     sections: []
   });
 
-  var naturalisationRegistrationFields = [];
-  if (values['naturalisation-registration-certificate'] == true) {
-    response.sections.push({
-      className: 'naturalisation-registration-details',
-      title: 'Naturalisation or registration details',
-      fields: naturalisationRegistrationFields
-    });
-    naturalisationRegistrationFields.push({
-      step: this.getEditStep('naturalisation-registration-certificate-number'),
-      title: 'Certificate number',
-      value: values['naturalisation-registration-certificate-number']
-    }, {
-      step: this.getEditStep('naturalisation-registration-certificate-issue-year'),
-      title: 'Date of issue',
-      value: moment(values['naturalisation-registration-certificate-issue-year'] + '-' + values['naturalisation-registration-certificate-issue-month'] + '-' + values['naturalisation-registration-certificate-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
-    });
-  }
-
   var oldPassportFields = [];
   if (values['passport-number']) {
     response.sections.push({
@@ -98,6 +80,25 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
         value: values['how-damaged']
       });
     };
+  }
+
+  // Naturalisation/Registration details
+  var naturalisationRegistrationFields = [];
+  if (values['naturalisation-registration-certificate'] == true) { /* If applicant is naturalised or registered */
+    response.sections.push({
+      className: 'naturalisation-registration-details',
+      title: 'Naturalisation or registration details',
+      fields: naturalisationRegistrationFields
+    });
+    naturalisationRegistrationFields.push({
+      step: this.getEditStep('naturalisation-registration-certificate-number'),
+      title: 'Certificate number',
+      value: values['naturalisation-registration-certificate-number']
+    }, {
+      step: this.getEditStep('naturalisation-registration-certificate-issue-year'),
+      title: 'Date of issue',
+      value: moment(values['naturalisation-registration-certificate-issue-year'] + '-' + values['naturalisation-registration-certificate-issue-month'] + '-' + values['naturalisation-registration-certificate-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+    });
   }
 
   var newPassportFields = [];
@@ -197,6 +198,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   // Parents
   var parentsFields = [];
   // if (values['parent1-first-names']) { /* If parent 1 first name is NOT empty */
+  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
     response.sections.push({
       className: 'parents-details',
       title: 'Parents\' details',
@@ -215,11 +217,13 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       title: 'Marriage date',
       value: moment(values['marriage-year'] + '-' + values['marriage-month'] + '-' + values['marriage-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     });
+  }
   // }
 
   // Parent 1
   var parent1Fields = [];
   // if (values['parent1-first-names']) { /* If parent 1 first name is NOT empty */
+  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
     response.sections.push({
       className: 'parent1-details',
       title: 'Mother',
@@ -254,11 +258,13 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       title: 'Additional information',
       value: values['parent1-additional-information']
     });
+  }
   // }
 
   // Parent 2
   var parent2Fields = [];
   // if (values['parent2-first-names']) { /* If parent 2 first name is NOT empty */
+  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
     response.sections.push({
       className: 'parent2-details',
       title: 'Father',
@@ -293,11 +299,13 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       title: 'Additional information',
       value: values['parent2-additional-information']
     });
+  }
   // }
 
   // Parent 1's parents
   var parent1ParentsFields = [];
   // if (values['parent1-parent1-first-names']) { /* If parent 1's parent 1 first name is NOT empty */
+  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
     response.sections.push({
       className: 'parent1-parents-details',
       title: 'Maternal grandparents',
@@ -316,11 +324,13 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       title: 'Marriage date',
       value: moment(values['parent1-parents-marriage-year'] + '-' + values['parent1-parents-marriage-month'] + '-' + values['parent1-parents-marriage-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     });
+  }
   // }
 
   // Parent 1's parent 1
   var parent1Parent1Fields = [];
   // if (values['parent1-parent1-first-names']) { /* If parent 1's parent 1 first name is NOT empty */
+  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
     response.sections.push({
       className: 'parent1-parent1-details',
       title: 'Maternal grandmother',
@@ -357,11 +367,13 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       title: 'Additional information',
       value: values['parent1-parent1-additional-information']
     });
+  }
   // }
 
   // Parent 1's parent 2
   var parent1Parent2Fields = [];
   // if (values['parent1-parent2-first-names']) { /* If parent 1's parent 2 first name is NOT empty */
+  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
     response.sections.push({
       className: 'parent1-parent2-details',
       title: 'Maternal grandfather',
@@ -398,11 +410,13 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       title: 'Additional information',
       value: values['parent1-parent2-additional-information']
     });
+  }
   // }
 
   // Parent 2's parents
   var parent2ParentsFields = [];
   // if (values['parent2-parent1-first-names']) { /* If parent 2's parent 1 first name is NOT empty */
+  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
     response.sections.push({
       className: 'parent2-parents-details',
       title: 'Paternal grandparents',
@@ -421,11 +435,13 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       title: 'Marriage date',
       value: moment(values['parent2-parents-marriage-year'] + '-' + values['parent2-parents-marriage-month'] + '-' + values['parent2-parents-marriage-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
     });
+  }
   // }
 
   // Parent 2's parent 1
   var parent2Parent1Fields = [];
   // if (values['parent2-parent1-first-names']) { /* If parent 2's parent 1 first name is NOT empty */
+  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
     response.sections.push({
       className: 'parent2-parent1-details',
       title: 'Paternal grandmother',
@@ -462,11 +478,13 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       title: 'Additional information',
       value: values['parent2-parent1-additional-information']
     });
+  }
   // }
 
   // Parent 2's parent 2
   var parent2Parent2Fields = [];
   // if (values['parent2-parent2-first-names']) { /* If parent 2's parent 2 first name is NOT empty */
+  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
     response.sections.push({
       className: 'parent2-parent2-details',
       title: 'Paternal grandfather',
@@ -503,6 +521,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       title: 'Additional information',
       value: values['parent2-parent2-additional-information']
     });
+  }
   // }
   
 
