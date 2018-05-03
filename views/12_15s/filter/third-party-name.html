@@ -17,11 +17,16 @@
 {{< hmpo-partials-form}}
     {{$form}}
     {{#values.social-worker}}
-      <p>We need the name of the person who has parental responsibility for the applicant.</p>
+      <p>We need the name of the person who has parental responsibility, for example your head of department or their deputy.</p>
     {{/values.social-worker}}
 
         {{#input-text}}third-party-first-name{{/input-text}}
         {{#input-text}}third-party-last-name{{/input-text}}
+        {{#values.third-party}}
+
+          <span class="">Describe why you're making this application</span>
+          {{#textarea}}other-why-apply{{/textarea}}
+        {{/values.third-party}}
         {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}

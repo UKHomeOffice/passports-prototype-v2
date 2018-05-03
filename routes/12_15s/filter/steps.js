@@ -91,8 +91,8 @@ module.exports = {
       }],
     },
     '/relationship-applicant': {
-      fields: ['relationship-applicant'],
-      backLink: '/uncancelled',
+      fields: ['relationship-applicant', 'other-why-apply'],
+      backLink: './uncancelled',
       next: '/third-party-name',
       controller: require('../../../controllers/social-worker')
     },

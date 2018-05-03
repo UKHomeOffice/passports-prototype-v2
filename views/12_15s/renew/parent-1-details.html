@@ -3,15 +3,12 @@
 {{$pageTitle}}Mother or parent 1{{/pageTitle}}
 
 {{$header}}
-  <h1>
-    <span class="heading-secondary">Mother or parent 1</span>
-    {{values.parent1-first-names}}'s details
-  </h1>
+  <h1>Mother or parent 1</h1>
 {{/header}}
 
 {{$content}}
 
-<p>You need to enter as much information as you can or this application may <br>be delayed.</p>
+<p>We have to confirm eligibility for a UK passport. You need to enter as many details as you can or your application may be delayed.</p>
 
 {{< hmpo-partials-form}}
 {{$form}}
@@ -35,7 +32,7 @@
       <br>
       <fieldset>
         <legend><span class="form-label-bold">Country of nationality</span></legend>
-            <p class="form-hint" id="dob-hint">At the time of {{values.name}}'s birth</p>
+            <p class="form-hint" id="dob-hint">At the time of the applicant's birth</p>
               {{#select}}application-country{{/select}}
       </fieldset>
 
@@ -57,14 +54,11 @@
       <br>
       <details>
           <summary>
-              <span class="summary">I can't provide all the details</span>
+            <span class="summary">I can't provide all these details</span>
           </summary>
-          <label class="form-label-bold">
-            Additional information
-            <span class="form-hint">Why can't you provide all the information?</span>
-          </label>
           <div class="panel panel-border-narrow">
-              {{#textarea}}additional-information{{/textarea}}
+            <legend><span class="form-label-bold">Tell us why</span></legend>
+            {{#textarea}}additional-information-parent-1{{/textarea}}
           </div>
       </details>
     {{#input-submit}}{{/input-submit}}

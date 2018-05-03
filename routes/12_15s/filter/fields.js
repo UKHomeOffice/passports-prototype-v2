@@ -9,7 +9,7 @@ module.exports = {
     },
     options: [
       { value: true, label: 'Me' },
-      { value: false, label: 'Someone else'}
+      { value: false, label: 'Someone else', toggle: 'someone-else' }
     ],
     formatter: ['boolean'],
     validate: ['required'],
@@ -276,12 +276,16 @@ module.exports = {
     options: [
       { value: 'Mother', label: 'Mother' },
       { value: 'Father', label: 'Father' },
-      { value: 'Social Worker', label: 'Social Worker' }, 
+      { value: 'Social Worker', label: 'Social Worker' },
       { value: 'Other', label: 'Other', toggle: "relationship-other" }
     ],
     validate: [
       'required'
     ]
+  },
+  'other-why-apply': {
+    labelClassName: 'visuallyhidden',
+    className: 'textarea',
   },
   'relationship-other': {
     labelClassName: 'visuallyhidden',

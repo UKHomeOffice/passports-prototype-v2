@@ -56,11 +56,11 @@ module.exports = {
     options: [
       {
         value: true,
-        label: 'I’ll tell {{values.name}} to sign the new passport',
+        label: 'I understand and will sign my passport',
       },
       {
         value: false,
-        label: '{{values.name}} can’t physically sign',
+        label: 'I can’t sign my names',
         toggle: 'no-sign'
       }
     ]
@@ -134,7 +134,7 @@ module.exports = {
       },
       options: [
           { value: false, label: 'Yes' },
-          { value: true, label: 'No, thier name has changed', toggle: 'note-regarding-name-change' }
+          { value: true, label: 'No, my name has changed', toggle: 'note-regarding-name-change' }
       ],
       formatter: ['boolean'],
       validate: [
@@ -338,7 +338,11 @@ module.exports = {
     ],
     className: 'inline'
   },
-  'additional-information':{
+  'additional-information-parent-1':{
+    className: 'textarea',
+    labelClassName: 'visuallyhidden'
+  },
+  'additional-information-parent-2':{
     className: 'textarea',
     labelClassName: 'visuallyhidden'
   },

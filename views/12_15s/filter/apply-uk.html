@@ -12,6 +12,16 @@
 {{< hmpo-partials-form}}
     {{$form}}
         {{#radio-group}}application-for{{/radio-group}}
+        <div class="panel panel-border-narrow js-hidden" id="someone-else">
+
+          <p>To apply for someone else, you need to:</p>
+
+          <ul class="list-bullet">
+            <li>be able to legally act on their behalf</li>
+            <li>complete this application as if you're the applicant</li>
+          </ul>
+          <p class="form-hint" id="dob-hint">For example, when you're asked 'Were you born in the UK?' select the answer that is correct for the applicant.</p>
+        </div>
         {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}

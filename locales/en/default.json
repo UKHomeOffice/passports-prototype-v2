@@ -47,13 +47,13 @@
         },
         "town-of-birth": {
             "label": "Town of birth",
-            "hint": "As written on your birth, adoption, naturalisation or registration certificate"
+            "hint": "As written on your birth, naturalisation or registration certificate"
         },
         "country-of-birth": {
             "label": "Country of birth"
         },
         "born-in-uk": {
-            "legend": "Was {{values.name}} born in the UK?"
+            "legend": "Were you born in the UK?"
         },
         "naturalisation-registration-certificate": {
           "label": "Naturalisation or registration certificate"
@@ -103,7 +103,8 @@
         },
         "no-sign-reason": {
           "label": "Explain why you can’t sign",
-          "hint": "If you have evidence, include it when you send your documents"
+          "hint": "If you have evidence, include it when you send the old passport."
+
         },
         "previous-name": {
             "legend": "Have you ever been known by any other names?",
