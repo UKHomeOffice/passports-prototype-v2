@@ -57,7 +57,7 @@ module.exports = {
         }],
       },
     '/parents-details':{
-        fields:['parent1-first-names','parent2-first-names', 'marriage-day', 'marriage-month', 'marriage-year'],
+        fields:['parent1-first-names','parent2-first-names', 'parent1-last-name', 'parent2-last-name', 'marriage-day', 'marriage-month', 'marriage-year'],
         controller: require('../../../controllers/parents-details'),
         // forks: [{
         //   target: '/parent-2-details',

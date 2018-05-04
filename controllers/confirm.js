@@ -211,11 +211,14 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       step: this.getEditStep('parent2-first-names'),
       title: 'Father',
       value: join(values, ['parent2-first-names', 'parent2-last-name'])
-    }, {
+    });
+  }
+  if (values['marriage-year']) {
+      parentsFields.push({
       step: this.getEditStep('marriage-year'),
       title: 'Marriage date',
       value: moment(values['marriage-year'] + '-' + values['marriage-month'] + '-' + values['marriage-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
-    });
+    })
   }
   // }
 
@@ -263,7 +266,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   // Parent 2
   var parent2Fields = [];
   // if (values['parent2-first-names']) { /* If parent 2 first name is NOT empty */
-  if (values['16-or-older'] == false) {
+if (values['16-or-older'] == false) {
     response.sections.push({
       className: 'parent2-details',
       title: 'Father',
