@@ -37,10 +37,33 @@
       "expiry-day-damaged": "12",
       "expiry-month-damaged": "07",
       "expiry-year-damaged": "17",
-      "parent1-first-names": "Victoria",
-      "parent2-first-names": "Daniel",
       "third-party-first-name": "Sarah",
-      "third-party-last-name": "Singleton"
+      "third-party-last-name": "Singleton",
+      "parent1-first-names": "Victoria",
+      "parent1-last-name": "Winkletrousen",
+      "parent2-first-names": "Daniel",
+      "parent2-last-name": "Winkletrousen",
+      "parent1-town": "Bournemouth",
+      "parent1-country-of-birth": "United Kingdom",
+      "parent1-country-of-nationality": "United Kingdom",
+      "parent1-age-day": "17",
+      "parent1-age-month": "03",
+      "parent1-age-year": "1965",
+      "parent1-passport-number": "502135326",
+      "parent1-passport-issue-day": "12",
+      "parent1-passport-issue-month": "04",
+      "parent1-passport-issue-year": "2007",
+      "parent2-town": "Norwich",
+      "parent2-country-of-birth": "United Kingdom",
+      "parent2-country-of-nationality": "United Kingdom",
+      "parent2-age-day": "27",
+      "parent2-age-month": "08",
+      "parent2-age-year": "1963",
+      "parent2-passport-number": "305135221",
+      "parent2-passport-issue-day": "19",
+      "parent2-passport-issue-month": "01",
+      "parent2-passport-issue-year": "2008"
+
   };
 
   $("#populate").on("click", function(){
@@ -75,6 +98,8 @@
       $('#change-name-false').click();
       $('#change-of-name-reason-Marriage-or-civil-partnership').click();
       $('#16-or-older-false').click();
+
+      $('#parents-married-Yes').click();
 
       //csig
       $('#applicant-check-home-address-Yes').click();

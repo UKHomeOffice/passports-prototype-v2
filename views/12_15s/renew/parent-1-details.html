@@ -3,70 +3,79 @@
 {{$pageTitle}}Mother or parent 1{{/pageTitle}}
 
 {{$header}}
-  <h1>Mother or parent 1</h1>
+
+<h1>Mother or parent 1</h1>
+
 {{/header}}
 
 {{$content}}
 
 <p>We have to confirm eligibility for a UK passport. You need to enter as many details as you can or your application may be delayed.</p>
 
+
 {{< hmpo-partials-form}}
 {{$form}}
 
-      {{#input-text}}parent1-town{{/input-text}}
-      <fieldset>
-        <legend><span class="form-label-bold">Country of birth</span></legend>
-              {{#select}}application-country{{/select}}
-      </fieldset>
+    {{#input-text}}parent1-town{{/input-text}}
 
+    <fieldset>
+        <legend>
+            <span class="form-label-bold">Country of birth</span>
+        </legend>
+        {{#select}}parent1-country-of-birth{{/select}}
+    </fieldset>
 
-      <fieldset>
-          <div class="form-date">
+    <fieldset>
+        <div class="form-date">
             <legend><span class="form-label-bold">Date of birth</span></legend>
             <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
-              {{#input-text}}parent1-age-day{{/input-text}}
-              {{#input-text}}parent1-age-month{{/input-text}}
-              {{#input-text}}parent1-age-year{{/input-text}}
-          </div>
-      </fieldset>
-      <br>
-      <fieldset>
-        <legend><span class="form-label-bold">Country of nationality</span></legend>
-            <p class="form-hint" id="dob-hint">At the time of the applicant's birth</p>
-              {{#select}}application-country{{/select}}
-      </fieldset>
+            {{#input-text}}parent1-age-day{{/input-text}}
+            {{#input-text}}parent1-age-month{{/input-text}}
+            {{#input-text}}parent1-age-year{{/input-text}}
+        </div>
+    </fieldset>
+    <br>
 
-      <fieldset>
-        <legend><span class="form-label-bold">UK passport number</span></legend>
-            <p class="form-hint" id="dob-hint">For example 502135326, leave this blank if it doesn't apply</p>
-              {{#input-text}}parent1-passport-number{{/input-text}}
-      </fieldset>
+    <fieldset>
+        <legend>
+            <span class="form-label-bold">Country of nationality</span>
+        </legend>
+        <p class="form-hint" id="dob-hint">At the time of your birth</p>
+        {{#select}}parent1-country-of-nationality{{/select}}
+    </fieldset>
 
-      <fieldset>
-          <div class="form-date">
+    <fieldset>
+        <legend>
+            <span class="form-label-bold">UK passport number</span>
+        </legend>
+        <p class="form-hint" id="dob-hint">For example 502135326, leave this blank if it doesn't apply</p>
+        {{#input-text}}parent1-passport-number{{/input-text}}
+    </fieldset>
+
+    <fieldset>
+        <div class="form-date form-group">
             <legend><span class="form-label-bold">Date of issue</span></legend>
             <p class="form-hint" id="dob-hint">For example 12 04 2007, leave this blank if it doesn't apply</p>
-              {{#input-text}}parent1-age-day{{/input-text}}
-              {{#input-text}}parent1-age-month{{/input-text}}
-              {{#input-text}}parent1-age-year{{/input-text}}
-          </div>
-      </fieldset>
-      <br>
-      <details>
-          <summary>
+            {{#input-text}}parent1-passport-issue-day{{/input-text}}
+            {{#input-text}}parent1-passport-issue-month{{/input-text}}
+            {{#input-text}}parent1-passport-issue-year{{/input-text}}
+        </div>
+    </fieldset>
+
+    <details>
+        <summary>
             <span class="summary">I can't provide all these details</span>
-          </summary>
-          <div class="panel panel-border-narrow">
-            <legend><span class="form-label-bold">Tell us why</span></legend>
-            {{#textarea}}additional-information-parent-1{{/textarea}}
-          </div>
-      </details>
+        </summary>
+        <div class="panel panel-border-narrow">
+            {{#textarea}}parent1-additional-information{{/textarea}}
+        </div>
+    </details>
+
     {{#input-submit}}{{/input-submit}}
+
 {{/form}}
 {{/ hmpo-partials-form}}
 
-
 {{/content}}
-
 
 {{/ layout}}

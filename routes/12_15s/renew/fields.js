@@ -238,94 +238,9 @@ module.exports = {
           'required'
       ]
   },
-  'marriage-day': {
-    labelClassName: 'form-label',
-  },
-  'marriage-year': {
-    labelClassName: 'form-label',
-  },
-  'marriage-month': {
-    labelClassName: 'form-label',
-  },
-  'parent1-first-names': {
-    labelClassName: 'form-label'
-
-  },
-  'parent1-last-name': {
-    labelClassName: 'form-label'
-
-  },
-  'parent2-first-names': {
-    labelClassName: 'form-label'
-
-  },
-  'parent2-last-name': {
-    labelClassName: 'form-label'
-
-  },
-  'parent1-age-year': {
-    labelClassName: 'form-label',
-    formatter: 'removehyphens',
-      validate: [
-          'numeric',
-          'required'
-      ]
-  },
-  'parent1-age-month': {
-      labelClassName: 'form-label',
-      formatter: 'removehyphens',
-      validate: [
-          'numeric',
-          'required'
-      ]
-  },
-  'parent1-age-day': {
-      labelClassName: 'form-label',
-      formatter: 'removehyphens',
-      validate: [
-          'numeric',
-          'required'
-      ]
-  },
-  'parent2-age-year': {
-    labelClassName: 'form-label',
-    formatter: 'removehyphens',
-      validate: [
-          'numeric',
-          'required'
-      ]
-  },
-  'parent2-age-month': {
-      labelClassName: 'form-label',
-      formatter: 'removehyphens',
-      validate: [
-          'numeric',
-          'required'
-      ]
-  },
-  'parent2-age-day': {
-      labelClassName: 'form-label',
-      formatter: 'removehyphens',
-      validate: [
-          'numeric',
-          'required'
-      ]
-  },
-  'parent1-passport-number': {
-      labelClassName: 'visuallyhidden',
-      validate: [
-          'required'
-        ]
-  },
-  'parent2-passport-number': {
-      labelClassName: 'visuallyhidden',
-      validate: [
-          'required'
-        ]
-  },
-  'parents-married':{
+  'parents-married': {
     legend: {
-      value: 'Your title',
+      value: 'Parents married',
       className: 'visuallyhidden'
     },
     options: [
@@ -338,13 +253,224 @@ module.exports = {
     ],
     className: 'inline'
   },
-  'additional-information-parent-1':{
-    className: 'textarea',
-    labelClassName: 'visuallyhidden'
+
+  // Parents
+  'marriage-day': {
+    labelClassName: 'form-label',
   },
-  'additional-information-parent-2':{
+  'marriage-year': {
+    labelClassName: 'form-label',
+  },
+  'marriage-month': {
+    labelClassName: 'form-label',
+  },
+
+  // Parent 1
+  'parent1-first-names': {
+    labelClassName: 'form-label'
+
+  },
+  'parent1-last-name': {
+    labelClassName: 'form-label'
+
+  },
+  'parent1-country-of-birth': {
+    labelClassName: 'visuallyhidden',
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
+  },
+  'parent1-age-year': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    // validate: [
+    //   'numeric',
+    //   'required'
+    // ]
+  },
+  'parent1-age-month': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    // validate: [
+    //   'numeric',
+    //   'required'
+    // ]
+  },
+  'parent1-age-day': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    // validate: [
+    //   'numeric',
+    //   'required'
+    // ]
+  },
+  'parent1-country-of-nationality': {
+    labelClassName: 'visuallyhidden',
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
+  },
+  'parent1-passport-number': {
+    labelClassName: 'visuallyhidden',
+    // validate: [
+    //   'required'
+    // ]
+  },
+  'parent1-passport-issue-year': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+      // validate: [
+      //     'numeric',
+      //     'required'
+      // ]
+  },
+  'parent1-passport-issue-month': {
+      labelClassName: 'form-label',
+      formatter: 'removehyphens',
+      // validate: [
+      //     'numeric',
+      //     'required'
+      // ]
+  },
+  'parent1-passport-issue-day': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+      // validate: [
+      //     'numeric',
+      //     'required'
+      // ]
+  },
+  'parent1-additional-information': {
     className: 'textarea',
-    labelClassName: 'visuallyhidden'
+    labelClassName: 'form-label-bold'
+    // validate: [
+    //   'required',
+    //   { type: 'maxlength', arguments: 250 }
+    // ],
+    // dependent: {
+    //   field: 'can-sign',
+    //   value: false
+    // }
+  },
+
+  // Parent 2
+  'parent2-first-names': {
+    labelClassName: 'form-label'
+
+  },
+  'parent2-last-name': {
+    labelClassName: 'form-label'
+
+  },
+  'parent2-country-of-birth': {
+    labelClassName: 'visuallyhidden',
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
+  },
+  'parent2-age-year': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    // validate: [
+    //   'numeric',
+    //   'required'
+    // ]
+  },
+  'parent2-age-month': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    // validate: [
+    //   'numeric',
+    //   'required'
+    // ]
+  },
+  'parent2-age-day': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+    // validate: [
+    //   'numeric',
+    //   'required'
+    // ]
+  },
+  'parent2-country-of-nationality': {
+    labelClassName: 'visuallyhidden',
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
+  },
+  'parent2-passport-number': {
+    labelClassName: 'visuallyhidden',
+    // validate: [
+    //   'required'
+    // ]
+  },
+  'parent2-passport-issue-year': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+      // validate: [
+      //     'numeric',
+      //     'required'
+      // ]
+  },
+  'parent2-passport-issue-month': {
+      labelClassName: 'form-label',
+      formatter: 'removehyphens',
+      // validate: [
+      //     'numeric',
+      //     'required'
+      // ]
+  },
+  'parent2-passport-issue-day': {
+    labelClassName: 'form-label',
+    formatter: 'removehyphens',
+      // validate: [
+      //     'numeric',
+      //     'required'
+      // ]
+  },
+  'parent2-additional-information': {
+    className: 'textarea',
+    labelClassName: 'form-label-bold'
+    // validate: [
+    //   'required',
+    //   { type: 'maxlength', arguments: 250 }
+    // ],
+    // dependent: {
+    //   field: 'can-sign',
+    //   value: false
+    // }
   },
   'address1': {
       validate: [
