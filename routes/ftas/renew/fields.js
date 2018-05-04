@@ -334,17 +334,17 @@ module.exports = {
   },
   'parent1-country-of-birth': {
     labelClassName: 'visuallyhidden',
-    // options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
-    //   return {
-    //     value: c.id,
-    //     label: c.name,
-    //     attributes: [
-    //       {
-    //         attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-    //       }
-    //     ]
-    //   }
-    // }))
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
   },
   'parent1-age-year': {
     labelClassName: 'form-label',
@@ -372,17 +372,17 @@ module.exports = {
   },
   'parent1-country-of-nationality': {
     labelClassName: 'visuallyhidden',
-    // options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
-    //   return {
-    //     value: c.id,
-    //     label: c.name,
-    //     attributes: [
-    //       {
-    //         attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-    //       }
-    //     ]
-    //   }
-    // }))
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
   },
   'parent1-passport-number': {
     labelClassName: 'visuallyhidden',
@@ -438,17 +438,17 @@ module.exports = {
   },
   'parent2-country-of-birth': {
     labelClassName: 'visuallyhidden',
-    // options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
-    //   return {
-    //     value: c.id,
-    //     label: c.name,
-    //     attributes: [
-    //       {
-    //         attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-    //       }
-    //     ]
-    //   }
-    // }))
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
   },
   'parent2-age-year': {
     labelClassName: 'form-label',
@@ -476,17 +476,17 @@ module.exports = {
   },
   'parent2-country-of-nationality': {
     labelClassName: 'visuallyhidden',
-    // options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
-    //   return {
-    //     value: c.id,
-    //     label: c.name,
-    //     attributes: [
-    //       {
-    //         attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-    //       }
-    //     ]
-    //   }
-    // }))
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
   },
   'parent2-passport-number': {
     labelClassName: 'visuallyhidden',
@@ -568,17 +568,17 @@ module.exports = {
   },
   'parent1-parent1-country-of-birth': {
     labelClassName: 'visuallyhidden',
-    // options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
-    //   return {
-    //     value: c.id,
-    //     label: c.name,
-    //     attributes: [
-    //       {
-    //         attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-    //       }
-    //     ]
-    //   }
-    // }))
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
   },
   'parent1-parent1-age-year': {
     labelClassName: 'form-label',
@@ -606,17 +606,17 @@ module.exports = {
   },
   'parent1-parent1-country-of-nationality': {
     labelClassName: 'visuallyhidden',
-    // options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
-    //   return {
-    //     value: c.id,
-    //     label: c.name,
-    //     attributes: [
-    //       {
-    //         attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-    //       }
-    //     ]
-    //   }
-    // }))
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
   },
   'parent1-parent1-passport-number': {
     labelClassName: 'visuallyhidden',
@@ -672,17 +672,17 @@ module.exports = {
   },
   'parent1-parent2-country-of-birth': {
     labelClassName: 'visuallyhidden',
-    // options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
-    //   return {
-    //     value: c.id,
-    //     label: c.name,
-    //     attributes: [
-    //       {
-    //         attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-    //       }
-    //     ]
-    //   }
-    // }))
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
   },
   'parent1-parent2-age-year': {
     labelClassName: 'form-label',
@@ -710,17 +710,17 @@ module.exports = {
   },
   'parent1-parent2-country-of-nationality': {
     labelClassName: 'visuallyhidden',
-    // options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
-    //   return {
-    //     value: c.id,
-    //     label: c.name,
-    //     attributes: [
-    //       {
-    //         attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-    //       }
-    //     ]
-    //   }
-    // }))
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
   },
   'parent1-parent2-passport-number': {
     labelClassName: 'visuallyhidden',
@@ -802,17 +802,17 @@ module.exports = {
   },
   'parent2-parent1-country-of-birth': {
     labelClassName: 'visuallyhidden',
-    // options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
-    //   return {
-    //     value: c.id,
-    //     label: c.name,
-    //     attributes: [
-    //       {
-    //         attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-    //       }
-    //     ]
-    //   }
-    // }))
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
   },
   'parent2-parent1-age-year': {
     labelClassName: 'form-label',
@@ -840,17 +840,17 @@ module.exports = {
   },
   'parent2-parent1-country-of-nationality': {
     labelClassName: 'visuallyhidden',
-    // options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
-    //   return {
-    //     value: c.id,
-    //     label: c.name,
-    //     attributes: [
-    //       {
-    //         attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-    //       }
-    //     ]
-    //   }
-    // }))
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
   },
   'parent2-parent1-passport-number': {
     labelClassName: 'visuallyhidden',
@@ -906,17 +906,17 @@ module.exports = {
   },
   'parent2-parent2-country-of-birth': {
     labelClassName: 'visuallyhidden',
-    // options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
-    //   return {
-    //     value: c.id,
-    //     label: c.name,
-    //     attributes: [
-    //       {
-    //         attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-    //       }
-    //     ]
-    //   }
-    // }))
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
   },
   'parent2-parent2-age-year': {
     labelClassName: 'form-label',
@@ -944,17 +944,17 @@ module.exports = {
   },
   'parent2-parent2-country-of-nationality': {
     labelClassName: 'visuallyhidden',
-    // options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
-    //   return {
-    //     value: c.id,
-    //     label: c.name,
-    //     attributes: [
-    //       {
-    //         attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-    //       }
-    //     ]
-    //   }
-    // }))
+    options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
+      return {
+        value: c.name,
+        label: c.name,
+        attributes: [
+          {
+            attribute: 'data-synonyms', value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+          }
+        ]
+      }
+    }))
   },
   'parent2-parent2-passport-number': {
     labelClassName: 'visuallyhidden',
