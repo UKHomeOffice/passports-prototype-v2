@@ -194,10 +194,35 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     fields: newPassportFields
   });
 
+  // Parents
+  var parentsFields = [];
+  // if (values['parent1-first-names']) { /* If parent 1 first name is NOT empty */
+  if (values['16-or-older'] == false) {
+    response.sections.push({
+      className: 'parents-details',
+      title: 'Parents\' details',
+      fields: parentsFields
+    });
+    parentsFields.push({
+      step: this.getEditStep('parent1-first-names'),
+      title: 'Mother',
+      value: join(values, ['parent1-first-names', 'parent1-last-name'])
+    }, {
+      step: this.getEditStep('parent2-first-names'),
+      title: 'Father',
+      value: join(values, ['parent2-first-names', 'parent2-last-name'])
+    }, {
+      step: this.getEditStep('marriage-year'),
+      title: 'Marriage date',
+      value: moment(values['marriage-year'] + '-' + values['marriage-month'] + '-' + values['marriage-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+    });
+  }
+  // }
+
   // Parent 1
   var parent1Fields = [];
   // if (values['parent1-first-names']) { /* If parent 1 first name is NOT empty */
-  if (values['16-or-older'] == false) { /* If applicant is NOT naturalised or registered */
+  if (values['16-or-older'] == false) {
     response.sections.push({
       className: 'parent1-details',
       title: 'Mother',
@@ -238,7 +263,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   // Parent 2
   var parent2Fields = [];
   // if (values['parent2-first-names']) { /* If parent 2 first name is NOT empty */
-  if (values['16-or-older'] == false) { /* If applicant is NOT naturalised or registered */
+  if (values['16-or-older'] == false) {
     response.sections.push({
       className: 'parent2-details',
       title: 'Father',
