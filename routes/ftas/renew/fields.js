@@ -65,6 +65,10 @@ module.exports = {
     ]
   },
   'no-sign-reason': {
+    labelClassName: 'visuallyhidden',
+    legend: {
+      className: 'visuallyhidden'
+    },
     className: 'textarea',
     validate: [
       'required',
@@ -189,6 +193,10 @@ module.exports = {
       ]
   },
   'town-of-birth': {
+    labelClassName: 'visuallyhidden',
+    legend: {
+      className: 'visuallyhidden'
+    }
     // validate: [
     //   'required'
     // ]
