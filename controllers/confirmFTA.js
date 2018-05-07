@@ -64,7 +64,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     }, {
       step: this.getEditStep('expiry-year'),
       title: 'Expiry date',
-      value: moment(values['passport-number'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
+      value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
     });
     if (values['what-damaged']) {
       oldPassportFields.push({
