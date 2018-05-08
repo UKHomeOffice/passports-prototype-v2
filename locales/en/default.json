@@ -53,7 +53,7 @@
             "label": "Country of birth"
         },
         "born-in-uk": {
-            "legend": "Were you born in the UK?"
+            "legend": "Were they born in the UK?"
         },
         "naturalisation-registration-certificate": {
           "label": "Naturalisation or registration certificate"
