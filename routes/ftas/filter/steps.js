@@ -51,7 +51,7 @@ module.exports = {
         fields: [
             'passport-colour'
         ],
-        next: '/dob',
+        next: '/dual-national',
         forks: [{
             target: '/lost',
             condition: {
