@@ -66,6 +66,7 @@ module.exports = {
     ]
   },
   'no-sign-reason': {
+    labelClassName: 'visuallyhidden',
     className: 'textarea',
     validate: [
       'required',
