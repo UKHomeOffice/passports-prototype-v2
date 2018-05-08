@@ -86,7 +86,12 @@ module.exports = {
   ],
   formatter: ['boolean'],
   validate: [
-    'required'
+    'required',
+    {
+      type:'equal',
+      arguments:[true],  /* If they are BELOW 16 */
+      redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+    }
   ],
   className: 'inline'
 },

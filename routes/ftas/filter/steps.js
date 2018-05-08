@@ -101,12 +101,14 @@ module.exports = {
         controller: require('../../../controllers/go-overseas'),
         backLink: './lost-stolen',
         next: '/passport-expiry',   /* if they are from the UK */
-        forks: [{
-            target: '/dob-below-16',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['16-or-older'] == false;   /* If they are BELOW 16 */
-            }
-        }, {
+        forks: [
+        //     {
+        //     target: '/dob-below-16',
+        //     condition: function (req, res) {
+        //         return req.session['hmpo-wizard-common']['16-or-older'] == false;   /* If they are BELOW 16 */
+        //     }
+        // },
+        {
             target: '/dual-national',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['16-or-older'] == true && req.session['hmpo-wizard-common']['passport-before'] == false;   /* If they are OVER 16 + NOT had UK passport before */
