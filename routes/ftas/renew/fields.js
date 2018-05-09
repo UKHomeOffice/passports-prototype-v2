@@ -214,56 +214,28 @@ module.exports = {
     ],
     className: 'inline'
   },
-  'naturalisation-registration-certificate': {
-    formatter: 'boolean',
-    validation: 'default',
-    legend: {
-      className: 'visuallyhidden'
-    },
-    options: [
-      { value: true, label: 'Yes', toggle: 'naturalisation-registration-certificate-details' },
-      { value: false, label: 'No' }
-    ],
-    className: 'inline'
-  },
   'naturalisation-registration-certificate-number': {
     validate: [
         'required'
-      ],
-    dependent: {
-      field: 'naturalisation-registration-certificate',
-      value: true
-    }
+      ]
   },
   'naturalisation-registration-certificate-issue-day': {
     labelClassName: 'form-label',
     validate: [
         'required'
-      ],
-    dependent: {
-      field: 'naturalisation-registration-certificate',
-      value: true
-    }
+      ]
   },
   'naturalisation-registration-certificate-issue-month': {
     labelClassName: 'form-label',
     validate: [
         'required'
-      ],
-    dependent: {
-      field: 'naturalisation-registration-certificate',
-      value: true
-    }
+      ]
   },
   'naturalisation-registration-certificate-issue-year': {
     labelClassName: 'form-label',
     validate: [
         'required'
-      ],
-    dependent: {
-      field: 'naturalisation-registration-certificate',
-      value: true
-    }
+      ]
   },
   'country-of-birth': {
     // validate: 'required',

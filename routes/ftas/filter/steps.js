@@ -51,7 +51,7 @@ module.exports = {
         fields: [
             'passport-colour'
         ],
-        next: '/dual-national',
+        next: '/naturalisation-registration-details',
         forks: [{
             target: '/lost',
             condition: {
@@ -59,6 +59,12 @@ module.exports = {
                 value: 'red'
             }
         }]
+    },
+    '/naturalisation-registration-details': {
+        fields: [
+            'naturalisation-registration-certificate'
+        ],
+        next: '/dual-national'
     },
     '/what-do-you-want-to-do': {
         fields: [
@@ -109,7 +115,7 @@ module.exports = {
         //     }
         // },
         {
-            target: '/dual-national',
+            target: '/naturalisation-registration-details',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['16-or-older'] == true && req.session['hmpo-wizard-common']['passport-before'] == false;   /* If they are OVER 16 + NOT had UK passport before */
             }
@@ -133,11 +139,18 @@ module.exports = {
     '/passport-expiry': {
         fields: [
             'issue-day',
-            'issue-year',
-            'issue-month'
+            'issue-month',
+            'issue-year'
         ],
         backLink: '../filter/dob',
-        next: '/dual-national'
+        next: '/naturalisation-registration-details',
+        forks: [{   /* If they are NOT a UK Hidden FTA */
+            target: '/dual-national',
+            condition: function (req, res) {    /* Logic below is to deal with 2-digit and 4-digit input of year and make it work, because any years input as 02–18 is unlikely to mean 1902–1918 but 2002–present */
+                return req.session['hmpo-wizard-common']['issue-year'] >= 2002   /* If their passport's date of issue is > 2002 (2002—present) */
+                    || req.session['hmpo-wizard-common']['issue-year'] >= 02 && req.session['hmpo-wizard-common']['issue-year'] <= 18;   /* If their passport's date of issue is >= 2002 (2002–2018) */
+            }
+        }]
     },
     '/dual-national': {
         backLink: '../filter/passport-expiry',

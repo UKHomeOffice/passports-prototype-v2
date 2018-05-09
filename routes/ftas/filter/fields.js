@@ -140,6 +140,23 @@ module.exports = {
   ],
   className: 'inline'
 },
+'naturalisation-registration-certificate': {
+  formatter: 'boolean',
+  validation: 'default',
+  legend: {
+    className: 'visuallyhidden'
+  },
+  options: [{
+      value: true,
+      label: 'Yes'
+    },
+    {
+      value: false,
+      label: 'No'
+    }
+  ],
+  className: 'inline'
+},
 'name-changed': {
   legend: {
     value: 'Lost stolen?',
@@ -237,7 +254,7 @@ module.exports = {
       'required'
     ]
   },
-  'issue-year': {
+  'issue-month': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
     validate: [
@@ -245,7 +262,7 @@ module.exports = {
       'required'
     ]
   },
-  'issue-month': {
+  'issue-year': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
     validate: [
