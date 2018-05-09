@@ -86,7 +86,12 @@ module.exports = {
   ],
   formatter: ['boolean'],
   validate: [
-    'required'
+    'required',
+    {
+      type:'equal',
+      arguments:[true],  /* If they are BELOW 16 */
+      redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+    }
   ],
   className: 'inline'
 },
@@ -132,6 +137,23 @@ module.exports = {
   // formatter: ['boolean'],
   validate: [
     'required'
+  ],
+  className: 'inline'
+},
+'naturalisation-registration-certificate': {
+  formatter: 'boolean',
+  validation: 'default',
+  legend: {
+    className: 'visuallyhidden'
+  },
+  options: [{
+      value: true,
+      label: 'Yes'
+    },
+    {
+      value: false,
+      label: 'No'
+    }
   ],
   className: 'inline'
 },
@@ -232,7 +254,7 @@ module.exports = {
       'required'
     ]
   },
-  'issue-year': {
+  'issue-month': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
     validate: [
@@ -240,7 +262,7 @@ module.exports = {
       'required'
     ]
   },
-  'issue-month': {
+  'issue-year': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
     validate: [

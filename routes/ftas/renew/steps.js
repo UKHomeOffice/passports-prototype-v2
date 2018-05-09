@@ -66,32 +66,23 @@ module.exports = {
             'town-of-birth',
             'country-of-birth'
         ],
+        forks: [{   /* If they do NOT have a certificate */
+            target: '/parents-details',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == false;
+            }
+        }],
         controller: require('../../../controllers/go-overseas'),
-        nextAlt: './home-address-overseas',
-        // forks: [{ /* If they were NOT born in the UK */
-        //     target: '/naturalisation-registration-details',
-        //     condition: {
-        //         field: 'born-in-uk',
-        //         value: false
-        //     }
-        // }]
+        nextAlt: './home-address-overseas'
     },
     '/naturalisation-registration-details': {
         next: '/home-address',
         fields: [
-            'naturalisation-registration-certificate',
             'naturalisation-registration-certificate-number',
             'naturalisation-registration-certificate-issue-day',
             'naturalisation-registration-certificate-issue-month',
             'naturalisation-registration-certificate-issue-year'
-        ],
-        forks: [{ /* If they do NOT have a certificate */
-            target: '/parents-details',
-            condition: {
-                field: 'naturalisation-registration-certificate',
-                value: false
-            }
-        }]
+        ]
     },
     '/parents-details': {
         fields: [
