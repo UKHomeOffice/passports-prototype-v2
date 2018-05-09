@@ -337,7 +337,7 @@
         "parent1-parent1-town":{
           "label": "Town of birth"
         },
-        "parent1-parent1-country":{
+        "parent1-parent1-country-of-birth":{
           "label": "Country of birth"
         },
         "parent1-parent1-nationality":{
@@ -380,7 +380,7 @@
         "parent1-parent2-town":{
           "label": "Town of birth"
         },
-        "parent1-parent2-country":{
+        "parent1-parent2-country-of-birth":{
           "label": "Country of birth"
         },
         "parent1-parent2-nationality":{
@@ -434,7 +434,7 @@
         "parent2-parent1-town":{
           "label": "Town of birth"
         },
-        "parent2-parent1-country":{
+        "parent2-parent1-country-of-birth":{
           "label": "Country of birth"
         },
         "parent2-parent1-nationality":{
@@ -477,7 +477,7 @@
         "parent2-parent2-town":{
           "label": "Town of birth"
         },
-        "parent2-parent2-country":{
+        "parent2-parent2-country-of-birth":{
           "label": "Country of birth"
         },
         "parent2-parent2-nationality":{
