@@ -538,8 +538,12 @@ module.exports = {
     labelClassName: 'form-label'
 
   },
+  'parent1-parent1-town': {
+    labelClassName: 'form-label'
+
+  },
   'parent1-parent1-country-of-birth': {
-    labelClassName: 'visuallyhidden',
+    labelClassName: 'form-label',
     options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
       return {
         value: c.name,
@@ -642,8 +646,12 @@ module.exports = {
     labelClassName: 'form-label'
 
   },
+  'parent1-parent2-town': {
+    labelClassName: 'form-label'
+
+  },
   'parent1-parent2-country-of-birth': {
-    labelClassName: 'visuallyhidden',
+    labelClassName: 'form-label',
     options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
       return {
         value: c.name,
@@ -772,8 +780,12 @@ module.exports = {
     labelClassName: 'form-label'
 
   },
+  'parent2-parent1-town': {
+    labelClassName: 'form-label'
+
+  },
   'parent2-parent1-country-of-birth': {
-    labelClassName: 'visuallyhidden',
+    labelClassName: 'form-label',
     options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
       return {
         value: c.name,
@@ -876,8 +888,12 @@ module.exports = {
     labelClassName: 'form-label'
 
   },
+  'parent2-parent2-town': {
+    labelClassName: 'form-label'
+
+  },
   'parent2-parent2-country-of-birth': {
-    labelClassName: 'visuallyhidden',
+    labelClassName: 'form-label',
     options: [{ value: '', label: ' ' }].concat(_.map(countries, function (c) {
       return {
         value: c.name,
