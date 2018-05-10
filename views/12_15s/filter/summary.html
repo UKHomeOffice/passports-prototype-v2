@@ -1,0 +1,84 @@
+{{< layout}}
+
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Your application{{/pageTitle}}
+
+{{$content}}
+  {{< hmpo-partials-form}}
+    {{$form}}
+      <header>
+        {{#values.16-or-older}}
+          <h1>Renewing an adult passport</h1>
+        {{/values.16-or-older}}
+        {{^values.16-or-older}}
+          <h1>Renewing a child passport</h1>
+        {{/values.16-or-older}}
+
+      </header>
+      {{#values.16-or-older}}
+        <p>Based on your answers, you're renewing an adult passport. If this is not correct, <a href="./">check your answers.</a></p>
+      {{/values.16-or-older}}
+      {{^values.16-or-older}}
+        <p>Based on your answers, you're renewing a child passport. If this is not correct, <a href="./">check your answers.</a></p>
+      {{/values.16-or-older}}
+      <!-- {{^values.application-for}}
+        <p>Third party application.</p>
+      {{/values.application-for}} -->
+      <!-- <div class="confirmation">
+        <div class="section old-passport-details">
+            <dl class="passport-number">
+                <dt class="column-two-thirds column-long">Who is the new passport for?</dt>
+                <dd class="column-one-third">
+                  <p>{{values.applicant-check-friend}}</p>
+                  <div class="button-wrapper">
+                      <a href="./apply-uk/edit">Change</a>
+                  </div>
+                </dd>
+            </dl>
+            <dl class="expiry-date">
+                <dt class="column-two-thirds column-long">Lost or stolen</dt>
+                <dd class="column-one-third">
+                  <p>{{values.applicant-check-address}}</p>
+                  <div class="button-wrapper">
+                      <a href="./">Change</a>
+                  </div>
+                </dd>
+            </dl>
+            <dl class="passport-number">
+                <dt class="column-two-thirds column-long">Issue date</dt>
+                <dd class="column-one-third">
+                  <p>{{values.knowntime}}</p>
+                  <div class="button-wrapper">
+                      <a href="./">Change</a>
+                  </div>
+                </dd>
+            </dl>
+            <dl class="passport-number">
+                <dt class="column-two-thirds column-long">Date of birth</dt>
+                <dd class="column-one-third">
+                  <p>{{values.knowntime}}</p>
+                  <div class="button-wrapper">
+                      <a href="./dob/edit">Change</a>
+                  </div>
+                </dd>
+            </dl>
+        </div>
+      </div> -->
+      <!-- <p>Based on your answers, you're:</p>
+      {{^values.application-for}}
+        <p>on behalf of someone else.</p>
+      {{/values.application-for}} -->
+      <!-- <div class="prototype-box prototype-box__header">
+
+      </div> -->
+
+      <a class="button" href="../intro">Continue</a>
+      <br><br>
+      <!-- <a href="./">Answer questions again</a> -->
+
+    {{/ form}}
+  {{/ hmpo-partials-form}}
+{{/ content}}
+
+{{/ layout}}

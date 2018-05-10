@@ -81,7 +81,7 @@ module.exports = {
       controller: require('../../../controllers/go-overseas'),
       fields: ['dual-national'],
       backLink: './passport-damaged',
-      next: '/../intro',
+      next: '/summary',
       nextAlt: '../overseas',
       forks: [{
         target: '/relationship-applicant',
@@ -104,6 +104,9 @@ module.exports = {
     '/parental-responsibility': {
       fields: ['parental-responsibility'],
       backLink: './relationship-applicant',
+      next: '/summary'
+    },
+    '/summary': {
       next: '/../intro'
     }
 };
