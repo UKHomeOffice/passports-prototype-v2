@@ -538,7 +538,7 @@ module.exports = {
     labelClassName: 'form-label'
 
   },
-  'parent1-parent1-town': {
+  'parent1-parent1-town-of-birth': {
     labelClassName: 'form-label'
 
   },
@@ -646,7 +646,7 @@ module.exports = {
     labelClassName: 'form-label'
 
   },
-  'parent1-parent2-town': {
+  'parent1-parent2-town-of-birth': {
     labelClassName: 'form-label'
 
   },
@@ -780,7 +780,7 @@ module.exports = {
     labelClassName: 'form-label'
 
   },
-  'parent2-parent1-town': {
+  'parent2-parent1-town-of-birth': {
     labelClassName: 'form-label'
 
   },
@@ -888,7 +888,7 @@ module.exports = {
     labelClassName: 'form-label'
 
   },
-  'parent2-parent2-town': {
+  'parent2-parent2-town-of-birth': {
     labelClassName: 'form-label'
 
   },

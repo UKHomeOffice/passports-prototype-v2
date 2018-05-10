@@ -237,13 +237,13 @@
         "parent1-last-name":{
           "label": "Last name"
         },
-        "parent1-town":{
+        "parent1-town-of-birth":{
           "label": "Town of birth"
         },
-        "parent1-country":{
+        "parent1-country-of-birth":{
           "label": "Country of birth"
         },
-        "parent1-nationality":{
+        "parent1-country-of-nationality":{
           "label": "Nationality",
           "hint": "At the time of the passport holder's birth"
         },
@@ -280,13 +280,13 @@
         "parent2-last-name":{
           "label": "Last name"
         },
-        "parent2-town":{
+        "parent2-town-of-birth":{
           "label": "Town of birth"
         },
-        "parent2-country":{
+        "parent2-country-of-birth":{
           "label": "Country of birth"
         },
-        "parent2-nationality":{
+        "parent2-country-of-nationality":{
           "label": "Nationality",
           "hint": "At the time of the passport holder's birth"
         },
@@ -334,13 +334,13 @@
         "parent1-parent1-last-name":{
           "label": "Last name"
         },
-        "parent1-parent1-town":{
+        "parent1-parent1-town-of-birth":{
           "label": "Town of birth"
         },
         "parent1-parent1-country-of-birth":{
           "label": "Country of birth"
         },
-        "parent1-parent1-nationality":{
+        "parent1-parent1-country-of-nationality":{
           "label": "Nationality",
           "hint": "At the time of the passport holder's birth"
         },
@@ -377,13 +377,13 @@
         "parent1-parent2-last-name":{
           "label": "Last name"
         },
-        "parent1-parent2-town":{
+        "parent1-parent2-town-of-birth":{
           "label": "Town of birth"
         },
         "parent1-parent2-country-of-birth":{
           "label": "Country of birth"
         },
-        "parent1-parent2-nationality":{
+        "parent1-parent2-country-of-nationality":{
           "label": "Nationality",
           "hint": "At the time of the passport holder's birth"
         },
@@ -431,13 +431,13 @@
         "parent2-parent1-last-name":{
           "label": "Last name"
         },
-        "parent2-parent1-town":{
+        "parent2-parent1-town-of-birth":{
           "label": "Town of birth"
         },
         "parent2-parent1-country-of-birth":{
           "label": "Country of birth"
         },
-        "parent2-parent1-nationality":{
+        "parent2-parent1-country-of-nationality":{
           "label": "Nationality",
           "hint": "At the time of the passport holder's birth"
         },
@@ -474,13 +474,13 @@
         "parent2-parent2-last-name":{
           "label": "Last name"
         },
-        "parent2-parent2-town":{
+        "parent2-parent2-town-of-birth":{
           "label": "Town of birth"
         },
         "parent2-parent2-country-of-birth":{
           "label": "Country of birth"
         },
-        "parent2-parent2-nationality":{
+        "parent2-parent2-country-of-nationality":{
           "label": "Nationality",
           "hint": "At the time of the passport holder's birth"
         },

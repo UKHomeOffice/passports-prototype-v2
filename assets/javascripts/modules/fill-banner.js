@@ -57,7 +57,7 @@
 
 
         //   Mother
-        "parent1-town": "Bournemouth",
+        "parent1-town-of-birth": "Bournemouth",
         "parent1-country-of-birth": "United Kingdom",
         "parent1-country-of-nationality": "United Kingdom",
         "parent1-age-day": "17",
@@ -70,7 +70,7 @@
 
 
         //   Father
-        "parent2-town": "Norwich",
+        "parent2-town-of-birth": "Norwich",
         "parent2-country-of-birth": "United Kingdom",
         "parent2-country-of-nationality": "United Kingdom",
         "parent2-age-day": "27",
@@ -88,14 +88,14 @@
         "parent1-parent2-first-names": "Daniel",
         "parent1-parent2-last-name": "Winkletrousen",
 
-        "parent1-parent1-town": "Bournemouth",
+        "parent1-parent1-town-of-birth": "Bournemouth",
         "parent1-parent1-country-of-birth": "United Kingdom",
         "parent1-parent1-country-of-nationality": "United Kingdom",
         "parent1-parent1-age-day": "23",
         "parent1-parent1-age-month": "05",
         "parent1-parent1-age-year": "1920",
 
-        "parent1-parent2-town": "Norwich",
+        "parent1-parent2-town-of-birth": "Norwich",
         "parent1-parent2-country-of-birth": "United Kingdom",
         "parent1-parent2-country-of-nationality": "United Kingdom",
         "parent1-parent2-age-day": "21",
@@ -112,13 +112,13 @@
         "parent2-parent2-first-names": "Daniel",
         "parent2-parent2-last-name": "Winkletrousen",
 
-        "parent2-parent1-town": "Bournemouth",
+        "parent2-parent1-town-of-birth": "Bournemouth",
         "parent2-parent1-country-of-birth": "United Kingdom",
         "parent2-parent1-age-day": "17",
         "parent2-parent1-age-month": "11",
         "parent2-parent1-age-year": "1921",
 
-        "parent2-parent2-town": "Norwich",
+        "parent2-parent2-town-of-birth": "Norwich",
         "parent2-parent2-country-of-birth": "United Kingdom",
         "parent2-parent2-age-day": "27",
         "parent2-parent2-age-month": "08",

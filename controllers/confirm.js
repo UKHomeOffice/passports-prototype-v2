@@ -232,9 +232,9 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       fields: parent1Fields
     });
     parent1Fields.push({
-      step: this.getEditStep('parent1-town'),
+      step: this.getEditStep('parent1-town-of-birth'),
       title: 'Town of birth',
-      value: values['parent1-town']
+      value: values['parent1-town-of-birth']
     }, {
       step: this.getEditStep('parent1-country-of-birth'),
       title: 'Country of birth',
@@ -273,9 +273,9 @@ if (values['16-or-older'] == false) {
       fields: parent2Fields
     });
     parent2Fields.push({
-      step: this.getEditStep('parent2-town'),
+      step: this.getEditStep('parent2-town-of-birth'),
       title: 'Town of birth',
-      value: values['parent2-town']
+      value: values['parent2-town-of-birth']
     }, {
       step: this.getEditStep('parent2-country-of-birth'),
       title: 'Country of birth',
