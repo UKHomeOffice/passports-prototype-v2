@@ -75,11 +75,11 @@ module.exports = {
     '/passport-damaged': {
       fields: ['passport-damaged'],
       backLink: './',
-      next: '/uncancelled' /* if No is selected */
+      next: '/dual-national' /* if No is selected */
     },
-    '/uncancelled': {
+    '/dual-national': {
       controller: require('../../../controllers/go-overseas'),
-      fields: ['uncancelled'],
+      fields: ['dual-national'],
       backLink: './passport-damaged',
       next: '/../intro',
       nextAlt: '../overseas',
@@ -92,7 +92,7 @@ module.exports = {
     },
     '/relationship-applicant': {
       fields: ['relationship-applicant', 'other-why-apply'],
-      backLink: './uncancelled',
+      backLink: './dual-national',
       next: '/third-party-name',
       controller: require('../../../controllers/social-worker')
     },

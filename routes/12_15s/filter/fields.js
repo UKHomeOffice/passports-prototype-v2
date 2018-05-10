@@ -243,30 +243,25 @@ module.exports = {
       'required'
     ]
   },
-  'uncancelled': {
+  'dual-nationality': {
     legend: {
-      value: 'Do you have any uncancelled passport from a different country?',
+      value: 'Do you have any uncancelled passport from other countries?',
       className: 'visuallyhidden'
     },
     options: [{
-        value: 'Yes',
-        label: 'Yes',
-        toggle: 'which-passport'
-      },
-      {
-        value: 'No',
-        label: 'No'
-      }
-    ],
-    validate: [
-      'required',
-      {
-        type: 'equal',
-        arguments: ['No'],
-        /* if Yes is selected */
-        redirect: 'https://passportapplication.service.gov.uk/ips-olc/'
-      }
-    ]
+          value: true,
+          label: 'Yes',
+          toggle: 'same-name'
+        },
+        {
+          value: false,
+          label: 'No'
+        }
+      ],
+      formatter: ['boolean'],
+      validate: [
+        'required'
+      ]
   },
   'relationship-applicant': {
     legend: {

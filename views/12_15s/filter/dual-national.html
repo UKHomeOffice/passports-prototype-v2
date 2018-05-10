@@ -1,0 +1,31 @@
+{{< layout}}
+
+{{$pageTitle}}Do {{> partials-applicant-you-they}} have dual nationality?{{/pageTitle}}
+
+{{$header}}
+  <h1>Do {{> partials-applicant-you-they}} have any passports from other countries?</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+{{$form}}
+
+<fieldset class="inline">
+  <p>You'll need to send them to us. We'll check and return them to you.</p>
+  {{#radio-group}}dual-nationality{{/radio-group}}
+</fieldset>
+
+<div id="same-name" class="reveal js-hidden">
+  <div class="panel panel-border-narrow">
+    <p>They must be in the same name that you want in your UK passport. If they aren't, you must update them
+      before you apply.</p>
+  </div>
+</div>
+
+{{#input-submit}}{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
