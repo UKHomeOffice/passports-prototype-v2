@@ -237,9 +237,9 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     var parent1DateOfIssue = moment(values['parent1-passport-issue-year'] + '-' + values['parent1-passport-issue-month'] + '-' + values['parent1-passport-issue-day'], 'YYYY-MM-DD');
 
     parent1Fields.push({
-      step: this.getEditStep('parent1-town'),
+      step: this.getEditStep('parent1-town-of-birth'),
       title: 'Town of birth',
-      value: values['parent1-town']
+      value: values['parent1-town-of-birth']
     }, {
       step: this.getEditStep('parent1-country-of-birth'),
       title: 'Country of birth',
@@ -282,9 +282,9 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     var parent2DateOfIssue = moment(values['parent2-passport-issue-year'] + '-' + values['parent2-passport-issue-month'] + '-' + values['parent2-passport-issue-day'], 'YYYY-MM-DD');
 
     parent2Fields.push({
-      step: this.getEditStep('parent2-town'),
+      step: this.getEditStep('parent2-town-of-birth'),
       title: 'Town of birth',
-      value: values['parent2-town']
+      value: values['parent2-town-of-birth']
     }, {
       step: this.getEditStep('parent2-country-of-birth'),
       title: 'Country of birth',
@@ -354,9 +354,9 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     var parent1Parent1DateOfBirth = moment(values['parent1-parent1-age-year'] + '-' + values['parent1-parent1-age-month'] + '-' + values['parent1-parent1-age-day'], 'YYYY-MM-DD');
 
     parent1Parent1Fields.push({
-      step: this.getEditStep('parent1-parent1-town'),
+      step: this.getEditStep('parent1-parent1-town-of-birth'),
       title: 'Town of birth',
-      value: values['parent1-parent1-town']
+      value: values['parent1-parent1-town-of-birth']
     }, {
       step: this.getEditStep('parent1-parent1-country-of-birth'),
       title: 'Country of birth',
@@ -400,9 +400,9 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     var parent1Parent2DateOfBirth = moment(values['parent1-parent2-age-year'] + '-' + values['parent1-parent2-age-month'] + '-' + values['parent1-parent2-age-day'], 'YYYY-MM-DD');
 
     parent1Parent2Fields.push({
-      step: this.getEditStep('parent1-parent2-town'),
+      step: this.getEditStep('parent1-parent2-town-of-birth'),
       title: 'Town of birth',
-      value: values['parent1-parent2-town']
+      value: values['parent1-parent2-town-of-birth']
     }, {
       step: this.getEditStep('parent1-parent2-country-of-birth'),
       title: 'Country of birth',
@@ -474,9 +474,9 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     var parent2Parent1DateOfBirth = moment(values['parent2-parent1-age-year'] + '-' + values['parent2-parent1-age-month'] + '-' + values['parent2-parent1-age-day'], 'YYYY-MM-DD');
 
     parent2Parent1Fields.push({
-      step: this.getEditStep('parent2-parent1-town'),
+      step: this.getEditStep('parent2-parent1-town-of-birth'),
       title: 'Town of birth',
-      value: values['parent2-parent1-town']
+      value: values['parent2-parent1-town-of-birth']
     }, {
       step: this.getEditStep('parent2-parent1-country-of-birth'),
       title: 'Country of birth',
@@ -521,9 +521,9 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
 
     
     parent2Parent2Fields.push({
-      step: this.getEditStep('parent2-parent2-town'),
+      step: this.getEditStep('parent2-parent2-town-of-birth'),
       title: 'Town of birth',
-      value: values['parent2-parent2-town']
+      value: values['parent2-parent2-town-of-birth']
     }, {
       step: this.getEditStep('parent2-parent2-country-of-birth'),
       title: 'Country of birth',

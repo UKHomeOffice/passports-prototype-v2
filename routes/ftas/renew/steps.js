@@ -103,7 +103,7 @@ module.exports = {
     //   },
     '/parent-1-details': {
         fields: [
-            'parent1-town',
+            'parent1-town-of-birth',
             'parent1-country-of-birth',
             'parent1-age-day',
             'parent1-age-month',
@@ -126,7 +126,7 @@ module.exports = {
     },
     '/parent-2-details': {
         fields: [
-            'parent2-town',
+            'parent2-town-of-birth',
             'parent2-country-of-birth',
             'parent2-age-day',
             'parent2-age-month',
@@ -156,14 +156,14 @@ module.exports = {
     },
     '/parent-1-grandparents-details': {
         fields: [
-            'parent1-parent1-town',
+            'parent1-parent1-town-of-birth',
             'parent1-parent1-country-of-birth',
             'parent1-parent1-age-day',
             'parent1-parent1-age-month',
             'parent1-parent1-age-year',
             'parent1-parent1-additional-information',
 
-            'parent1-parent2-town',
+            'parent1-parent2-town-of-birth',
             'parent1-parent2-country-of-birth',
             'parent1-parent2-age-day',
             'parent1-parent2-age-month',
@@ -186,14 +186,14 @@ module.exports = {
     },
     '/parent-2-grandparents-details': {
         fields: [
-            'parent2-parent1-town',
+            'parent2-parent1-town-of-birth',
             'parent2-parent1-country-of-birth',
             'parent2-parent1-age-day',
             'parent2-parent1-age-month',
             'parent2-parent1-age-year',
             'parent2-parent1-additional-information',
 
-            'parent2-parent2-town',
+            'parent2-parent2-town-of-birth',
             'parent2-parent2-country-of-birth',
             'parent2-parent2-age-day',
             'parent2-parent2-age-month',

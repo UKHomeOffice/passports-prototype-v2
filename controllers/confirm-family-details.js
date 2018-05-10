@@ -84,7 +84,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     parent1Fields.push({
       step: this.getEditStep('parent-1-details'),
       title: 'Town of birth',
-      value: values['parent1-town']
+      value: values['parent1-town-of-birth']
     }, {
       step: this.getEditStep('parent-1-details'),
       title: 'Country of birth',
@@ -96,7 +96,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     }, {
       step: this.getEditStep('parent-1-details'),
       title: 'Country of nationality',
-      value: values['parent1-nationality']
+      value: values['parent1-country-of-nationality']
     }, {
       step: this.getEditStep('parent-1-details'),
       title: 'UK passport number',
@@ -123,7 +123,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     parent2Fields.push({
       step: this.getEditStep('parent-2-details'),
       title: 'Town of birth',
-      value: values['parent2-town']
+      value: values['parent2-town-of-birth']
     }, {
       step: this.getEditStep('parent-2-details'),
       title: 'Country of birth',
@@ -135,7 +135,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     }, {
       step: this.getEditStep('parent-2-details'),
       title: 'Country of nationality',
-      value: values['parent2-nationality']
+      value: values['parent2-country-of-nationality']
     }, {
       step: this.getEditStep('parent-2-details'),
       title: 'UK passport number',
@@ -185,7 +185,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     parent1Parent1Fields.push({
       step: this.getEditStep('parent-1-parent-1-details'),
       title: 'Town of birth',
-      value: values['parent1-parent1-town']
+      value: values['parent1-parent1-town-of-birth']
     }, {
       step: this.getEditStep('parent-1-parent-1-details'),
       title: 'Country of birth',
@@ -197,7 +197,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     }, {
       step: this.getEditStep('parent-1-parent-1-details'),
       title: 'Country of nationality',
-      value: values['parent1-parent1-nationality']
+      value: values['parent1-parent1-country-of-nationality']
     }, {
       step: this.getEditStep('parent-1-parent-1-details'),
       title: 'UK passport number',
@@ -224,7 +224,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     parent1Parent2Fields.push({
       step: this.getEditStep('parent-1-parent-2-details'),
       title: 'Town of birth',
-      value: values['parent1-parent2-town']
+      value: values['parent1-parent2-town-of-birth']
     }, {
       step: this.getEditStep('parent-1-parent-2-details'),
       title: 'Country of birth',
@@ -236,7 +236,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     }, {
       step: this.getEditStep('parent-1-parent-2-details'),
       title: 'Country of nationality',
-      value: values['parent1-parent2-nationality']
+      value: values['parent1-parent2-country-of-nationality']
     }, {
       step: this.getEditStep('parent-1-parent-2-details'),
       title: 'UK passport number',
@@ -286,7 +286,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     parent2Parent1Fields.push({
       step: this.getEditStep('parent-2-parent-1-details'),
       title: 'Town of birth',
-      value: values['parent2-parent1-town']
+      value: values['parent2-parent1-town-of-birth']
     }, {
       step: this.getEditStep('parent-2-parent-1-details'),
       title: 'Country of birth',
@@ -298,7 +298,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     }, {
       step: this.getEditStep('parent-2-parent-1-details'),
       title: 'Country of nationality',
-      value: values['parent2-parent1-nationality']
+      value: values['parent2-parent1-country-of-nationality']
     }, {
       step: this.getEditStep('parent-2-parent-1-details'),
       title: 'UK passport number',
@@ -325,7 +325,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     parent2Parent2Fields.push({
       step: this.getEditStep('parent-2-parent-2-details'),
       title: 'Town of birth',
-      value: values['parent2-parent2-town']
+      value: values['parent2-parent2-town-of-birth']
     }, {
       step: this.getEditStep('parent-2-parent-2-details'),
       title: 'Country of birth',
@@ -337,7 +337,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     }, {
       step: this.getEditStep('parent-2-parent-2-details'),
       title: 'Country of nationality',
-      value: values['parent2-parent2-nationality']
+      value: values['parent2-parent2-country-of-nationality']
     }, {
       step: this.getEditStep('parent-2-parent-2-details'),
       title: 'UK passport number',
