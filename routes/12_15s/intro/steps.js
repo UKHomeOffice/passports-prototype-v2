@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-      backLink: '../filter/relationship-applicant',
+      backLink: '../filter/summary',
         next: '/what-you-need'
     },
     '/what-you-need': {
