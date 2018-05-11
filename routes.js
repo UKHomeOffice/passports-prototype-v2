@@ -1,6 +1,7 @@
 
 // routes
 app.use(require('./routes/start'));
+app.use(require('./routes/guidance'));
 
 // production
 app.use('/production/overseas', require('./routes/production/overseas'));
