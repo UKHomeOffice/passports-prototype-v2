@@ -1,20 +1,29 @@
 {{< layout}}
 
-{{$propositionHeader}}{{/propositionHeader}}
+{{$main-content}}
+    <div class="column-full">
+        <div class="flash-card">
+        <header>
+        <h1>Before you continue</h1>
+        </header>
 
-{{$pageTitle}}Are you applying from the UK?{{/pageTitle}}
+        <div class="grid-row">
+            <div class="column-two-thirds">
+              <p>It should take around 6 weeks to get your first adult passport. It should take around 3 weeks for all other applications, including renewing a passport or a first child passport.
 
-{{$header}}
-    <h1>Are you applying from the UK?</h1>
-{{/header}}
+              </p>If we need more information, it can take longer. Use a different service if you <a href="/get-a-passport-urgently">need a passport urgently</a>.</p>
 
-{{$content}}
-{{< hmpo-partials-form}}
-    {{$form}}
-        {{#radio-group}}apply-uk{{/radio-group}}
-        {{#input-submit}}{{/input-submit}}
-    {{/form}}
-{{/ hmpo-partials-form}}
-{{/content}}
+              <h2>Confirming your identity</h2>
+              <p>You no longer need to ask someone to sign a printed photo. We'll let you know if someone needs to confirm your identity &ndash; they can do it online.</p>
+
+              <a href="./filter/apply-uk" class="button">Continue</a><br>
+
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+{{/ main-content}}
 
 {{/ layout}}

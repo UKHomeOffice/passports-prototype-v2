@@ -1,18 +1,22 @@
 module.exports = {
     '/':{
+      next: '/apply-uk',
+      backLink: '../startpage'
+    },
+    '/apply-uk':{
       fields: ['apply-uk', 'application-country'],
       controller: require('../../../controllers/go-overseas'),
       backLink: './',
-      next: '/apply-uk', /* if Yes is selected */
+      next: '/who-for', /* if Yes is selected */
       nextAlt: 'what-do-you-want-to-do-overseas', /* if they are from Germany/France */
       nextAltAlt:'what-do-you-want-to-do-overseas',/* if they are from Afganistan */
       nextAltAltAlt:'what-do-you-want-to-do-overseas', /* if they are from Spain - first hidden as renewal */
       nextAltAltAltAlt:'../overseas-not-available' /* if they are from Syria - not available */
     },
-    '/apply-uk':{
+    '/who-for':{
       fields: ['application-for'],
       next: '/first-uk',
-      backLink: '../startpage'
+      backLink: './apply-uk'
     },
     '/first-uk': {
         backLink: './',
