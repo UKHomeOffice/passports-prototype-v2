@@ -131,8 +131,7 @@ module.exports = {
   },
   'change-name': {
       legend: {
-        value: 'If you\'ve been naturalised or registered, tell us if this name is on your UK citizenship certificate.',
-        className: 'form-hint'
+        className: 'visuallyhidden'
       },
       options: [
           { value: false, label: 'Yes' },

@@ -1,6 +1,11 @@
 {{< layout}}
 
+{{$pageTitle}}Before you continue{{/pageTitle}}
+
 {{$main-content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
 
 <div class="column-full">
     <div class="flash-card">
@@ -13,8 +18,8 @@
             <div class="column-two-thirds">
 
                 {{#values.uncancelled}}
-                    <h2>This should only show for dual nationals</h2>
-                    <p>Make sure you return all of your passports</p>
+                <h2>This should only show for dual nationals</h2>
+                <p>Make sure you return all of your passports</p>
                 {{/values.uncancelled}}
 
                 <h2>What it costs</h2>
@@ -23,7 +28,14 @@
                 <h2>What you'll need</h2>
                 <ul class="list-bullet">
                     <li>a credit or debit card</li>
-                    <li>your birth, adoption, naturalisation or registration certificate</li>
+
+                    {{#values.naturalisation-registration-certificate}}
+                        <li>your naturalisation or registration certificate</li>
+                    {{/values.naturalisation-registration-certificate}}
+
+                    {{^values.naturalisation-registration-certificate}}
+                        <li>your birth or adoption certificate</li>
+                    {{/values.naturalisation-registration-certificate}}
                 </ul>
 
                 <h2>How long it takes</h2>
@@ -37,6 +49,9 @@
 
     </div>
 </div>
+
+{{/form}}
+{{/ hmpo-partials-form}}
 
 {{/ main-content}}
 

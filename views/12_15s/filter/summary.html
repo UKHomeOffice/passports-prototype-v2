@@ -17,11 +17,63 @@
 
       </header>
       {{#values.16-or-older}}
-        <p>Based on your answers, you're renewing an adult passport. If this is not correct, <a href="./">check your answers.</a></p>
+        <p>Based on your answers, you're renewing an adult passport {{^values.application-for}}on behalf of someone else{{/values.application-for}}. If this is not correct, <a href="./">start again</a>.</p>
       {{/values.16-or-older}}
       {{^values.16-or-older}}
-        <p>Based on your answers, you're renewing a child passport. If this is not correct, <a href="./">check your answers.</a></p>
+        <p>Based on your answers, you're renewing a child passport. If this is not correct, <a href="./">start again</a></p>
       {{/values.16-or-older}}
+
+      {{#values.16-or-older}}
+        <h2>You'll need:</h2>
+        <ul class="list-bullet">
+          <li>the applicant's old passport</li>
+          <li>a digital photo of the applicant - we'll show you how to get one</li>
+          <li>to explain why the applicant can't make this application</li>
+          <li>a debit or credit card</li>
+        </ul>
+
+        <h2>You'll need to send us:</h2>
+        <ul class="list-bullet">
+          <li>the applicant's old passport</li>
+          {{^values.application-for}}
+          <li>1 document confirming you can make this application, for example a letter from the court, social services or a doctor</li>
+          {{/values.application-for}}
+        </ul>
+
+        <p>We may ask for more information depending on what you tell us.</p>
+      {{/values.16-or-older}}
+
+      {{^values.16-or-older}}
+        <h2>You'll need:</h2>
+        <ul class="list-bullet">
+          <li>the child's old passport</li>
+          <li>passport details of both parents</li>
+          <li>date and place of birth of both parents</li>
+          <li>a digital photo of the child - we'll show you how to get one</li>
+          <li>a debit or credit card</li>
+        </ul>
+
+        <p>If you can't provide both parents' details, you'll need to tell us why.</p>
+
+
+        <h2>You'll need to send us:</h2>
+        <ul class="list-bullet">
+          <li>the child's old passport</li>
+          <li>any court orders restricting parental responsibility or travel</li>
+        </ul>
+
+        <p>We may ask for more information depending on what you tell us.</p>
+      {{/values.16-or-older}}
+
+
+
+
+
+
+
+
+
+
       <!-- {{^values.application-for}}
         <p>Third party application.</p>
       {{/values.application-for}} -->
