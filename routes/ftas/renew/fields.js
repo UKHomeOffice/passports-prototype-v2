@@ -267,21 +267,30 @@ module.exports = {
       'required'
     ]
   },
-  'parents-married': {
-    legend: {
-      value: 'Parents married',
-      className: 'visuallyhidden'
+    'parents-married': {
+        legend: {
+            value: 'Parents married',
+            className: 'visuallyhidden'
+        },
+        options: [{
+                value: 'Yes',
+                label: 'Yes',
+                toggle: 'marriage-date'
+            },
+            {
+                value: 'No',
+                label: 'No'
+            },
+            {
+                value: 'Unknown',
+                label: 'I don’t know'
+            }
+        ],
+        validate: [
+            'required'
+        ],
+        className: 'inline'
     },
-    options: [
-      {value: 'Yes', label: 'Yes', toggle: 'marriage-date'},
-      {value: 'No', label: 'No'},
-      {value: 'I don’t know', label: 'I don’t know'}
-    ],
-    validate: [
-      'required'
-    ],
-    className: 'inline'
-  },
 
   // Parents
   'marriage-day': {
@@ -385,18 +394,33 @@ module.exports = {
       //     'required'
       // ]
   },
-  'parent1-additional-information': {
-    className: 'textarea',
-    labelClassName: 'form-label-bold'
-    // validate: [
-    //   'required',
-    //   { type: 'maxlength', arguments: 250 }
-    // ],
-    // dependent: {
-    //   field: 'can-sign',
-    //   value: false
-    // }
-  },
+
+
+    /*
+    FIXME:
+    - validation logic
+    TODO:
+    - expand additional info
+    - error message */
+    'parent1-additional-information': {
+        className: 'textarea',
+        labelClassName: 'form-label-bold',
+        // validate: [
+        //     'required',
+        //     {
+        //         type: 'equal',
+        //         validate: [ // If ANY of the fields are NOT filled in
+        //             'parent1-first-names',
+        //             'parent1-last-name',
+        //             'parents-married',
+        //             'parent1-age-day',
+        //             'parent1-age-month',
+        //             'parent1-age-year'
+        //         ],
+        //         toggle: 'parent1-additional-information'
+        //     }
+        // ]
+    },
 
   // Parent 2
   'parent2-first-names': {

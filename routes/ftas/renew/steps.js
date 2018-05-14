@@ -90,6 +90,7 @@ module.exports = {
             'parent1-last-name',
             'parent2-first-names',
             'parent2-last-name',
+            'parents-married',
             'marriage-day',
             'marriage-month',
             'marriage-year'
@@ -102,6 +103,7 @@ module.exports = {
     //     next: '/parent-1-details'
     //   },
     '/parent-1-details': {
+        controller: require('../../../controllers/validation-parent-1-details'),
         fields: [
             'parent1-town-of-birth',
             'parent1-country-of-birth',
