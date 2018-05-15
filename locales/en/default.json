@@ -586,7 +586,7 @@
             "required": "You must answer this question."
         },
         "parent1-additional-information": {
-            "required": "Please explain why you can't fill in <list field variables> {{label}}."
+            "required": "Please explain why you can't fill in <fieldnames>."
         },
         "email": "You must enter a valid email",
         "exactlength": "{{label}} must be 9 characters",
