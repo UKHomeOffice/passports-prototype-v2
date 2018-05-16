@@ -17,9 +17,28 @@
 {{#input-text}}parent1-parent1-first-names{{/input-text}}
 {{#input-text}}parent1-parent1-last-name{{/input-text}}
 
+<details>
+    <summary>
+        <span class="summary">I don't know these details</span>
+    </summary>
+    <div class="panel panel-border-narrow">
+        {{#textarea}}parent1-parent1-additional-information{{/textarea}}
+    </div>
+</details>
+
+
 <h2>Grandfather</h2>
 {{#input-text}}parent1-parent2-first-names{{/input-text}}
 {{#input-text}}parent1-parent2-last-name{{/input-text}}
+
+<details>
+    <summary>
+        <span class="summary">I don't know these details</span>
+    </summary>
+    <div class="panel panel-border-narrow">
+        {{#textarea}}parent1-parent2-additional-information{{/textarea}}
+    </div>
+</details>
 
 <h2>Were they married or in a civil partnership?</h2>
 {{#radio-group}}parent1-parents-married{{/radio-group}}

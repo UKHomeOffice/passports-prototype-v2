@@ -3,7 +3,7 @@
 {{$pageTitle}}Parents’ details{{/pageTitle}}
 
 {{$header}}
-    <h1>Parents' details</h1>
+<h1>Parents' details</h1>
 {{/header}}
 
 {{$content}}
@@ -17,11 +17,52 @@
 {{#input-text}}parent1-first-names{{/input-text}}
 {{#input-text}}parent1-last-name{{/input-text}}
 
+<fieldset>
+    <div class="form-date">
+        <legend><span class="form-label">Date of birth</span></legend>
+        <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
+        {{#input-text}}parent1-age-day{{/input-text}}
+        {{#input-text}}parent1-age-month{{/input-text}}
+        {{#input-text}}parent1-age-year{{/input-text}}
+    </div>
+</fieldset>
+<br>
+
+<details {{values.openAdditionalInfo}}>
+    <summary>
+        <span class="summary">I don't know these details</span>
+    </summary>
+    <div class="panel panel-border-narrow">
+        {{#textarea}}parent1-additional-information{{/textarea}}
+    </div>
+</details>
+
+
 <h2>Father or parent 2</h2>
 {{#input-text}}parent2-first-names{{/input-text}}
 {{#input-text}}parent2-last-name{{/input-text}}
 
-<h2>Were your parents married or in a civil partnership?</h2>
+<fieldset>
+    <div class="form-date">
+        <legend><span class="form-label">Date of birth</span></legend>
+        <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
+        {{#input-text}}parent2-age-day{{/input-text}}
+        {{#input-text}}parent2-age-month{{/input-text}}
+        {{#input-text}}parent2-age-year{{/input-text}}
+    </div>
+</fieldset>
+<br>
+
+<details>
+    <summary>
+        <span class="summary">I don't know these details</span>
+    </summary>
+    <div class="panel panel-border-narrow">
+        {{#textarea}}parent2-additional-information{{/textarea}}
+    </div>
+</details>
+
+<h2>Were they married or in a civil partnership?</h2>
 {{#radio-group}}parents-married{{/radio-group}}
 <div id="marriage-date" class="reveal js-hidden">
     <fieldset>

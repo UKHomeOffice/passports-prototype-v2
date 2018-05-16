@@ -6,11 +6,15 @@ module.exports = {
         ],
         controller: require('../../../controllers/go-overseas'),
         backLink: './',
-        next: '/apply-uk',  /* if Yes is selected */
-        nextAlt: 'what-do-you-want-to-do-overseas', /* if they are from Germany/France */
-        nextAltAlt: 'what-do-you-want-to-do-overseas',  /* if they are from Afganistan */
-        nextAltAltAlt: 'what-do-you-want-to-do-overseas',   /* if they are from Spain - first hidden as renewal */
-        nextAltAltAltAlt: '../overseas-not-available'   /* if they are from Syria - not available */
+        next: '/apply-uk',
+        /* if Yes is selected */
+        nextAlt: 'what-do-you-want-to-do-overseas',
+        /* if they are from Germany/France */
+        nextAltAlt: 'what-do-you-want-to-do-overseas',
+        /* if they are from Afganistan */
+        nextAltAltAlt: 'what-do-you-want-to-do-overseas',
+        /* if they are from Spain - first hidden as renewal */
+        nextAltAltAltAlt: '../overseas-not-available' /* if they are from Syria - not available */
     },
     '/apply-uk': {
         fields: [
@@ -74,10 +78,8 @@ module.exports = {
         backLink: './',
         next: '/dob'
     },
-    '/lost': {
-    },
-    '/application-method': {
-    },
+    '/lost': {},
+    '/application-method': {},
     '/what-do-you-want-to-do-overseas': {
         controller: require('../../../controllers/go-overseas'),
         fields: [
@@ -85,9 +87,11 @@ module.exports = {
         ],
         backLink: './',
         next: '/dob',
-        nextAlt: 'dob-overseas',    /* if they are from Germany/France */
-        nextAltAlt: 'dob-overseas', /* if they are from Afganistan */
-        nextAltAltAlt: '../overseas-first'  /* if they are from Spain - first hidden as renewal */
+        nextAlt: 'dob-overseas',
+        /* if they are from Germany/France */
+        nextAltAlt: 'dob-overseas',
+        /* if they are from Afganistan */
+        nextAltAltAlt: '../overseas-first' /* if they are from Spain - first hidden as renewal */
     },
     '/dob-overseas': {
         fields: [
@@ -97,9 +101,12 @@ module.exports = {
         ],
         controller: require('../../../controllers/go-overseas'),
         backLink: './',
-        next: '/../filter', /* if they are from the UK */
-        nextAlt: '../overseas', /* if they are from Germany/France */
-        nextAltAlt: '../overseas-not-eligible', /* if they are from Afganistan */
+        next: '/../filter',
+        /* if they are from the UK */
+        nextAlt: '../overseas',
+        /* if they are from Germany/France */
+        nextAltAlt: '../overseas-not-eligible',
+        /* if they are from Afganistan */
     },
     '/dob': {
         fields: [
@@ -107,20 +114,22 @@ module.exports = {
         ],
         controller: require('../../../controllers/go-overseas'),
         backLink: './lost-stolen',
-        next: '/passport-expiry',   /* if they are from the UK */
+        next: '/passport-expiry',
+        /* if they are from the UK */
         forks: [
-        //     {
-        //     target: '/dob-below-16',
-        //     condition: function (req, res) {
-        //         return req.session['hmpo-wizard-common']['16-or-older'] == false;   /* If they are BELOW 16 */
-        //     }
-        // },
-        {
-            target: '/naturalisation-registration-details',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['16-or-older'] == true && req.session['hmpo-wizard-common']['passport-before'] == false;   /* If they are OVER 16 + NOT had UK passport before */
+            //     {
+            //     target: '/dob-below-16',
+            //     condition: function (req, res) {
+            //         return req.session['hmpo-wizard-common']['16-or-older'] == false;   /* If they are BELOW 16 */
+            //     }
+            // },
+            {
+                target: '/naturalisation-registration-details',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['16-or-older'] == true && req.session['hmpo-wizard-common']['passport-before'] == false; /* If they are OVER 16 + NOT had UK passport before */
+                }
             }
-        }]
+        ]
     },
     '/dob-below-16': {
         fields: [
@@ -133,7 +142,7 @@ module.exports = {
         forks: [{
             target: '/../intro',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false;   /* If they are BELOW 16 + NOT had UK passport before */
+                return req.session['hmpo-wizard-common']['passport-before'] == false; /* If they are BELOW 16 + NOT had UK passport before */
             }
         }]
     },
@@ -145,11 +154,11 @@ module.exports = {
         ],
         backLink: '../filter/dob',
         next: '/naturalisation-registration-details',
-        forks: [{   /* If they are NOT a UK Hidden FTA */
+        forks: [{ /* If they are NOT a UK Hidden FTA */
             target: '/dual-national',
-            condition: function (req, res) {    /* Logic below is to deal with 2-digit and 4-digit input of year and make it work, because any years input as 02–18 is unlikely to mean 1902–1918 but 2002–present */
-                return req.session['hmpo-wizard-common']['issue-year'] >= 2002   /* If their passport's date of issue is > 2002 (2002—present) */
-                    || req.session['hmpo-wizard-common']['issue-year'] >= 02 && req.session['hmpo-wizard-common']['issue-year'] <= 18;   /* If their passport's date of issue is >= 2002 (2002–2018) */
+            condition: function (req, res) { /* Logic below is to deal with 2-digit and 4-digit input of year and make it work, because any years input as 02–18 is unlikely to mean 1902–1918 but 2002–present */
+                return req.session['hmpo-wizard-common']['issue-year'] >= 2002 /* If their passport's date of issue is > 2002 (2002—present) */ ||
+                    req.session['hmpo-wizard-common']['issue-year'] >= 02 && req.session['hmpo-wizard-common']['issue-year'] <= 18; /* If their passport's date of issue is >= 2002 (2002–2018) */
             }
         }]
     },
@@ -162,7 +171,7 @@ module.exports = {
             'passport-damaged'
         ],
         backLink: './',
-        next: '/../intro'   /* If their passport is NOT damaged */
+        next: '/../intro' /* If their passport is NOT damaged */
     },
     '/uncancelled': {
         controller: require('../../../controllers/go-overseas'),

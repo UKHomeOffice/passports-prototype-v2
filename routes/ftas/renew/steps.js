@@ -66,7 +66,7 @@ module.exports = {
             'town-of-birth',
             'country-of-birth'
         ],
-        forks: [{   /* If they do NOT have a certificate */
+        forks: [{ /* If they do NOT have a certificate */
             target: '/parents',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == false;
@@ -90,6 +90,7 @@ module.exports = {
             'parent1-last-name',
             'parent2-first-names',
             'parent2-last-name',
+            'parents-married',
             'marriage-day',
             'marriage-month',
             'marriage-year'
@@ -102,6 +103,7 @@ module.exports = {
     //     next: '/parent-1-details'
     //   },
     '/parent-1-details': {
+        // controller: require('../../../controllers/validation-parent-1-details'),
         fields: [
             'parent1-town-of-birth',
             'parent1-country-of-birth',
