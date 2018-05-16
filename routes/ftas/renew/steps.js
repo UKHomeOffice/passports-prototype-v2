@@ -88,8 +88,18 @@ module.exports = {
         fields: [
             'parent1-first-names',
             'parent1-last-name',
+            'parent1-age-day',
+            'parent1-age-month',
+            'parent1-age-year',
+            'parent1-additional-information',
+
             'parent2-first-names',
             'parent2-last-name',
+            'parent2-age-day',
+            'parent2-age-month',
+            'parent2-age-year',
+            'parent2-additional-information',
+
             'parents-married',
             'marriage-day',
             'marriage-month',
@@ -107,15 +117,11 @@ module.exports = {
         fields: [
             'parent1-town-of-birth',
             'parent1-country-of-birth',
-            'parent1-age-day',
-            'parent1-age-month',
-            'parent1-age-year',
             'parent1-country-of-nationality',
             'parent1-passport-number',
             'parent1-passport-issue-day',
             'parent1-passport-issue-month',
-            'parent1-passport-issue-year',
-            'parent1-additional-information'
+            'parent1-passport-issue-year'
         ],
         // controller: require('../../../controllers/parents-details'),
         // forks: [{
@@ -130,15 +136,11 @@ module.exports = {
         fields: [
             'parent2-town-of-birth',
             'parent2-country-of-birth',
-            'parent2-age-day',
-            'parent2-age-month',
-            'parent2-age-year',
             'parent2-country-of-nationality',
             'parent2-passport-number',
             'parent2-passport-issue-day',
             'parent2-passport-issue-month',
-            'parent2-passport-issue-year',
-            'parent2-additional-information'
+            'parent2-passport-issue-year'
         ],
         next: '/parent-1-grandparents',
         // controller: require('../../../controllers/go-overseas'),
@@ -148,8 +150,12 @@ module.exports = {
         fields: [
             'parent1-parent1-first-names',
             'parent1-parent1-last-name',
+            'parent1-parent1-additional-information',
+
             'parent1-parent2-first-names',
             'parent1-parent2-last-name',
+            'parent1-parent2-additional-information',
+
             'parent1-parents-marriage-day',
             'parent1-parents-marriage-month',
             'parent1-parents-marriage-year'
@@ -163,14 +169,12 @@ module.exports = {
             'parent1-parent1-age-day',
             'parent1-parent1-age-month',
             'parent1-parent1-age-year',
-            'parent1-parent1-additional-information',
 
             'parent1-parent2-town-of-birth',
             'parent1-parent2-country-of-birth',
             'parent1-parent2-age-day',
             'parent1-parent2-age-month',
-            'parent1-parent2-age-year',
-            // 'parent1-parent2-additional-information'
+            'parent1-parent2-age-year'
         ],
         next: '/parent-2-grandparents'
     },
@@ -178,8 +182,12 @@ module.exports = {
         fields: [
             'parent2-parent1-first-names',
             'parent2-parent1-last-name',
+            'parent2-parent1-additional-information',
+
             'parent2-parent2-first-names',
             'parent2-parent2-last-name',
+            'parent2-parent2-additional-information',
+
             'parent2-parents-marriage-day',
             'parent2-parents-marriage-month',
             'parent2-parents-marriage-year'
@@ -193,14 +201,12 @@ module.exports = {
             'parent2-parent1-age-day',
             'parent2-parent1-age-month',
             'parent2-parent1-age-year',
-            'parent2-parent1-additional-information',
 
             'parent2-parent2-town-of-birth',
             'parent2-parent2-country-of-birth',
             'parent2-parent2-age-day',
             'parent2-parent2-age-month',
-            'parent2-parent2-age-year',
-            // 'parent2-parent2-additional-information'
+            'parent2-parent2-age-year'
         ],
         next: '/home-address'
     },
