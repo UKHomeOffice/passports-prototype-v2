@@ -85,6 +85,7 @@ module.exports = {
         ]
     },
     '/parents': {
+        controller: require('../../../controllers/validation-parents'),
         fields: [
             'parent1-first-names',
             'parent1-last-name',
@@ -113,7 +114,6 @@ module.exports = {
     //     next: '/parent-1-details'
     //   },
     '/parent-1-details': {
-        // controller: require('../../../controllers/validation-parent-1-details'),
         fields: [
             'parent1-town-of-birth',
             'parent1-country-of-birth',
