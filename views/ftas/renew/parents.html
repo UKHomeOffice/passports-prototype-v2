@@ -28,7 +28,7 @@
 </fieldset>
 <br>
 
-<details {{values.openAdditionalInfo}}>
+<details {{values.openParent1AdditionalInfo}}>
     <summary>
         <span class="summary">I don't know these details</span>
     </summary>
@@ -53,7 +53,7 @@
 </fieldset>
 <br>
 
-<details>
+<details {{values.openParent2AdditionalInfo}}>
     <summary>
         <span class="summary">I don't know these details</span>
     </summary>
@@ -61,6 +61,7 @@
         {{#textarea}}parent2-additional-information{{/textarea}}
     </div>
 </details>
+
 
 <h2>Were they married or in a civil partnership?</h2>
 {{#radio-group}}parents-married{{/radio-group}}

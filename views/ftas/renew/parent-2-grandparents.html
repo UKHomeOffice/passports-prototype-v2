@@ -16,8 +16,21 @@
 <h2>Grandmother</h2>
 {{#input-text}}parent2-parent1-first-names{{/input-text}}
 {{#input-text}}parent2-parent1-last-name{{/input-text}}
+{{#input-text}}parent2-parent1-town-of-birth{{/input-text}}
+{{#select}}parent2-parent1-country-of-birth{{/select}}
 
-<details>
+<fieldset>
+    <div class="form-date">
+        <legend><span class="form-label">Date of birth</span></legend>
+        <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
+        {{#input-text}}parent2-parent1-age-day{{/input-text}}
+        {{#input-text}}parent2-parent1-age-month{{/input-text}}
+        {{#input-text}}parent2-parent1-age-year{{/input-text}}
+    </div>
+</fieldset>
+<br>
+
+<details {{values.openParent2Parent1AdditionalInfo}}>
     <summary>
         <span class="summary">I don't know these details</span>
     </summary>
@@ -30,8 +43,21 @@
 <h2>Grandfather</h2>
 {{#input-text}}parent2-parent2-first-names{{/input-text}}
 {{#input-text}}parent2-parent2-last-name{{/input-text}}
+{{#input-text}}parent2-parent2-town-of-birth{{/input-text}}
+{{#select}}parent2-parent2-country-of-birth{{/select}}
 
-<details>
+<fieldset>
+    <div class="form-date">
+        <legend><span class="form-label">Date of birth</span></legend>
+        <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
+        {{#input-text}}parent2-parent2-age-day{{/input-text}}
+        {{#input-text}}parent2-parent2-age-month{{/input-text}}
+        {{#input-text}}parent2-parent2-age-year{{/input-text}}
+    </div>
+</fieldset>
+<br>
+
+<details {{values.openParent2Parent2AdditionalInfo}}>
     <summary>
         <span class="summary">I don't know these details</span>
     </summary>
@@ -39,6 +65,7 @@
         {{#textarea}}parent2-parent2-additional-information{{/textarea}}
     </div>
 </details>
+
 
 <h2>Were they married or in a civil partnership?</h2>
 {{#radio-group}}parent2-parents-married{{/radio-group}}

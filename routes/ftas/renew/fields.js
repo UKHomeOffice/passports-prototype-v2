@@ -458,14 +458,6 @@ module.exports = {
         //     'required'
         // ]
     },
-
-
-    /*
-    FIXME:
-    - validation logic
-    TODO:
-    - expand additional info
-    - error message */
     'parent1-additional-information': {
         className: 'textarea',
         labelClassName: 'form-label-bold',
@@ -609,7 +601,7 @@ module.exports = {
                 label: 'No'
             },
             {
-                value: 'I don’t know',
+                value: 'Unknown',
                 label: 'I don’t know'
             }
         ],
@@ -868,7 +860,7 @@ module.exports = {
                 label: 'No'
             },
             {
-                value: 'I don’t know',
+                value: 'Unknown',
                 label: 'I don’t know'
             }
         ],
