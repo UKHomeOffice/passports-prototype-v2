@@ -586,7 +586,10 @@
             "required": "You must answer this question."
         },
         "parent1-additional-information": {
-            "required": "Please explain why you can't fill in {{required}}."
+            "required": "Explain why you can't provide details for mother or parent 1."
+        },
+        "parent2-additional-information": {
+            "required": "Explain why you can't provide details for father or parent 2."
         },
         "email": "You must enter a valid email",
         "exactlength": "{{label}} must be 9 characters",

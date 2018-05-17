@@ -1,7 +1,7 @@
 var util = require('util')
 var Base = require('hmpo-form-wizard').Controller
 
-var Controller = function() {
+var Controller = function () {
     Base.apply(this, arguments)
 }
 
@@ -37,6 +37,7 @@ Controller.prototype.process = function process(req, res, callback) {
         this.options.fields['parent1-additional-information'].validate = [];
     }
 
+
     if ( // If ALL of the fields are EMPTY
         !req.form.values['parent2-additional-information'] &&
         !req.form.values['parent2-first-names'] &&
@@ -69,11 +70,13 @@ Controller.prototype.process = function process(req, res, callback) {
 
 Controller.prototype.getValues = function getValues(req, res, callback) {
     Base.prototype.getValues.call(this, req, res, (err, values) => {
-        let error = values.errors && values.errors['parent1-additional-information'];
-        if (error || values['parent1-additional-information']) {
+        let errorParent1 = values.errors && values.errors['parent1-additional-information'];
+        let errorParent2 = values.errors && values.errors['parent2-additional-information'];
+
+        if (errorParent1 || values['parent1-additional-information']) {
             values.openParent1AdditionalInfo = 'open';
         }
-        if (values['parent2-additional-information']) {
+        if (errorParent2 || values['parent2-additional-information']) {
             values.openParent2AdditionalInfo = 'open';
         }
         callback(err, values);
