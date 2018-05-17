@@ -175,6 +175,7 @@ module.exports = {
         next: '/parent-2-grandparents'
     },
     '/parent-2-grandparents': {
+        controller: require('../../../controllers/validation-parent-2-grandparents'),
         fields: [
             'parent2-parent1-first-names',
             'parent2-parent1-last-name',
