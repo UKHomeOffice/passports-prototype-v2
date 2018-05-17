@@ -7,8 +7,6 @@ var Controller = function () {
 
 util.inherits(Controller, Base)
 
-const AllErrors = false; // Option 1 = true; Option 3 = false
-
 Controller.prototype.process = function process(req, res, callback) {
     if ( // If ANY of the fields are EMPTY
         !req.form.values['parent1-additional-information'] &&
@@ -20,20 +18,8 @@ Controller.prototype.process = function process(req, res, callback) {
             !req.form.values['parent1-age-year']
         )
     ) { // Run validation on additional info
-        if (AllErrors) {
-            this.options.fields['parent1-first-names'].validate = ['required'];
-            this.options.fields['parent1-last-name'].validate = ['required'];
-            this.options.fields['parent1-age-day'].validate = ['required'];
-            this.options.fields['parent1-age-month'].validate = ['required'];
-            this.options.fields['parent1-age-year'].validate = ['required'];
-        }
         this.options.fields['parent1-additional-information'].validate = ['required'];
     } else {
-        this.options.fields['parent1-first-names'].validate = [];
-        this.options.fields['parent1-last-name'].validate = [];
-        this.options.fields['parent1-age-day'].validate = [];
-        this.options.fields['parent1-age-month'].validate = [];
-        this.options.fields['parent1-age-year'].validate = [];
         this.options.fields['parent1-additional-information'].validate = [];
     }
 
@@ -48,20 +34,8 @@ Controller.prototype.process = function process(req, res, callback) {
             !req.form.values['parent2-age-year']
         )
     ) { // Run validation on additional info
-        if (AllErrors) {
-            this.options.fields['parent2-first-names'].validate = ['required'];
-            this.options.fields['parent2-last-name'].validate = ['required'];
-            this.options.fields['parent2-age-day'].validate = ['required'];
-            this.options.fields['parent2-age-month'].validate = ['required'];
-            this.options.fields['parent2-age-year'].validate = ['required'];
-        }
         this.options.fields['parent2-additional-information'].validate = ['required'];
     } else {
-        this.options.fields['parent2-first-names'].validate = [];
-        this.options.fields['parent2-last-name'].validate = [];
-        this.options.fields['parent2-age-day'].validate = [];
-        this.options.fields['parent2-age-month'].validate = [];
-        this.options.fields['parent2-age-year'].validate = [];
         this.options.fields['parent2-additional-information'].validate = [];
     }
 
