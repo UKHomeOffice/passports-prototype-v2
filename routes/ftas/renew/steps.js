@@ -147,6 +147,7 @@ module.exports = {
         nextAlt: './home-address-overseas'
     },
     '/parent-1-grandparents': {
+        controller: require('../../../controllers/validation-parent-1-grandparents'),
         fields: [
             'parent1-parent1-first-names',
             'parent1-parent1-last-name',
