@@ -150,10 +150,20 @@ module.exports = {
         fields: [
             'parent1-parent1-first-names',
             'parent1-parent1-last-name',
+            'parent1-parent1-town-of-birth',
+            'parent1-parent1-country-of-birth',
+            'parent1-parent1-age-day',
+            'parent1-parent1-age-month',
+            'parent1-parent1-age-year',
             'parent1-parent1-additional-information',
 
             'parent1-parent2-first-names',
             'parent1-parent2-last-name',
+            'parent1-parent2-town-of-birth',
+            'parent1-parent2-country-of-birth',
+            'parent1-parent2-age-day',
+            'parent1-parent2-age-month',
+            'parent1-parent2-age-year',
             'parent1-parent2-additional-information',
 
             'parent1-parents-married',
@@ -161,54 +171,32 @@ module.exports = {
             'parent1-parents-marriage-month',
             'parent1-parents-marriage-year'
         ],
-        next: '/parent-1-grandparents-details'
-    },
-    '/parent-1-grandparents-details': {
-        fields: [
-            'parent1-parent1-town-of-birth',
-            'parent1-parent1-country-of-birth',
-            'parent1-parent1-age-day',
-            'parent1-parent1-age-month',
-            'parent1-parent1-age-year',
-
-            'parent1-parent2-town-of-birth',
-            'parent1-parent2-country-of-birth',
-            'parent1-parent2-age-day',
-            'parent1-parent2-age-month',
-            'parent1-parent2-age-year'
-        ],
         next: '/parent-2-grandparents'
     },
     '/parent-2-grandparents': {
         fields: [
             'parent2-parent1-first-names',
             'parent2-parent1-last-name',
+            'parent2-parent1-town-of-birth',
+            'parent2-parent1-country-of-birth',
+            'parent2-parent1-age-day',
+            'parent2-parent1-age-month',
+            'parent2-parent1-age-year',
             'parent2-parent1-additional-information',
 
             'parent2-parent2-first-names',
             'parent2-parent2-last-name',
+            'parent2-parent2-town-of-birth',
+            'parent2-parent2-country-of-birth',
+            'parent2-parent2-age-day',
+            'parent2-parent2-age-month',
+            'parent2-parent2-age-year',
             'parent2-parent2-additional-information',
 
             'parent2-parents-married',
             'parent2-parents-marriage-day',
             'parent2-parents-marriage-month',
             'parent2-parents-marriage-year'
-        ],
-        next: '/parent-2-grandparents-details'
-    },
-    '/parent-2-grandparents-details': {
-        fields: [
-            'parent2-parent1-town-of-birth',
-            'parent2-parent1-country-of-birth',
-            'parent2-parent1-age-day',
-            'parent2-parent1-age-month',
-            'parent2-parent1-age-year',
-
-            'parent2-parent2-town-of-birth',
-            'parent2-parent2-country-of-birth',
-            'parent2-parent2-age-day',
-            'parent2-parent2-age-month',
-            'parent2-parent2-age-year'
         ],
         next: '/home-address'
     },
