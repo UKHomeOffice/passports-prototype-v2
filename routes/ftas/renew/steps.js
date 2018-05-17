@@ -156,6 +156,7 @@ module.exports = {
             'parent1-parent2-last-name',
             'parent1-parent2-additional-information',
 
+            'parent1-parents-married',
             'parent1-parents-marriage-day',
             'parent1-parents-marriage-month',
             'parent1-parents-marriage-year'
@@ -188,6 +189,7 @@ module.exports = {
             'parent2-parent2-last-name',
             'parent2-parent2-additional-information',
 
+            'parent2-parents-married',
             'parent2-parents-marriage-day',
             'parent2-parents-marriage-month',
             'parent2-parents-marriage-year'

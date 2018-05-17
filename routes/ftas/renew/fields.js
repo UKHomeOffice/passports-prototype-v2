@@ -601,7 +601,7 @@ module.exports = {
                 label: 'No'
             },
             {
-                value: 'I don’t know',
+                value: 'Unknown',
                 label: 'I don’t know'
             }
         ],
@@ -860,7 +860,7 @@ module.exports = {
                 label: 'No'
             },
             {
-                value: 'I don’t know',
+                value: 'Unknown',
                 label: 'I don’t know'
             }
         ],
