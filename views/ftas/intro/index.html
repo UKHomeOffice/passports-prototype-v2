@@ -1,58 +1,26 @@
 {{< layout}}
 
-{{$pageTitle}}Before you continue{{/pageTitle}}
+{{$pageTitle}}Getting your first UK passport{{/pageTitle}}
 
-{{$main-content}}
+{{$header}}
+<h1>Getting your first UK passport</h1>
+{{/header}}
+
+{{$content}}
 
 {{< hmpo-partials-form}}
 {{$form}}
 
-<div class="column-full">
-    <div class="flash-card">
+<p>Based on your answers, you're an adult applying for your first UK passport. If this is not correct, <a href="./filter">start again</a>.</p>
 
-        <header>
-            <h1>Before you continue</h1>
-        </header>
+<p>It should take around 6 weeks to get your new passport, but some applications may take longer.</p>
 
-        <div class="grid-row">
-            <div class="column-two-thirds">
-
-                {{#values.uncancelled}}
-                <h2>This should only show for dual nationals</h2>
-                <p>Make sure you return all of your passports</p>
-                {{/values.uncancelled}}
-
-                <h2>What it costs</h2>
-                <p>A standard passport costs £75.50 including secure delivery.</p>
-
-                <h2>What you'll need</h2>
-                <ul class="list-bullet">
-                    <li>a credit or debit card</li>
-
-                    {{#values.naturalisation-registration-certificate}}
-                        <li>your naturalisation or registration certificate</li>
-                    {{/values.naturalisation-registration-certificate}}
-
-                    {{^values.naturalisation-registration-certificate}}
-                        <li>your birth or adoption certificate</li>
-                    {{/values.naturalisation-registration-certificate}}
-                </ul>
-
-                <h2>How long it takes</h2>
-                <p>It should take around 6 weeks to get your new passport, but some applications may take longer.</p>
-                <br>
-
-                <a href="/ftas/intro/what-you-need" class="button">Continue</a>
-                <br>
-            </div>
-        </div>
-
-    </div>
-</div>
+<a href="/ftas/intro/what-you-need" class="button">Continue</a>
+<br>
 
 {{/form}}
 {{/ hmpo-partials-form}}
 
-{{/ main-content}}
+{{/ content}}
 
 {{/ layout}}
