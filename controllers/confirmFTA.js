@@ -5,7 +5,7 @@ var util = require('util'),
 var SessionForm = require('./form'),
   CostModel = require('../models/costs');
 
-var ConfirmForm = function(options) {
+var ConfirmForm = function (options) {
   SessionForm.call(this, options);
 };
 
@@ -22,8 +22,8 @@ function currency(cost) {
 }
 
 // find the path for the step containing a given field
-ConfirmForm.prototype.getEditStep = function(field) {
-  var step = _.find(Object.keys(this.options.steps), function(path) {
+ConfirmForm.prototype.getEditStep = function (field) {
+  var step = _.find(Object.keys(this.options.steps), function (path) {
     var s = this.options.steps[path];
     return s.fields && s.fields.indexOf(field) > -1;
   }, this);
@@ -33,8 +33,8 @@ ConfirmForm.prototype.getEditStep = function(field) {
   return step && (step + '/edit');
 };
 
-ConfirmForm.prototype.getValues = function(req, res, callback) {
-  SessionForm.prototype.getValues.call(this, req, res, function(err, values) {
+ConfirmForm.prototype.getValues = function (req, res, callback) {
+  SessionForm.prototype.getValues.call(this, req, res, function (err, values) {
     if (err) {
       callback(err);
     } else {
@@ -43,7 +43,7 @@ ConfirmForm.prototype.getValues = function(req, res, callback) {
   }.bind(this));
 };
 
-ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
+ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
   var model = new CostModel();
   model.set(values);
   var response = _.extend({}, values, {
@@ -84,7 +84,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
 
   // Naturalisation/Registration details
   var naturalisationRegistrationFields = [];
-  if (values['naturalisation-registration-certificate'] == true) { /* If applicant is naturalised or registered */
+  if (values['naturalisation-registration-certificate'] == true) { // If applicant is naturalised or registered
     response.sections.push({
       className: 'naturalisation-registration-details',
       title: 'Naturalisation or registration details',
@@ -102,11 +102,11 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
   }
 
   var newPassportFields = [];
-  var allPreviousNames = _.zip(values['previous-first-name'],values['previous-last-name']);
+  var allPreviousNames = _.zip(values['previous-first-name'], values['previous-last-name']);
   var previousNamesList = "";
   for (i = 0; i < allPreviousNames.length; i++) {
-  	previousNamesList += allPreviousNames[i].join(' ') + "<br>";
-	}
+    previousNamesList += allPreviousNames[i].join(' ') + "<br>";
+  }
 
   newPassportFields.push({
     step: this.getEditStep('name'),
@@ -197,8 +197,8 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
 
   // Parents
   var parentsFields = [];
-  // if (values['parent1-first-names']) { /* If parent 1 first name is NOT empty */
-  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
+  // if (values['parent1-first-names']) { // If parent 1 first name is NOT empty
+  if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
     response.sections.push({
       className: 'parents-details',
       title: 'Parents\' details',
@@ -225,8 +225,8 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
 
   // Parent 1
   var parent1Fields = [];
-  // if (values['parent1-first-names']) { /* If parent 1 first name is NOT empty */
-  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
+  // if (values['parent1-first-names']) { // If parent 1 first name is NOT empty
+  if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
     response.sections.push({
       className: 'parent1-details',
       title: 'Mother',
@@ -270,8 +270,8 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
 
   // Parent 2
   var parent2Fields = [];
-  // if (values['parent2-first-names']) { /* If parent 2 first name is NOT empty */
-  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
+  // if (values['parent2-first-names']) { // If parent 2 first name is NOT empty
+  if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
     response.sections.push({
       className: 'parent2-details',
       title: 'Father',
@@ -315,8 +315,8 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
 
   // Parent 1's parents
   var parent1ParentsFields = [];
-  // if (values['parent1-parent1-first-names']) { /* If parent 1's parent 1 first name is NOT empty */
-  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
+  // if (values['parent1-parent1-first-names']) { // If parent 1's parent 1 first name is NOT empty
+  if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
     response.sections.push({
       className: 'parent1-parents-details',
       title: 'Maternal grandparents',
@@ -343,8 +343,8 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
 
   // Parent 1's parent 1
   var parent1Parent1Fields = [];
-  // if (values['parent1-parent1-first-names']) { /* If parent 1's parent 1 first name is NOT empty */
-  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
+  // if (values['parent1-parent1-first-names']) { // If parent 1's parent 1 first name is NOT empty
+  if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
     response.sections.push({
       className: 'parent1-parent1-details',
       title: 'Maternal grandmother',
@@ -354,43 +354,43 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     var parent1Parent1DateOfBirth = moment(values['parent1-parent1-age-year'] + '-' + values['parent1-parent1-age-month'] + '-' + values['parent1-parent1-age-day'], 'YYYY-MM-DD');
 
     parent1Parent1Fields.push({
-      step: this.getEditStep('parent1-parent1-town-of-birth'),
-      title: 'Town of birth',
-      value: values['parent1-parent1-town-of-birth']
-    }, {
-      step: this.getEditStep('parent1-parent1-country-of-birth'),
-      title: 'Country of birth',
-      value: values['parent1-parent1-country-of-birth']
-    }, {
-      step: this.getEditStep('parent1-parent1-age-year'),
-      title: 'Date of birth',
-      value: parent1Parent1DateOfBirth.isValid() ? parent1Parent1DateOfBirth.format('D MMMM YYYY') : ''
-    },
-    // {
-    //   step: this.getEditStep('parent-1-parent-1-details'),
-    //   title: 'Country of nationality',
-    //   value: values['parent1-parent1-country-of-nationality']
-    // }, {
-    //   step: this.getEditStep('parent-1-parent-1-details'),
-    //   title: 'UK passport number',
-    //   value: values['parent1-parent1-passport-number']
-    // }, {
-    //   step: this.getEditStep('parent-1-parent-1-details'),
-    //   title: 'Date of issue',
-    //   value: moment(values['parent1-parent1-passport-issue-year'] + '-' + values['parent1-parent1-passport-issue-month'] + '-' + values['parent1-parent1-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
-    // },
-    {
-      step: this.getEditStep('parent1-parent1-additional-information'),
-      title: 'Additional information',
-      value: values['parent1-parent1-additional-information']
-    });
+        step: this.getEditStep('parent1-parent1-town-of-birth'),
+        title: 'Town of birth',
+        value: values['parent1-parent1-town-of-birth']
+      }, {
+        step: this.getEditStep('parent1-parent1-country-of-birth'),
+        title: 'Country of birth',
+        value: values['parent1-parent1-country-of-birth']
+      }, {
+        step: this.getEditStep('parent1-parent1-age-year'),
+        title: 'Date of birth',
+        value: parent1Parent1DateOfBirth.isValid() ? parent1Parent1DateOfBirth.format('D MMMM YYYY') : ''
+      },
+      // {
+      //   step: this.getEditStep('parent-1-parent-1-details'),
+      //   title: 'Country of nationality',
+      //   value: values['parent1-parent1-country-of-nationality']
+      // }, {
+      //   step: this.getEditStep('parent-1-parent-1-details'),
+      //   title: 'UK passport number',
+      //   value: values['parent1-parent1-passport-number']
+      // }, {
+      //   step: this.getEditStep('parent-1-parent-1-details'),
+      //   title: 'Date of issue',
+      //   value: moment(values['parent1-parent1-passport-issue-year'] + '-' + values['parent1-parent1-passport-issue-month'] + '-' + values['parent1-parent1-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+      // },
+      {
+        step: this.getEditStep('parent1-parent1-additional-information'),
+        title: 'Additional information',
+        value: values['parent1-parent1-additional-information']
+      });
   }
   // }
 
   // Parent 1's parent 2
   var parent1Parent2Fields = [];
-  // if (values['parent1-parent2-first-names']) { /* If parent 1's parent 2 first name is NOT empty */
-  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
+  // if (values['parent1-parent2-first-names']) { // If parent 1's parent 2 first name is NOT empty
+  if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
     response.sections.push({
       className: 'parent1-parent2-details',
       title: 'Maternal grandfather',
@@ -400,43 +400,43 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     var parent1Parent2DateOfBirth = moment(values['parent1-parent2-age-year'] + '-' + values['parent1-parent2-age-month'] + '-' + values['parent1-parent2-age-day'], 'YYYY-MM-DD');
 
     parent1Parent2Fields.push({
-      step: this.getEditStep('parent1-parent2-town-of-birth'),
-      title: 'Town of birth',
-      value: values['parent1-parent2-town-of-birth']
-    }, {
-      step: this.getEditStep('parent1-parent2-country-of-birth'),
-      title: 'Country of birth',
-      value: values['parent1-parent2-country-of-birth']
-    }, {
-      step: this.getEditStep('parent1-parent2-age-year'),
-      title: 'Date of birth',
-      value: parent1Parent2DateOfBirth.isValid() ? parent1Parent2DateOfBirth.format('D MMMM YYYY') : ''
-    },
-    // {
-    //   step: this.getEditStep('parent-1-parent-2-details'),
-    //   title: 'Country of nationality',
-    //   value: values['parent1-parent2-country-of-nationality']
-    // }, {
-    //   step: this.getEditStep('parent-1-parent-2-details'),
-    //   title: 'UK passport number',
-    //   value: values['parent1-parent2-passport-number']
-    // }, {
-    //   step: this.getEditStep('parent-1-parent-2-details'),
-    //   title: 'Date of issue',
-    //   value: moment(values['parent1-parent2-passport-issue-year'] + '-' + values['parent1-parent2-passport-issue-month'] + '-' + values['parent1-parent2-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
-    // },
-    {
-      step: this.getEditStep('parent1-parent2-additional-information'),
-      title: 'Additional information',
-      value: values['parent1-parent2-additional-information']
-    });
+        step: this.getEditStep('parent1-parent2-town-of-birth'),
+        title: 'Town of birth',
+        value: values['parent1-parent2-town-of-birth']
+      }, {
+        step: this.getEditStep('parent1-parent2-country-of-birth'),
+        title: 'Country of birth',
+        value: values['parent1-parent2-country-of-birth']
+      }, {
+        step: this.getEditStep('parent1-parent2-age-year'),
+        title: 'Date of birth',
+        value: parent1Parent2DateOfBirth.isValid() ? parent1Parent2DateOfBirth.format('D MMMM YYYY') : ''
+      },
+      // {
+      //   step: this.getEditStep('parent-1-parent-2-details'),
+      //   title: 'Country of nationality',
+      //   value: values['parent1-parent2-country-of-nationality']
+      // }, {
+      //   step: this.getEditStep('parent-1-parent-2-details'),
+      //   title: 'UK passport number',
+      //   value: values['parent1-parent2-passport-number']
+      // }, {
+      //   step: this.getEditStep('parent-1-parent-2-details'),
+      //   title: 'Date of issue',
+      //   value: moment(values['parent1-parent2-passport-issue-year'] + '-' + values['parent1-parent2-passport-issue-month'] + '-' + values['parent1-parent2-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+      // },
+      {
+        step: this.getEditStep('parent1-parent2-additional-information'),
+        title: 'Additional information',
+        value: values['parent1-parent2-additional-information']
+      });
   }
   // }
 
   // Parent 2's parents
   var parent2ParentsFields = [];
-  // if (values['parent2-parent1-first-names']) { /* If parent 2's parent 1 first name is NOT empty */
-  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
+  // if (values['parent2-parent1-first-names']) { // If parent 2's parent 1 first name is NOT empty
+  if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
     response.sections.push({
       className: 'parent2-parents-details',
       title: 'Paternal grandparents',
@@ -463,8 +463,8 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
 
   // Parent 2's parent 1
   var parent2Parent1Fields = [];
-  // if (values['parent2-parent1-first-names']) { /* If parent 2's parent 1 first name is NOT empty */
-  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
+  // if (values['parent2-parent1-first-names']) { // If parent 2's parent 1 first name is NOT empty
+  if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
     response.sections.push({
       className: 'parent2-parent1-details',
       title: 'Paternal grandmother',
@@ -474,43 +474,43 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     var parent2Parent1DateOfBirth = moment(values['parent2-parent1-age-year'] + '-' + values['parent2-parent1-age-month'] + '-' + values['parent2-parent1-age-day'], 'YYYY-MM-DD');
 
     parent2Parent1Fields.push({
-      step: this.getEditStep('parent2-parent1-town-of-birth'),
-      title: 'Town of birth',
-      value: values['parent2-parent1-town-of-birth']
-    }, {
-      step: this.getEditStep('parent2-parent1-country-of-birth'),
-      title: 'Country of birth',
-      value: values['parent2-parent1-country-of-birth']
-    }, {
-      step: this.getEditStep('parent2-parent1-age-year'),
-      title: 'Date of birth',
-      value: parent2Parent1DateOfBirth.isValid() ? parent2Parent1DateOfBirth.format('D MMMM YYYY') : ''
-    },
-    // {
-    //   step: this.getEditStep('parent-2-parent-1-details'),
-    //   title: 'Country of nationality',
-    //   value: values['parent2-parent1-country-of-nationality']
-    // }, {
-    //   step: this.getEditStep('parent-2-parent-1-details'),
-    //   title: 'UK passport number',
-    //   value: values['parent2-parent1-passport-number']
-    // }, {
-    //   step: this.getEditStep('parent-2-parent-1-details'),
-    //   title: 'Date of issue',
-    //   value: moment(values['parent2-parent1-passport-issue-year'] + '-' + values['parent2-parent1-passport-issue-month'] + '-' + values['parent2-parent1-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
-    // },
-    {
-      step: this.getEditStep('parent2-parent1-additional-information'),
-      title: 'Additional information',
-      value: values['parent2-parent1-additional-information']
-    });
+        step: this.getEditStep('parent2-parent1-town-of-birth'),
+        title: 'Town of birth',
+        value: values['parent2-parent1-town-of-birth']
+      }, {
+        step: this.getEditStep('parent2-parent1-country-of-birth'),
+        title: 'Country of birth',
+        value: values['parent2-parent1-country-of-birth']
+      }, {
+        step: this.getEditStep('parent2-parent1-age-year'),
+        title: 'Date of birth',
+        value: parent2Parent1DateOfBirth.isValid() ? parent2Parent1DateOfBirth.format('D MMMM YYYY') : ''
+      },
+      // {
+      //   step: this.getEditStep('parent-2-parent-1-details'),
+      //   title: 'Country of nationality',
+      //   value: values['parent2-parent1-country-of-nationality']
+      // }, {
+      //   step: this.getEditStep('parent-2-parent-1-details'),
+      //   title: 'UK passport number',
+      //   value: values['parent2-parent1-passport-number']
+      // }, {
+      //   step: this.getEditStep('parent-2-parent-1-details'),
+      //   title: 'Date of issue',
+      //   value: moment(values['parent2-parent1-passport-issue-year'] + '-' + values['parent2-parent1-passport-issue-month'] + '-' + values['parent2-parent1-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+      // },
+      {
+        step: this.getEditStep('parent2-parent1-additional-information'),
+        title: 'Additional information',
+        value: values['parent2-parent1-additional-information']
+      });
   }
   // }
 
   // Parent 2's parent 2
   var parent2Parent2Fields = [];
-  // if (values['parent2-parent2-first-names']) { /* If parent 2's parent 2 first name is NOT empty */
-  if (values['naturalisation-registration-certificate'] == false) { /* If applicant is NOT naturalised or registered */
+  // if (values['parent2-parent2-first-names']) { // If parent 2's parent 2 first name is NOT empty
+  if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
     response.sections.push({
       className: 'parent2-parent2-details',
       title: 'Paternal grandfather',
@@ -519,41 +519,41 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
 
     var parent2Parent2DateOfBirth = moment(values['parent2-parent2-age-year'] + '-' + values['parent2-parent2-age-month'] + '-' + values['parent2-parent2-age-day'], 'YYYY-MM-DD');
 
-    
+
     parent2Parent2Fields.push({
-      step: this.getEditStep('parent2-parent2-town-of-birth'),
-      title: 'Town of birth',
-      value: values['parent2-parent2-town-of-birth']
-    }, {
-      step: this.getEditStep('parent2-parent2-country-of-birth'),
-      title: 'Country of birth',
-      value: values['parent2-parent2-country-of-birth']
-    }, {
-      step: this.getEditStep('parent2-parent2-age-year'),
-      title: 'Date of birth',
-      value: parent2Parent2DateOfBirth.isValid() ? parent2Parent2DateOfBirth.format('D MMMM YYYY') : ''
-    },
-    // {
-    //   step: this.getEditStep('parent-2-parent-2-details'),
-    //   title: 'Country of nationality',
-    //   value: values['parent2-parent2-country-of-nationality']
-    // }, {
-    //   step: this.getEditStep('parent-2-parent-2-details'),
-    //   title: 'UK passport number',
-    //   value: values['parent2-parent2-passport-number']
-    // }, {
-    //   step: this.getEditStep('parent-2-parent-2-details'),
-    //   title: 'Date of issue',
-    //   value: moment(values['parent2-parent2-passport-issue-year'] + '-' + values['parent2-parent2-passport-issue-month'] + '-' + values['parent2-parent2-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
-    // },
-    {
-      step: this.getEditStep('parent2-parent2-additional-information'),
-      title: 'Additional information',
-      value: values['parent2-parent2-additional-information']
-    });
+        step: this.getEditStep('parent2-parent2-town-of-birth'),
+        title: 'Town of birth',
+        value: values['parent2-parent2-town-of-birth']
+      }, {
+        step: this.getEditStep('parent2-parent2-country-of-birth'),
+        title: 'Country of birth',
+        value: values['parent2-parent2-country-of-birth']
+      }, {
+        step: this.getEditStep('parent2-parent2-age-year'),
+        title: 'Date of birth',
+        value: parent2Parent2DateOfBirth.isValid() ? parent2Parent2DateOfBirth.format('D MMMM YYYY') : ''
+      },
+      // {
+      //   step: this.getEditStep('parent-2-parent-2-details'),
+      //   title: 'Country of nationality',
+      //   value: values['parent2-parent2-country-of-nationality']
+      // }, {
+      //   step: this.getEditStep('parent-2-parent-2-details'),
+      //   title: 'UK passport number',
+      //   value: values['parent2-parent2-passport-number']
+      // }, {
+      //   step: this.getEditStep('parent-2-parent-2-details'),
+      //   title: 'Date of issue',
+      //   value: moment(values['parent2-parent2-passport-issue-year'] + '-' + values['parent2-parent2-passport-issue-month'] + '-' + values['parent2-parent2-passport-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+      // },
+      {
+        step: this.getEditStep('parent2-parent2-additional-information'),
+        title: 'Additional information',
+        value: values['parent2-parent2-additional-information']
+      });
   }
   // }
-  
+
 
   response.sections.push({
     className: 'application-details',
@@ -571,7 +571,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       {
         step: this.getEditStep('braille'),
         title: 'Braille',
-        value: function() {
+        value: function () {
           var output = [];
           output.push(values['braille'] ? 'You require a braille sticker' : 'You don’t require a braille sticker');
           return output.join('<br><br>');
@@ -645,6 +645,6 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
     ]
   });
   callback(null, response);
-  };
+};
 
 module.exports = ConfirmForm;

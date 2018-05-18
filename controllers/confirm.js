@@ -196,7 +196,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
 
   // Parents
   var parentsFields = [];
-  // if (values['parent1-first-names']) { /* If parent 1 first name is NOT empty */
+  // if (values['parent1-first-names']) { // If parent 1 first name is NOT empty
   if (values['16-or-older'] == false) {
     response.sections.push({
       className: 'parents-details',
@@ -224,7 +224,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
 
   // Parent 1
   var parent1Fields = [];
-  // if (values['parent1-first-names']) { /* If parent 1 first name is NOT empty */
+  // if (values['parent1-first-names']) { // If parent 1 first name is NOT empty
   if (values['16-or-older'] == false) {
     response.sections.push({
       className: 'parent1-details',
@@ -265,7 +265,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
 
   // Parent 2
   var parent2Fields = [];
-  // if (values['parent2-first-names']) { /* If parent 2 first name is NOT empty */
+  // if (values['parent2-first-names']) { // If parent 2 first name is NOT empty
 if (values['16-or-older'] == false) {
     response.sections.push({
       className: 'parent2-details',
