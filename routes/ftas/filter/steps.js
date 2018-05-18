@@ -163,6 +163,9 @@ module.exports = {
         }]
     },
     '/dual-national': {
+        fields: [
+            'dual-nationality'
+        ],
         next: '/../intro'
     },
     '/passport-damaged': {

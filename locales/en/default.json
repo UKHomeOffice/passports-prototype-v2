@@ -555,6 +555,9 @@
         "16-or-older": {
             "required": "You must answer this question."
         },
+        "dual-nationality": {
+            "required": "You must answer this question."
+        },
         "applicant-check": {
             "required": "Is this Susan Smith?"
         },
