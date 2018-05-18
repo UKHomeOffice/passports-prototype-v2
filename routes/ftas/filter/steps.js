@@ -163,7 +163,6 @@ module.exports = {
         }]
     },
     '/dual-national': {
-        backLink: '../filter/passport-expiry',
         next: '/../intro'
     },
     '/passport-damaged': {

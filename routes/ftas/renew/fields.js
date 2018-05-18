@@ -249,10 +249,10 @@ module.exports = {
         labelClassName: 'visuallyhidden',
         legend: {
             className: 'visuallyhidden'
-        }
-        // validate: [
-        //   'required'
-        // ]
+        },
+        validate: [
+          'required'
+        ]
     },
     'born-in-uk': {
         formatter: 'boolean',

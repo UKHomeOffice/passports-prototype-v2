@@ -86,9 +86,6 @@
         "country-code": {
             "value": "Country code"
         },
-        "country-code": {
-            "value": "Country code"
-        },
         "mobile": {
             "label": "Mobile or home phone"
         },
@@ -546,6 +543,18 @@
         "apply-uk": {
             "required": "Please tell us if you're applying from the UK"
         },
+        "application-for": {
+            "required": "You must answer this question."
+        },
+        "passport-before": {
+            "required": "Please tell us if you're applying from the UK"
+        },
+        "lost-stolen": {
+            "required": "You must answer this question."
+        },
+        "16-or-older": {
+            "required": "You must answer this question."
+        },
         "applicant-check": {
             "required": "Is this Susan Smith?"
         },
@@ -570,8 +579,17 @@
         "passport-number": {
             "required": "You must answer this question - passport number"
         },
-        "town-birth": {
-            "required": "You must answer this question - town birth"
+        "change-name": {
+            "required": "You must answer this question."
+        },
+        "gender": {
+            "required": "You must answer this question."
+        },
+        "born-in-uk": {
+            "required": "You must answer this question."
+        },
+        "town-of-birth": {
+            "required": "You must answer this question."
         },
         "email": {
             "required": "Enter your email address."
@@ -611,6 +629,12 @@
         },
         "parent2-parent2-additional-information": {
             "required": "Explain why you can't provide details for paternal grandfather."
+        },
+        "can-sign": {
+            "required": "You must answer this question."
+        },
+        "secure-return": {
+            "required": "You must answer this question."
         },
         "email": "You must enter a valid email",
         "exactlength": "{{label}} must be 9 characters",

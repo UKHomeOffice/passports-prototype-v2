@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-        backLink: '/../ftas/filter/uncancelled',
+        backLink: '/../ftas/filter/dual-national',
         next: '/how-to-apply'
     },
     '/before-you-continue-overseas': {
