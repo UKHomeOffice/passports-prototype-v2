@@ -225,6 +225,7 @@ module.exports = {
   },
   'relationship': {
       labelClassName: 'visuallyhidden',
+      className: 'form-control-3-4'
   },
   'retired': {
       legend: {
