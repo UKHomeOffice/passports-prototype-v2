@@ -1,14 +1,17 @@
 module.exports = {
     '/': {
         backLink: '/../ftas/filter/uncancelled',
-        next: '/what-you-need'
+        next: '/how-to-apply'
     },
     '/before-you-continue-overseas': {
         backLink: '/../ftas/overseas/give-contact-details',
         next: '/what-you-need-overseas'
     },
-    '/what-you-need': {
+    '/how-to-apply': {
       backLink: './',
+      next: '/what-you-need'
+    },
+    '/what-you-need': {
       next: '/photo-retrieved'
     },
     '/you-need-a-photo': {
