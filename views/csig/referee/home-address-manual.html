@@ -9,7 +9,12 @@
 {{$content}}
 
 <fieldset>
-
+  <div id="address-town-group" class="form-group">
+    <label for="address-town" class="form-label-bold">
+        Flat number or name
+    </label>
+    <input type="text" name="address-town" id="address-town" class="form-control" aria-required="true" maxlength="30">
+  </div>
   <div id="address-town-group" class="form-group">
     <label for="address-town" class="form-label-bold">
         House name
@@ -22,12 +27,7 @@
     </label>
     <input type="text" name="address-postcode" class="form-control input-code" aria-required="true">
   </div>
-  <div id="address-town-group" class="form-group">
-    <label for="address-town" class="form-label-bold">
-        Flat number or name
-    </label>
-    <input type="text" name="address-town" id="address-town" class="form-control" aria-required="true" maxlength="30">
-  </div>
+
   <div id="address-line-1-group" class="form-group ">
     <label for="address-line-1" class="form-label-bold">
         Street
