@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Passport journeys",
   "engines": {
-    "node": "6.11.0",
+    "node": "8",
     "npm": "5.3.0"
   },
   "main": "app.js",
