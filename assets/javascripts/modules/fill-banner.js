@@ -76,10 +76,10 @@
         "parent2-age-day": "27",
         "parent2-age-month": "08",
         "parent2-age-year": "1963",
-        "parent2-passport-number": "305135221",
-        "parent2-passport-issue-day": "19",
-        "parent2-passport-issue-month": "01",
-        "parent2-passport-issue-year": "2008",
+        // "parent2-passport-number": "305135221",
+        // "parent2-passport-issue-day": "19",
+        // "parent2-passport-issue-month": "01",
+        // "parent2-passport-issue-year": "2008",
 
 
         //   Maternal grandparents
@@ -101,31 +101,11 @@
         "parent1-parent2-age-day": "21",
         "parent1-parent2-age-month": "03",
         "parent1-parent2-age-year": "1922",
-        //   "parent1-parents-marriage-day": "22",
-        //   "parent1-parents-marriage-month": "07",
-        //   "parent1-parents-marriage-year": "1941",
 
 
         //   Paternal grandparents
-        "parent2-parent1-first-names": "Victoria",
-        "parent2-parent1-last-name": "Winkletrousen",
-        "parent2-parent2-first-names": "Daniel",
-        "parent2-parent2-last-name": "Winkletrousen",
-
-        "parent2-parent1-town-of-birth": "Bournemouth",
-        "parent2-parent1-country-of-birth": "United Kingdom",
-        "parent2-parent1-age-day": "17",
-        "parent2-parent1-age-month": "11",
-        "parent2-parent1-age-year": "1921",
-
-        "parent2-parent2-town-of-birth": "Norwich",
-        "parent2-parent2-country-of-birth": "United Kingdom",
-        "parent2-parent2-age-day": "27",
-        "parent2-parent2-age-month": "08",
-        "parent2-parent2-age-year": "1922",
-        //   "parent2-parents-marriage-day": "22",
-        //   "parent2-parents-marriage-month": "07",
-        //   "parent2-parents-marriage-year": "1941",
+        "parent2-parent1-additional-information": "My father died when I was a child. I have never known my grandparents from his side of the family.",
+        "parent2-parent2-additional-information": "My father died when I was a child. I have never known my grandparents from his side of the family."
     };
 
     $("#populate").on("click", function () {
@@ -159,16 +139,14 @@
 
         // FTAs
         $('#naturalisation-registration-certificate-false').click();
+        $('#parents-married-Yes').click();
+        $('#parent1-parents-married-Unknown').click();
+        $('#parent2-parents-married-Unknown').click();
 
         //change name
         $('#change-name-false').click();
         $('#change-of-name-reason-Marriage-or-civil-partnership').click();
         $('#16-or-older-false').click();
-
-        // Marriage
-        $('#parents-married-Yes').click();
-        $('#parent1-parents-married-Unknown').click();
-        $('#parent2-parents-married-Unknown').click();
 
         //csig
         $('#applicant-check-home-address-Yes').click();
