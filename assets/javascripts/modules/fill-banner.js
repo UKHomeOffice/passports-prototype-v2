@@ -32,7 +32,7 @@
         "naturalisation-registration-certificate-issue-day": "28",
         "naturalisation-registration-certificate-issue-month": "04",
         "naturalisation-registration-certificate-issue-year": "2018",
-        
+
         "address1": "10 Liono Street",
         "postcode": "SE1 1QW",
         "email": "c.moore@test-corp.co.uk",
@@ -142,6 +142,7 @@
         $('#uncancelled-No').click();
         $('#relationship-applicant-Mother').click();
         $('#passport-damaged-No').click();
+        $('#dual-nationality-false').click();
         $('#choose-photo-upload').click();
         $('#plain-expression-Yes').click();
         $('#shadows-face-Yes').click();
@@ -164,7 +165,10 @@
         $('#change-of-name-reason-Marriage-or-civil-partnership').click();
         $('#16-or-older-false').click();
 
+        // Marriage
         $('#parents-married-Yes').click();
+        $('#parent1-parents-married-Unknown').click();
+        $('#parent2-parents-married-Unknown').click();
 
         //csig
         $('#applicant-check-home-address-Yes').click();
@@ -177,7 +181,5 @@
         $('#retired-check-No').click();
         $('#knowntime').val('2');
         $('.button')[0].click();
-
     });
-
 })();
