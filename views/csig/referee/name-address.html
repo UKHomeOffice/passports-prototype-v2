@@ -11,20 +11,17 @@
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-    <p>You need to enter your name as written on your passport.</p>
       <fieldset>
         <legend><span class="form-label-bold">First name</span></legend>
-        <!-- <p class="form-hint" id="dob-hint">As written on your passport</p> -->
         {{#input-text}}name{{/input-text}}
       </fieldset>
       <fieldset>
         <legend><span class="form-label-bold">Middle names</span></legend>
-        <!-- <p class="form-hint" id="dob-hint">As written on your passport</p> -->
         {{#input-text}}middlename{{/input-text}}
       </fieldset>
       <fieldset>
         <legend><span class="form-label-bold">Last name</span></legend>
-        <!-- <p class="form-hint" id="dob-hint">As written on your passport</p> -->
+        <p class="form-hint" id="dob-hint">As written on your passport</p>
         {{#input-text}}lastname{{/input-text}}
       </fieldset>
       <div id="address-postcode-group" class="form-group">
