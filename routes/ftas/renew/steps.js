@@ -53,15 +53,12 @@ module.exports = {
         fields: [
             'gender'
         ],
-        next: '/date-and-place-birth'
+        next: '/place-of-birth'
     },
-    '/date-and-place-birth': {
+    '/place-of-birth': {
         next: '/naturalisation-registration-details',
         // next: '/parents',
         fields: [
-            'age-day',
-            'age-month',
-            'age-year',
             'born-in-uk',
             'town-of-birth',
             'country-of-birth'
