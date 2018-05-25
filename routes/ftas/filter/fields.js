@@ -142,13 +142,15 @@ module.exports = {
             value: 'Have you had a passport before?',
             className: 'visuallyhidden'
         },
-        options: [{
+        options: [
+            {
                 value: true,
                 label: 'Yes'
             },
             {
                 value: false,
-                label: 'No'
+                label: 'No',
+                // toggle: 'passport-before-no'
             }
         ],
         formatter: ['boolean'],
