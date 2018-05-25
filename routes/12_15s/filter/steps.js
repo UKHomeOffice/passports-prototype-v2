@@ -15,11 +15,17 @@ module.exports = {
     },
     '/who-for':{
       fields: ['application-for'],
-      next: '/first-uk',
+      next: '/dob',
       backLink: './apply-uk'
     },
+    '/dob': {
+      fields: ['age-day', 'age-year', 'age-month'],
+      backLink: './who-for',
+      next: '/first-uk',
+      controller: require('../../../controllers/check-dob')
+    },
     '/first-uk': {
-        backLink: './',
+        backLink: './dob',
         fields: ['passport-before'],
         next: '/lost-stolen'
     },
@@ -53,24 +59,19 @@ module.exports = {
       nextAlt: '../overseas', /* if they are from Germany/France */
       nextAltAlt:'../overseas-not-eligible', /* if they are from Afganistan */
     },
-    '/dob': {
-      fields: ['16-or-older'],
-      controller: require('../../../controllers/go-overseas'),
-      backLink: './lost-stolen',
-      next: '/passport-expiry', /* if they are from the UK */
-      forks: [{
-        target: '/dob-below-16',
-        condition: {
-          field: '16-or-older',
-          value: false
-        }
-      }],
-    },
-    '/dob-below-16': {
-      fields: ['age-day', 'age-year', 'age-month'],
-      backLink: './dob',
-      next: '/passport-expiry'
-    },
+    // '/dob': {
+    //   fields: ['16-or-older'],
+    //   controller: require('../../../controllers/go-overseas'),
+    //   backLink: './lost-stolen',
+    //   next: '/passport-expiry', /* if they are from the UK */
+    //   forks: [{
+    //     target: '/dob-below-16',
+    //     condition: {
+    //       field: '16-or-older',
+    //       value: false
+    //     }
+    //   }],
+    // },
     '/passport-expiry': {
       fields: ['issue-day', 'issue-year', 'issue-month'],
       backLink: '../filter/dob',
