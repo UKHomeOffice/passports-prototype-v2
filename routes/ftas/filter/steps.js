@@ -6,7 +6,7 @@ module.exports = {
         ],
         controller: require('../../../controllers/go-overseas'),
         backLink: './',
-        next: '/apply-uk',
+        next: '/first-uk',
         /* if Yes is selected */
         nextAlt: 'what-do-you-want-to-do-overseas',
         /* if they are from Germany/France */
