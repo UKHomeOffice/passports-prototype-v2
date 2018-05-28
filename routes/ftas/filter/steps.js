@@ -4,7 +4,8 @@ module.exports = {
             'apply-uk',
             'application-country'
         ],
-        controller: require('../../../controllers/go-overseas'),
+        controller: require('../../../controllers/init'), // Initialise
+        // controller: require('../../../controllers/go-overseas'),
         backLink: './',
         next: '/first-uk',
         /* if Yes is selected */
