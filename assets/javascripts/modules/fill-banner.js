@@ -114,9 +114,9 @@
         });
 
         //filter questions
-        $('#application-for-false').click();
+        $('#application-for-true').click();
         $('#apply-uk-true').click();
-        $('#passport-before-true').click();
+        $('#passport-before-false').click();
         $('#lost-stolen-false').click();
         $('#name-changed-false').click();
         $('#uncancelled-No').click();
