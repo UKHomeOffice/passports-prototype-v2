@@ -46,7 +46,7 @@
         "third-party-last-name": "Singleton",
 
 
-        //   Parents
+        // Parents
         "parent1-first-names": "Victoria",
         "parent1-last-name": "Winkletrousen",
         "parent2-first-names": "Daniel",
@@ -56,7 +56,7 @@
         "marriage-year": "1978",
 
 
-        //   Mother
+        // Mother
         "parent1-town-of-birth": "Bournemouth",
         "parent1-country-of-birth": "United Kingdom",
         "parent1-country-of-nationality": "United Kingdom",
@@ -69,7 +69,7 @@
         "parent1-passport-issue-year": "2007",
 
 
-        //   Father
+        // Father
         "parent2-town-of-birth": "Norwich",
         "parent2-country-of-birth": "United Kingdom",
         "parent2-country-of-nationality": "United Kingdom",
@@ -82,7 +82,7 @@
         // "parent2-passport-issue-year": "2008",
 
 
-        //   Maternal grandparents
+        // Maternal grandparents
         "parent1-parent1-first-names": "Victoria",
         "parent1-parent1-last-name": "Winkletrousen",
         "parent1-parent2-first-names": "Daniel",
@@ -103,7 +103,7 @@
         "parent1-parent2-age-year": "1922",
 
 
-        //   Paternal grandparents
+        // Paternal grandparents
         "parent2-parent1-additional-information": "My father died when I was a child. I have never known my grandparents from his side of the family.",
         "parent2-parent2-additional-information": "My father died when I was a child. I have never known my grandparents from his side of the family."
     };
@@ -113,7 +113,7 @@
             $("#" + key).val(values[key]);
         });
 
-        //filter questions
+        // Filter questions
         $('#application-for-true').click();
         $('#apply-uk-true').click();
         $('#passport-before-false').click();
@@ -143,12 +143,12 @@
         $('#parent1-parents-married-Unknown').click();
         $('#parent2-parents-married-Unknown').click();
 
-        //change name
+        // Change name
         $('#change-name-false').click();
         $('#change-of-name-reason-Marriage-or-civil-partnership').click();
         $('#16-or-older-false').click();
 
-        //csig
+        // CSIG
         $('#applicant-check-home-address-Yes').click();
         $('#applicant-check-names-Yes').click();
 
