@@ -31,7 +31,7 @@ module.exports = {
     },
     '/lost-stolen': {
         fields: ['lost-stolen'],
-        next: '/dob'
+        next: '/passport-expiry'
     },
     '/what-do-you-want-to-do': {
         fields: ['what-to-do'],
