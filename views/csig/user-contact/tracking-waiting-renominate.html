@@ -8,10 +8,12 @@
     {{$form}}
     <header class="update-notice">
           <h1>Email sent</h1>
-          <p><strong>{{values.csig-email}}</strong></p>
-          <p>We'll let you know when your identity has been confirmed.</p>
+          <p>Sent to <strong>{{values.csig-email}}</strong></p>
     </header>
-    <!-- <h2>Application history</h2>
+    <h2>What happens next</h2>
+    <p>You&rsquo;ll get an email when your identity has been confirmed. If you don&rsquo;t get an update in the next few days, remind the person confirming your identity.</p>
+
+    <h2>Application history</h2>
     <article>
 
       <table>
@@ -42,8 +44,12 @@
              <td>10:03am on 19 February 2018</td>
            </tr>
          </tbody>
-       </table> -->
-      <a class="button" href="/csig/user-renominate/renominate-complete">Continue</a><br>
+       </table>
+
+
+    </article>
+      <br/>
+      <a href="http://www.gov.uk">Sign out</a><br>
       {{/form}}
       {{/ hmpo-partials-form}}
 
