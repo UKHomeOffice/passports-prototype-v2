@@ -44,7 +44,7 @@ module.exports = {
     },
     '/applicant-photo-fail': {
       backLink: './confirm-applicant',
-      next: '/confirm-applicant-address'
+      next: '/csig-details-work'
     },
     '/confirm-applicant-address': {
         fields: ['applicant-check-home-address'],

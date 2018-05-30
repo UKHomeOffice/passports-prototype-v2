@@ -8,54 +8,62 @@
 
 {{$content}}
 
-
-            <fieldset>
-                <legend class="visually-hidden">Home address</legend>
-                <div id="address-line-1-group" class="form-group form-group-compound">
-    <label for="address-line-1" class="form-label-bold">
-        Address<span class="visuallyhidden"> line 1</span>
-
-  
-    </label>
-    <input type="text" name="address-line-1" id="address-line-1" class="form-control form-control-3-4" aria-required="true"  maxlength="40"></div>
-
-                <div id="address-line-2-group" class="form-group form-group-compound">
-    <label for="address-line-2" class="visually-hidden">
-        Address line 2
-
-
-    </label>
-    <input type="text" name="address-line-2" id="address-line-2" class="form-control form-control-3-4" aria-required="false" maxlength="40"></div>
-
-
-<br>
-
-                <div id="address-town-group" class="form-group">
+<fieldset>
+  <div id="address-town-group" class="form-group">
     <label for="address-town" class="form-label-bold">
-        Town or city
-
-
+        Flat number or name
     </label>
-    <input type="text" name="address-town" id="address-town" class="form-control" aria-required="true" maxlength="30"></div>
+    <input type="text" name="address-town" id="address-town" class="form-control" aria-required="true" maxlength="30">
+  </div>
+  <div id="address-town-group" class="form-group">
+    <label for="address-town" class="form-label-bold">
+        House name
+    </label>
+    <input type="text" name="address-town" id="address-town" class="form-control" aria-required="true" maxlength="30">
+  </div>
+  <div id="address-postcode-group" class="form-group">
+    <label for="address-postcode" class="form-label-bold">
+        House number
+    </label>
+    <input type="text" name="address-postcode" class="form-control input-code" aria-required="true">
+  </div>
 
-                    <div id="address-postcode-group" class="form-group">
+  <div id="address-line-1-group" class="form-group ">
+    <label for="address-line-1" class="form-label-bold">
+        Street
+    </label>
+    <input type="text" name="address-line-1" id="address-line-1" class="form-control form-control-3-4" aria-required="true" maxlength="40">
+  </div>
+  <div id="address-line-1-group" class="form-group ">
+    <label for="address-line-1" class="form-label-bold">
+        District
+    </label>
+    <input type="text" name="address-line-1" id="address-line-1" class="form-control form-control-3-4" aria-required="true" maxlength="40">
+  </div>
+  <div id="address-line-1-group" class="form-group ">
+    <label for="address-line-1" class="form-label-bold">
+        Town
+    </label>
+    <input type="text" name="address-line-1" id="address-line-1" class="form-control form-control-3-4" aria-required="true" maxlength="40">
+  </div>
+  <!-- <div id="address-line-2-group" class="form-group">
+    <input type="text" name="address-line-2" id="address-line-2" class="form-control form-control-3-4" aria-required="false" maxlength="40">
+  </div> -->
+  <div id="address-town-group" class="form-group">
+    <label for="address-town" class="form-label-bold">
+      County
+    </label>
+    <input type="text" name="address-town" id="address-town" class="form-control" aria-required="true" maxlength="30">
+  </div>
+  <div id="address-postcode-group" class="form-group">
     <label for="address-postcode" class="form-label-bold">
         Postcode
-
-
     </label>
-    <input type="text" name="address-postcode" id="address-postcode" class="form-control input-code" aria-required="true" value="SE1 7XH"></div>
+    <input type="text" name="address-postcode" id="address-postcode" class="form-control input-code" aria-required="true" value="SE1 7XH">
+  </div>
+</fieldset>
 
-
-                    <div class="form-group">
-                        <label class="form-label-bold">
-                            Country
-                        </label>
-                        United Kingdom
-                    </div>
-            </fieldset>
-
-    <a href="./contact-details" class="button">Continue</a>
+<a href="./csig-identity-auth" class="button">Continue</a>
 
 </div>
 
