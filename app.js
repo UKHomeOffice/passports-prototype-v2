@@ -1,34 +1,36 @@
 var express = require('express');
+    session = require('express-session'),
     app = express(),
     path = require('path'),
     redis = require('./lib/redis-client'),
     _ = require('lodash');
 
-// check for Redis session store
-var session = require('express-session'),
-    RedisStore = require('connect-redis')(session),
-    sessionConfig = {
+redis.getClient(function (err, client) {
+    let store;
+
+    if (err) {
+        // var FSStore = require('connect-fs2')(session);
+        // store = new FSStore();
+    } else {
+        var RedisStore = require('connect-redis')(session);
+        store = new RedisStore({
+            client: client,
+            ttl: 60 * 30
+        });
+    }
+
+    init({
+        store: store,
         secret: 'abc123',
         resave: true,
         saveUninitialized: true
-    };
-
-redis.getClient(function (err, client) {
-    if (err) {
-        return init();
-    }
-    init({
-        store: new RedisStore({
-            client: client,
-            ttl: 60 * 30
-        })
     });
 });
 
-function init(sessionStore) {
+function init(sessionConfig) {
 
     // auth
-   if (process.env.NODE_ENV && process.env.NODE_ENV.toLowerCase() === 'heroku') {
+    if (process.env.NODE_ENV && process.env.NODE_ENV.toLowerCase() === 'heroku') {
         var auth = require('express-basic-auth');
 
        function authoriser(user, pass) {
@@ -43,7 +45,7 @@ function init(sessionStore) {
 
     // session
     app.use(require('cookie-parser')());
-    app.use(session(_.extend(sessionConfig, sessionStore)));
+    app.use(session(sessionConfig));
 
     app.use(require('i18n-future').middleware());
     app.use(require('body-parser').urlencoded({ extended: true }));

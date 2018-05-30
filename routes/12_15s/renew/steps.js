@@ -57,30 +57,23 @@ module.exports = {
         }],
       },
     '/parents-details':{
-        fields:['parent1-first-names','parent2-first-names', 'marriage-day', 'marriage-month', 'marriage-year'],
+        fields:['parent1-first-names','parent2-first-names', 'parent1-last-name', 'parent2-last-name', 'marriage-day', 'marriage-month', 'marriage-year'],
         controller: require('../../../controllers/parents-details'),
-        forks: [{
-          target: '/parent-2-details',
-          condition: function(req, res) {
-            return req.session['hmpo-wizard-common']['parent1-first-names'] == "";
-          }
-        }],
+        // forks: [{
+        //   target: '/parent-2-details',
+        //   condition: function(req, res) {
+        //     return req.session['hmpo-wizard-common']['parent1-first-names'] == "";
+        //   }
+        // }],
         next: '/parent-1-details',
     },
     '/parent-1-details':{
-        fields:[],
-        forks: [{
-          target: '/home-address',
-          condition: function(req, res) {
-            return req.session['hmpo-wizard-common']['parent2-first-names'] == "";
-          }
-        }],
-        next: '/parent-2-details',
+        fields:['parent1-town-of-birth', 'parent1-country-of-birth', 'parent1-age-day', 'parent1-age-month', 'parent1-age-year', 'parent1-country-of-nationality', 'parent1-passport-number', 'parent1-passport-issue-day', 'parent1-passport-issue-month', 'parent1-passport-issue-year', 'parent1-additional-information'],
+        next: '/parent-2-details'
     },
     '/parent-2-details':{
-        fields:[],
+        fields:['parent2-town-of-birth', 'parent2-country-of-birth', 'parent2-age-day', 'parent2-age-month', 'parent2-age-year', 'parent2-country-of-nationality', 'parent2-passport-number', 'parent2-passport-issue-day', 'parent2-passport-issue-month', 'parent2-passport-issue-year', 'parent2-additional-information'],
         next: '/home-address',
-        backLink: 'parents-details',
         nextAlt: './home-address-overseas'
     },
     '/home-address':{

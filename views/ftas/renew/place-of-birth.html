@@ -1,0 +1,42 @@
+{{< layout}}
+
+{{$pageTitle}}Place of birth{{/pageTitle}}
+
+{{$header}}
+<h1>Place of birth</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+{{#radio-group}}born-in-uk{{/radio-group}}
+
+<div id="birth-country" class="reveal js-hidden">
+    <div class="panel-indent">
+        {{#input-text}}country-of-birth{{/input-text}}
+    </div>
+</div>
+
+<label for="town-of-birth" class="form-label-bold">
+    Town of birth
+
+    {{#values.naturalisation-registration-certificate}}
+    <span id="town-of-birth-hint" class="form-hint">As written on your naturalisation or registration certificate</span>
+    {{/values.naturalisation-registration-certificate}}
+
+    {{^values.naturalisation-registration-certificate}}
+    <span id="town-of-birth-hint" class="form-hint">As written on your birth or adoption certificate</span>
+    {{/values.naturalisation-registration-certificate}}
+</label>
+{{#input-text}}town-of-birth{{/input-text}}
+
+{{#input-submit}}{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}

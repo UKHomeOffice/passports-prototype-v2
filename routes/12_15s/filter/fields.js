@@ -9,7 +9,7 @@ module.exports = {
     },
     options: [
       { value: true, label: 'Me' },
-      { value: false, label: 'Someone else'}
+      { value: false, label: 'Someone else', toggle: 'someone-else' }
     ],
     formatter: ['boolean'],
     validate: ['required'],
@@ -243,30 +243,25 @@ module.exports = {
       'required'
     ]
   },
-  'uncancelled': {
+  'dual-nationality': {
     legend: {
-      value: 'Do you have any uncancelled passport from a different country?',
+      value: 'Do you have any uncancelled passport from other countries?',
       className: 'visuallyhidden'
     },
     options: [{
-        value: 'Yes',
-        label: 'Yes',
-        toggle: 'which-passport'
-      },
-      {
-        value: 'No',
-        label: 'No'
-      }
-    ],
-    validate: [
-      'required',
-      {
-        type: 'equal',
-        arguments: ['No'],
-        /* if Yes is selected */
-        redirect: 'https://passportapplication.service.gov.uk/ips-olc/'
-      }
-    ]
+          value: true,
+          label: 'Yes',
+          toggle: 'same-name'
+        },
+        {
+          value: false,
+          label: 'No'
+        }
+      ],
+      formatter: ['boolean'],
+      validate: [
+        'required'
+      ]
   },
   'relationship-applicant': {
     legend: {
@@ -276,11 +271,16 @@ module.exports = {
     options: [
       { value: 'Mother', label: 'Mother' },
       { value: 'Father', label: 'Father' },
+      { value: 'Social Worker', label: 'Social Worker' },
       { value: 'Other', label: 'Other', toggle: "relationship-other" }
     ],
     validate: [
       'required'
     ]
+  },
+  'other-why-apply': {
+    labelClassName: 'visuallyhidden',
+    className: 'textarea',
   },
   'relationship-other': {
     labelClassName: 'visuallyhidden',

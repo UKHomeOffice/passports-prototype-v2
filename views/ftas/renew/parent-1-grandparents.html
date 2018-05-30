@@ -1,0 +1,110 @@
+{{< layout}}
+
+{{$pageTitle}}Maternal grandparents{{/pageTitle}}
+
+{{$header}}
+    <h1>Maternal grandparents</h1>
+{{/header}}
+
+{{$content}}
+
+<p>We need to confirm you're eligible for a UK passport – this may depend on your grandparents. If you can't provide these details, you need to tell us why.</p>
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+<h2>Grandmother</h2>
+{{#input-text}}parent1-parent1-first-names{{/input-text}}
+{{#input-text}}parent1-parent1-last-name{{/input-text}}
+{{#input-text}}parent1-parent1-town-of-birth{{/input-text}}
+{{#select}}parent1-parent1-country-of-birth{{/select}}
+
+<fieldset>
+    <div class="form-date">
+        <legend><span class="form-label">Date of birth</span></legend>
+        <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
+        {{#input-text}}parent1-parent1-age-day{{/input-text}}
+        {{#input-text}}parent1-parent1-age-month{{/input-text}}
+        {{#input-text}}parent1-parent1-age-year{{/input-text}}
+    </div>
+</fieldset>
+<br>
+
+<details {{values.openParent1Parent1AdditionalInfo}}>
+    <summary>
+        <span class="summary">I can't provide these details</span>
+    </summary>
+    <div class="panel panel-border-narrow">
+        {{#textarea}}parent1-parent1-additional-information{{/textarea}}
+    </div>
+</details>
+
+
+<h2>Grandfather</h2>
+{{#input-text}}parent1-parent2-first-names{{/input-text}}
+{{#input-text}}parent1-parent2-last-name{{/input-text}}
+{{#input-text}}parent1-parent2-town-of-birth{{/input-text}}
+{{#select}}parent1-parent2-country-of-birth{{/select}}
+
+<fieldset>
+    <div class="form-date">
+        <legend><span class="form-label">Date of birth</span></legend>
+        <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
+        {{#input-text}}parent1-parent2-age-day{{/input-text}}
+        {{#input-text}}parent1-parent2-age-month{{/input-text}}
+        {{#input-text}}parent1-parent2-age-year{{/input-text}}
+    </div>
+</fieldset>
+<br>
+
+<details {{values.openParent1Parent2AdditionalInfo}}>
+    <summary>
+        <span class="summary">I can't provide these details</span>
+    </summary>
+    <div class="panel panel-border-narrow">
+        {{#textarea}}parent1-parent2-additional-information{{/textarea}}
+    </div>
+</details>
+
+
+<h2>Were they married or in a civil partnership?</h2>
+{{#radio-group}}parent1-parents-married{{/radio-group}}
+<div id="marriage-date" class="reveal js-hidden">
+    <fieldset>
+        <div class="form-date panel panel-border-narrow">
+            <legend>
+                <span class="form-label">Date of marriage or civil partnership (if known)</span>
+            </legend>
+            <p class="form-hint" id="dob-hint">For example 25 08 2012</p>
+            {{#input-text}}parent1-parents-marriage-day{{/input-text}}
+            {{#input-text}}parent1-parents-marriage-month{{/input-text}}
+            {{#input-text}}parent1-parents-marriage-year{{/input-text}}
+        </div>
+    </fieldset>
+    <br>
+</div>
+
+{{#input-submit}}{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{$sidebar}}
+<!-- <div class="column-one-third">
+    <div class="sidebar" style="margin-top:50px">
+        <div class="photo-preview-inner">
+            <h2 class="heading-medium">You need to:</h2>
+            <p>We need to know about the applicant's grandparents on their mother's side.</p>
+            <ul class="list-bullet">
+                <li>have known the applicant personally for at least 2 years</li>
+                <li>work in or be retired from a <a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories" target="_blank">recognised profession</a></li>
+                <li>live in the UK with a current UK passport</li>
+            </ul>
+        </div>
+    </div>
+</div> -->
+{{/sidebar}}
+
+{{/ layout}}

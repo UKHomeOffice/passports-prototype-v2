@@ -1,14 +1,14 @@
 module.exports = {
     '/': {
-      backLink: '../filter/relationship-applicant',
-        next: '/what-you-need'
+      backLink: '../filter/summary',
+      next: '/you-need-a-photo'
     },
-    '/what-you-need': {
-      backLink: './',
-      next: '/photo-retrieved'
-    },
+    // '/what-you-need': {
+    //   backLink: './',
+    //   next: '/photo-retrieved'
+    // },
     '/you-need-a-photo': {
-      backLink: './what-you-need',
+      backLink: './',
       next: '/choose-photo-method'
     },
     '/choose-photo-method': {

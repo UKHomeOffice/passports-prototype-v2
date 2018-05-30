@@ -9,12 +9,16 @@
 {{$content}}
     {{< hmpo-partials-form}}
         {{$form}}
-            <p>The passport holder must sign the new passport when it arrives. They can't use it until they do.</p>
+            <p>All passport holders aged 12 and older must sign their new passport when they receive it. They won’t be able to use it until they do.</p>
             {{#radio-group}}can-sign{{/radio-group}}
-            <div id="no-sign" class="reveal js-hidden">
-                <div class="panel panel-border-narrow">
-                    {{#textarea}}no-sign-reason{{/textarea}}
-                </div>
+            <div id="no-sign" class="reveal js-hidden form-group">
+              <div class="panel panel-border-narrow">
+                <label for="no-sign-reason" class="form-label-bold">
+                  Explain why they can't sign
+                  <span class="form-hint">If you have evidence, include it when you send the old passport.</span>
+                </label>
+                {{#textarea}}no-sign-reason{{/textarea}}
+              </div>
             </div>
             {{#input-submit}}{{/input-submit}}
         {{/form}}
@@ -32,7 +36,6 @@
             <img src="../../public/images/sign-passport-sm.png" alt="where to sign your passport" title="where to sign your passport" width="190">
           </div>
       </div>
-
     </div>
 </div>
 {{/sidebar}}

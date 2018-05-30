@@ -31,18 +31,15 @@
 {{#input-text}}name{{/input-text}}
 {{#input-text}}lastname{{/input-text}}
 
-<!-- <details class="">
-    <summary><span class="summary">My name won’t fit in the boxes</span></summary>
-    <div class="panel panel-border-narrow">
-      <p>Shorten your name in the way you want it shown in your passport. We’ll add a note showing your full name on the observation page in your passport.</p>
-    </div>
-</details> -->
-<br>
-
 <fieldset>
-    <legend>
-        <span class="form-label-bold">Is this the name shown on your birth certificate?</span>
-    </legend>
+    {{#values.naturalisation-registration-certificate}}
+        <h2>Is this name on your naturalisation or registration certificate?</h2>
+    {{/values.naturalisation-registration-certificate}}
+
+    {{^values.naturalisation-registration-certificate}}
+        <h2>Is this name on your birth or adoption certificate?</h2>
+    {{/values.naturalisation-registration-certificate}}
+
     {{#radio-group}}change-name{{/radio-group}}
 </fieldset>
 

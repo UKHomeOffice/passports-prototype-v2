@@ -11,8 +11,19 @@
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-        {{#radio-group}}passport-before{{/radio-group}}
+
+        <!-- <fieldset class="inline"> -->
+            {{#radio-group}}passport-before{{/radio-group}}
+        <!-- </fieldset>
+
+        <div id="passport-before-no" class="reveal js-hidden">
+            <div class="panel panel-border-narrow">
+                <p>You may need to have an <a href="../../guidance/identity-interviews" target="_blank">identity interview</a>. We'll tell you if that happens and what you need to do.</p>
+            </div>
+        </div> -->
+
         {{#input-submit}}{{/input-submit}}
+
     {{/form}}
 {{/ hmpo-partials-form}}
 {{/content}}

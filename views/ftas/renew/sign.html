@@ -13,8 +13,11 @@
             {{#radio-group}}can-sign{{/radio-group}}
             <div id="no-sign" class="reveal js-hidden">
                 <div class="panel panel-border-narrow">
-                    <p>You must explain why you can’t sign your passport (eg there’s a medical reason or you can’t write).</p>
-                    <p>If you can provide supporting evidence please include it when you send us your old passport.</p>
+
+                    <label for="no-sign-reason" class="form-label-bold">
+                        Explain why you can’t sign
+                        <span id="no-sign-reason-hint" class="form-hint">If you have evidence, include it when you send your documents.</span>
+                    </label>
                     {{#textarea}}no-sign-reason{{/textarea}}
                 </div>
             </div>

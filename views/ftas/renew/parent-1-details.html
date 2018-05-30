@@ -3,23 +3,21 @@
 {{$pageTitle}}Mother or parent 1{{/pageTitle}}
 
 {{$header}}
-    <h1>
-        <span class="heading-secondary">Mother or parent 1</span>
-        {{values.parent1-first-names}}'s details
-    </h1>
+
+<h1>Mother or parent 1</h1>
+
 {{/header}}
 
 {{$content}}
 
-<div class="panel panel-border-wide alert-default">
-    <p>You need to enter as much information as you can or your application may be delayed.</p>
-</div>
+<p>You need to enter as many details as you can or your application may be delayed.</p>
+
 
 {{< hmpo-partials-form}}
 {{$form}}
 
-    {{#input-text}}parent1-town{{/input-text}}
-    
+    {{#input-text}}parent1-town-of-birth{{/input-text}}
+
     <fieldset>
         <legend>
             <span class="form-label-bold">Country of birth</span>
@@ -28,24 +26,13 @@
     </fieldset>
 
     <fieldset>
-        <div class="form-date">
-            <legend><span class="form-label-bold">Date of birth</span></legend>
-            <p class="form-hint" id="dob-hint">For example 31 08 1970</p>
-            {{#input-text}}parent1-age-day{{/input-text}}
-            {{#input-text}}parent1-age-month{{/input-text}}
-            {{#input-text}}parent1-age-year{{/input-text}}
-        </div>
-    </fieldset>
-    <br>
-    
-    <fieldset>
         <legend>
             <span class="form-label-bold">Country of nationality</span>
         </legend>
-        <p class="form-hint" id="dob-hint">At the time of {{values.name}}'s birth</p>
+        <p class="form-hint" id="dob-hint">At the time of your birth</p>
         {{#select}}parent1-country-of-nationality{{/select}}
     </fieldset>
-    
+
     <fieldset>
         <legend>
             <span class="form-label-bold">UK passport number</span>
@@ -63,9 +50,6 @@
             {{#input-text}}parent1-passport-issue-year{{/input-text}}
         </div>
     </fieldset>
-
-    {{#textarea}}additional-information{{/textarea}}
-    <br>
 
     {{#input-submit}}{{/input-submit}}
 
