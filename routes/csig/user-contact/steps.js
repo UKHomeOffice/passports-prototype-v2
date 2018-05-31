@@ -6,16 +6,17 @@ module.exports = {
     },
     '/give-csig-details': {
       fields: ['csig-email', 'csig-name', 'contact-csig'],
-      controller: require('../../../controllers/csig-email'),
       backLink: './',
       next: '/email-sent'
     },
     '/email-sent': {
       backLink: '/give-csig-details',
+      controller: require('../../../controllers/csig-email'),
       next: '/tracking-waiting'
     },
     '/tracking-waiting': {
-        next: '/track'
+        fields: ['renominate'],
+        next: '/../user-contact'
     },
     '/tracking-waiting-renominate': {
         next: '/track'
