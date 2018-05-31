@@ -8,6 +8,10 @@ module.exports = {
       fields: ['csig-email', 'csig-name', 'contact-csig'],
       controller: require('../../../controllers/csig-email'),
       backLink: './',
+      next: '/email-sent'
+    },
+    '/email-sent': {
+      backLink: '/give-csig-details',
       next: '/tracking-waiting'
     },
     '/tracking-waiting': {
