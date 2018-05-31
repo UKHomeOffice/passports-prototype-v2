@@ -13,6 +13,7 @@ module.exports = {
     '/home-address-select':{
         backLink: './name-address',
         next: '/csig-identity-auth',
+        fields: ['address-type'],
         forks: [{
           target: '/csig-identity-auth-fail',
           condition: function(req, res) {
@@ -21,6 +22,8 @@ module.exports = {
         }],
     },
     '/home-address-manual':{
+        fields: ['address-type'],
+        next: '/csig-identity-auth',
         backLink: './home-address-select'
     },
     '/csig-summary': {
@@ -50,23 +53,33 @@ module.exports = {
         fields: ['applicant-check-home-address'],
         next: '/csig-details-work'
     },
-    '/csig-details': {
-        fields: ['title'],
-        backLink: 'confirm-applicant',
-        next: '/csig-details-work'
-    },
     '/csig-details-work': {
         fields: ['profession', 'retired' ],
-        backLink:'confirm-applicant-address',
+        backLink: 'confirm-applicant-address',
+        next: '/csig-details-contact',
+        forks: [{
+          target: '/csig-details-home-address',
+          condition: function(req, res) {
+            return req.session['hmpo-wizard-common']['address-type'] == 'manual';
+          }
+        }],
+    },
+    '/csig-details-work-address': {
+        backLink: 'csig-details-work',
         next: '/csig-details-contact'
+    },
+    '/csig-details-home-address': {
+        backLink: 'confirm-applicant-address',
+        next: '/csig-details-contact',
     },
     '/csig-details-contact': {
         fields: ['phone-number', 'email-address'],
         next: '/confirmation'
     },
-    '/csig-details-work-address': {
-        backLink: 'csig-details-work',
-        next: '/csig-details-contact'
+    '/csig-details': {
+        fields: ['title'],
+        backLink: 'confirm-applicant',
+        next: '/csig-details-work',
     },
     '/confirmation': {
 
