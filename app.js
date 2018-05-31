@@ -29,6 +29,7 @@ redis.getClient(function (err, client) {
 
 function init(sessionConfig) {
 
+
     // auth
     if (process.env.NODE_ENV && process.env.NODE_ENV.toLowerCase() === 'heroku') {
         var auth = require('express-basic-auth');
@@ -65,6 +66,12 @@ function init(sessionConfig) {
             feedback: ' '
         };
         next();
+    });
+
+    app.use((req, res, next) => {
+      res.locals = res.locals || {};
+      res.locals.productionEnv = app.get('env') === 'production';
+      next();
     });
 
     //create static folder for email templates etc
