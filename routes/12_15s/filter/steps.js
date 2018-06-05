@@ -1,12 +1,8 @@
 module.exports = {
     '/':{
-      next: '/apply-uk',
-      backLink: '../startpage'
-    },
-    '/apply-uk':{
       fields: ['apply-uk', 'application-country'],
       controller: require('../../../controllers/go-overseas'),
-      backLink: './',
+      backLink: '../startpage',
       next: '/who-for', /* if Yes is selected */
       nextAlt: 'what-do-you-want-to-do-overseas', /* if they are from Germany/France */
       nextAltAlt:'what-do-you-want-to-do-overseas',/* if they are from Afganistan */
@@ -16,7 +12,7 @@ module.exports = {
     '/who-for':{
       fields: ['application-for'],
       next: '/dob',
-      backLink: './apply-uk'
+      backLink: './'
     },
     '/dob': {
       fields: ['age-day', 'age-year', 'age-month'],
@@ -79,8 +75,8 @@ module.exports = {
     },
     '/passport-damaged': {
       fields: ['passport-damaged'],
-      backLink: './',
-      next: '/dual-national' /* if No is selected */
+      backLink: './passport-expiry',
+      next: '/dual-national'
     },
     '/dual-national': {
       controller: require('../../../controllers/go-overseas'),
