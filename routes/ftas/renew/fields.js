@@ -259,7 +259,7 @@ module.exports = {
         validate: 'required',
         legend: {
             value: 'Were you born in the UK?',
-            className: 'form-label-bold'
+            className: 'visuallyhidden'
         },
         options: [{
                 value: true,
