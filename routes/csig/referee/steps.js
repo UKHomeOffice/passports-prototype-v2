@@ -90,6 +90,9 @@ module.exports = {
     '/exceptions-not-applicant': {
 
     },
+    '/exceptions-under-18': {
+
+    },
     '/applicant-summary': {
       backLink: 'confirm-applicant'
     },
@@ -100,6 +103,6 @@ module.exports = {
       backLink: 'confirm-applicant'
     },
     '/terms-and-conditions': {
-
     },
+
 };

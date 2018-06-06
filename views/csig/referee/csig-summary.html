@@ -5,7 +5,7 @@
 
 
 {{$header}}
-    <h1 class="heading-large">Check this application</h1>
+    <h1 class="heading-large">Check your details</h1>
 {{/header}}
 
 {{$content}}
@@ -14,7 +14,8 @@
     Your details don't match our records.
   </h2>
   <p>
-    Check what you've entered and try again. <br>You can try 3 more times.
+    Check what you've entered and try again.<br>
+    You can try 3 more times.
   </p>
 </div>
 <div class="confirmation">
@@ -23,70 +24,50 @@
           <dt class="column-one-third">Passport number</dt>
           <dd class="column-two-thirds">
             <p>{{values.passport-number}}</p>
-            <!-- <div class="button-wrapper">
-                <a href="/csig/referee">Change<span class="visuallyhidden"> passport number</span></a>
-            </div> -->
           </dd>
       </dl>
       <dl class="expiry-date">
           <dt class="column-one-third">Expiry date</dt>
           <dd class="column-two-thirds">
-            <p>{{values.expiry-month}}&nbsp;
-            {{values.expiry-year}}</p>
-            <!-- <div class="button-wrapper">
-                <a href="/csig/referee">Change<span class="visuallyhidden"> expiry date</span></a>
-            </div> -->
+            <p>
+              {{values.expiry-day}}&nbsp;December&nbsp;2017
+            </p>
           </dd>
       </dl>
       <dl class="passport-number">
           <dt class="column-one-third">Date of birth</dt>
           <dd class="column-two-thirds">
-            <p>{{values.age-day}}&nbsp;
-            {{values.age-month}}&nbsp;
-            {{values.age-year}}</p>
-            <!-- <div class="button-wrapper">
-                <a href="/csig/referee/csig-identity-check">Change<span class="visuallyhidden"> date of birth</span></a>
-            </div> -->
+            <p>
+              {{values.age-day}}&nbsp;July&nbsp;{{values.age-year}}
+            </p>
           </dd>
       </dl>
       <dl class="passport-number">
           <dt class="column-one-third">First name</dt>
           <dd class="column-two-thirds">
             <p>{{values.name}}</p>
-            <!-- <div class="button-wrapper">
-                <a href="/csig/referee/csig-identity-check">Change<span class="visuallyhidden"> first and middle names</span></a>
-            </div> -->
           </dd>
       </dl>
-      <dl class="passport-number">
-          <dt class="column-one-third">Middle names</dt>
-          <dd class="column-two-thirds">
-            <p>{{values.middlename}}</p>
-            <!-- <div class="button-wrapper">
-                <a href="/csig/referee/csig-identity-check">Change<span class="visuallyhidden"> first and middle names</span></a>
-            </div> -->
-          </dd>
-      </dl>
+      {{#values.middlename}}
+        <dl class="passport-number">
+            <dt class="column-one-third">Middle names</dt>
+            <dd class="column-two-thirds">
+              <p>{{values.middlename}}</p>
+            </dd>
+        </dl>
+      {{/values.middlename}}
       <dl class="expiry-date">
           <dt class="column-one-third">Last name</dt>
           <dd class="column-two-thirds">
             <p>{{values.lastname}}</p>
-            <!-- <div class="button-wrapper">
-                <a href="/csig/referee/csig-identity-check">Change<span class="visuallyhidden"> last name</span></a>
-            </div> -->
           </dd>
       </dl>
-
       <dl class="passport-number">
-          <dt class="column-one-third">Address</dt>
+          <dt class="column-one-third">Current address</dt>
           <dd class="column-two-thirds">
             <p>104 Loughborough Road<br>Nottingham<br>{{values.address-postcode}}
-            <!-- <div class="button-wrapper">
-                <a href="/csig/referee/csig-identity-check">Change<span class="visuallyhidden"> date of birth</span></a>
-            </div> -->
           </dd>
       </dl>
-
   </div>
 </div>
 <a href="/csig/referee" class="button">Try again</a>
