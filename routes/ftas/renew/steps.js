@@ -64,7 +64,7 @@ module.exports = {
             'country-of-birth'
         ],
         forks: [{ // If they do NOT have a certificate
-            target: '/parents-intro',
+            target: '/family-intro',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == false;
             }
@@ -81,7 +81,7 @@ module.exports = {
             'naturalisation-registration-certificate-issue-year'
         ]
     },
-    '/parents-intro': {
+    '/family-intro': {
         next: '/parents'
     },
     '/parents': {
