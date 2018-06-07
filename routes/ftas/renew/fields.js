@@ -415,7 +415,7 @@ module.exports = {
     'parent1-british-at-applicant-birth': {
         validate: 'required',
         legend: {
-            value: 'Were they British at the time of your birth?',
+            value: 'Were they British when you were born?',
             className: 'form-label-bold'
         },
         options: [
@@ -441,7 +441,7 @@ module.exports = {
     'parent1-uk-passport': {
         validate: 'required',
         legend: {
-            value: 'Do they have a current UK passport?',
+            value: 'Do they have a UK passport?',
             className: 'form-label-bold'
         },
         options: [
@@ -562,7 +562,7 @@ module.exports = {
     'parent2-british-at-applicant-birth': {
         validate: 'required',
         legend: {
-            value: 'Were they British at the time of your birth?',
+            value: 'Were they British when you were born?',
             className: 'form-label-bold'
         },
         options: [
@@ -588,7 +588,7 @@ module.exports = {
     'parent2-uk-passport': {
         validate: 'required',
         legend: {
-            value: 'Do they have a current UK passport?',
+            value: 'Do they have a UK passport?',
             className: 'form-label-bold'
         },
         options: [
