@@ -435,6 +435,9 @@ module.exports = {
         ],
         className: 'inline'
     },
+    'parent1-country-of-nationality': {
+        labelClassName: 'visuallyhidden'
+    },
     'parent1-uk-passport': {
         validate: 'required',
         legend: {
@@ -457,22 +460,6 @@ module.exports = {
             }
         ],
         className: 'inline'
-    },
-    'parent1-country-of-nationality': {
-        labelClassName: 'visuallyhidden',
-        options: [{
-            value: '',
-            label: ' '
-        }].concat(_.map(countries, function (c) {
-            return {
-                value: c.name,
-                label: c.name,
-                attributes: [{
-                    attribute: 'data-synonyms',
-                    value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-                }]
-            }
-        }))
     },
     'parent1-passport-number': {
         labelClassName: 'visuallyhidden',
@@ -595,6 +582,9 @@ module.exports = {
         ],
         className: 'inline'
     },
+    'parent2-country-of-nationality': {
+        labelClassName: 'visuallyhidden'
+    },
     'parent2-uk-passport': {
         validate: 'required',
         legend: {
@@ -617,22 +607,6 @@ module.exports = {
             }
         ],
         className: 'inline'
-    },
-    'parent2-country-of-nationality': {
-        labelClassName: 'visuallyhidden',
-        options: [{
-            value: '',
-            label: ' '
-        }].concat(_.map(countries, function (c) {
-            return {
-                value: c.name,
-                label: c.name,
-                attributes: [{
-                    attribute: 'data-synonyms',
-                    value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-                }]
-            }
-        }))
     },
     'parent2-passport-number': {
         labelClassName: 'visuallyhidden',
