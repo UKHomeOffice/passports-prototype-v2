@@ -1,33 +1,20 @@
 {{< layout}}
 
-{{$main-content}}
-    <div class="column-full">
-        <div class="flash-card">
-        <header>
-        <h1>Before you continue</h1>
-        </header>
+{{$propositionHeader}}{{/propositionHeader}}
 
-        <div class="grid-row">
-            <div class="column-two-thirds">
-              <p>It should take around 3 weeks to renew or replace an adult passport or get a first child passport. You can use a different service if you <a href="/get-a-passport-urgently">need a passport urgently</a>.</p>
-</p>
-              <p>If you're applying for a first adult passport, it should take around 6 weeks. It can take longer if we need more information.</p>
+{{$pageTitle}}Are you applying from the UK?{{/pageTitle}}
 
+{{$header}}
+    <h1>Are you applying from the UK?</h1>
+{{/header}}
 
-              <h2>Confirming your identity</h2>
-
-              <p>Sometimes we can't recognise you from your old photo. This can be because of an accident, illness or surgery. </p>
-
-              <p>We'll let you know if someone needs to confirm your identity. They don't need to sign a printed photo &ndash; they can do it online.</p>
- <br>
-              <a href="./filter/apply-uk" class="button">Continue</a><br>
-
-            </div>
-        </div>
-
-        </div>
-    </div>
-
-{{/ main-content}}
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+        {{#radio-group}}apply-uk{{/radio-group}}
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+{{/content}}
 
 {{/ layout}}
