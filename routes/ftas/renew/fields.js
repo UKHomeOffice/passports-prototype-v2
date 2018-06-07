@@ -441,7 +441,7 @@ module.exports = {
     'parent1-uk-passport': {
         validate: 'required',
         legend: {
-            value: 'Do they currently have a UK passport?',
+            value: 'Do they have a current UK passport?',
             className: 'form-label-bold'
         },
         options: [
@@ -588,7 +588,7 @@ module.exports = {
     'parent2-uk-passport': {
         validate: 'required',
         legend: {
-            value: 'Do they currently have a UK passport?',
+            value: 'Do they have a current UK passport?',
             className: 'form-label-bold'
         },
         options: [
