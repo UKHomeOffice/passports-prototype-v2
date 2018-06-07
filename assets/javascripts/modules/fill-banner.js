@@ -59,7 +59,7 @@
         // Mother
         "parent1-town-of-birth": "Bournemouth",
         "parent1-country-of-birth": "United Kingdom",
-        "parent1-country-of-nationality": "United Kingdom",
+        "parent1-country-of-nationality": "British",
         "parent1-age-day": "17",
         "parent1-age-month": "03",
         "parent1-age-year": "1965",
@@ -72,7 +72,7 @@
         // Father
         "parent2-town-of-birth": "Norwich",
         "parent2-country-of-birth": "United Kingdom",
-        "parent2-country-of-nationality": "United Kingdom",
+        "parent2-country-of-nationality": "British",
         "parent2-age-day": "27",
         "parent2-age-month": "08",
         "parent2-age-year": "1963",
@@ -90,14 +90,14 @@
 
         "parent1-parent1-town-of-birth": "Bournemouth",
         "parent1-parent1-country-of-birth": "United Kingdom",
-        "parent1-parent1-country-of-nationality": "United Kingdom",
+        "parent1-parent1-country-of-nationality": "British",
         "parent1-parent1-age-day": "23",
         "parent1-parent1-age-month": "05",
         "parent1-parent1-age-year": "1920",
 
         "parent1-parent2-town-of-birth": "Norwich",
         "parent1-parent2-country-of-birth": "United Kingdom",
-        "parent1-parent2-country-of-nationality": "United Kingdom",
+        "parent1-parent2-country-of-nationality": "British",
         "parent1-parent2-age-day": "21",
         "parent1-parent2-age-month": "03",
         "parent1-parent2-age-year": "1922",
@@ -140,6 +140,8 @@
         // FTAs
         $('#naturalisation-registration-certificate-false').click();
         $('#parents-married-Yes').click();
+        $('#parent1-uk-passport-Yes').click();
+        $('#parent2-uk-passport-No').click();
         $('#parent1-parents-married-Unknown').click();
         $('#parent2-parents-married-Unknown').click();
 
