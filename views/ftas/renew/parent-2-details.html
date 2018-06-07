@@ -24,31 +24,30 @@
         {{#select}}parent2-country-of-birth{{/select}}
     </fieldset>
 
-    <fieldset>
-        <legend>
-            <span class="form-label-bold">Country of nationality</span>
-        </legend>
-        <p class="form-hint" id="dob-hint">At the time of your birth</p>
-        {{#select}}parent2-country-of-nationality{{/select}}
-    </fieldset>
+    {{#input-text}}parent2-country-of-nationality{{/input-text}}
 
-    <fieldset>
-        <legend>
-            <span class="form-label-bold">UK passport number</span>
-        </legend>
-        <p class="form-hint" id="dob-hint">For example 502135326, leave this blank if it doesn't apply</p>
-        {{#input-text}}parent2-passport-number{{/input-text}}
-    </fieldset>
 
-    <fieldset>
-        <div class="form-date form-group">
-            <legend><span class="form-label-bold">Date of issue</span></legend>
-            <p class="form-hint" id="dob-hint">For example 12 04 2007, leave this blank if it doesn't apply</p>
-            {{#input-text}}parent2-passport-issue-day{{/input-text}}
-            {{#input-text}}parent2-passport-issue-month{{/input-text}}
-            {{#input-text}}parent2-passport-issue-year{{/input-text}}
+    {{#radio-group}}parent2-uk-passport{{/radio-group}}
+    <div style="margin-top: -30px;" id="parent2-uk-passport" class="reveal js-hidden">
+        <div class="panel panel-border-narrow">
+            <legend>
+                <span class="form-label">Passport number</span>
+            </legend>
+            <p class="form-hint" id="dob-hint">For example 502135326, if known</p>
+            {{#input-text}}parent2-passport-number{{/input-text}}
+
+            <div class="form-date form-group">
+                <legend>
+                    <span class="form-label">Date of issue</span>
+                </legend>
+                <p class="form-hint" id="dob-hint">For example 12 04 2007, if known</p>
+                {{#input-text}}parent2-passport-issue-day{{/input-text}}
+                {{#input-text}}parent2-passport-issue-month{{/input-text}}
+                {{#input-text}}parent2-passport-issue-year{{/input-text}}
+            </div>
         </div>
-    </fieldset>
+        <br>
+    </div>
 
     {{#input-submit}}{{/input-submit}}
 
