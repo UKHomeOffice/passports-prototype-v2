@@ -242,7 +242,7 @@
         },
         "parent1-country-of-nationality": {
             "label": "Nationality",
-            "hint": "At the time of the passport holder's birth"
+            "hint": "At the time of your birth"
         },
         "parent1-age-day": {
             "label": "Day"
@@ -285,7 +285,7 @@
         },
         "parent2-country-of-nationality": {
             "label": "Nationality",
-            "hint": "At the time of the passport holder's birth"
+            "hint": "At the time of your birth"
         },
         "parent2-age-day": {
             "label": "Day"
@@ -614,18 +614,12 @@
         "parent1-additional-information": {
             "required": "Explain why you can't provide details for mother or parent 1."
         },
-        "parent1-british-at-applicant-birth": {
-            "required": "You must answer this question."
-        },
         "parent1-uk-passport": {
             "required": "You must answer this question."
         },
 
         "parent2-additional-information": {
             "required": "Explain why you can't provide details for father or parent 2."
-        },
-        "parent2-british-at-applicant-birth": {
-            "required": "You must answer this question."
         },
         "parent2-uk-passport": {
             "required": "You must answer this question."

@@ -412,31 +412,8 @@ module.exports = {
         //   'required'
         // ]
     },
-    'parent1-british-at-applicant-birth': {
-        validate: 'required',
-        legend: {
-            value: 'Were they British when you were born?',
-            className: 'form-label-bold'
-        },
-        options: [
-            {
-                value: 'Yes',
-                label: 'Yes'
-            },
-            {
-                value: 'No',
-                label: 'No',
-                toggle: 'parent1-british-at-applicant-birth'
-            },
-            {
-                value: 'Unknown',
-                label: 'I don’t know'
-            }
-        ],
-        className: 'inline'
-    },
     'parent1-country-of-nationality': {
-        labelClassName: 'visuallyhidden'
+        labelClassName: 'form-label-bold'
     },
     'parent1-uk-passport': {
         validate: 'required',
@@ -559,31 +536,8 @@ module.exports = {
         //   'required'
         // ]
     },
-    'parent2-british-at-applicant-birth': {
-        validate: 'required',
-        legend: {
-            value: 'Were they British when you were born?',
-            className: 'form-label-bold'
-        },
-        options: [
-            {
-                value: 'Yes',
-                label: 'Yes'
-            },
-            {
-                value: 'No',
-                label: 'No',
-                toggle: 'parent2-british-at-applicant-birth'
-            },
-            {
-                value: 'Unknown',
-                label: 'I don’t know'
-            }
-        ],
-        className: 'inline'
-    },
     'parent2-country-of-nationality': {
-        labelClassName: 'visuallyhidden'
+        labelClassName: 'form-label-bold'
     },
     'parent2-uk-passport': {
         validate: 'required',

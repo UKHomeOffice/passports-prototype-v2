@@ -117,7 +117,6 @@ module.exports = {
         fields: [
             'parent1-town-of-birth',
             'parent1-country-of-birth',
-            'parent1-british-at-applicant-birth',
             'parent1-uk-passport',
             'parent1-country-of-nationality',
             'parent1-passport-number',
@@ -138,7 +137,6 @@ module.exports = {
         fields: [
             'parent2-town-of-birth',
             'parent2-country-of-birth',
-            'parent2-british-at-applicant-birth',
             'parent2-uk-passport',
             'parent2-country-of-nationality',
             'parent2-passport-number',
