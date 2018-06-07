@@ -412,6 +412,52 @@ module.exports = {
         //   'required'
         // ]
     },
+    'parent1-british-at-applicant-birth': {
+        validate: 'required',
+        legend: {
+            value: 'Were they British at the time of your birth?',
+            className: 'form-label-bold'
+        },
+        options: [
+            {
+                value: 'Yes',
+                label: 'Yes'
+            },
+            {
+                value: 'No',
+                label: 'No',
+                toggle: 'parent1-british-at-applicant-birth'
+            },
+            {
+                value: 'Unknown',
+                label: 'I don’t know'
+            }
+        ],
+        className: 'inline'
+    },
+    'parent1-uk-passport': {
+        validate: 'required',
+        legend: {
+            value: 'Do they currently have a UK passport?',
+            className: 'form-label-bold'
+        },
+        options: [
+            {
+                value: 'Yes',
+                label: 'Yes',
+                toggle: 'parent1-uk-passport'
+            },
+            {
+                value: 'No',
+                label: 'No'
+            },
+            {
+                value: 'Unknown',
+                label: 'I don’t know'
+            }
+        ],
+        className: 'inline'
+    },
     'parent1-country-of-nationality': {
         labelClassName: 'visuallyhidden',
         options: [{
@@ -525,6 +571,52 @@ module.exports = {
         //   'numeric',
         //   'required'
         // ]
+    },
+    'parent2-british-at-applicant-birth': {
+        validate: 'required',
+        legend: {
+            value: 'Were they British at the time of your birth?',
+            className: 'form-label-bold'
+        },
+        options: [
+            {
+                value: 'Yes',
+                label: 'Yes'
+            },
+            {
+                value: 'No',
+                label: 'No',
+                toggle: 'parent2-british-at-applicant-birth'
+            },
+            {
+                value: 'Unknown',
+                label: 'I don’t know'
+            }
+        ],
+        className: 'inline'
+    },
+    'parent2-uk-passport': {
+        validate: 'required',
+        legend: {
+            value: 'Do they currently have a UK passport?',
+            className: 'form-label-bold'
+        },
+        options: [
+            {
+                value: 'Yes',
+                label: 'Yes',
+                toggle: 'parent2-uk-passport'
+            },
+            {
+                value: 'No',
+                label: 'No'
+            },
+            {
+                value: 'Unknown',
+                label: 'I don’t know'
+            }
+        ],
+        className: 'inline'
     },
     'parent2-country-of-nationality': {
         labelClassName: 'visuallyhidden',

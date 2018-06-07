@@ -24,31 +24,43 @@
         {{#select}}parent2-country-of-birth{{/select}}
     </fieldset>
 
-    <fieldset>
-        <legend>
-            <span class="form-label-bold">Country of nationality</span>
-        </legend>
-        <p class="form-hint" id="dob-hint">At the time of your birth</p>
-        {{#select}}parent2-country-of-nationality{{/select}}
-    </fieldset>
 
-    <fieldset>
-        <legend>
-            <span class="form-label-bold">UK passport number</span>
-        </legend>
-        <p class="form-hint" id="dob-hint">For example 502135326, leave this blank if it doesn't apply</p>
-        {{#input-text}}parent2-passport-number{{/input-text}}
-    </fieldset>
+    {{#radio-group}}parent2-british-at-applicant-birth{{/radio-group}}
 
-    <fieldset>
-        <div class="form-date form-group">
-            <legend><span class="form-label-bold">Date of issue</span></legend>
-            <p class="form-hint" id="dob-hint">For example 12 04 2007, leave this blank if it doesn't apply</p>
-            {{#input-text}}parent2-passport-issue-day{{/input-text}}
-            {{#input-text}}parent2-passport-issue-month{{/input-text}}
-            {{#input-text}}parent2-passport-issue-year{{/input-text}}
+    <div id="parent2-british-at-applicant-birth" class="reveal js-hidden">
+        <div class="panel panel-border-narrow">
+            <legend>
+                <span class="form-label-bold">Nationality</span>
+            </legend>
+            <p class="form-hint" id="dob-hint">At the time of your birth</p>
+            {{#select}}parent2-country-of-nationality{{/select}}
         </div>
-    </fieldset>
+        <br>
+    </div>
+
+
+    {{#radio-group}}parent2-uk-passport{{/radio-group}}
+
+    <div id="parent2-uk-passport" class="reveal js-hidden">
+        <div class="panel panel-border-narrow">
+            <legend>
+                <span class="form-label-bold">Passport number</span>
+            </legend>
+            <p class="form-hint" id="dob-hint">For example 502135326, leave this blank if it doesn't apply</p>
+            {{#input-text}}parent2-passport-number{{/input-text}}
+
+            <div class="form-date form-group">
+                <legend>
+                    <span class="form-label-bold">Date of issue</span>
+                </legend>
+                <p class="form-hint" id="dob-hint">For example 12 04 2007, leave this blank if it doesn't apply</p>
+                {{#input-text}}parent2-passport-issue-day{{/input-text}}
+                {{#input-text}}parent2-passport-issue-month{{/input-text}}
+                {{#input-text}}parent2-passport-issue-year{{/input-text}}
+            </div>
+        </div>
+        <br>
+    </div>
 
     {{#input-submit}}{{/input-submit}}
 
