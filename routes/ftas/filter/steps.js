@@ -126,21 +126,21 @@ module.exports = {
             }
         ]
     },
-    '/dob-below-16': {
-        fields: [
-            'age-day',
-            'age-year',
-            'age-month'
-        ],
-        backLink: './dob',
-        next: '/passport-expiry',
-        forks: [{
-            target: '/../intro',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they are BELOW 16 + NOT had UK passport before
-            }
-        }]
-    },
+    // '/dob-below-16': {
+    //     fields: [
+    //         'age-day',
+    //         'age-year',
+    //         'age-month'
+    //     ],
+    //     backLink: './dob',
+    //     next: '/passport-expiry',
+    //     forks: [{
+    //         target: '/../intro',
+    //         condition: function (req, res) {
+    //             return req.session['hmpo-wizard-common']['passport-before'] == false; // If they are BELOW 16 + NOT had UK passport before
+    //         }
+    //     }]
+    // },
     '/passport-expiry': {
         fields: [
             'issue-day',
