@@ -113,7 +113,8 @@ module.exports = {
             'age-year',
             'age-month'
         ],
-        controller: require('../../../controllers/go-overseas'),
+        //controller: require('../../../controllers/go-overseas'),
+        controller: require('../../../controllers/check-dob'),
         backLink: './lost-stolen',
         next: '/passport-expiry',
         forks: [
@@ -181,12 +182,18 @@ module.exports = {
       fields: ['relationship-applicant', 'other-why-apply'],
       backLink: './dual-national',
       next: '/third-party-name',
-      controller: require('../../../controllers/social-worker')
+      controller: require('../../../controllers/third-parties'),
     },
     '/third-party-name': {
       fields: ['third-party-first-name', 'third-party-last-name'],
       backLink: './relationship-applicant',
-      controller: require('../../../controllers/parental-responsibility')
+      next: '/parental-responsibility',
+      forks: [{
+        target: '/summary',
+        condition: function(req, res) {
+          return req.session['hmpo-wizard-common']['16-or-older'] == true;
+        }
+      }],
     },
     '/parental-responsibility': {
       fields: ['parental-responsibility'],
@@ -196,5 +203,4 @@ module.exports = {
     '/summary': {
       next: '/../intro'
     }
-
 };
