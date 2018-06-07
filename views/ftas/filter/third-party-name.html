@@ -5,14 +5,29 @@
 {{$pageTitle}}Your name{{/pageTitle}}
 
 {{$header}}
-    <h1>Your name</h1>
+    {{#values.social-worker}}
+      <h1>Parental responsibility</h1>
+    {{/values.social-worker}}
+    {{^values.social-worker}}
+      <h1>Your name</h1>
+    {{/values.social-worker}}
 {{/header}}
 
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
+    {{#values.social-worker}}
+      <p>We need the name of the person who has parental responsibility, for example your head of department or their deputy.</p>
+    {{/values.social-worker}}
+
         {{#input-text}}third-party-first-name{{/input-text}}
         {{#input-text}}third-party-last-name{{/input-text}}
+        {{#values.third-party}}
+
+          <h2>Why can't the applicant do this?</h2>
+            <p class="form-hint" id="dob-hint">We'll let you know you what evidence to send.</span></p>
+          {{#textarea}}other-why-apply{{/textarea}}
+        {{/values.third-party}}
         {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}
