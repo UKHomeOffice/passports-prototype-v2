@@ -1188,6 +1188,44 @@ module.exports = {
             'required'
         ]
     },
+    'can-interview': {
+        legend: {
+            className: 'visuallyhidden'
+        },
+        formatter: 'boolean',
+        validate: [
+            'required'
+        ],
+        options: [
+            {
+                value: true,
+                label: 'I understand and can attend an interview',
+            },
+            {
+                value: false,
+                label: 'I can’t attend an interview',
+                toggle: 'no-interview'
+            }
+        ]
+    },
+    'no-interview-reason': {
+        labelClassName: 'visuallyhidden',
+        legend: {
+            className: 'visuallyhidden'
+        },
+        className: 'textarea',
+        validate: [
+            'required',
+            {
+                type: 'maxlength',
+                arguments: 250
+            }
+        ],
+        dependent: {
+            field: 'can-interview',
+            value: false
+        }
+    },
     'passport-options': {
         legend: {
             value: 'Passport size'

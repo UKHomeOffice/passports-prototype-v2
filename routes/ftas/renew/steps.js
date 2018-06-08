@@ -244,6 +244,13 @@ module.exports = {
         next: '/passport-options-overseas'
     },
     '/get-updates': {
+        next: '/identity-interview'
+    },
+    '/identity-interview': {
+        fields: [
+            'can-interview',
+            'no-interview-reason'
+        ],
         next: '/passport-options'
     },
     '/dual-national': {
