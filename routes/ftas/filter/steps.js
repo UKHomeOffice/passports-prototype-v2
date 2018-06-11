@@ -169,7 +169,7 @@ module.exports = {
       controller: require('../../../controllers/go-overseas'),
       fields: ['dual-nationality'],
       backLink: './passport-damaged',
-      next: '/summary',
+      next: '/../intro',
       nextAlt: '../overseas',
       forks: [{
         target: '/relationship-applicant',
@@ -189,7 +189,7 @@ module.exports = {
       backLink: './relationship-applicant',
       next: '/parental-responsibility',
       forks: [{
-        target: '/summary',
+        target: '/../intro',
         condition: function(req, res) {
           return req.session['hmpo-wizard-common']['16-or-older'] == true;
         }
@@ -198,9 +198,9 @@ module.exports = {
     '/parental-responsibility': {
       fields: ['parental-responsibility'],
       backLink: './relationship-applicant',
-      next: '/summary'
-    },
-    '/summary': {
       next: '/../intro'
-    }
+    },
+    // '/summary': {
+    //   next: '/../intro'
+    // }
 };
