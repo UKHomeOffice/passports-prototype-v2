@@ -13,7 +13,8 @@ module.exports = {
       },
       {
         value: false,
-        label: 'Someone else'
+        label: 'Someone else',
+        toggle: 'someone-else'
       }
     ],
     formatter: ['boolean'],
