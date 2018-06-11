@@ -430,20 +430,30 @@ module.exports = {
         // ]
     },
     'parent1-country-of-nationality': {
-        labelClassName: 'visuallyhidden',
-        options: [{
-            value: '',
-            label: ' '
-        }].concat(_.map(countries, function (c) {
-            return {
-                value: c.name,
-                label: c.name,
-                attributes: [{
-                    attribute: 'data-synonyms',
-                    value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-                }]
+        labelClassName: 'form-label-bold'
+    },
+    'parent1-uk-passport': {
+        validate: 'required',
+        legend: {
+            value: 'Do they have a UK passport?',
+            className: 'form-label-bold'
+        },
+        options: [
+            {
+                value: 'Yes',
+                label: 'Yes',
+                toggle: 'parent1-uk-passport'
+            },
+            {
+                value: 'No',
+                label: 'No'
+            },
+            {
+                value: 'Unknown',
+                label: 'I don’t know'
             }
-        }))
+        ],
+        className: 'inline'
     },
     'parent1-passport-number': {
         labelClassName: 'visuallyhidden',
@@ -544,20 +554,30 @@ module.exports = {
         // ]
     },
     'parent2-country-of-nationality': {
-        labelClassName: 'visuallyhidden',
-        options: [{
-            value: '',
-            label: ' '
-        }].concat(_.map(countries, function (c) {
-            return {
-                value: c.name,
-                label: c.name,
-                attributes: [{
-                    attribute: 'data-synonyms',
-                    value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-                }]
+        labelClassName: 'form-label-bold'
+    },
+    'parent2-uk-passport': {
+        validate: 'required',
+        legend: {
+            value: 'Do they have a UK passport?',
+            className: 'form-label-bold'
+        },
+        options: [
+            {
+                value: 'Yes',
+                label: 'Yes',
+                toggle: 'parent2-uk-passport'
+            },
+            {
+                value: 'No',
+                label: 'No'
+            },
+            {
+                value: 'Unknown',
+                label: 'I don’t know'
             }
-        }))
+        ],
+        className: 'inline'
     },
     'parent2-passport-number': {
         labelClassName: 'visuallyhidden',
