@@ -59,8 +59,7 @@ module.exports = {
         legend: {
             className: 'visuallyhidden'
         },
-        formatter: 'boolean',
-        validate: ['required'],
+
         options: [{
                 value: true,
                 label: 'I understand and will sign my passport',
@@ -71,6 +70,24 @@ module.exports = {
                 toggle: 'no-sign'
             }
         ]
+    },
+    'can-sign-third-party': {
+      legend: {
+        className: 'visuallyhidden'
+      },
+  
+
+      options: [
+        {
+          value: true,
+          label: 'I’ll tell the passport holder to sign',
+        },
+        {
+          value: false,
+          label: 'They can’t physically sign',
+          toggle: 'no-sign'
+        }
+      ]
     },
     'no-sign-reason': {
         labelClassName: 'visuallyhidden',

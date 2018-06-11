@@ -283,6 +283,17 @@ module.exports = {
         controller: require('../../../controllers/go-overseas'),
         nextAlt: './summary-overseas'
     },
+    '/sign-third-party': {
+        fields: [
+            'can-sign-third-party',
+            'no-sign-reason'
+        ],
+        backLink: 'passport-options',
+        next: '/passport-special-delivery',
+        /* if they are from the UK */
+        controller: require('../../../controllers/go-overseas'),
+        nextAlt: './summary-overseas'
+    },
     '/summary-overseas': {
         controller: require('../../../controllers/confirm-overseas'),
         template: 'confirm',
