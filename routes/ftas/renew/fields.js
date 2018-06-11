@@ -165,7 +165,7 @@ module.exports = {
             },
             {
                 value: true,
-                label: 'No, my name has changed',
+                label: 'No, {{> partials-applicant-my-their}} name has changed',
                 toggle: 'note-regarding-name-change'
             }
         ],
