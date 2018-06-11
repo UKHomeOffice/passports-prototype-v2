@@ -11,89 +11,44 @@
 {{< hmpo-partials-form}}
 {{$form}}
 
-<p>You must have everything ready before you start your application.</p>
+<p style="margin-bottom: 30px;">You won't be able to save your application – get this information ready before you continue. If you can't provide these details, you'll need to tell us why.</p>
 
 <h2>Your details</h2>
-<div class="table-multiselect">
-    <div class="form-group form-group-compound">
-        <label for="radio-1" class="block-label">
-            <input type="checkbox" id="radio-1" name="radio-1" value="true" aria-required="false" aria-expanded="false">
-                Birth or adoption certificate
-            </input>
-        </label>
-    </div>
-
-    <!-- NOTE: Removing 2nd row for applicant may have a psychological impact, as rather than parents details needed being 2x more (2*2), it will now seem like 4x more (1*4).
-    I.e. "Why do I, as an applicant, need to fill out so much more of parents details rather than my own when the application is for myself?" -->
-
-    <!-- <div class="form-group form-group-compound">
-        <label for="radio-2" class="block-label">
-            <input type="checkbox" id="radio-2" name="radio-2" value="true" aria-required="false" aria-expanded="false">
-                Debit or credit card
-            </input>
-        </label>
-    </div> -->
-</div>
-<br>
+<ul class="list-bullet list-bullet-header-spacing">
+    <li>birth or adoption certificate</li>
+</ul>
 
 <h2>Parents' details</h2>
-<div class="table-multiselect">
-    <div class="form-group form-group-compound">
-        <label for="radio-3" class="block-label">
-            <input type="checkbox" id="radio-3" name="radio-3" value="true" aria-required="false" aria-expanded="false">
-                Name, date and place of birth
-            </input>
-        </label>
-    </div>
-
-    <div class="form-group form-group-compound">
-        <label for="radio-4" class="block-label">
-            <input type="checkbox" id="radio-4" name="radio-4" value="true" aria-required="false" aria-expanded="false">
-                Nationality
-            </input>
-        </label>
-    </div>
-
-    <div class="form-group form-group-compound">
-        <label for="radio-5" class="block-label">
-            <input type="checkbox" id="radio-5" name="radio-5" value="true" aria-required="false" aria-expanded="false">
-                UK passport details (if this applies)
-            </input>
-        </label>
-    </div>
-
-    <div class="form-group form-group-compound">
-        <label for="radio-6" class="block-label">
-            <input type="checkbox" id="radio-6" name="radio-6" value="true" aria-required="false" aria-expanded="false">
-                Date of marriage or civil partnership (if this applies)
-            </input>
-        </label>
-    </div>
-</div>
-<br>
+<ul class="list-bullet list-bullet-header-spacing">
+    <li>name, date and place of birth</li>
+    <li>nationality</li>
+    <li>UK passport details (if this applies)</li>
+    <li>date of marriage or civil partnership (if this applies)</li>
+</ul>
 
 <h2>Grandparents' details</h2>
-<p>Based on what you tell us, we may ask about your grandparents.</p>
-<div class="table-multiselect">
-    <div class="form-group form-group-compound">
-        <label for="radio-7" class="block-label">
-            <input type="checkbox" id="radio-7" name="radio-7" value="true" aria-required="false" aria-expanded="false">
-                Name, date and place of birth
-            </input>
+<p>Based on what you tell us, we may ask for your grandparents:</p>
+<ul style="margin-bottom: 30px;" class="list-bullet list-bullet-header-spacing">
+    <li>name, date and place of birth</li>
+    <li>date of marriage or civil partnership (if this applies)</li>
+</ul>
+
+<!-- <p style="margin-bottom: 30px;">If you can't provide any of these details, you'll need to tell us why.</p> -->
+
+<!-- <h2>By continuing you confirm that:</h2>
+<ul class="list-bullet">
+    <li>you have read and understand the information on what you'll need</li>
+</ul> -->
+
+<fieldset style="margin-bottom: 50px;">
+    <legend class="visuallyhidden">You must agree in order to continue.</legend>
+    <div id="what-you-will-need-declaration-group" class="form-group form-group-compound">
+        <label for="what-you-will-need-declaration" class="block-label ">
+            <input type="checkbox" id="what-you-will-need-declaration" name="what-you-will-need-declaration" value="true" aria-required="false" required="true">
+                I have these details and I'm ready to continue
         </label>
     </div>
-
-    <div class="form-group form-group-compound">
-        <label for="radio-8" class="block-label">
-            <input type="checkbox" id="radio-8" name="radio-8" value="true" aria-required="false" aria-expanded="false">
-                Date of marriage or civil partnership (if this applies)
-            </input>
-        </label>
-    </div>
-</div>
-<br>
-
-<p>If you can't provide any of these details, you'll need to tell us why.</p>
+</fieldset>
 
 <a href="./you-need-a-photo" class="button">Continue</a>
 
