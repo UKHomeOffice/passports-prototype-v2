@@ -144,7 +144,13 @@ module.exports = {
         ],
         next: '/parent-1-grandparents',
         // controller: require('../../../controllers/go-overseas'),
-        nextAlt: './home-address-overseas'
+        nextAlt: './home-address-overseas',
+        forks: [{
+            target: '/home-address',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['application-for'] == false;
+            }
+        }],
     },
     '/parent-1-grandparents': {
         controller: require('../../../controllers/validation-parent-1-grandparents'),
