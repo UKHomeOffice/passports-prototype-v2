@@ -10,8 +10,6 @@
 
 {{$content}}
 
-<p>You need to enter as many details as you can or your application may be delayed.</p>
-
 {{< hmpo-partials-form}}
 {{$form}}
 
@@ -33,14 +31,14 @@
             <legend>
                 <span class="form-label">Passport number</span>
             </legend>
-            <p class="form-hint" id="dob-hint">For example 502135326, if known</p>
+            <p class="form-hint" id="dob-hint">For example 502135326, leave this blank if you can't provide it</p>
             {{#input-text}}parent2-passport-number{{/input-text}}
 
             <div class="form-date form-group">
                 <legend>
                     <span class="form-label">Date of issue</span>
                 </legend>
-                <p class="form-hint" id="dob-hint">For example 12 04 2007, if known</p>
+                <p class="form-hint" id="dob-hint">For example 12 04 2007, leave this blank if you can't provide it</p>
                 {{#input-text}}parent2-passport-issue-day{{/input-text}}
                 {{#input-text}}parent2-passport-issue-month{{/input-text}}
                 {{#input-text}}parent2-passport-issue-year{{/input-text}}
