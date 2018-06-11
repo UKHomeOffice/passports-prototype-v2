@@ -7,7 +7,7 @@
 {{$content}}
   {{< hmpo-partials-form}}
     {{$form}}
-      <header>
+      <!-- <header>
         {{#values.16-or-older}}
           <h1>Renewing an adult passport</h1>
         {{/values.16-or-older}}
@@ -15,8 +15,13 @@
           <h1>Renewing a child passport</h1>
         {{/values.16-or-older}}
 
-      </header>
-      {{#values.feckless-teenager}}
+      </header> -->
+
+      <h1>What you'll need</h2>
+
+      <p>You must have everything ready before you start your application.</p>
+
+      <!-- {{#values.feckless-teenager}}
         <div class="panel panel-border-wide alert-default" style="margin-bottom:20px">
             <p>Your child is aged between 16-19</p>
         </div>
@@ -26,7 +31,7 @@
       {{/values.16-or-older}}
       {{^values.16-or-older}}
         <p>Based on your answers, you're renewing a child passport. If this is not correct, <a href="./">start again</a></p>
-      {{/values.16-or-older}}
+      {{/values.16-or-older}} -->
 
       {{#values.16-or-older}}
         <h2>You'll need:</h2>
@@ -45,7 +50,7 @@
           {{/values.application-for}}
         </ul>
 
-        <p>We may ask for more information depending on what you tell us.</p>
+
       {{/values.16-or-older}}
       {{^values.16-or-older}}
         <h2>You'll need:</h2>
@@ -59,18 +64,27 @@
 
         <p>If you can't provide both parents' details, you'll need to tell us why.</p>
 
-
         <h2>You'll need to send us:</h2>
         <ul class="list-bullet">
           <li>the child's old passport</li>
           <li>any court orders restricting parental responsibility or travel</li>
         </ul>
 
-        <p>We may ask for more information depending on what you tell us.</p>
       {{/values.16-or-older}}
 
 
 
+      <fieldset>
+          <legend class="visuallyhidden">You need these details to continue.</legend>
+          <div id="contact-prefs-email-group" class="form-group form-group-compound">
+              <label for="contact-prefs-email" class="block-label ">
+                  <input type="checkbox" id="contact-prefs-email" name="contact-prefs-email" value="true" aria-required="false" required="true">
+                      I have all of these details 
+              </label>
+          </div>
+      </fieldset>
+      <p></p>
+      <p>We may ask for more information depending on what you tell us.</p>
 
 
 
