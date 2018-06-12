@@ -1321,5 +1321,11 @@ module.exports = {
                 label: 'Standard post (free)'
             }
         ]
-    }
+    },
+    'declaration': {
+        formatter: 'boolean',
+        validate: [
+            'required'
+        ]
+    },
 };

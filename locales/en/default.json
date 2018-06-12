@@ -1,8 +1,13 @@
 {
     "buttons": {
-        "next": "Continue"
+        "next": "Continue",
+        "declaration": "Continue to payment"
     },
     "fields": {
+        "what-you-will-need-declaration": {
+            "label": "I have these details and I'm ready to continue"
+        },
+
         "country": {
             "label": "Country"
         },
@@ -459,6 +464,10 @@
         },
         "third-party-last-name": {
             "label": "Last name"
+        },
+
+        "declaration": {
+            "label": "I agree"
         }
     },
     "error": {
@@ -514,6 +523,10 @@
         "uncancelled": {
             "required": "You must answer this question - uncancelled"
         },
+        "what-you-will-need-declaration": {
+            "required": "You must answer this question."
+        },
+
         "passport-number": {
             "required": "You must answer this question - passport number"
         },
@@ -586,13 +599,16 @@
         "no-interview-reason": {
             "required": "You must answer this question."
         },
-
         "can-sign": {
             "required": "You must answer this question."
         },
         "secure-return": {
             "required": "You must answer this question."
         },
+        "declaration": {
+            "required": "You must agree with the declaration to use this service."
+        },
+
         "email": "You must enter a valid email",
         "exactlength": "{{label}} must be 9 characters",
         "ninoformat": "{{label}} format incorrect"

@@ -21,19 +21,9 @@
     <p>If you give untrue or misleading information, we may share information with the police in the UK or abroad and you could be prosecuted.</p>
 </div>
 
-<fieldset>
-    <legend class="visuallyhidden">You must agree in order to continue.</legend>
-    <div id="contact-prefs-email-group" class="form-group form-group-compound">
-        <label for="contact-prefs-email" class="block-label ">
-            <input type="checkbox" id="contact-prefs-email" name="contact-prefs-email" value="true" aria-required="false" required="true"> I agree
-        </label>
-    </div>
-</fieldset>
-<br>
+{{#checkbox}}declaration{{/checkbox}}
 
-<a href="../renew/payment" class="button">Continue to payment</a>
-<br>
-<br>
+{{#input-submit}}declaration{{/input-submit}}
 
 {{/form}}
 {{/ hmpo-partials-form}}
