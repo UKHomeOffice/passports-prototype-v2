@@ -17,7 +17,7 @@ module.exports = {
         /* if they are from Spain - first hidden as renewal */
         nextAltAltAltAlt: '../overseas-not-available' /* if they are from Syria - not available */
     },
-    '/apply-uk': {
+    '/who-for': {
         fields: [
             'application-for'
         ],
