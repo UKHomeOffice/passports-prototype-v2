@@ -522,31 +522,49 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     }
 
 
+    // Application details
+    var applicationFields = [];
+
     response.sections.push({
         className: 'application-details',
         title: 'Application',
-        fields: [{
-                step: this.getEditStep('postcode'),
-                title: 'Address',
-                value: join(values, ['address1', 'address2', 'town', 'postcode'], '<br>')
-            },
-            {
-                step: this.getEditStep('email'),
-                title: 'Contact details',
-                value: join(values, ['email', 'mobile'], '<br><br>')
-            },
-            {
-                step: this.getEditStep('braille'),
-                title: 'Braille',
-                value: function () {
-                    var output = [];
-                    output.push(values['braille'] ? 'You require a braille sticker' : 'You don’t require a braille sticker');
-                    return output.join('<br><br>');
-                }
-            }
-        ]
+        fields: applicationFields
     });
 
+    if (values['can-interview']) {
+        applicationFields.push({
+            step: this.getEditStep('can-interview'),
+            title: 'Identity interview',
+            value: 'You can attend an interview.'
+        });
+    } else {
+        applicationFields.push({
+            step: this.getEditStep('no-interview-reason'),
+            title: 'Identity interview',
+            value: values['no-interview-reason'] ? 'You can’t attend an interview:<br>' + values['no-interview-reason'] : 'You can’t attend an interview'
+        });
+    }
+
+    applicationFields.push({
+        step: this.getEditStep('postcode'),
+        title: 'Address',
+        value: join(values, ['address1', 'address2', 'town', 'postcode'], '<br>')
+    }, {
+        step: this.getEditStep('email'),
+        title: 'Contact details',
+        value: join(values, ['email', 'mobile'], '<br><br>')
+    }, {
+        step: this.getEditStep('braille'),
+        title: 'Braille',
+        value: function () {
+            var output = [];
+            output.push(values['braille'] ? 'You require a braille sticker' : 'You don’t require a braille sticker');
+            return output.join('<br><br>');
+        }
+    });
+
+
+    // Cost details
     response.sections.push({
         className: 'cost-details',
         title: 'Cost',
