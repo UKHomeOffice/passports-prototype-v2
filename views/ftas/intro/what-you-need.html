@@ -33,24 +33,9 @@
     <li>date of marriage or civil partnership (if this applies)</li>
 </ul>
 
-<!-- <p style="margin-bottom: 30px;">If you can't provide any of these details, you'll need to tell us why.</p> -->
+{{#checkbox}}what-you-will-need-declaration{{/checkbox}}
 
-<!-- <h2>By continuing you confirm that:</h2>
-<ul class="list-bullet">
-    <li>you have read and understand the information on what you'll need</li>
-</ul> -->
-
-<fieldset style="margin-bottom: 50px;">
-    <legend class="visuallyhidden">You must agree in order to continue.</legend>
-    <div id="what-you-will-need-declaration-group" class="form-group form-group-compound">
-        <label for="what-you-will-need-declaration" class="block-label ">
-            <input type="checkbox" id="what-you-will-need-declaration" name="what-you-will-need-declaration" value="true" aria-required="false" required="true">
-                I have these details and I'm ready to continue
-        </label>
-    </div>
-</fieldset>
-
-<a href="./you-need-a-photo" class="button">Continue</a>
+{{#input-submit}}{{/input-submit}}
 
 {{/form}}
 {{/ hmpo-partials-form}}

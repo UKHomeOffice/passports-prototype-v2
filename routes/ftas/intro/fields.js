@@ -1,4 +1,10 @@
 module.exports = {
+    'what-you-will-need-declaration': {
+        formatter: 'boolean',
+        validate: [
+            'required'
+        ]
+    },
     'choose-photo': {
         legend: {
             value: 'What are you trying to do?',
@@ -21,11 +27,7 @@ module.exports = {
             'required',
             {
                 type: 'equal',
-                arguments: [
-                    'upload',
-                    'shop',
-                    'code'
-                ],
+                arguments: ['upload', 'shop', 'code'],
                 redirect: '/../photoguide-short'
             }, {
                 type: 'equal',
@@ -37,11 +39,7 @@ module.exports = {
                 redirect: '/../upload'
             }, {
                 type: 'equal',
-                arguments: [
-                    'upload',
-                    'myself',
-                    'shop'
-                ],
+                arguments: ['upload', 'myself', 'shop'],
                 redirect: '/get-photo-code'
             }
         ]

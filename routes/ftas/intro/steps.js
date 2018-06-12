@@ -12,7 +12,8 @@ module.exports = {
         next: '/what-you-need'
     },
     '/what-you-need': {
-        next: '/photo-retrieved'
+        fields: ['what-you-will-need-declaration'],
+        next: '/you-need-a-photo'
     },
     '/you-need-a-photo': {
         backLink: './what-you-need',
