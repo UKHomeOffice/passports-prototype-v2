@@ -3,6 +3,10 @@
         "next": "Continue"
     },
     "fields": {
+        "what-you-will-need-declaration": {
+            "label": "I have these details and I'm ready to continue"
+        },
+
         "country": {
             "label": "Country"
         },
@@ -514,6 +518,10 @@
         "uncancelled": {
             "required": "You must answer this question - uncancelled"
         },
+        "what-you-will-need-declaration": {
+            "required": "You must answer this question."
+        },
+
         "passport-number": {
             "required": "You must answer this question - passport number"
         },
