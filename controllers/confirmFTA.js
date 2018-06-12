@@ -251,7 +251,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             value: parent1DateOfBirth.isValid() ? parent1DateOfBirth.format('D MMMM YYYY') : ''
         }, {
             step: this.getEditStep('parent1-country-of-nationality'),
-            title: 'Country of nationality',
+            title: 'Nationality',
             value: values['parent1-country-of-nationality']
         }, {
             step: this.getEditStep('parent1-passport-number'),
@@ -300,7 +300,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             value: parent2DateOfBirth.isValid() ? parent2DateOfBirth.format('D MMMM YYYY') : ''
         }, {
             step: this.getEditStep('parent2-country-of-nationality'),
-            title: 'Country of nationality',
+            title: 'Nationality',
             value: values['parent2-country-of-nationality']
         }, {
             step: this.getEditStep('parent2-passport-number'),

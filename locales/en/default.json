@@ -242,7 +242,7 @@
         },
         "parent1-country-of-nationality": {
             "label": "Nationality",
-            "hint": "At the time of the passport holder's birth"
+            "hint": "At the time of the applicant's birth"
         },
         "parent1-age-day": {
             "label": "Day"
@@ -285,7 +285,7 @@
         },
         "parent2-country-of-nationality": {
             "label": "Nationality",
-            "hint": "At the time of the passport holder's birth"
+            "hint": "At the time of the applicant's birth"
         },
         "parent2-age-day": {
             "label": "Day"
@@ -337,10 +337,6 @@
         "parent1-parent1-country-of-birth": {
             "label": "Country of birth"
         },
-        "parent1-parent1-country-of-nationality": {
-            "label": "Nationality",
-            "hint": "At the time of the passport holder's birth"
-        },
         "parent1-parent1-age-day": {
             "label": "Day"
         },
@@ -348,19 +344,6 @@
             "label": "Month"
         },
         "parent1-parent1-age-year": {
-            "label": "Year"
-        },
-        "parent1-parent1-passport-number": {
-            "label": "Passport Number",
-            "hint": "If applicable, for example 502135326"
-        },
-        "parent1-parent1-passport-issue-day": {
-            "label": "Day"
-        },
-        "parent1-parent1-passport-issue-month": {
-            "label": "Month"
-        },
-        "parent1-parent1-passport-issue-year": {
             "label": "Year"
         },
         "parent1-parent1-additional-information": {
@@ -380,10 +363,6 @@
         "parent1-parent2-country-of-birth": {
             "label": "Country of birth"
         },
-        "parent1-parent2-country-of-nationality": {
-            "label": "Nationality",
-            "hint": "At the time of the passport holder's birth"
-        },
         "parent1-parent2-age-day": {
             "label": "Day"
         },
@@ -391,19 +370,6 @@
             "label": "Month"
         },
         "parent1-parent2-age-year": {
-            "label": "Year"
-        },
-        "parent1-parent2-passport-number": {
-            "label": "Passport Number",
-            "hint": "If applicable, for example 502135326"
-        },
-        "parent1-parent2-passport-issue-day": {
-            "label": "Day"
-        },
-        "parent1-parent2-passport-issue-month": {
-            "label": "Month"
-        },
-        "parent1-parent2-passport-issue-year": {
             "label": "Year"
         },
         "parent1-parent2-additional-information": {
@@ -434,10 +400,6 @@
         "parent2-parent1-country-of-birth": {
             "label": "Country of birth"
         },
-        "parent2-parent1-country-of-nationality": {
-            "label": "Nationality",
-            "hint": "At the time of the passport holder's birth"
-        },
         "parent2-parent1-age-day": {
             "label": "Day"
         },
@@ -445,19 +407,6 @@
             "label": "Month"
         },
         "parent2-parent1-age-year": {
-            "label": "Year"
-        },
-        "parent2-parent1-passport-number": {
-            "label": "Passport Number",
-            "hint": "If applicable, for example 502135326"
-        },
-        "parent2-parent1-passport-issue-day": {
-            "label": "Day"
-        },
-        "parent2-parent1-passport-issue-month": {
-            "label": "Month"
-        },
-        "parent2-parent1-passport-issue-year": {
             "label": "Year"
         },
         "parent2-parent1-additional-information": {
@@ -477,10 +426,6 @@
         "parent2-parent2-country-of-birth": {
             "label": "Country of birth"
         },
-        "parent2-parent2-country-of-nationality": {
-            "label": "Nationality",
-            "hint": "At the time of the passport holder's birth"
-        },
         "parent2-parent2-age-day": {
             "label": "Day"
         },
@@ -488,19 +433,6 @@
             "label": "Month"
         },
         "parent2-parent2-age-year": {
-            "label": "Year"
-        },
-        "parent2-parent2-passport-number": {
-            "label": "Passport Number",
-            "hint": "If applicable, for example 502135326"
-        },
-        "parent2-parent2-passport-issue-day": {
-            "label": "Day"
-        },
-        "parent2-parent2-passport-issue-month": {
-            "label": "Month"
-        },
-        "parent2-parent2-passport-issue-year": {
             "label": "Year"
         },
         "parent2-parent2-additional-information": {
@@ -606,15 +538,25 @@
         "return-passport": {
             "required": "You must answer this question."
         },
+
         "parents-married": {
             "required": "You must answer this question."
         },
+
         "parent1-additional-information": {
             "required": "Explain why you can't provide details for mother or parent 1."
         },
+        "parent1-uk-passport": {
+            "required": "You must answer this question."
+        },
+
         "parent2-additional-information": {
             "required": "Explain why you can't provide details for father or parent 2."
         },
+        "parent2-uk-passport": {
+            "required": "You must answer this question."
+        },
+
         "parent1-parents-married": {
             "required": "You must answer this question."
         },
@@ -624,6 +566,7 @@
         "parent1-parent2-additional-information": {
             "required": "Explain why you can't provide details for maternal grandfather."
         },
+
         "parent2-parents-married": {
             "required": "You must answer this question."
         },
@@ -633,6 +576,7 @@
         "parent2-parent2-additional-information": {
             "required": "Explain why you can't provide details for paternal grandfather."
         },
+
         "can-sign": {
             "required": "You must answer this question."
         },
