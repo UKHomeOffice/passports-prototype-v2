@@ -1,12 +1,12 @@
 module.exports = {
     '/': {
+        controller: require('../../../controllers/init'), // Initialise
+        // controller: require('../../../controllers/go-overseas'),
         fields: [
             'apply-uk',
             'application-country'
         ],
-        controller: require('../../../controllers/init'), // Initialise
-        // controller: require('../../../controllers/go-overseas'),
-        backLink: './',
+        backLink: '../startpage',
         next: '/first-uk',
         /* if Yes is selected */
         nextAlt: 'what-do-you-want-to-do-overseas',
@@ -21,8 +21,7 @@ module.exports = {
         fields: [
             'application-for'
         ],
-        next: '/first-uk',
-        backLink: '../startpage'
+        next: '/first-uk'
     },
     '/first-uk': {
         backLink: './',
