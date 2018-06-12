@@ -12,5 +12,8 @@ app.get('/guidance/confirming-your-identity', function (req, res, next) {
 app.get('/guidance/recognised-professions', function (req, res, next) {
     res.render('guidance/recognised-professions');
 });
+app.get('/guidance/extra-guidance-for-first-time-applications', function (req, res, next) {
+    res.render('guidance/extra-guidance-for-first-time-applications');
+});
 
 module.exports = app;
