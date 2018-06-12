@@ -188,7 +188,10 @@
             "label": "Email"
         },
         "csig-name": {
-            "label": "The person’s full name"
+            "label": "The person’s first name"
+        },
+        "csig-last-name": {
+            "label": "The person’s last name"
         },
         "csig-email": {
             "label": "The person’s email"

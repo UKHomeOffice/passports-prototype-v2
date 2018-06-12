@@ -81,5 +81,11 @@ module.exports = {
       validate: [
           'required'
         ]
+  },
+  'csig-last-name': {
+      labelClassName: 'visuallyhidden',
+      validate: [
+          'required'
+        ]
   }
 };
