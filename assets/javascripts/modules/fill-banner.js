@@ -90,14 +90,12 @@
 
         "parent1-parent1-town-of-birth": "Bournemouth",
         "parent1-parent1-country-of-birth": "United Kingdom",
-        "parent1-parent1-country-of-nationality": "British",
         "parent1-parent1-age-day": "23",
         "parent1-parent1-age-month": "05",
         "parent1-parent1-age-year": "1920",
 
         "parent1-parent2-town-of-birth": "Norwich",
         "parent1-parent2-country-of-birth": "United Kingdom",
-        "parent1-parent2-country-of-nationality": "British",
         "parent1-parent2-age-day": "21",
         "parent1-parent2-age-month": "03",
         "parent1-parent2-age-year": "1922",
@@ -127,6 +125,8 @@
         $('#plain-expression-Yes').click();
         $('#shadows-face-Yes').click();
         $('#yes').click();
+
+        // Renew/Apply flow
         $('#title-Mr').click();
         $('#previous-name-false').click();
         $('#gender-M').click();
@@ -144,6 +144,7 @@
         $('#parent2-uk-passport-No').click();
         $('#parent1-parents-married-Unknown').click();
         $('#parent2-parents-married-Unknown').click();
+        $('#can-interview-true').click();
 
         // Change name
         $('#change-name-false').click();

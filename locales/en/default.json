@@ -188,7 +188,10 @@
             "label": "Email"
         },
         "csig-name": {
-            "label": "The person’s full name"
+            "label": "The person’s first name"
+        },
+        "csig-last-name": {
+            "label": "The person’s last name"
         },
         "csig-email": {
             "label": "The person’s email"
@@ -575,6 +578,13 @@
         },
         "parent2-parent2-additional-information": {
             "required": "Explain why you can't provide details for paternal grandfather."
+        },
+
+        "can-interview": {
+            "required": "You must answer this question."
+        },
+        "no-interview-reason": {
+            "required": "You must answer this question."
         },
 
         "can-sign": {

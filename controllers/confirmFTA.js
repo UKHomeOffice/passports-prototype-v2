@@ -50,7 +50,10 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         sections: []
     });
 
+
+    // Old passport
     var oldPassportFields = [];
+
     if (values['passport-number']) {
         response.sections.push({
             className: 'old-passport-details',
@@ -82,8 +85,10 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         };
     }
 
-    // Naturalisation/Registration details
+
+    // Naturalisation/Registration
     var naturalisationRegistrationFields = [];
+
     if (values['naturalisation-registration-certificate'] == true) { // If applicant is naturalised or registered
         response.sections.push({
             className: 'naturalisation-registration-details',
@@ -101,12 +106,15 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         });
     }
 
+
+    // New passport
     var newPassportFields = [];
-    var allPreviousNames = _.zip(values['previous-first-name'], values['previous-last-name']);
-    var previousNamesList = "";
-    for (i = 0; i < allPreviousNames.length; i++) {
-        previousNamesList += allPreviousNames[i].join(' ') + "<br>";
-    }
+
+    response.sections.push({
+        className: 'new-passport-details',
+        title: 'New passport',
+        fields: newPassportFields
+    });
 
     newPassportFields.push({
         step: this.getEditStep('name'),
@@ -129,27 +137,29 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         });
     }
 
+    var allPreviousNames = _.zip(values['previous-first-name'], values['previous-last-name']);
+    var previousNamesList = "";
+    for (i = 0; i < allPreviousNames.length; i++) {
+        previousNamesList += allPreviousNames[i].join(' ') + "<br>";
+    }
+
     newPassportFields.push({
         step: this.getEditStep('previous-first-name'),
         title: 'Previous names',
         value: values['previous-name'] ? previousNamesList : 'You have never been known by any other names'
+    }, {
+        step: this.getEditStep('gender'),
+        title: 'Gender',
+        value: values['gender'] === 'M' ? 'Male' : values['gender'] === 'F' ? 'Female' : ''
+    }, {
+        step: this.getEditStep('age-year'),
+        title: 'Date of birth',
+        value: moment(values['age-year'] + '-' + values['age-month'] + '-' + values['age-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+    }, {
+        step: this.getEditStep('town-of-birth'),
+        title: 'Town of birth',
+        value: values['town-of-birth']
     });
-
-    newPassportFields.push({
-            step: this.getEditStep('gender'),
-            title: 'Gender',
-            value: values['gender'] === 'M' ? 'Male' : values['gender'] === 'F' ? 'Female' : ''
-        }, {
-            step: this.getEditStep('age-year'),
-            title: 'Date of birth',
-            value: moment(values['age-year'] + '-' + values['age-month'] + '-' + values['age-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
-        }, {
-            step: this.getEditStep('town-of-birth'),
-            title: 'Town of birth',
-            value: values['town-of-birth']
-        }
-
-    );
 
     if (values['country-of-birth']) {
         newPassportFields.push({
@@ -188,12 +198,6 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             value: 'You can be recognised as the same person'
         }
     );
-
-    response.sections.push({
-        className: 'new-passport-details',
-        title: 'New passport',
-        fields: newPassportFields
-    });
 
 
     // Parents
@@ -522,31 +526,49 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     }
 
 
+    // Application
+    var applicationFields = [];
+
     response.sections.push({
         className: 'application-details',
         title: 'Application',
-        fields: [{
-                step: this.getEditStep('postcode'),
-                title: 'Address',
-                value: join(values, ['address1', 'address2', 'town', 'postcode'], '<br>')
-            },
-            {
-                step: this.getEditStep('email'),
-                title: 'Contact details',
-                value: join(values, ['email', 'mobile'], '<br><br>')
-            },
-            {
-                step: this.getEditStep('braille'),
-                title: 'Braille',
-                value: function () {
-                    var output = [];
-                    output.push(values['braille'] ? 'You require a braille sticker' : 'You don’t require a braille sticker');
-                    return output.join('<br><br>');
-                }
-            }
-        ]
+        fields: applicationFields
     });
 
+    if (values['can-interview']) {
+        applicationFields.push({
+            step: this.getEditStep('can-interview'),
+            title: 'Identity interview',
+            value: 'You can attend an interview.'
+        });
+    } else {
+        applicationFields.push({
+            step: this.getEditStep('no-interview-reason'),
+            title: 'Identity interview',
+            value: values['no-interview-reason'] ? 'You can’t attend an interview:<br>' + values['no-interview-reason'] : 'You can’t attend an interview'
+        });
+    }
+
+    applicationFields.push({
+        step: this.getEditStep('postcode'),
+        title: 'Address',
+        value: join(values, ['address1', 'address2', 'town', 'postcode'], '<br>')
+    }, {
+        step: this.getEditStep('email'),
+        title: 'Contact details',
+        value: join(values, ['email', 'mobile'], '<br><br>')
+    }, {
+        step: this.getEditStep('braille'),
+        title: 'Braille',
+        value: function () {
+            var output = [];
+            output.push(values['braille'] ? 'You require a braille sticker' : 'You don’t require a braille sticker');
+            return output.join('<br><br>');
+        }
+    });
+
+
+    // Cost
     response.sections.push({
         className: 'cost-details',
         title: 'Cost',

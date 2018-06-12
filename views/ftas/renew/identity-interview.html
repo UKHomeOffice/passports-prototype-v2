@@ -1,0 +1,30 @@
+{{< layout}}
+
+{{$pageTitle}}Identity interview{{/pageTitle}}
+
+{{$header}}
+    <h1>Identity interview</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+    {{$form}}
+        <p>Depending on the information you've provided, before you receive your new passport, you may need to attend an identity interview.</p>
+
+        {{#radio-group}}can-interview{{/radio-group}}
+        <div style="margin-top: -30px; margin-bottom: 30px;" id="no-interview" class="reveal js-hidden">
+            <div class="panel panel-border-narrow">
+                <label for="no-interview-reason" class="form-label-bold">
+                    Explain why you can’t attend an interview
+                    <span id="no-interview-reason-hint" class="form-hint">If you have evidence, include it when you send your documents. This must be a medical document, x, or y. </span>
+                </label>
+                {{#textarea}}no-interview-reason{{/textarea}}
+            </div>
+        </div>
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+{{/ layout}}

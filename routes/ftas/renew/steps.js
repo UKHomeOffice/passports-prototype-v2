@@ -73,7 +73,7 @@ module.exports = {
         nextAlt: './home-address-overseas'
     },
     '/naturalisation-registration-details': {
-        next: '/home-address',
+        next: '/identity-interview',
         fields: [
             'naturalisation-registration-certificate-number',
             'naturalisation-registration-certificate-issue-day',
@@ -201,6 +201,13 @@ module.exports = {
             'parent2-parents-marriage-day',
             'parent2-parents-marriage-month',
             'parent2-parents-marriage-year'
+        ],
+        next: '/identity-interview'
+    },
+    '/identity-interview': {
+        fields: [
+            'can-interview',
+            'no-interview-reason'
         ],
         next: '/home-address'
     },
