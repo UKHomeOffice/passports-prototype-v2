@@ -577,6 +577,13 @@
             "required": "Explain why you can't provide details for paternal grandfather."
         },
 
+        "can-interview": {
+            "required": "You must answer this question."
+        },
+        "no-interview-reason": {
+            "required": "You must answer this question."
+        },
+
         "can-sign": {
             "required": "You must answer this question."
         },
