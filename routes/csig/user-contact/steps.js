@@ -5,7 +5,7 @@ module.exports = {
         controller: require('../../../controllers/csig-email-pre')
     },
     '/give-csig-details': {
-      fields: ['csig-email', 'csig-name', 'contact-csig'],
+      fields: ['csig-email', 'csig-name', 'csig-last-name', 'contact-csig'],
       backLink: './',
       next: '/email-sent'
     },
