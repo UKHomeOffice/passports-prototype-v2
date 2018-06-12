@@ -334,6 +334,7 @@ module.exports = {
         next: '/declaration'
     },
     '/declaration': {
+        fields: ['declaration'],
         prereqs: [
             '/summary'
         ],
