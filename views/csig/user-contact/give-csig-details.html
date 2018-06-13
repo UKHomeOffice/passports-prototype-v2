@@ -14,25 +14,19 @@
             <label for="name" class="form-label-bold">
                 Their first name
             </label>
-            <span>
-                <input type="text" id="csig-name" class="form-control name" name="csig-name" value="" aria-describedby="name-prefix" aria-required="true">
-            </span>
+            {{#input-text}}csig-name{{/input-text}}
         </div>
         <div id="csig-name-group" class="form-group">
             <label for="name" class="form-label-bold">
               Last name
             </label>
-            <span>
-                <input type="text" id="csig-last-name" class="form-control name" name="csig-last-name" value="" aria-describedby="name-prefix" aria-required="true">
-            </span>
+            {{#input-text}}csig-last-name{{/input-text}}
         </div>
         <div id="csig-email-group" class="form-group">
             <label for="csig-email" class="form-label-bold">
                 Email
             </label>
-            <span>
-                <input type="text" id="csig-email" class="form-control name" name="csig-email" value="" aria-describedby="name-prefix" aria-required="true">
-            </span>
+          {{#input-text}}csig-email{{/input-text}}
         </div>
       </div>
       <p>You must contact this person before we send them an email with your details.</p>
