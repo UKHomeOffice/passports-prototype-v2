@@ -2,17 +2,12 @@ module.exports = {
     '/': {
       controller: require('../../../controllers/tracking'),
       fields: ['reference'],
-        next: '/track-postcode',
+        next: '/track-email',
     },
     '/track-email': {
         fields: ['age-day', 'age-month', 'age-year'],
-        next: '/waiting-for-old-pass',
-        backLink: 'track'
-    },
-    '/track-postcode': {
-        fields: ['age-day', 'age-month', 'age-year'],
         next: '/need-csig',
-        backLink: '/'
+        backLink: 'track'
     },
     '/waiting-for-old-pass': {
         next: '/track'
