@@ -8,7 +8,7 @@
 
 {{$content}}
 
-<p>Before we can send your new passport we need to see documents that prove your identity and nationality. We’ll check and return
+<p>Before we can send the new passport, we need to see documents that prove identity and nationality. We’ll check and return
   them to you.</p>
 
 <div class="panel panel-border-wide alert-default">
@@ -18,32 +18,28 @@
 
 <h2>You need to send:</h2>
 <ul class="list-bullet list-bullet-header-spacing">
-  <li>your full birth or adoption certificate</li>
+  <li>the applicant's full birth or adoption certificate</li>
+  <li>any court orders restricting parental responsibility or travel</li>
+  <li>1 document confirming you can make this application, for example a letter from the court, social services or a doctor</li>
 </ul>
 
-<h2>And 1 of the following for 1 of your parents:</h2>
+<h2>You also need to send:</h2>
+<h3>1 of the following for either parent:</h3>
 <ul class="list-bullet list-bullet-header-spacing">
-  <li>their full birth or adoption certificate</li>
-  <li>their naturalisation or registration certificate</li>
-  <li>the passport they had when you were born</li>
+  <li>full birth or adoption certificate</li>
+  <li>naturalisation or registration certificate</li>
+  <li>the passport they had when the applicant was born</li>
 </ul>
 
-<h2>And all of the following for both maternal grandparents:</h2>
+<p>If you send {{> partials-applicant-your-their}} father's (parent 2) certificate or passport, you need to send the marriage or civil partnership certificate to {{> partials-applicant-your-their}} mother (parent 1).</p>
+
+
+<h3>All of the following for every grandparent:</h3>
 <ul class="list-bullet list-bullet-header-spacing">
-  <li>their birth or adoption certificates</li>
-  <li>your grandfather's marriage certificate to your grandmother (if this applies)</li>
+  <li>birth or adoption certificates</li>
+  <li>grandfather's marriage certificate to grandmother (if this applies)</li>
 </ul>
 
-<h2>And all of the following for both paternal grandparents:</h2>
-<ul class="list-bullet list-bullet-header-spacing">
-  <li>their birth or adoption certificates</li>
-  <li>your grandfather's marriage certificate to your grandmother (if this applies)</li>
-</ul>
-
-<h2>And if you're sending your father or parent 2's certificate or passport, you also need to send:</h2>
-<ul class="list-bullet list-bullet-header-spacing">
-  <li>their marriage or civil partnership certificate to your mother or parent 1</li>
-</ul>
 
 {{< hmpo-partials-form}}
 {{$form}}
