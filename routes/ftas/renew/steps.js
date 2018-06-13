@@ -322,6 +322,9 @@ module.exports = {
     '/fta-docs': {
         next: '/required-documents'
     },
+    '/thirdparty-fta-docs': {
+        next: '/required-documents'
+    },
     '/name-change-docs': {
         next: '/declaration'
     },
