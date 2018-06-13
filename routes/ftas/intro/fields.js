@@ -1,4 +1,10 @@
 module.exports = {
+    'what-you-will-need-declaration': {
+        formatter: 'boolean',
+        validate: [
+            'required'
+        ]
+    },
     'choose-photo': {
       legend: {
         value: 'What are you trying to do?',
