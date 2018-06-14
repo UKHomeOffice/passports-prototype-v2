@@ -9,6 +9,7 @@ module.exports = {
     },
     '/what-you-need': {
         fields: ['what-you-will-need-declaration'],
+        backLink: './',
         next: '/you-need-a-photo'
     },
     '/you-need-a-photo': {
