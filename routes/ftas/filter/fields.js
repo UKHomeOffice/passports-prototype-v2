@@ -150,7 +150,7 @@ module.exports = {
             {
                 value: false,
                 label: 'No',
-                // toggle: 'passport-before-no'
+                toggle: 'passport-before-no'
             }
         ],
         formatter: ['boolean'],
