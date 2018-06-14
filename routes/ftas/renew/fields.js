@@ -1199,7 +1199,7 @@ module.exports = {
         options: [
             {
                 value: true,
-                label: 'I can take part in an interview',
+                label: 'I can attend an interview',
             },
             {
                 value: false,
