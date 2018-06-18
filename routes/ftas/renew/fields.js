@@ -1199,11 +1199,11 @@ module.exports = {
         options: [
             {
                 value: true,
-                label: 'I understand and can attend an interview',
+                label: 'I can attend an interview',
             },
             {
                 value: false,
-                label: 'I can’t attend an interview',
+                label: 'I have a disability and can’t attend',
                 toggle: 'no-interview'
             }
         ]

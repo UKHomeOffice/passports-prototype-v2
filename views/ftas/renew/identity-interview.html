@@ -10,14 +10,14 @@
 
 {{< hmpo-partials-form}}
     {{$form}}
-        <p>You may need to attend an identity interview before you can receive your new passport.</p>
+        <p>You may need to have an <a href="../../guidance/identity-interviews" target="_blank">identity interview</a>. Tell us if you have a mental or physical disability that would prevent you from taking part.</p>
 
         {{#radio-group}}can-interview{{/radio-group}}
         <div style="margin-top: -30px; margin-bottom: 30px;" id="no-interview" class="reveal js-hidden">
             <div class="panel panel-border-narrow">
                 <label for="no-interview-reason" class="form-label-bold">
                     Explain why you can’t attend
-                    <span id="no-interview-reason-hint" class="form-hint">Let us know if you have a mental or physical condition. If you have <a href="../../guidance/identity-interviews" target="_blank">medical evidence</a>, include it when you send your documents – this must be a letter from your doctor or hospital consultant.</span>
+                    <span id="no-interview-reason-hint" class="form-hint">You'll also need to send evidence from a doctor or consultant.</span>
                 </label>
                 {{#textarea}}no-interview-reason{{/textarea}}
             </div>

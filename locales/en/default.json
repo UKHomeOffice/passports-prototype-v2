@@ -5,7 +5,7 @@
     },
     "fields": {
         "what-you-will-need-declaration": {
-            "label": "I have these details and I'm ready to continue"
+            "label": "I have these details"
         },
 
         "country": {
