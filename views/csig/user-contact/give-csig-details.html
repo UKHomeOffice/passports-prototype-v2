@@ -6,7 +6,7 @@
 {{/header}}
 
 {{$content}}
-<p>We'll only contact this person about confirming your identity.</p>
+<p>We'll only contact this person about confirming {{^values.application-for}}the applicant's{{/values.application-for}} identity.</p>
 {{< hmpo-partials-form}}
     {{$form}}
       <div id="csig-number-group" class="form-group">
@@ -29,7 +29,8 @@
           {{#input-text}}csig-email{{/input-text}}
         </div>
       </div>
-      <p>You must contact this person before we send them an email with your details.</p>
+      <p>You must contact this person before we send them an email with <br>
+        application details.</p>
       <div id="contact-csig-group" class="form-group form-group-compound" style="margin-top:-15px">
         <label for="contact-csig" class="block-label">
           <input type="checkbox" id="contact-csig" name="contact-csig" value="true" aria-required="false" required="true">
