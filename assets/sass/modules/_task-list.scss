@@ -8,12 +8,12 @@
 }
 
 // Spacing to the left of the task list
-$task-list-indent: 35px;
+$task-list-indent: 0;
 
 .task-list {
   margin-top: $gutter;
   @include media(tablet) {
-    margin-top: ($gutter * 2);
+    margin-top: ($gutter);
   }
 }
 
@@ -49,19 +49,23 @@ $task-list-indent: 35px;
 
 .task-list-item {
   border-bottom: 1px solid $border-colour;
-  padding-top: $gutter-one-third;
-  padding-bottom: $gutter-one-third;
+  padding-top: $gutter-two-thirds;
+  padding-bottom: $gutter-two-thirds;
   @extend %contain-floats;
+  p {
+    display: inline-block;
+    margin: ($gutter-one-third) 0 0;
+  }
 }
 
 .task-list-item:first-child {
   border-top: 1px solid $border-colour;
 }
 
-
 .task-name {
   width: $two-thirds;
   float: left;
+  display: block;
 }
 
 .task-completed {
@@ -70,4 +74,18 @@ $task-list-indent: 35px;
   float: right;
   margin-right: 0;
   padding-top: 3px;
+  min-width: 110px;
+  text-align: center;
+}
+
+.task-to-do {
+  @include phase-tag;
+  background: none;
+  border: 1px solid #bfc1c3;
+  float: right;
+  margin-right: 0;
+  padding-top: 3px;
+  color: black;
+  min-width: 110px;
+  text-align: center;
 }

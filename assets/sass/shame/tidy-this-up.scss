@@ -1,3 +1,20 @@
+.sidebar-task {
+  margin-top: $gutter;
+  .sidebar-task__panel {
+    border: 1px solid #bfc1c3;
+    border-bottom: 0;
+    padding: 15px;
+    &:last-child {
+      border: 1px solid #bfc1c3;
+    }
+    h3, p {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+
 select {
     width: 100%;
     overflow: hidden;

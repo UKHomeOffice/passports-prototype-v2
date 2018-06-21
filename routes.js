@@ -94,6 +94,7 @@ app.use('/ftas/redirect-tracking', require('./routes/ftas/redirect-tracking'));
 
 
 //csig
+app.use('/csig/track', require('./routes/csig/track'));
 app.use('/csig/user', require('./routes/csig/user'));
 app.use('/csig/user-send-book', require('./routes/csig/user-send-book'));
 app.use('/csig/user-renominate', require('./routes/csig/user-renominate'));
