@@ -59,7 +59,8 @@ module.exports = {
         legend: {
             className: 'visuallyhidden'
         },
-
+        formatter: 'boolean',
+        validate: ['required'],
         options: [{
                 value: true,
                 label: 'I understand and will sign my passport',
