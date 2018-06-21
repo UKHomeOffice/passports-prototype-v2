@@ -11,6 +11,7 @@
 $task-list-indent: 0;
 
 .task-list {
+  clear: both;
   margin-top: $gutter;
   @include media(tablet) {
     margin-top: ($gutter);
@@ -73,7 +74,9 @@ $task-list-indent: 0;
   float: right;
   margin-right: 0;
   padding-top: 3px;
-  min-width: 110px;
+  @include media(tablet) {
+    min-width: 110px;
+  }
   text-align: center;
 }
 
