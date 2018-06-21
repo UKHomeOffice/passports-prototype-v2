@@ -7,32 +7,35 @@ module.exports = {
         backLink: '/../ftas/overseas/give-contact-details',
         next: '/what-you-need-overseas'
     },
+    '/how-to-apply': {
+        backLink: './',
+        next: '/what-you-need'
+    },
     '/what-you-need': {
         fields: ['what-you-will-need-declaration'],
-        backLink: './',
         next: '/you-need-a-photo'
     },
     '/you-need-a-photo': {
-      backLink: './what-you-need',
-      next: '/choose-photo-method'
+        backLink: './what-you-need',
+        next: '/choose-photo-method'
     },
     '/choose-photo-method': {
-      fields: ['choose-photo'],
-      next: '/../upload'
+        fields: ['choose-photo'],
+        next: '/../upload'
     },
     '/photo-retrieved': {
-      next: '/../uploadphoto'
+        next: '/../uploadphoto'
     },
     '/get-photo-code': {
-      fields: ['photo-code-photo'],
-      backLink: './choose-photo-method',
-      next: '/retrieving'
+        fields: ['photo-code-photo'],
+        backLink: './choose-photo-method',
+        next: '/retrieving'
     },
     '/retrieving': {
-      backLink: './get-photo-code',
+        backLink: './get-photo-code',
     },
     '/fetch-result': {
-      controller: require('../../../controllers/fetch-result')
+        controller: require('../../../controllers/fetch-result')
     },
     '/error': {
         backLink: './get-photo-code',

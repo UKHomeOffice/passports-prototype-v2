@@ -11,33 +11,28 @@
 {{< hmpo-partials-form}}
 {{$form}}
 
-      <p>By continuing you confirm that:</p>
-      <ul class="list-bullet">
-          <li>the information you've given is correct</li>
-          <li>you agree to the <a href="https://www.passport.service.gov.uk/help/terms-and-conditions" target="_blank">terms and conditions<span class="visuallyhidden">(opens in a new window)</span></a> on behalf of the applicant.</li>
+<p>By continuing you confirm that:</p>
+<ul class="list-bullet">
+    <li>the information you've given is correct</li>
+    {{^values.application-for}}
+        <li>you agree to the <a href="https://www.passport.service.gov.uk/help/terms-and-conditions" target="_blank">terms and conditions<span class="visuallyhidden">(opens in a new window)</span></a> on behalf of the applicant.</li>
+    {{/values.application-for}}
+    {{#values.application-for}}
+        <li>you agree to the <a href="https://www.passport.service.gov.uk/help/terms-and-conditions" class="new-window" target="_blank">terms and conditions<span class="visuallyhidden">(opens in a new window)</span></a></li>
+    {{/values.application-for}}
+</ul>
 
-      </ul>
-      <div class="panel-important">
-        <p>If you give untrue or misleading information, we may share information with the police in the UK or abroad and you could be prosecuted.</p>
-      </div>
+<div class="panel-important">
+    <p>If you give untrue or misleading information, we may share information with the police in the UK or abroad and you could be prosecuted.</p>
+</div>
 
-      <fieldset style="margin-top: -20px">
-          <legend class="visuallyhidden">You must agree in order to continue.</legend>
-          <div id="contact-prefs-email-group" class="form-group">
-              <label for="contact-prefs-email" class="block-label ">
-                  <input type="checkbox" id="contact-prefs-email" name="contact-prefs-email" value="true" aria-required="false" required="true">
-                      I agree
-              </label>
-          </div>
-          <a href="../renew/payment" class="button">Continue to payment</a><br/><br/>
-    </fieldset>
+{{#checkbox}}declaration{{/checkbox}}
 
+{{#input-submit}}declaration{{/input-submit}}
 
 {{/form}}
 {{/ hmpo-partials-form}}
 
-
 {{/content}}
-
 
 {{/ layout}}

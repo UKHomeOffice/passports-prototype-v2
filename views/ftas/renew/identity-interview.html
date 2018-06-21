@@ -1,0 +1,30 @@
+{{< layout}}
+
+{{$pageTitle}}Identity interview{{/pageTitle}}
+
+{{$header}}
+    <h1>Identity interview</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+    {{$form}}
+        <p>You may need to have an <a href="../../guidance/identity-interviews" target="_blank">identity interview</a>. Tell us if you have a mental or physical disability that would prevent you from taking part.</p>
+
+        {{#radio-group}}can-interview{{/radio-group}}
+        <div style="margin-top: -30px; margin-bottom: 30px;" id="no-interview" class="reveal js-hidden">
+            <div class="panel panel-border-narrow">
+                <label for="no-interview-reason" class="form-label-bold">
+                    Explain why you can’t attend
+                    <span id="no-interview-reason-hint" class="form-hint">You'll also need to send evidence from a doctor or consultant.</span>
+                </label>
+                {{#textarea}}no-interview-reason{{/textarea}}
+            </div>
+        </div>
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+{{/ layout}}

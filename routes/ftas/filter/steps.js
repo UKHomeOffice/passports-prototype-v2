@@ -1,13 +1,13 @@
 module.exports = {
     '/': {
+        controller: require('../../../controllers/init'), // Initialise
+        // controller: require('../../../controllers/go-overseas'),
         fields: [
             'apply-uk',
             'application-country'
         ],
-        controller: require('../../../controllers/init'), // Initialise
-        // controller: require('../../../controllers/go-overseas'),
-        backLink: './',
-        next: '/who-for',
+        backLink: '../startpage',
+        next: '/first-uk',
         /* if Yes is selected */
         nextAlt: 'what-do-you-want-to-do-overseas',
         /* if they are from Germany/France */
@@ -17,10 +17,11 @@ module.exports = {
         /* if they are from Spain - first hidden as renewal */
         nextAltAltAltAlt: '../overseas-not-available' /* if they are from Syria - not available */
     },
-    '/who-for':{
-      fields: ['application-for'],
-      next: '/first-uk',
-      backLink: './'
+    '/who-for': {
+        fields: [
+            'application-for'
+        ],
+        next: '/first-uk'
     },
     '/first-uk': {
         backLink: './',

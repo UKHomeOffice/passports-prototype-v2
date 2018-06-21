@@ -1205,6 +1205,44 @@ module.exports = {
             'required'
         ]
     },
+    'can-interview': {
+        legend: {
+            className: 'visuallyhidden'
+        },
+        formatter: 'boolean',
+        validate: [
+            'required'
+        ],
+        options: [
+            {
+                value: true,
+                label: 'I can attend an interview',
+            },
+            {
+                value: false,
+                label: 'I have a disability and can’t attend',
+                toggle: 'no-interview'
+            }
+        ]
+    },
+    'no-interview-reason': {
+        labelClassName: 'visuallyhidden',
+        legend: {
+            className: 'visuallyhidden'
+        },
+        className: 'textarea',
+        validate: [
+            'required',
+            {
+                type: 'maxlength',
+                arguments: 250
+            }
+        ],
+        dependent: {
+            field: 'can-interview',
+            value: false
+        }
+    },
     'passport-options': {
         legend: {
             value: 'Passport size'
@@ -1300,5 +1338,11 @@ module.exports = {
                 label: 'Standard post (free)'
             }
         ]
-    }
+    },
+    'declaration': {
+        formatter: 'boolean',
+        validate: [
+            'required'
+        ]
+    },
 };

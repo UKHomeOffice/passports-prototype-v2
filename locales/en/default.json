@@ -1,6 +1,7 @@
 {
     "buttons": {
-        "next": "Continue"
+        "next": "Continue",
+        "declaration": "Continue to payment"
     },
     "fields": {
         "what-you-will-need-declaration": {
@@ -344,10 +345,6 @@
         "parent1-parent1-country-of-birth": {
             "label": "Country of birth"
         },
-        "parent1-parent1-country-of-nationality": {
-            "label": "Nationality",
-            "hint": "At the time of the passport holder's birth"
-        },
         "parent1-parent1-age-day": {
             "label": "Day"
         },
@@ -355,19 +352,6 @@
             "label": "Month"
         },
         "parent1-parent1-age-year": {
-            "label": "Year"
-        },
-        "parent1-parent1-passport-number": {
-            "label": "Passport Number",
-            "hint": "If applicable, for example 502135326"
-        },
-        "parent1-parent1-passport-issue-day": {
-            "label": "Day"
-        },
-        "parent1-parent1-passport-issue-month": {
-            "label": "Month"
-        },
-        "parent1-parent1-passport-issue-year": {
             "label": "Year"
         },
         "parent1-parent1-additional-information": {
@@ -387,10 +371,6 @@
         "parent1-parent2-country-of-birth": {
             "label": "Country of birth"
         },
-        "parent1-parent2-country-of-nationality": {
-            "label": "Nationality",
-            "hint": "At the time of the passport holder's birth"
-        },
         "parent1-parent2-age-day": {
             "label": "Day"
         },
@@ -398,19 +378,6 @@
             "label": "Month"
         },
         "parent1-parent2-age-year": {
-            "label": "Year"
-        },
-        "parent1-parent2-passport-number": {
-            "label": "Passport Number",
-            "hint": "If applicable, for example 502135326"
-        },
-        "parent1-parent2-passport-issue-day": {
-            "label": "Day"
-        },
-        "parent1-parent2-passport-issue-month": {
-            "label": "Month"
-        },
-        "parent1-parent2-passport-issue-year": {
             "label": "Year"
         },
         "parent1-parent2-additional-information": {
@@ -441,10 +408,6 @@
         "parent2-parent1-country-of-birth": {
             "label": "Country of birth"
         },
-        "parent2-parent1-country-of-nationality": {
-            "label": "Nationality",
-            "hint": "At the time of the passport holder's birth"
-        },
         "parent2-parent1-age-day": {
             "label": "Day"
         },
@@ -452,19 +415,6 @@
             "label": "Month"
         },
         "parent2-parent1-age-year": {
-            "label": "Year"
-        },
-        "parent2-parent1-passport-number": {
-            "label": "Passport Number",
-            "hint": "If applicable, for example 502135326"
-        },
-        "parent2-parent1-passport-issue-day": {
-            "label": "Day"
-        },
-        "parent2-parent1-passport-issue-month": {
-            "label": "Month"
-        },
-        "parent2-parent1-passport-issue-year": {
             "label": "Year"
         },
         "parent2-parent1-additional-information": {
@@ -484,10 +434,6 @@
         "parent2-parent2-country-of-birth": {
             "label": "Country of birth"
         },
-        "parent2-parent2-country-of-nationality": {
-            "label": "Nationality",
-            "hint": "At the time of the passport holder's birth"
-        },
         "parent2-parent2-age-day": {
             "label": "Day"
         },
@@ -495,19 +441,6 @@
             "label": "Month"
         },
         "parent2-parent2-age-year": {
-            "label": "Year"
-        },
-        "parent2-parent2-passport-number": {
-            "label": "Passport Number",
-            "hint": "If applicable, for example 502135326"
-        },
-        "parent2-parent2-passport-issue-day": {
-            "label": "Day"
-        },
-        "parent2-parent2-passport-issue-month": {
-            "label": "Month"
-        },
-        "parent2-parent2-passport-issue-year": {
             "label": "Year"
         },
         "parent2-parent2-additional-information": {
@@ -531,6 +464,10 @@
         },
         "third-party-last-name": {
             "label": "Last name"
+        },
+
+        "declaration": {
+            "label": "I agree"
         }
     },
     "error": {
@@ -656,12 +593,22 @@
             "required": "Explain why you can't provide details for paternal grandfather."
         },
 
+        "can-interview": {
+            "required": "You must answer this question."
+        },
+        "no-interview-reason": {
+            "required": "You must answer this question."
+        },
         "can-sign": {
             "required": "You must answer this question."
         },
         "secure-return": {
             "required": "You must answer this question."
         },
+        "declaration": {
+            "required": "You must agree with the declaration to use this service."
+        },
+
         "email": "You must enter a valid email",
         "exactlength": "{{label}} must be 9 characters",
         "ninoformat": "{{label}} format incorrect"
