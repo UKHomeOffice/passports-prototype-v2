@@ -12,39 +12,25 @@
 .circle {background: #DEE0E2; color: #000}
 </style>
 <header class="update-notice">
-    <h1><span class="icon-tick"></span> Application submitted</h1>
-    <p>Application reference: <strong>PEX 319 825 680X</strong></p>
+    <h1><span class="icon-tick"></span>Payment successful</h1>
         <p>Your payment: £{{values.cost}}0, reference: IE19852</p>
     <p>Email confirmation sent to <strong>{{values.email}}</strong></p>
-    <a href="#" class="download">Download PDF receipt</a>
 </header>
 
-
-<h1>What you need to do</h1>
+<h2>What you need to do</h2>
 
 <p>Before we can start this application, you need to:</p>
 
-    <span class="circle circle-step">1</span>
-    <h2>Ask someone to confirm {{^values.application-for}}the applicant's{{/values.application-for}} identity</h2>
-    <p style="margin-left:32px;">They can do this online &ndash; they don't need to sign a printed photo. <br>
-      You'll need to provide their name and email.</p>
+<h3>1. Ask someone to confirm {{^values.application-for}}the applicant's{{/values.application-for}} identity</h3>
+<p>They can do this online &ndash; they don't need to sign a printed photo. You'll need to provide their name and email.</p>
 
-<span class="circle circle-step">2</span>
-<h2>Get your documents ready</h2>
-<p style="margin-left:32px;">Once we've confirmed your identity, you'll need to send <a href="fta-docs">your documents</a>. We'll let you know where to send them. <br>
-</p>
-<p>You can sign in to do this later and to track your application. The details are in your confirmation email.</p>
 
-<!-- <div class="panel panel-border-wide alert-default">
-    <p>If there are any court orders restricting parental responsibility or travel, you must include them.</p>
-</div> -->
+<h3>2. Get your documents ready</h3>
+<p>Once we've confirmed your identity, you'll need to send your documents. We'll let you know where to send them.</p>
 
-<a href="/../csig/user-contact" class="button">Continue</a>
-<br/>
-<br/>
 
-<p><a href="http://www.gov.uk">I'll do this later (sign out)</a></p>
-</br>
+<a href="/../csig/track" class="button">Continue</a>
+
 </div>
 
 {{/form}}

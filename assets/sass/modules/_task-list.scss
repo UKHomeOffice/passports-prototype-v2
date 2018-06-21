@@ -39,7 +39,7 @@ $task-list-indent: 0;
 .task-list-items {
   margin-bottom: $gutter;
   @include media(tablet) {
-    margin-bottom: ($gutter * 2);
+    //margin-bottom: ($gutter * 2);
   }
 
   @include media(tablet) {
@@ -68,9 +68,8 @@ $task-list-indent: 0;
   display: block;
 }
 
-.task-completed {
+%task-item {
   @include phase-tag;
-  background: #005ea5;
   float: right;
   margin-right: 0;
   padding-top: 3px;
@@ -80,12 +79,19 @@ $task-list-indent: 0;
 
 .task-to-do {
   @include phase-tag;
-  background: none;
-  border: 1px solid #bfc1c3;
-  float: right;
-  margin-right: 0;
-  padding-top: 3px;
-  color: black;
-  min-width: 110px;
-  text-align: center;
+  @extend %task-item;
+  background: $grey-3;
+  color: $text-colour;
+}
+
+.task-pending {
+  @include phase-tag;
+  @extend %task-item;
+  background: $grey-1;
+}
+
+.task-completed {
+  @include phase-tag;
+  @extend %task-item;
+  background: $govuk-blue;
 }
