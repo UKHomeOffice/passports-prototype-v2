@@ -13,16 +13,15 @@
     {{$form}}
         {{#values.feckless-teenager}}
           <p>It’s easiest if someone with parental responsibility makes this application. If not, you should get permission from the person who does.</p>
-          </div>
         {{/values.feckless-teenager}}
         {{#input-text}}third-party-first-name{{/input-text}}
         {{#input-text}}third-party-last-name{{/input-text}}
 
-        {{#values.third-party}}
+        {{#values.16-or-older}}
           <h2>Explain why the applicant can't apply</h2>
           <p class="form-hint" id="dob-hint">We'll let you know what evidence to send.</span></p>
           {{#textarea}}other-why-apply{{/textarea}}
-        {{/values.third-party}}
+        {{/values.16-or-older}}
 
         {{#input-submit}}{{/input-submit}}
 

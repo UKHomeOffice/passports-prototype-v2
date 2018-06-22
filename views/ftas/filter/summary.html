@@ -1,154 +1,28 @@
 {{< layout}}
 
-{{$propositionHeader}}{{/propositionHeader}}
+{{$pageTitle}}Applying for your first UK passport{{/pageTitle}}
 
-{{$pageTitle}}Your application{{/pageTitle}}
+{{$header}}
+<h1>Apply for a first UK passport</h1>
+{{/header}}
 
 {{$content}}
-  {{< hmpo-partials-form}}
-    {{$form}}
-      <!-- <header>
-        {{#values.16-or-older}}
-          <h1>Renewing an adult passport</h1>
-        {{/values.16-or-older}}
-        {{^values.16-or-older}}
-          <h1>Renewing a child passport</h1>
-        {{/values.16-or-older}}
 
-      </header> -->
+{{< hmpo-partials-form}}
+{{$form}}
 
-      <h1>What you'll need</h2>
+<p>Based on your answers, you're applying for a first UK passport. If this is incorrect, <a href="./filter">start again</a>.</p>
 
-      <p>You must have everything ready before you start your application.</p>
+<p>You need to have <a href="https://www.gov.uk/types-of-british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
 
-      <!-- {{#values.feckless-teenager}}
-        <div class="panel panel-border-wide alert-default" style="margin-bottom:20px">
-            <p>Your child is aged between 16-19</p>
-        </div>
-      {{/values.feckless-teenager}}
-      {{#values.16-or-older}}
-        <p>Based on your answers, you're renewing an adult passport {{^values.application-for}}on behalf of someone else{{/values.application-for}}. If this is not correct, <a href="./">start again</a>.</p>
-      {{/values.16-or-older}}
-      {{^values.16-or-older}}
-        <p>Based on your answers, you're renewing a child passport. If this is not correct, <a href="./">start again</a></p>
-      {{/values.16-or-older}} -->
+<p>It should take around 6 weeks to get a new passport.</p>
 
-      {{#values.16-or-older}}
-        <h2>You'll need:</h2>
-        <ul class="list-bullet">
-          <li>the applicant's old passport</li>
-          <li>a digital photo of the applicant - we'll show you how to get one</li>
-          <li>to explain why the applicant can't make this application</li>
-          <li>a debit or credit card</li>
-        </ul>
+<a href="/ftas/intro" class="button">Continue</a>
+<br>
 
-        <h2>You'll need to send us:</h2>
-        <ul class="list-bullet">
-          <li>the applicant's old passport</li>
-          {{^values.application-for}}
-          <li>1 document confirming you can make this application, for example a letter from the court, social services or a doctor</li>
-          {{/values.application-for}}
-        </ul>
+{{/form}}
+{{/ hmpo-partials-form}}
 
-
-      {{/values.16-or-older}}
-      {{^values.16-or-older}}
-        <h2>You'll need:</h2>
-        <ul class="list-bullet">
-          <li>the child's old passport</li>
-          <li>passport details of both parents</li>
-          <li>date and place of birth of both parents</li>
-          <li>a digital photo of the child - we'll show you how to get one</li>
-          <li>a debit or credit card</li>
-        </ul>
-
-        <p>If you can't provide both parents' details, you'll need to tell us why.</p>
-
-        <h2>You'll need to send us:</h2>
-        <ul class="list-bullet">
-          <li>the child's old passport</li>
-          <li>any court orders restricting parental responsibility or travel</li>
-        </ul>
-
-      {{/values.16-or-older}}
-
-
-
-      <fieldset>
-          <legend class="visuallyhidden">You need these details to continue.</legend>
-          <div id="contact-prefs-email-group" class="form-group form-group-compound">
-              <label for="contact-prefs-email" class="block-label ">
-                  <input type="checkbox" id="contact-prefs-email" name="contact-prefs-email" value="true" aria-required="false" required="true">
-                      I have all of these details 
-              </label>
-          </div>
-      </fieldset>
-      <p></p>
-      <p>We may ask for more information depending on what you tell us.</p>
-
-
-
-
-
-
-
-      <!-- {{^values.application-for}}
-        <p>Third party application.</p>
-      {{/values.application-for}} -->
-      <!-- <div class="confirmation">
-        <div class="section old-passport-details">
-            <dl class="passport-number">
-                <dt class="column-two-thirds column-long">Who is the new passport for?</dt>
-                <dd class="column-one-third">
-                  <p>{{values.applicant-check-friend}}</p>
-                  <div class="button-wrapper">
-                      <a href="./apply-uk/edit">Change</a>
-                  </div>
-                </dd>
-            </dl>
-            <dl class="expiry-date">
-                <dt class="column-two-thirds column-long">Lost or stolen</dt>
-                <dd class="column-one-third">
-                  <p>{{values.applicant-check-address}}</p>
-                  <div class="button-wrapper">
-                      <a href="./">Change</a>
-                  </div>
-                </dd>
-            </dl>
-            <dl class="passport-number">
-                <dt class="column-two-thirds column-long">Issue date</dt>
-                <dd class="column-one-third">
-                  <p>{{values.knowntime}}</p>
-                  <div class="button-wrapper">
-                      <a href="./">Change</a>
-                  </div>
-                </dd>
-            </dl>
-            <dl class="passport-number">
-                <dt class="column-two-thirds column-long">Date of birth</dt>
-                <dd class="column-one-third">
-                  <p>{{values.knowntime}}</p>
-                  <div class="button-wrapper">
-                      <a href="./dob/edit">Change</a>
-                  </div>
-                </dd>
-            </dl>
-        </div>
-      </div> -->
-      <!-- <p>Based on your answers, you're:</p>
-      {{^values.application-for}}
-        <p>on behalf of someone else.</p>
-      {{/values.application-for}} -->
-      <!-- <div class="prototype-box prototype-box__header">
-
-      </div> -->
-
-      <a class="button" href="../intro">Continue</a>
-      <br><br>
-      <!-- <a href="./">Answer questions again</a> -->
-
-    {{/ form}}
-  {{/ hmpo-partials-form}}
 {{/ content}}
 
 {{/ layout}}
