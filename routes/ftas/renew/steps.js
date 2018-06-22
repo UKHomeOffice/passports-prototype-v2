@@ -272,7 +272,13 @@ module.exports = {
             'braille'
         ],
         next: '/sign',
-        backLink: './dual-national'
+        backLink: './dual-national',
+        forks: [{
+            target: '/sign-third-party',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['application-for'] == false;
+            }
+        }],
     },
     '/passport-options-overseas': {
         fields: [
@@ -295,7 +301,7 @@ module.exports = {
     '/sign-third-party': {
         fields: [
             'can-sign-third-party',
-            'no-sign-reason'
+            'no-sign-reason-third-party'
         ],
         backLink: 'passport-options',
         next: '/passport-special-delivery',
