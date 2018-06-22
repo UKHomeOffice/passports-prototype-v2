@@ -138,7 +138,7 @@ module.exports = {
     //     backLink: './dob',
     //     next: '/passport-expiry',
     //     forks: [{
-    //         target: '/../intro',
+    //         target: '/summary',
     //         condition: function (req, res) {
     //             return req.session['hmpo-wizard-common']['passport-before'] == false; // If they are BELOW 16 + NOT had UK passport before
     //         }
@@ -165,13 +165,13 @@ module.exports = {
             'passport-damaged'
         ],
         backLink: './',
-        next: '/../intro' // If their passport is NOT damaged
+        next: '/summary' // If their passport is NOT damaged
     },
     '/dual-national': {
       controller: require('../../../controllers/go-overseas'),
       fields: ['dual-nationality'],
       backLink: './passport-damaged',
-      next: '/../intro',
+      next: '/summary',
       nextAlt: '../overseas',
       forks: [{
         target: '/relationship-applicant',
@@ -191,7 +191,7 @@ module.exports = {
       backLink: './relationship-applicant',
       next: '/parental-responsibility',
       forks: [{
-        target: '/../intro',
+        target: '/summary',
         condition: function(req, res) {
           return req.session['hmpo-wizard-common']['16-or-older'] == true;
         }
@@ -200,9 +200,9 @@ module.exports = {
     '/parental-responsibility': {
       fields: ['parental-responsibility'],
       backLink: './relationship-applicant',
-      next: '/../intro'
+      next: '/summary'
     },
-    // '/summary': {
-    //   next: '/../intro'
-    // }
+    '/summary': {
+      next: '/../intro'
+    }
 };
