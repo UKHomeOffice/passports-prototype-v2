@@ -14,7 +14,12 @@
 <p>By continuing you confirm that:</p>
 <ul class="list-bullet">
     <li>the information you've given is correct</li>
-    <li>you agree to the <a href="https://www.passport.service.gov.uk/help/terms-and-conditions" class="new-window" target="_blank">terms and conditions<span class="visuallyhidden">(opens in a new window)</span></a></li>
+    {{^values.application-for}}
+        <li>you agree to the <a href="https://www.passport.service.gov.uk/help/terms-and-conditions" target="_blank">terms and conditions<span class="visuallyhidden">(opens in a new window)</span></a> on behalf of the applicant.</li>
+    {{/values.application-for}}
+    {{#values.application-for}}
+        <li>you agree to the <a href="https://www.passport.service.gov.uk/help/terms-and-conditions" class="new-window" target="_blank">terms and conditions<span class="visuallyhidden">(opens in a new window)</span></a></li>
+    {{/values.application-for}}
 </ul>
 
 <div class="panel-important">

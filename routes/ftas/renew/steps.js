@@ -3,9 +3,9 @@ module.exports = {
         backLink: '../uploadphoto/check-photo-and-submit',
         fields: [
             'passport-number',
-            'expiry-day',
-            'expiry-month',
-            'expiry-year'
+            // 'expiry-day',
+            // 'expiry-month',
+            // 'expiry-year'
         ],
         next: '/name'
     },
@@ -146,7 +146,13 @@ module.exports = {
         ],
         next: '/parent-1-grandparents',
         // controller: require('../../../controllers/go-overseas'),
-        nextAlt: './home-address-overseas'
+        nextAlt: './home-address-overseas',
+        forks: [{
+            target: '/home-address',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['application-for'] == false;
+            }
+        }],
     },
     '/parent-1-grandparents': {
         controller: require('../../../controllers/validation-parent-1-grandparents'),
@@ -266,7 +272,13 @@ module.exports = {
             'braille'
         ],
         next: '/sign',
-        backLink: './dual-national'
+        backLink: './dual-national',
+        forks: [{
+            target: '/sign-third-party',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['application-for'] == false;
+            }
+        }],
     },
     '/passport-options-overseas': {
         fields: [
@@ -279,6 +291,17 @@ module.exports = {
         fields: [
             'can-sign',
             'no-sign-reason'
+        ],
+        backLink: 'passport-options',
+        next: '/passport-special-delivery',
+        /* if they are from the UK */
+        controller: require('../../../controllers/go-overseas'),
+        nextAlt: './summary-overseas'
+    },
+    '/sign-third-party': {
+        fields: [
+            'can-sign-third-party',
+            'no-sign-reason-third-party'
         ],
         backLink: 'passport-options',
         next: '/passport-special-delivery',
@@ -310,6 +333,9 @@ module.exports = {
         controller: require('../../../controllers/change-of-name-docsFTA')
     },
     '/fta-docs': {
+        next: '/required-documents'
+    },
+    '/thirdparty-fta-docs': {
         next: '/required-documents'
     },
     '/name-change-docs': {

@@ -4,10 +4,10 @@
 
 {{$header}}
   {{#values.change-name}}
-    <h1>Your previous names</h1>
+    <h1>Previous names</h1>
   {{/values.change-name}}
   {{^values.change-name}}
-    <h1>Have you ever been known by any other names?</h1>
+    <h1>Have {{> partials-applicant-you-they}} ever been known by any other names?</h1>
   {{/values.change-name}}
 {{/header}}
 
@@ -17,7 +17,7 @@
 {{$form}}
 
 {{#values.change-name}}
-  <p>Tell us the name on your birth or adoption certificate and any other names you've been known by.</p>
+  <p>Tell us the name on {{> partials-applicant-your-their}} birth or adoption certificate and any other names {{> partials-applicant-you-they}} have been known by.</p>
   <input type="hidden" name="previous-name" value="true" required="true">
 {{/values.change-name}}
 
@@ -26,7 +26,7 @@
 {{/values.change-name}}
 
 <div id="previous-names" class="previous-names-form {{^values.change-name}}js-hidden{{/values.change-name}} reveal">
-  <h2>List all your previous names</h2>
+  <h2>List all previous names</h2>
   <br>
   <div class="grid-row duplicate-row">
     <div class="fields-wrap">
@@ -52,7 +52,7 @@
       </div>
     </div>
   </div>
-  
+
   <!--hidden row -->
   <div class="grid-row duplicate-row-template js-hidden">
     <div class="fields-wrap">

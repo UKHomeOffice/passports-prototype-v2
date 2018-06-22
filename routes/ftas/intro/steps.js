@@ -1,7 +1,7 @@
 module.exports = {
     '/': {
         backLink: '/../ftas/filter/dual-national',
-        next: '/how-to-apply'
+        next: '/what-you-need'
     },
     '/before-you-continue-overseas': {
         backLink: '/../ftas/overseas/give-contact-details',

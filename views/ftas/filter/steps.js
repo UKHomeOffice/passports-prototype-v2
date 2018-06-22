@@ -1,12 +1,12 @@
 module.exports = {
     '/': {
-        //controller: require('../../../controllers/init'), // Initialise
-        // controller: require('../../../controllers/go-overseas'),
         fields: [
             'apply-uk',
             'application-country'
         ],
-        backLink: '../startpage',
+        controller: require('../../../controllers/init'), // Initialise
+        // controller: require('../../../controllers/go-overseas'),
+        backLink: './',
         next: '/who-for',
         /* if Yes is selected */
         nextAlt: 'what-do-you-want-to-do-overseas',
@@ -17,15 +17,13 @@ module.exports = {
         /* if they are from Spain - first hidden as renewal */
         nextAltAltAltAlt: '../overseas-not-available' /* if they are from Syria - not available */
     },
-    '/who-for': {
-        backLink: './',
-        fields: [
-            'application-for'
-        ],
-        next: '/first-uk'
+    '/who-for':{
+      fields: ['application-for'],
+      next: '/first-uk',
+      backLink: './'
     },
     '/first-uk': {
-        backLink: '/who-for',
+        backLink: './',
         fields: [
             'passport-before'
         ],
@@ -115,8 +113,7 @@ module.exports = {
             'age-year',
             'age-month'
         ],
-        //controller: require('../../../controllers/go-overseas'),
-        controller: require('../../../controllers/check-dob'),
+        controller: require('../../../controllers/go-overseas'),
         backLink: './lost-stolen',
         next: '/passport-expiry',
         forks: [
@@ -129,21 +126,21 @@ module.exports = {
             }
         ]
     },
-    // '/dob-below-16': {
-    //     fields: [
-    //         'age-day',
-    //         'age-year',
-    //         'age-month'
-    //     ],
-    //     backLink: './dob',
-    //     next: '/passport-expiry',
-    //     forks: [{
-    //         target: '/../intro',
-    //         condition: function (req, res) {
-    //             return req.session['hmpo-wizard-common']['passport-before'] == false; // If they are BELOW 16 + NOT had UK passport before
-    //         }
-    //     }]
-    // },
+    '/dob-below-16': {
+        fields: [
+            'age-day',
+            'age-year',
+            'age-month'
+        ],
+        backLink: './dob',
+        next: '/passport-expiry',
+        forks: [{
+            target: '/../intro',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they are BELOW 16 + NOT had UK passport before
+            }
+        }]
+    },
     '/passport-expiry': {
         fields: [
             'issue-day',
@@ -171,7 +168,7 @@ module.exports = {
       controller: require('../../../controllers/go-overseas'),
       fields: ['dual-nationality'],
       backLink: './passport-damaged',
-      next: '/../intro',
+      next: '/summary',
       nextAlt: '../overseas',
       forks: [{
         target: '/relationship-applicant',
@@ -184,25 +181,20 @@ module.exports = {
       fields: ['relationship-applicant', 'other-why-apply'],
       backLink: './dual-national',
       next: '/third-party-name',
-      controller: require('../../../controllers/third-parties'),
+      controller: require('../../../controllers/social-worker')
     },
     '/third-party-name': {
       fields: ['third-party-first-name', 'third-party-last-name'],
       backLink: './relationship-applicant',
-      next: '/parental-responsibility',
-      forks: [{
-        target: '/../intro',
-        condition: function(req, res) {
-          return req.session['hmpo-wizard-common']['16-or-older'] == true;
-        }
-      }],
+      controller: require('../../../controllers/parental-responsibility')
     },
     '/parental-responsibility': {
       fields: ['parental-responsibility'],
       backLink: './relationship-applicant',
-      next: '/../intro'
+      next: '/summary'
     },
-    // '/summary': {
-    //   next: '/../intro'
-    // }
+    '/summary': {
+      next: '/../intro'
+    }
+
 };
