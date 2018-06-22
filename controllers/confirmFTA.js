@@ -329,7 +329,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     // Maternal grandparents
     var parent1ParentsFields = [];
 
-    if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
+    if (values['naturalisation-registration-certificate'] == false && // If applicant is NOT naturalised or registered
+        values['application-for'] == true) { // If Who am I applying for is 'Me'
         response.sections.push({
             className: 'parent1-parents-details',
             title: 'Maternal grandparents',
@@ -357,7 +358,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     // Maternal grandmother
     var parent1Parent1Fields = [];
 
-    if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
+    if (values['naturalisation-registration-certificate'] == false && // If applicant is NOT naturalised or registered
+        values['application-for'] == true) { // If Who am I applying for is 'Me'
         response.sections.push({
             className: 'parent1-parent1-details',
             title: 'Maternal grandmother',
@@ -393,7 +395,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     // Maternal grandfather
     var parent1Parent2Fields = [];
 
-    if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
+    if (values['naturalisation-registration-certificate'] == false && // If applicant is NOT naturalised or registered
+        values['application-for'] == true) { // If Who am I applying for is 'Me'
         response.sections.push({
             className: 'parent1-parent2-details',
             title: 'Maternal grandfather',
@@ -429,7 +432,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     // Paternal grandparents
     var parent2ParentsFields = [];
 
-    if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
+    if (values['naturalisation-registration-certificate'] == false && // If applicant is NOT naturalised or registered
+        values['application-for'] == true) { // If Who am I applying for is 'Me'
         response.sections.push({
             className: 'parent2-parents-details',
             title: 'Paternal grandparents',
@@ -457,7 +461,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     // Paternal grandmother
     var parent2Parent1Fields = [];
 
-    if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
+    if (values['naturalisation-registration-certificate'] == false && // If applicant is NOT naturalised or registered
+        values['application-for'] == true) { // If Who am I applying for is 'Me'
         response.sections.push({
             className: 'parent2-parent1-details',
             title: 'Paternal grandmother',
@@ -493,7 +498,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     // Paternal grandfather
     var parent2Parent2Fields = [];
 
-    if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
+    if (values['naturalisation-registration-certificate'] == false && // If applicant is NOT naturalised or registered
+        values['application-for'] == true) { // If Who am I applying for is 'Me'
         response.sections.push({
             className: 'parent2-parent2-details',
             title: 'Paternal grandfather',
