@@ -1,13 +1,13 @@
 module.exports = {
     '/': {
-        controller: require('../../../controllers/init'), // Initialise
+        //controller: require('../../../controllers/init'), // Initialise
         // controller: require('../../../controllers/go-overseas'),
         fields: [
             'apply-uk',
             'application-country'
         ],
         backLink: '../startpage',
-        next: '/first-uk',
+        next: '/who-for',
         /* if Yes is selected */
         nextAlt: 'what-do-you-want-to-do-overseas',
         /* if they are from Germany/France */
@@ -18,13 +18,14 @@ module.exports = {
         nextAltAltAltAlt: '../overseas-not-available' /* if they are from Syria - not available */
     },
     '/who-for': {
+        backLink: './',
         fields: [
             'application-for'
         ],
         next: '/first-uk'
     },
     '/first-uk': {
-        backLink: './',
+        backLink: '/who-for',
         fields: [
             'passport-before'
         ],
