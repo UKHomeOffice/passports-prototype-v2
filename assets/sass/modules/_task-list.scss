@@ -68,10 +68,13 @@ $task-list-indent: 0;
   float: left;
   display: block;
   font-weight: 900;
+  font-size: 24px;
+  text-decoration: none;
 }
 
 .task-name-complete {
   font-weight: 900;
+  font-size: 24px;
   &:hover {
   color: $text-colour;
   }
@@ -83,14 +86,18 @@ $task-list-indent: 0;
   margin-right: 0;
   padding-top: 3px;
   @include media(tablet) {
-    min-width: 110px;
+    min-width: 80px;
+    font-size: 14px;
   }
   text-align: center;
+
 }
 
 .task-to-do {
   @extend %task-item;
-  background: $grey-3;
+
+  background: none;
+  border: 1px solid $grey-2;
   color: $text-colour;
 }
 
