@@ -118,7 +118,7 @@ module.exports = {
         //controller: require('../../../controllers/go-overseas'),
         controller: require('../../../controllers/check-dob'),
         backLink: './lost-stolen',
-        next: '/passport-expiry',
+        next: '/passport-date-of-issue',
         forks: [
             {
                 target: '/naturalisation-registration-details',
@@ -136,7 +136,7 @@ module.exports = {
     //         'age-month'
     //     ],
     //     backLink: './dob',
-    //     next: '/passport-expiry',
+    //     next: '/passport-date-of-issue',
     //     forks: [{
     //         target: '/summary',
     //         condition: function (req, res) {
@@ -144,19 +144,18 @@ module.exports = {
     //         }
     //     }]
     // },
-    '/passport-expiry': {
+    '/passport-date-of-issue': {
+        controller: require('../../../controllers/check-old-blue'),
         fields: [
             'issue-day',
             'issue-month',
             'issue-year'
         ],
-        backLink: '../filter/dob',
-        next: '/naturalisation-registration-details',
-        forks: [{ // If they are NOT a UK Hidden FTA
-            target: '/dual-national',
-            condition: function (req, res) { // Logic below is to deal with 2-digit and 4-digit input of year and make it work, because any years input as 02–18 is unlikely to mean 1902–1918 but 2002–present
-                return req.session['hmpo-wizard-common']['issue-year'] >= 2002 // If their passport's date of issue is > 2002 (2002—present) ||
-                    req.session['hmpo-wizard-common']['issue-year'] >= 02 && req.session['hmpo-wizard-common']['issue-year'] <= 18; // If their passport's date of issue is >= 2002 (2002–2018)
+        next: '/dual-national', // If they are NOT a UK Hidden FTA
+        forks: [{ // If they are a UK Hidden FTA
+            target: '/naturalisation-registration-details',
+            condition: function(req, res) {
+              return req.session['hmpo-wizard-common']['old-blue'] == true;
             }
         }]
     },
@@ -164,13 +163,11 @@ module.exports = {
         fields: [
             'passport-damaged'
         ],
-        backLink: './',
         next: '/summary' // If their passport is NOT damaged
     },
     '/dual-national': {
       controller: require('../../../controllers/go-overseas'),
       fields: ['dual-nationality'],
-      backLink: './passport-damaged',
       next: '/summary',
       nextAlt: '../overseas',
       forks: [{
