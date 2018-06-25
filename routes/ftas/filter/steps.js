@@ -145,25 +145,25 @@ module.exports = {
     //     }]
     // },
     '/passport-date-of-issue': {
-        controller: require('../../../controllers/check-old-blue'),
         fields: [
             'issue-day',
             'issue-month',
             'issue-year'
         ],
+        next: '/passport-damaged'
+    },
+    '/passport-damaged': {
+        controller: require('../../../controllers/check-old-blue'),
+        fields: [
+            'passport-damaged'
+        ],
         next: '/dual-national', // If they are NOT a UK Hidden FTA
         forks: [{ // If they are a UK Hidden FTA
             target: '/naturalisation-registration-details',
             condition: function(req, res) {
-              return req.session['hmpo-wizard-common']['old-blue'] == true;
+                return req.session['hmpo-wizard-common']['old-blue'] == true;
             }
         }]
-    },
-    '/passport-damaged': {
-        fields: [
-            'passport-damaged'
-        ],
-        next: '/summary' // If their passport is NOT damaged
     },
     '/dual-national': {
       controller: require('../../../controllers/go-overseas'),
