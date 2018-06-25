@@ -160,46 +160,56 @@ module.exports = {
         next: '/dual-national', // If they are NOT a UK Hidden FTA
         forks: [{ // If they are a UK Hidden FTA
             target: '/naturalisation-registration-details',
-            condition: function(req, res) {
+            condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['old-blue'] == true;
             }
         }]
     },
     '/dual-national': {
-      controller: require('../../../controllers/go-overseas'),
-      fields: ['dual-nationality'],
-      next: '/summary',
-      nextAlt: '../overseas',
-      forks: [{
-        target: '/relationship-applicant',
-        condition: function(req, res) {
-          return req.session['hmpo-wizard-common']['application-for'] == false;
-        }
-      }],
+        controller: require('../../../controllers/go-overseas'),
+        fields: [
+            'dual-nationality'
+        ],
+        next: '/summary',
+        nextAlt: '../overseas',
+        forks: [{
+            target: '/relationship-applicant',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['application-for'] == false;
+            }
+        }],
     },
     '/relationship-applicant': {
-      fields: ['relationship-applicant', 'other-why-apply'],
-      backLink: './dual-national',
-      next: '/third-party-name',
-      controller: require('../../../controllers/third-parties'),
+        fields: [
+            'relationship-applicant',
+            'other-why-apply'
+        ],
+        backLink: './dual-national',
+        next: '/third-party-name',
+        controller: require('../../../controllers/third-parties'),
     },
     '/third-party-name': {
-      fields: ['third-party-first-name', 'third-party-last-name'],
-      backLink: './relationship-applicant',
-      next: '/parental-responsibility',
-      forks: [{
-        target: '/summary',
-        condition: function(req, res) {
-          return req.session['hmpo-wizard-common']['16-or-older'] == true;
-        }
-      }],
+        fields: [
+            'third-party-first-name',
+            'third-party-last-name'
+        ],
+        backLink: './relationship-applicant',
+        next: '/parental-responsibility',
+        forks: [{
+            target: '/summary',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['16-or-older'] == true;
+            }
+        }],
     },
     '/parental-responsibility': {
-      fields: ['parental-responsibility'],
-      backLink: './relationship-applicant',
-      next: '/summary'
+        fields: [
+            'parental-responsibility'
+        ],
+        backLink: './relationship-applicant',
+        next: '/summary'
     },
     '/summary': {
-      next: '/../intro'
+        next: '/../intro'
     }
 };
