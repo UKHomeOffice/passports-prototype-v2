@@ -28,5 +28,8 @@ module.exports = {
     },
     '/csig-complete': {
 
+    },
+    '/fta-docs': {
+
     }
 };
