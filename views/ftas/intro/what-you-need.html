@@ -15,7 +15,8 @@
 
 <h2>Your details</h2>
 <ul class="list-bullet list-bullet-header-spacing">
-    <li>birth or adoption certificate</li>
+    {{#values.naturalisation-registration-certificate}}<li>naturalisation or registration certificate</li>{{/values.naturalisation-registration-certificate}}
+    {{^values.naturalisation-registration-certificate}}<li>birth or adoption certificate</li>{{/values.naturalisation-registration-certificate}}
     {{#values.old-blue}}<li>UK passport details</li>{{/values.old-blue}}
 </ul>
 
@@ -27,12 +28,14 @@
     <li>date of marriage or civil partnership (if this applies)</li>
 </ul>
 
+{{^values.naturalisation-registration-certificate}}
 <h2>Grandparents' details</h2>
 <p>Based on what you tell us, we may ask for grandparents':</p>
 <ul style="margin-bottom: 30px;" class="list-bullet list-bullet-header-spacing">
     <li>name, date and place of birth</li>
     <li>date of marriage or civil partnership (if this applies)</li>
 </ul>
+{{/values.naturalisation-registration-certificate}}
 
 {{#checkbox}}what-you-will-need-declaration{{/checkbox}}
 
