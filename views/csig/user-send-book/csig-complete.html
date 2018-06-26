@@ -3,6 +3,7 @@
 {{$pageTitle}}{{/pageTitle}}
 
 {{$main-content}}
+
 <div class="column-full">
   <h1>What you need to do</h1>
 </div>
@@ -13,22 +14,24 @@
     <li>
       <ul class="task-list-items">
         <li class="task-list-item">
-          <a class="task-name" href="how-to" aria-describedby="eligibility-completed">
+          <a class="task-name-complete" aria-describedby="eligibility-completed">
             Ask someone to confirm identity
           </a>
-          <strong class="task-pending" id="eligibility-completed">Waiting</strong>
-          <p>Email sent to {{values.csig-email}} <br>You can remind the person or <a href="/csig/user-contact/" id="someone-else">ask someone else</a>.</p>
+          <strong class="task-completed" id="eligibility-completed">Done</strong>
         </li>
         <li class="task-list-item">
-          <a class="task-name" href="fta-docs" aria-describedby="read-declaration-completed">
-          Get your documents ready
+          <a class="task-name" href="#" aria-describedby="read-declaration-completed">
+            Send your documents
           </a>
-          <strong class="task-to-do" id="eligibility-completed">To do</strong>
+            <strong class="task-to-do" id="eligibility-completed">To do</strong>
+
         </li>
       </ul>
     </li>
   </ol>
+
   <a href="http://www.gov.uk">I'll do this later (sign out)</a>
+
 </div>
 
 <div class="column-one-third">
@@ -47,18 +50,10 @@
     </li>
   </ul>
 </div>
-{{< hmpo-partials-form}}
-  {{$form}}
-  <input type="hidden" name="renominate" id="renominate" value="anytime">
-  <input type="submit" value="Continue" id="submit-hidden" class="button visuallyhidden">
-{{/form}}
-{{/ hmpo-partials-form}}
-<script>
-  $("#someone-else").click(function(e){
-    e.preventDefault();
-    $("#submit-hidden").click();
-  })
-</script>
+
+
 {{/main-content}}
+
+
 
 {{/ layout}}
