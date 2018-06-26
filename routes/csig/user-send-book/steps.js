@@ -15,5 +15,8 @@ module.exports = {
     },
     '/csig-complete': {
 
+    },
+    '/fta-docs': {
+      backLink: 'csig-complete'
     }
 };

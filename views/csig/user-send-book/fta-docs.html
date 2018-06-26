@@ -1,0 +1,76 @@
+{{< layout}}
+
+{{$pageTitle}}Required Documents{{/pageTitle}}
+
+{{$header}}
+  <h1>What you need to send</h1>
+{{/header}}
+
+{{$content}}
+
+<p>Before we can send the new passport, we need to see documents that prove identity and nationality. We’ll check and return
+  them to you.</p>
+
+<div class="panel panel-border-wide alert-default">
+  You must send original documents - we can't accept photocopies. Your application will be delayed if you don't send everything
+  we need.
+</div>
+
+<h2>You need to send:</h2>
+<ul class="list-bullet list-bullet-header-spacing">
+  <li>the applicant's full birth or adoption certificate</li>
+  <li>any court orders restricting parental responsibility or travel</li>
+  <li>1 document confirming you can make this application, for example a letter from the court, social services or a doctor</li>
+</ul>
+
+<h2>You also need to send:</h2>
+<h3>1 of the following for either parent:</h3>
+<ul class="list-bullet">
+  <li>full birth or adoption certificate</li>
+  <li>naturalisation or registration certificate</li>
+  <li>the passport they had when the applicant was born</li>
+</ul>
+
+<p>If you send {{> partials-applicant-your-their}} father's (parent 2) certificate or passport, you need to send the marriage or civil partnership certificate to {{> partials-applicant-your-their}} mother (parent 1).</p>
+
+
+<!-- <h3>All of the following for every grandparent:</h3>
+<ul class="list-bullet list-bullet-header-spacing">
+  <li>birth or adoption certificates</li>
+  <li>grandfather's marriage certificate to grandmother (if this applies)</li>
+</ul> -->
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+<!-- {{#input-submit}}{{/input-submit}} -->
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+<details>
+  <summary>
+    <span class="summary">My documents aren't in English or Welsh</span>
+  </summary>
+  <div class="panel panel-border-narrow">
+    <p>If your documents aren't in English or Welsh you'll need to get
+      <a href="https://www.gov.uk/certifying-a-document">certified translation.</a>
+    </p>
+  </div>
+</details>
+
+{{/content}}
+{{$sidebar}}
+<div class="column-one-third">
+  <br/><br/>
+    <div class="sidebar related">
+      <div class="photo-preview-inner">
+  
+          <a href='/csig/track'>Back to tracking</a><br>
+          <a href="/">Print page</a>
+      </div>
+    </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}
