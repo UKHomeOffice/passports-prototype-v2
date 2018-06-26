@@ -30,9 +30,6 @@ module.exports = {
 
     },
     '/fta-docs': {
-
-    },
-    '/application-history': {
-
+      backLink: './'
     }
 };
