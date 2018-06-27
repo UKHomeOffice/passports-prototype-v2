@@ -330,7 +330,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     var parent1ParentsFields = [];
 
     if (values['naturalisation-registration-certificate'] == false && // If applicant is NOT naturalised or registered
-        values['application-for'] == true) { // If Who am I applying for is 'Me'
+        values['application-for'] == true // If Who am I applying for is 'Me'
+    ) {
         response.sections.push({
             className: 'parent1-parents-details',
             title: 'Maternal grandparents',
@@ -359,7 +360,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     var parent1Parent1Fields = [];
 
     if (values['naturalisation-registration-certificate'] == false && // If applicant is NOT naturalised or registered
-        values['application-for'] == true) { // If Who am I applying for is 'Me'
+        values['application-for'] == true // If Who am I applying for is 'Me'
+    ) {
         response.sections.push({
             className: 'parent1-parent1-details',
             title: 'Maternal grandmother',
@@ -396,7 +398,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     var parent1Parent2Fields = [];
 
     if (values['naturalisation-registration-certificate'] == false && // If applicant is NOT naturalised or registered
-        values['application-for'] == true) { // If Who am I applying for is 'Me'
+        values['application-for'] == true // If Who am I applying for is 'Me'
+    ) {
         response.sections.push({
             className: 'parent1-parent2-details',
             title: 'Maternal grandfather',
@@ -433,7 +436,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     var parent2ParentsFields = [];
 
     if (values['naturalisation-registration-certificate'] == false && // If applicant is NOT naturalised or registered
-        values['application-for'] == true) { // If Who am I applying for is 'Me'
+        values['application-for'] == true // If Who am I applying for is 'Me'
+    ) {
         response.sections.push({
             className: 'parent2-parents-details',
             title: 'Paternal grandparents',
@@ -462,7 +466,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     var parent2Parent1Fields = [];
 
     if (values['naturalisation-registration-certificate'] == false && // If applicant is NOT naturalised or registered
-        values['application-for'] == true) { // If Who am I applying for is 'Me'
+        values['application-for'] == true // If Who am I applying for is 'Me'
+    ) {
         response.sections.push({
             className: 'parent2-parent1-details',
             title: 'Paternal grandmother',
@@ -499,7 +504,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     var parent2Parent2Fields = [];
 
     if (values['naturalisation-registration-certificate'] == false && // If applicant is NOT naturalised or registered
-        values['application-for'] == true) { // If Who am I applying for is 'Me'
+        values['application-for'] == true // If Who am I applying for is 'Me'
+    ) {
         response.sections.push({
             className: 'parent2-parent2-details',
             title: 'Paternal grandfather',
@@ -532,6 +538,37 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     }
 
 
+    // Logic to remove fields from stack
+    if (values['born-in-uk'] == true && // If Born in UK
+        values['born-before-1983'] == true || // Before 01/01/1983
+
+        values['old-blue'] == true // Passport issued Before 01/01/1994 (Old blue) Hidden FTA
+    ) {
+        console.log('DELETE grandparents fields')
+        response.sections.pop({
+            fields: parent1ParentsFields
+        });
+        response.sections.pop({
+            fields: parent1Parent1Fields
+        });
+        response.sections.pop({
+            fields: parent1Parent2Fields
+        });
+        response.sections.pop({
+            fields: parent2ParentsFields
+        });
+        response.sections.pop({
+            fields: parent2Parent1Fields
+        });
+        response.sections.pop({
+            fields: parent2Parent2Fields
+        });
+        // TODO: Potentially refactor the rest of the file to...
+        // - instead of logic to work out if fields should be pushed to the stack
+        // - use this logic to remove fields by popping off the stack
+    }
+
+
     // Application
     var applicationFields = [];
 
@@ -541,19 +578,19 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         fields: applicationFields
     });
 
-    if (values['can-interview']) {
-        applicationFields.push({
-            step: this.getEditStep('can-interview'),
-            title: 'Identity interview',
-            value: 'You can attend an interview.'
-        });
-    } else {
-        applicationFields.push({
-            step: this.getEditStep('no-interview-reason'),
-            title: 'Identity interview',
-            value: values['no-interview-reason'] ? 'You can’t attend an interview:<br>' + values['no-interview-reason'] : 'You can’t attend an interview'
-        });
-    }
+    // if (values['can-interview']) {
+    //     applicationFields.push({
+    //         step: this.getEditStep('can-interview'),
+    //         title: 'Identity interview',
+    //         value: 'You can attend an interview.'
+    //     });
+    // } else {
+    //     applicationFields.push({
+    //         step: this.getEditStep('no-interview-reason'),
+    //         title: 'Identity interview',
+    //         value: values['no-interview-reason'] ? 'You can’t attend an interview:<br>' + values['no-interview-reason'] : 'You can’t attend an interview'
+    //     });
+    // }
 
     applicationFields.push({
         step: this.getEditStep('postcode'),

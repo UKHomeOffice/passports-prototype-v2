@@ -56,17 +56,17 @@ module.exports = {
         next: '/place-of-birth'
     },
     '/place-of-birth': {
-        next: '/naturalisation-registration-details',
+        next: '/family-intro',
         // next: '/parents',
         fields: [
             'born-in-uk',
             'town-of-birth',
             'country-of-birth'
         ],
-        forks: [{ // If they do NOT have a certificate
-            target: '/family-intro',
+        forks: [{ // If they do have a certificate
+            target: '/naturalisation-registration-details',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == false;
+                return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == true;
             }
         }],
         controller: require('../../../controllers/go-overseas'),
@@ -149,10 +149,17 @@ module.exports = {
         nextAlt: './home-address-overseas',
         forks: [{
             target: '/home-address',
+            condition: function (req, res) { // If Born in UK AND Before 01/01/1983 OR Passport issued Before 01/01/1994 (Old blue) Hidden FTA
+                return req.session['hmpo-wizard-common']['born-in-uk'] == true &&
+                    req.session['hmpo-wizard-common']['born-before-1983'] == true ||
+                    req.session['hmpo-wizard-common']['old-blue'] == true;
+            }
+        }, {
+            target: '/home-address',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['application-for'] == false;
             }
-        }],
+        }]
     },
     '/parent-1-grandparents': {
         controller: require('../../../controllers/validation-parent-1-grandparents'),
