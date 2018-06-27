@@ -541,19 +541,19 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         fields: applicationFields
     });
 
-    if (values['can-interview']) {
-        applicationFields.push({
-            step: this.getEditStep('can-interview'),
-            title: 'Identity interview',
-            value: 'You can attend an interview.'
-        });
-    } else {
-        applicationFields.push({
-            step: this.getEditStep('no-interview-reason'),
-            title: 'Identity interview',
-            value: values['no-interview-reason'] ? 'You can’t attend an interview:<br>' + values['no-interview-reason'] : 'You can’t attend an interview'
-        });
-    }
+    // if (values['can-interview']) {
+    //     applicationFields.push({
+    //         step: this.getEditStep('can-interview'),
+    //         title: 'Identity interview',
+    //         value: 'You can attend an interview.'
+    //     });
+    // } else {
+    //     applicationFields.push({
+    //         step: this.getEditStep('no-interview-reason'),
+    //         title: 'Identity interview',
+    //         value: values['no-interview-reason'] ? 'You can’t attend an interview:<br>' + values['no-interview-reason'] : 'You can’t attend an interview'
+    //     });
+    // }
 
     applicationFields.push({
         step: this.getEditStep('postcode'),
