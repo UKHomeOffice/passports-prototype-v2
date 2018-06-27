@@ -56,17 +56,17 @@ module.exports = {
         next: '/place-of-birth'
     },
     '/place-of-birth': {
-        next: '/naturalisation-registration-details',
+        next: '/family-intro',
         // next: '/parents',
         fields: [
             'born-in-uk',
             'town-of-birth',
             'country-of-birth'
         ],
-        forks: [{ // If they do NOT have a certificate
-            target: '/family-intro',
+        forks: [{ // If they do have a certificate
+            target: '/naturalisation-registration-details',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == false;
+                return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == true;
             }
         }],
         controller: require('../../../controllers/go-overseas'),
