@@ -20,3 +20,14 @@
 // inherited junk that needs tidying up. at a guess it looks like the compiled scss from
 // the frontend toolkit.
 @import "shame/tidy-this-up";
+
+.app-c-print-link {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.app-c-print-link .app-c-print-link__link {
+    background: url("/public/images/icon-print.png") no-repeat 0 50%;
+    padding: 0.5em 0 0.5em 28px;
+    background-size: 16px 18px;
+}

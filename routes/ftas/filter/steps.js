@@ -66,7 +66,7 @@ module.exports = {
         }]
     },
     '/naturalisation-registration-details': {
-        controller: require('../../../controllers/naturalisation-registration-details'),
+        controller: require('../../../controllers/check-naturalisation-registration'),
         fields: [
             'naturalisation-registration-certificate'
         ],
@@ -110,14 +110,13 @@ module.exports = {
         /* if they are from Afganistan */
     },
     '/dob': {
+        //controller: require('../../../controllers/go-overseas'),
+        controller: require('../../../controllers/check-dob'),
         fields: [
             'age-day',
             'age-year',
             'age-month'
         ],
-        //controller: require('../../../controllers/go-overseas'),
-        controller: require('../../../controllers/check-dob'),
-        backLink: './lost-stolen',
         next: '/passport-date-of-issue',
         forks: [
             {
