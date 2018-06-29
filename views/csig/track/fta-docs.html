@@ -40,11 +40,10 @@
   <li>grandfather's marriage certificate to grandmother (if this applies)</li>
 </ul> -->
 
-
 {{< hmpo-partials-form}}
 {{$form}}
 
-{{#input-submit}}{{/input-submit}}
+<!-- {{#input-submit}}{{/input-submit}} -->
 
 {{/form}}
 {{/ hmpo-partials-form}}
@@ -60,12 +59,18 @@
   </div>
 </details>
 
-<div class="app-c-print-link">
-  <a href="/" class="app-c-print-link__link" rel="alternate">
-    Print page
-  </a>
-</div>
-
 {{/content}}
+{{$sidebar}}
+<div class="column-one-third">
+  <br/><br/>
+    <div class="sidebar related">
+      <div class="photo-preview-inner">
+          <br>
+          <a href='/csig/track'>Back to tracking</a><br>
+          <a href="/">Print page</a>
+      </div>
+    </div>
+</div>
+{{/sidebar}}
 
 {{/ layout}}

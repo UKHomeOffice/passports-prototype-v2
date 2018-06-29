@@ -1,0 +1,19 @@
+{{< layout}}
+
+{{$pageTitle}}Track a passport application{{/pageTitle}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+    <header class="update-notice">
+          <h1>Email sent</h1>
+
+    </header>
+    <p>We've sent an email to {{values.csig-email}}. They'll need to go online to look at a photo and answer a few questions.</p>
+    {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+{{/content}}
+
+
+{{/ layout}}

@@ -1213,7 +1213,6 @@ module.exports = {
     'mobile': {
         labelClassName: 'visuallyhidden',
         validate: [
-            'numeric',
             'required'
         ]
     },
