@@ -66,7 +66,7 @@ module.exports = {
         }]
     },
     '/naturalisation-registration-details': {
-        controller: require('../../../controllers/naturalisation-registration-details'),
+        controller: require('../../../controllers/check-naturalisation-registration'),
         fields: [
             'naturalisation-registration-certificate'
         ],
