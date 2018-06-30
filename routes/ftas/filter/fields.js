@@ -9,12 +9,12 @@ module.exports = {
     },
     options: [{
         value: true,
-        label: 'Me'
+        label: 'Yes',
+        toggle: 'someone-else'
       },
       {
         value: false,
-        label: 'Someone else',
-        toggle: 'someone-else'
+        label: 'No'
       }
     ],
     formatter: ['boolean'],
