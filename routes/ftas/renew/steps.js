@@ -17,7 +17,7 @@ module.exports = {
         next: '/name'
     },
     '/name': {
-        backLink: '../renew',
+        backLink: './',
         fields: [
             'title',
             'name',
@@ -34,7 +34,6 @@ module.exports = {
         }]
     },
     '/change-of-name': {
-        backLink: 'name',
         fields: [
             'change-of-name-reason'
         ],
@@ -46,7 +45,6 @@ module.exports = {
             'previous-first-name',
             'previous-last-name'
         ],
-        backLink: 'name',
         next: '/gender'
     },
     '/gender': {
@@ -278,7 +276,6 @@ module.exports = {
             'braille'
         ],
         next: '/sign',
-        backLink: './dual-national',
         forks: [{
             target: '/sign-third-party',
             condition: function (req, res) {
@@ -298,7 +295,6 @@ module.exports = {
             'can-sign',
             'no-sign-reason'
         ],
-        backLink: 'passport-options',
         next: '/passport-special-delivery',
         /* if they are from the UK */
         controller: require('../../../controllers/go-overseas'),
@@ -309,7 +305,6 @@ module.exports = {
             'can-sign-third-party',
             'no-sign-reason-third-party'
         ],
-        backLink: 'passport-options',
         next: '/passport-special-delivery',
         /* if they are from the UK */
         controller: require('../../../controllers/go-overseas'),
