@@ -25,7 +25,6 @@ module.exports = {
         next: '/first-uk'
     },
     '/first-uk': {
-        backLink: '/who-for',
         fields: [
             'passport-before'
         ],
@@ -209,6 +208,6 @@ module.exports = {
         next: '/summary'
     },
     '/summary': {
-        next: '/../intro'
+        next: 'intro'
     }
 };
