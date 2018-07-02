@@ -220,11 +220,11 @@ module.exports = {
                 label: 'Marriage or civil partnership'
             },
             {
-                value: 'Divorce',
-                label: 'Divorce'
+                value: 'Divorce-or-dissolution',
+                label: 'Divorce or dissolution'
             },
             {
-                value: 'Gender-reassigment',
+                value: 'Gender-transition',
                 label: 'Gender transition'
             },
             {
