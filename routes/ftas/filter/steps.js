@@ -22,10 +22,22 @@ module.exports = {
         fields: [
             'application-for'
         ],
-        next: '/first-uk'
+        next: '/first-uk',
+        forks: [{
+            target: '/who-for-why',
+            condition: {
+                field: 'application-for',
+                value: false
+            }
+        }]
+    },
+    '/who-for-why': {
+        fields: [
+            'application-for-why'
+        ],
+        next: '/first-uk',
     },
     '/first-uk': {
-        backLink: '/who-for',
         fields: [
             'passport-before'
         ],

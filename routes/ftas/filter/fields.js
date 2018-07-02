@@ -14,12 +14,32 @@ module.exports = {
       {
         value: false,
         label: 'Someone else',
-        toggle: 'someone-else'
+        // toggle: 'someone-else'
       }
     ],
     formatter: ['boolean'],
     validate: ['required'],
     className: 'inline'
+  },
+  'application-for-why': {
+    legend: {
+      value: 'Who is the new passport for?',
+      className: 'visuallyhidden'
+    },
+    options: [{
+        value: 'child',
+        label: 'A child'
+      },
+      {
+        value: 'adult-no-capacity',
+        label: 'An adult who doesn’t have mental or physical capacity',
+      },
+      {
+        value: 'adult-supported',
+        label: 'I’m helping someone do this',
+      }
+    ],
+    validate: ['required'],
   },
   'what-to-do': {
     legend: {
