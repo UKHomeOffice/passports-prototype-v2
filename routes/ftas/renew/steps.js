@@ -148,9 +148,8 @@ module.exports = {
         nextAlt: './home-address-overseas',
         forks: [{
             target: '/home-address',
-            condition: function (req, res) { // If they are Naturalisated/Registered OR Born in UK AND Before 01/01/1983 OR Passport issued Before 01/01/1994 (Old blue) Hidden FTA
+            condition: function (req, res) { // If they are Naturalisated/Registered OR Born Before 01/01/1983 OR Passport issued Before 01/01/1994 (Old blue) Hidden FTA
                 return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == true ||
-                    req.session['hmpo-wizard-common']['born-in-uk'] == true &&
                     req.session['hmpo-wizard-common']['born-before-1983'] == true ||
                     req.session['hmpo-wizard-common']['old-blue'] == true;
             }
