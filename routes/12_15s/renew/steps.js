@@ -178,7 +178,6 @@ module.exports = {
         next: '/payment'
     },
     '/payment':{
-        controller: require('../../../controllers/dual-national'),
         next: '/processing-payment'
     },
     '/processing-payment':{
