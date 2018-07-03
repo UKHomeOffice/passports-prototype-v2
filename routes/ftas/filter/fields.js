@@ -8,31 +8,31 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [{
-        value: true,
+        value: 'application-me',
         label: 'Me'
       },
       {
-        value: false,
+        value: 'application-child',
+        label: 'A child under 16',
+        // toggle: 'someone-else'
+      },
+      {
+        value: 'application-someone-else',
         label: 'Someone else',
         // toggle: 'someone-else'
       }
     ],
-    formatter: ['boolean'],
     validate: ['required'],
-    className: 'inline'
   },
   'application-for-why': {
     legend: {
       value: 'Who is the new passport for?',
       className: 'visuallyhidden'
     },
-    options: [{
-        value: 'child',
-        label: 'A child'
-      },
+    options: [
       {
         value: 'adult-no-capacity',
-        label: 'An adult who doesn’t have mental or physical capacity',
+        label: 'I’m applying on behalf of an adult who doesn’t have capacity',
       },
       {
         value: 'adult-supported',

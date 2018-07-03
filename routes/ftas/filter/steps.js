@@ -27,7 +27,7 @@ module.exports = {
             target: '/who-for-why',
             condition: {
                 field: 'application-for',
-                value: false
+                value: 'application-someone-else'
             }
         }]
     },
