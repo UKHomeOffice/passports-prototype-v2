@@ -17,7 +17,7 @@ module.exports = {
             'lastname',
             'change-name'
         ],
-        next: '/gender',
+        next: '/previous-names',
         forks: [{
             target: '/change-of-name',
             condition: {
