@@ -37,6 +37,8 @@ module.exports = {
         ],
         next: '/first-uk',
     },
+    '/who-for-help': {
+    },
     '/first-uk': {
         fields: [
             'passport-before'
