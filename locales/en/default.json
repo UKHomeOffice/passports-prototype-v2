@@ -524,7 +524,7 @@
             "required": "You must answer this question - uncancelled"
         },
         "what-you-will-need-declaration": {
-            "required": "You must answer this question."
+            "required": "You need to confirm that you have these details"
         },
 
         "passport-number": {
