@@ -3,75 +3,67 @@
 {{$pageTitle}}{{/pageTitle}}
 
 {{$main-content}}
-
 <div class="column-full">
-  <h1>What you need to do</h1>
+  <h1>Your application</h1>
 </div>
 
 <div class="column-two-thirds">
-
+<h3 style="margin-bottom:-20px; padding:0">What you need to do</h3>
   <ol class="task-list">
     <li>
       <ul class="task-list-items">
-
         <li class="task-list-item">
-          <a class="task-name" href="/csig/user-send-book/fta-docs" aria-describedby="read-declaration-completed">
+          <a class="task-name" href="./fta-docs" aria-describedby="eligibility-completed">
             Send your documents
           </a>
-            <strong class="task-to-do" id="eligibility-completed">To do</strong>
+          <strong style="margin-right:15px" class="task-to-do" id="eligibility-completed">To do</strong>
         </li>
-        <li class="task-list-item">
-          <a class="task-name-complete" aria-describedby="eligibility-completed">
-            Ask someone to confirm identity
+        <!-- <li class="task-list-item">
+          <a class="task-name" href="fta-docs" aria-describedby="read-declaration-completed">
+          Get your documents ready
           </a>
-          <strong class="task-completed" id="eligibility-completed">Done</strong>
-        </li>
+          <strong class="task-to-do" id="eligibility-completed">To do</strong>
+        </li> -->
       </ul>
     </li>
   </ol>
-  <details>
-    <summary><span class="summary">Application history</span></summary>
-    <div class="panel panel-border-narrow">
-      <article>
-        <table>
-          <tbody>
-            <tr>
-              <td>Ask someone to confirm your identity</td>
-              <td>10:05am on 21 February 2018</td>
-            </tr>
-            <tr>
-              <td>Application received</td>
-              <td>10:05am on 19 February 2018</td>
-            </tr>
-            <tr>
-              <td>Application submitted</td>
-              <td>10:03am on 19 February 2018</td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
-    </div>
-  </details>
+  <h3 style="margin: 40px 0 0; padding-bottom:10px; border-bottom: 1px solid #bfc1c3;">Done</h3>
+  <article>
+    <table>
+      <tbody>
+        <tr>
+          <td>Identity confirmed</td>
+          <td>4:32pm on 27 February 2018 <strong class="task-completed" id="eligibility-completed">Done</strong></td>
+        </tr>
+        <tr>
+          <td>Application received</td>
+          <td>10:05am on 19 February 2018 <strong class="task-completed" id="eligibility-completed">Done</strong></td>
+        </tr>
+        <tr>
+          <td>Application submitted</td>
+          <td>10:03am on 19 February 2018 <strong class="task-completed" id="eligibility-completed">Done</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
 </div>
 
 <div class="column-one-third">
-  <ul class="sidebar-task">
+  <ul class="sidebar-task" style="margin-top: 54px">
     <li class="sidebar-task__panel">
       <h3>Application reference</h3>
       <p>PEX 319 825 680X</p>
     </li>
     <li class="sidebar-task__panel">
-      <h3>Payment reference</h3>
-      <p>IE19852</p>
-      <a href="#">Download PDF receipt</a>
+      <h3>Documents</h3>
+      <a href="./fta-docs">
+        Check what you'll need to send
+      </a><br>
+
     </li>
   </ul>
-    <p style="margin:15px"><a href="http://www.gov.uk">Sign out</a></p>
+  <p style="margin:15px"><a href="http://www.gov.uk">Sign out</a></p>
 </div>
-
-
 {{/main-content}}
-
-
 
 {{/ layout}}
