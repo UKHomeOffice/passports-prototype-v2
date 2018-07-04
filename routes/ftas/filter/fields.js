@@ -31,12 +31,13 @@ module.exports = {
     },
     options: [
       {
-        value: 'adult-no-capacity',
-        label: 'I’m applying on behalf of an adult who doesn’t have capacity',
-      },
-      {
         value: 'adult-supported',
         label: 'I’m helping someone do this',
+      },
+      {
+        value: 'adult-no-capacity',
+        label: 'I’m applying on behalf of an adult who doesn’t have capacity',
+        toggle: 'adult-no-capacity'
       }
     ],
     validate: ['required'],
