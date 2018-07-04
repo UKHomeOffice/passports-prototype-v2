@@ -33,6 +33,7 @@ module.exports = {
         }]
     },
     '/who-for-why': {
+      controller: require('../../../controllers/application-for-relationship'),
         fields: [
             'application-for-why'
         ],
@@ -161,7 +162,7 @@ module.exports = {
         forks: [{
             target: '/relationship-applicant',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['application-for'] == false;
+                return req.session['hmpo-wizard-common']['application-for-relationship'] == true;
             }
         }],
     },

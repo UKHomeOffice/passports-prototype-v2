@@ -33,7 +33,7 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
 	req.sessionModel.set('feckless-teenager', false);
 	req.sessionModel.set('16-or-older', false);
 
-  if (age >= 16 && age < 19) {
+  if (age >= 16 && age < 18) {
     req.sessionModel.set('feckless-teenager', true);
   }
 	if (age >= 16) {
