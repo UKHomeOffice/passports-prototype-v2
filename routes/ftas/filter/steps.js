@@ -18,6 +18,7 @@ module.exports = {
         nextAltAltAltAlt: '../overseas-not-available' /* if they are from Syria - not available */
     },
     '/who-for': {
+        controller: require('../../../controllers/application-for'),
         backLink: './',
         fields: [
             'application-for'
