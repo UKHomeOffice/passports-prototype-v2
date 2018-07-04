@@ -39,7 +39,7 @@ module.exports = {
         next: '/first-uk',
     },
     '/who-for-help': {
-      backLink: 'who-for-why',
+      backLink: 'who-for',
     },
     '/first-uk': {
         fields: [

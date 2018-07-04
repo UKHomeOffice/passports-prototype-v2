@@ -32,11 +32,11 @@ module.exports = {
     options: [
       {
         value: 'adult-supported',
-        label: 'I’m helping someone do this',
+        label: 'I’m helping someone to apply online',
       },
       {
         value: 'adult-no-capacity',
-        label: 'I’m applying on behalf of an adult who doesn’t have capacity',
+        label: 'I’m legally applying for someone who doesn’t have capacity',
         toggle: 'adult-no-capacity'
       }
     ],
