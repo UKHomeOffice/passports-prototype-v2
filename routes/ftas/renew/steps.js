@@ -9,22 +9,15 @@ module.exports = {
         ],
         next: '/name'
     },
-    '/title': {
-        backLink: './',
-        fields: [
-            'title'
-        ],
-        next: '/name'
-    },
     '/name': {
-        backLink: '../renew',
+        backLink: './',
         fields: [
             'title',
             'name',
             'lastname',
             'change-name'
         ],
-        next: '/gender',
+        next: '/previous-names',
         forks: [{
             target: '/change-of-name',
             condition: {
@@ -34,7 +27,6 @@ module.exports = {
         }]
     },
     '/change-of-name': {
-        backLink: 'name',
         fields: [
             'change-of-name-reason'
         ],
@@ -46,7 +38,6 @@ module.exports = {
             'previous-first-name',
             'previous-last-name'
         ],
-        backLink: 'name',
         next: '/gender'
     },
     '/gender': {
@@ -107,11 +98,6 @@ module.exports = {
         ],
         next: '/parent-1-details'
     },
-    // '/parents-married': {
-    //     fields: ['parents-married'],
-    //     backLink: '/parents',
-    //     next: '/parent-1-details'
-    //   },
     '/parent-1-details': {
         fields: [
             'parent1-town-of-birth',
@@ -123,13 +109,6 @@ module.exports = {
             'parent1-passport-issue-month',
             'parent1-passport-issue-year'
         ],
-        // controller: require('../../../controllers/parents-details'),
-        // forks: [{
-        //     target: '/home-address', // If parent 2 has NOT been filled in
-        //     condition: function(req, res) {
-        //       return req.session['hmpo-wizard-common']['parent2-first-names'] == "";
-        //     }
-        //   }],
         next: '/parent-2-details'
     },
     '/parent-2-details': {
@@ -216,13 +195,6 @@ module.exports = {
         ],
         next: '/home-address'
     },
-    // '/identity-interview': {
-    //     fields: [
-    //         'can-interview',
-    //         'no-interview-reason'
-    //     ],
-    //     next: '/home-address'
-    // },
     '/home-address': {
         fields: [
             'address1',
@@ -265,20 +237,12 @@ module.exports = {
     '/get-updates': {
         next: '/passport-options'
     },
-    '/dual-national': {
-        backLink: './get-updates',
-    },
-    '/dual-national-details': {
-        backLink: 'dual-national',
-        next: '/title'
-    },
     '/passport-options': {
         fields: [
             'passport-options',
             'braille'
         ],
         next: '/sign',
-        backLink: './dual-national',
         forks: [{
             target: '/sign-third-party',
             condition: function (req, res) {
@@ -298,7 +262,6 @@ module.exports = {
             'can-sign',
             'no-sign-reason'
         ],
-        backLink: 'passport-options',
         next: '/passport-special-delivery',
         /* if they are from the UK */
         controller: require('../../../controllers/go-overseas'),
@@ -309,7 +272,6 @@ module.exports = {
             'can-sign-third-party',
             'no-sign-reason-third-party'
         ],
-        backLink: 'passport-options',
         next: '/passport-special-delivery',
         /* if they are from the UK */
         controller: require('../../../controllers/go-overseas'),
@@ -373,13 +335,12 @@ module.exports = {
         next: '/payment'
     },
     '/payment': {
-        controller: require('../../../controllers/dual-national'),
         next: '/processing-payment'
     },
     '/processing-payment': {
         next: '/confirmation'
     },
     '/confirmation': {
-        next: '/title'
+        next: '/../csig/track'
     }
 };

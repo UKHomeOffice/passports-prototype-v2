@@ -201,8 +201,7 @@ module.exports = {
             },
             {
                 value: true,
-                label: 'No, {{> partials-applicant-my-their}} name has changed',
-                toggle: 'note-regarding-name-change'
+                label: 'No, {{> partials-applicant-my-their}} name has changed'
             }
         ],
         formatter: ['boolean'],
@@ -220,11 +219,11 @@ module.exports = {
                 label: 'Marriage or civil partnership'
             },
             {
-                value: 'Divorce',
-                label: 'Divorce'
+                value: 'Divorce-or-dissolution',
+                label: 'Divorce or dissolution'
             },
             {
-                value: 'Gender-reassigment',
+                value: 'Gender-transition',
                 label: 'Gender transition'
             },
             {

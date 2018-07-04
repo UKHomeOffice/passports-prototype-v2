@@ -67,20 +67,6 @@ module.exports = {
             }
         }]
     },
-    '/passport-colour': {
-        backLink: './',
-        fields: [
-            'passport-colour'
-        ],
-        next: '/naturalisation-registration-details',
-        forks: [{
-            target: '/lost',
-            condition: {
-                field: 'passport-colour',
-                value: 'red'
-            }
-        }]
-    },
     '/naturalisation-registration-details': {
         controller: require('../../../controllers/check-naturalisation-registration'),
         fields: [
@@ -144,21 +130,6 @@ module.exports = {
             }
         ]
     },
-    // '/dob-below-16': {
-    //     fields: [
-    //         'age-day',
-    //         'age-year',
-    //         'age-month'
-    //     ],
-    //     backLink: './dob',
-    //     next: '/passport-date-of-issue',
-    //     forks: [{
-    //         target: '/summary',
-    //         condition: function (req, res) {
-    //             return req.session['hmpo-wizard-common']['passport-before'] == false; // If they are BELOW 16 + NOT had UK passport before
-    //         }
-    //     }]
-    // },
     '/passport-date-of-issue': {
         fields: [
             'issue-day',
@@ -225,6 +196,6 @@ module.exports = {
         next: '/summary'
     },
     '/summary': {
-        next: '/../intro'
+        next: 'intro'
     }
 };
