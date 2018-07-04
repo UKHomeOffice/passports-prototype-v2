@@ -7,24 +7,25 @@
 {{< hmpo-partials-form}}
 {{$form}}
 
-<br>
-<style>
-.circle {background: #DEE0E2; color: #000}
-</style>
-<header class="update-notice">
-    <h1><span class="icon-tick"></span>Payment successful</h1>
-        <p>You've paid £{{values.cost}}0 &ndash; reference IE19852</br>
-        Receipt sent to <strong>{{values.email}}</strong></p>
+<header class="update-notice update-notice--grey">
+    <h1><span class="icon-tick"></span> Payment successful</h1>
+
+        <p>You've paid £46, reference IE19852</br>
+Email confirmation sent to <strong>c.moore@test-corp.co.uk</strong></p>
+    <a href="#">Download PDF receipt</a>
 </header>
 
 <h2>What you need to do</h2>
 
-<p>You need to ask someone to confirm {{> partials-applicant-yours-the-applicants}} identity.</p>
+<p>Before we can print the new passport, you need to ask someone to confirm {{> partials-applicant-yours-the-applicants}} identity.</p>
 
-<p>Sign into tracking to provide their name and email. You'll need your application reference: <strong>PEX 319 825 680X</strong></p>
+<p>Sign into tracking to provide their name and email. You'll need your application reference.
 
-<p>You can do this now or later but we can't print the new passport until {{> partials-applicant-yours-the-applicants}} identity is confirmed.</p>
+  <div role="note" aria-label="Information" class="panel panel-border-wide application-notice info-notice">
+      <p>Application reference: <strong>PEX 319 825 680X</strong> </p>
+  </div>
 
+<p>If you need to do this later, we've sent you an email with the details.</p>
 <a href="/../csig/user" class="button">Sign in</a>
 
 </div>
