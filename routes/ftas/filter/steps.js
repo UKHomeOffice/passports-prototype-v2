@@ -18,11 +18,29 @@ module.exports = {
         nextAltAltAltAlt: '../overseas-not-available' /* if they are from Syria - not available */
     },
     '/who-for': {
+        controller: require('../../../controllers/application-for'),
         backLink: './',
         fields: [
             'application-for'
         ],
-        next: '/first-uk'
+        next: '/first-uk',
+        forks: [{
+            target: '/who-for-why',
+            condition: {
+                field: 'application-for',
+                value: 'application-someone-else'
+            }
+        }]
+    },
+    '/who-for-why': {
+      controller: require('../../../controllers/application-for-relationship'),
+        fields: [
+            'application-for-why'
+        ],
+        next: '/first-uk',
+    },
+    '/who-for-help': {
+      backLink: 'who-for',
     },
     '/first-uk': {
         fields: [
@@ -144,7 +162,7 @@ module.exports = {
         forks: [{
             target: '/relationship-applicant',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['application-for'] == false;
+                return req.session['hmpo-wizard-common']['application-for-relationship'] == true;
             }
         }],
     },

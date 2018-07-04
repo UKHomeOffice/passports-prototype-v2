@@ -8,10 +8,10 @@ var Controller = function() {
 util.inherits(Controller, Base)
 
 Controller.prototype.successHandler = function successHandler(req, res, callback) {
-    if (req.session['hmpo-wizard-common']['16-or-older'] == false) {
-        return res.redirect('./parental-responsibility');
+    if (req.session['hmpo-wizard-common']['application-for-why'] == 'adult-supported') {
+        return res.redirect('./summary');
     }
-    Base.prototype.successHandler.call(this, req, res, callback);
+
 };
 
 module.exports = Controller;

@@ -2,13 +2,14 @@
 
 {{$propositionHeader}}{{/propositionHeader}}
 
-{{$pageTitle}}Who is the new passport for?{{/pageTitle}}
+{{$pageTitle}}Who is the passport for?{{/pageTitle}}
 
 {{$header}}
-    <h1>Are you applying for someone else?</h1>
+    <h1>Who is the passport for?</h1>
 {{/header}}
 
 {{$content}}
+
 {{< hmpo-partials-form}}
     {{$form}}
         {{#radio-group}}application-for{{/radio-group}}
@@ -22,6 +23,8 @@
           </ul>
           </label>
         </div>
+
+        <p>Check if you can <a href="who-for-help">apply for someone else</a>.</p>
 
         {{#input-submit}}{{/input-submit}}
     {{/form}}
