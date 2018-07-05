@@ -152,7 +152,10 @@ AccordionSection.prototype.setExpanded = function(expanded) {
 
 }
 
-if (/docs-name-change-for-other-changes/.test(window.location.pathname)) {
+if (
+  /docs-name-change-for-gender-change/.test(window.location.pathname) ||
+  /docs-name-change-for-other-changes/.test(window.location.pathname)
+) {
   new Accordion(document.getElementById('name-change-accordion'))
 }
 
