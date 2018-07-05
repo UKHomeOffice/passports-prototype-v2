@@ -304,6 +304,10 @@ module.exports = {
         backLink: 'summary',
         next: '/declaration'
     },
+    '/docs-renew': {
+        backLink: 'summary',
+        next: '/declaration'
+    },
     '/docs-fta-thirdparty': {
         backLink: 'summary',
         next: '/declaration'

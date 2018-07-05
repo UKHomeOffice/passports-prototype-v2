@@ -10,6 +10,7 @@ util.inherits(Controller, Base)
 Controller.prototype.get = function successHandler(req, res, callback) {
 
 	return res.redirect('./docs-fta')
+	// return res.redirect('./docs-renew')
 
 	// if (req.sessionModel.get('change-name') == false) {
 	// 	return res.redirect('./declaration')
