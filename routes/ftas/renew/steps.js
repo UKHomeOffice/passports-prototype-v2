@@ -295,36 +295,45 @@ module.exports = {
     '/summary': {
         controller: require('../../../controllers/confirmFTA'),
         template: 'confirm',
-        next: '/fta-docs'
+        next: '/documents-required'
     },
-    '/required-documents': {
-        controller: require('../../../controllers/change-of-name-docsFTA')
+    '/documents-required': {
+        controller: require('../../../controllers/docs-check-required')
     },
-    '/fta-docs': {
-        next: '/required-documents'
-    },
-    '/thirdparty-fta-docs': {
-        next: '/required-documents'
-    },
-    '/name-change-docs': {
+    '/docs-fta': {
+        backLink: 'summary',
         next: '/declaration'
     },
-    '/name-change-docs-for-marriage': {
+    '/docs-fta-thirdparty': {
+        backLink: 'summary',
         next: '/declaration'
     },
-    '/name-change-docs-for-divorce': {
+    '/docs-name-change': {
+        backLink: 'summary',
         next: '/declaration'
     },
-    '/name-change-docs-for-small-changes': {
+    '/docs-name-change-for-marriage': {
+        backLink: 'summary',
         next: '/declaration'
     },
-    '/name-change-docs-for-gender-change': {
+    '/docs-name-change-for-divorce': {
+        backLink: 'summary',
         next: '/declaration'
     },
-    '/name-change-docs-for-other-changes': {
+    '/docs-name-change-for-small-changes': {
+        backLink: 'summary',
         next: '/declaration'
     },
-    '/name-change-docs-for-parents': {
+    '/docs-name-change-for-gender-change': {
+        backLink: 'summary',
+        next: '/declaration'
+    },
+    '/docs-name-change-for-other-changes': {
+        backLink: 'summary',
+        next: '/declaration'
+    },
+    '/docs-name-change-for-parents': {
+        backLink: 'summary',
         next: '/declaration'
     },
     '/declaration': {
