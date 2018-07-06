@@ -32,7 +32,7 @@ module.exports = {
     '/csig-mvp': {
 
     },
-    '/fta-docs': {
+    '/docs-fta': {
       backLink: './'
     }
 };
