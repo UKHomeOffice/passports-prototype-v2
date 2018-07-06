@@ -25,7 +25,7 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     req.sessionModel.set('born-before-1983', true);
   }
 
-	var bornBetween1983and2006 = moment(dob).isBetween('1983-01-01', '2006-01-01', null, '[)');
+	var bornBetween1983and2006 = moment(dob).isBetween('1983-01-01', '2006-07-01', null, '[)');
   console.log('Born 1983–2006:', bornBetween1983and2006);
 
   req.sessionModel.set('born-between-1983-and-2006', false);
