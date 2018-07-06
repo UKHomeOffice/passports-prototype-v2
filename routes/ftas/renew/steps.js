@@ -312,19 +312,11 @@ module.exports = {
         backLink: 'summary',
         next: '/declaration'
     },
-    '/docs-name-change': {
+    '/docs-name-change-for-marriage-or-civil-partnership': {
         backLink: 'summary',
         next: '/declaration'
     },
-    '/docs-name-change-for-marriage': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-name-change-for-divorce': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-name-change-for-small-changes': {
+    '/docs-name-change-for-divorce-or-dissolution': {
         backLink: 'summary',
         next: '/declaration'
     },

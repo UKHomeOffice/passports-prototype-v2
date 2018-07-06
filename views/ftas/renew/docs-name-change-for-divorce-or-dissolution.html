@@ -13,30 +13,36 @@
   You must send original documents - we can't accept photocopies. Your application will be delayed if you don't send everything we need.
 </div>
 
+<p><strong>Send all of the following:</strong></p>
 {{< hmpo-partials-form}}
 {{$form}}
+<!--<h2>You need to send:</h2>-->
 
-
-<h2>After the ceremony</h2>
-<p>If the ceremony has already taken place you need to send:</p>
 <ul class="list-bullet">
   <li>your old passport</li>
-   <li>your marriage or civil partnership certificate</li>
+  <li>your birth certificate</li>
+  <li>your decree absolute or final order</li>
+  <li>your marriage or civil partnership certificate (if you don’t have the original you need to get a replacement)</li>
+  <li>a signed and dated letter saying that you use your previous name for all purposes</li>
 </ul>
 
 
-  <h2>Before the ceremony</h2>
-<p>If you want to change your name before the ceremony you need to send:</p>
+<p><strong>You also need to send 1 document from the last 12 months, that shows you’re using your new name:</strong></p>
 <ul class="list-bullet">
-  <li>your old passport</li>
-   <li>a completed <a href="https://www.gov.uk/government/publications/passports-for-newly-weds-and-civil-partners">passports for newly weds and civil partners</a> form</li>
+  <li>utility bill</li>
+<li>bank statement</li>
+<li>letter from your employer</li>
+<li>driving licence</li>
+<li>medical card</li>
+<li>letter from your local council or a government department</li>
 </ul>
+<br>
 
-<br>  {{#values.required-documents}}
-    <a href="../tracking-change-of-name/waiting-for-old-pass" class="button">Continue</a><br/><br/>
+  {{#values.required-documents}}
+    <a href="../renew/confirmation" class="button">Continue</a><br/><br/>
   {{/values.required-documents}}
   {{^values.required-documents}}
-    <a href="../renew/declaration" class="button">Continue</a><br/><br/>
+    <a href="/change_of_name_180122/renew/declaration" class="button">Continue</a><br/><br/>
   {{/values.required-documents}}
 
 {{/form}}
@@ -48,11 +54,13 @@
 
             </div>
         </details>
- <div class="app-c-print-link">
+
+  <div class="app-c-print-link">
   <a href="/" class="app-c-print-link__link" rel="alternate">
     Print page
   </a>
 </div>
+
 
 {{/content}}
 

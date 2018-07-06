@@ -15,32 +15,27 @@
 
 {{< hmpo-partials-form}}
 {{$form}}
-<p><strong>You need to send:</strong></p>
 
+
+<h2>After the ceremony</h2>
+<p>If the ceremony has already taken place you need to send:</p>
 <ul class="list-bullet">
   <li>your old passport</li>
+   <li>your marriage or civil partnership certificate</li>
 </ul>
 
-<p><strong>You also need to send 2 documents in your new name:</strong></p>
-<li>utility bill</li>
-<li>bank statement</li>
-<li>letter from your employer</li>
-<li>driving licence</li>
-<li>medical card</li>
-<li>marriage certificate</li>
-<li>civil partnership certificate</li>
-<li>deed poll</li>
-<li>change of name deed</li>
-<li>statutory declaration or affidavit</li>
+  <h2>Before the ceremony</h2>
+<p>If you want to change your name before the ceremony you need to send:</p>
+<ul class="list-bullet">
+  <li>your old passport</li>
+   <li>a completed <a href="https://www.gov.uk/government/publications/passports-for-newly-weds-and-civil-partners">passports for newly weds and civil partners</a> form</li>
 </ul>
-<br>
 
-
-  {{#values.required-documents}}
+<br>  {{#values.required-documents}}
     <a href="../tracking-change-of-name/waiting-for-old-pass" class="button">Continue</a><br/><br/>
   {{/values.required-documents}}
   {{^values.required-documents}}
-    <a href="/change_of_name_180122/renew/declaration" class="button">Continue</a><br/><br/>
+    <a href="../renew/declaration" class="button">Continue</a><br/><br/>
   {{/values.required-documents}}
 
 {{/form}}
@@ -52,13 +47,11 @@
 
             </div>
         </details>
-
  <div class="app-c-print-link">
   <a href="/" class="app-c-print-link__link" rel="alternate">
     Print page
   </a>
 </div>
-
 
 {{/content}}
 
