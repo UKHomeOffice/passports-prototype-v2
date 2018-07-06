@@ -55,7 +55,13 @@ module.exports = {
         ],
         next: '/family-intro',
         nextAlt: './home-address-overseas',
-        forks: [{ // If they do have a certificate
+        forks: [{
+            target: '/home-address',
+            condition: function(req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == true &&
+                req.session['hmpo-wizard-common']['old-blue'] == false;
+            }
+        }, {
             target: '/naturalisation-registration-details',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == true;
