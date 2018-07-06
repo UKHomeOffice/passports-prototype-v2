@@ -74,12 +74,7 @@
 {{< hmpo-partials-form}}
 {{$form}}
 
-  {{#values.required-documents}}
-    <a href="../tracking-change-of-name/waiting-for-old-pass" class="button">Continue</a><br/><br/>
-  {{/values.required-documents}}
-  {{^values.required-documents}}
-    <a href="/change_of_name_180530/renew/declaration" class="button">Continue</a><br/><br/>
-  {{/values.required-documents}}
+{{#input-submit}}{{/input-submit}}
 
 {{/form}}
 {{/ hmpo-partials-form}}
@@ -96,10 +91,11 @@
 </details>
 
 <div class="app-c-print-link">
-  <a href="/" class="app-c-print-link__link" rel="alternate">
+  <a href="#" class="app-c-print-link__link" rel="alternate">
     Print page
   </a>
 </div>
 
 {{/content}}
+
 {{/ layout}}

@@ -13,11 +13,7 @@
   You must send original documents - we can't accept photocopies. Your application will be delayed if you don't send everything we need.
 </div>
 
-<p><strong>Send all of the following:</strong></p>
-{{< hmpo-partials-form}}
-{{$form}}
-<!--<h2>You need to send:</h2>-->
-
+<h3>Send all of the following:</h3>
 <ul class="list-bullet">
   <li>your old passport</li>
   <li>your birth certificate</li>
@@ -26,43 +22,42 @@
   <li>a signed and dated letter saying that you use your previous name for all purposes</li>
 </ul>
 
-
-<p><strong>You also need to send 1 document from the last 12 months, that shows you’re using your new name:</strong></p>
+<h3>You also need to send 1 document from the last 12 months, that shows you’re using your new name:</h3>
 <ul class="list-bullet">
   <li>utility bill</li>
-<li>bank statement</li>
-<li>letter from your employer</li>
-<li>driving licence</li>
-<li>medical card</li>
-<li>letter from your local council or a government department</li>
+  <li>bank statement</li>
+  <li>letter from your employer</li>
+  <li>driving licence</li>
+  <li>medical card</li>
+  <li>letter from your local council or a government department</li>
 </ul>
 <br>
 
-  {{#values.required-documents}}
-    <a href="../renew/confirmation" class="button">Continue</a><br/><br/>
-  {{/values.required-documents}}
-  {{^values.required-documents}}
-    <a href="/change_of_name_180122/renew/declaration" class="button">Continue</a><br/><br/>
-  {{/values.required-documents}}
+{{< hmpo-partials-form}}
+{{$form}}
+
+{{#input-submit}}{{/input-submit}}
 
 {{/form}}
 {{/ hmpo-partials-form}}
+
 <details>
-            <summary><span class="summary">My documents aren't in English or Welsh</span></summary>
-            <div class="panel panel-border-narrow">
-              <p>If your documents aren't in English or Welsh you'll need to get <a href="https://www.gov.uk/certifying-a-document">certified translation.</a></p>
+  <summary>
+    <span class="summary">My documents aren't in English or Welsh</span>
+  </summary>
+  <div class="panel panel-border-narrow">
+    <p>If your documents aren't in English or Welsh you'll need to get
+      <a href="https://www.gov.uk/certifying-a-document">certified translation.</a>
+    </p>
+  </div>
+</details>
 
-            </div>
-        </details>
-
-  <div class="app-c-print-link">
-  <a href="/" class="app-c-print-link__link" rel="alternate">
+<div class="app-c-print-link">
+  <a href="#" class="app-c-print-link__link" rel="alternate">
     Print page
   </a>
 </div>
 
-
 {{/content}}
-
 
 {{/ layout}}
