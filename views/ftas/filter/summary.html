@@ -15,23 +15,20 @@
   {% if values['application-for-why'] == 'adult-supported' %}
     <p>You're helping someone to apply online for their first adult passport. If this is not correct, <a href="./">start again</a>.</p>
 
-    <p>You need to:</p>
-    <ul class="list-bullet">
-      <li>be with the applicant when you do this</li>
-      <li>ask the applicant to agree to the terms and conditions</li>
-    </ul>
+    <div class="panel-important">
+        <p>The applicant must agree to the terms and conditions. They need to be with you when you apply.</p>
+    </div>
 
-    <p>You need to have <a href="https://www.gov.uk/types-of-british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
+    <p>You need <a href="https://www.gov.uk/types-of-british-nationality" target="_blank">British nationality</a> to get a UK passport. Check eligibility before you apply.</p>
 
   {% elseif values['application-for-why'] == 'adult-no-capacity' %}
     <p>You're applying for a first adult passport for someone who doesn't have mental or physical capacity. If this is not correct, <a href="./">start again</a>.</p>
-    <p>You'll need to:</p>
-    <ul class="list-bullet">
-     <li>send evidence that you can make this application</li>
-     <li>agree to the terms and conditions on behalf of the applicant</li>
-    </ul>
 
-    <p>You need to have <a href="https://www.gov.uk/types-of-british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
+    <div class="panel-important">
+        <p>You'll need to send evidence and agree to the terms and conditions on behalf of the applicant.</p>
+    </div>
+
+    <p>You need <a href="https://www.gov.uk/types-of-british-nationality" target="_blank">British nationality</a> to get a UK passport. Check eligibility before you apply.</p>
 
   {% elseif values['old-blue'] %}
     <p>Based on your answers, you have an old style passport that has expired. If this is incorrect, <a href="./filter">start again</a>.</p>
