@@ -65,7 +65,7 @@
         },
         "naturalisation-registration-certificate-number": {
             "label": "Certificate number",
-            "hint": "As written on your certificate"
+            "hint": "For example, 1091644"
         },
         "naturalisation-registration-certificate-issue-day": {
             "label": "Day"
