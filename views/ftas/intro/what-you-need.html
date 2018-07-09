@@ -29,7 +29,7 @@
 </ul>
 
 {{#nunjucks}}
-    {% if values['born-before-1983'] or not values['naturalisation-registration-certificate'] %}
+    {% if not values['born-before-1983'] and not values['naturalisation-registration-certificate'] %}
         <h2>Grandparents' details</h2>
         <p>Based on what you tell us, we may ask for their:</p>
         <ul style="margin-bottom: 30px;" class="list-bullet list-bullet-header-spacing">
