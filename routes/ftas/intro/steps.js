@@ -1,22 +1,18 @@
 module.exports = {
     '/': {
-        backLink: '/../ftas/filter/dual-national',
-        next: '/how-to-apply'
+        backLink: '/../ftas/filter/summary',
+        next: '/what-you-need'
     },
     '/before-you-continue-overseas': {
         backLink: '/../ftas/overseas/give-contact-details',
         next: '/what-you-need-overseas'
     },
-    '/how-to-apply': {
-        backLink: './',
-        next: '/what-you-need'
-    },
     '/what-you-need': {
+        backLink: './',
         fields: ['what-you-will-need-declaration'],
         next: '/you-need-a-photo'
     },
     '/you-need-a-photo': {
-        backLink: './what-you-need',
         next: '/choose-photo-method'
     },
     '/choose-photo-method': {

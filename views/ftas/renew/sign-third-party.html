@@ -1,0 +1,48 @@
+{{< layout}}
+
+{{$pageTitle}}Signing a new passport{{/pageTitle}}
+
+{{$header}}
+    <h1>Signing a new passport</h1>
+{{/header}}
+
+{{$content}}
+    {{< hmpo-partials-form}}
+        {{$form}}
+
+            <p>All passport holders aged 12 and older must sign their new passport when they receive it. They won’t be able to use it until they do.</p>
+            {{#radio-group}}can-sign-third-party{{/radio-group}}
+
+            <div id="no-sign" class="reveal js-hidden">
+                <div class="panel panel-border-narrow">
+                    <label for="no-sign-reason" class="form-label-bold">
+                        Explain why
+                        <span id="no-sign-reason-hint" class="form-hint">If you have evidence, you'll need to send it to us.</span>
+                    </label>
+                    {{#textarea}}no-sign-reason{{/textarea}}
+                </div>
+                <br>
+            </div>
+            {{#input-submit}}{{/input-submit}}
+
+        {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+{{$sidebar}}
+
+<div class="column-one-third">
+  <br/>
+  <br/>
+    <div class="sidebar related">
+      <div class="photo-preview-inner">
+        <h2 class="heading-medium">Where to sign</h2>
+        <div class="photo">
+            <img src="../../public/images/sign-passport-sm.png" alt="where to sign your passport" title="where to sign your passport" width="190">
+          </div>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}

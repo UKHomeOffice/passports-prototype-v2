@@ -71,7 +71,25 @@ module.exports = {
                 toggle: 'no-sign'
             }
         ]
-    },
+      },
+    'can-sign-third-party': {
+        legend: {
+          className: 'visuallyhidden'
+        },
+        formatter: 'boolean',
+        validate: ['required'],
+        options: [
+          {
+            value: true,
+            label: 'I’ll tell the passport holder to sign',
+          },
+          {
+            value: false,
+            label: 'They can’t physically sign',
+            toggle: 'no-sign'
+          }
+        ]
+      },
     'no-sign-reason': {
         labelClassName: 'visuallyhidden',
         legend: {
@@ -87,6 +105,24 @@ module.exports = {
         ],
         dependent: {
             field: 'can-sign',
+            value: false
+        }
+    },
+    'no-sign-reason-third-party': {
+        labelClassName: 'visuallyhidden',
+        legend: {
+            className: 'visuallyhidden'
+        },
+        className: 'textarea',
+        validate: [
+            'required',
+            {
+                type: 'maxlength',
+                arguments: 250
+            }
+        ],
+        dependent: {
+            field: 'can-sign-third-party',
             value: false
         }
     },
@@ -165,8 +201,7 @@ module.exports = {
             },
             {
                 value: true,
-                label: 'No, my name has changed',
-                toggle: 'note-regarding-name-change'
+                label: 'No, {{> partials-applicant-my-their}} name has changed'
             }
         ],
         formatter: ['boolean'],
@@ -184,11 +219,11 @@ module.exports = {
                 label: 'Marriage or civil partnership'
             },
             {
-                value: 'Divorce',
-                label: 'Divorce'
+                value: 'Divorce-or-dissolution',
+                label: 'Divorce or dissolution'
             },
             {
-                value: 'Gender-reassigment',
+                value: 'Gender-transition',
                 label: 'Gender transition'
             },
             {
@@ -1177,7 +1212,6 @@ module.exports = {
     'mobile': {
         labelClassName: 'visuallyhidden',
         validate: [
-            'numeric',
             'required'
         ]
     },

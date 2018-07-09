@@ -28,18 +28,20 @@ module.exports = {
         next: './'
     },
     '/check-photo-and-submit': {
-        fields: ['submit-photo'],
-        backLink: './shadows-face',
+        fields: [
+            'submit-photo'
+        ],
+        // backLink: './shadows-face',
         next: '/../renew',
         forks: [{
-            target: '/../renew/name',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
-            }
-        }, {
             target: '/../renew',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
+            }
+        }, {
+            target: '/../renew/name',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
             }
         }, {
             target: '/../intro/choose-photo-method',
@@ -49,5 +51,4 @@ module.exports = {
             }
         }]
     }
-    
 };

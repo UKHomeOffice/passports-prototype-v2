@@ -137,7 +137,7 @@ module.exports = {
         next: '/required-documents',
     },
     '/required-documents':{
-        controller: require('../../../controllers/change-of-name-docs')
+        // controller: require('../../../controllers/change-of-name-docs')
     },
     '/name-change-docs':{
         next: '/declaration'
@@ -178,7 +178,6 @@ module.exports = {
         next: '/payment'
     },
     '/payment':{
-        controller: require('../../../controllers/dual-national'),
         next: '/processing-payment'
     },
     '/processing-payment':{

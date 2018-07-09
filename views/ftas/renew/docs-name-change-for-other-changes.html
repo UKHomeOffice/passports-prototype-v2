@@ -12,21 +12,23 @@
 <div class="panel panel-border-wide alert-default">
   You must send original documents - we can't accept photocopies. Your application will be delayed if you don't send everything we need.
 </div>
+
 <h2>How did you change your name?</h2>
+
 <div class="accordion" id="name-change-accordion">
   <div class="accordion-section" id="first-name">
 
     <div class="accordion-section-header">
       <h2 class="heading-small" style="width:70%">I changed the spelling or order of my first names, or dropped a first name</h2>
     </div>
+
     <div class="accordion-section-body">
       <h3>You need to send:</h3>
-
       <ul class="list-bullet">
         <li>your old passport</li>
       </ul>
 
-      <h3>You also need to send 2 documents in your new name:</h3>
+      <h3>You also need to send 2 documents from the last 12 months, that show you’re using your new name:</h3>
       <ul class="list-bullet">
         <li>utility bill</li>
         <li>bank statement</li>
@@ -36,18 +38,19 @@
         <li>letter from your local council or a government department</li>
       </ul>
     </div>
-
   </div>
-  <div class="accordion-section" id="other">
 
+  <div class="accordion-section" id="other">
     <div class="accordion-section-header">
       <h2 class="heading-small">I changed my name another way</h2>
     </div>
+
     <div class="accordion-section-body">
       <h3>You need to send:</h3>
       <ul class="list-bullet">
         <li>your old passport</li>
       </ul>
+
       <h3>And 1 document that proves you changed your name:</h3>
       <ul class="list-bullet">
         <li>marriage certificate</li>
@@ -57,7 +60,8 @@
         <li>statuary declaration</li>
         <li>affidavit</li>
       </ul>
-      <h3>And 1 document that shows you're using your new name:</h3>
+
+      <h3>And 1 document from the last 12 months, that shows you’re using your new name:</h3>
       <ul class="list-bullet">
         <li>utility bill</li>
         <li>bank statement</li>
@@ -70,43 +74,34 @@
     </div>
 
   </div>
-
-
-
 </div>
-
-
-
-
 <br>
+
 {{< hmpo-partials-form}}
 {{$form}}
 
-  {{#values.required-documents}}
-    <a href="../tracking-change-of-name/waiting-for-old-pass" class="button">Continue</a><br/><br/>
-  {{/values.required-documents}}
-  {{^values.required-documents}}
-    <a href="/change_of_name_180122/renew/declaration" class="button">Continue</a><br/><br/>
-  {{/values.required-documents}}
+{{#input-submit}}{{/input-submit}}
 
 {{/form}}
 {{/ hmpo-partials-form}}
+
 <details>
-            <summary><span class="summary">My documents aren't in English or Welsh</span></summary>
-            <div class="panel panel-border-narrow">
-              <p>If your documents aren't in English or Welsh you'll need to get <a href="https://www.gov.uk/certifying-a-document">certified translation.</a></p>
+  <summary>
+    <span class="summary">My documents aren't in English or Welsh</span>
+  </summary>
+  <div class="panel panel-border-narrow">
+    <p>If your documents aren't in English or Welsh you'll need to get
+      <a href="https://www.gov.uk/certifying-a-document">certified translation.</a>
+    </p>
+  </div>
+</details>
 
-            </div>
-        </details>
-
- <div class="app-c-print-link">
-  <a href="/" class="app-c-print-link__link" rel="alternate">
+<div class="app-c-print-link">
+  <a href="#" class="app-c-print-link__link" rel="alternate">
     Print page
   </a>
 </div>
 
-
 {{/content}}
-
 
 {{/ layout}}

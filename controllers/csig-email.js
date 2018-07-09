@@ -14,7 +14,7 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
 			req.sessionModel.set('csig-email', 'test@thundercats.com');
 		}
 
-		if (req.url =='/email-sent') {
+		if (req.url =='/user-contact/email-sent') {
 			if (req.session['hmpo-wizard-common']['renominate'] == 'true') {
 				return res.redirect('tracking-waiting-renominate')
 			}

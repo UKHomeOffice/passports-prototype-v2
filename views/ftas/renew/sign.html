@@ -1,9 +1,9 @@
 {{< layout}}
 
-{{$pageTitle}}Signing your new passport{{/pageTitle}}
+{{$pageTitle}}Signing a new passport{{/pageTitle}}
 
 {{$header}}
-    <h1>Signing your new passport</h1>
+    <h1>Signing a new passport</h1>
 {{/header}}
 
 {{$content}}
@@ -11,17 +11,19 @@
         {{$form}}
             <p>When you get your new passport, you need to sign it.</p>
             {{#radio-group}}can-sign{{/radio-group}}
+
             <div id="no-sign" class="reveal js-hidden">
                 <div class="panel panel-border-narrow">
-
                     <label for="no-sign-reason" class="form-label-bold">
-                        Explain why you can’t sign
-                        <span id="no-sign-reason-hint" class="form-hint">If you have evidence, include it when you send your documents.</span>
+                        Explain why
+                        <span id="no-sign-reason-hint" class="form-hint">If you have evidence, you'll need to send it to us.</span>
                     </label>
                     {{#textarea}}no-sign-reason{{/textarea}}
                 </div>
+                <br>
             </div>
             {{#input-submit}}{{/input-submit}}
+
         {{/form}}
     {{/ hmpo-partials-form}}
 {{/content}}

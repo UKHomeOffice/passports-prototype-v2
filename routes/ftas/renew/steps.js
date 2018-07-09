@@ -3,28 +3,21 @@ module.exports = {
         backLink: '../uploadphoto/check-photo-and-submit',
         fields: [
             'passport-number',
-            'expiry-day',
-            'expiry-month',
-            'expiry-year'
-        ],
-        next: '/name'
-    },
-    '/title': {
-        backLink: './',
-        fields: [
-            'title'
+            // 'expiry-day',
+            // 'expiry-month',
+            // 'expiry-year'
         ],
         next: '/name'
     },
     '/name': {
-        backLink: '../renew',
+        backLink: './',
         fields: [
             'title',
             'name',
             'lastname',
             'change-name'
         ],
-        next: '/gender',
+        next: '/previous-names',
         forks: [{
             target: '/change-of-name',
             condition: {
@@ -34,7 +27,6 @@ module.exports = {
         }]
     },
     '/change-of-name': {
-        backLink: 'name',
         fields: [
             'change-of-name-reason'
         ],
@@ -46,7 +38,6 @@ module.exports = {
             'previous-first-name',
             'previous-last-name'
         ],
-        backLink: 'name',
         next: '/gender'
     },
     '/gender': {
@@ -56,30 +47,35 @@ module.exports = {
         next: '/place-of-birth'
     },
     '/place-of-birth': {
-        next: '/naturalisation-registration-details',
-        // next: '/parents',
+        controller: require('../../../controllers/go-overseas'),
         fields: [
             'born-in-uk',
             'town-of-birth',
             'country-of-birth'
         ],
-        forks: [{ // If they do NOT have a certificate
-            target: '/family-intro',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == false;
+        next: '/family-intro',
+        nextAlt: './home-address-overseas',
+        forks: [{
+            target: '/home-address',
+            condition: function(req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == true &&
+                req.session['hmpo-wizard-common']['old-blue'] == false;
             }
-        }],
-        controller: require('../../../controllers/go-overseas'),
-        nextAlt: './home-address-overseas'
+        }, {
+            target: '/naturalisation-registration-details',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == true;
+            }
+        }]
     },
     '/naturalisation-registration-details': {
-        next: '/identity-interview',
         fields: [
             'naturalisation-registration-certificate-number',
             'naturalisation-registration-certificate-issue-day',
             'naturalisation-registration-certificate-issue-month',
             'naturalisation-registration-certificate-issue-year'
-        ]
+        ],
+        next: '/family-intro'
     },
     '/family-intro': {
         next: '/parents'
@@ -108,11 +104,6 @@ module.exports = {
         ],
         next: '/parent-1-details'
     },
-    // '/parents-married': {
-    //     fields: ['parents-married'],
-    //     backLink: '/parents',
-    //     next: '/parent-1-details'
-    //   },
     '/parent-1-details': {
         fields: [
             'parent1-town-of-birth',
@@ -124,13 +115,6 @@ module.exports = {
             'parent1-passport-issue-month',
             'parent1-passport-issue-year'
         ],
-        // controller: require('../../../controllers/parents-details'),
-        // forks: [{
-        //     target: '/home-address', // If parent 2 has NOT been filled in
-        //     condition: function(req, res) {
-        //       return req.session['hmpo-wizard-common']['parent2-first-names'] == "";
-        //     }
-        //   }],
         next: '/parent-2-details'
     },
     '/parent-2-details': {
@@ -146,7 +130,20 @@ module.exports = {
         ],
         next: '/parent-1-grandparents',
         // controller: require('../../../controllers/go-overseas'),
-        nextAlt: './home-address-overseas'
+        nextAlt: './home-address-overseas',
+        forks: [{
+            target: '/home-address',
+            condition: function (req, res) { // If they are Naturalisated/Registered OR Born Before 01/01/1983 OR Passport issued Before 01/01/1994 (Old blue) Hidden FTA
+                return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == true ||
+                    req.session['hmpo-wizard-common']['born-before-1983'] == true ||
+                    req.session['hmpo-wizard-common']['old-blue'] == true;
+            }
+        }, {
+            target: '/home-address',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['application-for'] == false;
+            }
+        }]
     },
     '/parent-1-grandparents': {
         controller: require('../../../controllers/validation-parent-1-grandparents'),
@@ -202,13 +199,6 @@ module.exports = {
             'parent2-parents-marriage-month',
             'parent2-parents-marriage-year'
         ],
-        next: '/identity-interview'
-    },
-    '/identity-interview': {
-        fields: [
-            'can-interview',
-            'no-interview-reason'
-        ],
         next: '/home-address'
     },
     '/home-address': {
@@ -253,20 +243,18 @@ module.exports = {
     '/get-updates': {
         next: '/passport-options'
     },
-    '/dual-national': {
-        backLink: './get-updates',
-    },
-    '/dual-national-details': {
-        backLink: 'dual-national',
-        next: '/title'
-    },
     '/passport-options': {
         fields: [
             'passport-options',
             'braille'
         ],
         next: '/sign',
-        backLink: './dual-national'
+        forks: [{
+            target: '/sign-third-party',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['application-for'] == false;
+            }
+        }],
     },
     '/passport-options-overseas': {
         fields: [
@@ -280,7 +268,16 @@ module.exports = {
             'can-sign',
             'no-sign-reason'
         ],
-        backLink: 'passport-options',
+        next: '/passport-special-delivery',
+        /* if they are from the UK */
+        controller: require('../../../controllers/go-overseas'),
+        nextAlt: './summary-overseas'
+    },
+    '/sign-third-party': {
+        fields: [
+            'can-sign-third-party',
+            'no-sign-reason-third-party'
+        ],
         next: '/passport-special-delivery',
         /* if they are from the UK */
         controller: require('../../../controllers/go-overseas'),
@@ -304,33 +301,41 @@ module.exports = {
     '/summary': {
         controller: require('../../../controllers/confirmFTA'),
         template: 'confirm',
-        next: '/fta-docs'
+        next: '/documents-required'
     },
-    '/required-documents': {
-        controller: require('../../../controllers/change-of-name-docsFTA')
+    '/documents-required': {
+        controller: require('../../../controllers/docs-check-required')
     },
-    '/fta-docs': {
-        next: '/required-documents'
-    },
-    '/name-change-docs': {
+    '/docs-fta': {
+        backLink: 'summary',
         next: '/declaration'
     },
-    '/name-change-docs-for-marriage': {
+    '/docs-renew': {
+        backLink: 'summary',
         next: '/declaration'
     },
-    '/name-change-docs-for-divorce': {
+    '/docs-fta-thirdparty': {
+        backLink: 'summary',
         next: '/declaration'
     },
-    '/name-change-docs-for-small-changes': {
+    '/docs-name-change-for-marriage-or-civil-partnership': {
+        backLink: 'summary',
         next: '/declaration'
     },
-    '/name-change-docs-for-gender-change': {
+    '/docs-name-change-for-divorce-or-dissolution': {
+        backLink: 'summary',
         next: '/declaration'
     },
-    '/name-change-docs-for-other-changes': {
+    '/docs-name-change-for-gender-change': {
+        backLink: 'summary',
         next: '/declaration'
     },
-    '/name-change-docs-for-parents': {
+    '/docs-name-change-for-other-changes': {
+        backLink: 'summary',
+        next: '/declaration'
+    },
+    '/docs-name-change-for-parents': {
+        backLink: 'summary',
         next: '/declaration'
     },
     '/declaration': {
@@ -341,13 +346,12 @@ module.exports = {
         next: '/payment'
     },
     '/payment': {
-        controller: require('../../../controllers/dual-national'),
         next: '/processing-payment'
     },
     '/processing-payment': {
         next: '/confirmation'
     },
     '/confirmation': {
-        next: '/title'
+        next: '/../csig/track'
     }
 };

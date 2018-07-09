@@ -3,7 +3,7 @@
 {{$pageTitle}}Were you born in the UK?{{/pageTitle}}
 
 {{$header}}
-<h1>Were you born in the UK?</h1>
+<h1>Were {{> partials-applicant-you-they}} born in the UK?</h1>
 {{/header}}
 
 {{$content}}
@@ -23,11 +23,11 @@
     Town of birth
 
     {{#values.naturalisation-registration-certificate}}
-    <span id="town-of-birth-hint" class="form-hint">As written on your naturalisation or registration certificate</span>
+    <span id="town-of-birth-hint" class="form-hint">As written on {{> partials-applicant-your-their}} naturalisation or registration certificate</span>
     {{/values.naturalisation-registration-certificate}}
 
     {{^values.naturalisation-registration-certificate}}
-    <span id="town-of-birth-hint" class="form-hint">As written on your birth or adoption certificate</span>
+    <span id="town-of-birth-hint" class="form-hint">As written on {{> partials-applicant-your-their}} birth or adoption certificate</span>
     {{/values.naturalisation-registration-certificate}}
 </label>
 {{#input-text}}town-of-birth{{/input-text}}

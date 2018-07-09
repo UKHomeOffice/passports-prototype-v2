@@ -1,0 +1,112 @@
+// Task list pattern
+
+// Override column width for tablet and up
+.column-minimum {
+  @include media(tablet) {
+    min-width: 600px;
+  }
+}
+
+// Spacing to the left of the task list
+$task-list-indent: 0;
+
+.task-list {
+  clear: both;
+  margin-top: $gutter;
+  @include media(tablet) {
+    margin-top: ($gutter);
+  }
+}
+
+
+.task-list-section {
+  display: table;
+
+  @include bold-24;
+  padding-bottom: ($gutter / 6);
+}
+
+.task-list-section-number {
+  display: table-cell;
+  padding-right: ($gutter / 6);
+
+  @include media(tablet) {
+    min-width: $task-list-indent;
+    padding-right: 0;
+  }
+}
+
+
+.task-list-items {
+  margin-bottom: $gutter;
+  @include media(tablet) {
+    //margin-bottom: ($gutter * 2);
+  }
+
+  @include media(tablet) {
+    padding-left: $task-list-indent;
+  }
+}
+
+.task-list-item {
+  border-bottom: 1px solid $border-colour;
+  padding-top: $gutter-two-thirds;
+  padding-bottom: $gutter-two-thirds;
+  @extend %contain-floats;
+  p {
+    display: inline-block;
+    margin: ($gutter-one-third) 0 0;
+  }
+}
+
+.task-list-item:first-child {
+  border-top: 1px solid $border-colour;
+}
+
+.task-name {
+  width: $two-thirds;
+  float: left;
+  display: block;
+  font-weight: 900;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.task-name-complete {
+  font-weight: 900;
+  font-size: 24px;
+  &:hover {
+  color: $text-colour;
+  }
+}
+
+%task-item {
+  @include phase-tag;
+  float: right;
+  margin-right: 0;
+  padding-top: 3px;
+  @include media(tablet) {
+    min-width: 80px;
+    font-size: 14px;
+  }
+  text-align: center;
+
+}
+
+.task-to-do {
+  @extend %task-item;
+
+  background: none;
+  border: 1px solid $grey-2;
+  color: $text-colour;
+}
+
+.task-pending {
+  @extend %task-item;
+  background: $grey-1;
+}
+
+.task-completed {
+  @extend %task-item;
+  background: $govuk-blue;
+}

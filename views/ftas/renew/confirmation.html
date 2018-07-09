@@ -7,45 +7,28 @@
 {{< hmpo-partials-form}}
 {{$form}}
 
-<br>
+<header class="update-notice update-notice--grey">
+    <h1><span class="icon-tick"></span> Payment successful</h1>
 
-<header class="update-notice">
-    <h1><span class="icon-tick"></span> Application submitted</h1>
-    <p>Application reference: <strong>PEX 319 825 680X</strong></p>
-        <p>Your payment: £{{values.cost}}0, reference: IE19852</p>
-    <p>Email confirmation sent to <strong>{{values.email}}</strong></p>
-    <a href="#" class="download">Download PDF receipt</a>
+        <p>You've paid £75.50, reference IE19852</br>
+Email confirmation sent to <strong>c.moore@test-corp.co.uk</strong></p>
+    <a style="color: #0b0c0c" href="#">Download PDF receipt</a>
 </header>
 
-<div class="panel-important">
-    <p>We can't start your application until we receive your documents.</p>
+<h2>What you need to do</h2>
+
+<p>Before we can print the new passport, you need to ask someone to confirm {{> partials-applicant-yours-the-applicants}} identity.</p>
+
+<p>Sign into your application to provide their name and email. You'll need your application reference.
+
+  <div role="note" aria-label="Information" class="panel panel-border-wide application-notice info-notice">
+      <p>Application reference: <strong>PEX 319 825 680X</strong> </p>
+  </div>
+
+<p>If you need to do this later, we've sent you an email with the details.</p>
+<a href="/../csig/user" class="button">Sign in</a>
+
 </div>
-
-
-<h1>What you need to do</h1>
-
-<h2>Get someone to confirm your identity</h2>
-<p>You'll need to ask a friend or someone who knows you well to <a href="/../csig/user-contact">confirm your identity</a>. We've sent you an email that tells you what you'll need to do.</p>
-
-<h2>Send us your documents</h2>
-<p>
-  <a href="fta-docs">Check what you need to send</a>
-</p>
-
-<p>You don’t need to include a covering letter.</p>
-
-<p>HM Passport Office
-<br/> Ref: PEX 319 825 680X
-<br/> Aragon Court
-<br/> Northminster Road
-<br/> Peterborough
-<br/> PE1 1QG</p>
-
-<p>Use a strong envelope that is the right size for your documents. You can use standard post or special delivery.</p>
-
-<a href="" class="button">Give feedback</a>
-<br/>
-<br/>
 
 {{/form}}
 {{/ hmpo-partials-form}}

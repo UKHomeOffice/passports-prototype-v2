@@ -1,13 +1,13 @@
 module.exports = {
     '/': {
-        controller: require('../../../controllers/init'), // Initialise
+        //controller: require('../../../controllers/init'), // Initialise
         // controller: require('../../../controllers/go-overseas'),
         fields: [
             'apply-uk',
             'application-country'
         ],
         backLink: '../startpage',
-        next: '/first-uk',
+        next: '/who-for',
         /* if Yes is selected */
         nextAlt: 'what-do-you-want-to-do-overseas',
         /* if they are from Germany/France */
@@ -18,13 +18,31 @@ module.exports = {
         nextAltAltAltAlt: '../overseas-not-available' /* if they are from Syria - not available */
     },
     '/who-for': {
+        controller: require('../../../controllers/application-for'),
+        backLink: './',
         fields: [
             'application-for'
         ],
-        next: '/first-uk'
+        next: '/first-uk',
+        forks: [{
+            target: '/who-for-why',
+            condition: {
+                field: 'application-for',
+                value: 'application-someone-else'
+            }
+        }]
+    },
+    '/who-for-why': {
+      controller: require('../../../controllers/application-for-relationship'),
+        fields: [
+            'application-for-why'
+        ],
+        next: '/first-uk',
+    },
+    '/who-for-help': {
+      backLink: 'who-for',
     },
     '/first-uk': {
-        backLink: './',
         fields: [
             'passport-before'
         ],
@@ -50,22 +68,8 @@ module.exports = {
             }
         }]
     },
-    '/passport-colour': {
-        backLink: './',
-        fields: [
-            'passport-colour'
-        ],
-        next: '/naturalisation-registration-details',
-        forks: [{
-            target: '/lost',
-            condition: {
-                field: 'passport-colour',
-                value: 'red'
-            }
-        }]
-    },
     '/naturalisation-registration-details': {
-        controller: require('../../../controllers/naturalisation-registration-details'),
+        controller: require('../../../controllers/check-naturalisation-registration'),
         fields: [
             'naturalisation-registration-certificate'
         ],
@@ -109,14 +113,14 @@ module.exports = {
         /* if they are from Afganistan */
     },
     '/dob': {
+        //controller: require('../../../controllers/go-overseas'),
+        controller: require('../../../controllers/check-dob'),
         fields: [
             'age-day',
             'age-year',
             'age-month'
         ],
-        controller: require('../../../controllers/go-overseas'),
-        backLink: './lost-stolen',
-        next: '/passport-expiry',
+        next: '/passport-date-of-issue',
         forks: [
             {
                 target: '/naturalisation-registration-details',
@@ -127,95 +131,61 @@ module.exports = {
             }
         ]
     },
-    '/dob-below-16': {
-        fields: [
-            'age-day',
-            'age-year',
-            'age-month'
-        ],
-        backLink: './dob',
-        next: '/passport-expiry',
-        forks: [{
-            target: '/../intro',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they are BELOW 16 + NOT had UK passport before
-            }
-        }]
-    },
-    '/passport-expiry': {
+    '/passport-date-of-issue': {
         fields: [
             'issue-day',
             'issue-month',
             'issue-year'
         ],
-        backLink: '../filter/dob',
-        next: '/naturalisation-registration-details',
-        forks: [{ // If they are NOT a UK Hidden FTA
-            target: '/dual-national',
-            condition: function (req, res) { // Logic below is to deal with 2-digit and 4-digit input of year and make it work, because any years input as 02–18 is unlikely to mean 1902–1918 but 2002–present
-                return req.session['hmpo-wizard-common']['issue-year'] >= 2002 // If their passport's date of issue is > 2002 (2002—present) ||
-                    req.session['hmpo-wizard-common']['issue-year'] >= 02 && req.session['hmpo-wizard-common']['issue-year'] <= 18; // If their passport's date of issue is >= 2002 (2002–2018)
+        next: '/passport-damaged'
+    },
+    '/passport-damaged': {
+        controller: require('../../../controllers/check-old-blue'),
+        fields: [
+            'passport-damaged'
+        ],
+        next: '/dual-national', // If they are NOT a UK Hidden FTA
+        forks: [{ // If they are a UK Hidden FTA
+            target: '/naturalisation-registration-details',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['old-blue'] == true;
             }
         }]
     },
     '/dual-national': {
+        controller: require('../../../controllers/go-overseas'),
         fields: [
             'dual-nationality'
         ],
-        next: '/../intro'
-    },
-    '/passport-damaged': {
-        fields: [
-            'passport-damaged'
-        ],
-        backLink: './',
-        next: '/../intro' // If their passport is NOT damaged
-    },
-    '/uncancelled': {
-        controller: require('../../../controllers/go-overseas'),
-        fields: [
-            'uncancelled'
-        ],
-        backLink: './passport-damaged',
-        next: '/../intro',
+        next: '/summary',
         nextAlt: '../overseas',
         forks: [{
             target: '/relationship-applicant',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['application-for'] == false;
+                return req.session['hmpo-wizard-common']['application-for-relationship'] == true;
             }
         }],
     },
     '/relationship-applicant': {
         fields: [
-            'relationship-applicant'
+            'relationship-applicant',
+            'other-why-apply'
         ],
-        backLink: './uncancelled',
-        next: '/../intro',
-        nextAlt: 'parental-responsibility',
-        //controller: require('../../../controllers/applicant-relationship'),
-        forks: [{
-            target: '/third-party-name',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['relationship-applicant'] == "Other" && req.session['hmpo-wizard-common']['16-or-older'] == true;
-            }
-        }, {
-            target: '/parental-responsibility',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['16-or-older'] == false;
-            }
-        }],
+        backLink: './dual-national',
+        next: '/third-party-name',
+        controller: require('../../../controllers/third-parties'),
     },
-    '/relationship-applicant-other': {
+    '/third-party-name': {
         fields: [
-            'relationship-applicant-other'
+            'third-party-first-name',
+            'third-party-last-name'
         ],
         backLink: './relationship-applicant',
-        next: '/../intro',
+        next: '/parental-responsibility',
         forks: [{
-            target: '/parental-responsibility',
+            target: '/summary',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['16-or-older'] == false;
+                return req.session['hmpo-wizard-common']['16-or-older'] == true;
             }
         }],
     },
@@ -224,19 +194,9 @@ module.exports = {
             'parental-responsibility'
         ],
         backLink: './relationship-applicant',
-        next: '/../intro',
-        controller: require('../../../controllers/parental-responsibility'),
-        nextAlt: 'third-party-name'
+        next: '/summary'
     },
-    '/parental-responsibility-no': {
-        backLink: './parental-responsibility'
-    },
-    '/third-party-name': {
-        fields: [
-            'third-party-first-name',
-            'third-party-last-name'
-        ],
-        backLink: './parental-responsibility',
-        next: '/../intro'
+    '/summary': {
+        next: 'intro'
     }
 };

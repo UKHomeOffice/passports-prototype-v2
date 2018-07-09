@@ -2,16 +2,30 @@
 
 {{$propositionHeader}}{{/propositionHeader}}
 
-{{$pageTitle}}Who is the new passport for?{{/pageTitle}}
+{{$pageTitle}}Who is the passport for?{{/pageTitle}}
 
 {{$header}}
-    <h1>Who is the new passport for?</h1>
+    <h1>Who is the passport for?</h1>
 {{/header}}
 
 {{$content}}
+
 {{< hmpo-partials-form}}
     {{$form}}
         {{#radio-group}}application-for{{/radio-group}}
+
+        <div class="panel panel-border-narrow js-hidden" id="someone-else">
+          <label for="someone-else" class="form-label">
+        <p>You can only apply for someone else if you're legally responsible for them, for example:</p>
+          <ul class="list-bullet">
+            <li>a child under 16</li>
+            <li>an adult who doesn't have mental or physical capacity</li>
+          </ul>
+          </label>
+        </div>
+
+        <p>Check if you can <a href="who-for-help">apply for someone else</a>.</p>
+
         {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}

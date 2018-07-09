@@ -10,8 +10,8 @@ util.inherits(Controller, Base)
 Controller.prototype.get = function successHandler(req, res, callback) {
   if (req.sessionModel.get('parental-responsibility') == false && req.sessionModel.get('relationship-applicant') != "Other") {
 		req.sessionModel.set('document-list', true);
-    req.sessionModel.set('document-link', 'name-change-docs-for-parents')
-    return res.redirect('name-change-docs-for-parents')
+    req.sessionModel.set('document-link', 'docs-name-change-for-parents')
+    return res.redirect('docs-name-change-for-parents')
   } else if (req.sessionModel.get('parental-responsibility') == true && req.sessionModel.get('relationship-applicant') != "Other") {
     req.sessionModel.set('document-list', false);
     return res.redirect('./declaration')

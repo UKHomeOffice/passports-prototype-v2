@@ -54,55 +54,69 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     // Old passport
     var oldPassportFields = [];
 
-    if (values['passport-number']) {
-        response.sections.push({
-            className: 'old-passport-details',
-            title: 'Old passport',
+    response.sections.push({
+        className: 'old-passport-details',
+        title: 'Old passport',
+        fields: oldPassportFields
+    });
+    oldPassportFields.push({
+        step: this.getEditStep('passport-number'),
+        title: 'Passport number',
+        value: values['passport-number']
+    }, {
+        step: this.getEditStep('expiry-year'),
+        title: 'Expiry date',
+        value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
+    });
+    if (values['what-damaged']) {
+        oldPassportFields.push({
+            step: this.getEditStep('what-damaged'),
+            title: 'What is damaged on your passport?',
+            value: values['what-damaged']
+        });
+    };
+    if (values['how-damaged']) {
+        oldPassportFields.push({
+            step: this.getEditStep('how-damaged'),
+            title: 'How is your passport damaged?',
+            value: values['how-damaged']
+        });
+    };
+
+    // Logic to remove fields from stack
+    if (values['passport-before'] == false) { // NOT had passport before
+        console.log('DELETE old passport fields')
+        response.sections.pop({
             fields: oldPassportFields
         });
-        oldPassportFields.push({
-            step: this.getEditStep('passport-number'),
-            title: 'Passport number',
-            value: values['passport-number']
-        }, {
-            step: this.getEditStep('expiry-year'),
-            title: 'Expiry date',
-            value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
-        });
-        if (values['what-damaged']) {
-            oldPassportFields.push({
-                step: this.getEditStep('what-damaged'),
-                title: 'What is damaged on your passport?',
-                value: values['what-damaged']
-            });
-        };
-        if (values['how-damaged']) {
-            oldPassportFields.push({
-                step: this.getEditStep('how-damaged'),
-                title: 'How is your passport damaged?',
-                value: values['how-damaged']
-            });
-        };
     }
 
 
     // Naturalisation/Registration
     var naturalisationRegistrationFields = [];
 
-    if (values['naturalisation-registration-certificate'] == true) { // If applicant is naturalised or registered
-        response.sections.push({
-            className: 'naturalisation-registration-details',
-            title: 'Naturalisation or registration details',
+    response.sections.push({
+        className: 'naturalisation-registration-details',
+        title: 'Naturalisation or registration details',
+        fields: naturalisationRegistrationFields
+    });
+    naturalisationRegistrationFields.push({
+        step: this.getEditStep('naturalisation-registration-certificate-number'),
+        title: 'Certificate number',
+        value: values['naturalisation-registration-certificate-number']
+    }, {
+        step: this.getEditStep('naturalisation-registration-certificate-issue-year'),
+        title: 'Date of issue',
+        value: moment(values['naturalisation-registration-certificate-issue-year'] + '-' + values['naturalisation-registration-certificate-issue-month'] + '-' + values['naturalisation-registration-certificate-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
+    });
+
+    // Logic to remove fields from stack
+    if (values['naturalisation-registration-certificate'] == false || // NOT naturalised or registered
+        values['old-blue'] == false // Passport issued On or After 01/01/1994 (NOT Old blue) Renewal
+    ) {
+        console.log('DELETE nat/reg fields')
+        response.sections.pop({
             fields: naturalisationRegistrationFields
-        });
-        naturalisationRegistrationFields.push({
-            step: this.getEditStep('naturalisation-registration-certificate-number'),
-            title: 'Certificate number',
-            value: values['naturalisation-registration-certificate-number']
-        }, {
-            step: this.getEditStep('naturalisation-registration-certificate-issue-year'),
-            title: 'Date of issue',
-            value: moment(values['naturalisation-registration-certificate-issue-year'] + '-' + values['naturalisation-registration-certificate-issue-month'] + '-' + values['naturalisation-registration-certificate-issue-day'], 'YYYY-MM-DD').format('D MMMM YYYY')
         });
     }
 
@@ -203,326 +217,337 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     // Parents
     var parentsFields = [];
 
-    if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
-        response.sections.push({
-            className: 'parents-details',
-            title: 'Parents\' details',
-            fields: parentsFields
-        });
+    response.sections.push({
+        className: 'parents-details',
+        title: 'Parents\' details',
+        fields: parentsFields
+    });
 
-        var parentsDateOfMarriage = moment(values['marriage-year'] + '-' + values['marriage-month'] + '-' + values['marriage-day'], 'YYYY-MM-DD');
+    var parentsDateOfMarriage = moment(values['marriage-year'] + '-' + values['marriage-month'] + '-' + values['marriage-day'], 'YYYY-MM-DD');
 
-        parentsFields.push({
-            step: this.getEditStep('parent1-first-names'),
-            title: 'Mother',
-            value: join(values, ['parent1-first-names', 'parent1-last-name'])
-        }, {
-            step: this.getEditStep('parent2-first-names'),
-            title: 'Father',
-            value: join(values, ['parent2-first-names', 'parent2-last-name'])
-        }, {
-            step: this.getEditStep('marriage-year'),
-            title: 'Marriage date',
-            value: parentsDateOfMarriage.isValid() ? parentsDateOfMarriage.format('D MMMM YYYY') : ''
-        });
-    }
+    parentsFields.push({
+        step: this.getEditStep('parent1-first-names'),
+        title: 'Mother',
+        value: join(values, ['parent1-first-names', 'parent1-last-name'])
+    }, {
+        step: this.getEditStep('parent2-first-names'),
+        title: 'Father',
+        value: join(values, ['parent2-first-names', 'parent2-last-name'])
+    }, {
+        step: this.getEditStep('marriage-year'),
+        title: 'Marriage date',
+        value: parentsDateOfMarriage.isValid() ? parentsDateOfMarriage.format('D MMMM YYYY') : ''
+    });
 
 
     // Mother
     var parent1Fields = [];
 
-    if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
-        response.sections.push({
-            className: 'parent1-details',
-            title: 'Mother',
-            fields: parent1Fields
-        });
+    response.sections.push({
+        className: 'parent1-details',
+        title: 'Mother',
+        fields: parent1Fields
+    });
 
-        var parent1DateOfBirth = moment(values['parent1-age-year'] + '-' + values['parent1-age-month'] + '-' + values['parent1-age-day'], 'YYYY-MM-DD');
-        var parent1DateOfIssue = moment(values['parent1-passport-issue-year'] + '-' + values['parent1-passport-issue-month'] + '-' + values['parent1-passport-issue-day'], 'YYYY-MM-DD');
+    var parent1DateOfBirth = moment(values['parent1-age-year'] + '-' + values['parent1-age-month'] + '-' + values['parent1-age-day'], 'YYYY-MM-DD');
+    var parent1DateOfIssue = moment(values['parent1-passport-issue-year'] + '-' + values['parent1-passport-issue-month'] + '-' + values['parent1-passport-issue-day'], 'YYYY-MM-DD');
 
+    parent1Fields.push({
+        step: this.getEditStep('parent1-town-of-birth'),
+        title: 'Town of birth',
+        value: values['parent1-town-of-birth']
+    }, {
+        step: this.getEditStep('parent1-country-of-birth'),
+        title: 'Country of birth',
+        value: values['parent1-country-of-birth']
+    }, {
+        step: this.getEditStep('parent1-age-year'),
+        title: 'Date of birth',
+        value: parent1DateOfBirth.isValid() ? parent1DateOfBirth.format('D MMMM YYYY') : ''
+    }, {
+        step: this.getEditStep('parent1-country-of-nationality'),
+        title: 'Nationality',
+        value: values['parent1-country-of-nationality']
+    }, {
+        step: this.getEditStep('parent1-passport-number'),
+        title: 'UK passport number',
+        value: values['parent1-passport-number']
+    }, {
+        step: this.getEditStep('parent1-passport-issue-year'),
+        title: 'Date of issue',
+        value: parent1DateOfIssue.isValid() ? parent1DateOfIssue.format('D MMMM YYYY') : ''
+    });
+
+    if (values['parent1-additional-information']) { // If mother additional information is NOT empty
         parent1Fields.push({
-            step: this.getEditStep('parent1-town-of-birth'),
-            title: 'Town of birth',
-            value: values['parent1-town-of-birth']
-        }, {
-            step: this.getEditStep('parent1-country-of-birth'),
-            title: 'Country of birth',
-            value: values['parent1-country-of-birth']
-        }, {
-            step: this.getEditStep('parent1-age-year'),
-            title: 'Date of birth',
-            value: parent1DateOfBirth.isValid() ? parent1DateOfBirth.format('D MMMM YYYY') : ''
-        }, {
-            step: this.getEditStep('parent1-country-of-nationality'),
-            title: 'Nationality',
-            value: values['parent1-country-of-nationality']
-        }, {
-            step: this.getEditStep('parent1-passport-number'),
-            title: 'UK passport number',
-            value: values['parent1-passport-number']
-        }, {
-            step: this.getEditStep('parent1-passport-issue-year'),
-            title: 'Date of issue',
-            value: parent1DateOfIssue.isValid() ? parent1DateOfIssue.format('D MMMM YYYY') : ''
+            step: this.getEditStep('parent1-additional-information'),
+            title: 'Additional information',
+            value: values['parent1-additional-information']
         });
-
-        if (values['parent1-additional-information']) { // If mother additional information is NOT empty
-            parent1Fields.push({
-                step: this.getEditStep('parent1-additional-information'),
-                title: 'Additional information',
-                value: values['parent1-additional-information']
-            });
-        }
     }
 
 
     // Father
     var parent2Fields = [];
 
-    if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
-        response.sections.push({
-            className: 'parent2-details',
-            title: 'Father',
-            fields: parent2Fields
-        });
+    response.sections.push({
+        className: 'parent2-details',
+        title: 'Father',
+        fields: parent2Fields
+    });
 
-        var parent2DateOfBirth = moment(values['parent2-age-year'] + '-' + values['parent2-age-month'] + '-' + values['parent2-age-day'], 'YYYY-MM-DD');
-        var parent2DateOfIssue = moment(values['parent2-passport-issue-year'] + '-' + values['parent2-passport-issue-month'] + '-' + values['parent2-passport-issue-day'], 'YYYY-MM-DD');
+    var parent2DateOfBirth = moment(values['parent2-age-year'] + '-' + values['parent2-age-month'] + '-' + values['parent2-age-day'], 'YYYY-MM-DD');
+    var parent2DateOfIssue = moment(values['parent2-passport-issue-year'] + '-' + values['parent2-passport-issue-month'] + '-' + values['parent2-passport-issue-day'], 'YYYY-MM-DD');
 
+    parent2Fields.push({
+        step: this.getEditStep('parent2-town-of-birth'),
+        title: 'Town of birth',
+        value: values['parent2-town-of-birth']
+    }, {
+        step: this.getEditStep('parent2-country-of-birth'),
+        title: 'Country of birth',
+        value: values['parent2-country-of-birth']
+    }, {
+        step: this.getEditStep('parent2-age-year'),
+        title: 'Date of birth',
+        value: parent2DateOfBirth.isValid() ? parent2DateOfBirth.format('D MMMM YYYY') : ''
+    }, {
+        step: this.getEditStep('parent2-country-of-nationality'),
+        title: 'Nationality',
+        value: values['parent2-country-of-nationality']
+    }, {
+        step: this.getEditStep('parent2-passport-number'),
+        title: 'UK passport number',
+        value: values['parent2-passport-number']
+    }, {
+        step: this.getEditStep('parent2-passport-issue-year'),
+        title: 'Date of issue',
+        value: parent2DateOfIssue.isValid() ? parent2DateOfIssue.format('D MMMM YYYY') : ''
+    });
+
+    if (values['parent2-additional-information']) { // If father additional information is NOT empty
         parent2Fields.push({
-            step: this.getEditStep('parent2-town-of-birth'),
-            title: 'Town of birth',
-            value: values['parent2-town-of-birth']
-        }, {
-            step: this.getEditStep('parent2-country-of-birth'),
-            title: 'Country of birth',
-            value: values['parent2-country-of-birth']
-        }, {
-            step: this.getEditStep('parent2-age-year'),
-            title: 'Date of birth',
-            value: parent2DateOfBirth.isValid() ? parent2DateOfBirth.format('D MMMM YYYY') : ''
-        }, {
-            step: this.getEditStep('parent2-country-of-nationality'),
-            title: 'Nationality',
-            value: values['parent2-country-of-nationality']
-        }, {
-            step: this.getEditStep('parent2-passport-number'),
-            title: 'UK passport number',
-            value: values['parent2-passport-number']
-        }, {
-            step: this.getEditStep('parent2-passport-issue-year'),
-            title: 'Date of issue',
-            value: parent2DateOfIssue.isValid() ? parent2DateOfIssue.format('D MMMM YYYY') : ''
+            step: this.getEditStep('parent2-additional-information'),
+            title: 'Additional information',
+            value: values['parent2-additional-information']
         });
-
-        if (values['parent2-additional-information']) { // If father additional information is NOT empty
-            parent2Fields.push({
-                step: this.getEditStep('parent2-additional-information'),
-                title: 'Additional information',
-                value: values['parent2-additional-information']
-            });
-        }
     }
 
 
     // Maternal grandparents
     var parent1ParentsFields = [];
 
-    if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
-        response.sections.push({
-            className: 'parent1-parents-details',
-            title: 'Maternal grandparents',
-            fields: parent1ParentsFields
-        });
+    response.sections.push({
+        className: 'parent1-parents-details',
+        title: 'Maternal grandparents',
+        fields: parent1ParentsFields
+    });
 
-        var parent1ParentsDateOfMarriage = moment(values['parent1-parents-marriage-year'] + '-' + values['parent1-parents-marriage-month'] + '-' + values['parent1-parents-marriage-day'], 'YYYY-MM-DD');
+    var parent1ParentsDateOfMarriage = moment(values['parent1-parents-marriage-year'] + '-' + values['parent1-parents-marriage-month'] + '-' + values['parent1-parents-marriage-day'], 'YYYY-MM-DD');
 
-        parent1ParentsFields.push({
-            step: this.getEditStep('parent1-parent1-first-names'),
-            title: 'Grandmother',
-            value: join(values, ['parent1-parent1-first-names', 'parent1-parent1-last-name'])
-        }, {
-            step: this.getEditStep('parent1-parent2-first-names'),
-            title: 'Grandfather',
-            value: join(values, ['parent1-parent2-first-names', 'parent1-parent2-last-name'])
-        }, {
-            step: this.getEditStep('parent1-parents-marriage-year'),
-            title: 'Marriage date',
-            value: parent1ParentsDateOfMarriage.isValid() ? parent1ParentsDateOfMarriage.format('D MMMM YYYY') : ''
-        });
-    }
+    parent1ParentsFields.push({
+        step: this.getEditStep('parent1-parent1-first-names'),
+        title: 'Grandmother',
+        value: join(values, ['parent1-parent1-first-names', 'parent1-parent1-last-name'])
+    }, {
+        step: this.getEditStep('parent1-parent2-first-names'),
+        title: 'Grandfather',
+        value: join(values, ['parent1-parent2-first-names', 'parent1-parent2-last-name'])
+    }, {
+        step: this.getEditStep('parent1-parents-marriage-year'),
+        title: 'Marriage date',
+        value: parent1ParentsDateOfMarriage.isValid() ? parent1ParentsDateOfMarriage.format('D MMMM YYYY') : ''
+    });
 
 
     // Maternal grandmother
     var parent1Parent1Fields = [];
 
-    if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
-        response.sections.push({
-            className: 'parent1-parent1-details',
-            title: 'Maternal grandmother',
-            fields: parent1Parent1Fields
-        });
+    response.sections.push({
+        className: 'parent1-parent1-details',
+        title: 'Maternal grandmother',
+        fields: parent1Parent1Fields
+    });
 
-        var parent1Parent1DateOfBirth = moment(values['parent1-parent1-age-year'] + '-' + values['parent1-parent1-age-month'] + '-' + values['parent1-parent1-age-day'], 'YYYY-MM-DD');
+    var parent1Parent1DateOfBirth = moment(values['parent1-parent1-age-year'] + '-' + values['parent1-parent1-age-month'] + '-' + values['parent1-parent1-age-day'], 'YYYY-MM-DD');
 
+    parent1Parent1Fields.push({
+        step: this.getEditStep('parent1-parent1-town-of-birth'),
+        title: 'Town of birth',
+        value: values['parent1-parent1-town-of-birth']
+    }, {
+        step: this.getEditStep('parent1-parent1-country-of-birth'),
+        title: 'Country of birth',
+        value: values['parent1-parent1-country-of-birth']
+    }, {
+        step: this.getEditStep('parent1-parent1-age-year'),
+        title: 'Date of birth',
+        value: parent1Parent1DateOfBirth.isValid() ? parent1Parent1DateOfBirth.format('D MMMM YYYY') : ''
+    });
+
+    if (values['parent1-parent1-additional-information']) { // If maternal grandmother additional information is NOT empty
         parent1Parent1Fields.push({
-            step: this.getEditStep('parent1-parent1-town-of-birth'),
-            title: 'Town of birth',
-            value: values['parent1-parent1-town-of-birth']
-        }, {
-            step: this.getEditStep('parent1-parent1-country-of-birth'),
-            title: 'Country of birth',
-            value: values['parent1-parent1-country-of-birth']
-        }, {
-            step: this.getEditStep('parent1-parent1-age-year'),
-            title: 'Date of birth',
-            value: parent1Parent1DateOfBirth.isValid() ? parent1Parent1DateOfBirth.format('D MMMM YYYY') : ''
+            step: this.getEditStep('parent1-parent1-additional-information'),
+            title: 'Additional information',
+            value: values['parent1-parent1-additional-information']
         });
-
-        if (values['parent1-parent1-additional-information']) { // If maternal grandmother additional information is NOT empty
-            parent1Parent1Fields.push({
-                step: this.getEditStep('parent1-parent1-additional-information'),
-                title: 'Additional information',
-                value: values['parent1-parent1-additional-information']
-            });
-        }
     }
 
 
     // Maternal grandfather
     var parent1Parent2Fields = [];
 
-    if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
-        response.sections.push({
-            className: 'parent1-parent2-details',
-            title: 'Maternal grandfather',
-            fields: parent1Parent2Fields
-        });
+    response.sections.push({
+        className: 'parent1-parent2-details',
+        title: 'Maternal grandfather',
+        fields: parent1Parent2Fields
+    });
 
-        var parent1Parent2DateOfBirth = moment(values['parent1-parent2-age-year'] + '-' + values['parent1-parent2-age-month'] + '-' + values['parent1-parent2-age-day'], 'YYYY-MM-DD');
+    var parent1Parent2DateOfBirth = moment(values['parent1-parent2-age-year'] + '-' + values['parent1-parent2-age-month'] + '-' + values['parent1-parent2-age-day'], 'YYYY-MM-DD');
 
+    parent1Parent2Fields.push({
+        step: this.getEditStep('parent1-parent2-town-of-birth'),
+        title: 'Town of birth',
+        value: values['parent1-parent2-town-of-birth']
+    }, {
+        step: this.getEditStep('parent1-parent2-country-of-birth'),
+        title: 'Country of birth',
+        value: values['parent1-parent2-country-of-birth']
+    }, {
+        step: this.getEditStep('parent1-parent2-age-year'),
+        title: 'Date of birth',
+        value: parent1Parent2DateOfBirth.isValid() ? parent1Parent2DateOfBirth.format('D MMMM YYYY') : ''
+    });
+
+    if (values['parent1-parent2-additional-information']) { // If maternal grandfather additional information is NOT empty
         parent1Parent2Fields.push({
-            step: this.getEditStep('parent1-parent2-town-of-birth'),
-            title: 'Town of birth',
-            value: values['parent1-parent2-town-of-birth']
-        }, {
-            step: this.getEditStep('parent1-parent2-country-of-birth'),
-            title: 'Country of birth',
-            value: values['parent1-parent2-country-of-birth']
-        }, {
-            step: this.getEditStep('parent1-parent2-age-year'),
-            title: 'Date of birth',
-            value: parent1Parent2DateOfBirth.isValid() ? parent1Parent2DateOfBirth.format('D MMMM YYYY') : ''
+            step: this.getEditStep('parent1-parent2-additional-information'),
+            title: 'Additional information',
+            value: values['parent1-parent2-additional-information']
         });
-
-        if (values['parent1-parent2-additional-information']) { // If maternal grandfather additional information is NOT empty
-            parent1Parent2Fields.push({
-                step: this.getEditStep('parent1-parent2-additional-information'),
-                title: 'Additional information',
-                value: values['parent1-parent2-additional-information']
-            });
-        }
     }
 
 
     // Paternal grandparents
     var parent2ParentsFields = [];
 
-    if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
-        response.sections.push({
-            className: 'parent2-parents-details',
-            title: 'Paternal grandparents',
-            fields: parent2ParentsFields
-        });
+    response.sections.push({
+        className: 'parent2-parents-details',
+        title: 'Paternal grandparents',
+        fields: parent2ParentsFields
+    });
 
-        var parent2ParentsDateOfMarriage = moment(values['parent2-parents-marriage-year'] + '-' + values['parent2-parents-marriage-month'] + '-' + values['parent2-parents-marriage-day'], 'YYYY-MM-DD');
+    var parent2ParentsDateOfMarriage = moment(values['parent2-parents-marriage-year'] + '-' + values['parent2-parents-marriage-month'] + '-' + values['parent2-parents-marriage-day'], 'YYYY-MM-DD');
 
-        parent2ParentsFields.push({
-            step: this.getEditStep('parent2-parent1-first-names'),
-            title: 'Grandmother',
-            value: join(values, ['parent2-parent1-first-names', 'parent2-parent1-last-name'])
-        }, {
-            step: this.getEditStep('parent2-parent2-first-names'),
-            title: 'Grandfather',
-            value: join(values, ['parent2-parent2-first-names', 'parent2-parent2-last-name'])
-        }, {
-            step: this.getEditStep('parent2-parents-marriage-year'),
-            title: 'Marriage date',
-            value: parent2ParentsDateOfMarriage.isValid() ? parent2ParentsDateOfMarriage.format('D MMMM YYYY') : ''
-        });
-    }
+    parent2ParentsFields.push({
+        step: this.getEditStep('parent2-parent1-first-names'),
+        title: 'Grandmother',
+        value: join(values, ['parent2-parent1-first-names', 'parent2-parent1-last-name'])
+    }, {
+        step: this.getEditStep('parent2-parent2-first-names'),
+        title: 'Grandfather',
+        value: join(values, ['parent2-parent2-first-names', 'parent2-parent2-last-name'])
+    }, {
+        step: this.getEditStep('parent2-parents-marriage-year'),
+        title: 'Marriage date',
+        value: parent2ParentsDateOfMarriage.isValid() ? parent2ParentsDateOfMarriage.format('D MMMM YYYY') : ''
+    });
 
 
     // Paternal grandmother
     var parent2Parent1Fields = [];
 
-    if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
-        response.sections.push({
-            className: 'parent2-parent1-details',
-            title: 'Paternal grandmother',
-            fields: parent2Parent1Fields
-        });
+    response.sections.push({
+        className: 'parent2-parent1-details',
+        title: 'Paternal grandmother',
+        fields: parent2Parent1Fields
+    });
 
-        var parent2Parent1DateOfBirth = moment(values['parent2-parent1-age-year'] + '-' + values['parent2-parent1-age-month'] + '-' + values['parent2-parent1-age-day'], 'YYYY-MM-DD');
+    var parent2Parent1DateOfBirth = moment(values['parent2-parent1-age-year'] + '-' + values['parent2-parent1-age-month'] + '-' + values['parent2-parent1-age-day'], 'YYYY-MM-DD');
 
+    parent2Parent1Fields.push({
+        step: this.getEditStep('parent2-parent1-town-of-birth'),
+        title: 'Town of birth',
+        value: values['parent2-parent1-town-of-birth']
+    }, {
+        step: this.getEditStep('parent2-parent1-country-of-birth'),
+        title: 'Country of birth',
+        value: values['parent2-parent1-country-of-birth']
+    }, {
+        step: this.getEditStep('parent2-parent1-age-year'),
+        title: 'Date of birth',
+        value: parent2Parent1DateOfBirth.isValid() ? parent2Parent1DateOfBirth.format('D MMMM YYYY') : ''
+    });
+
+    if (values['parent2-parent1-additional-information']) { // If paternal grandmother additional information is NOT empty
         parent2Parent1Fields.push({
-            step: this.getEditStep('parent2-parent1-town-of-birth'),
-            title: 'Town of birth',
-            value: values['parent2-parent1-town-of-birth']
-        }, {
-            step: this.getEditStep('parent2-parent1-country-of-birth'),
-            title: 'Country of birth',
-            value: values['parent2-parent1-country-of-birth']
-        }, {
-            step: this.getEditStep('parent2-parent1-age-year'),
-            title: 'Date of birth',
-            value: parent2Parent1DateOfBirth.isValid() ? parent2Parent1DateOfBirth.format('D MMMM YYYY') : ''
+            step: this.getEditStep('parent2-parent1-additional-information'),
+            title: 'Additional information',
+            value: values['parent2-parent1-additional-information']
         });
-
-        if (values['parent2-parent1-additional-information']) { // If paternal grandmother additional information is NOT empty
-            parent2Parent1Fields.push({
-                step: this.getEditStep('parent2-parent1-additional-information'),
-                title: 'Additional information',
-                value: values['parent2-parent1-additional-information']
-            });
-        }
     }
 
 
     // Paternal grandfather
     var parent2Parent2Fields = [];
 
-    if (values['naturalisation-registration-certificate'] == false) { // If applicant is NOT naturalised or registered
-        response.sections.push({
-            className: 'parent2-parent2-details',
-            title: 'Paternal grandfather',
+    response.sections.push({
+        className: 'parent2-parent2-details',
+        title: 'Paternal grandfather',
+        fields: parent2Parent2Fields
+    });
+
+    var parent2Parent2DateOfBirth = moment(values['parent2-parent2-age-year'] + '-' + values['parent2-parent2-age-month'] + '-' + values['parent2-parent2-age-day'], 'YYYY-MM-DD');
+
+    parent2Parent2Fields.push({
+        step: this.getEditStep('parent2-parent2-town-of-birth'),
+        title: 'Town of birth',
+        value: values['parent2-parent2-town-of-birth']
+    }, {
+        step: this.getEditStep('parent2-parent2-country-of-birth'),
+        title: 'Country of birth',
+        value: values['parent2-parent2-country-of-birth']
+    }, {
+        step: this.getEditStep('parent2-parent2-age-year'),
+        title: 'Date of birth',
+        value: parent2Parent2DateOfBirth.isValid() ? parent2Parent2DateOfBirth.format('D MMMM YYYY') : ''
+    });
+
+    if (values['parent2-parent2-additional-information']) { // If paternal grandfather additional information is NOT empty
+        parent2Parent2Fields.push({
+            step: this.getEditStep('parent2-parent2-additional-information'),
+            title: 'Additional information',
+            value: values['parent2-parent2-additional-information']
+        });
+    }
+
+    // Logic to remove fields from stack
+    // TODO: Potentially refactor the rest of the file to...
+    // - instead of logic to work out if fields should be pushed to the stack
+    // - use this logic to remove fields by popping off the stack
+    if (values['naturalisation-registration-certificate'] == true || // Naturalised or registered
+        values['born-before-1983'] == true || // Born Before 01/01/1983
+        values['old-blue'] == true // Passport issued Before 01/01/1994 (Old blue) Hidden FTA
+    ) {
+        console.log('DELETE grandparents fields')
+        response.sections.pop({
+            fields: parent1ParentsFields
+        });
+        response.sections.pop({
+            fields: parent1Parent1Fields
+        });
+        response.sections.pop({
+            fields: parent1Parent2Fields
+        });
+        response.sections.pop({
+            fields: parent2ParentsFields
+        });
+        response.sections.pop({
+            fields: parent2Parent1Fields
+        });
+        response.sections.pop({
             fields: parent2Parent2Fields
         });
-
-        var parent2Parent2DateOfBirth = moment(values['parent2-parent2-age-year'] + '-' + values['parent2-parent2-age-month'] + '-' + values['parent2-parent2-age-day'], 'YYYY-MM-DD');
-
-        parent2Parent2Fields.push({
-            step: this.getEditStep('parent2-parent2-town-of-birth'),
-            title: 'Town of birth',
-            value: values['parent2-parent2-town-of-birth']
-        }, {
-            step: this.getEditStep('parent2-parent2-country-of-birth'),
-            title: 'Country of birth',
-            value: values['parent2-parent2-country-of-birth']
-        }, {
-            step: this.getEditStep('parent2-parent2-age-year'),
-            title: 'Date of birth',
-            value: parent2Parent2DateOfBirth.isValid() ? parent2Parent2DateOfBirth.format('D MMMM YYYY') : ''
-        });
-
-        if (values['parent2-parent2-additional-information']) { // If paternal grandfather additional information is NOT empty
-            parent2Parent2Fields.push({
-                step: this.getEditStep('parent2-parent2-additional-information'),
-                title: 'Additional information',
-                value: values['parent2-parent2-additional-information']
-            });
-        }
     }
 
 
@@ -535,19 +560,19 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         fields: applicationFields
     });
 
-    if (values['can-interview']) {
-        applicationFields.push({
-            step: this.getEditStep('can-interview'),
-            title: 'Identity interview',
-            value: 'You can attend an interview.'
-        });
-    } else {
-        applicationFields.push({
-            step: this.getEditStep('no-interview-reason'),
-            title: 'Identity interview',
-            value: values['no-interview-reason'] ? 'You can’t attend an interview:<br>' + values['no-interview-reason'] : 'You can’t attend an interview'
-        });
-    }
+    // if (values['can-interview']) {
+    //     applicationFields.push({
+    //         step: this.getEditStep('can-interview'),
+    //         title: 'Identity interview',
+    //         value: 'You can attend an interview.'
+    //     });
+    // } else {
+    //     applicationFields.push({
+    //         step: this.getEditStep('no-interview-reason'),
+    //         title: 'Identity interview',
+    //         value: values['no-interview-reason'] ? 'You can’t attend an interview:<br>' + values['no-interview-reason'] : 'You can’t attend an interview'
+    //     });
+    // }
 
     applicationFields.push({
         step: this.getEditStep('postcode'),

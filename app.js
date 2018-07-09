@@ -77,6 +77,8 @@ function init(sessionConfig) {
     //create static folder for email templates etc
     app.use('/static', express.static(path.join(__dirname, '/static')));
 
+    require('./lib/nunjucks')(app);
+
     require('./routes');
 
     var port = process.env.PORT || 3000;

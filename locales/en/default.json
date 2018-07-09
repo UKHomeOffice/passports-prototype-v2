@@ -109,7 +109,7 @@
         },
         "previous-name": {
             "legend": "Have you ever been known by any other names?",
-            "hint": "For example a maiden name, names from previous marriages or a different name at birth."
+            "hint": "For example, a name from previous marriage or civil partnership."
         },
         "previous-name-change": {
             "legend": "Have you ever been known by any other names?"
@@ -524,7 +524,7 @@
             "required": "You must answer this question - uncancelled"
         },
         "what-you-will-need-declaration": {
-            "required": "You must answer this question."
+            "required": "You need to confirm that you have these details"
         },
 
         "passport-number": {

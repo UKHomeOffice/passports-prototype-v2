@@ -1,0 +1,218 @@
+{{< layout}}
+
+{{$pageTitle}}Required Documents{{/pageTitle}}
+
+{{$header}}
+  <h1>What you need to send</h1>
+{{/header}}
+
+{{$content}}
+
+{{#nunjucks}}
+  <p>Before we can send the new passport, we need to see documents that prove identity and nationality. We’ll check and return
+    them to you.</p>
+
+  <div class="panel panel-border-wide alert-default">
+    You must send original documents – we can't accept photocopies. Your application will be delayed if you don't send everything
+    we need.
+  </div>
+
+  <!-- OLC PDF 14 -->
+  {% if values['naturalisation-registration-certificate'] %}
+    <h2>1. Documents relating to you</h2>
+    <h3>Send all of the following:</h3>
+    <ul class="list-bullet">
+      <li>the applicant's full naturalisation or registration certificate</li>
+      <li>any passports you have from other countries</li>
+    </ul>
+
+  <!-- OLC PDF 2 -->
+  {% elif values['born-before-1983'] and values['born-in-uk'] %}
+    <h2>Send both:</h2>
+    <ul class="list-bullet">
+      <li>the applicant's full birth or adoption certificate</li>
+      <li>any passports you have from other countries</li>
+    </ul>
+
+  <!-- OLC PDF 9 -->
+  {% elif values['born-before-1983'] and not values['born-in-uk'] %}
+    <h2>1. Documents relating to you</h2>
+    <h3>Send all of the following:</h3>
+    <ul class="list-bullet">
+      <li>the applicant's full birth or adoption certificate</li>
+      <li>the passport you used to enter the UK</li>
+      <li>any passports you have from other countries</li>
+    </ul>
+
+    <h2>2. Documents relating to Parents</h2>
+    <h3>For your father, send 1 of the following:</h3>
+    <ul class="list-bullet">
+      <li>their full birth or adoption certificate</li>
+      <li>their certificate or naturalisation or registration</li>
+    </ul>
+    <h3>And you’ll also need to send:</h3>
+    <ul class="list-bullet">
+      <li>your father’s marriage or civil partnership certificate to your mother (or parent 1)</li>
+    </ul>
+
+  {#<!-- OLC PDF 7 TODO: Add conditional for Both parents passport numbers provided -->
+  {% elif values['born-between-1983-and-2006'] and values['born-in-uk'] %}
+    <h2>1. Documents relating to you</h2>
+    <h2>Send both:</h2>
+    <ul class="list-bullet">
+      <li>the applicant's full birth or adoption certificate</li>
+      <li>any passports you have from other countries</li>
+    </ul>
+
+    <h2>2. Documents relating to Parents</h2>
+    <h2>From either List A or List B send the following:</h2>
+    <h3>List A</h3>
+    <ul class="list-bullet">
+      <li>your father’s marriage or civil partnership certificate to your mother (or parent 1)</li>
+    </ul>
+    <h3>List B</h3>
+    <ul class="list-bullet">
+      <li>the passport 1 of your parents had when you were born</li>
+      <li>if you’re sending your father’s passport you’ll also need to send their marriage certificate to your mother (or parent 1)</li>
+    </ul>
+
+  <!-- OLC PDF 5 TODO: Add conditional for Both parents passport numbers NOT provided AND Born BEFORE 1983 -->
+  {% elif values['born-between-1983-and-2006'] and values['born-in-uk'] %}
+    <h2>1. Documents relating to you</h2>
+    <h2>Send both:</h2>
+    <ul class="list-bullet">
+      <li>the applicant's full birth or adoption certificate</li>
+      <li>any passports you have from other countries</li>
+    </ul>
+
+    <h2>2. Documents relating to Parents</h2>
+    <h3>For 1 of your parents, send 1 of the following:</h3>
+    <ul class="list-bullet">
+      <li>their full birth or adoption certificate</li>
+      <li>their certificate of naturalisation or registration</li>
+      <li>the passport they had when you were born</li>
+    </ul>
+    <h3>If you’re sending your father’s certificate or passport you’ll also need to send:</h3>
+    <ul class="list-bullet">
+      <li>their marriage or civil partnership certificate to your mother (or parent 1)</li>
+    </ul>
+
+  <!-- OLC PDF 12 TODO: Add conditional for Both parents passport numbers NOT provided AND Born BEFORE 1983 -->
+  {% elif values['born-between-1983-and-2006'] and not values['born-in-uk'] %}
+    <h2>1. Documents relating to you</h2>
+    <h3>Send all of the following:</h3>
+    <ul class="list-bullet">
+      <li>the applicant's full birth or adoption certificate</li>
+      <li>the passport you used to enter the UK</li>
+      <li>any passports you have from other countries</li>
+    </ul>
+
+    <h2>2. Documents relating to Parents</h2>
+    <h3>For 1 of your parents, send 1 of the following:</h3>
+    <ul class="list-bullet">
+      <li>their full birth or adoption certificate</li>
+      <li>their certificate or naturalisation or registration</li>
+    </ul>
+    <h3>If you are sending your father’s certificate you’ll also need to send:</h3>
+    <ul class="list-bullet">
+      <li>their marriage or civil partnership certificate to your mother (or parent 1)</li>
+    </ul>
+
+  <!-- OLC PDF 3 TODO: Add conditional for Both parents passport numbers NOT provided AND Born AFTER 1983 -->
+  {% elif values['born-between-1983-and-2006'] and values['born-in-uk'] %}
+    <h2>1. Documents relating to you</h2>
+    <h3>Send both:</h3>
+    <ul class="list-bullet">
+      <li>the applicant's full birth or adoption certificate</li>
+      <li>any passports you have from other countries</li>
+    </ul>
+
+    <h2>2. Documents relating to Parents</h2>
+    <h3>For 1 of your parents, send 1 of the following:</h3>
+    <ul class="list-bullet">
+      <li>their full birth or adoption certificate</li>
+      <li>their certificate of naturalisation or registration</li>
+      <li>the passport they had when you were born</li>
+    </ul>
+    <h3>If you’re sending your father’s certificate or passport you’ll also need to send:</h3>
+    <ul class="list-bullet">
+      <li>their marriage or civil partnership certificate to your mother (or parent 1)</li>
+    </ul>
+
+    <h2>3. Documents relating to Grandparents</h2>
+    <h3>Send all of the following for both maternal grandparents:</h3>
+    <ul class="list-bullet">
+      <li>their full birth or adoption certificate</li>
+      <li>your grandfather’s marriage certificate to your grandmother (if this applies)</li>
+    </ul>
+    <h3>And all of the following for both paternal grandparents</h3>
+    <ul class="list-bullet">
+      <li>their full birth or adoption certificate</li>
+      <li>your grandfather’s marriage certificate to your grandmother (if this applies)</li>
+    </ul>
+
+  <!-- OLC PDF 10 TODO: Add conditional for Both parents passport numbers NOT provided AND Born AFTER 1983 -->
+  {% elif values['born-between-1983-and-2006'] and not values['born-in-uk'] %}
+    <h2>1. Documents relating to you</h2>
+    <h3>Send all of the following:</h3>
+    <ul class="list-bullet">
+      <li>the applicant's full birth or adoption certificate</li>
+      <li>the passport you used to enter the UK</li>
+      <li>any passports you have from other countries</li>
+    </ul>
+
+    <h2>2. Documents relating to Parents</h2>
+    <h3>For 1 of your parents, send 1 of the following:</h3>
+    <ul class="list-bullet">
+      <li>their full birth or adoption certificate</li>
+      <li>their certificate or naturalisation or registration</li>
+    </ul>
+    <h3>If you are sending your father’s certificate you’ll also need to send:</h3>
+    <ul class="list-bullet">
+      <li>their marriage or civil partnership certificate to your mother (or parent 1)</li>
+    </ul>
+
+    <h2>3. Documents relating to Grandparents</h2>
+    <h3>Send all of the following for both maternal grandparents:</h3>
+    <ul class="list-bullet">
+      <li>their full birth or adoption certificate</li>
+      <li>your grandfather’s marriage certificate to your grandmother (if this applies)</li>
+    </ul>
+    <h3>And all of the following for both paternal grandparents</h3>
+    <ul class="list-bullet">
+      <li>their full birth or adoption certificate</li>
+      <li>your grandfather’s marriage certificate to your grandmother (if this applies)</li>
+    </ul>#}
+
+  {% endif %}
+
+{{/nunjucks}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+{{#input-submit}}{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+<details>
+  <summary>
+    <span class="summary">My documents aren't in English or Welsh</span>
+  </summary>
+  <div class="panel panel-border-narrow">
+    <p>If your documents aren't in English or Welsh you'll need to get
+      <a href="https://www.gov.uk/certifying-a-document">certified translation.</a>
+    </p>
+  </div>
+</details>
+
+<div class="app-c-print-link">
+  <a href="#" class="app-c-print-link__link" rel="alternate">
+    Print page
+  </a>
+</div>
+
+{{/content}}
+
+{{/ layout}}

@@ -15,7 +15,9 @@
 
 <h2>Your details</h2>
 <ul class="list-bullet list-bullet-header-spacing">
-    <li>birth or adoption certificate</li>
+    {{#values.naturalisation-registration-certificate}}<li>naturalisation or registration certificate</li>{{/values.naturalisation-registration-certificate}}
+    {{^values.naturalisation-registration-certificate}}<li>birth or adoption certificate</li>{{/values.naturalisation-registration-certificate}}
+    {{#values.old-blue}}<li>UK passport details</li>{{/values.old-blue}}
 </ul>
 
 <h2>Parents' details</h2>
@@ -26,16 +28,33 @@
     <li>date of marriage or civil partnership (if this applies)</li>
 </ul>
 
-<h2>Grandparents' details</h2>
-<p>Based on what you tell us, we may ask for grandparents':</p>
-<ul style="margin-bottom: 30px;" class="list-bullet list-bullet-header-spacing">
-    <li>name, date and place of birth</li>
-    <li>date of marriage or civil partnership (if this applies)</li>
-</ul>
+{{#nunjucks}}
+    {% if values['born-before-1983'] or not values['naturalisation-registration-certificate'] %}
+        <h2>Grandparents' details</h2>
+        <p>Based on what you tell us, we may ask for their:</p>
+        <ul style="margin-bottom: 30px;" class="list-bullet list-bullet-header-spacing">
+            <li>name, date and place of birth</li>
+            <li>date of marriage or civil partnership (if this applies)</li>
+        </ul>
+    {% endif %}
+{{/nunjucks}}
 
 {{#checkbox}}what-you-will-need-declaration{{/checkbox}}
 
 {{#input-submit}}{{/input-submit}}
+
+<!-- <details>
+    <summary><span class="summary">My documents aren't in English or Welsh</span></summary>
+    <div class="panel panel-border-narrow">
+        <p>If your documents aren't in English or Welsh you'll need to get <a href="https://www.gov.uk/certifying-a-document">certified translation.</a></p>
+    </div>
+</details> -->
+
+<div class="app-c-print-link">
+    <a href="#" class="app-c-print-link__link" rel="alternate">
+        Print page
+    </a>
+</div>
 
 {{/form}}
 {{/ hmpo-partials-form}}
