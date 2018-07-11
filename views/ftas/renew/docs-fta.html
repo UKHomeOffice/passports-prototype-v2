@@ -17,7 +17,7 @@
     we need.
   </div>
 
-  <!-- OLC PDF 14 -->
+  {# OLC PDF 14 #}
   {% if values['naturalisation-registration-certificate'] %}
     <h2>Your documents</h2>
     <h3>Send all of the following:</h3>
@@ -26,35 +26,29 @@
       <li>any passports you have from other countries</li>
     </ul>
 
-  <!-- OLC PDF 2 -->
-  {% elif values['born-before-1983'] and values['born-in-uk'] %}
+  {# OLC PDF 2 #}
+  {% elif values['born-before-1983'] %}
     <h2>Your documents</h2>
     <h3>Send all of the following:</h3>
     <ul class="list-bullet">
       <li>the applicant's full birth or adoption certificate</li>
+      {% if not values['born-in-uk'] %} {# OLC PDF 9 #}
+        <li>the passport you used to enter the UK</li>
+      {% endif %}
       <li>any passports you have from other countries</li>
     </ul>
-
-  <!-- OLC PDF 9 -->
-  {% elif values['born-before-1983'] and not values['born-in-uk'] %}
-    <h2>Your documents</h2>
-    <h3>Send all of the following:</h3>
-    <ul class="list-bullet">
-      <li>the applicant's full birth or adoption certificate</li>
-      <li>the passport you used to enter the UK</li>
-      <li>any passports you have from other countries</li>
-    </ul>
-
-    <h2>Parents' documents</h2>
-    <h3>For your father, send 1 of the following:</h3>
-    <ul class="list-bullet">
-      <li>their full birth or adoption certificate</li>
-      <li>their certificate or naturalisation or registration</li>
-    </ul>
-    <h3>And you’ll also need to send:</h3>
-    <ul class="list-bullet">
-      <li>your father’s marriage or civil partnership certificate to your mother (or parent 1)</li>
-    </ul>
+    {% if not values['born-in-uk'] %} {# OLC PDF 9 #}
+      <h2>Parents' documents</h2>
+      <h3>For your father, send 1 of the following:</h3>
+      <ul class="list-bullet">
+        <li>their full birth or adoption certificate</li>
+        <li>their certificate or naturalisation or registration</li>
+      </ul>
+      <h3>And you’ll also need to send:</h3>
+      <ul class="list-bullet">
+        <li>your father’s marriage or civil partnership certificate to your mother (or parent 1)</li>
+      </ul>
+    {% endif %}
 
   {#<!-- OLC PDF 7 TODO: Add conditional for Both parents passport numbers provided -->
   {% elif values['born-between-1983-and-2006'] and values['born-in-uk'] %}
