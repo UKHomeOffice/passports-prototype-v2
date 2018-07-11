@@ -1,43 +1,40 @@
 module.exports = {
     '/': {
+        controller: require('../../../controllers/go-overseas'),
         //controller: require('../../../controllers/init'), // Initialise
-        // controller: require('../../../controllers/go-overseas'),
         fields: [
             'apply-uk',
             'application-country'
         ],
         backLink: '../startpage',
         next: '/dob',
-        // /* if Yes is selected */
-        // nextAlt: 'what-do-you-want-to-do-overseas',
-        // /* if they are from Germany/France */
-        // nextAltAlt: 'what-do-you-want-to-do-overseas',
-        // /* if they are from Afganistan */
-        // nextAltAltAlt: 'what-do-you-want-to-do-overseas',
-        // /* if they are from Spain - first hidden as renewal */
-        // nextAltAltAltAlt: '../overseas-not-available' /* if they are from Syria - not available */
+        /* if Yes is selected */
+        nextAlt: 'what-do-you-want-to-do-overseas',
+        /* if they are from Germany/France */
+        nextAltAlt: 'what-do-you-want-to-do-overseas',
+        /* if they are from Afganistan */
+        nextAltAltAlt: 'what-do-you-want-to-do-overseas',
+        /* if they are from Spain - first hidden as renewal */
+        nextAltAltAltAlt: '../overseas-not-available' /* if they are from Syria - not available */
     },
     '/dob': {
+        controller: require('../../../controllers/check-dob'),
         //controller: require('../../../controllers/go-overseas'),
-        //controller: require('../../../controllers/check-dob'),
+        backLink: './',
         fields: [
             'age-day',
             'age-year',
             'age-month'
         ],
         next: '/who-for',
-        // forks: [
-        //     {
-        //         target: '/naturalisation-registration-details',
-        //         condition: function (req, res) {
-        //             // TODO: Add conditional logic for OVER 16
-        //             return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
-        //         }
-        //     }
-        // ]
+        forks: [{
+            target: '/first-uk',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['16-or-older'] == false;
+            }
+        }]
     },
     '/who-for': {
-        //controller: require('../../../controllers/application-for'),
         fields: [
             'application-for'
         ],
@@ -51,7 +48,7 @@ module.exports = {
         }]
     },
     '/who-for-why': {
-      //controller: require('../../../controllers/application-for-relationship'),
+      controller: require('../../../controllers/application-for-relationship'),
         fields: [
             'application-for-why'
         ],
@@ -65,24 +62,24 @@ module.exports = {
             'passport-before'
         ],
         next: '/lost-stolen',
-        // forks: [{
-        //     target: '/dob',
-        //     condition: {
-        //         field: 'passport-before',
-        //         value: false
-        //     }
-        // }]
+        forks: [{
+            target: '/naturalisation-registration-details',
+            condition: {
+                field: 'passport-before',
+                value: false
+            }
+        }]
     },
     '/lost-stolen': {
         fields: [
             'lost-stolen'
         ],
-        next: '/passport-colour',
+        next: '/passport-date-of-issue',
         forks: [{
-            target: '/naturalisation-registration-details',
+            target: '/lost',
             condition: {
                 field: 'lost-stolen',
-                value: false
+                value: true
             }
         }]
     },
