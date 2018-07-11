@@ -475,11 +475,11 @@
         "session": "Session timeout"
     },
     "validation": {
-        "required": "Please enter {{label}}.",
-        "numeric": "{{label}} must only contain numbers.",
-        "default": "You must answer this question.",
+        "required": "Please enter {{label}}",
+        "numeric": "{{label}} must only contain numbers",
+        "default": "You must answer this question",
         "continue": {
-            "required": "Please tell us if you'd like to continue."
+            "required": "Please tell us if you'd like to continue"
         },
         "country": {
             "required": "You must answer this question - country"
@@ -497,16 +497,16 @@
             "required": "You must answer this question."
         },
         "16-or-older": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
         "dual-nationality": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
         "applicant-check": {
             "required": "Is this Susan Smith?"
         },
         "contact-csig": {
-            "required": "You need to contact this person before we send them an email."
+            "required": "You need to contact this person before we send them an email"
         },
         "application-country": {
             "required": "You must answer this question"
@@ -524,89 +524,89 @@
             "required": "You must answer this question - uncancelled"
         },
         "what-you-will-need-declaration": {
-            "required": "You need to confirm that you have these details"
+            "required": "You need to confirm you have these details"
         },
 
         "passport-number": {
             "required": "You must answer this question - passport number"
         },
         "change-name": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
         "gender": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
         "born-in-uk": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
         "town-of-birth": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
         "email": {
-            "required": "Enter your email address."
+            "required": "Enter your email address"
         },
         "mobile": {
-            "required": "Enter your mobile or home phone number."
+            "required": "Enter your mobile or home phone number"
         },
         "passport-options": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
         "return-passport": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
 
         "parents-married": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
 
         "parent1-additional-information": {
-            "required": "Explain why you can't provide details for mother or parent 1."
+            "required": "Explain why you can't provide details for mother or parent 1"
         },
         "parent1-uk-passport": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
 
         "parent2-additional-information": {
-            "required": "Explain why you can't provide details for father or parent 2."
+            "required": "Explain why you can't provide details for father or parent 2"
         },
         "parent2-uk-passport": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
 
         "parent1-parents-married": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
         "parent1-parent1-additional-information": {
-            "required": "Explain why you can't provide details for maternal grandmother."
+            "required": "Explain why you can't provide details for maternal grandmother"
         },
         "parent1-parent2-additional-information": {
-            "required": "Explain why you can't provide details for maternal grandfather."
+            "required": "Explain why you can't provide details for maternal grandfather"
         },
 
         "parent2-parents-married": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
         "parent2-parent1-additional-information": {
-            "required": "Explain why you can't provide details for paternal grandmother."
+            "required": "Explain why you can't provide details for paternal grandmother"
         },
         "parent2-parent2-additional-information": {
-            "required": "Explain why you can't provide details for paternal grandfather."
+            "required": "Explain why you can't provide details for paternal grandfather"
         },
 
         "can-interview": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
         "no-interview-reason": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
         "can-sign": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
         "secure-return": {
-            "required": "You must answer this question."
+            "required": "You must answer this question"
         },
         "declaration": {
-            "required": "You must agree with the declaration to use this service."
+            "required": "You must agree with the declaration to use this service"
         },
 
         "email": "You must enter a valid email",
