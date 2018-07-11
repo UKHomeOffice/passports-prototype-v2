@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         value: 'adult-no-capacity',
-        label: 'I’m applying for someone who doesn’t have capacity',
+        label: 'The applicant doesn’t have mental or physical capacity',
         toggle: 'adult-no-capacity'
       }
     ],
