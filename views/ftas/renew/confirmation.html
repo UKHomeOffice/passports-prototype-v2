@@ -2,55 +2,57 @@
 
 {{$pageTitle}}{{/pageTitle}}
 
+
 {{$content}}
 
 {{< hmpo-partials-form}}
 {{$form}}
 
-<header class="update-notice update-notice--grey">
-    <h1><span class="icon-tick"></span> Payment successful</h1>
-    <p>£75.50 - payment reference IE19852</br>
-       Confirmation sent to <strong>c.moore@test-corp.co.uk</strong></br>
 
-    <a style="color: #0b0c0c" href="#">Download PDF</a>
+    <header class="update-notice">
+          <h1><span class="icon-tick"></span> Application submitted</h1>
+          <p>Application reference: <strong>PEX 319 825 680X</strong></p>
+              <p>Your payment: £75.50</p>
+          <p>Email confirmation sent to <strong>{{values.email}}</strong></p>
+          <a href="" class="download">Download PDF receipt</a>
+    </header>
 
-</header>
-
-<h1>What you need to do</h1>
-
-<p>Before we can print the new passport, you need to:
-
-
-  <ol>
-      <li>
-        <h2>1. Ask someone to confirm {{> partials-applicant-yours-the-applicants}} identity</h2>
-          They can do this online. Sign into your application to provide their name and email. You'll need your application reference: <strong>PEX 319 825 680X</strong></p>
-
-      </li>
-      <li>
-      <h2>2. Get your documents ready</h2>
-      <p>We can only receive your documents after {{> partials-applicant-yours-the-applicants}} identity has been confirmed.  We'll let you know when and where to send them. </p>
-      </li>
-  </ol>
+    <div class="panel-important">
+        <p>We can't start this application until we receive your old passport.</p>
+    </div>
 
 
-  <div role="note" aria-label="Information" class="panel panel-border-wide application-notice info-notice">
-      <p>If you need to sign in later, the details are in your confirmation email.</p>
-  </div>
+    <h1>What you need to do</h1>
+    <h2>Send us your old passport {{#values.document-list}}and extra documents{{/values.document-list}}</h2>
+    {{#values.document-list}}
+      <p><a href="./{{values.document-link}}">Check what you need to send</a></p>
+    {{/values.document-list}}
 
-<a href="/../csig/user" class="button">Sign in</a>
+<p>You don’t need to include a covering letter. Use a strong envelope that is the right size for your documents. You can use standard post or special delivery.</p>
 
-</div>
+    <p>HM Passport Office<br/>
+       Ref: PEX 319 825 680X<br/>
+       Aragon Court<br/>
+       Northminster Road<br/>
+       Peterborough<br/>
+       PE1 1QG
+    </p>
 
 
+    <div class="panel panel-border-wide alert-default">
+        <p>You must include any court orders relating to the child's residence, contact or removal from the UK.</p>
+    </div>
 
+     <h2>Track your application</h2>
+    <p>It should take around 3 weeks to get your new passport. Use your reference <strong>PEX 319 825 680X</strong> to <a href="/csig/user">track your application</a>.</p>
+    <p>If you have questions contact <a href="https://www.gov.uk/browse/abroad/passports" class="new-window" target="_blank">contact HM Passport Office<span class="visuallyhidden">(Opens in a new window)</span></a></p>
+
+    <a href="" class="button">Give feedback</a><br/><br/>
 {{/form}}
 {{/ hmpo-partials-form}}
 
 
 {{/content}}
-
-
 
 
 {{/ layout}}

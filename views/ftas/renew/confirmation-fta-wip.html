@@ -1,0 +1,56 @@
+{{< layout}}
+
+{{$pageTitle}}{{/pageTitle}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+<header class="update-notice update-notice--grey">
+    <h1><span class="icon-tick"></span> Payment successful</h1>
+    <p>£75.50 - payment reference IE19852</br>
+       Confirmation sent to <strong>c.moore@test-corp.co.uk</strong></br>
+
+    <a style="color: #0b0c0c" href="#">Download PDF</a>
+
+</header>
+
+<h1>What you need to do</h1>
+
+<p>Before we can print the new passport, you need to:
+
+
+  <ol>
+      <li>
+        <h2>1. Ask someone to confirm {{> partials-applicant-yours-the-applicants}} identity</h2>
+          They can do this online. Sign into your application to provide their name and email. You'll need your application reference: <strong>PEX 319 825 680X</strong></p>
+
+      </li>
+      <li>
+      <h2>2. Get your documents ready</h2>
+      <p>We can only receive your documents after {{> partials-applicant-yours-the-applicants}} identity has been confirmed.  We'll let you know when and where to send them. </p>
+      </li>
+  </ol>
+
+
+  <div role="note" aria-label="Information" class="panel panel-border-wide application-notice info-notice">
+      <p>If you need to sign in later, the details are in your confirmation email.</p>
+  </div>
+
+<a href="/../csig/user" class="button">Sign in</a>
+
+</div>
+
+
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+
+{{/content}}
+
+
+
+
+{{/ layout}}
