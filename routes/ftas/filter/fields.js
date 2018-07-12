@@ -19,6 +19,23 @@ module.exports = {
     formatter: ['boolean'],
     validate: ['required']
   },
+  'rising-16': {
+    legend: {
+      value: 'Rising 16s',
+      className: 'visuallyhidden'
+    },
+    options: [{
+        value: true,
+        label: 'Adult application'
+      },
+      {
+        value: false,
+        label: 'Child application',
+      },
+    ],
+    formatter: ['boolean'],
+    validate: ['required']
+  },
   'application-for-why': {
     legend: {
       value: 'Who is the new passport for?',
