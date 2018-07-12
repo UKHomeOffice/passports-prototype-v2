@@ -1,13 +1,13 @@
 module.exports = {
     '/': {
+        controller: require('../../../controllers/go-overseas'),
         //controller: require('../../../controllers/init'), // Initialise
-        // controller: require('../../../controllers/go-overseas'),
         fields: [
             'apply-uk',
             'application-country'
         ],
         backLink: '../startpage',
-        next: '/who-for',
+        next: '/dob',
         /* if Yes is selected */
         nextAlt: 'what-do-you-want-to-do-overseas',
         /* if they are from Germany/France */
@@ -17,9 +17,29 @@ module.exports = {
         /* if they are from Spain - first hidden as renewal */
         nextAltAltAltAlt: '../overseas-not-available' /* if they are from Syria - not available */
     },
-    '/who-for': {
-        controller: require('../../../controllers/application-for'),
+    '/dob': {
+        controller: require('../../../controllers/check-dob'),
+        //controller: require('../../../controllers/go-overseas'),
         backLink: './',
+        fields: [
+            'age-day',
+            'age-year',
+            'age-month'
+        ],
+        next: '/who-for',
+        forks: [{
+            target: '/first-uk',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['16-or-older'] == false;
+            }
+        }, {
+            target: '/rising-16',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['rising-16'] == true;
+            }
+        }]
+    },
+    '/who-for': {
         fields: [
             'application-for'
         ],
@@ -28,7 +48,7 @@ module.exports = {
             target: '/who-for-why',
             condition: {
                 field: 'application-for',
-                value: 'application-someone-else'
+                value: false
             }
         }]
     },
@@ -42,13 +62,26 @@ module.exports = {
     '/who-for-help': {
       backLink: 'who-for',
     },
+    '/rising-16': {
+        fields: [
+            'rising-16'
+        ],
+        next: '/first-uk',
+        forks: [{
+            target: '/who-for-why',
+            condition: {
+                field: 'rising-16',
+                value: true
+            }
+        }]
+    },
     '/first-uk': {
         fields: [
             'passport-before'
         ],
         next: '/lost-stolen',
         forks: [{
-            target: '/dob',
+            target: '/naturalisation-registration-details',
             condition: {
                 field: 'passport-before',
                 value: false
@@ -59,12 +92,12 @@ module.exports = {
         fields: [
             'lost-stolen'
         ],
-        next: '/passport-colour',
+        next: '/passport-date-of-issue',
         forks: [{
-            target: '/dob',
+            target: '/lost',
             condition: {
                 field: 'lost-stolen',
-                value: false
+                value: true
             }
         }]
     },
@@ -110,25 +143,6 @@ module.exports = {
         /* if they are from Germany/France */
         nextAltAlt: '../overseas-not-eligible',
         /* if they are from Afganistan */
-    },
-    '/dob': {
-        //controller: require('../../../controllers/go-overseas'),
-        controller: require('../../../controllers/check-dob'),
-        fields: [
-            'age-day',
-            'age-year',
-            'age-month'
-        ],
-        next: '/passport-date-of-issue',
-        forks: [
-            {
-                target: '/naturalisation-registration-details',
-                condition: function (req, res) {
-                    // TODO: Add conditional logic for OVER 16
-                    return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
-                }
-            }
-        ]
     },
     '/passport-date-of-issue': {
         fields: [
