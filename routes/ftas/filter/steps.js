@@ -44,23 +44,6 @@ module.exports = {
             'application-for'
         ],
         next: '/first-uk',
-        forks: [{
-            target: '/who-for-why',
-            condition: {
-                field: 'application-for',
-                value: false
-            }
-        }]
-    },
-    '/who-for-why': {
-      controller: require('../../../controllers/application-for-relationship'),
-        fields: [
-            'application-for-why'
-        ],
-        next: '/first-uk',
-    },
-    '/who-for-help': {
-      backLink: 'who-for',
     },
     '/rising-16': {
         fields: [
