@@ -1,0 +1,32 @@
+{{< layout}}
+
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Rising 16{{/pageTitle}}
+
+{{$header}}
+    <h1>Apply for a child or adult passport</h1>
+
+    <p>The applicant will be 16 within 3 weeks. You can apply for a child or an adult passport.</p>
+
+    <ul class="list-bullet">
+      <li>A child passport is £49 and is valid for 5 years. It takes around 3 weeks.</li>
+      <li>An adult passport is £75.50 and is valid for 10 years. It will arrive around 3 weeks after the applicant's 16th birthday.</li>
+    </ul>
+
+<h2>Which passport do you want to apply for?</h2>
+
+
+
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+        {{#radio-group}}rising-16{{/radio-group}}
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}

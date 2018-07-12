@@ -8,21 +8,33 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [{
-        value: 'application-me',
+        value: true,
         label: 'Me'
       },
       {
-        value: 'application-child',
-        label: 'A child under 16',
-        // toggle: 'someone-else'
+        value: false,
+        label: 'Someone else',
+      },
+    ],
+    formatter: ['boolean'],
+    validate: ['required']
+  },
+  'rising-16': {
+    legend: {
+      value: 'Rising 16s',
+      className: 'visuallyhidden'
+    },
+    options: [{
+        value: true,
+        label: 'Adult application'
       },
       {
-        value: 'application-someone-else',
-        label: 'Someone else',
-        // toggle: 'someone-else'
-      }
+        value: false,
+        label: 'Child application',
+      },
     ],
-    validate: ['required'],
+    formatter: ['boolean'],
+    validate: ['required']
   },
   'application-for-why': {
     legend: {

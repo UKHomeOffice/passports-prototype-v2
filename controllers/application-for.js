@@ -9,7 +9,7 @@ util.inherits(Controller, Base)
 
 Controller.prototype.successHandler = function successHandler(req, res, callback) {
 
-  if (req.sessionModel.get('application-for') == 'application-someone-else' || req.sessionModel.get('application-for') == 'application-child') {
+  if (req.sessionModel.get('application-for') == true) {
     // set as false to trigger pronoun switching.
     req.sessionModel.set('application-for', false)
     req.sessionModel.set('application-for-relationship', true)
