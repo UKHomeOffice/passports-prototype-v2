@@ -248,13 +248,13 @@ module.exports = {
             'passport-options',
             'braille'
         ],
-        next: '/sign',
-        forks: [{
-            target: '/sign-third-party',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['application-for'] == false;
-            }
-        }],
+        next: '/sign'
+        // forks: [{
+        //     target: '/sign-third-party',
+        //     condition: function (req, res) {
+        //         return req.session['hmpo-wizard-common']['application-for'] == false;
+        //     }
+        // }],
     },
     '/passport-options-overseas': {
         fields: [
