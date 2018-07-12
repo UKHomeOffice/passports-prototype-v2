@@ -35,10 +35,12 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
 
   // Check age, then set session variables
 	var age = moment().diff(dob, 'years');
-	console.log('age:', age);
+  var days = moment().diff(dob.add(age, 'years'), 'days', false);
+  console.log('Age: ' + age + ' years, ' + days + ' days');
 
 	req.sessionModel.set('feckless-teenager', false);
 	req.sessionModel.set('16-or-older', false);
+  req.sessionModel.set('rising-16', false);
 
   if (age >= 16 && age < 18) {
     req.sessionModel.set('feckless-teenager', true);
@@ -48,6 +50,10 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     req.sessionModel.set('16-or-older', true);
   } else {
     req.sessionModel.set('application-for-relationship', true)
+  }
+
+  if (age = 15 && days >= 344 ) {
+    req.sessionModel.set('rising-16', true);
   }
 
   Base.prototype.successHandler.call(this, req, res, callback);
