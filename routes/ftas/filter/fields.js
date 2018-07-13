@@ -14,10 +14,12 @@ module.exports = {
       {
         value: false,
         label: 'Someone else',
+        toggle: 'someone-else'
       },
     ],
     formatter: ['boolean'],
-    validate: ['required']
+    validate: ['required'],
+    className: 'inline'
   },
   'rising-16': {
     legend: {
@@ -26,13 +28,14 @@ module.exports = {
     },
     options: [{
         value: true,
-        label: 'Adult application'
+        label: 'Apply for an adult passport'
       },
       {
         value: false,
-        label: 'Child application',
+        label: 'Apply for a child passport',
       },
     ],
+    labelClassName: 'form-label',
     formatter: ['boolean'],
     validate: ['required']
   },
