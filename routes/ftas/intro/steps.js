@@ -1,7 +1,13 @@
 module.exports = {
     '/': {
         backLink: '/../ftas/filter/summary',
-        next: '/what-you-need'
+        next: '/what-you-need',
+        forks: [{
+            target: '/you-need-a-photo',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == true;
+            }
+        }]
     },
     '/before-you-continue-overseas': {
         backLink: '/../ftas/overseas/give-contact-details',
