@@ -17,7 +17,7 @@
     we need.
   </div>
 
-  {# OLC PDF 14 #}
+  <!-- OLC PDF 14 -->
   {% if values['naturalisation-registration-certificate'] %}
     <h2>Applicant's documents</h2>
     <h3>Send all of the following:</h3>
@@ -26,18 +26,18 @@
       <li>any passports from other countries</li>
     </ul>
 
-  {# OLC PDF 2 #}
+  <!-- OLC PDF 2 -->
   {% elif values['born-before-1983'] %}
     <h2>Applicant's documents</h2>
     <h3>Send all of the following:</h3>
     <ul class="list-bullet">
       <li>full birth or adoption certificate</li>
-      {% if not values['born-in-uk'] %} {# OLC PDF 9 #}
+      {% if not values['born-in-uk'] %} <!-- OLC PDF 9 -->
         <li>the passport used to enter the UK</li>
       {% endif %}
       <li>any passports from other countries</li>
     </ul>
-    {% if not values['born-in-uk'] %} {# OLC PDF 9 #}
+    {% if not values['born-in-uk'] %} <!-- OLC PDF 9 -->
       <h2>Parents' documents</h2>
       <h3>For your father, send 1 of the following:</h3>
       <ul class="list-bullet">
@@ -50,8 +50,8 @@
       </ul>
     {% endif %}
 
-  {#<!-- OLC PDF 7 TODO: Add conditional for Both parents passport numbers provided -->
-  {% elif values['born-between-1983-and-2006'] and values['born-in-uk'] %}
+  <!-- OLC PDF 7 TODO: Add conditional for Both parents passport numbers provided -->
+  {# {% elif values['born-between-1983-and-2006'] and values['born-in-uk'] %}
     <h2>Applicant's documents</h2>
     <h3>Send all of the following:</h3>
     <ul class="list-bullet">
@@ -68,10 +68,11 @@
     <ul class="list-bullet">
       <li>for 1 of your parents, the non-British passport they had when you were born showing indefinite leave to remain</li>
       <li>if you're sending your father's passport you'll also need to send their marriage certificate to your mother or parent 1</li>
-    </ul>
+    </ul> #}
 
-  <!-- OLC PDF 5 TODO: Add conditional for Both parents passport numbers NOT provided AND Born BEFORE 1983 -->
-  {% elif values['born-between-1983-and-2006'] and values['born-in-uk'] %}
+  <!-- OLC PDF 5 -->
+  {% elif values['born-between-1983-and-2006'] and values['parent1-born-before-1983'] and values['parent2-born-before-1983'] and values['born-in-uk'] %}
+    <h2>PDF 5</h2>
     <h2>Applicant's documents</h2>
     <h3>Send all of the following:</h3>
     <ul class="list-bullet">
@@ -91,8 +92,9 @@
       <li>father's marriage or civil partnership certificate to your mother or parent 1</li>
     </ul>
 
-  <!-- OLC PDF 12 TODO: Add conditional for Both parents passport numbers NOT provided AND Born BEFORE 1983 -->
-  {% elif values['born-between-1983-and-2006'] and not values['born-in-uk'] %}
+  <!-- OLC PDF 12 -->
+  {% elif values['born-between-1983-and-2006'] and values['parent1-born-before-1983'] and values['parent2-born-before-1983'] and not values['born-in-uk'] %}
+    <h2>PDF 12</h2>
     <h2>Applicant's documents</h2>
     <h3>Send all of the following:</h3>
     <ul class="list-bullet">
@@ -112,8 +114,9 @@
       <li>father's marriage or civil partnership certificate to your mother or parent 1</li>
     </ul>
 
-  <!-- OLC PDF 3 TODO: Add conditional for Both parents passport numbers NOT provided AND Born AFTER 1983 -->
-  {% elif values['born-between-1983-and-2006'] and values['born-in-uk'] %}
+  <!-- OLC PDF 3 -->
+  {% elif values['born-between-1983-and-2006'] and (not values['parent1-born-before-1983'] or not values['parent2-born-before-1983']) and values['born-in-uk'] %}
+    <h2>PDF 3</h2>
     <h2>Applicant's documents</h2>
     <h3>Send all of the following:</h3>
     <ul class="list-bullet">
@@ -145,8 +148,9 @@
       <li>grandfather's marriage certificate to your grandmother (if this applies)</li>
     </ul>
 
-  <!-- OLC PDF 10 TODO: Add conditional for Both parents passport numbers NOT provided AND Born AFTER 1983 -->
-  {% elif values['born-between-1983-and-2006'] and not values['born-in-uk'] %}
+  <!-- OLC PDF 10 -->
+  {% elif values['born-between-1983-and-2006'] and (not values['parent1-born-before-1983'] or not values['parent2-born-before-1983']) and not values['born-in-uk'] %}
+    <h2>PDF 10</h2>
     <h2>Applicant's documents</h2>
     <h3>Send all of the following:</h3>
     <ul class="list-bullet">
@@ -176,7 +180,7 @@
     <ul class="list-bullet">
       <li>full birth or adoption certificate</li>
       <li>grandfather's marriage certificate to your grandmother (if this applies)</li>
-    </ul>#}
+    </ul>
 
   {% endif %}
 
