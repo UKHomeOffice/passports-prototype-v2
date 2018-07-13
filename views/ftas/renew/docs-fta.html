@@ -50,8 +50,9 @@
       </ul>
     {% endif %}
 
-  <!-- OLC PDF 7 TODO: Add conditional for Both parents passport numbers provided -->
-  {# {% elif values['born-between-1983-and-2006'] and values['born-in-uk'] %}
+  <!-- OLC PDF 7 -->
+  {% elif values['born-between-1983-and-2006'] and (values['parent1-passport-number'] and values['parent2-passport-number']) and values['born-in-uk'] %}
+    <h2>PDF 7</h2>
     <h2>Applicant's documents</h2>
     <h3>Send all of the following:</h3>
     <ul class="list-bullet">
@@ -68,7 +69,7 @@
     <ul class="list-bullet">
       <li>for 1 of your parents, the non-British passport they had when you were born showing indefinite leave to remain</li>
       <li>if you're sending your father's passport you'll also need to send their marriage certificate to your mother or parent 1</li>
-    </ul> #}
+    </ul>
 
   <!-- OLC PDF 5 -->
   {% elif values['born-between-1983-and-2006'] and values['parent1-born-before-1983'] and values['parent2-born-before-1983'] and values['born-in-uk'] %}
