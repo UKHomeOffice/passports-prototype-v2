@@ -35,7 +35,9 @@
       {% if not values['born-in-uk'] %} <!-- OLC PDF 9 -->
         <li>the passport used to enter the UK</li>
       {% endif %}
-      <li>any passports from other countries</li>
+      {% if values['dual-nationality'] %}
+        <li>any passports from other countries</li>
+      {% endif %}
     </ul>
     {% if not values['born-in-uk'] %} <!-- OLC PDF 9 -->
       <h2>Parents' documents</h2>
@@ -56,7 +58,9 @@
     <h3>Send all of the following:</h3>
     <ul class="list-bullet">
       <li>full birth or adoption certificate</li>
-      <li>any passports from other countries</li>
+      {% if values['dual-nationality'] %}
+        <li>any passports from other countries</li>
+      {% endif %}
     </ul>
 
     <h2>Parents' documents</h2>
@@ -79,7 +83,9 @@
       {% if not values['born-in-uk'] %} <!-- OLC PDF 12 -->
         <li>the passport used to enter the UK</li>
       {% endif %}
-      <li>any passports from other countries</li>
+      {% if values['dual-nationality'] %}
+        <li>any passports from other countries</li>
+      {% endif %}
     </ul>
 
     <h2>Parents' documents</h2>
@@ -105,7 +111,9 @@
       {% if not values['born-in-uk'] %} <!-- OLC PDF 10 -->
         <li>the passport used to enter the UK</li>
       {% endif %}
-      <li>any passports from other countries</li>
+      {% if values['dual-nationality'] %}
+        <li>any passports from other countries</li>
+      {% endif %}
     </ul>
 
     <h2>Parents' documents</h2>
