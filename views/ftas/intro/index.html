@@ -6,7 +6,12 @@
   {{$form}}
     <!-- Renewals -->
     {{#values.passport-before}}
-      {{> partials-how-to-how-to-12-15s}}
+      {{#values.old-blue}}
+        {{> partials-how-to-how-to-fta}}
+      {{/values.old-blue}}
+      {{^values.old-blue}}
+        {{> partials-how-to-how-to-12-15s}}
+      {{/values.old-blue}}
     {{/values.passport-before}}
     <!-- First time applications  -->
     {{^values.passport-before}}

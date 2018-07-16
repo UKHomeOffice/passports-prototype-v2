@@ -8,7 +8,7 @@ var Controller = function() {
 util.inherits(Controller, Base)
 
 Controller.prototype.successHandler = function successHandler(req, res, callback) {
-  if (req.sessionModel.get('application-for') == true) {
+  if (req.sessionModel.get('application-for') == false) {
     req.sessionModel.set('application-for-relationship', true)
   }
   Base.prototype.successHandler.call(this, req, res, callback);

@@ -5,7 +5,8 @@ module.exports = {
         forks: [{
             target: '/you-need-a-photo',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == true;
+                return req.session['hmpo-wizard-common']['passport-before'] == true ||
+                req.session['hmpo-wizard-common']['old-blue'] == false;
             }
         }]
     },
