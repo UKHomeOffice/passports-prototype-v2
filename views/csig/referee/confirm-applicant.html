@@ -5,7 +5,7 @@
 
 
 {{$header}}
-  <h1>Is this a true likeness of Susan Howard?</h1>
+  <h1>Is this a true likeness of Suzanne Sagmeister's son?</h1>
 {{/header}}
 
 {{$content}}
@@ -19,12 +19,14 @@
     {{$form}}
       <div class="grid-row">
         <div class="column-one-third">
-
-
-          <img src="../../public/images/photoguide/csig-confirm.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+          {{#values.csig-child}}
+            <img src="../../public/images/thumbnail.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+          {{/values.csig-child}}
+          {{^values.csig-child}}
+            <img src="../../public/images/photoguide/csig-confirm.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+          {{/values.csig-child}}
         </div>
       </div>
-
 
       {{#radio-group}}applicant-check{{/radio-group}}
       <div id="declarations" class="panel panel-border-narrow js-hidden">
