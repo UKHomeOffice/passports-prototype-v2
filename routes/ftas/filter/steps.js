@@ -40,6 +40,7 @@ module.exports = {
         }]
     },
     '/who-for': {
+        controller: require('../../../controllers/application-for'),
         fields: [
             'application-for'
         ],

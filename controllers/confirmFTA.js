@@ -527,7 +527,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     // - use this logic to remove fields by popping off the stack
     if (values['naturalisation-registration-certificate'] == true || // Naturalised or registered
         values['born-before-1983'] == true || // Born Before 01/01/1983
-        values['old-blue'] == true // Passport issued Before 01/01/1994 (Old blue) Hidden FTA
+        values['old-blue'] == true || // Passport issued Before 01/01/1994 (Old blue) Hidden FTA
+        values['passport-before'] == true // 12-15s renewals that may have parents details, but not grandparents
     ) {
         console.log('DELETE grandparents fields')
         response.sections.pop({

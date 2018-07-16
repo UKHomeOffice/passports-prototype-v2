@@ -63,31 +63,13 @@ module.exports = {
         validate: ['required'],
         options: [{
                 value: true,
-                label: 'I understand and will sign my passport',
+                label: '{{> partials-sar-sign-passport-yes}}',
             },
             {
                 value: false,
-                label: 'I can’t sign my name',
+                label: '{{> partials-sar-sign-passport-no}}',
                 toggle: 'no-sign'
             }
-        ]
-      },
-    'can-sign-third-party': {
-        legend: {
-          className: 'visuallyhidden'
-        },
-        formatter: 'boolean',
-        validate: ['required'],
-        options: [
-          {
-            value: true,
-            label: 'I’ll tell the passport holder to sign',
-          },
-          {
-            value: false,
-            label: 'They can’t physically sign',
-            toggle: 'no-sign'
-          }
         ]
       },
     'no-sign-reason': {
@@ -105,24 +87,6 @@ module.exports = {
         ],
         dependent: {
             field: 'can-sign',
-            value: false
-        }
-    },
-    'no-sign-reason-third-party': {
-        labelClassName: 'visuallyhidden',
-        legend: {
-            className: 'visuallyhidden'
-        },
-        className: 'textarea',
-        validate: [
-            'required',
-            {
-                type: 'maxlength',
-                arguments: 250
-            }
-        ],
-        dependent: {
-            field: 'can-sign-third-party',
             value: false
         }
     },
