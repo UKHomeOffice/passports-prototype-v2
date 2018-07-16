@@ -16,12 +16,7 @@
     </div>
 
     {{^values.change-name}}
-        <p><strong>You need to send:</strong></p>
-        <ul class="list-bullet">
-            <li>your old passport</li>
-            <li>any passports you have from other countries (full colour copy with every page including blank pages)</li>
-        </ul>
-        <br>
+        {{> partials-documents-renew}}
     {{/values.change-name}}
 
     {{#values.change-name}}
