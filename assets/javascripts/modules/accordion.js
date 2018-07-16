@@ -153,7 +153,7 @@ AccordionSection.prototype.setExpanded = function(expanded) {
 }
 
 if (
-  /docs-renew-change-of-name/.test(window.location.pathname)
+  /docs-renew/.test(window.location.pathname)
 ) {
   new Accordion(document.getElementById('name-change-accordion'))
 }
