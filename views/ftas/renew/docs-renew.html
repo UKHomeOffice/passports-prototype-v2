@@ -3,38 +3,50 @@
 {{$pageTitle}}Required Documents{{/pageTitle}}
 
 {{$header}}
-  <h1>What you need to send</h1>
+    <h1>What you need to send</h1>
 {{/header}}
 
 {{$content}}
 
-<p>Before we can send your new passport we need to see extra documents.</br>We’ll check and return them to you.</p>
+    <p>Before we can send your new passport we need to see extra documents.</br>We’ll check and return them to you.</p>
 
-<div class="panel panel-border-wide alert-default">
-  You must send original documents - we can't accept photocopies. Your application will be delayed if you don't send everything we need.
-</div>
+    <div class="panel panel-border-wide alert-default">
+        You must send original documents - we can't accept photocopies. Your application will be delayed if you don't send everything
+        we need.
+    </div>
 
-<p><strong>You need to send:</strong></p>
+    {{^values.change-name}}
+        {{> partials-documents-renew}}
+    {{/values.change-name}}
 
-<ul class="list-bullet">
-  <li>your old passport</li>
-  <li>any passports you have from other countries (full colour copy with every page including blank pages)</li>
-</ul>
-<br>
+    {{#values.change-name}}
+        {{> partials-documents-change-of-name}}
+    {{/values.change-name}}
 
-{{< hmpo-partials-form}}
-{{$form}}
+    {{< hmpo-partials-form}}
+        {{$form}}
+            {{#input-submit}}{{/input-submit}}
+        {{/form}}
+    {{/ hmpo-partials-form}}
 
-{{#input-submit}}{{/input-submit}}
+    {{#values.change-name}}
+        <details>
+            <summary>
+                <span class="summary">My documents aren't in English or Welsh</span>
+            </summary>
+            <div class="panel panel-border-narrow">
+                <p>If your documents aren't in English or Welsh you'll need to get
+                    <a href="https://www.gov.uk/certifying-a-document">certified translation.</a>
+                </p>
+            </div>
+        </details>
+    {{/values.change-name}}
 
-{{/form}}
-{{/ hmpo-partials-form}}
-
-<div class="app-c-print-link">
-  <a href="#" class="app-c-print-link__link" rel="alternate">
-    Print page
-  </a>
-</div>
+    <div class="app-c-print-link">
+        <a href="#" class="app-c-print-link__link" rel="alternate">
+            Print page
+        </a>
+    </div>
 
 {{/content}}
 

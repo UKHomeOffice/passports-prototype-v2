@@ -1,0 +1,166 @@
+{{#nunjucks}}
+
+    {% if values['change-name'] %}
+        {% if values['change-of-name-reason'] == 'Marriage-or-civil-partnership' %}
+            <h2>After the ceremony</h2>
+            <p>If the ceremony has already taken place you need to send:</p>
+            <ul class="list-bullet">
+                <li>your old passport</li>
+                <li>your marriage or civil partnership certificate</li>
+            </ul>
+
+            <h2>Before the ceremony</h2>
+            <p>If you want to change your name before the ceremony you need to send:</p>
+            <ul class="list-bullet">
+                <li>your old passport</li>
+                <li>a completed <a href="https://www.gov.uk/government/publications/passports-for-newly-weds-and-civil-partners">passports for newly weds and civil partners</a> form</li>
+            </ul>
+            <br>
+
+        {% elif values['change-of-name-reason'] == 'Divorce-or-dissolution' %}
+            <h3>Send all of the following:</h3>
+            <ul class="list-bullet">
+                <li>your old passport</li>
+                <li>your birth certificate</li>
+                <li>your decree absolute or final order</li>
+                <li>your marriage or civil partnership certificate (if you don’t have the original you need to get a replacement)</li>
+                <li>a signed and dated letter saying that you use your previous name for all purposes</li>
+            </ul>
+
+            <h3>You also need to send 1 document from the last 12 months, that shows you’re using your new name:</h3>
+            <ul class="list-bullet">
+                <li>utility bill</li>
+                <li>bank statement</li>
+                <li>letter from your employer</li>
+                <li>driving licence</li>
+                <li>medical card</li>
+                <li>letter from your local council or a government department</li>
+            </ul>
+            <br>
+
+        {% elif values['change-of-name-reason'] == 'Gender-transition' %}
+            <h2>Do you have a Gender Recognition Certificate?</h2>
+            <div class="accordion" id="name-change-accordion">
+
+                <div class="accordion-section" id="gender-recognition-certificate-false">
+                    <div class="accordion-section-header">
+                        <h2 class="heading-small">I don't have a Gender Recognition Certificate</h2>
+                    </div>
+
+                    <div class="accordion-section-body">
+                        <h3>You need to send:</h3>
+                        <ul class="list-bullet">
+                            <li>your old passport</li>
+                            <li>a letter from your doctor or medical consultant confirming that your change of gender is likely to be permanent</li>
+                        </ul>
+
+                        <h3>You also need to send 1 document that proves you changed your name:</h3>
+                        <ul class="list-bullet">
+                            <li>deed poll</li>
+                            <li>change of name deed</li>
+                            <li>statutory declaration</li>
+                            <li>affidavit</li>
+                        </ul>
+
+                        <h3>And 1 document from the last 12 months, that shows you’re using your new name:</h3>
+                        <ul class="list-bullet">
+                            <li>utility bill</li>
+                            <li>bank statement</li>
+                            <li>letter from your employer</li>
+                            <li>driving licence</li>
+                            <li>medical card</li>
+                            <li>letter from your local council or a government department</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-section" id="gender-recognition-certificate-true">
+                    <div class="accordion-section-header">
+                        <h2 class="heading-small">I do have a Gender Recognition Certificate</h2>
+                    </div>
+
+                    <div class="accordion-section-body">
+                        <h3>You need to send:</h3>
+                        <ul class="list-bullet">
+                            <li>your old passport</li>
+                        </ul>
+
+                        <h3>And 1 of the following:</h3>
+                        <ul class="list-bullet">
+                            <li>your Gender Recognition Certificate</li>
+                            <li>a new birth or adoption certificate in your acquired gender</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+
+        {% elif values['change-of-name-reason'] == 'I-changed-my-name-another-way' %}
+            <h2>How did you change your name?</h2>
+            <div class="accordion" id="name-change-accordion">
+
+                <div class="accordion-section" id="first-name">
+                    <div class="accordion-section-header">
+                        <h2 class="heading-small" style="width:70%">I changed the spelling or order of my first names, or dropped a first name</h2>
+                    </div>
+
+                    <div class="accordion-section-body">
+                        <h3>You need to send:</h3>
+                        <ul class="list-bullet">
+                            <li>your old passport</li>
+                        </ul>
+
+                        <h3>You also need to send 2 documents from the last 12 months, that show you’re using your new name:</h3>
+                        <ul class="list-bullet">
+                            <li>utility bill</li>
+                            <li>bank statement</li>
+                            <li>letter from your employer</li>
+                            <li>driving licence</li>
+                            <li>medical card</li>
+                            <li>letter from your local council or a government department</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-section" id="other">
+                    <div class="accordion-section-header">
+                        <h2 class="heading-small">I changed my name another way</h2>
+                    </div>
+
+                    <div class="accordion-section-body">
+                        <h3>You need to send:</h3>
+                        <ul class="list-bullet">
+                            <li>your old passport</li>
+                        </ul>
+
+                        <h3>And 1 document that proves you changed your name:</h3>
+                        <ul class="list-bullet">
+                            <li>marriage certificate</li>
+                            <li>civil partnership certificate</li>
+                            <li>deed poll</li>
+                            <li>change of name deed</li>
+                            <li>statuary declaration</li>
+                            <li>affidavit</li>
+                        </ul>
+
+                        <h3>And 1 document from the last 12 months, that shows you’re using your new name:</h3>
+                        <ul class="list-bullet">
+                            <li>utility bill</li>
+                            <li>bank statement</li>
+                            <li>letter from your employer</li>
+                            <li>driving licence</li>
+                            <li>medical card</li>
+                            <li>letter from your local council or a government department</li>
+                        </ul>
+                        <p>If you've changed your name more than once, you'll need to send proof of every name change.</p>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+
+        {% endif %}
+    {% endif %}
+
+{{/nunjucks}}

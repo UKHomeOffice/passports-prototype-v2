@@ -321,26 +321,6 @@ module.exports = {
         backLink: 'summary',
         next: '/declaration'
     },
-    '/docs-name-change-for-marriage-or-civil-partnership': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-name-change-for-divorce-or-dissolution': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-name-change-for-gender-change': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-name-change-for-other-changes': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-name-change-for-parents': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
     '/declaration': {
         fields: ['declaration'],
         prereqs: [
