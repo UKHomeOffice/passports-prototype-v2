@@ -317,27 +317,11 @@ module.exports = {
         backLink: 'summary',
         next: '/declaration'
     },
+    '/docs-renew-change-of-name': {
+        backLink: 'summary',
+        next: '/declaration'
+    },
     '/docs-fta-thirdparty': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-name-change-for-marriage-or-civil-partnership': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-name-change-for-divorce-or-dissolution': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-name-change-for-gender-change': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-name-change-for-other-changes': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-name-change-for-parents': {
         backLink: 'summary',
         next: '/declaration'
     },
