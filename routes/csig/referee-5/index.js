@@ -7,6 +7,7 @@ app.use(require('hmpo-template-mixins')(fields, { sharedTranslationKey: 'prototy
 
 app.use(wizard(steps, fields, {
     controller: require('../../../controllers/form'),
-    templatePath: 'csig/referee-5'
+    templatePath: 'csig/referee-5',
+    name: 'common'
 }));
 module.exports = app;
