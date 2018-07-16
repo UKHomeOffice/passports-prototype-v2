@@ -50,14 +50,7 @@ module.exports = {
         fields: [
             'rising-16'
         ],
-        next: '/first-uk',
-        forks: [{
-            target: '/who-for-why',
-            condition: {
-                field: 'rising-16',
-                value: true
-            }
-        }]
+        next: '/first-uk'
     },
     '/first-uk': {
         fields: [
