@@ -42,17 +42,12 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
 	req.sessionModel.set('16-or-older', false);
   req.sessionModel.set('rising-16', false);
 
-  //set third party relationship questions to false
-  req.sessionModel.set('application-for-relationship', false);
-
   if (age >= 16 && age < 18) {
     req.sessionModel.set('feckless-teenager', true);
   }
 
 	if (age >= 16) {
     req.sessionModel.set('16-or-older', true);
-  } else {
-    //req.sessionModel.set('application-for-relationship', true)
   }
 
   if (age = 15 && days >= 344 ) {

@@ -1,6 +1,7 @@
 {{< layout}}
 {{$main-content}}
-
+{{< hmpo-partials-form}}
+  {{$form}}
 <div class="column-full">
   <div class="flash-card">
 
@@ -23,9 +24,7 @@
         <p>From some booths in the UK and some booths abroad, you'll get a photo code with your printed photos. We'll show you
           how to use the code to retrieve your digital photo.</p>
 
-        <a href="./choose-photo-method" class="button">Continue</a>
-        <br>
-        <br>
+        {{#input-submit}}{{/input-submit}}
 
         <div class="panel panel-border-wide">
           <p>The photo code is a new service and may not be available yet from photo booths or shops in your area.</p>
@@ -40,6 +39,7 @@
 
   </div>
 </div>
-
+{{/form}}
+{{/ hmpo-partials-form}}
 {{/main-content}}
 {{/ layout}}

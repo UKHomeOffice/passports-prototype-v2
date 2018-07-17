@@ -1,5 +1,6 @@
 module.exports = {
     '/': {
+        backLink: '../filter/summary',
         next: '/what-you-need',
         forks: [{
             target: '/you-need-a-photo',
