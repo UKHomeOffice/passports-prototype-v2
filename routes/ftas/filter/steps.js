@@ -40,17 +40,39 @@ module.exports = {
         }]
     },
     '/who-for': {
-        controller: require('../../../controllers/application-for'),
         fields: [
             'application-for'
         ],
         next: '/first-uk',
+        forks: [{
+            target: '/who-for-why',
+            condition: {
+                field: 'application-for',
+                value: false
+            }
+        }]
+    },
+    '/who-for-why': {
+        fields: [
+            'application-capacity'
+        ],
+        next: '/first-uk',
+    },
+    '/who-for-help': {
+      backLink: 'who-for',
     },
     '/rising-16': {
         fields: [
             'rising-16'
         ],
-        next: '/first-uk'
+        next: '/first-uk',
+        forks: [{
+            target: '/who-for-why',
+            condition: {
+                field: 'rising-16',
+                value: true
+            }
+        }]
     },
     '/first-uk': {
         fields: [
@@ -147,12 +169,13 @@ module.exports = {
         fields: [
             'dual-nationality'
         ],
-        next: '/summary',
+        next: '/relationship-applicant',
         nextAlt: '../overseas',
         forks: [{
-            target: '/relationship-applicant',
+            target: '/summary',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['application-for-relationship'] == true;
+                return req.sessionModel.get('application-for') == true ||
+                req.sessionModel.get('application-capacity') == true;
             }
         }],
     },
