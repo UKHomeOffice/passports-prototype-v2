@@ -1,10 +1,20 @@
 {{< layout}}
 {{$pageTitle}}
-Old passport details
+  {{#values.old-blue}}
+    Old passport number
+  {{/values.old-blue}}
+  {{^values.old-blue}}
+    Old passport details
+  {{/values.old-blue}}
 {{/pageTitle}}
 
 {{$header}}
-<h1>Old passport details</h1>
+  {{#values.old-blue}}
+    <h1>Old passport number</h1>
+  {{/values.old-blue}}
+  {{^values.old-blue}}
+    <h1>Old passport details</h1>
+  {{/values.old-blue}}
 {{/header}}
 
 {{$content}}
@@ -13,54 +23,66 @@ Old passport details
 {{$form}}
 
 <div id="passport-number-group" class="form-group">
-<fieldset>
-<h2>Passport number</h2>
-<p class="form-hint" id="dob-hint">For example 502135326</p>
-{{#input-text}}passport-number{{/input-text}}
-</fieldset>
+  <fieldset>
+    {{#values.old-blue}}
+      <p class="form-hint" id="dob-hint">For example B235014</p>
+    {{/values.old-blue}}
+    {{^values.old-blue}}
+      <h2>Passport number</h2>
+      <p class="form-hint" id="dob-hint">For example 502135326</p>
+    {{/values.old-blue}}
 
-<fieldset>
-<legend>
-  <span class="form-label-bold">Expiry date</span>
-  <span id="passport-expiry-hint" class="form-hint">For example 28 07 2017</span>
+    {{#input-text}}passport-number{{/input-text}}
+  </fieldset>
 
-</legend>
-<div class="form-date">
-  <div id="passport-expiry-day-group" class="form-group">
-    <label for="passport-expiry-day" class="form-label">
-      Day
-    </label>
-    <input type="text" name="expiry-day" id="expiry-day" class="form-control" aria-required="true" min="1" max="12" maxlength="2" pattern="[0-9]*" aria-describedby="passport-expiry-hint" autocomplete="hmpo-passport-expiry-day">
-  </div>
-  <div class="form-date">
-    <div id="passport-expiry-month-group" class="form-group">
-      <label for="passport-expiry-month" class="form-label">
-        Month
-      </label>
-      <input type="text" name="expiry-month" id="expiry-month" class="form-control" aria-required="true" min="1" max="12" maxlength="4" pattern="[0-9]*" aria-describedby="passport-expiry-hint" autocomplete="hmpo-passport-expiry-month">
+  {{^values.old-blue}}
+    <fieldset>
+    <legend>
+      <span class="form-label-bold">Expiry date</span>
+      <span id="passport-expiry-hint" class="form-hint">For example 28 07 2017</span>
+
+    </legend>
+    <div class="form-date">
+      <div id="passport-expiry-day-group" class="form-group">
+        <label for="passport-expiry-day" class="form-label">
+          Day
+        </label>
+        <input type="text" name="expiry-day" id="expiry-day" class="form-control" aria-required="true" min="1" max="12" maxlength="2" pattern="[0-9]*" aria-describedby="passport-expiry-hint" autocomplete="hmpo-passport-expiry-day">
+      </div>
+      <div class="form-date">
+        <div id="passport-expiry-month-group" class="form-group">
+          <label for="passport-expiry-month" class="form-label">
+            Month
+          </label>
+          <input type="text" name="expiry-month" id="expiry-month" class="form-control" aria-required="true" min="1" max="12" maxlength="4" pattern="[0-9]*" aria-describedby="passport-expiry-hint" autocomplete="hmpo-passport-expiry-month">
+        </div>
+        <div id="passport-expiry-year-group" class="form-group">
+          <label for="passport-expiry-year" class="form-label">
+            Year
+          </label>
+          <input type="text" name="expiry-year" id="expiry-year" class="form-control" aria-required="true" maxlength="4" pattern="[0-9]*" aria-describedby="passport-expiry-hint" autocomplete="hmpo-passport-expiry-year">
+        </div>
+      </div>
+    </fieldset>
+    <br>
+
+    <div class="panel-important">
+      <p>You'll need to send us your old passport so we can cancel it.</p>
     </div>
-    <div id="passport-expiry-year-group" class="form-group">
-      <label for="passport-expiry-year" class="form-label">
-        Year
-      </label>
-      <input type="text" name="expiry-year" id="expiry-year" class="form-control" aria-required="true" maxlength="4" pattern="[0-9]*" aria-describedby="passport-expiry-hint" autocomplete="hmpo-passport-expiry-year">
-    </div>
-  </div>
-</fieldset>
-<br>
+  {{/values.old-blue}}
 
-<div class="panel-important">
-<p>You'll need to send us your old passport so we can cancel it.</p>
-</div>
-
-<details>
+  <details>
     <summary><span class="summary">My passport is lost or stolen</span></summary>
-    <div class="panel panel-border-narrow">
-      <p>If you don’t have your passport, you must <a href="https://www.gov.uk/report-a-lost-or-stolen-passport">report it lost or stolen</a>.</p>
-  </div>
-</details>
-
-<br>
+    <div class="panel panel-border-narrow" style="margin-bottom:30px">
+    {{#values.old-blue}}
+      <p>If you don't have your old passport, you need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a>.</p>
+    {{/values.old-blue}}
+    {{^values.old-blue}}
+      <p>If you don’t have your old passport, you must <a href="https://www.gov.uk/report-a-lost-or-stolen-passport">report it lost or stolen</a>.</p>
+    {{/values.old-blue}}
+    </div>
+  </details>
+  <br>
 
   {{#input-submit}}{{/input-submit}}
 
