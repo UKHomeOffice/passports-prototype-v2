@@ -16,8 +16,8 @@
 <div class="confirmation">
   <div class="section old-passport-details">
       <dl class="passport-number">
-          <dt class="column-two-thirds column-long">Do you know the applicant personally, for example as a friend, neighbour or colleague?</dt>
-          <dd class="column-one-third">
+          <dt class="column-half">Do you know the applicant personally, for example as a friend, neighbour or colleague?</dt>
+          <dd class="column-half">
             <p>{{values.applicant-check-friend}}</p>
             <div class="button-wrapper">
                 <a href="/csig/referee/confirm-applicant">Change<span class="visuallyhidden"> passport number</span></a>
@@ -25,18 +25,27 @@
           </dd>
       </dl>
       <dl class="expiry-date">
-          <dt class="column-two-thirds column-long">Are you related to, in a relationship with or living at the same address
+          <dt class="column-half">Are you related to, in a relationship with or living at the same address
     as the applicant?</dt>
-          <dd class="column-one-third">
+          <dd class="column-half">
             <p>{{values.applicant-check-address}}</p>
             <div class="button-wrapper">
                 <a href="/csig/referee/confirm-applicant">Change<span class="visuallyhidden"> expiry date</span></a>
             </div>
           </dd>
       </dl>
+      <dl class="expiry-date">
+          <dt class="column-half">How do you know the applicant?</dt>
+          <dd class="column-half">
+            <p>{{values.relationship}}</p>
+            <div class="button-wrapper">
+                <a href="/csig/referee/confirm-applicant">Change<span class="visuallyhidden"> expiry date</span></a>
+            </div>
+          </dd>
+      </dl>
       <dl class="passport-number">
-          <dt class="column-two-thirds column-long"> How many years have you known the applicant?</dt>
-          <dd class="column-one-third">
+          <dt class="column-half"> How many years have you known the applicant?</dt>
+          <dd class="column-half">
             <p>{{values.knowntime}}</p>
             <div class="button-wrapper">
                 <a href="/csig/referee/confirm-applicant">Change<span class="visuallyhidden"> first and middle names</span></a>

@@ -1,0 +1,52 @@
+.confirmation {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    .section {
+        margin: 1.5em 0;
+    }
+    dl {
+        border-top: 1px solid $border-colour;
+        clear: both;
+        padding: 1em 0;
+        @extend %contain-floats;
+        dt {
+            color: $secondary-text-colour;
+        }
+        dd {
+            position: relative;
+            p {
+                margin: 0;
+                padding-right: 100px;
+            }
+            .button-wrapper {
+                @include media(tablet) {
+                    top: -23px;
+                    right: 0;
+                    position: absolute;
+                }
+                @include media(desktop) {
+                    top:-6px;
+                }
+            }
+            .button-secondary {
+                position: initial;
+            }
+        }
+        .column-half {
+            padding-left: 0;
+        }
+        .column-one-third {
+            padding: 0;
+            @include media(desktop) {
+                padding-right: $gutter-half;
+            }
+        }
+        .column-two-thirds {
+            padding: 0;
+        }
+        .column-long {
+            width:66.6666%;
+            padding-right: $gutter-half;
+        }
+    }
+}
