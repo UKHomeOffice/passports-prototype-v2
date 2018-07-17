@@ -172,7 +172,7 @@ module.exports = {
         next: '/relationship-applicant',
         nextAlt: '../overseas',
         forks: [{
-            target: '/summary',
+            target: '/summary-check',
             condition: function (req, res) {
                 return req.sessionModel.get('application-for') == true ||
                 req.sessionModel.get('application-capacity') == true;
@@ -196,7 +196,7 @@ module.exports = {
         backLink: './relationship-applicant',
         next: '/parental-responsibility',
         forks: [{
-            target: '/summary',
+            target: '/summary-check',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['16-or-older'] == true;
             }
@@ -207,7 +207,10 @@ module.exports = {
             'parental-responsibility'
         ],
         backLink: './relationship-applicant',
-        next: '/summary'
+        next: '/summary-check'
+    },
+    '/summary-check': {
+      controller: require('../../../controllers/summary-check'),
     },
     '/summary': {
         next: 'intro'
