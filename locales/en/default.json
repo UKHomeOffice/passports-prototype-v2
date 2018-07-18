@@ -609,6 +609,13 @@
             "required": "You must agree with the declaration to use this service"
         },
 
+        "name": {
+            "regex": "Your {{ label }} must only contain letters, hyphens and apostrophes"
+        },
+        "lastname": {
+            "regex": "Your {{ label }} must only contain letters, hyphens and apostrophes"
+        },
+
         "email": "You must enter a valid email",
         "exactlength": "{{label}} must be 9 characters",
         "ninoformat": "{{label}} format incorrect"
