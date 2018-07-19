@@ -191,7 +191,90 @@ module.exports = {
       // ],
       className: 'inline'
   },
-
+  'child-place-of-birth': {
+      legend: {
+          className: 'visuallyhidden'
+      },
+      options: [
+        { value: true, label: 'Yes'},
+        { value: false, label: 'No'}
+      ],
+      className: 'inline',
+      formatter: ['boolean'],
+      validate: ['required']
+  },
+  'child-mother': {
+      legend: {
+          className: 'visuallyhidden'
+      },
+      options: [
+        { value: true, label: 'Yes'},
+        { value: false, label: 'No'}
+      ],
+      className: 'inline',
+      formatter: ['boolean'],
+      validate: ['required']
+  },
+  'child-mother-year-of-birth': {
+      legend: {
+          className: 'visuallyhidden'
+      },
+      options: [
+        { value: true, label: 'Yes'},
+        { value: false, label: 'No'}
+      ],
+      className: 'inline',
+      formatter: ['boolean'],
+      validate: ['required']
+  },
+  'child-father': {
+      legend: {
+          className: 'visuallyhidden'
+      },
+      options: [
+        { value: true, label: 'Yes'},
+        { value: false, label: 'No'}
+      ],
+      className: 'inline',
+      formatter: ['boolean'],
+      validate: ['required']
+  },
+  'child-father-year-of-birth': {
+      legend: {
+          className: 'visuallyhidden'
+      },
+      options: [
+        { value: true, label: 'Yes'},
+        { value: false, label: 'No'}
+      ],
+      className: 'inline',
+      formatter: ['boolean'],
+      validate: ['required']
+  },
+  'child-declaration-name': {
+      legend: {
+          className: 'visuallyhidden'
+      },
+      options: [
+        { value: true, label: 'Yes'},
+        { value: false, label: 'No'}
+      ],
+      className: 'inline',
+      formatter: ['boolean'],
+      validate: ['required']
+  },
+  'child-relationship': {
+      legend: {
+          className: 'visuallyhidden'
+      },
+      options: [
+        { value: true, label: 'Yes'},
+        { value: false, label: 'No'}
+      ],
+      className: 'inline',
+      formatter: ['boolean'],
+      validate: ['required']
+  },
   'title':{
     legend: {
       value: 'Your title',

@@ -1,0 +1,50 @@
+{{< layout}}
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}parents details{{/pageTitle}}
+
+
+{{$header}}
+  <h1>parents details</h1>
+{{/header}}
+
+
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+      <label class="form-label" for="">Place of birth</label>
+      {{#radio-group}}child-place-of-birth{{/radio-group}}
+
+      <label class="form-label" for="">Mother</label>
+      {{#radio-group}}child-mother{{/radio-group}}
+
+      <label class="form-label" for="">Mother year of birth</label>
+      {{#radio-group}}child-mother-year-of-birth{{/radio-group}}
+
+      <label class="form-label" for="">Father</label>
+      {{#radio-group}}child-father{{/radio-group}}
+
+      <label class="form-label" for="">Father year of birth</label>
+      {{#radio-group}}child-father-year-of-birth{{/radio-group}}
+
+      <label class="form-label" for="">Declaration name</label>
+      {{#radio-group}}child-declaration-name{{/radio-group}}
+
+      <label class="form-label" for="">Relationship to child</label>
+      {{#radio-group}}child-relationship{{/radio-group}}
+      <!-- <h2>Are these Susan's previous names?</h2>
+      <ul>
+        <li>Susan Merchant</li>
+        <li>Susan Parker</li>
+      </ul>
+      <br>
+      {{#radio-group}}applicant-check-names{{/radio-group}} -->
+
+      {{#input-submit}}{{/input-submit}}
+
+    {{/form}}
+{{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
