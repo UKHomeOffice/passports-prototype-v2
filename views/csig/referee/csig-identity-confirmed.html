@@ -9,13 +9,7 @@
   {{/header}}
 
   {{$content}}
-    {{#values.csig-child}}
-      <p>Content for child csig</p>
-    {{/values.csig-child}}
-    {{^values.csig-child}}
       <p>We're going to show you a photo. We'll also ask you a few questions to check that you know the applicant personally.</p>
-    {{/values.csig-child}}
-
     <a href="confirm-applicant" class="button">Continue</a>
 
   {{/content}}

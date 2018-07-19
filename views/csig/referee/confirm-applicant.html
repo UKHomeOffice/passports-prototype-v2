@@ -6,7 +6,7 @@
 
 {{$header}}
   {{#values.csig-child}}
-    <h1>Is this a true likeness of Suzanne Sagmeister's son?</h1>
+    <h1>Is this a true likeness of Patrick Michael Smith?</h1>
   {{/values.csig-child}}
   {{^values.csig-child}}
     <h1>Is this a true likeness of Susan Howard?</h1>
@@ -26,7 +26,7 @@
       <div class="grid-row">
         <div class="column-one-third">
           {{#values.csig-child}}
-            <img src="../../public/images/thumbnail.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+            <img src="../../public/images/thumbnail-child.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
           {{/values.csig-child}}
           {{^values.csig-child}}
             <img src="../../public/images/photoguide/csig-confirm.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
@@ -35,25 +35,9 @@
       </div>
 
       {{#radio-group}}applicant-check{{/radio-group}}
-      {{#values.csig-child}}
-        <div id="declarations" class="panel panel-border-narrow js-hidden">
-          <h2>How you know Suzanne Sagmeister</h2>
-          <br>
-          <label class="form-label" for="">Do you know Suzanne Sagmeister personally, for example as a friend, neighbour or colleague?</label>
-          {{#radio-group}}applicant-check-friend{{/radio-group}}
-          <label class="form-label" for="">Are you related to, in a relationship with or living at the same address
-  as them?</label>
-          {{#radio-group}}applicant-check-address{{/radio-group}}
-          <div class="form-group">
-            <label class="form-label" for="">How do you know them?</label>
-            {{#input-text}}relationship{{/input-text}}
-          </div>
-          <div class="form-group form-date">
-            <label class="form-label" for="">How many years have you known them?</label>
-            {{#input-text}}knowntime{{/input-text}}
-          </div>
-        </div>
-      {{/values.csig-child}}
+      <label class="form-label" for="">Were they born in Dagenham?</label>
+      {{#radio-group}}child-place-of-birth{{/radio-group}}
+      
       {{^values.csig-child}}
         <div id="declarations" class="panel panel-border-narrow js-hidden">
           <label class="form-label" for="">Do you know the applicant personally, for example as a friend, neighbour or colleague?</label>

@@ -5,44 +5,29 @@
 
 
 {{$header}}
-  <h1>parents details</h1>
+  <h1>Patrick Michael Smith's parents</h1>
 {{/header}}
-
-
 
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-      <label class="form-label" for="">Place of birth</label>
-      {{#radio-group}}child-place-of-birth{{/radio-group}}
-
-      <label class="form-label" for="">Mother</label>
+      <h2>Mother or parent 1</h2>
+      <label class="form-label" for="">Is Suzanne Smith their mother?</label>
       {{#radio-group}}child-mother{{/radio-group}}
 
-      <label class="form-label" for="">Mother year of birth</label>
+      <label class="form-label" for="">Was Suzanne Smith born in 1982?</label>
       {{#radio-group}}child-mother-year-of-birth{{/radio-group}}
-
-      <label class="form-label" for="">Father</label>
+      <h2>Father or parent 2</h2>
+      <label class="form-label" for="">Is Michael Smith their father?</label>
       {{#radio-group}}child-father{{/radio-group}}
 
-      <label class="form-label" for="">Father year of birth</label>
+      <label class="form-label" for="">Was Suzanne Smith born in 1982?</label>
       {{#radio-group}}child-father-year-of-birth{{/radio-group}}
 
-      <label class="form-label" for="">Declaration name</label>
-      {{#radio-group}}child-declaration-name{{/radio-group}}
-
-      <label class="form-label" for="">Relationship to child</label>
-      {{#radio-group}}child-relationship{{/radio-group}}
-      <!-- <h2>Are these Susan's previous names?</h2>
-      <ul>
-        <li>Susan Merchant</li>
-        <li>Susan Parker</li>
-      </ul>
-      <br>
-      {{#radio-group}}applicant-check-names{{/radio-group}} -->
+      <!-- <label class="form-label-bold" for="">Declaration name</label>
+      {{#radio-group}}child-declaration-name{{/radio-group}} -->
 
       {{#input-submit}}{{/input-submit}}
-
     {{/form}}
 {{/ hmpo-partials-form}}
 {{/content}}
