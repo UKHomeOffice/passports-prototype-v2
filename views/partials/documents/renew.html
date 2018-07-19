@@ -1,6 +1,10 @@
-<p><strong>You need to send:</strong></p>
-<ul class="list-bullet">
-    <li>your old passport</li>
-    <li>any passports you have from other countries (full colour copy with every page including blank pages)</li>
-</ul>
-<br>
+{{#nunjucks}}
+    <h2>You need to send:</h2>
+    <ul class="list-bullet">
+        <li>your old passport</li>
+        {% if values['dual-nationality'] %}
+            <li>any passports you have from other countries</li>
+        {% endif %}
+    </ul>
+    <br>
+{{/nunjucks}}
