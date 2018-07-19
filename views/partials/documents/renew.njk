@@ -1,4 +1,4 @@
-{{#nunjucks}}
+{% if not values['change-name'] %}
     <h2>You need to send:</h2>
     <ul class="list-bullet">
         <li>your old passport</li>
@@ -7,4 +7,8 @@
         {% endif %}
     </ul>
     <br>
-{{/nunjucks}}
+{% endif %}
+
+{% if values['change-name'] %}
+    {% include "views/partials/documents/change-of-name.njk" %}
+{% endif%}

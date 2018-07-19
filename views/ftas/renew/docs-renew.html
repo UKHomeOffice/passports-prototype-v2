@@ -15,13 +15,9 @@
         we need.
     </div>
 
-    {{^values.change-name}}
-        {{> partials-documents-renew}}
-    {{/values.change-name}}
-
-    {{#values.change-name}}
-        {{> partials-documents-change-of-name}}
-    {{/values.change-name}}
+    {{#nunjucks}}
+        {% include "views/partials/documents/renew.njk" %}
+    {{/nunjucks}}
 
     {{< hmpo-partials-form}}
         {{$form}}
