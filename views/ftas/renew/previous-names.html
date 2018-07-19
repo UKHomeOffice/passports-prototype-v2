@@ -17,7 +17,19 @@
 {{$form}}
 
 {{#values.change-name}}
-  <p>Tell us the name on {{> partials-applicant-your-their}} birth or adoption certificate and any other names {{> partials-applicant-you-they}} have been known by.</p>
+  <p>Tell us the name on {{> partials-applicant-your-their}}
+    {{#nunjucks}}
+      {% if values['passport-before'] and not values['old-blue'] %}
+        old passport
+      {% else %}
+        {% if values['naturalisation-registration-certificate'] or (values['naturalisation-registration-certificate'] and values['old-blue']) %}
+          naturalisation or registration certificate
+        {% else %}
+          birth or adoption certificate
+        {% endif %}
+      {% endif %}
+    {{/nunjucks}}
+     and any other names {{> partials-applicant-you-they}} have been known by.</p>
   <input type="hidden" name="previous-name" value="true" required="true">
 {{/values.change-name}}
 
