@@ -325,6 +325,14 @@ module.exports = {
         backLink: 'summary',
         next: '/declaration'
     },
+    '/docs-complicated-scenario-2': {
+        backLink: 'summary',
+        next: '/declaration'
+    },
+    '/docs-complicated-scenario-3': {
+        backLink: 'summary',
+        next: '/declaration'
+    },
     '/declaration': {
         fields: ['declaration'],
         prereqs: [
