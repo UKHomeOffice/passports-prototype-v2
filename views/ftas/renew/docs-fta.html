@@ -16,11 +16,9 @@
         we need.
     </div>
 
-    {{> partials-documents-fta}}
-
-    {{#values.change-name}}
-        {{> partials-documents-change-of-name}}
-    {{/values.change-name}}
+    {{#nunjucks}}
+        {% include "views/partials/documents/fta.njk" %}
+    {{/nunjucks}}
 
     {{< hmpo-partials-form}}
         {{$form}}
