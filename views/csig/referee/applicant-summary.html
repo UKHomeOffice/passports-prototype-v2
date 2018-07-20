@@ -9,8 +9,13 @@
 {{/header}}
 {{$content}}
 <p>It looks like you're not eligible to do this for this applicant. Please confirm your answers.</p>
+{{#values.csig-child}}
+  <img src="../../public/images/thumbnail-child.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+{{/values.csig-child}}
+{{^values.csig-child}}
+  <img src="../../public/images/photoguide/csig-confirm.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+{{/values.csig-child}}
 
-<img src="../../public/images/photoguide/csig-confirm.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
 <br>
 <br>
 <div class="confirmation">
@@ -20,7 +25,7 @@
           <dd class="column-half">
             <p>{{values.applicant-check-friend}}</p>
             <div class="button-wrapper">
-                <a href="/csig/referee/confirm-applicant">Change<span class="visuallyhidden"> passport number</span></a>
+                <a href="javascript:history.back()">Change<span class="visuallyhidden"> passport number</span></a>
             </div>
           </dd>
       </dl>
@@ -30,16 +35,27 @@
           <dd class="column-half">
             <p>{{values.applicant-check-address}}</p>
             <div class="button-wrapper">
-                <a href="/csig/referee/confirm-applicant">Change<span class="visuallyhidden"> expiry date</span></a>
+                <a href="javascript:history.back()">Change<span class="visuallyhidden"> expiry date</span></a>
             </div>
           </dd>
       </dl>
+      {{#values.csig-child}}
+      <dl class="expiry-date">
+          <dt class="column-half">Are they Patrick Michael Smith's mother?
+          <dd class="column-half">
+            <p>{{values.child-relationship}}</p>
+            <div class="button-wrapper">
+                <a href="javascript:history.back()">Change<span class="visuallyhidden"> expiry date</span></a>
+            </div>
+          </dd>
+      </dl>
+      {{/values.csig-child}}
       <dl class="expiry-date">
           <dt class="column-half">How do you know the applicant?</dt>
           <dd class="column-half">
             <p>{{values.relationship}}</p>
             <div class="button-wrapper">
-                <a href="/csig/referee/confirm-applicant">Change<span class="visuallyhidden"> expiry date</span></a>
+                <a href="javascript:history.back()">Change<span class="visuallyhidden"> expiry date</span></a>
             </div>
           </dd>
       </dl>
@@ -48,7 +64,7 @@
           <dd class="column-half">
             <p>{{values.knowntime}}</p>
             <div class="button-wrapper">
-                <a href="/csig/referee/confirm-applicant">Change<span class="visuallyhidden"> first and middle names</span></a>
+                <a href="javascript:history.back()">Change<span class="visuallyhidden"> first and middle names</span></a>
             </div>
           </dd>
       </dl>

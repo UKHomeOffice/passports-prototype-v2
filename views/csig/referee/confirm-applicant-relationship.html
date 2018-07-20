@@ -18,6 +18,8 @@
       <label class="form-label" for="">Are you related to, in a relationship with or living at the same address
   as them?</label>
       {{#radio-group}}applicant-check-address{{/radio-group}}
+      <label class="form-label" for="">Are they Patrick Michael Smith's mother?</label>
+      {{#radio-group}}child-relationship{{/radio-group}}
       <div class="form-group">
         <label class="form-label" for="">How do you know them?</label>
         {{#input-text}}relationship{{/input-text}}
@@ -27,8 +29,7 @@
         {{#input-text}}knowntime{{/input-text}}
       </div>
 
-      <label class="form-label" for="">Are they Patrick Michael Smith's mother?</label>
-      {{#radio-group}}child-relationship{{/radio-group}}
+
       <!-- <h2>Are these Susan's previous names?</h2>
       <ul>
         <li>Susan Merchant</li>

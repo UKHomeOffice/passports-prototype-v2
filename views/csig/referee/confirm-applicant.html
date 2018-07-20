@@ -5,13 +5,7 @@
 
 
 {{$header}}
-  {{#values.csig-child}}
-    <h1>Is this a true likeness of Patrick Michael Smith?</h1>
-  {{/values.csig-child}}
-  {{^values.csig-child}}
     <h1>Is this a true likeness of Susan Howard?</h1>
-  {{/values.csig-child}}
-
 {{/header}}
 
 {{$content}}
@@ -25,36 +19,25 @@
     {{$form}}
       <div class="grid-row">
         <div class="column-one-third">
-          {{#values.csig-child}}
-            <img src="../../public/images/thumbnail-child.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
-          {{/values.csig-child}}
-          {{^values.csig-child}}
             <img src="../../public/images/photoguide/csig-confirm.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
-          {{/values.csig-child}}
         </div>
       </div>
-
       {{#radio-group}}applicant-check{{/radio-group}}
-      <label class="form-label" for="">Were they born in Dagenham?</label>
-      {{#radio-group}}child-place-of-birth{{/radio-group}}
-      
-      {{^values.csig-child}}
-        <div id="declarations" class="panel panel-border-narrow js-hidden">
-          <label class="form-label" for="">Do you know the applicant personally, for example as a friend, neighbour or colleague?</label>
-          {{#radio-group}}applicant-check-friend{{/radio-group}}
-          <label class="form-label" for="">Are you related to, in a relationship with or living at the same address
-  as the applicant?</label>
-          {{#radio-group}}applicant-check-address{{/radio-group}}
-          <div class="form-group">
-            <label class="form-label" for="">How do you know the applicant?</label>
-            {{#input-text}}relationship{{/input-text}}
-          </div>
-          <div class="form-group form-date">
-            <label class="form-label" for="">How many years have you known the applicant?</label>
-            {{#input-text}}knowntime{{/input-text}}
-          </div>
+      <div id="declarations" class="panel panel-border-narrow js-hidden">
+        <label class="form-label" for="">Do you know the applicant personally, for example as a friend, neighbour or colleague?</label>
+        {{#radio-group}}applicant-check-friend{{/radio-group}}
+        <label class="form-label" for="">Are you related to, in a relationship with or living at the same address
+as the applicant?</label>
+        {{#radio-group}}applicant-check-address{{/radio-group}}
+        <div class="form-group">
+          <label class="form-label" for="">How do you know the applicant?</label>
+          {{#input-text}}relationship{{/input-text}}
         </div>
-      {{/values.csig-child}}
+        <div class="form-group form-date">
+          <label class="form-label" for="">How many years have you known the applicant?</label>
+          {{#input-text}}knowntime{{/input-text}}
+        </div>
+      </div>
       {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}

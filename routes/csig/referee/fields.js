@@ -117,9 +117,9 @@ module.exports = {
         { value: 'Yes', label: 'Yes', toggle: 'declarations' },
         { value: 'No', label: 'No', toggle: 'declarations' }
       ],
-      // validate: [
-      //   'required'
-      // ]
+      validate: [
+        'required'
+      ]
   },
   'applicant-check-friend': {
       options: [
@@ -130,14 +130,14 @@ module.exports = {
       legend: {
           className: 'visuallyhidden'
       },
-      // validate: [
-      //   'required',
-      //   {
-      //     type:'equal',
-      //     arguments:['Yes'], /* if the arguments are NOT selected */
-      //     redirect:'/../referee/applicant-summary'
-      //   }
-      // ]
+      validate: [
+        'required',
+        {
+          type:'equal',
+          arguments:['Yes'], /* if the arguments are NOT selected */
+          redirect:'/../referee/applicant-summary'
+        }
+      ]
   },
   'applicant-check-address': {
       options: [
@@ -148,29 +148,29 @@ module.exports = {
       legend: {
           className: 'visuallyhidden'
       },
-      // validate: [
-      //   'required',
-      //   {
-      //     type:'equal',
-      //     arguments:['No'],
-      //     redirect:'/../referee/applicant-summary'
-      //   }
-      // ]
+      validate: [
+        'required',
+        {
+          type:'equal',
+          arguments:['No'],
+          redirect:'/../referee/applicant-summary'
+        }
+      ]
   },
   'knowntime': {
       labelClassName: 'visuallyhidden',
       hint: 'We use this for stuff and nonsense',
-      // validate:[
-      //     'numeric',
-      //     'required'
-      // ]
+      validate:[
+          'numeric',
+          'required'
+      ]
   },
   'describe-photo': {
       labelClassName: 'visuallyhidden',
-      // validate:[
-      //     'numeric',
-      //     'required'
-      // ]
+      validate:[
+          'numeric',
+          'required'
+      ]
   },
   'applicant-check-home-address': {
       legend: {
@@ -181,14 +181,14 @@ module.exports = {
           { value: 'Yes', label: 'Yes' },
           { value: 'No', label: 'No' },
       ],
-      // validate: [
-      //   'required',
-      //   {
-      //     type:'equal',
-      //     arguments:['Yes'], /* if the arguments are NOT selected */
-      //     redirect:'/../referee/applicant-summary-name-address'
-      //   }
-      // ],
+      validate: [
+        'required',
+        {
+          type:'equal',
+          arguments:['Yes'], /* if the arguments are NOT selected */
+          redirect:'/../referee/applicant-summary-name-address'
+        }
+      ],
       className: 'inline'
   },
   'child-place-of-birth': {
@@ -268,11 +268,10 @@ module.exports = {
           className: 'visuallyhidden'
       },
       options: [
-        { value: true, label: 'Yes'},
-        { value: false, label: 'No'}
+        { value: 'Yes', label: 'Yes'},
+        { value: 'No', label: 'No'}
       ],
       className: 'inline',
-      formatter: ['boolean'],
       validate: ['required']
   },
   'title':{
