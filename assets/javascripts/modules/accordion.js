@@ -154,7 +154,8 @@ AccordionSection.prototype.setExpanded = function(expanded) {
 
 if (
   /docs-fta/.test(window.location.pathname) ||
-  /docs-renew/.test(window.location.pathname)
+  /docs-renew/.test(window.location.pathname) ||
+  /docs-complicated-scenario-1/.test(window.location.pathname)
 ) {
   new Accordion(document.getElementById('name-change-accordion'))
 }
