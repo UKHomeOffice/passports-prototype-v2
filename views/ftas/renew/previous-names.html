@@ -22,7 +22,7 @@
       {% if values['passport-before'] and not values['old-blue'] %}
         old passport
       {% else %}
-        {% if values['naturalisation-registration-certificate'] or (values['naturalisation-registration-certificate'] and values['old-blue']) %}
+        {% if values['naturalisation-registration-certificate'] %}
           naturalisation or registration certificate
         {% else %}
           birth or adoption certificate
