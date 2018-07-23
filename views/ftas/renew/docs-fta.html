@@ -8,11 +8,16 @@
 
 {{$content}}
 
-    <!-- TODO: Only show if parents + grandparents provided -->
-    <p>Before we can send the new passport, we need to see documents that prove identity and nationality. We'll check and return
-        them to you.</p>
-
     {{#nunjucks}}
+        {% set docsRequireFamily %}
+            {% include "views/partials/documents/get-fta-docs-require-family.njk" %}
+        {% endset %}
+
+        {% if docsRequireFamily %}
+            <p>Before we can send the new passport, we need to see documents that prove identity and nationality. We'll check and return
+            them to you.</p>
+        {% endif %}
+
         {% include "views/partials/documents/message-alert-default.njk" %}
         {% include "views/partials/documents/fta.njk" %}
     {{/nunjucks}}
