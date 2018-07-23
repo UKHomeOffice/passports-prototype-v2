@@ -20,6 +20,17 @@
 <br>
 <div class="confirmation">
   <div class="section old-passport-details">
+    {{#values.csig-child}}
+    <dl class="child-relationship">
+        <dt class="column-half">Are they Patrick Michael Smith's mother?
+        <dd class="column-half">
+          <p>{{values.child-relationship}}</p>
+          <div class="button-wrapper">
+              <a href="javascript:history.back()">Change<span class="visuallyhidden"> expiry date</span></a>
+          </div>
+        </dd>
+    </dl>
+    {{/values.csig-child}}
       <dl class="passport-number">
           <dt class="column-half">Do you know the applicant personally, for example as a friend, neighbour or colleague?</dt>
           <dd class="column-half">
@@ -39,17 +50,6 @@
             </div>
           </dd>
       </dl>
-      {{#values.csig-child}}
-      <dl class="expiry-date">
-          <dt class="column-half">Are they Patrick Michael Smith's mother?
-          <dd class="column-half">
-            <p>{{values.child-relationship}}</p>
-            <div class="button-wrapper">
-                <a href="javascript:history.back()">Change<span class="visuallyhidden"> expiry date</span></a>
-            </div>
-          </dd>
-      </dl>
-      {{/values.csig-child}}
       <dl class="expiry-date">
           <dt class="column-half">How do you know the applicant?</dt>
           <dd class="column-half">
