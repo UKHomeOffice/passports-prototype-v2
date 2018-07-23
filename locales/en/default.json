@@ -65,7 +65,7 @@
         },
         "naturalisation-registration-certificate-number": {
             "label": "Certificate number",
-            "hint": "For example, 1091644"
+            "hint": "For example 1091644"
         },
         "naturalisation-registration-certificate-issue-day": {
             "label": "Day"
@@ -607,6 +607,13 @@
         },
         "declaration": {
             "required": "You must agree with the declaration to use this service"
+        },
+
+        "name": {
+            "regex": "Your {{ label }} must only contain letters, hyphens and apostrophes"
+        },
+        "lastname": {
+            "regex": "Your {{ label }} must only contain letters, hyphens and apostrophes"
         },
 
         "email": "You must enter a valid email",

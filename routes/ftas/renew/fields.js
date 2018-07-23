@@ -147,12 +147,14 @@ module.exports = {
     },
     'name': {
         validate: [
-            'required'
+            'required',
+            { type: 'regex', arguments: /^[A-Za-z .'-]+$/ }
         ]
     },
     'lastname': {
         validate: [
-            'required'
+            'required',
+            { type: 'regex', arguments: /^[A-Za-z .'-]+$/ }
         ]
     },
     'change-name': {
