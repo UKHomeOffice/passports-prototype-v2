@@ -3,14 +3,18 @@
         <h2>After the ceremony</h2>
         <p>If the ceremony has already taken place you need to send:</p>
         <ul class="list-bullet">
-            <li>your old passport</li>
+            {% for item in documents %}
+                <li>{{item}}</li>
+            {% endfor %}
             <li>your marriage or civil partnership certificate</li>
         </ul>
 
         <h2>Before the ceremony</h2>
         <p>If you want to change your name before the ceremony you need to send:</p>
         <ul class="list-bullet">
-            <li>your old passport</li>
+            {% for item in documents %}
+                <li>{{item}}</li>
+            {% endfor %}
             <li>a completed <a href="https://www.gov.uk/government/publications/passports-for-newly-weds-and-civil-partners">passports for newly weds and civil partners</a> form</li>
         </ul>
         <br>
@@ -18,7 +22,9 @@
     {% elif values['change-of-name-reason'] == 'Divorce-or-dissolution' %}
         <h3>Send all of the following:</h3>
         <ul class="list-bullet">
-            <li>your old passport</li>
+            {% for item in documents %}
+                <li>{{item}}</li>
+            {% endfor %}
             <li>your birth certificate</li>
             <li>your decree absolute or final order</li>
             <li>your marriage or civil partnership certificate (if you don’t have the original you need to get a replacement)</li>
@@ -106,7 +112,9 @@
                 <div class="accordion-section-body">
                     <h3>You need to send:</h3>
                     <ul class="list-bullet">
-                        <li>your old passport</li>
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
                     </ul>
 
                     <h3>You also need to send 2 documents from the last 12 months, that show you’re using your new name:</h3>
@@ -129,7 +137,9 @@
                 <div class="accordion-section-body">
                     <h3>You need to send:</h3>
                     <ul class="list-bullet">
-                        <li>your old passport</li>
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
                     </ul>
 
                     <h3>And 1 document that proves you changed your name:</h3>
