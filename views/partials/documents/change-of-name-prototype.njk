@@ -1,5 +1,10 @@
 {% if values['change-of-name-reason'] == 'Marriage-or-civil-partnership' %}
-    <h2>After the ceremony</h2>
+    {% if not values['passport-before'] or values['old-blue'] %}
+        <h2>Applicant's documents</h2>
+        <h3>After the ceremony</h3>
+    {% else %}
+        <h2>After the ceremony</h2>
+    {% endif %}
     <p>If the ceremony has already taken place you need to send:</p>
     <ul class="list-bullet">
         {% for item in documents %}
@@ -8,7 +13,12 @@
         <li>your marriage or civil partnership certificate</li>
     </ul>
 
-    <h2>Before the ceremony</h2>
+    {% if not values['passport-before'] or values['old-blue'] %}
+        <h2>Applicant's documents</h2>
+        <h3>Before the ceremony</h3>
+    {% else %}
+        <h2>Before the ceremony</h2>
+    {% endif %}
     <p>If you want to change your name before the ceremony you need to send:</p>
     <ul class="list-bullet">
         {% for item in documents %}
@@ -19,6 +29,9 @@
     <br>
 
 {% elif values['change-of-name-reason'] == 'Divorce-or-dissolution' %}
+    {% if not values['passport-before'] or values['old-blue'] %}
+        <h2>Applicant's documents</h2>
+    {% endif %}
     <h3>Send all of the following:</h3>
     <ul class="list-bullet">
         {% for item in documents %}
@@ -100,7 +113,12 @@
     <br>
 
 {% elif values['change-of-name-reason'] == 'I-changed-my-name-another-way' %}
-    <h2>How did you change your name?</h2>
+    {% if not values['passport-before'] or values['old-blue'] %}
+        <h2>Applicant's documents</h2>
+        <h3>How did you change your name?</h3>
+    {% else %}
+        <h2>How did you change your name?</h2>
+    {% endif %}
     <div class="accordion" id="name-change-accordion">
 
         <div class="accordion-section" id="first-name">
