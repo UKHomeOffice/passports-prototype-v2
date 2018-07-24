@@ -1,27 +1,65 @@
+{# Set document list for Applicant's documents #}
+{% set documents = [] %}
+
 <!-- OLC PDF 14 -->
 {% if values['naturalisation-registration-certificate'] %}
-    <h2>Applicant's documents</h2>
-    <h3>Send the following:</h3>
-    <ul class="list-bullet">
-        <li>naturalisation or registration certificate</li>
-        {% if values['dual-nationality'] %}
-            <li>any passports from other countries</li>
-        {% endif %}
-    </ul>
+    {% set documents = (documents.push('naturalisation or registration certificate'), documents) %}
 
 <!-- OLC PDF 2 -->
 {% elif values['born-before-1983'] %}
+    {% set documents = (documents.push('full birth or adoption certificate'), documents) %}
+
+    {% if not values['born-in-uk'] %} <!-- OLC PDF 9 -->
+        {% set documents = (documents.push('the passport used to enter the UK'), documents) %}
+    {% endif %}
+
+<!-- OLC PDF 7 -->
+{% elif values['born-between-1983-and-2006'] and (values['parent1-passport-number'] and values['parent2-passport-number']) %}
+    {% set documents = (documents.push('full birth or adoption certificate'), documents) %}
+
+<!-- OLC PDF 5 -->
+{% elif values['born-between-1983-and-2006'] and (values['parent1-born-before-1983'] and values['parent2-born-before-1983']) %}
+    {% set documents = (documents.push('full birth or adoption certificate'), documents) %}
+
+    {% if not values['born-in-uk'] %} <!-- OLC PDF 12 -->
+        {% set documents = (documents.push('the passport used to enter the UK'), documents) %}
+    {% endif %}
+
+<!-- OLC PDF 3 -->
+{% elif values['born-between-1983-and-2006'] and (not values['parent1-born-before-1983'] or not values['parent2-born-before-1983']) %}
+    {% set documents = (documents.push('full birth or adoption certificate'), documents) %}
+
+    {% if not values['born-in-uk'] %} <!-- OLC PDF 10 -->
+        {% set documents = (documents.push('the passport used to enter the UK'), documents) %}
+    {% endif %}
+
+{% endif %}
+
+{% if values['dual-nationality'] %}
+    {% set documents = (documents.push('any passports from other countries'), documents) %}
+{% endif %}
+
+
+{# Applicant's documents #}
+{% if not values['change-name'] %}
     <h2>Applicant's documents</h2>
     <h3>Send the following:</h3>
     <ul class="list-bullet">
-    <li>full birth or adoption certificate</li>
-    {% if not values['born-in-uk'] %} <!-- OLC PDF 9 -->
-        <li>the passport used to enter the UK</li>
-    {% endif %}
-    {% if values['dual-nationality'] %}
-        <li>any passports from other countries</li>
-    {% endif %}
+        {% for item in documents %}
+            <li>{{item}}</li>
+        {% endfor %}
     </ul>
+{% endif %}
+
+{% include "views/partials/documents/change-of-name-prototype.njk" %}
+
+
+{# Parents' and or Grandparents' documents #}
+<!-- OLC PDF 14 -->
+{% if values['naturalisation-registration-certificate'] %}
+
+<!-- OLC PDF 2 -->
+{% elif values['born-before-1983'] %}
     {% if not values['born-in-uk'] %} <!-- OLC PDF 9 -->
         <h2>Parents' documents</h2>
         <h3>For your father, send 1 of the following:</h3>
@@ -37,15 +75,6 @@
 
 <!-- OLC PDF 7 -->
 {% elif values['born-between-1983-and-2006'] and (values['parent1-passport-number'] and values['parent2-passport-number']) %}
-    <h2>Applicant's documents</h2>
-    <h3>Send the following:</h3>
-    <ul class="list-bullet">
-    <li>full birth or adoption certificate</li>
-    {% if values['dual-nationality'] %}
-        <li>any passports from other countries</li>
-    {% endif %}
-    </ul>
-
     <h2>Parents' documents</h2>
     <h3>Send the following if claiming British nationality through your father and he was British when you were born:</h3>
     <ul class="list-bullet">
@@ -59,18 +88,6 @@
 
 <!-- OLC PDF 5 -->
 {% elif values['born-between-1983-and-2006'] and (values['parent1-born-before-1983'] and values['parent2-born-before-1983']) %}
-    <h2>Applicant's documents</h2>
-    <h3>Send the following:</h3>
-    <ul class="list-bullet">
-        <li>full birth or adoption certificate</li>
-        {% if not values['born-in-uk'] %} <!-- OLC PDF 12 -->
-            <li>the passport used to enter the UK</li>
-        {% endif %}
-        {% if values['dual-nationality'] %}
-            <li>any passports from other countries</li>
-        {% endif %}
-    </ul>
-
     <h2>Parents' documents</h2>
     <h3>For 1 of your parents, send 1 of the following:</h3>
     <ul class="list-bullet">
@@ -87,18 +104,6 @@
 
 <!-- OLC PDF 3 -->
 {% elif values['born-between-1983-and-2006'] and (not values['parent1-born-before-1983'] or not values['parent2-born-before-1983']) %}
-    <h2>Applicant's documents</h2>
-    <h3>Send the following:</h3>
-    <ul class="list-bullet">
-        <li>full birth or adoption certificate</li>
-        {% if not values['born-in-uk'] %} <!-- OLC PDF 10 -->
-            <li>the passport used to enter the UK</li>
-        {% endif %}
-        {% if values['dual-nationality'] %}
-            <li>any passports from other countries</li>
-        {% endif %}
-    </ul>
-
     <h2>Parents' documents</h2>
     <h3>For 1 of your parents, send 1 of the following:</h3>
     <ul class="list-bullet">
@@ -126,5 +131,3 @@
     </ul>
 
 {% endif %}
-
-{% include "views/partials/documents/change-of-name.njk" %}
