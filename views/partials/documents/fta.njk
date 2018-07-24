@@ -14,7 +14,7 @@
     {% endif %}
 
 <!-- OLC PDF 7 -->
-{% elif values['born-between-1983-and-2006'] and (values['parent1-passport-number'] and values['parent2-passport-number']) %}
+{% elif values['born-between-1983-and-2006'] and values['born-in-uk'] and (values['parent1-passport-number'] and values['parent2-passport-number']) %}
     {% set documents = (documents.push('full birth or adoption certificate'), documents) %}
 
 <!-- OLC PDF 5 -->
@@ -74,7 +74,7 @@
     {% endif %}
 
 <!-- OLC PDF 7 -->
-{% elif values['born-between-1983-and-2006'] and (values['parent1-passport-number'] and values['parent2-passport-number']) %}
+{% elif values['born-between-1983-and-2006'] and values['born-in-uk'] and (values['parent1-passport-number'] and values['parent2-passport-number']) %}
     <h2>Parents' documents</h2>
     <h3>Send the following if claiming British nationality through your father and he was British when you were born:</h3>
     <ul class="list-bullet">
