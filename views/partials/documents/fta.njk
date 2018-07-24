@@ -4,7 +4,9 @@
     <h3>Send the following:</h3>
     <ul class="list-bullet">
         <li>naturalisation or registration certificate</li>
-        <li>any passports from other countries</li>
+        {% if values['dual-nationality'] %}
+            <li>any passports from other countries</li>
+        {% endif %}
     </ul>
 
 <!-- OLC PDF 2 -->
