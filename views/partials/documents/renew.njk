@@ -15,8 +15,6 @@
         {% endfor %}
     </ul>
     <br>
-{% endif %}
-
-{% if values['change-name'] %}
+{% else %}
     {% include "views/partials/documents/change-of-name-prototype.njk" %}
 {% endif %}

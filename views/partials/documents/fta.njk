@@ -49,9 +49,9 @@
             <li>{{item}}</li>
         {% endfor %}
     </ul>
+{% else %}
+    {% include "views/partials/documents/change-of-name-prototype.njk" %}
 {% endif %}
-
-{% include "views/partials/documents/change-of-name-prototype.njk" %}
 
 
 {# Parents' and or Grandparents' documents #}
