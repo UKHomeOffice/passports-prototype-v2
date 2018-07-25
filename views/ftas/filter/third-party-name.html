@@ -11,15 +11,18 @@
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-      
+
         {{#input-text}}third-party-first-name{{/input-text}}
         {{#input-text}}third-party-last-name{{/input-text}}
 
-        {{#values.16-or-older}}
-          <h2>Explain why the applicant can't apply</h2>
-          <p class="form-hint" id="dob-hint">We'll let you know what evidence to send.</span></p>
-          {{#textarea}}other-why-apply{{/textarea}}
-        {{/values.16-or-older}}
+        {{#nunjucks}}
+          {% if values['16-or-older'] == true or (values['relationship-applicant'] == 'Social Worker' or values['relationship-applicant'] == 'Other') %}
+            <h2>Explain why the applicant can't apply</h2>
+            <p class="form-hint" id="dob-hint">We'll let you know what evidence to send.</span></p>
+            <textarea name="other-why-apply" id="other-why-apply" class="form-control textarea" aria-required="false"></textarea>
+            <br>
+          {% endif %}
+        {{/nunjucks}}
 
         {{#input-submit}}{{/input-submit}}
 
