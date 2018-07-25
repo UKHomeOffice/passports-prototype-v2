@@ -50,7 +50,7 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     req.sessionModel.set('16-or-older', true);
   }
 
-  if (age = 15 && days >= 344 ) {
+  if (age == 15 && days >= 344 ) {
     req.sessionModel.set('rising-16', true);
   }
 
