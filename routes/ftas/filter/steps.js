@@ -43,14 +43,7 @@ module.exports = {
         fields: [
             'application-for'
         ],
-        next: '/first-uk',
-        forks: [{
-            target: '/who-for-why',
-            condition: {
-                field: 'application-for',
-                value: false
-            }
-        }]
+        next: '/first-uk'
     },
     '/who-for-why': {
         fields: [
@@ -65,14 +58,7 @@ module.exports = {
         fields: [
             'rising-16'
         ],
-        next: '/first-uk',
-        forks: [{
-            target: '/who-for-why',
-            condition: {
-                field: 'rising-16',
-                value: true
-            }
-        }]
+        next: '/first-uk'
     },
     '/first-uk': {
         fields: [
@@ -175,7 +161,7 @@ module.exports = {
             target: '/summary-check',
             condition: function (req, res) {
                 return req.sessionModel.get('application-for') == true ||
-                req.sessionModel.get('application-capacity') == true;
+                req.sessionModel.get('rising-16') == true;
             }
         }],
     },
@@ -185,8 +171,7 @@ module.exports = {
             'other-why-apply'
         ],
         backLink: './dual-national',
-        next: '/third-party-name',
-        controller: require('../../../controllers/third-parties'),
+        next: '/third-party-name'
     },
     '/third-party-name': {
         fields: [
