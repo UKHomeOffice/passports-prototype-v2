@@ -1,6 +1,6 @@
 (function () {
     var values = {
-        "pex-number": "1234567890",
+        "pex-number": "4234567890",
         "passport-number": "502135326",
         "expiry-day": "27",
         "expiry-month": "12",
@@ -155,7 +155,14 @@
         // CSIG
         $('#applicant-check-home-address-Yes').click();
         $('#applicant-check-names-Yes').click();
-
+        $('#child-place-of-birth-true').click();
+        $('#child-relationship-Yes').click();
+        $('#child-mother-true').click();
+        $('#child-mother-year-of-birth-true').click();
+        $('#child-father-true').click();
+        $('#child-father-year-of-birth-true').click();
+        $('#child-relationship-Yes').click();
+        $('#child-relationship-Yes').click();
         $(':checkbox').click();
         $('#applicant-check-Yes').click();
         $('#applicant-check-friend-Yes').click();
