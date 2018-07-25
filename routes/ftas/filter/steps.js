@@ -40,11 +40,19 @@ module.exports = {
         }]
     },
     '/who-for': {
-        controller: require('../../../controllers/application-for'),
         fields: [
             'application-for'
         ],
+        next: '/first-uk'
+    },
+    '/who-for-why': {
+        fields: [
+            'application-capacity'
+        ],
         next: '/first-uk',
+    },
+    '/who-for-help': {
+      backLink: 'who-for',
     },
     '/rising-16': {
         fields: [
@@ -147,12 +155,13 @@ module.exports = {
         fields: [
             'dual-nationality'
         ],
-        next: '/summary',
+        next: '/relationship-applicant',
         nextAlt: '../overseas',
         forks: [{
-            target: '/relationship-applicant',
+            target: '/summary-check',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['application-for-relationship'] == true;
+                return req.sessionModel.get('application-for') == true ||
+                req.sessionModel.get('rising-16') == true;
             }
         }],
     },
@@ -162,8 +171,7 @@ module.exports = {
             'other-why-apply'
         ],
         backLink: './dual-national',
-        next: '/third-party-name',
-        controller: require('../../../controllers/third-parties'),
+        next: '/third-party-name'
     },
     '/third-party-name': {
         fields: [
@@ -173,7 +181,7 @@ module.exports = {
         backLink: './relationship-applicant',
         next: '/parental-responsibility',
         forks: [{
-            target: '/summary',
+            target: '/summary-check',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['16-or-older'] == true;
             }
@@ -184,7 +192,10 @@ module.exports = {
             'parental-responsibility'
         ],
         backLink: './relationship-applicant',
-        next: '/summary'
+        next: '/summary-check'
+    },
+    '/summary-check': {
+      controller: require('../../../controllers/summary-check'),
     },
     '/summary': {
         next: 'intro'

@@ -39,23 +39,24 @@ module.exports = {
     formatter: ['boolean'],
     validate: ['required']
   },
-  'application-for-why': {
+  'application-capacity': {
     legend: {
       value: 'Who is the new passport for?',
       className: 'visuallyhidden'
     },
     options: [
       {
-        value: 'adult-supported',
+        value: true,
         label: 'I’m helping someone to apply online',
       },
       {
-        value: 'adult-no-capacity',
+        value: false,
         label: 'The applicant doesn’t have mental or physical capacity',
         toggle: 'adult-no-capacity'
       }
     ],
     validate: ['required'],
+    formatter: ['boolean']
   },
   'what-to-do': {
     legend: {
