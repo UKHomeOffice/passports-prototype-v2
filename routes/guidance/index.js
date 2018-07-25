@@ -15,5 +15,11 @@ app.get('/guidance/recognised-professions', function (req, res, next) {
 app.get('/guidance/extra-guidance-for-first-time-applications', function (req, res, next) {
     res.render('guidance/extra-guidance-for-first-time-applications');
 });
+app.get('/guidance/british-nationality', function (req, res, next) {
+    res.render('guidance/british-nationality');
+});
+app.get('/guidance/parents-details', function (req, res, next) {
+    res.render('guidance/parents-details');
+});
 
 module.exports = app;

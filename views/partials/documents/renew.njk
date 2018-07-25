@@ -1,0 +1,20 @@
+{% set documents = [
+        'old passport'
+    ]
+%}
+{% if values['dual-nationality'] %}
+    {% set documents = (documents.push('any passports from other countries'), documents) %}
+{% endif %}
+
+{% if not values['change-name'] %}
+    <h2>Applicant's documents</h2>
+    <h3>Send the following:</h3>
+    <ul class="list-bullet">
+        {% for item in documents %}
+            <li>{{item}}</li>
+        {% endfor %}
+    </ul>
+    <br>
+{% else %}
+    {% include "views/partials/documents/change-of-name-prototype.njk" %}
+{% endif %}

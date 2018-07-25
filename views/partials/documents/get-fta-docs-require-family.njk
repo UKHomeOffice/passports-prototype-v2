@@ -1,0 +1,22 @@
+{% set docsRequireFamily = false %}
+
+{# OLC PDF 14 #}
+{% if values['naturalisation-registration-certificate'] %}
+
+{# OLC PDF 2 #}
+{% elif values['born-before-1983'] %}
+    {% set docsRequireFamily = true %}
+
+{# OLC PDF 7 #}
+{% elif values['born-between-1983-and-2006'] and values['born-in-uk'] and (values['parent1-passport-number'] and values['parent2-passport-number']) %}
+    {% set docsRequireFamily = true %}
+
+{# OLC PDF 5 #}
+{% elif values['born-between-1983-and-2006'] and (values['parent1-born-before-1983'] and values['parent2-born-before-1983']) %}
+    {% set docsRequireFamily = true %}
+
+{# OLC PDF 3 #}
+{% elif values['born-between-1983-and-2006'] and (not values['parent1-born-before-1983'] or not values['parent2-born-before-1983']) %}
+    {% set docsRequireFamily = true %}
+
+{% endif %}

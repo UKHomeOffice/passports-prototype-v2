@@ -8,19 +8,19 @@
 
 {{$content}}
 
-    <p>Before we can send the new passport, we need to see documents that prove identity and nationality. We'll check and return
-        them to you.</p>
+    {{#nunjucks}}
+        {% set docsRequireFamily %}
+            {% include "views/partials/documents/get-fta-docs-require-family.njk" %}
+        {% endset %}
 
-    <div class="panel panel-border-wide alert-default">
-        You must send original documents – we can't accept photocopies. Your application will be delayed if you don't send everything
-        we need.
-    </div>
+        {% if docsRequireFamily %}
+            <p>Before we can send the new passport we need to see extra documents. We'll check and return
+            them to you.</p>
+        {% endif %}
 
-    {{> partials-documents-fta}}
-
-    {{#values.change-name}}
-        {{> partials-documents-change-of-name}}
-    {{/values.change-name}}
+        {% include "views/partials/documents/message-alert-default.njk" %}
+        {% include "views/partials/documents/fta.njk" %}
+    {{/nunjucks}}
 
     {{< hmpo-partials-form}}
         {{$form}}

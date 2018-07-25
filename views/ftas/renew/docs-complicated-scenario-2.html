@@ -1,4 +1,40 @@
+{{< layout}}
+
+{{$pageTitle}}Required Documents{{/pageTitle}}
+
+{{$header}}
+    <h1>What you need to send</h1>
+{{/header}}
+
+{{$content}}
+
+    <p>Before we can send the new passport, we need to see documents that prove identity and nationality. We'll check and return
+        them to you.</p>
+
+    <div class="panel panel-border-wide alert-default">
+        You must send original documents – we can't accept photocopies. Your application will be delayed if you don't send everything
+        we need.
+    </div>
+<aside class="part-navigation-container" role="complementary" style="font-size:90%;">
+          <nav role="navigation" class="gem-c-contents-list  " data-module="track-click" aria-label="Pages in this guide">
+      <h4 class="gem-c-contents-list__title">Required documents</h4>
+    <ol class="gem-c-contents-list__list" style="margin-top:10px;">
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+          — Applicant's documents
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed " style="margin-top:5px;">
+          — <a class="gem-c-contents-list__link " data-track-category="contentsClicked" data-track-action="content_item 2" data-track-label="/photos-for-passports/rules-for-digital-photos" data-track-options="{&quot;dimension29&quot;:&quot;Digital photos&quot;}" href="#">Parents' documents</a>
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed " style="margin-top:5px;">
+          — <a class="gem-c-contents-list__link " data-track-category="contentsClicked" data-track-action="content_item 2" data-track-label="/photos-for-passports/rules-for-digital-photos" data-track-options="{&quot;dimension29&quot;:&quot;Digital photos&quot;}" href="#">Grandparents' documents</a>
+        </li>
+    </ol>
+  </nav>
+</aside>
 {{#nunjucks}}
+    {# {{#nunjucks}}
+        {% include "views/partials/documents/fta.njk" %}
+    {{/nunjucks}} #}
 
     {% if values['change-name'] %}
         {% if values['change-of-name-reason'] == 'Marriage-or-civil-partnership' %}
@@ -39,7 +75,8 @@
             <br>
 
         {% elif values['change-of-name-reason'] == 'Gender-transition' %}
-            <h2>Do you have a Gender Recognition Certificate?</h2>
+            <h2>Applicant's documents</h2>
+            <h3>Do you have a Gender Recognition Certificate?</h3>
             <div class="accordion" id="name-change-accordion">
 
                 <div class="accordion-section" id="gender-recognition-certificate-false">
@@ -48,9 +85,16 @@
                     </div>
 
                     <div class="accordion-section-body">
+                        {# <h2>Applicant's documents</h2> #}
                         <h3>You need to send:</h3>
                         <ul class="list-bullet">
-                            <li>your old passport</li>
+                            <li>full birth or adoption certificate</li>
+                            {# {% if not values['born-in-uk'] %} <!-- OLC PDF 10 --> #}
+                                <li>the passport used to enter the UK</li>
+                            {# {% endif %}
+                            {% if values['dual-nationality'] %} #}
+                                <li>any passports from other countries</li>
+                            {# {% endif %} #}
                             <li>a letter from your doctor or medical consultant confirming that your change of gender is likely to be permanent</li>
                         </ul>
 
@@ -82,7 +126,13 @@
                     <div class="accordion-section-body">
                         <h3>You need to send:</h3>
                         <ul class="list-bullet">
-                            <li>your old passport</li>
+                            <li>full birth or adoption certificate</li>
+                            {# {% if not values['born-in-uk'] %} <!-- OLC PDF 10 --> #}
+                                <li>the passport used to enter the UK</li>
+                            {# {% endif %}
+                            {% if values['dual-nationality'] %} #}
+                                <li>any passports from other countries</li>
+                            {# {% endif %} #}
                         </ul>
 
                         <h3>And 1 of the following:</h3>
@@ -163,4 +213,68 @@
         {% endif %}
     {% endif %}
 
+    {# <h2>Applicant's documents</h2>
+    <h3>Send all of the following:</h3>
+    <ul class="list-bullet">
+        <li>full birth or adoption certificate</li>
+        {% if not values['born-in-uk'] %} <!-- OLC PDF 10 -->
+            <li>the passport used to enter the UK</li>
+        {% endif %}
+        {% if values['dual-nationality'] %}
+            <li>any passports from other countries</li>
+        {% endif %}
+    </ul> #}
+
+    <h2>Parents' documents</h2>
+    <h3>For 1 of your parents, send 1 of the following:</h3>
+    <ul class="list-bullet">
+        <li>full birth or adoption certificate</li>
+        <li>naturalisation or registration certificate</li>
+        {# {% if values['born-in-uk'] %} <!-- OLC PDF 10 --> #}
+            <li>the non-British passport they had when you were born showing indefinite leave to remain</li>
+        {# {% endif %} #}
+    </ul>
+    <h3>If you're sending your father's certificate or passport you'll also need to send:</h3>
+    <ul class="list-bullet">
+        <li>father's marriage or civil partnership certificate to your mother or parent 1</li>
+    </ul>
+
+    <h2>Grandparents' documents</h2>
+    <h3>Send all of the following for both maternal grandparents:</h3>
+    <ul class="list-bullet">
+        <li>full birth or adoption certificate</li>
+        <li>grandfather's marriage certificate to your grandmother (if this applies)</li>
+    </ul>
+    <h3>And all of the following for both paternal grandparents</h3>
+    <ul class="list-bullet">
+        <li>full birth or adoption certificate</li>
+        <li>grandfather's marriage certificate to your grandmother (if this applies)</li>
+    </ul>
 {{/nunjucks}}
+
+    {{< hmpo-partials-form}}
+        {{$form}}
+            {{#input-submit}}{{/input-submit}}
+        {{/form}}
+    {{/ hmpo-partials-form}}
+
+    <details>
+        <summary>
+            <span class="summary">My documents aren't in English or Welsh</span>
+        </summary>
+        <div class="panel panel-border-narrow">
+            <p>If your documents aren't in English or Welsh you'll need to get
+                <a href="https://www.gov.uk/certifying-a-document">certified translation.</a>
+            </p>
+        </div>
+    </details>
+
+    <div class="app-c-print-link">
+        <a href="#" class="app-c-print-link__link" rel="alternate">
+            Print page
+        </a>
+    </div>
+
+{{/content}}
+
+{{/ layout}}

@@ -6,8 +6,8 @@ module.exports = {
     },
     '/track-email': {
         fields: ['age-day', 'age-month', 'age-year'],
-        next: '/../track',
-        backLink: 'track'
+        next: '/need-csig',
+        backLink: './'
     },
     '/waiting-for-old-pass': {
         next: '/track'
