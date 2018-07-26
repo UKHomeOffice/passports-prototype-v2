@@ -17,6 +17,9 @@
 @import "modules/table-multiselect";
 @import "modules/task-list";
 
+// Import GOV.UK Frontend
+@import "node_modules/govuk-frontend/all";
+
 // inherited junk that needs tidying up. at a guess it looks like the compiled scss from
 // the frontend toolkit.
 @import "shame/tidy-this-up";
