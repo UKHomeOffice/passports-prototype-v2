@@ -333,6 +333,18 @@ module.exports = {
         backLink: 'summary',
         next: '/declaration'
     },
+    '/docs-thirdparty-over16': {
+        backLink: 'summary',
+        next: '/declaration'
+    },
+    '/docs-thirdparty-under16': {
+        backLink: 'summary',
+        next: '/declaration'
+    },
+    '/docs-thirdparty-parents': {
+        backLink: 'summary',
+        next: '/declaration'
+    },
     '/declaration': {
         fields: ['declaration'],
         prereqs: [
