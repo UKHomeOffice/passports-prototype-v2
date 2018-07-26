@@ -21,6 +21,22 @@
 // Import GOV.UK Frontend
 @import "node_modules/govuk-frontend/all";
 
+h1.govuk-heading-xl {
+    padding-top: 30px;
+}
+
+h2.govuk-heading-l {
+    margin-top: 40px;
+}
+
+h3.govuk-heading-m {
+    margin-top: 30px;
+}
+
+h4.govuk-heading-s {
+    margin-top: 20px;
+}
+
 // inherited junk that needs tidying up. at a guess it looks like the compiled scss from
 // the frontend toolkit.
 @import "shame/tidy-this-up";
