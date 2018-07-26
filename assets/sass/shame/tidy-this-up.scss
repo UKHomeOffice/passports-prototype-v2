@@ -332,64 +332,6 @@ details {
   margin-bottom: 15px;
 }
 
-/* summary page */
-.confirmation {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-.confirmation .section {
-    margin: 1.5em 0;
-}
-.confirmation dl {
-    border-top: 1px solid #bfc1c3;
-    clear: both;
-    padding: 1em 0;
-}
-@media (min-width: 769px){
-.confirmation dl .column-one-third {
-    padding-right: 15px;
-}}
-.confirmation dl .column-one-third {
-    padding: 0 15px 0 0;
-}
-.confirmation dl dt {
-    color: #6f777b;
-}
-.confirmation dl .column-two-thirds {
-    padding: 0;
-}
-
-.confirmation dl dd {
-    position: relative;
-}
-.confirmation dl dd p {
-    margin: 0;
-    padding-right: 100px;
-}
-.confirmation dl dd .button-wrapper {
-    position: absolute;
-    right: 0;
-    top: -16px;
-}
-@media (min-width: 641px){
-.confirmation dl dd .button-wrapper {
-    top: -23px;
-}}
-@media (min-width: 769px){
-.confirmation dl dd .button-wrapper {
-    top: -2px;
-}}
-.confirmation dl:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.confirmation dl .column-long {
-  width: 66.6666%;
-  padding-right: $gutter-half;
-}
-
 .panel-important {
     clear: both;
     padding: 15px 0 15px 3em;

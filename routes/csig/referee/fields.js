@@ -181,17 +181,99 @@ module.exports = {
           { value: 'Yes', label: 'Yes' },
           { value: 'No', label: 'No' },
       ],
-      // validate: [
-      //   'required',
-      //   {
-      //     type:'equal',
-      //     arguments:['Yes'], /* if the arguments are NOT selected */
-      //     redirect:'/../referee/applicant-summary-name-address'
-      //   }
-      // ],
+      validate: [
+        'required',
+        {
+          type:'equal',
+          arguments:['Yes'], /* if the arguments are NOT selected */
+          redirect:'/../referee/applicant-summary-name-address'
+        }
+      ],
       className: 'inline'
   },
-
+  'child-place-of-birth': {
+      legend: {
+          className: 'visuallyhidden'
+      },
+      options: [
+        { value: true, label: 'Yes'},
+        { value: false, label: 'No'}
+      ],
+      className: 'inline',
+      formatter: ['boolean'],
+      validate: ['required']
+  },
+  'child-mother': {
+      legend: {
+          className: 'visuallyhidden'
+      },
+      options: [
+        { value: true, label: 'Yes'},
+        { value: false, label: 'No'}
+      ],
+      className: 'inline',
+      formatter: ['boolean'],
+      validate: ['required']
+  },
+  'child-mother-year-of-birth': {
+      legend: {
+          className: 'visuallyhidden'
+      },
+      options: [
+        { value: true, label: 'Yes'},
+        { value: false, label: 'No'}
+      ],
+      className: 'inline',
+      formatter: ['boolean'],
+      validate: ['required']
+  },
+  'child-father': {
+      legend: {
+          className: 'visuallyhidden'
+      },
+      options: [
+        { value: true, label: 'Yes'},
+        { value: false, label: 'No'}
+      ],
+      className: 'inline',
+      formatter: ['boolean'],
+      validate: ['required']
+  },
+  'child-father-year-of-birth': {
+      legend: {
+          className: 'visuallyhidden'
+      },
+      options: [
+        { value: true, label: 'Yes'},
+        { value: false, label: 'No'}
+      ],
+      className: 'inline',
+      formatter: ['boolean'],
+      validate: ['required']
+  },
+  'child-declaration-name': {
+      legend: {
+          className: 'visuallyhidden'
+      },
+      options: [
+        { value: true, label: 'Yes'},
+        { value: false, label: 'No'}
+      ],
+      className: 'inline',
+      formatter: ['boolean'],
+      validate: ['required']
+  },
+  'child-relationship': {
+      legend: {
+          className: 'visuallyhidden'
+      },
+      options: [
+        { value: 'Yes', label: 'Yes'},
+        { value: 'No', label: 'No'}
+      ],
+      className: 'inline',
+      validate: ['required']
+  },
   'title':{
     legend: {
       value: 'Your title',

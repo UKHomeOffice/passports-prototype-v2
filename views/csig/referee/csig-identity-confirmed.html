@@ -9,9 +9,12 @@
   {{/header}}
 
   {{$content}}
-<p>We're going to show you a photo of the applicant. We'll also ask you a few questions to check that you know them personally.</p>
-
-    <a href="confirm-applicant" class="button">Continue</a>
+  {{< hmpo-partials-form}}
+      {{$form}}
+      <p>We're going to show you a photo. We'll also ask you a few questions to check that you know the applicant personally.</p>
+    {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
 
   {{/content}}
 

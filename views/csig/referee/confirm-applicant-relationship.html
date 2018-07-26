@@ -1,0 +1,51 @@
+{{< layout}}
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}parents details{{/pageTitle}}
+
+
+{{$header}}
+  <h1>Suzanne Smith's details</h1>
+{{/header}}
+
+
+
+{{$content}}
+<p>Suzanne Smith has applied for a passport on behalf of Patrick Michael Smith.</p>
+<h2>Are they the applicant's mother?</h2>
+
+{{< hmpo-partials-form}}
+    {{$form}}
+
+      {{#radio-group}}child-relationship{{/radio-group}}
+      <h2>How do you know Suzanne Smith?</h2>
+      <label class="form-label" for="">Do you know them personally, for example as a friend, neighbour or colleague?</label>
+      {{#radio-group}}applicant-check-friend{{/radio-group}}
+      <label class="form-label" for="">Are you related to, in a relationship with or living at the same address
+  as them?</label>
+      {{#radio-group}}applicant-check-address{{/radio-group}}
+      <div class="form-group">
+        <label class="form-label" for="">How do you know them?</label>
+        {{#input-text}}relationship{{/input-text}}
+      </div>
+      <div class="form-group form-date">
+        <label class="form-label" for="">How many years have you known them?</label>
+        {{#input-text}}knowntime{{/input-text}}
+      </div>
+
+
+      <!-- <h2>Are these Susan's previous names?</h2>
+      <ul>
+        <li>Susan Merchant</li>
+        <li>Susan Parker</li>
+      </ul>
+      <br>
+      {{#radio-group}}applicant-check-names{{/radio-group}} -->
+
+      {{#input-submit}}{{/input-submit}}
+
+    {{/form}}
+{{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
