@@ -8,6 +8,7 @@ var Controller = function() {
 util.inherits(Controller, Base)
 
 Controller.prototype.get = function (req, res, next) {
+		req.sessionModel.set('tracking-status', '');
 		if (req.query.status) {
 			req.sessionModel.set('tracking-status', req.query.status)
 		}
