@@ -6,7 +6,7 @@ module.exports = {
     },
     '/track-email': {
         fields: ['age-day', 'age-month', 'age-year'],
-        next: '/csig-complete',
+        next: '/send-book',
         backLink: 'track'
     },
     '/send-book': {
@@ -16,7 +16,7 @@ module.exports = {
     '/csig-complete': {
 
     },
-    '/docs-fta': {
+    '/fta-docs': {
       backLink: 'csig-complete'
     }
 };

@@ -10,4 +10,5 @@ app.use(wizard(steps, fields, {
     templatePath: 'csig/user',
     name: 'common'
 }));
+
 module.exports = app;

@@ -8,9 +8,10 @@
   <header class="update-notice" style="background: #DEE0E2; color: #0B0C0C">
     <h1>Ask someone to confirm identity</h1>
   </header>
-  <p>We can't print the new passport until the applicant's identity is confirmed.</p>
+  <p>We can't print your new passport until your identity is confirmed. Please don't send any documents until we have done this.</p>
   <input type="hidden" name="renominate" id="renominate" value="false">
   {{#input-submit}}{{/input-submit}}
+  <hr>
   <h2>Application history</h2>
   <article>
   <table>
@@ -23,17 +24,14 @@
           <td>Application received</td>
           <td>10:05am on 19 February 2018</td>
         </tr>
-        <tr>
-          <td>Application submitted</td>
-          <td>10:03am on 19 February 2018</td>
-        </tr>
       </tbody>
     </table>
     <br>
-    <a href="http://www.gov.uk">Sign out</a>
     {{/form}}
 {{/ hmpo-partials-form}}
 {{/content}}
-
+{{$sidebar}}
+  {{> partials-csig-sidebar}}
+{{/sidebar}}
 
 {{/ layout}}

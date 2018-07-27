@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-      controller: require('../../../controllers/tracking'),
+      controller: require('../../../controllers/check-tracking-status'),
       fields: ['reference'],
         next: '/track-email',
     },
