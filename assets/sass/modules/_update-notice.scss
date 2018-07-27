@@ -1,0 +1,32 @@
+@media (min-width: 641px){
+.update-notice {
+    margin: 30px 0;
+    padding: 15px 100px;
+    min-height: 132px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}}
+.update-notice {
+    margin: 15px 0;
+    padding: 15px;
+    color: #fff;
+    background: #28a197;
+    text-align: center;
+}
+.update-notice h1 {
+    margin: 15px 0;
+}
+.update-notice a.download {
+    background: url("../images/icon-file-download-white.png") no-repeat 0 0;
+    padding-left: 28px;
+    line-height: 20px;
+}
+.update-notice a {
+    color: #fff;
+}
+.update-notice--grey {
+  background: #DEE0E2;
+  color: #0B0C0C;
+}
