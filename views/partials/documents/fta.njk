@@ -1,6 +1,11 @@
 {# Set document list for Applicant's documents #}
 {% set documents = [] %}
 
+{% if values['old-blue'] %}
+    {% set documents = (documents.push('old passport'), documents) %}
+{% endif %}
+
+
 <!-- OLC PDF 14 -->
 {% if values['naturalisation-registration-certificate'] %}
     {% set documents = (documents.push('naturalisation or registration certificate'), documents) %}
