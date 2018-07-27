@@ -9,13 +9,21 @@
 {{$content}}
 
     {{#nunjucks}}
-        {% set docsRequireFamily %}
-            {% include "views/partials/documents/get-fta-docs-require-family.njk" %}
-        {% endset %}
+        {% set docsRequireMoreThanOneDocument = true %}
 
-        {% if docsRequireFamily %}
-            <p>Before we can send the new passport we need to see extra documents. We'll check and return
-            them to you.</p>
+        {% if not values['passport-before'] %}
+            {% if values['naturalisation-registration-certificate'] and not values['dual-nationality'] and not values['change-name'] %}
+                {% set docsRequireMoreThanOneDocument = false %}
+            {% endif %}
+            {% if values['born-before-1983'] and values['born-in-uk'] and not values['dual-nationality'] and not values['change-name'] %}
+                {% set docsRequireMoreThanOneDocument = false %}
+            {% endif %}
+        {% endif %}
+
+        {% if docsRequireMoreThanOneDocument === false %}
+            {# Show nothing #}
+        {% else %}
+            <p>Before we can send the new passport we need to see extra documents. We'll check and return them to you.</p>
         {% endif %}
 
         {% include "views/partials/documents/message-alert-default.njk" %}
