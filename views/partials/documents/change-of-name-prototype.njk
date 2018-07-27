@@ -1,36 +1,45 @@
 {% if values['change-of-name-reason'] == 'Marriage-or-civil-partnership' %}
-    {% if not values['passport-before'] or values['old-blue'] %}
-        <h2 class="govuk-heading-l">Applicant's documents</h2>
-        <h3 class="govuk-heading-m">After the ceremony</h3>
-    {% else %}
-        <h2 class="govuk-heading-l">After the ceremony</h2>
-    {% endif %}
-    <p>If the ceremony has already taken place send the following:</p>
-    <ul class="list-bullet">
-        {% for item in documents %}
-            <li>{{item}}</li>
-        {% endfor %}
-        <li>marriage or civil partnership certificate</li>
-    </ul>
+    <h2 class="govuk-heading-l">Applicant's documents</h2>
+    <h3 class="govuk-heading-m">When are you changing your name?</h3>
+    <div class="accordion" id="name-change-accordion">
 
-    {% if not values['passport-before'] or values['old-blue'] %}
-        <h3 class="govuk-heading-m">Before the ceremony</h3>
-    {% else %}
-        <h2 class="govuk-heading-l">Before the ceremony</h2>
-    {% endif %}
-    <p>If you want to change your name before the ceremony send the following:</p>
-    <ul class="list-bullet">
-        {% for item in documents %}
-            <li>{{item}}</li>
-        {% endfor %}
-        <li>a completed <a href="https://www.gov.uk/government/publications/passports-for-newly-weds-and-civil-partners">passports for newly weds and civil partners</a> form</li>
-    </ul>
+        <div class="accordion-section" id="after-the-ceremony">
+            <div class="accordion-section-header">
+                <h2 class="heading-small">After the ceremony</h2>
+            </div>
+
+            <div class="accordion-section-body">
+                <h3 class="govuk-heading-m">Send the following:</h3>
+                <ul class="list-bullet">
+                    {% for item in documents %}
+                        <li>{{item}}</li>
+                    {% endfor %}
+                    <li>marriage or civil partnership certificate</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="accordion-section" id="before-the-ceremony">
+            <div class="accordion-section-header">
+                <h2 class="heading-small">Before the ceremony</h2>
+            </div>
+
+            <div class="accordion-section-body">
+                <h3 class="govuk-heading-m">Send the following:</h3>
+                <ul class="list-bullet">
+                    {% for item in documents %}
+                        <li>{{item}}</li>
+                    {% endfor %}
+                    <li>a completed <a href="https://www.gov.uk/government/publications/passports-for-newly-weds-and-civil-partners">passports for newly weds and civil partners</a> form</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
     <br>
 
 {% elif values['change-of-name-reason'] == 'Divorce-or-dissolution' %}
-    {% if not values['passport-before'] or values['old-blue'] %}
-        <h2 class="govuk-heading-l">Applicant's documents</h2>
-    {% endif %}
+    <h2 class="govuk-heading-l">Applicant's documents</h2>
     <h3 class="govuk-heading-m">Send the following:</h3>
     <ul class="list-bullet">
         {% for item in documents %}
@@ -54,7 +63,8 @@
     <br>
 
 {% elif values['change-of-name-reason'] == 'Gender-transition' %}
-    <h2 class="govuk-heading-l">Do you have a Gender Recognition Certificate?</h2>
+    <h2 class="govuk-heading-l">Applicant's documents</h2>
+    <h3 class="govuk-heading-m">Do you have a Gender Recognition Certificate?</h3>
     <div class="accordion" id="name-change-accordion">
 
         <div class="accordion-section" id="gender-recognition-certificate-false">
@@ -112,12 +122,8 @@
     <br>
 
 {% elif values['change-of-name-reason'] == 'I-changed-my-name-another-way' %}
-    {% if not values['passport-before'] or values['old-blue'] %}
-        <h2 class="govuk-heading-l">Applicant's documents</h2>
-        <h3 class="govuk-heading-m">How did you change your name?</h3>
-    {% else %}
-        <h2 class="govuk-heading-l">How did you change your name?</h2>
-    {% endif %}
+    <h2 class="govuk-heading-l">Applicant's documents</h2>
+    <h3 class="govuk-heading-m">How did you change your name?</h3>
     <div class="accordion" id="name-change-accordion">
 
         <div class="accordion-section" id="first-name">
