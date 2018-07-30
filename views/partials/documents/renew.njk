@@ -1,5 +1,5 @@
-{% set documents = ['old passport']
-%}
+{% set documents = ['old passport'] %}
+
 {% if values['dual-nationality'] %}
     {% set documents = (documents.push('any passports from other countries'), documents) %}
 {% endif %}

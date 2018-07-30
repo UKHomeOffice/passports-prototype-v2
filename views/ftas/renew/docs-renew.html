@@ -9,12 +9,19 @@
 {{$content}}
 
     {{#nunjucks}}
-        {% set docsRequireFamily %}
-            {% include "views/partials/documents/get-renew-docs-require-family.njk" %}
-        {% endset %}
+        {% set docsRequireMoreThanOneDocument = false %}
 
-        {% if docsRequireFamily %}
-            <p>Before we can send the new passport we need to see extra documents. We’ll check and return them to you.</p>
+        {% if values['dual-nationality'] %}
+            {% set docsRequireMoreThanOneDocument = true %}
+        {% endif %}
+        {% if values['change-name'] %}
+            {% set docsRequireMoreThanOneDocument = true %}
+        {% endif %}
+
+        {% if docsRequireMoreThanOneDocument === false %}
+            {# Show nothing #}
+        {% else %}
+            <p>Before we can send the new passport we need to see extra documents. We'll check and return them to you.</p>
         {% endif %}
 
         {% include "views/partials/documents/message-alert-default.njk" %}
