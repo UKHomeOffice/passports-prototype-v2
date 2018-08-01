@@ -32,6 +32,12 @@ module.exports = {
         ],
         next: '/previous-names'
     },
+    '/change-of-name-12-15s': {
+        fields: [
+            'change-of-name-reason'
+        ],
+        next: '/previous-names'
+    },
     '/previous-names': {
         fields: [
             'previous-name',
