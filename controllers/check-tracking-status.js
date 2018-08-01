@@ -12,6 +12,7 @@ Controller.prototype.get = function (req, res, next) {
 	// setter for Document page to redirect back to Csig
 	req.sessionModel.set('routeFromCsig', true)
 
+	req.sessionModel.set('pex', req.query.pex);
 	req.sessionModel.set('tracking-status', '');
 	if (req.query.status) {
 		req.sessionModel.set('tracking-status', req.query.status)
