@@ -1232,11 +1232,11 @@ module.exports = {
         },
         options: [{
                 value: '34',
-                label: 'Standard adult 34-page passport (£75.50)'
+                label: 'Standard 34-page passport (£75.50)'
             },
             {
                 value: '50',
-                label: 'Jumbo adult 50-page passport (£85.50)'
+                label: 'Jumbo 50-page passport (£85.50)'
             }
         ],
         validate: [
