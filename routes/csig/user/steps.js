@@ -8,10 +8,16 @@ module.exports = {
         fields: ['age-day', 'age-month', 'age-year'],
         next: '/need-csig',
         backLink: './',
-        forks: [{
+        forks: [
+          {
           target: '/send-docs',
           condition: function(req, res) {
             return req.session['hmpo-wizard-common']['tracking-status'] == 'send-docs';
+          }
+        },{
+          target: '/csig-completed',
+          condition: function(req, res) {
+            return req.session['hmpo-wizard-common']['tracking-status'] == 'csig-completed';
           }
         }],
     },
@@ -30,6 +36,9 @@ module.exports = {
       next: '../csig/'
     },
     '/send-docs': {
+      next: '../csig/'
+    },
+    '/csig-completed': {
       next: '../csig/'
     }
 };
