@@ -1,12 +1,12 @@
 <header class="update-notice">
   <h1><span class="icon-tick"></span>Payment successful</h1>
   £75.50<br>
+  <p>Application reference: <strong>PEX 319 825 680X</strong></p>
   <span>Email confirmation sent to {{values.email}}<br>
     <a href="" class="download" style="margin-top:5px; display:inline-block; height: 26px;">Download PDF</a>
   </span>
 </header>
-
-<h2>What you need to do</h2>
+<!-- <h2>What you need to do</h2>
 <ol>
   <li>1. Ask someone to confirm your identity</li>
   <li>2. Get your documents ready – we'll let you know where to send them</li>
@@ -14,10 +14,14 @@
 </ol>
 <div class="panel-important" style="margin:0">
   <p>We need to confirm {{> partials-applicant-yours-the-applicants}} identity before we can receive<br>your documents.</p>
-</div>
-<h2>Ask someone to confirm {{> partials-applicant-yours-the-applicants}} identity</h2>
+</div> -->
+<h2>What you need to do</h2>
+<h3>1. Ask someone to confirm {{> partials-applicant-yours-the-applicants}} identity</h3>
 
-<p>Sign into your application to check who can do this and provide their details. You'll need your application reference: <strong>PEX 319 825 680X</strong></p>
-<a href="/../csig/user" class="button">Sign in</a>
+<p>Sign into your application to check who can do this and provide their details.</p>
+<a href="/../csig/user?pex=PEX319825680X" class="button">Sign into your application</a>
 <br><br>
-<p>If you need to do this later, details are in your confirmation email.</p>
+<h3>2. Get your documents ready</h3>
+<p>We can only receive your documents after your identity has been confirmed. We'll let you know when and where to send them.</p>
+
+<!-- <p>If you need to do this later, details are in your confirmation email.</p> -->

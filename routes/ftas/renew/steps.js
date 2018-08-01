@@ -304,7 +304,10 @@ module.exports = {
     '/summary': {
         controller: require('../../../controllers/confirmFTA'),
         template: 'confirm',
-        next: '/documents-required'
+        next: '/csig-required'
+    },
+    '/csig-required': {
+      next: '/documents-required'
     },
     '/documents-required': {
         controller: require('../../../controllers/docs-check-required')
