@@ -15,11 +15,20 @@
 
         <div class="grid-row">
             <div class="column-two-thirds">
-              <p>We need to confirm <a href="../../guidance/british-nationality"target="_blank">British nationality</a> – this may depend on {{> partials-applicant-yours-the-applicants}} parents or grandparents.</p>
+
+
+              {{^values.naturalisation-registration-certificate}}
+                <p>We need to confirm <a href="../../guidance/british-nationality"target="_blank">British nationality</a> – this may depend on {{> partials-applicant-yours-the-applicants}} parents or grandparents.</p>
+              {{/values.naturalisation-registration-certificate}}
+
+              {{#values.naturalisation-registration-certificate}}
+                  <p>We need to ask for parents' details to help confirm your identity.</p>
+              {{/values.naturalisation-registration-certificate}}
+
 
               <p>If you can't provide their details, you'll need to tell us why and it may delay your application.</p>
 
-              <p>We won't contact {{> partials-applicant-yours-the-applicants}} family and their details won't appear on the new passport.</p>
+              <p>In most cases we won't contact {{> partials-applicant-yours-the-applicants}} family - if we do, we'll ask for permission first. Their details won't appear on the new passport.</p>
                 <br>
                 {{#input-submit}}{{/input-submit}}
             </div>
