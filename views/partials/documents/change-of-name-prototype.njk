@@ -53,12 +53,19 @@
 
     <h3 class="govuk-heading-m">And 1 of the following from the last 12 months, that shows you’re using your new name:</h3>
     <ul class="list-bullet">
-        <li>utility bill</li>
-        <li>bank statement</li>
+        {% if values['apply-uk'] %}
+            <li>utility bill</li>
+            <li>bank statement</li>
+        {% endif %}
         <li>letter from your employer</li>
         <li>driving licence</li>
         <li>medical card</li>
         <li>letter from your local council or a government department</li>
+        {% if not values['apply-uk'] %} {# OVS Group 1 #}
+            <li>national identity card (a colour photocopy will do)</li>
+            <li>voter's card</li>
+            <li>visa or residence permit (a colour photocopy will do)</li>
+        {% endif %}
     </ul>
     <br>
 
@@ -83,7 +90,11 @@
 
                 <h3 class="govuk-heading-m">And 1 of the following that proves you changed your name:</h3>
                 <ul class="list-bullet">
-                    <li>deed poll</li>
+                    {% if values['apply-uk'] %}
+                        <li>deed poll</li>
+                    {% elif not values['apply-uk'] %} {# OVS Group 1 #}
+                        <li>enrolled deed poll</li>
+                    {% endif %}
                     <li>change of name deed</li>
                     <li>statutory declaration</li>
                     <li>affidavit</li>
@@ -91,12 +102,19 @@
 
                 <h3 class="govuk-heading-m">And 1 of the following from the last 12 months, that shows you’re using your new name:</h3>
                 <ul class="list-bullet">
-                    <li>utility bill</li>
-                    <li>bank statement</li>
+                    {% if values['apply-uk'] %}
+                        <li>utility bill</li>
+                        <li>bank statement</li>
+                    {% endif %}
                     <li>letter from your employer</li>
                     <li>driving licence</li>
                     <li>medical card</li>
                     <li>letter from your local council or a government department</li>
+                    {% if not values['apply-uk'] %} {# OVS Group 1 #}
+                        <li>national identity card (a colour photocopy will do)</li>
+                        <li>voter's card</li>
+                        <li>visa or residence permit (a colour photocopy will do)</li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -145,12 +163,19 @@
 
                 <h3 class="govuk-heading-m">And 2 of the following from the last 12 months, that show you’re using your new name:</h3>
                 <ul class="list-bullet">
-                    <li>utility bill</li>
-                    <li>bank statement</li>
+                    {% if values['apply-uk'] %}
+                        <li>utility bill</li>
+                        <li>bank statement</li>
+                    {% endif %}
                     <li>letter from your employer</li>
                     <li>driving licence</li>
                     <li>medical card</li>
                     <li>letter from your local council or a government department</li>
+                    {% if not values['apply-uk'] %} {# OVS Group 1 #}
+                        <li>national identity card (a colour photocopy will do)</li>
+                        <li>voter's card</li>
+                        <li>visa or residence permit (a colour photocopy will do)</li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -172,7 +197,11 @@
                 <ul class="list-bullet">
                     <li>marriage certificate</li>
                     <li>civil partnership certificate</li>
-                    <li>deed poll</li>
+                    {% if values['apply-uk'] %}
+                        <li>deed poll</li>
+                    {% elif not values['apply-uk'] %} {# OVS Group 1 #}
+                        <li>enrolled deed poll</li>
+                    {% endif %}
                     <li>change of name deed</li>
                     <li>statutory declaration</li>
                     <li>affidavit</li>
@@ -180,12 +209,19 @@
 
                 <h3 class="govuk-heading-m">And 1 of the following from the last 12 months, that shows you’re using your new name:</h3>
                 <ul class="list-bullet">
-                    <li>utility bill</li>
-                    <li>bank statement</li>
+                    {% if values['apply-uk'] %}
+                        <li>utility bill</li>
+                        <li>bank statement</li>
+                    {% endif %}
                     <li>letter from your employer</li>
                     <li>driving licence</li>
                     <li>medical card</li>
                     <li>letter from your local council or a government department</li>
+                    {% if not values['apply-uk'] %} {# OVS Group 1 #}
+                        <li>national identity card (a colour photocopy will do)</li>
+                        <li>voter's card</li>
+                        <li>visa or residence permit (a colour photocopy will do)</li>
+                    {% endif %}
                 </ul>
                 <p>If you've changed your name more than once, you'll need to send proof of every name change.</p>
             </div>
