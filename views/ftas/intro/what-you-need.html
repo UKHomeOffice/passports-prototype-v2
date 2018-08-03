@@ -14,14 +14,14 @@
 <p style="margin-bottom: 30px;">You won't be able to save your application – get this information ready before you continue. If you can't provide these details, you'll need to tell us why.</p>
 
 <h2>Applicant's details</h2>
-<ul class="list-bullet list-bullet-header-spacing">
+<ul class="list list-bullet">
     {{#values.naturalisation-registration-certificate}}<li>naturalisation or registration certificate</li>{{/values.naturalisation-registration-certificate}}
     {{^values.naturalisation-registration-certificate}}<li>birth or adoption certificate</li>{{/values.naturalisation-registration-certificate}}
     {{#values.old-blue}}<li>UK passport details</li>{{/values.old-blue}}
 </ul>
 
 <h2>Parents' details</h2>
-<ul class="list-bullet list-bullet-header-spacing">
+<ul class="list list-bullet">
     <li>name, date and place of birth</li>
     <li>nationality</li>
     <li>UK passport details (if this applies)</li>
@@ -32,7 +32,7 @@
     {% if not values['born-before-1983'] and not values['naturalisation-registration-certificate'] %}
         <h2>Grandparents' details</h2>
         <p>Based on what you tell us, we may ask for their:</p>
-        <ul style="margin-bottom: 30px;" class="list-bullet list-bullet-header-spacing">
+        <ul class="list list-bullet">
             <li>name, date and place of birth</li>
             <li>date of marriage or civil partnership (if this applies)</li>
         </ul>
