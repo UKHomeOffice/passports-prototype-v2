@@ -298,11 +298,23 @@ module.exports = {
         ]
     },
     'country-of-birth': {
-        // validate: 'required',
         dependent: {
             field: 'born-in-uk',
             value: false
         },
+        options: [{
+            value: '',
+            label: ' '
+        }].concat(_.map(countries, function (c) {
+            return {
+                value: c.name,
+                label: c.name,
+                attributes: [{
+                    attribute: 'data-synonyms',
+                    value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
+                }]
+            }
+        }))
     },
     'expiry-year': {
         labelClassName: 'form-label',
