@@ -7,7 +7,7 @@
 {% if not values['change-name'] %}
     <h2 class="govuk-heading-l">Applicant's documents</h2>
     <h3 class="govuk-heading-m">Send the following:</h3>
-    <ul class="list-bullet">
+    <ul class="list list-bullet">
         {% for item in documents %}
             <li>{{item}}</li>
         {% endfor %}
