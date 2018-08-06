@@ -33,17 +33,7 @@
 {{#input-text}}lastname{{/input-text}}
 
 <fieldset>
-    {{#values.passport-before}}
-      <h2>Is this name on {{> partials-applicant-your-their}} old passport?</h2>
-    {{/values.passport-before}}
-    {{^values.passport-before}}
-      {{#values.naturalisation-registration-certificate}}
-          <h2>Is this name on {{> partials-applicant-your-their}} naturalisation or registration certificate?</h2>
-      {{/values.naturalisation-registration-certificate}}
-      {{^values.naturalisation-registration-certificate}}
-          <h2>Is this name on {{> partials-applicant-your-their}} birth or adoption certificate?</h2>
-      {{/values.naturalisation-registration-certificate}}
-    {{/values.passport-before}}
+    <h2>Is this name on {{> partials-applicant-your-their}} {{> partials-information-compared-to-document}}?</h2>
 
     {{#radio-group}}change-name{{/radio-group}}
 </fieldset>
