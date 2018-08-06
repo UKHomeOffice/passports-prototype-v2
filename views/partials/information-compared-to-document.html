@@ -1,0 +1,11 @@
+{{#nunjucks}}
+    {% if values['passport-before'] and not values['old-blue'] %} {# If true Renew #}
+        old passport
+    {% else %}
+        {% if values['naturalisation-registration-certificate'] %} {# If naturalised or registered #}
+            naturalisation or registration certificate
+        {% else %} {# If true FTA, or Hidden FTA, and not naturalised or registered #}
+            birth or adoption certificate
+        {% endif %}
+    {% endif %}
+{{/nunjucks}}

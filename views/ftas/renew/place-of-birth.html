@@ -21,14 +21,7 @@
 
 <label for="town-of-birth" class="form-label-bold">
     Town of birth
-
-    {{#values.naturalisation-registration-certificate}}
-    <span id="town-of-birth-hint" class="form-hint">As written on {{> partials-applicant-your-their}} naturalisation or registration certificate</span>
-    {{/values.naturalisation-registration-certificate}}
-
-    {{^values.naturalisation-registration-certificate}}
-    <span id="town-of-birth-hint" class="form-hint">As written on {{> partials-applicant-your-their}} birth or adoption certificate</span>
-    {{/values.naturalisation-registration-certificate}}
+    <span id="town-of-birth-hint" class="form-hint">As written on {{> partials-applicant-your-their}} {{> partials-information-compared-to-document}}</span>
 </label>
 {{#input-text}}town-of-birth{{/input-text}}
 
