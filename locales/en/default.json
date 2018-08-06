@@ -5,7 +5,7 @@
     },
     "fields": {
         "what-you-will-need-declaration": {
-            "label": "I have these details"
+            "label": "I'm ready to continue"
         },
 
         "country": {
@@ -524,7 +524,7 @@
             "required": "You must answer this question - uncancelled"
         },
         "what-you-will-need-declaration": {
-            "required": "You need to confirm you have these details"
+            "required": "You need to confirm you're ready to continue"
         },
 
         "passport-number": {
