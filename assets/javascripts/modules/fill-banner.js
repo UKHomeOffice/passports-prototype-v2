@@ -113,7 +113,7 @@
         });
 
         // Filter questions
-        $('#application-for-true').click();
+        $('#application-for-someone-else-true').click();
         $('#apply-uk-true').click();
         $('#passport-before-false').click();
         $('#lost-stolen-false').click();
