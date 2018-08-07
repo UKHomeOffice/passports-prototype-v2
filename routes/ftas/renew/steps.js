@@ -150,7 +150,7 @@ module.exports = {
         }, {
             target: '/home-address',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['application-for'] == false;
+                return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
             }
         }]
     },
@@ -261,7 +261,7 @@ module.exports = {
         // forks: [{
         //     target: '/sign-third-party',
         //     condition: function (req, res) {
-        //         return req.session['hmpo-wizard-common']['application-for'] == false;
+        //         return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
         //     }
         // }],
     },

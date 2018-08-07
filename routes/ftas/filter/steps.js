@@ -43,7 +43,7 @@ module.exports = {
     },
     '/who-for': {
         fields: [
-            'application-for'
+            'application-for-someone-else'
         ],
         next: '/first-uk'
     },
@@ -162,7 +162,7 @@ module.exports = {
         forks: [{
             target: '/summary-check',
             condition: function (req, res) {
-                return req.sessionModel.get('application-for') == true ||
+                return req.sessionModel.get('application-for-someone-else') == false ||
                 req.sessionModel.get('rising-16') == true;
             }
         }],

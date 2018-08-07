@@ -6,7 +6,7 @@
 {{/header}}
 
 {{$content}}
-<p>We'll only contact this person about confirming {{^values.application-for}}the applicant's{{/values.application-for}} identity.</p>
+<p>We'll only contact this person about confirming {{#values.application-for-someone-else}}the applicant's{{/values.application-for-someone-else}} identity.</p>
 {{< hmpo-partials-form}}
     {{$form}}
       <div id="csig-number-group" class="form-group">
