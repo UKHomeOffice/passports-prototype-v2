@@ -2,7 +2,7 @@ const _ = require('lodash');
 const countries = require('../../../config/countries');
 
 module.exports = {
-  'application-for': {
+  'application-for-someone-else': {
     legend: {
       value: 'Who is the new passport for?',
       className: 'visuallyhidden'

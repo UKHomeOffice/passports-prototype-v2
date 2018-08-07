@@ -26,13 +26,15 @@ module.exports = {
             'age-year',
             'age-month'
         ],
-        next: '/who-for',
-        forks: [{
-            target: '/first-uk',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['16-or-older'] == false;
-            }
-        }, {
+        next: '/first-uk',
+        forks: [
+        //     {
+        //     target: '/first-uk',
+        //     condition: function (req, res) {
+        //         return req.session['hmpo-wizard-common']['16-or-older'] == false;
+        //     }
+        // },
+        {
             target: '/rising-16',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['rising-16'] == true;
@@ -41,7 +43,7 @@ module.exports = {
     },
     '/who-for': {
         fields: [
-            'application-for'
+            'application-for-someone-else'
         ],
         next: '/first-uk'
     },
@@ -155,12 +157,12 @@ module.exports = {
         fields: [
             'dual-nationality'
         ],
-        next: '/relationship-applicant',
+        next: '/summary-check',
         nextAlt: '../overseas',
         forks: [{
             target: '/summary-check',
             condition: function (req, res) {
-                return req.sessionModel.get('application-for') == true ||
+                return req.sessionModel.get('application-for-someone-else') == false ||
                 req.sessionModel.get('rising-16') == true;
             }
         }],
