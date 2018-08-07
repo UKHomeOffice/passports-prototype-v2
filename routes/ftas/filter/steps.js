@@ -26,13 +26,15 @@ module.exports = {
             'age-year',
             'age-month'
         ],
-        next: '/who-for',
-        forks: [{
-            target: '/first-uk',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['16-or-older'] == false;
-            }
-        }, {
+        next: '/first-uk',
+        forks: [
+        //     {
+        //     target: '/first-uk',
+        //     condition: function (req, res) {
+        //         return req.session['hmpo-wizard-common']['16-or-older'] == false;
+        //     }
+        // },
+        {
             target: '/rising-16',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['rising-16'] == true;
@@ -155,7 +157,7 @@ module.exports = {
         fields: [
             'dual-nationality'
         ],
-        next: '/relationship-applicant',
+        next: '/summary-check',
         nextAlt: '../overseas',
         forks: [{
             target: '/summary-check',
