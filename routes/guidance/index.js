@@ -22,4 +22,8 @@ app.get('/guidance/parents-details', function (req, res, next) {
     res.render('guidance/parents-details');
 });
 
+app.get('/ftas/renew/interstitial-require-grandparents-details', function (req, res, next) {
+    res.render('ftas/renew/interstitial-require-grandparents-details');
+});
+
 module.exports = app;
