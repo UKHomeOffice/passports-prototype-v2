@@ -21,6 +21,11 @@ app.get('/guidance/british-nationality', function (req, res, next) {
 app.get('/guidance/parents-details', function (req, res, next) {
     res.render('guidance/parents-details');
 });
+app.get('/guidance/additional-documents', function (req, res, next) {
+    res.render('guidance/additional-documents');
+});
+
+// Temporary page for interstitial grandparents details
 
 app.get('/ftas/renew/interstitial-require-grandparents-details', function (req, res, next) {
     res.render('ftas/renew/interstitial-require-grandparents-details');
