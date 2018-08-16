@@ -93,7 +93,10 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     };
 
     // Logic to remove fields from stack
-    if (!values['application-for-someone-else']) { // NOT third-party application
+    // NOT third-party application
+    if (!values['application-for-someone-else'] &&
+        values['16-or-older'] == true
+    ) {
         console.log('DELETE third-party fields')
         response.sections.pop({
             fields: thirdPartyFields
@@ -564,6 +567,26 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             step: this.getEditStep('parent2-parent2-additional-information'),
             title: 'Additional information',
             value: values['parent2-parent2-additional-information']
+        });
+    }
+
+
+
+    // Logic to remove fields from stack
+    // Adult Renewal
+    if (values['passport-before'] == true &&
+        values['old-blue'] == false &&
+        values['16-or-older'] == true
+    ) {
+        console.log('DELETE parents fields')
+        response.sections.pop({
+            fields: parentsFields
+        });
+        response.sections.pop({
+            fields: parent1Fields
+        });
+        response.sections.pop({
+            fields: parent2Fields
         });
     }
 
