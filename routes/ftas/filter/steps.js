@@ -41,21 +41,15 @@ module.exports = {
             }
         }]
     },
-    '/who-for': {
-        fields: [
-            'application-for-someone-else'
-        ],
-        next: '/first-uk'
-    },
-    '/who-for-why': {
-        fields: [
-            'application-capacity'
-        ],
-        next: '/first-uk',
-    },
-    '/who-for-help': {
-      backLink: 'who-for',
-    },
+    // '/who-for-why': {
+    //     fields: [
+    //         'application-capacity'
+    //     ],
+    //     next: '/first-uk',
+    // },
+    // '/who-for-help': {
+    //   backLink: 'who-for',
+    // },
     '/rising-16': {
         fields: [
             'rising-16'
@@ -167,35 +161,13 @@ module.exports = {
             }
         }],
     },
-    '/relationship-applicant': {
-        fields: [
-            'relationship-applicant',
-            'other-why-apply'
-        ],
-        backLink: './dual-national',
-        next: '/third-party-name'
-    },
-    '/third-party-name': {
-        fields: [
-            'third-party-first-name',
-            'third-party-last-name'
-        ],
-        backLink: './relationship-applicant',
-        next: '/parental-responsibility',
-        forks: [{
-            target: '/summary-check',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['16-or-older'] == true;
-            }
-        }],
-    },
-    '/parental-responsibility': {
-        fields: [
-            'parental-responsibility'
-        ],
-        backLink: './relationship-applicant',
-        next: '/summary-check'
-    },
+    // '/parental-responsibility': {
+    //     fields: [
+    //         'parental-responsibility'
+    //     ],
+    //     backLink: './relationship-applicant',
+    //     next: '/summary-check'
+    // },
     '/summary-check': {
       controller: require('../../../controllers/summary-check'),
     },

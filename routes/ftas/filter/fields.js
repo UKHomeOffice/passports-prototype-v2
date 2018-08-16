@@ -2,25 +2,6 @@ const _ = require('lodash');
 const countries = require('../../../config/countries');
 
 module.exports = {
-  'application-for-someone-else': {
-    legend: {
-      value: 'Who is the new passport for?',
-      className: 'visuallyhidden'
-    },
-    options: [{
-        value: true,
-        label: 'Me'
-      },
-      {
-        value: false,
-        label: 'Someone else',
-        toggle: 'someone-else'
-      },
-    ],
-    formatter: ['boolean'],
-    validate: ['required'],
-    className: 'inline'
-  },
   'rising-16': {
     legend: {
       value: 'Rising 16s',
@@ -409,103 +390,57 @@ module.exports = {
         label: 'No'
       }
     ]
-  },
-  'relationship-applicant': {
-    legend: {
-      value: 'What is your relationship to the applicant?',
-      className: 'visuallyhidden'
-    },
-    options: [{
-        value: 'Mother',
-        label: 'Mother'
-      },
-      {
-        value: 'Father',
-        label: 'Father'
-      },
-      {
-        value: 'Social Worker',
-        label: 'Social Worker'
-      },
-      {
-        value: 'Other',
-        label: 'Other',
-        toggle: "relationship-other"
-      }
-    ],
-    validate: [
-      'required'
-    ]
-  },
-  'other-why-apply': {
-    labelClassName: 'visuallyhidden',
-    className: 'textarea',
-  },
-  'relationship-other': {
-    labelClassName: 'visuallyhidden',
-  },
-  'relationship-applicant-other': {
-    legend: {
-      value: 'What is your relationship to the applicant?',
-      className: 'visuallyhidden'
-    },
-    options: [{
-        value: 'Social Worker',
-        label: 'Social Worker'
-      },
-      {
-        value: 'Carer',
-        label: 'Carer'
-      },
-      {
-        value: 'Solicitor',
-        label: 'Solicitor'
-      },
-      {
-        value: 'Social Worker',
-        label: 'Social Worker'
-      },
-      {
-        value: 'Other',
-        label: 'Other',
-        toggle: 'relationship-other',
-      }
-    ],
-    validate: [
-      'required'
-    ]
-  },
-  'parental-responsibility': {
-    legend: {
-      value: 'Do you have parental responsibility?',
-      className: 'visuallyhidden'
-    },
-    options: [{
-        value: true,
-        label: 'Yes'
-      },
-      {
-        value: false,
-        label: 'No',
-        toggle: "parental-no"
-      }
-    ],
-    formatter: ['boolean'],
-    validate: [
-      'required'
-    ],
-    className: 'inline'
-  },
-  'third-party-first-name': {
-    labelClassName: 'form-label-bold',
-    validate: [
-      'required'
-    ]
-  },
-  'third-party-last-name': {
-    labelClassName: 'form-label-bold',
-    validate: [
-      'required'
-    ]
   }
+  // 'relationship-applicant-other': {
+  //   legend: {
+  //     value: 'What is your relationship to the applicant?',
+  //     className: 'visuallyhidden'
+  //   },
+  //   options: [{
+  //       value: 'Social Worker',
+  //       label: 'Social Worker'
+  //     },
+  //     {
+  //       value: 'Carer',
+  //       label: 'Carer'
+  //     },
+  //     {
+  //       value: 'Solicitor',
+  //       label: 'Solicitor'
+  //     },
+  //     {
+  //       value: 'Social Worker',
+  //       label: 'Social Worker'
+  //     },
+  //     {
+  //       value: 'Other',
+  //       label: 'Other',
+  //       toggle: 'relationship-other',
+  //     }
+  //   ],
+  //   validate: [
+  //     'required'
+  //   ]
+  // },
+  // 'parental-responsibility': {
+  //   legend: {
+  //     value: 'Do you have parental responsibility?',
+  //     className: 'visuallyhidden'
+  //   },
+  //   options: [{
+  //       value: true,
+  //       label: 'Yes'
+  //     },
+  //     {
+  //       value: false,
+  //       label: 'No',
+  //       toggle: "parental-no"
+  //     }
+  //   ],
+  //   formatter: ['boolean'],
+  //   validate: [
+  //     'required'
+  //   ],
+  //   className: 'inline'
+  // }
 };

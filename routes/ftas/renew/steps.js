@@ -299,8 +299,44 @@ module.exports = {
     },
     '/passport-special-delivery': {
         // next: '/summary-family-details',
+        next: '/who-for',
+        fields: [
+            'secure-return'
+        ],
+        forks: [{
+                target: '/relationship-applicant',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['16-or-older'] == false;
+                }
+            }
+        ]
+    },
+    '/who-for': {
+        fields: [
+            'application-for-someone-else'
+        ],
         next: '/summary',
-        fields: ['secure-return']
+        forks: [{
+            target: '/relationship-applicant',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
+            }
+        }]
+    },
+    '/relationship-applicant': {
+        fields: [
+            'relationship-applicant',
+            'relationship-other'
+        ],
+        next: '/third-party-name'
+    },
+    '/third-party-name': {
+        fields: [
+            'third-party-first-name',
+            'third-party-last-name',
+            'why-cant-apply'
+        ],
+        next: '/summary'
     },
     // '/summary-family-details': {
     //     controller: require('../../../controllers/confirm-family-details'),
