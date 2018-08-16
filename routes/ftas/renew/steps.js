@@ -25,10 +25,11 @@ module.exports = {
                 value: true
             }
         }, {
-            target: '/change-of-name-12-15s',
+            target: '/you-need-a-different-service',
             condition: function(req, res) {
                 return req.session['hmpo-wizard-common']['change-name'] == true &&
-                req.session['hmpo-wizard-common']['16-or-older'] == false;
+                req.session['hmpo-wizard-common']['16-or-older'] == false &&
+                req.session['hmpo-wizard-common']['rising-16'] == false;
             }
         }]
     },
@@ -38,11 +39,7 @@ module.exports = {
         ],
         next: '/previous-names'
     },
-    '/change-of-name-12-15s': {
-        // fields: [
-        //     'change-of-name-reason'
-        // ],
-        // next: '/previous-names'
+    '/you-need-a-different-service': {
     },
     '/previous-names': {
         fields: [

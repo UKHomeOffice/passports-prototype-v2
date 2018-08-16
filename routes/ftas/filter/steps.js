@@ -26,20 +26,20 @@ module.exports = {
             'age-year',
             'age-month'
         ],
-        next: '/first-uk',
-        forks: [
+        next: '/first-uk'
+        // forks: [
         //     {
         //     target: '/first-uk',
         //     condition: function (req, res) {
         //         return req.session['hmpo-wizard-common']['16-or-older'] == false;
         //     }
         // },
-        {
-            target: '/rising-16',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['rising-16'] == true;
-            }
-        }]
+        // {
+        //     target: '/rising-16',
+        //     condition: function (req, res) {
+        //         return req.session['hmpo-wizard-common']['rising-16'] == true;
+        //     }
+        // }]
     },
     // '/who-for-why': {
     //     fields: [
@@ -50,12 +50,12 @@ module.exports = {
     // '/who-for-help': {
     //   backLink: 'who-for',
     // },
-    '/rising-16': {
-        fields: [
-            'rising-16'
-        ],
-        next: '/first-uk'
-    },
+    // '/rising-16': {
+    //     fields: [
+    //         'rising-16'
+    //     ],
+    //     next: '/first-uk'
+    // },
     '/first-uk': {
         fields: [
             'passport-before'
@@ -67,7 +67,16 @@ module.exports = {
                 field: 'passport-before',
                 value: false
             }
+        }, {
+            target: '/you-need-a-different-service',
+            condition: function(req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false &&
+                req.session['hmpo-wizard-common']['16-or-older'] == false &&
+                req.session['hmpo-wizard-common']['rising-16'] == false;
+            }
         }]
+    },
+    '/you-need-a-different-service': {
     },
     '/lost-stolen': {
         fields: [
