@@ -302,17 +302,25 @@ module.exports = {
     },
     '/passport-special-delivery': {
         // next: '/summary-family-details',
-        next: '/who-for',
+        next: '/summary',
         fields: [
             'secure-return'
         ],
         forks: [{
-                target: '/relationship-applicant',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['16-or-older'] == false;
-                }
+            target: '/who-for',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == true &&
+                req.session['hmpo-wizard-common']['old-blue'] == false &&
+                req.session['hmpo-wizard-common']['16-or-older'] == true;
             }
-        ]
+        }, {
+            target: '/relationship-applicant',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == true &&
+                req.session['hmpo-wizard-common']['old-blue'] == false &&
+                req.session['hmpo-wizard-common']['16-or-older'] == false;
+            }
+        }]
     },
     '/who-for': {
         fields: [

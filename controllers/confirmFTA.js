@@ -93,7 +93,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     };
 
     // Logic to remove fields from stack
-    if (values['application-for-someone-else'] == false) { // NOT third-party application
+    if (!values['application-for-someone-else']) { // NOT third-party application
         console.log('DELETE third-party fields')
         response.sections.pop({
             fields: thirdPartyFields
