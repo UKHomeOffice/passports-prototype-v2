@@ -24,6 +24,12 @@ module.exports = {
                 field: 'change-name',
                 value: true
             }
+        }, {
+            target: '/change-of-name-12-15s',
+            condition: function(req, res) {
+                return req.session['hmpo-wizard-common']['change-name'] == true &&
+                req.session['hmpo-wizard-common']['16-or-older'] == false;
+            }
         }]
     },
     '/change-of-name': {
@@ -33,10 +39,10 @@ module.exports = {
         next: '/previous-names'
     },
     '/change-of-name-12-15s': {
-        fields: [
-            'change-of-name-reason'
-        ],
-        next: '/previous-names'
+        // fields: [
+        //     'change-of-name-reason'
+        // ],
+        // next: '/previous-names'
     },
     '/previous-names': {
         fields: [
