@@ -1,12 +1,14 @@
 {{< layout}}
 
-
+{{$back}}
+{{/back}}
 {{$main-content}}
   <link rel="stylesheet" href="{{assetPath}}/stylesheets/app-photo.css">
 
   <div class="column-full" style="text-align:center">
       <img src="../../public/images/progress.gif" style="width:50px" class="animated-progress"/>
-      <h3>Checking your details</h3>
+      <h3>We’re checking your details</h3>
+      <p>Please don’t refresh this page</p>
       <script>setTimeout(function(){window.location.href='csig-identity-confirmed'}, 2000);</script>
   </div>
 {{/main-content}}
