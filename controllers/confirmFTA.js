@@ -206,10 +206,6 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         {
             title: 'Your photo',
             custom: '<div class="photo"><img src="../../public/images/thumbnail.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150"></div>'
-        }, {
-            step: this.getEditStep('recognisable'),
-            title: 'Your appearance',
-            value: 'You can be recognised as the same person'
         }
     );
 
