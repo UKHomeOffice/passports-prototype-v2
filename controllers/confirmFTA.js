@@ -76,12 +76,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
 
     thirdPartyFields.push({
         step: this.getEditStep('third-party-first-name'),
-        title: 'First and middle names',
-        value: values['third-party-first-name']
-    }, {
-        step: this.getEditStep('third-party-last-name'),
-        title: 'Last name',
-        value: values['third-party-last-name']
+        title: 'Name',
+        value: join(values, ['third-party-first-name', 'third-party-last-name'])
     });
 
     if (values['why-cant-apply']) {  // If reason why they can't apply is NOT empty
