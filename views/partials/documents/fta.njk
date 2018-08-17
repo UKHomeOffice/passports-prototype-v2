@@ -54,10 +54,10 @@
             <li>{{item}}</li>
         {% endfor %}
     </ul>
+    <hr>
 {% else %}
     {% include "views/partials/documents/change-of-name-prototype.njk" %}
 {% endif %}
-
 
 {# Parents' and or Grandparents' documents #}
 <!-- OLC PDF 14 -->
@@ -123,6 +123,8 @@
         <li>father's marriage or civil partnership certificate to your mother or parent 1</li>
     </ul>
 
+    <hr>
+
     <h2 class="govuk-heading-l">Grandparents' documents</h2>
     <h3 class="govuk-heading-m">Send all of the following for both maternal grandparents:</h3>
     <ul class="list list-bullet">
@@ -136,7 +138,7 @@
     </ul>
 
 {% endif %}
-
+    <hr>
     <h2 class="govuk-heading-l">Additional documents</h2>
     <h3 class="govuk-heading-m">You need to send additional documents to:</h3>
     <ul class="list list-bullet">
