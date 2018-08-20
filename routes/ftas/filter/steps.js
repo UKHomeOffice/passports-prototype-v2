@@ -160,27 +160,39 @@ module.exports = {
         fields: [
             'dual-nationality'
         ],
-        next: '/summary-check',
-        nextAlt: '../overseas',
-        forks: [{
-            target: '/summary-check',
-            condition: function (req, res) {
-                return req.sessionModel.get('application-for-someone-else') == false ||
-                req.sessionModel.get('rising-16') == true;
-            }
-        }],
+        next: '/summary',
+        nextAlt: '../overseas'
     },
+    // '/relationship-applicant': {
+    //     fields: [
+    //         'relationship-applicant',
+    //         'other-why-apply'
+    //     ],
+    //     backLink: './dual-national',
+    //     next: '/third-party-name'
+    // },
+    // '/third-party-name': {
+    //     fields: [
+    //         'third-party-first-name',
+    //         'third-party-last-name'
+    //     ],
+    //     backLink: './relationship-applicant',
+    //     next: '/parental-responsibility',
+    //     forks: [{
+    //         target: '/summary',
+    //         condition: function (req, res) {
+    //             return req.session['hmpo-wizard-common']['16-or-older'] == true;
+    //         }
+    //     }],
+    // },
     // '/parental-responsibility': {
     //     fields: [
     //         'parental-responsibility'
     //     ],
     //     backLink: './relationship-applicant',
-    //     next: '/summary-check'
+    //     next: '/summary'
     // },
-    '/summary-check': {
-      controller: require('../../../controllers/summary-check'),
-    },
     '/summary': {
-        next: 'intro'
+        next: '/../intro'
     }
 };
