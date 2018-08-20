@@ -309,16 +309,12 @@ module.exports = {
         forks: [{
             target: '/who-for',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == true &&
-                req.session['hmpo-wizard-common']['old-blue'] == false &&
-                req.session['hmpo-wizard-common']['16-or-older'] == true;
+                return req.session['hmpo-wizard-common']['16-or-older'] == true;
             }
         }, {
             target: '/relationship-applicant',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == true &&
-                req.session['hmpo-wizard-common']['old-blue'] == false &&
-                req.session['hmpo-wizard-common']['16-or-older'] == false;
+                return req.session['hmpo-wizard-common']['16-or-older'] == false;
             }
         }]
     },
