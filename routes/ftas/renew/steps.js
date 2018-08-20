@@ -24,6 +24,13 @@ module.exports = {
                 field: 'change-name',
                 value: true
             }
+        }, {
+            target: '/you-need-a-different-service',
+            condition: function(req, res) {
+                return req.session['hmpo-wizard-common']['change-name'] == true &&
+                req.session['hmpo-wizard-common']['16-or-older'] == false &&
+                req.session['hmpo-wizard-common']['rising-16'] == false;
+            }
         }]
     },
     '/change-of-name': {
@@ -32,11 +39,7 @@ module.exports = {
         ],
         next: '/previous-names'
     },
-    '/change-of-name-12-15s': {
-        fields: [
-            'change-of-name-reason'
-        ],
-        next: '/previous-names'
+    '/you-need-a-different-service': {
     },
     '/previous-names': {
         fields: [
@@ -300,7 +303,47 @@ module.exports = {
     '/passport-special-delivery': {
         // next: '/summary-family-details',
         next: '/summary',
-        fields: ['secure-return']
+        fields: [
+            'secure-return'
+        ],
+        forks: [{
+            target: '/who-for',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['16-or-older'] == true;
+            }
+        }, {
+            target: '/relationship-applicant',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['16-or-older'] == false;
+            }
+        }]
+    },
+    '/who-for': {
+        fields: [
+            'application-for-someone-else'
+        ],
+        next: '/summary',
+        forks: [{
+            target: '/relationship-applicant',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
+            }
+        }]
+    },
+    '/relationship-applicant': {
+        fields: [
+            'relationship-applicant',
+            'relationship-other'
+        ],
+        next: '/third-party-name'
+    },
+    '/third-party-name': {
+        fields: [
+            'third-party-first-name',
+            'third-party-last-name',
+            'why-cant-apply'
+        ],
+        next: '/summary'
     },
     // '/summary-family-details': {
     //     controller: require('../../../controllers/confirm-family-details'),

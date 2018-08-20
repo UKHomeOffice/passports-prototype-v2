@@ -1,9 +1,23 @@
 {{< layout}}
 
-{{$pageTitle}}Applying for your first UK passport{{/pageTitle}}
+{{$pageTitle}}
+  {{#nunjucks}}
+    {% if not values['passport-before'] or (values['passport-before'] and values['old-blue']) %}
+      Apply for a first UK passport
+    {% elif values['passport-before'] %}
+      Renew a UK passport
+    {% endif %}
+  {{/nunjucks}}
+{{/pageTitle}}
 
 {{$header}}
-<h1>Apply for a first UK passport</h1>
+  {{#nunjucks}}
+    {% if not values['passport-before'] or (values['passport-before'] and values['old-blue']) %}
+      <h1>Apply for a first UK passport</h1>
+    {% elif values['passport-before'] %}
+      <h1>Renew a UK passport</h1>
+    {% endif %}
+  {{/nunjucks}}
 {{/header}}
 
 {{$content}}
@@ -12,40 +26,58 @@
 {{$form}}
 
 {{#nunjucks}}
-  {% if values['application-for-someone-else-why'] == 'adult-supported' %}
-    <p>You're helping someone to apply online for their first adult passport. If this is not correct, <a href="./">start again</a>.</p>
-
-    <div class="panel-important">
-        <p>The applicant must agree to the terms and conditions. They need to be with you when you apply.</p>
-    </div>
-
-<p>You need to have <a href="../../guidance/british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
-
-  {% elseif values['application-for-someone-else-why'] == 'adult-no-capacity' %}
-    <p>You're applying for a first adult passport for someone who doesn't have mental or physical capacity. If this is not correct, <a href="./">start again</a>.</p>
-
-    <div class="panel-important">
-        <p>You'll need to send evidence and agree to the terms and conditions on behalf of the applicant.</p>
-    </div>
-
-<p>You need to have <a href="../../guidance/british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
-  {% elseif values['old-blue'] %}
-    <p>Based on your answers, you have an old passport that expired some time ago. If this is incorrect, <a href="./filter">start again</a>.</p>
+  {% if values['passport-before'] and values['old-blue'] %} {# Hidden FTA #}
+    <p>Based on your answers, you have an old passport that expired some time ago. If this is incorrect, <a href="./">start again</a>.</p>
 
     <p>You can't renew this type of passport. You need to apply for a first UK passport and you may need to have a <a href="../../guidance/identity-interviews" target="_blank">passport interview</a>.</p>
 
-  {% elseif not values['old-blue'] %}
-    <p>Based on your answers, you're applying for a first UK passport. If this is incorrect, <a href="./filter">start again</a>.</p>
+    <p>It should take around 6 weeks to get a new passport.</p>
+
+  {% elif values['passport-before'] and values['16-or-older'] and values['passport-damaged'] == 'No' %} {# Renew adult #}
+    <p>Based on your answers, you're renewing an adult UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+
+  {% elif values['passport-before'] and not values['16-or-older'] and values['passport-damaged'] == 'No' %} {# Renew 12–15s #}
+    <p>Based on your answers, you're renewing a child (12–15s) UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+
+  {% elif values['passport-before'] and values['16-or-older'] and values['passport-damaged'] == 'Yes' %} {# Damaged adult #}
+    <p>Based on your answers, you're renewing a damaged UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+
+  {# {% elif DPS %}
+    <p>Based on your answers, you're applying for a UK passport urgently. If this is incorrect, <a href="./">start again</a>.</p> #}
+
+  {% elif not values['passport-before'] %} {# FTA #}
+    <p>Based on your answers, you're applying for a first UK passport. If this is incorrect, <a href="./">start again</a>.</p>
 
     <p>You need to have <a href="../../guidance/british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
+
+    <p>It should take around 6 weeks to get a new passport.</p>
+
+    {# {% if values['application-for-someone-else-why'] == 'adult-supported' %}
+      <p>You're helping someone to apply online for their first adult passport. If this is not correct, <a href="./">start again</a>.</p>
+
+      <div class="panel-important">
+          <p>The applicant must agree to the terms and conditions. They need to be with you when you apply.</p>
+      </div>
+
+      <p>You need to have <a href="../../guidance/british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
+
+      <p>It should take around 6 weeks to get a new passport.</p>
+
+    {% elif values['application-for-someone-else-why'] == 'adult-no-capacity' %}
+      <p>You're applying for a first adult passport for someone who doesn't have mental or physical capacity. If this is not correct, <a href="./">start again</a>.</p>
+
+      <div class="panel-important">
+          <p>You'll need to send evidence and agree to the terms and conditions on behalf of the applicant.</p>
+      </div>
+
+      <p>You need to have <a href="../../guidance/british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
+
+      <p>It should take around 6 weeks to get a new passport.</p> #}
+
   {% endif %}
 {{/nunjucks}}
 
-<p>It should take around 6 weeks to get a new passport.</p>
-
-<a href="/ftas/intro" class="button">Continue</a>
-<br>
-
+{{#input-submit}}{{/input-submit}}
 
 {{/form}}
 {{/ hmpo-partials-form}}

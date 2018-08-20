@@ -1334,10 +1334,79 @@ module.exports = {
             }
         ]
     },
+    'application-for-someone-else': {
+        legend: {
+            value: 'Who is the new passport for?',
+            className: 'visuallyhidden'
+        },
+        options: [{
+                value: false,
+                label: 'Me'
+            },
+            {
+                value: true,
+                label: 'Someone else',
+                toggle: 'someone-else'
+            },
+        ],
+        formatter: [
+            'boolean'
+        ],
+        validate: [
+            'required'
+        ],
+        className: 'inline'
+    },
+    'relationship-applicant': {
+        legend: {
+            value: 'What is your relationship to the applicant?',
+            className: 'visuallyhidden'
+        },
+        options: [{
+                value: 'Mother',
+                label: 'Mother'
+            },
+            {
+                value: 'Father',
+                label: 'Father'
+            },
+            {
+                value: 'Social Worker',
+                label: 'Social Worker'
+            },
+            {
+                value: 'Other',
+                label: 'Other',
+                toggle: "relationship-other"
+            }
+        ],
+        validate: [
+            'required'
+        ]
+    },
+    'relationship-other': {
+        labelClassName: 'visuallyhidden',
+    },
+    'third-party-first-name': {
+        labelClassName: 'form-label-bold',
+        validate: [
+            'required'
+        ]
+    },
+    'third-party-last-name': {
+        labelClassName: 'form-label-bold',
+        validate: [
+            'required'
+        ]
+    },
+    'why-cant-apply': {
+        labelClassName: 'visuallyhidden',
+        className: 'textarea',
+    },
     'declaration': {
         formatter: 'boolean',
         validate: [
             'required'
         ]
-    },
+    }
 };

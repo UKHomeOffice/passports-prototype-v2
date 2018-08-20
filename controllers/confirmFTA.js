@@ -51,6 +51,56 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     });
 
 
+    // Third-party
+    var thirdPartyFields = [];
+
+    response.sections.push({
+        className: 'third-party-details',
+        title: 'Your details',
+        fields: thirdPartyFields
+    });
+
+    if (values['relationship-applicant'] == 'Other') {
+        thirdPartyFields.push({
+            step: this.getEditStep('relationship-applicant'),
+            title: 'Relationship',
+            value: values['relationship-other']
+        });
+    } else {
+        thirdPartyFields.push({
+            step: this.getEditStep('relationship-applicant'),
+            title: 'Relationship',
+            value: values['relationship-applicant']
+        })
+    };
+
+    thirdPartyFields.push({
+        step: this.getEditStep('third-party-first-name'),
+        title: 'Name',
+        value: join(values, ['third-party-first-name', 'third-party-last-name'])
+    });
+
+    // When reason why they can't apply appears
+    if (values['16-or-older'] == true ||
+        (values['16-or-older'] == false && (values['relationship-applicant'] == 'Social Worker' || values['relationship-applicant'] == 'Other'))
+    ) {
+        thirdPartyFields.push({
+            step: this.getEditStep('why-cant-apply'),
+            title: 'Why they can\'t apply',
+            value: values['why-cant-apply']
+        });
+    };
+
+    // Logic to remove fields from stack
+    // NOT third-party application
+    if (values['application-for-someone-else'] == false) {
+        console.log('DELETE third-party fields')
+        response.sections.pop({
+            fields: thirdPartyFields
+        });
+    }
+
+
     // Old passport
     var oldPassportFields = [];
 
@@ -514,6 +564,26 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             step: this.getEditStep('parent2-parent2-additional-information'),
             title: 'Additional information',
             value: values['parent2-parent2-additional-information']
+        });
+    }
+
+
+
+    // Logic to remove fields from stack
+    // Adult Renewal
+    if (values['passport-before'] == true &&
+        values['old-blue'] == false &&
+        values['16-or-older'] == true
+    ) {
+        console.log('DELETE parents fields')
+        response.sections.pop({
+            fields: parentsFields
+        });
+        response.sections.pop({
+            fields: parent1Fields
+        });
+        response.sections.pop({
+            fields: parent2Fields
         });
     }
 
