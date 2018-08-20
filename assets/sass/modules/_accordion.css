@@ -11,6 +11,11 @@
   cursor: pointer;
 }
 
+
+.accordion.with-js {
+  margin-bottom: 40px;
+}
+
 .accordion .accordion-section[aria-expanded="false"] .accordion-section-body {
   display: none;
 }
