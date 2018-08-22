@@ -16,7 +16,7 @@
     {% if not values['passport-before'] or (values['passport-before'] and values['old-blue']) %}
       <h1>Apply for a first UK passport</h1>
     {% elif values['passport-before'] %}
-      <h1>Renew a UK passport</h1>
+      <h1>Renew UK passport</h1>
     {% endif %}
   {{/nunjucks}}
 {{/header}}
@@ -35,13 +35,22 @@
     <p>It should take around 6 weeks to get a new passport.</p>
 
   {% elif values['passport-before'] and values['16-or-older'] and values['passport-damaged'] == 'No' %} {# Renew adult #}
-    <p>Based on your answers, you're renewing an adult UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+    <p>Based on your answers, you're renewing a UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+    <p>If your face has changed because of an accident or illness such as a stroke, you need to apply a different way. This doesn't include the normal signs of ageing.<p>
+    <p>It should take around 3 weeks to get a new passport. Use a different service if you need to get a passport urgently.<p>
 
   {% elif values['passport-before'] and not values['16-or-older'] and values['passport-damaged'] == 'No' %} {# Renew 12–15s #}
-    <p>Based on your answers, you're renewing a child (12–15s) UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+    <p>Based on your answers, you're renewing a UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+    <p>Someone with parental responsibility for the child must apply for the passport.<p>
+    <p>If your name has changed you need to apply a different way.<p>
+    <p>If your face has changed you need to apply a different way.<p>
+    <p>It should take around 3 weeks to get a new passport. Use a different service if you need to get a passport urgently.<p>
+
 
   {% elif values['passport-before'] and values['16-or-older'] and values['passport-damaged'] == 'Yes' %} {# Damaged adult #}
-    <p>Based on your answers, you're renewing a damaged UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+    <p>Based on your answers, you're replacing a damaged UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+    <p>If your face has changed because of an accident or illness such as a stroke, you need to apply a different way. This doesn't include the normal signs of ageing.<p>
+    <p>It should take around 3 weeks to get a new passport. Use a different service if you need to get a passport urgently.<p>
 
   {# {% elif DPS %}
     <p>Based on your answers, you're applying for a UK passport urgently. If this is incorrect, <a href="./">start again</a>.</p> #}
