@@ -42,17 +42,9 @@
     {{< hmpo-partials-form}}
         {{$form}}
             {{#nunjucks}}
-                {% if values['routeFromCsig'] === true %}
-                    <div class="form-group">
-                        {# <input type="button" value="Continue" class="button" onclick="javascript:history.back()"> #}
-                        <input type="submit" value="Continue" class="button"> {# FIXME: TEMP FIX. Need to fix properly. #}
-                    </div>
-
-                {% else %}
                     <div class="form-group">
                         <input type="submit" value="Continue" class="button">
                     </div>
-                {% endif %}
             {{/nunjucks}}
         {{/form}}
     {{/ hmpo-partials-form}}

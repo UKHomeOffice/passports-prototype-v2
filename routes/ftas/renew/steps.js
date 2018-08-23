@@ -26,10 +26,10 @@ module.exports = {
             }
         }, {
             target: '/you-need-a-different-service',
-            condition: function(req, res) {
+            condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['change-name'] == true &&
-                req.session['hmpo-wizard-common']['16-or-older'] == false &&
-                req.session['hmpo-wizard-common']['rising-16'] == false;
+                    req.session['hmpo-wizard-common']['16-or-older'] == false &&
+                    req.session['hmpo-wizard-common']['rising-16'] == false;
             }
         }]
     },
@@ -39,8 +39,7 @@ module.exports = {
         ],
         next: '/previous-names'
     },
-    '/you-need-a-different-service': {
-    },
+    '/you-need-a-different-service': {},
     '/previous-names': {
         fields: [
             'previous-name',
@@ -66,10 +65,10 @@ module.exports = {
         nextAlt: './home-address-overseas',
         forks: [{
             target: '/home-address',
-            condition: function(req, res) {
+            condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == true &&
-                req.session['hmpo-wizard-common']['old-blue'] == false &&
-                req.session['hmpo-wizard-common']['16-or-older'] == true;
+                    req.session['hmpo-wizard-common']['old-blue'] == false &&
+                    req.session['hmpo-wizard-common']['16-or-older'] == true;
             }
         }, {
             target: '/naturalisation-registration-details',
@@ -145,10 +144,9 @@ module.exports = {
             target: '/home-address',
             condition: function (req, res) { // If they are Naturalisated/Registered OR Born Before 01/01/1983 OR Passport issued Before 01/01/1994 (Old blue) Hidden FTA
                 return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == true ||
-                req.session['hmpo-wizard-common']['born-before-1983'] == true ||
-                req.session['hmpo-wizard-common']['old-blue'] == true ||
-                req.session['hmpo-wizard-common']['passport-before'] == true;
-                ;
+                    req.session['hmpo-wizard-common']['born-before-1983'] == true ||
+                    req.session['hmpo-wizard-common']['old-blue'] == true ||
+                    req.session['hmpo-wizard-common']['passport-before'] == true;;
             }
         }, {
             target: '/home-address',
@@ -353,14 +351,27 @@ module.exports = {
     '/summary': {
         controller: require('../../../controllers/confirmFTA'),
         template: 'confirm',
-        next: '/documents-required'
+        next: '/documents-required',
+        forks: [{
+            condition: function (req, res) {
+                if (req.session['hmpo-wizard-common']['routeFromCsig'] == true) {
+                    req.session['hmpo-wizard-common']['routeFromCsig'] = false
+                }
+            }
+        }]
     },
     '/documents-required': {
         controller: require('../../../controllers/docs-check-required')
     },
     '/docs-fta': {
         backLink: 'summary',
-        next: '/declaration'
+        next: '/declaration',
+        forks: [{
+            target: '../../../csig/user/need-csig',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['routeFromCsig'] == true;
+            }
+        }]
     },
     '/docs-renew': {
         backLink: 'summary',
