@@ -14,22 +14,22 @@ _.extend(Form.prototype, {
 
     getValues: function (req, res, callback) {
         Base.prototype.getValues.call(this, req, res, function (err, values) {
-          console.log('GET', values);
-          var model = new Model(values);
-          callback(err, model.toJSON());
+            console.log('GET', values);
+            var model = new Model(values);
+            callback(err, model.toJSON());
         });
     },
 
     saveValues: function (req, res, callback) {
         Base.prototype.saveValues.call(this, req, res, function (err) {
-          console.log('\n\n**************************\n', 'SESSION', req.session, '\n**************************\n');
-          console.log('SAVE', req.form.values);
-          console.log('VALUES', req.sessionModel.toJSON());
-          callback(err);
+            console.log('\n\n**************************\n', 'SESSION', req.session, '\n**************************\n');
+            console.log('SAVE', req.form.values);
+            console.log('VALUES', req.sessionModel.toJSON());
+            callback(err);
         });
     },
 
-    locals: function (req/*, res*/) {
+    locals: function (req /*, res*/ ) {
         return _.extend(Base.prototype.locals.apply(this, arguments), {
             urlSuffix: req.params && req.params.action ? '/' + req.params.action : '',
             test: 'TTTTTTT'
@@ -37,7 +37,11 @@ _.extend(Form.prototype, {
     },
     getNextStep: function (req) {
         var next = Base.prototype.getNextStep.apply(this, arguments);
-        if (req.params.action === 'edit' && !this.options.continueOnEdit) {
+
+        // Change delivery options from docs-fta
+        if (req.get('referer') === re.get('origin') + '/fta/renew/passport-special-delivery/edit' && !req.get('referer') === re.get('origin') + '/fta/renew/summary') {
+            next = req.baseUrl === '/' ? '/docs-fta' : req.baseUrl + '/docs-fta';
+        } else if (req.params.action === 'edit' && !this.options.continueOnEdit) {
             next = req.baseUrl === '/' ? '/summary' : req.baseUrl + '/summary';
         } else if (req.params.action === 'edit') {
             next += '/edit';
