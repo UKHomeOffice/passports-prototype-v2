@@ -36,16 +36,26 @@
 <div class="prototype-box">
   <h2>Countersignatures</h2>
   <p>User journeys for countersignatures.</p>
+  <h3>Applicant &ndash; user initiated</h3>
   <ul>
-    <li><a href="./csig/user">Applicant flow (user)</a></li>
-    <li><a href="./csig/user?csigtype=examiner">Applicant flow (examiner)</a></li>
-    <li><a href="./csig/referee-5">Countersignature flow</a></li>
-    <li><a href="./csig/user-renominate">Renominate</a></li>
-    <li><a href="./csig/user-renominate-anytime">Renominate anytime</a></li>
-    <li><a href="./csig/track">What you need to do (new tracking page)</a></li>
+    <li><a href="./csig/user">Ask someone to confirm your identity</a></li>
+    <li><a href="./csig/user?status=send-docs">Identity details received</a></li>
+    <li><a href="./csig/user-renominate">Person not eligible</a></li>
+  </ul>
+  <h3>Applicant &ndash; examiner initiated</h3>
+  <ul>
+    <li><a href="./csig/user?csigtype=examiner">Ask someone to confirm your identity</a></li>
+    <li><a href="./csig/user?status=csig-completed&csigtype=examiner">Identity details received</a></li>
+    <li><a href="./csig/user-renominate?csigtype=examiner">Person not eligible</a></li>
+  </ul>
+  <h3>Person confirming identity</h3>
+  <ul>
+    <li><a href="./csig/referee-5">Confirm someone's identity</a></li>
+    <!-- <li><a href="./csig/user-renominate-anytime">Renominate anytime</a></li> -->
+    <!-- <li><a href="./csig/track">What you need to do (new tracking page)</a></li> -->
   </ul>
   <hr>
-  <h3>User-initiated emails</h3>
+  <h3>User initiated emails</h3>
   <ul>
     <li><a href="static/emails/csig-email-21.html">Confirmation email</a></li>
     <li><a href="static/emails/csig-email-12.html">HMPO contacts c-sig</a></li>
@@ -53,7 +63,7 @@
     <li><a href="static/emails/csig-email-20.html">Send your documents</a></li>
 
 
-  <h3>Examiner-triggered emails</h3>
+  <h3>Examiner initiated emails</h3>
   <ul>
     <li><a href="static/emails/csig-email-13.html">HMPO contacts applicant</a></li>
     <li><a href="static/emails/csig-email-12.html">HMPO contacts c-sig</a></li>
