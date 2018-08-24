@@ -182,12 +182,7 @@ module.exports = {
           { value: 'No', label: 'No' },
       ],
       validate: [
-        'required',
-        {
-          type:'equal',
-          arguments:['Yes'], /* if the arguments are NOT selected */
-          redirect:'/../referee/applicant-summary-name-address'
-        }
+        'required'
       ],
       className: 'inline'
   },

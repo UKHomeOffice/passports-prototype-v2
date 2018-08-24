@@ -1,20 +1,24 @@
 {{< layout-csig}}
 
 {{$pageTitle}}Track a passport application{{/pageTitle}}
-
+{{$back}}
+{{/back}}
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
       <header class="update-notice update-notice--grey">
         <h1>Waiting for your identity to <br>
           be confirmed</h1>
-        <p>Email sent to {{values.csig-email}}</p>
+        <span>Email sent to {{values.csig-email}}</span>
       </header>
       <h2>What happens next</h2>
       <p>If you don’t get an update in the next few days, remind the person doing this for you or  <a href="/csig/user-contact/" id="someone-else">ask someone else</a>. You can only ask one person at a time.</p>
-
-      <p>You can get your documents ready. Once you're identity is confirmed, we'll let you know where to send them.</p>
-
+      {{#nunjucks}}
+        {% if values['csig-type'] != 'examiner' %}
+          <p>You can get your documents ready. Once you're identity is confirmed, we'll let you know where to send them.</p>
+        {% endif %}
+      {{/nunjucks}}
+      <hr>
       <h2>Application history</h2>
       <article>
       <table>

@@ -11,10 +11,17 @@ Controller.prototype.get = function (req, res, next) {
 
 	req.sessionModel.set('pex', req.query.pex);
 	req.sessionModel.set('tracking-status', '');
+	req.sessionModel.set('csig-type', '');
 	if (req.query.status) {
 		req.sessionModel.set('tracking-status', req.query.status)
 	}
-	Base.prototype.get.call(this, req, res, next);
+
+	if (req.query.csigtype) {
+		req.sessionModel.set('csig-type', req.query.csigtype)
+	}
+	console.log(req.query)
+    Base.prototype.get.call(this, req, res, next);
+
 };
 
 module.exports = Controller

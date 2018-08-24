@@ -1,7 +1,8 @@
 {{< layout-csig}}
 
 {{$pageTitle}}Track a passport application{{/pageTitle}}
-
+{{$back}}
+{{/back}}
 {{$content}}
   {{< hmpo-partials-form}}
     {{$form}}
@@ -9,9 +10,14 @@
         <h1>Ask someone to confirm <br>
           {{> partials-applicant-yours-the-applicants}} identity</h1>
       </header>
-      <p>Before we can work on your application, you need to ask someone to confirm your identity.</p>
-
-      <p>We can't receive your documents until your identity is confirmed. We'll let you know when and where to send them.</p>
+      {{#nunjucks}}
+        {% if values['csig-type'] == 'examiner' %}
+          <p>We can't work on your application until your identity is confirmed.</p>
+        {% else %}
+        <p>Before we can work on your application, you need to ask someone to confirm your identity.</p>
+        <p>We can't receive your documents until your identity is confirmed. We'll let you know when and where to send them.</p>
+        {% endif %}
+      {{/nunjucks}}
 
       <input type="hidden" name="renominate" id="renominate" value="false">
       {{#input-submit}}{{/input-submit}}
