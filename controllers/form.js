@@ -37,10 +37,18 @@ _.extend(Form.prototype, {
     },
     getNextStep: function (req) {
         var next = Base.prototype.getNextStep.apply(this, arguments);
+        var host = req.protocol + "://" + req.get('host')
 
-        // Change delivery options from docs-fta
-        if (req.get('referer') === re.get('origin') + '/fta/renew/passport-special-delivery/edit' && !req.get('referer') === re.get('origin') + '/fta/renew/summary') {
-            next = req.baseUrl === '/' ? '/docs-fta' : req.baseUrl + '/docs-fta';
+        // Set edit delivery options next page
+        if (req.get('referer') === host + '/ftas/renew/summary') {
+            req.sessionModel.set('changeDeliveryNextPage', '/summary')
+        } else if (req.get('referer') === host + '/ftas/renew/docs-fta') {
+            req.sessionModel.set('changeDeliveryNextPage', '/docs-fta')
+        }
+
+        // Get edit next page
+        if (req.params.action === 'edit' && req.get('referer') === host + '/ftas/renew/passport-special-delivery/edit') {
+            next = req.baseUrl === '/' ? req.sessionModel.get('changeDeliveryNextPage') : req.baseUrl + req.sessionModel.get('changeDeliveryNextPage');
         } else if (req.params.action === 'edit' && !this.options.continueOnEdit) {
             next = req.baseUrl === '/' ? '/summary' : req.baseUrl + '/summary';
         } else if (req.params.action === 'edit') {
