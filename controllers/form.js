@@ -37,10 +37,7 @@ _.extend(Form.prototype, {
     },
     getNextStep: function (req) {
         var next = Base.prototype.getNextStep.apply(this, arguments);
-        var host = req.secure ? 'https://' + req.get('host') : req.protocol + '://' + req.get('host')
-
-        console.log(host)
-        console.log(req.secure)
+        var host = req.get('host') === 'hmpo-prototypes.herokuapp.com' ? 'https://' + req.get('host') : req.protocol + '://' + req.get('host')
 
         // Set edit delivery options next page
         if (req.get('referer') === host + '/ftas/renew/summary') {
