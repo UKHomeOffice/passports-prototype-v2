@@ -32,7 +32,15 @@
         {% if docsRequireMoreThanOneDocument === false %}
             {# Show nothing #}
         {% else %}
-            <p>Before we can send the new passport we need to see extra documents. We'll check and return them to you.</p>
+            <p>
+                Before we can send the new passport we need to see extra documents. We'll check and return them to you by
+                {% if values['secure-return'] %}
+                    secure delivery.
+                {% else %}
+                    standard post.
+                {% endif %}
+                <a href="/ftas/renew/passport-special-delivery/edit">Change delivery option</a>
+            </p>
         {% endif %}
 
         {% include "views/partials/documents/message-alert-default.njk" %}
