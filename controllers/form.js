@@ -39,6 +39,9 @@ _.extend(Form.prototype, {
         var next = Base.prototype.getNextStep.apply(this, arguments);
         var host = req.secure ? 'https://' + req.get('host') : req.protocol + '://' + req.get('host')
 
+        console.log(host)
+        console.log(req.secure)
+
         // Set edit delivery options next page
         if (req.get('referer') === host + '/ftas/renew/summary') {
             req.sessionModel.set('changeDeliveryNextPage', '/summary')
