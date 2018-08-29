@@ -351,7 +351,13 @@ module.exports = {
     '/summary': {
         controller: require('../../../controllers/confirmFTA'),
         template: 'confirm',
-        next: '/documents-required'
+        next: '/documents-required',
+        forks: [{ // For prototype purpose, set csig vars to false
+            condition: function (req, res) {
+                req.session['hmpo-wizard-common']['routeFromCsig'] = false
+                req.session['hmpo-wizard-common']['trackWaiting'] = false
+            }
+        }]
     },
     '/documents-required': {
         controller: require('../../../controllers/docs-check-required')
