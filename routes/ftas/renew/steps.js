@@ -352,11 +352,10 @@ module.exports = {
         controller: require('../../../controllers/confirmFTA'),
         template: 'confirm',
         next: '/documents-required',
-        forks: [{
+        forks: [{ // For prototype purpose, set csig vars to false
             condition: function (req, res) {
-                if (req.session['hmpo-wizard-common']['routeFromCsig'] == true) {
-                    req.session['hmpo-wizard-common']['routeFromCsig'] = false
-                }
+                req.session['hmpo-wizard-common']['routeFromCsig'] = false
+                req.session['hmpo-wizard-common']['trackWaiting'] = false
             }
         }]
     },
@@ -367,11 +366,18 @@ module.exports = {
         backLink: 'summary',
         next: '/declaration',
         forks: [{
-            target: '../../../csig/user/need-csig',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['routeFromCsig'] == true;
+                target: '../../../csig/user/need-csig',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['routeFromCsig'] == true;
+                }
+            },
+            {
+                target: '../../../csig/user-contact/tracking-waiting',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['trackWaiting'] == true;
+                }
             }
-        }]
+        ]
     },
     '/docs-renew': {
         backLink: 'summary',

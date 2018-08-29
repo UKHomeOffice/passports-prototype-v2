@@ -2,13 +2,7 @@ module.exports = {
   '/': {
     controller: require('../../../controllers/check-tracking-status'),
     fields: ['reference'],
-    next: '/track-email',
-    forks: [{
-      condition: function (req, res) {
-        // setter for Document page to redirect back to Csig
-        req.sessionModel.set('routeFromCsig', true)
-      }
-    }]
+    next: '/track-email'
   },
   '/track-email': {
     fields: ['age-day', 'age-month', 'age-year'],
@@ -31,7 +25,13 @@ module.exports = {
   },
   '/need-csig': {
     fields: ['renominate'],
-    next: '/../user-contact'
+    next: '/../user-contact',
+    forks: [{
+      condition: function (req, res) {
+        // setter for Document page to redirect back to Csig
+        req.sessionModel.set('routeFromCsig', true)
+      }
+    }]
   },
   '/need-csig-complete': {
     fields: ['renominate'],
