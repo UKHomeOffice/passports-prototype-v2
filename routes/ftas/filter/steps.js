@@ -7,7 +7,7 @@ module.exports = {
             'application-country'
         ],
         backLink: '../startpage',
-        next: '/dob',
+        next: '/first-uk',
         /* if Yes is selected */
         nextAlt: 'what-do-you-want-to-do-overseas',
         /* if they are from Germany/France */
@@ -16,30 +16,6 @@ module.exports = {
         nextAltAltAlt: 'what-do-you-want-to-do-overseas',
         /* if they are from Spain - first hidden as renewal */
         nextAltAltAltAlt: '../overseas-not-available' /* if they are from Syria - not available */
-    },
-    '/dob': {
-        controller: require('../../../controllers/check-dob'),
-        //controller: require('../../../controllers/go-overseas'),
-        backLink: './',
-        fields: [
-            'age-day',
-            'age-year',
-            'age-month'
-        ],
-        next: '/first-uk'
-        // forks: [
-        //     {
-        //     target: '/first-uk',
-        //     condition: function (req, res) {
-        //         return req.session['hmpo-wizard-common']['16-or-older'] == false;
-        //     }
-        // },
-        // {
-        //     target: '/rising-16',
-        //     condition: function (req, res) {
-        //         return req.session['hmpo-wizard-common']['rising-16'] == true;
-        //     }
-        // }]
     },
     // '/who-for-why': {
     //     fields: [
@@ -57,22 +33,15 @@ module.exports = {
     //     next: '/first-uk'
     // },
     '/first-uk': {
+        backLink: './',
         fields: [
             'passport-before'
         ],
         next: '/lost-stolen',
         forks: [{
-            target: '/naturalisation-registration-details',
-            condition: {
-                field: 'passport-before',
-                value: false
-            }
-        }, {
-            target: '/you-need-a-different-service',
+            target: '/dob',
             condition: function(req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false &&
-                req.session['hmpo-wizard-common']['16-or-older'] == false &&
-                req.session['hmpo-wizard-common']['rising-16'] == false;
+                return req.session['hmpo-wizard-common']['passport-before'] == false;
             }
         }]
     },
@@ -82,7 +51,7 @@ module.exports = {
         fields: [
             'lost-stolen'
         ],
-        next: '/passport-date-of-issue',
+        next: '/dob',
         forks: [{
             target: '/lost',
             condition: {
@@ -90,6 +59,43 @@ module.exports = {
                 value: true
             }
         }]
+    },
+    '/dob': {
+        controller: require('../../../controllers/check-dob'),
+        //controller: require('../../../controllers/go-overseas'),
+        fields: [
+            'age-day',
+            'age-year',
+            'age-month'
+        ],
+        next: '/passport-date-of-issue',
+        forks: [{
+            target: '/naturalisation-registration-details',
+            condition: function(req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false &&
+                req.session['hmpo-wizard-common']['16-or-older'] == true;
+            }
+        }, {
+            target: '/you-need-a-different-service',
+            condition: function(req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false &&
+                req.session['hmpo-wizard-common']['16-or-older'] == false &&
+                req.session['hmpo-wizard-common']['rising-16'] == false;
+            }
+        }]
+        // forks: [
+        //     {
+        //     target: '/first-uk',
+        //     condition: function (req, res) {
+        //         return req.session['hmpo-wizard-common']['16-or-older'] == false;
+        //     }
+        // },
+        // {
+        //     target: '/rising-16',
+        //     condition: function (req, res) {
+        //         return req.session['hmpo-wizard-common']['rising-16'] == true;
+        //     }
+        // }]
     },
     '/naturalisation-registration-details': {
         fields: [
