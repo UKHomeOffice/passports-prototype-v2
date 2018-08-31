@@ -43,12 +43,21 @@
     <p>If your face has changed because of an accident or illness such as a stroke, you need to apply a different way. This doesn't include the normal signs of ageing.<p>
     <p>It should take around 3 weeks to get a new passport. Use a different service if you need to get a passport urgently.<p>
 
+  {% elif values['passport-before'] and not values['16-or-older'] and values['rising-16'] and values['passport-damaged'] == 'No'%} {# Renew rising 16 #}
+    <p>Based on your answers, you're renewing a UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+    <p>If your face has changed because of an accident or illness such as a stroke, you need to apply a different way. This doesn't include the normal signs of ageing.<p>
+    <p>It should take around 3 weeks to get a new passport. Use a different service if you need to get a passport urgently.<p>
+
   {% elif values['passport-before'] and not values['16-or-older'] and values['passport-damaged'] == 'No' %} {# Renew 12–15s #}
     <p>Based on your answers, you're renewing a UK passport. If this is incorrect, <a href="./">start again</a>.</p>
     <p>If your name has changed you need to apply a different way.<p>
     <p>If your face has changed you need to apply a different way.<p>
     <p>It should take around 3 weeks to get a new passport. Use a different service if you need to get a passport urgently.<p>
 
+  {% elif values['passport-before'] and not values['16-or-older'] and values['rising-16'] and values['passport-damaged'] == 'Yes' %} {# Damaged rising 16 #}
+    <p>Based on your answers, you're replacing a damaged UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+    <p>If your face has changed because of an accident or illness such as a stroke, you need to apply a different way. This doesn't include the normal signs of ageing.<p>
+    <p>It should take around 3 weeks to get a new passport. Use a different service if you need to get a passport urgently.<p>
 
   {% elif values['passport-before'] and values['16-or-older'] and values['passport-damaged'] == 'Yes' %} {# Damaged adult #}
     <p>Based on your answers, you're replacing a damaged UK passport. If this is incorrect, <a href="./">start again</a>.</p>
