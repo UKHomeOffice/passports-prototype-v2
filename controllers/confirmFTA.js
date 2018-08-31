@@ -60,6 +60,14 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         fields: thirdPartyFields
     });
 
+    if (values['16-or-older'] == true && values['application-for-someone-else'] == true) {
+        thirdPartyFields.push({
+            step: this.getEditStep('application-for-someone-else'),
+            title: 'Who is the passport for',
+            value: 'Someone else'
+        });
+    }
+
     if (values['relationship-applicant'] == 'Other') {
         thirdPartyFields.push({
             step: this.getEditStep('relationship-applicant'),
