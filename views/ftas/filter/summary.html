@@ -5,8 +5,10 @@
   {{#nunjucks}}
     {% if not values['passport-before'] or (values['passport-before'] and values['old-blue']) %}
       Apply for a first UK passport
-    {% elif values['passport-before'] %}
+    {% elif values['passport-before'] and values['passport-damaged'] == 'No' %}
       Renew a UK passport
+    {% elif values['passport-before'] and values['passport-damaged'] == 'Yes' %}
+      Replace a UK passport
     {% endif %}
   {{/nunjucks}}
 {{/pageTitle}}
@@ -15,8 +17,10 @@
   {{#nunjucks}}
     {% if not values['passport-before'] or (values['passport-before'] and values['old-blue']) %}
       <h1>Apply for a first UK passport</h1>
-    {% elif values['passport-before'] %}
-      <h1>Renew UK passport</h1>
+    {% elif values['passport-before'] and values['passport-damaged'] == 'No' %}
+      <h1>Renew a UK passport</h1>
+    {% elif values['passport-before'] and values['passport-damaged'] == 'Yes' %}
+      <h1>Replace a UK passport</h1>
     {% endif %}
   {{/nunjucks}}
 {{/header}}
