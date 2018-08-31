@@ -1,0 +1,74 @@
+{{< layout-csig}}
+
+{{$pageTitle}}Track a passport application{{/pageTitle}}
+{{$back}}
+{{/back}}
+{{$content}}
+  {{< hmpo-partials-form}}
+    {{$form}}
+      <header class="update-notice update-notice--grey">
+        <h1>You need a countersignature</h1>
+      </header>
+      
+      <p>Your passport application is on hold.</p>
+      <p>You look very different in your old and new photos, so you need to get a countersignature.</p>
+      <div class="error-summary">
+          <div class="icon">
+              <object data="/public/images/tracking/icon-warning.svg" type="image/svg+xml">
+                  <img src="/public/images/tracking/icon-warning.png" alt="Photo rejected">
+              </object>
+          </div>
+          <p>We have posted a form to you. A professional who knows you well has to fill in and sign this form. Return the completed form to us.</p>
+      </div>
+      <p>Find out <a href="">who you can ask to countersign your passport application.</a></p>
+      <h2>What happens next</h2>
+      <p>Once we have the form, we may contact the person who signed it - this is to
+      confirm your identity. We'll carry on with your application once we've made this check.</p>
+      <p>We'll text and email you when your application is approved.</p>
+
+      <h2>Application history</h2>
+      <article>
+        <table>
+          <tbody>
+            <tr>
+              <td>Countersignature needed: on hold</td>
+              <td>10:05am on 23 July 2018</td>
+            </tr>
+            <tr>
+              <td>New photo received</td>
+              <td>10:05am on 23 July 2018</td>
+            </tr>
+            <tr>
+              <td>Photo rejected</td>
+              <td>10:05am on 23 July 2018</td>
+            </tr>
+            <tr>
+              <td>Old passport received</td>
+              <td>10:05am on 22 July 2018</td>
+            </tr>
+            <tr>
+              <td>Joined processing queue</td>
+              <td>10:05am on 21 July 2018</td>
+            </tr>
+            <tr>
+              <td>Application received</td>
+              <td>10:05am on 20 July 2018</td>
+            </tr>
+            <tr>
+              <td>Application submitted</td>
+              <td>10:05am on 19 July 2018</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+    {{/form}}
+  {{/ hmpo-partials-form}}
+  {{> partials-tracking-pages-links}} 
+{{/content}}
+{{$sidebar}}
+  {{> partials-csig-sidebar-no-docs}}
+{{/sidebar}}
+
+{{/ layout-csig}}
+

@@ -1,0 +1,51 @@
+{{< layout-csig}}
+
+{{$pageTitle}}Track a passport application{{/pageTitle}}
+{{$back}}
+{{/back}}
+{{$content}}
+  {{< hmpo-partials-form}}
+    {{$form}}
+      <header class="update-notice update-notice--grey">
+        <h1>Your application was approved</h1>
+      </header>
+      
+      <p>We've checked your passport application and everything is fine.</p>
+      <h2>What happens next</h2>
+      <p>We print your new passport then send it to you. This will happen in the next day.</p>
+      <p>We'll text and email you when we post it.</p>
+
+      <h2>Application history</h2>
+      <article>
+        <table>
+          <tbody>
+            <tr>
+              <td>Application approved</td>
+              <td>10:05am on 23 July 2018</td>
+            </tr>
+            <tr>
+              <td>Joined processing queue</td>
+              <td>10:05am on 21 July 2018</td>
+            </tr>
+            <tr>
+              <td>Application received</td>
+              <td>10:05am on 20 July 2018</td>
+            </tr>
+            <tr>
+              <td>Application submitted</td>
+              <td>10:05am on 19 July 2018</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+    {{/form}}
+  {{/ hmpo-partials-form}}
+  {{> partials-tracking-pages-links}} 
+{{/content}}
+{{$sidebar}}
+  {{> partials-csig-sidebar-no-docs}}
+{{/sidebar}}
+
+{{/ layout-csig}}
+

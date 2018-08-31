@@ -1,17 +1,14 @@
 module.exports = {
     '/': {
-        fields: ['pex-reference'],
-        next: '/track-a-application'
+        controller: require('../../controllers/check-tracking-status'),
+        fields: ['reference'],
+        next: '/track-email'
     },
-    '/track-a-application': {
-        next: '/track'
-    },
-    '/track': {
+    '/track-email': {
         fields: ['age-day', 'age-month', 'age-year'],
-        next: '/waiting-for-old-pass'
+        next: '/waiting-for-old',
+        backLink: './'
     },
-    '/waiting-for-old-pass': {
-        next: '/track'
-    }
-    
+    '/waiting-for-old': {}
+
 };
