@@ -6,9 +6,17 @@ module.exports = {
     },
     '/track-email': {
         fields: ['age-day', 'age-month', 'age-year'],
-        next: '/waiting-for-old',
+        next: '/application-recieved?status=submitted',
         backLink: './'
     },
-    '/waiting-for-old': {}
-
+    '/application-recieved': {
+        controller: require('../../controllers/check-tracking-status')
+    },
+    '/photo-rejected': {},
+    '/photo-rejected-no-time': {},
+    '/you-need-csig': {},
+    '/new-photo-arrived': {},
+    '/application-approved': {},
+    '/we-called-you': {},
+    '/rpd':{}
 };

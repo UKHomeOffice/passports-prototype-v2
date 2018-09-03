@@ -12,6 +12,4 @@ module.exports = {
     '/waiting-for-old': {},
     '/application-approved': {},
     '/recieved-documents': {}
-
-
 };

@@ -7,7 +7,7 @@
   {{< hmpo-partials-form}}
     {{$form}}
       <header class="update-notice update-notice--grey">
-        <h1>Waiting for your old passport</h1>
+        <h1>We're checking your application</h1>
       </header>
 
       <h2>What happens next</h2>
@@ -34,8 +34,6 @@
       <h2>What you need to bring</h2>
       <p>You must bring your old passport with you.</p>
 
-
-
       <details class="">
         <summary><span class="summary">If someone else is collecting your passport</span></summary>
         <div class="panel panel-border-narrow">
@@ -58,20 +56,44 @@
       <article>
         <table>
           <tbody>
-            <tr>
-              <td>Application received</td>
-              <td>10:05am on 19 July 2018</td>
-            </tr>
-            <tr>
-              <td>Application submitted</td>
-              <td>10:05am on 19 July 2018</td>
-            </tr>
+
+            {{#nunjucks}}
+                {% if values['tracking-status'] == 'received' %}
+                  <tr>
+                    <td>Application received</td>
+                    <td>10:05am on 19 July 2018</td>
+                  </tr>
+                  <tr>
+                    <td>Application submitted</td>
+                    <td>10:05am on 19 July 2018</td>
+                  </tr>
+                {% elif values['tracking-status'] == 'submitted' %}
+                  <tr>
+                    <td>Application submitted</td>
+                    <td>10:05am on 19 July 2018</td>
+                  </tr>
+                {% elif values['tracking-status'] == 'processing' %}
+                  <tr>
+                    <td>Joined processing queue</td>
+                    <td>10:05am on 19 July 2018</td>
+                  </tr>
+                  <tr>
+                    <td>Application received</td>
+                    <td>10:05am on 19 July 2018</td>
+                  </tr>
+                  <tr>
+                    <td>Application submitted</td>
+                    <td>10:05am on 19 July 2018</td>
+                  </tr>
+                {% endif %}
+            {{/nunjucks}}
           </tbody>
         </table>
       </article>
 
     {{/form}}
   {{/ hmpo-partials-form}}
+  {{> partials-tracking-tracking-dps-links}}
 {{/content}}
 {{$sidebar}}
   {{> partials-csig-sidebar-no-docs}}
