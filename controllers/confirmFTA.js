@@ -56,7 +56,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
 
     response.sections.push({
         className: 'third-party-details',
-        title: 'Your details',
+        title: 'Your relationship to the applicant',
         fields: thirdPartyFields
     });
 
@@ -86,7 +86,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     ) {
         thirdPartyFields.push({
             step: this.getEditStep('why-cant-apply'),
-            title: 'Why they can\'t apply',
+            title: 'Explanation',
             value: values['why-cant-apply']
         });
     };
