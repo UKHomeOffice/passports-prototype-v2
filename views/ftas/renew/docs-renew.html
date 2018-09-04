@@ -18,15 +18,6 @@
 {{$content}}
 
     {{#nunjucks}}
-        {% set docsRequireMoreThanOneDocument = false %}
-
-        {% if values['dual-nationality'] %}
-            {% set docsRequireMoreThanOneDocument = true %}
-        {% endif %}
-        {% if values['change-name'] %}
-            {% set docsRequireMoreThanOneDocument = true %}
-        {% endif %}
-
         <p>
             Before we can send the new passport we need to see extra documents. We'll check and return them to you by
             {% if values['secure-return'] %}
