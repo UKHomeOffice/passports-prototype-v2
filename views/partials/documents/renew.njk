@@ -4,6 +4,12 @@
     {% set documents = (documents.push('any passports from other countries that haven\'t expired'), documents) %}
 {% endif %}
 
+{% if not values['16-or-older'] %}
+    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' %}
+        {% set documents = (documents.push('any court orders (for example that describe parental responsbility or residency arrangements)'), documents) %}
+    {% endif %}
+{% endif %}
+
 {% if not values['change-name'] %}
     <h2 class="govuk-heading-l">Applicant's documents</h2>
     <h3 class="govuk-heading-m">Send the following:</h3>
