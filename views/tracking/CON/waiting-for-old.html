@@ -1,0 +1,58 @@
+{{< layout-csig}}
+
+{{$pageTitle}}Track a passport application{{/pageTitle}}
+{{$back}}
+{{/back}}
+{{$content}}
+  {{< hmpo-partials-form}}
+    {{$form}}
+      <header class="update-notice update-notice--grey">
+        <h1>Waiting for your old passport and extra documents</h1>
+      </header>
+
+      <h2>What you need to do</h2>
+      
+      <h3>Send us your old passport and extra documents</h3>
+      <a href="/">Check what you need to send</a>
+      <br><br>
+
+      <p>We can't complete your application without these documents. You don't need to include a covering letter.</p>
+
+      <p>London HM Passport Office<br>
+        Globe House<br>
+        89 Eccleston Square<br>
+        London<br>
+        SW1 1PN</p>
+
+      <details>
+        <summary><span class="summary">I've already sent it</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>Check again in 3 days. If we still haven’t received your old passport <a href="/help" target="_blank">Contact HM Passport Office <span class="visuallyhidden">(Opens in a new window)</span></a></p>
+        </div>
+      </details>
+      
+      <h2>Application history</h2>
+      <article>
+        <table>
+          <tbody>
+            <tr>
+              <td>Application received</td>
+              <td>10:05am on 19 July 2018</td>
+            </tr>
+            <tr>
+              <td>Application submitted</td>
+              <td>10:05am on 19 July 2018</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+    {{/form}}
+  {{/ hmpo-partials-form}}
+  {{> partials-tracking-tracking-con-links}} 
+{{/content}}
+{{$sidebar}}
+  {{> partials-csig-sidebar-no-docs}}
+{{/sidebar}}
+
+{{/ layout-csig}}

@@ -1,0 +1,50 @@
+{{< layout-csig}}
+
+{{$pageTitle}}Track a passport application{{/pageTitle}}
+{{$back}}
+{{/back}}
+{{$content}}
+  {{< hmpo-partials-form}}
+    {{$form}}
+      <header class="update-notice update-notice--grey">
+        <h1>We've received your documents</h1>
+      </header>
+
+      <h2>What happens next</h2>
+      <p>We'll check your application and the <a href="">documents we asked for</a>. If we need more information we'll contact you.</p>
+      <p>When we've finished checking your application we'll update this page.</p>
+
+      <h2>Application history</h2>
+      <article>
+        <table>
+          <tbody>
+            <tr>
+              <td>Documents received</td>
+              <td>10:05am on 23 July 2018</td>
+            </tr>
+            <tr>
+              <td>Joined processing queue</td>
+              <td>10:05am on 21 July 2018</td>
+            </tr>
+            <tr>
+              <td>Application received</td>
+              <td>10:05am on 20 July 2018</td>
+            </tr>
+            <tr>
+              <td>Application submitted</td>
+              <td>10:05am on 19 July 2018</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+    {{/form}}
+  {{/ hmpo-partials-form}}
+  {{> partials-tracking-tracking-con-links}} 
+{{/content}}
+{{$sidebar}}
+  {{> partials-csig-sidebar-no-docs}}
+{{/sidebar}}
+
+{{/ layout-csig}}
+
