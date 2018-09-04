@@ -112,6 +112,9 @@ app.use('/tracking', require('./routes/tracking'));
 //DPS Tracking
 app.use('/tracking-dps', require('./routes/tracking-dps'));
 
+//Change Of Name Tracking
+app.use('/tracking-con', require('./routes/tracking-con'));
+
 //Post Office Digital (POD) tracking
 app.use('/pod', require('./routes/pod'));
 
