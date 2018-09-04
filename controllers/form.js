@@ -39,11 +39,13 @@ _.extend(Form.prototype, {
         var next = Base.prototype.getNextStep.apply(this, arguments);
         var host = req.get('host') === 'hmpo-prototypes.herokuapp.com' ? 'https://' + req.get('host') : req.protocol + '://' + req.get('host')
 
-        // Set edit delivery options next page
+        // Set edit delivery options next page for fta and renew
         if (req.get('referer') === host + '/ftas/renew/summary') {
             req.sessionModel.set('changeDeliveryNextPage', '/summary')
         } else if (req.get('referer') === host + '/ftas/renew/docs-fta') {
             req.sessionModel.set('changeDeliveryNextPage', '/docs-fta')
+        } else if (req.get('referer') === host + '/ftas/renew/docs-renew') {
+            req.sessionModel.set('changeDeliveryNextPage', '/docs-renew')
         }
 
         // Get edit next page
