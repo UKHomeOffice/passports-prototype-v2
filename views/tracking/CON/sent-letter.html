@@ -7,19 +7,18 @@
   {{< hmpo-partials-form}}
     {{$form}}
       <header class="update-notice update-notice--grey">
-        <h1>We've received your documents</h1>
+        <h1>We've sent you a letter</h1>
       </header>
-
-      <h2>What happens next</h2>
-      <p>We'll check your application and the <a href="">documents we asked for</a>. If we need more information we'll contact you.</p>
-      <p>When we've finished checking your application we'll update this page.</p>
+      
+      <p>We sent you a letter on 30 August 2018 that has more details about the problem with your application.</p>
+      <p>Please wait for this letter to arrive before contacting us or sending any documents.</p>
 
       <h2>Application history</h2>
       <article>
         <table>
           <tbody>
             <tr>
-              <td>Documents received</td>
+              <td>We've sent you a letter</td>
               <td>10:05am on 23 July 2018</td>
             </tr>
             <tr>
@@ -40,13 +39,7 @@
 
     {{/form}}
   {{/ hmpo-partials-form}}
-  <br/><br/><br/><br/>
-      <p>Other statuses:</p>
-      <ul>
-          <li><a href="/tracking-con/waiting-for-old">Application received </a></li>
-          <li><a href="/tracking-con/recieved-documents">We've received your old passport </a></li>
-          <li><a href="/tracking-con/application-approved">Application approved </a></li>
-      </ul>
+  {{> partials-tracking-tracking-con-links}} 
 {{/content}}
 {{$sidebar}}
   {{> partials-csig-sidebar-no-docs}}

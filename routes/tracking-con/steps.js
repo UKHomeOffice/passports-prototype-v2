@@ -10,6 +10,12 @@ module.exports = {
         backLink: './'
     },
     '/waiting-for-old': {},
+    '/recieved-your-documents': {},
+    '/photo-rejected': {},
+    '/new-photo-arrived': {},
+    '/you-need-csig': {},
     '/application-approved': {},
-    '/recieved-documents': {}
+    '/your-passport-is-coming': {},
+    '/sent-letter': {},
+    '/rpd': {}
 };
