@@ -15,13 +15,6 @@
     {% endif %}
 {% endif %}
 
-{% if values['16-to-18'] %}
-    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' %}
-        {% set documents = (documents.push('if you have parental responsibility, also include confirmation of this in the letter confirming why you are making the application'), documents) %}
-        {% set documents = (documents.push('if you don\'t have parental responsibility, you also need to send a signed and dated letter from the person with parental responsibility giving permission for you to make the application'), documents) %}
-    {% endif %}
-{% endif %}
-
 {% if not values['change-name'] %}
     <h2 class="govuk-heading-l">Applicant's documents</h2>
     <h3 class="govuk-heading-m">Send the following:</h3>
@@ -30,6 +23,19 @@
             <li>{{item}}</li>
         {% endfor %}
     </ul>
+
+    {% if values['16-to-18'] %}
+        {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' %}
+            <h3 class="govuk-heading-m">If you have parental responsibility send the following:</h3>
+            <ul class="list list-bullet">
+                <li>confirmation of this in the letter confirming why you are making the application</li>
+            </ul>
+            <h3 class="govuk-heading-m">If you don't have parental responsibility send the following:</h3>
+            <ul class="list list-bullet">
+                <li>a signed and dated letter from the person with parental responsibility giving permission for you to make the application</li>
+            </ul>
+        {% endif %}
+    {% endif %}
 
     <hr>
 
