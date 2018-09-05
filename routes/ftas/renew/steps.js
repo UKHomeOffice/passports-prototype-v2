@@ -388,7 +388,20 @@ module.exports = {
     },
     '/docs-renew': {
         backLink: 'summary',
-        next: '/declaration'
+        next: '/declaration',
+        forks: [{
+                target: '../../../csig/user/need-csig',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['routeFromCsig'] == true;
+                }
+            },
+            {
+                target: '../../../csig/user-contact/tracking-waiting',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['trackWaiting'] == true;
+                }
+            }
+        ]
     },
     '/docs-fta-thirdparty': {
         backLink: 'summary',
