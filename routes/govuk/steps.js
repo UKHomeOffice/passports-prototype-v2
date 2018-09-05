@@ -8,8 +8,5 @@ module.exports = {
     '/who-can-do-this': {
     },
     '/terms': {
-    },
-    '/brexit-ready': {
-        
     }
 };
