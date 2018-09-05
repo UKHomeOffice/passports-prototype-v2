@@ -6,7 +6,19 @@
 
 {% if not values['16-or-older'] %}
     {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' %}
-        {% set documents = (documents.push('any court orders (for example that describe parental responsbility or residency arrangements)'), documents) %}
+        {% set documents = (documents.push('any court orders (for example that describe parental responsibility or residency arrangements)'), documents) %}
+    {% endif %}
+
+{% elif values['16-or-older'] or values['rising-16'] %}
+    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' %}
+        {% set documents = (documents.push('a signed and dated letter confirming why you\'re making this application on behalf of the applicant'), documents) %}
+    {% endif %}
+{% endif %}
+
+{% if values['16-to-18'] %}
+    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' %}
+        {% set documents = (documents.push('if you have parental responsibility, also include confirmation of this in the letter confirming why you are making the application'), documents) %}
+        {% set documents = (documents.push('if you don\'t have parental responsibility, you also need to send a signed and dated letter from the person with parental responsibility giving permission for you to make the application'), documents) %}
     {% endif %}
 {% endif %}
 
