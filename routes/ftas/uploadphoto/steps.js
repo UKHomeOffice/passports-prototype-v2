@@ -35,37 +35,49 @@ module.exports = {
         next: '/../renew',
         forks: [{
             target: '/../renew',
-            condition: function (req, res) { // If they have had UK passport before AND NOT a Hidden FTA
-                return req.session['hmpo-wizard-common']['passport-before'] == true
-                    && req.session['hmpo-wizard-common']['old-blue'] == false;
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
             }
         }, {
-            target: '/csig-required',
-            condition: function (req, res) { // If they are an FTA OR Hidden FTA
-                return req.session['hmpo-wizard-common']['passport-before'] == false
-                    || req.session['hmpo-wizard-common']['passport-before'] == true
-                    && req.session['hmpo-wizard-common']['old-blue'] == true;
+            target: '/../renew/name',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
             }
-        }, {
+        },
+        // {
+        //     target: '/../renew',
+        //     condition: function (req, res) { // If they have had UK passport before AND NOT a Hidden FTA
+        //         return req.session['hmpo-wizard-common']['passport-before'] == true
+        //             && req.session['hmpo-wizard-common']['old-blue'] == false;
+        //     }
+        // }, {
+        //     target: '/csig-required',
+        //     condition: function (req, res) { // If they are an FTA OR Hidden FTA
+        //         return req.session['hmpo-wizard-common']['passport-before'] == false
+        //             || req.session['hmpo-wizard-common']['passport-before'] == true
+        //             && req.session['hmpo-wizard-common']['old-blue'] == true;
+        //     }
+        // },
+        {
             target: '/../intro/choose-photo-method',
             condition: {
                 field: 'submit-photo',
                 value: 'No'
             }
         }]
-    },
-    '/csig-required': {
-        next: '/../renew',
-        forks: [{
-            target: '/../renew',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == true; // If they are a Hidden FTA
-            }
-        }, {
-            target: '/../renew/name',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they are a FTA
-            }
-        }]
-    },
+    }
+    // '/csig-required': {
+    //     next: '/../renew',
+    //     forks: [{
+    //         target: '/../renew',
+    //         condition: function (req, res) {
+    //             return req.session['hmpo-wizard-common']['passport-before'] == true; // If they are a Hidden FTA
+    //         }
+    //     }, {
+    //         target: '/../renew/name',
+    //         condition: function (req, res) {
+    //             return req.session['hmpo-wizard-common']['passport-before'] == false; // If they are a FTA
+    //         }
+    //     }]
+    // },
 };
