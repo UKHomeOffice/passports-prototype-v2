@@ -18,9 +18,9 @@
     {% if not values['passport-before'] or (values['passport-before'] and values['old-blue']) %}
       <h1>Apply for a first UK passport</h1>
     {% elif values['passport-before'] and values['passport-damaged'] == 'No' %}
-      <h1>Renew UK passport</h1>
+      <h1>Renew a UK passport</h1>
     {% elif values['passport-before'] and values['passport-damaged'] == 'Yes' %}
-      <h1>Replace UK passport</h1>
+      <h1>Replace a UK passport</h1>
     {% endif %}
   {{/nunjucks}}
 {{/header}}
@@ -41,7 +41,8 @@
     {% if not values['rising-16'] %}
       <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
     {% elif values['rising-16'] %}
-      <p>Rising 16 content.</p>
+      <p>As you turn 16 in the next 3 weeks, you'll get an adult passport. It should take around 3 weeks, but the new passport won't be issued before your 16th birthday.</p>
+      <p>To get a new passport before your 16th birthday, you'll need to apply for a child passport with <a href="https://www.gov.uk/get-a-passport-urgently">1 week Fast Track</a>.</p>
     {% endif %}
 
   {% elif values['passport-before'] and not values['16-or-older'] and values['passport-damaged'] == 'No' %} {# Renew 12–15s #}
@@ -54,7 +55,8 @@
     {% if not values['rising-16'] %}
       <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
     {% elif values['rising-16'] %}
-      <p>Rising 16 content.</p>
+      <p>As you turn 16 in the next 3 weeks, you'll get an adult passport. It should take around 3 weeks, but the new passport won't be issued before your 16th birthday.</p>
+      <p>To get a new passport before your 16th birthday, you'll need to apply for a child passport with <a href="https://www.gov.uk/get-a-passport-urgently">1 week Fast Track</a>.</p>
     {% endif %}
 
   {# {% elif DPS %}
