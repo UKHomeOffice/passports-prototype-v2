@@ -38,7 +38,11 @@
 
   {% elif values['passport-before'] and (values['16-or-older'] or values['rising-16']) and values['passport-damaged'] == 'No' %} {# Renew adult #}
     <p>Based on your answers, you're renewing a UK passport. If this is incorrect, <a href="./">start again</a>.</p>
-    <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
+    {% if not values['rising-16'] %}
+      <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
+    {% elif values['rising-16'] %}
+      <p>Rising 16 content.</p>
+    {% endif %}
 
   {% elif values['passport-before'] and not values['16-or-older'] and values['passport-damaged'] == 'No' %} {# Renew 12–15s #}
     <p>Based on your answers, you're renewing a UK passport. If this is incorrect, <a href="./">start again</a>.</p>
@@ -47,12 +51,25 @@
 
   {% elif values['passport-before'] and (values['16-or-older'] or values['rising-16']) and values['passport-damaged'] == 'Yes' %} {# Damaged adult #}
     <p>Based on your answers, you're replacing a damaged UK passport. If this is incorrect, <a href="./">start again</a>.</p>
-    <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
+    {% if not values['rising-16'] %}
+      <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
+    {% elif values['rising-16'] %}
+      <p>Rising 16 content.</p>
+    {% endif %}
 
   {# {% elif DPS %}
     <p>Based on your answers, you're renewing a UK passport. If this is incorrect, <a href="./">start again</a>.</p> #}
 
-  {% elif not values['passport-before'] %} {# FTA #}
+  {% elif not values['passport-before'] and (values['16-or-older'] or values['rising-16']) %} {# FTA #}
+    <p>Based on your answers, you're applying for a first UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+    <p>You need to have <a href="../../guidance/british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
+    {% if not values['rising-16'] %}
+      <p>It should take around 6 weeks to get a new passport.</p>
+    {% elif values['rising-16'] %}
+      <p>Rising 16 content.</p>
+    {% endif %}
+
+  {% elif not values['passport-before'] and not values['16-or-older'] %} {# FTC #}
     <p>Based on your answers, you're applying for a first UK passport. If this is incorrect, <a href="./">start again</a>.</p>
     <p>You need to have <a href="../../guidance/british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
     <p>It should take around 6 weeks to get a new passport.</p>
@@ -73,10 +90,6 @@
       <p>You need to have <a href="../../guidance/british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
       <p>It should take around 6 weeks to get a new passport.</p> #}
 
-  {% endif %}
-
-  {% if values['rising-16'] %} {# Rising 16 #}
-    <p>Rising 16 content.</p>
   {% endif %}
 {{/nunjucks}}
 
