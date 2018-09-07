@@ -32,7 +32,7 @@
         
         {% if not values['old-blue'] %} <!-- Passport before and its not old blue -->
           {% if values['document-list'] or values['application-for-someone-else'] or values['change-of-name-reason'] 
-              or (values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other'%}
+              or (values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other') %}
               
             <h2> Send us your documents </h2>
             <p><a href="./docs-renew?status=confirm-documents">Check what you need to send</a></p>
