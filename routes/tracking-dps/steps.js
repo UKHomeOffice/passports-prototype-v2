@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-        controller: require('../../controllers/check-tracking-status'),
+        controller: require('../../controllers/check-query-string'),
         fields: ['reference'],
         next: '/track-email'
     },
@@ -10,7 +10,7 @@ module.exports = {
         backLink: './'
     },
     '/application-recieved': {
-        controller: require('../../controllers/check-tracking-status')
+        controller: require('../../controllers/check-query-string')
     },
     '/photo-rejected': {},
     '/photo-rejected-no-time': {},

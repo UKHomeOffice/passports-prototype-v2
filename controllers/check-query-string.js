@@ -14,6 +14,7 @@ Controller.prototype.get = function (req, res, next) {
 	req.sessionModel.set('csig-type', '');
 	if (req.query.status) {
 		req.sessionModel.set('tracking-status', req.query.status)
+		req.sessionModel.set('status', req.query.status)
 	}
 
 	if (req.query.csigtype) {
