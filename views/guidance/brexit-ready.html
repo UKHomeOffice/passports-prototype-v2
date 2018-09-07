@@ -11,6 +11,9 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
     <style>
+        .dashed-line {
+          font-size: 16px;
+        }
         .dashed-line::before {
             content: "— ";
             margin-left: -25px;
@@ -42,7 +45,7 @@
         </div>
         {{> hmpo-partials-back}}
         <div class="grid-row">
-            <div class="column-two-thirds">
+            <div class="column-full">
                 <header>
 
                     <div class="column-two-full">
@@ -50,7 +53,7 @@
                             Passport rules for travel to Europe after Brexit
                         </h1>
                     </div>
-
+            </div>
                     <div class="column-two-thirds">
                         <p>Contents</p>
                         <ul class="list list-contents">
@@ -58,12 +61,11 @@
                             <li class="dashed-line"><a href="#data-visualisation">Check a passport for travel to Europe</a></li>
                             <li class="dashed-line"><a href="#data-visualisation">List of countries affected</a></li>
                             <li class="dashed-line"><a href="#data-visualisation">Applying for a new passport</a></li>
-
                         </ul>
                     </div>
 
                 </header>
-            </div>
+
         </div>
 
         <div class="grid-row">
@@ -81,6 +83,7 @@
                 </ol>
 
                 <p>The new rules will apply to passports issued by the UK, Gibraltar, Guernsey, the Isle of Man and Jersey.</p>
+
 
                 <h2>Check a passport for travel to Europe</h2>
 
