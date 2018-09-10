@@ -12,7 +12,7 @@
 {% elif values['16-or-older'] or values['rising-16'] %}
     {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' %}
         {% set documents = (documents.push('a signed and dated letter confirming why you\'re making this application on behalf of the applicant'), documents) %}
-        {% set documents = (documents.push('a signed and dated letter from a medical professional, for example a doctor or carer confirming why the applicant can\'t apply'), documents) %}
+        {% set documents = (documents.push('a signed and dated letter from a healthcare professional, for example a doctor or carer confirming why the applicant can\'t apply'), documents) %}
     {% endif %}
 {% endif %}
 
@@ -27,9 +27,8 @@
 
     <!-- 12-15s 3rd Party = Father -->
     {% if not values['16-or-older'] and values['relationship-applicant'] === 'Father' %}
-        <h3 class="govuk-heading-m">And 1 of the following:</h3>
+        <h3 class="govuk-heading-m">If you don't have parental responsibility, also send the following:</h3>
         <ul class="list list-bullet">
-            <li>full birth or adoption certificate</li>
             <li>a signed and dated letter from the mother (or other person with parental responsibility)
                 giving consent for the issue of the child's new passport</li>
         </ul>
