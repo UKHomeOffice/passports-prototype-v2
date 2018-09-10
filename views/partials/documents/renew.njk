@@ -12,7 +12,7 @@
 {% elif values['16-or-older'] or values['rising-16'] %}
     {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' %}
         {% set documents = (documents.push('a signed and dated letter confirming why you\'re making this application on behalf of the applicant'), documents) %}
-        {% set documents = (documents.push('evidence to confirm why the applicant can\'t apply, for example a signed and dated letter from a doctor or carer'), documents) %}
+        {% set documents = (documents.push('a signed and dated letter from a medical professional, for example a doctor or carer confirming why the applicant can\'t apply'), documents) %}
     {% endif %}
 {% endif %}
 
