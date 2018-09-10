@@ -37,21 +37,23 @@ _.extend(Form.prototype, {
     },
     getNextStep: function (req) {
         var next = Base.prototype.getNextStep.apply(this, arguments);
-        var host = req.get('host') === 'hmpo-prototypes.herokuapp.com' ? 'https://' + req.get('host') : req.protocol + '://' + req.get('host')
 
         // Set edit delivery options next page for fta and renew
-        if (req.get('referer') === host + '/ftas/renew/summary') {
-            req.sessionModel.set('changeDeliveryNextPage', '/summary')
-        } else if (req.get('referer') === host + '/ftas/renew/docs-fta') {
-            req.sessionModel.set('changeDeliveryNextPage', '/docs-fta')
-        } else if (req.get('referer') === host + '/ftas/renew/docs-renew') {
-            req.sessionModel.set('changeDeliveryNextPage', '/docs-renew')
-        }
+        // var host = req.get('host') === 'hmpo-prototypes.herokuapp.com' ? 'https://' + req.get('host') : req.protocol + '://' + req.get('host')
+        // if (req.get('referer') === host + '/ftas/renew/summary') {
+        //     req.sessionModel.set('changeDeliveryNextPage', '/summary')
+        // } else if (req.get('referer') === host + '/ftas/renew/docs-fta') {
+        //     req.sessionModel.set('changeDeliveryNextPage', '/docs-fta')
+        // } else if (req.get('referer') === host + '/ftas/renew/docs-renew') {
+        //     req.sessionModel.set('changeDeliveryNextPage', '/docs-renew')
+        // }
+
+        // if (req.params.action === 'edit' && req.get('referer') === host + '/ftas/renew/passport-special-delivery/edit') {
+        //     next = req.baseUrl === '/' ? req.sessionModel.get('changeDeliveryNextPage') : req.baseUrl + req.sessionModel.get('changeDeliveryNextPage');
+        // }
 
         // Get edit next page
-        if (req.params.action === 'edit' && req.get('referer') === host + '/ftas/renew/passport-special-delivery/edit') {
-            next = req.baseUrl === '/' ? req.sessionModel.get('changeDeliveryNextPage') : req.baseUrl + req.sessionModel.get('changeDeliveryNextPage');
-        } else if (req.params.action === 'edit' && !this.options.continueOnEdit) {
+        if (req.params.action === 'edit' && !this.options.continueOnEdit) {
             next = req.baseUrl === '/' ? '/summary' : req.baseUrl + '/summary';
         } else if (req.params.action === 'edit') {
             next += '/edit';
