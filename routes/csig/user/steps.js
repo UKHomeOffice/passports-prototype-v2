@@ -18,6 +18,11 @@ module.exports = {
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'csig-completed';
       }
+    }, {
+      target: '/application-submitted',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'application-submitted';
+      }
     }],
   },
   '/waiting-for-old-pass': {
@@ -44,6 +49,9 @@ module.exports = {
     next: '../csig/'
   },
   '/csig-completed': {
+    next: '../csig/'
+  },
+  '/application-submitted': {
     next: '../csig/'
   }
 };
