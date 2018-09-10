@@ -7,9 +7,8 @@
     <!-- Confirmation message -->
       <br>
       <div class="panel panel-border-wide alert-success">
-        <h2>Payment successful</h2>
-        <p>Your payment: £75.50 <br>
-          We've sent details to {{values.email}}<br><a href="">Download confirmation</a></p>
+        <h2>You've paid £75.50</h2>
+        <p>Details sent to {{values.email}}<br><a href="">Download confirmation</a></p>
       </div>
       <p>Application reference: <strong>PEX 319 825 680X</strong></p>
 
@@ -32,13 +31,14 @@
         
         {% if not values['old-blue'] %} <!-- Passport before and its not old blue -->
           {% if values['document-list'] or values['application-for-someone-else'] or values['change-of-name-reason'] 
-              or (values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other') %}
+              or (values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' 
+              or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other') %}
               
             <h2> Send us your documents </h2>
             <p><a href="./docs-renew?status=confirm-documents">Check what you need to send</a></p>
           {% else %}
             <h2> Send us your old passport </h2>
-            <p>Check if you need to send any<a href="./docs-renew?status=confirm-documents"> additional documents</a></p>
+            <p>Check if you need to send any<a href="./docs-renew?status=confirm-documents"> additional documents</a>.</p>
           {% endif %}
 
           <p>Use a strong envelope that is the right size for your documents. You can use standard post or special delivery.</p>
@@ -52,7 +52,7 @@
           </p>
 
           <h2>Track your application</h2>
-          <p>It should take around 3 weeks to get your new passport. Use your application reference <strong>PEX 319 825 680X</strong> to <a href="/csig/user">track your application</a>.</p>
+          <p>You'll need your application reference: PEX 319 825 680X <br><a href="/csig/user">https://www.passport.service.gov.uk/track</a></p>
 
           <a href="" class="button">Give feedback</a><br/><br/>
         {% endif %}
