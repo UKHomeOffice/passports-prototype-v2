@@ -7,11 +7,28 @@
   {{< hmpo-partials-form}}
     {{$form}}
       <header class="update-notice update-notice--grey">
-        <h1>Waiting for your old passport</h1>
+      {{#nunjucks}}
+        {% if values['document-list'] or values['application-for-someone-else'] or values['change-of-name-reason'] 
+            or (values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' 
+            or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other') %}
+            
+          <h1> Send us your documents </h1>
+        {% else %}
+          <h1> Send us your old passport </h1>
+        {% endif %}
+      {{/nunjucks}}
       </header>
       
       <h2>What you need to do</h2>
-      <h3>Send us your old passport </h3>
+      {{#nunjucks}}
+      {% if values['document-list'] or values['application-for-someone-else'] or values['change-of-name-reason'] 
+          or (values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' 
+          or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other') %}
+        <h3> Send us your documents </h3>
+      {% else %}
+        <h3> Send us your old passport </h3>
+      {% endif %}
+      {{/nunjucks}}
       <p>We can't complete your application without it. You don't need to include a covering letter.</p>
       
       <p>HM Passport Office<br>
@@ -51,7 +68,7 @@
   {{> partials-tracking-tracking-fta-links}} 
 {{/content}}
 {{$sidebar}}
-  {{> partials-csig-sidebar-no-docs}}
+  {{> partials-csig-sidebar}}
 {{/sidebar}}
 
 {{/ layout-csig}}
