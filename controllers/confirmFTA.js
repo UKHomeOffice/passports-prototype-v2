@@ -46,10 +46,13 @@ ConfirmForm.prototype.getValues = function (req, res, callback) {
 ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     var model = new CostModel();
     model.set(values);
+
+    // Set the cost in session so we can use it in front-end later
+    req.sessionModel.set('application-cost', currency(model.getCost()));
+
     var response = _.extend({}, values, {
         sections: []
     });
-
 
     // Third-party
     var thirdPartyFields = [];
@@ -670,16 +673,12 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 value: function () {
                     var output = [];
                     if (values['passport-options'] == '50') {
-                        var cost = model.largePassport();
-                        cost = currency(cost);
-                        if (!values.veteran) {
-                            cost += '&nbsp;extra';
-                        }
-                        output.push('Jumbo passport with secure delivery included.');
-                        output.push('£85.50');
+                        var cost = currency(model.standardPassport() + model.largePassport())
+                        output.push('Jumbo passport');
+                        output.push(cost);
                     } else {
-                        output.push('Standard passport with secure delivery included.');
-                        output.push('£75.50');
+                        output.push('Standard passport');
+                        output.push(currency(model.standardPassport()));
                     }
                     return output.join('<br>');
                 }
@@ -708,7 +707,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                         var output = 'You need to post your documents to us. We’ll return them to you by ';
                         var cost = model.delivery();
                         if (cost) {
-                            output += ' secure delivery. <br/>£5.00 ';
+                            output += ' secure delivery. <br/>£' + cost;
                         }
                         return output;
                     } else {
@@ -720,7 +719,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 className: 'cost',
                 title: 'Total',
                 value: function () {
-                    return currency(values.cost);
+                    return currency(model.getCost());
                 }
             }
         ]

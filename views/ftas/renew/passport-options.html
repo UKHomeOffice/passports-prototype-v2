@@ -11,7 +11,34 @@
 {{< hmpo-partials-form}}
 {{$form}}
 
-    {{#radio-group}}passport-options{{/radio-group}}
+    {{#nunjucks}}
+    <div id="passport-options-group" class="form-group">
+        <fieldset role="radiogroup" aria-required="true">
+            <legend>
+                <span>Passport size</span>
+            </legend>
+        {% if values['16-or-older'] %}
+            <label class="block-label selected" for="passport-options-34">
+                <input type="radio" name="passport-options" id="passport-options-34" value="34" required="true" checked="checked">
+                Standard 34-page passport (£75.50)
+            </label>
+            <label class="block-label" for="passport-options-50">
+                <input type="radio" name="passport-options" id="passport-options-50" value="50" required="true">
+                Jumbo 50-page passport (£85.50)
+            </label>
+        {% else %}
+            <label class="block-label selected" for="passport-options-34">
+                <input type="radio" name="passport-options" id="passport-options-34" value="34" required="true" checked="checked">
+                Standard 34-page passport (£49)
+            </label>
+            <label class="block-label" for="passport-options-50">
+                <input type="radio" name="passport-options" id="passport-options-50" value="50" required="true">
+                Jumbo 50-page passport (£59)
+            </label>
+        {% endif %}
+        </fieldset>
+    </div>
+    {{/nunjucks}}
 
     <fieldset>
         <legend class="visuallyhidden">Add a braille sticker</legend>
