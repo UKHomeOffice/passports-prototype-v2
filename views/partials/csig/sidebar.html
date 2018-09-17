@@ -8,9 +8,15 @@
       {% if values['csig-type'] != 'examiner' %}
       <li class="sidebar-task__panel">
         <h3>Documents</h3>
-        <a href="/ftas/renew/docs-fta">
-          Check what you need to send
-        </a><br>
+        {% if values['passport-before'] %}
+          <a href="/ftas/renew/docs-renew">
+            Check what you need to send
+          </a><br>
+        {% else %}
+          <a href="/ftas/renew/docs-fta">
+            Check what you need to send
+          </a><br>
+        {% endif %}
       </li>
       {% endif %}
     {{/nunjucks}}

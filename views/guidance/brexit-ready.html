@@ -1,136 +1,174 @@
-{{< layout}}
+{{< hmpo-layout}} {{$propositionHeader}} <div class="header-proposition">
+    <div class="content">
+        <nav id="proposition-menu">
+            <a href="/" title="Apply for a passport" id="proposition-name"></a>
+        </nav>
+    </div>
+    </div>
+    {{/propositionHeader}}
+    {{$main}}
+    {{$breadcrumb}}{{/breadcrumb}}
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-{{$pageTitle}}Travelling to EU countries if there’s no Brexit deal{{/pageTitle}}
+    <style>
+        .dashed-line {
+          font-size: 16px;
+        }
+        .dashed-line::before {
+            content: "— ";
+            margin-left: -25px;
+            padding-right: 5px;
+        }
 
-{{$propositionHeader}}{{/propositionHeader}}
+        .list {
+            margin-left: 25px;
+        }
 
-{{$header}}
-    <h1>Travelling to EU countries if there’s no Brexit deal</h1>
-{{/header}}
+        .GDS {
+            margin-top: 30px;
+        }
 
-{{$content}}
-<h2>Advice for British passport holders on how to check if your 
-passport will meet the new rules that will apply for travel to 
-many European countries from 30 March 2019 if the UK leaves the EU without a deal</h2>
+        .sidebar {
+            border-top: 3px solid #005ea5;
+        }
+        h1.govuk-heading-xl {
+            margin-top: 28px;
+            margin-bottom: 50px;
+            font-size: 48px;
+        }
+    </style>
+    <main id="content" class="main-content" role="main">
+        <div class="fill-banner">
+            <a class="button__fill" id="populate" />Fill</a>
+            <a class="button__fill" href="/">Home</a>
+            <a class="button__fill" href="./">/</a>
+        </div>
+        {{> hmpo-partials-back}}
+        <div class="grid-row">
+            <div class="column-full">
+                <header>
 
-<p><a href="">Check your passport validity before you travel.</a></p>
+                    <div class="column-two-full">
+                        <h1 class="govuk-heading-xl">
+                            Passport rules for travel to Europe <br>
+                            after Brexit
+                        </h1>
+                    </div>
+            </div>
+                    <div class="column-two-thirds">
+                        <p>Contents</p>
+                        <ul class="list list-contents">
+                            <li class="dashed-line"><a href="#data-table-numeric">Rules for passports</a></li>
+                            <li class="dashed-line"><a href="#data-visualisation">Check a passport for travel to Europe</a></li>
+                            <li class="dashed-line"><a href="#data-visualisation">List of countries affected</a></li>
+                            <li class="dashed-line"><a href="#data-visualisation">Applying for a new passport</a></li>
+                        </ul>
+                    </div>
 
-<p>When the UK leaves the European Union (EU) there will be new rules for
-    British passport holders travelling to the <a href="#schengen-countries">26 countries in the Schengen area</a> You’ll need to check whether your passport meets the new requirements when travelling from
-    30 March 2019.</p>
+                </header>
 
-<p>EU countries which are members of the Schengen Agreement will treat UK passport holders as third country nationals
-    from 30 March 2019 if the UK leaves the EU without a deal. This means they will not accept some UK passports that
-    are nearing their expiry date.</p>
+        </div>
 
-<p>Travel by British passport holders to all countries that are part of the <a href="#schengen-countries">Schengen area</a> will be affected.</p>
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <hr>
 
-<p>There may also be new rules for British passport holders travelling to <a href="#non-schengen-countries">EU countries that are not part of the Schengen area </a></p>
+                <h2>Rules for passports</h2>
 
-<p>More details are in the <a href="">passports technical notice.</a></p>
+                <p>The rules for travel to most countries in Europe will change if the UK leaves the European Union with no deal.</p>
 
-<h2>Schengen area travel rules for UK passports</h2>
-<p><a href="#schengen-countries">Schengen area countries</a> require that passports held by a third country national must have been issued within the last 10 years, 
-    and must have at least 6 months validity left on the day of arrival in the Schengen area.</p>
+                <p>After 29 March 2019:</p>
+                <ol class="list-number">
+                  <li style="margin-bottom:15px">You should have 6 months left on your passport from your date of arrival. This applies to adult and child passports.</li>
+                  <li>If you renewed a 10 year adult passport before it expired, extra months may have been added to your passport's expiry date. These extra months will not count. <p>
+                  </li>
+                </ol>
+                <p>The new rules will apply to passports issued by the UK, Gibraltar, Guernsey, the Isle of Man and Jersey.</p>
 
-<p>If there’s no deal, UK passports will be affected by these rules from 30 March 2019.</p>
+                <h2>Check a passport for travel to Europe</h2>
 
-<h3>Adult passports</h3>
+                <p>Before booking travel, check your adult and child passports meet the new rules.</p>
 
-<p>Your passport should be no older than 9 years and 6 months on the day you arrive in the Schengen area.</p>
+                <p>You can use this tool to <a href="https://www.passport.service.gov.uk/check-a-passport">check a passport for travel to Europe</a>.</p>
 
-<p><a href="">Check your passport validity before you travel.</a></p>
+                <h2>List of countries affected</h2>
 
-<p>Check the issue date of your passport (not the expiry date).</p>
+                <p>The new rules will apply for travel to and between countries in the Schengen area. These are:</p>
+                <ul class="list-bullet">
+                  <li>Austria</li>
+                  <li>Belgium</li>
+                  <li>Czech Republic</li>
+                  <li>Denmark</li>
+                  <li>Estonia</li>
+                  <li>Finland</li>
+                  <li>France</li>
+                  <li>Germany</li>
+                  <li>Greece</li>
+                  <li>Hungary</li>
+                  <li>Iceland </li>
+                  <li>Italy</li>
+                  <li>Latvia</li>
+                  <li>Liechtenstein</li>
+                  <li>Lithuania</li>
+                  <li>Luxembourg</li>
+                  <li>Malta</li>
+                  <li>Netherlands</li>
+                  <li>Norway</li>
+                  <li>Poland</li>
+                  <li>Portugal</li>
+                  <li>Slovakia</li>
+                  <li>Slovenia</li>
+                  <li>Spain</li>
+                  <li>Sweden</li>
+                  <li>Switzerland</li>
+                </ul>
 
-<p>The issue date should be no more than 9 years and 6 months before the date you intend to arrive in the [Schengen area](#Schengen-countries).</p>
+                <h3>Travel to other EU countries</h3>
 
-<p>For example, if you plan to travel on 30 March 2019, your passport’s issue date must be on or later than 1 October 2009.</p>
+                <p>The new rules do not apply when travelling to Ireland.</p>
 
-<p>If this is not the case, you will not be able to travel unless you <a href="https://www.gov.uk/apply-renew-passport">renew your passport</a>.</p>
+                <p>Bulgaria, Croatia, Cyprus and Romania are not in the Schengen area. You should <a href="https://www.gov.uk/foreign-travel-advice">check the entry requirements</a> for these countries.</p>
 
-<p>It’s likely that more people than usual will be renewing their passports – 
-    so if you are affected and will be travelling to a country in the Schengen area in spring or summer 2019 you should renew your passport as soon as possible.</p>
+                <h2>Applying for a new passport</h2>
 
-<h3>Child passports<h/3>
+                <p>If your passport doesn't meet the new rules, you should <a href="https://www.gov.uk/apply-renew-passport">apply for a new passport</a> before travelling to the countries affected.</p>
 
-<p><a href="">Check your child's passport validity before they travel.</a></p>
+                <div role="note" aria-label="Information" class="panel panel-border-wide application-notice info-notice">
 
-<p>Check the expiry date of your child’s passport. It must be at least 6 months after the date you plan to arrive in the [Schengen area](#Schengen-countries).</p>
+                  <p>Do not book travel unless your passport meets the entry requirements of the country you're travelling to.</p>
 
-<p>For example, if your child is travelling on 30 March 2019, their passport must have an expiry date on or after 1 October 2019.</p>
+                  </div>
 
-<p>If your child’s passport will not meet these rules on the day they arrive in the Schengen area, you must <a href="https://www.gov.uk/apply-renew-passport">renew their passport</a>.</p>
-
-<p>It’s likely that more people than usual will be renewing their child’s passport – so if your child is affected and they will be travelling to a country in 
-    the Schengen area in spring or summer 2019 you should renew their passport as soon as possible.</p>
-
-<h2>Travelling to the Republic of Ireland</h2>
-
-<p>The <a href="">rules for UK passport holders travelling to the Republic of Ireland</a> from the UK will not change when the UK leaves the EU. You can continue 
-    to use your British passport to travel from the UK to Ireland up until your passport expires.</p>
-
-<h2>Travelling to European countries outside the Schengen area</h2>
-
-<p id="non-schengen-countries">The European countries that are not in the Schengen area are Romania, Bulgaria, Croatia and Cyprus. 
-    You should <a href="https://www.gov.uk/foreign-travel-advice">check the rules</a> for the country you’re travelling to as usual.</p>
-
-<h2>Using your passport for identification purposes within the UK </h2>
-
-<p>You’ll be able to use your passport for identification purposes in the UK until its expiry date.</p>
-
-<h2>Crown dependency or Gibraltar passport holders</h2>
-
-<p>If you hold a Crown Dependency (Guernsey, Jersey and Isle of Man) or Gibraltar passport you’ll need to comply with the new rules.</p>
-
-<p>If your passport does not meet the new rules, you should renew your passport before you travel.</p>
-
-<p>You can apply for a new passport at your passport office:</p>
-
-<ul class="govuk-list">
-    <li><a href="https://www.gibraltar.gov.gi/new/passports-and-nationality">Gibraltar</a></li>
-    <li><a href="https://www.gov.gg/passports">Guernsey</a></li>
-    <li><a href="https://www.gov.im/categories/travel-traffic-and-motoring/passports">Isle of Man </a></li>
-    <li><a href="https://www.gov.je/Travel/Passports/Pages/default.aspx">Jersey </a></li>
-</ul>
-
-<h2>UK Overseas Territory passport holders</h2>
-
-<p>Holder of other British Overseas Territory passports must already comply with the Schengen Borders Code rules. 
-    You should <a href="https://www.gov.uk/foreign-travel-advice">check the rules</a> for the country you’re travelling to as usual.</p>
-
-<h2 id="schengen-countries">List of Schengen area countries</h2>
-
-<ul class="govuk-list list list-bullet">
-    <li>Austria</li>
-    <li>Belgium</li>
-    <li>Czech Republic</li>
-    <li>Denmark</li>
-    <li>Estonia</li>
-    <li>Finland</li>
-    <li>France</li>
-    <li>Germany</li>
-    <li>Greece</li>
-    <li>Hungary</li>
-    <li>Iceland </li>
-    <li>Italy</li>
-    <li>Latvia</li>
-    <li>Liechtenstein</li>
-    <li>Lithuania</li>
-    <li>Luxembourg</li>
-    <li>Malta</li>
-    <li>Netherlands</li>
-    <li>Norway</li>
-    <li>Poland</li>
-    <li>Portugal</li>
-    <li>Slovakia</li>
-    <li>Slovenia</li>
-    <li>Spain</li>
-    <li>Sweden</li>
-    <li>Switzerland</li>
-</ul>
+                <p>Make sure you apply in plenty of time. If you need to, you can apply to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
+</p>
 
 
-{{/content}}
+            </div>
 
-{{/ layout}}
+            <div class="column-one-third">
+                <div class="sidebar related GDS">
+                    <div class="photo-preview-inner">
+                        <div class="inner group related-subsection">
+                            <h2 id="parent-subsection">Related content</h2>
+                            <nav role="navigation" aria-labelledby="parent-subsection">
+                                <ul>
+                                  <li><a href="https://www.gov.uk/apply-renew-passport">Apply for a new passport</a></li>
+                                    <li><a href="https://www.gov.uk/get-a-passport-urgently">Get a passport urgently</a></li>
+                                    <li><a href="https://www.gov.uk/passport-fees">Passport fees</a>
+                                    <li><a href="">Guidance on the new rules</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    {{/main}}
+
+    {{$bodyEnd}}
+
+    {{> hmpo-partials-body-end}}
+    {{/bodyEnd}}
+{{/ hmpo-layout}}

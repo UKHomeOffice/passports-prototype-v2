@@ -1,6 +1,6 @@
 module.exports = {
   '/': {
-    controller: require('../../../controllers/check-tracking-status'),
+    controller: require('../../../controllers/check-query-string'),
     fields: ['reference'],
     next: '/track-email'
   },
@@ -17,6 +17,11 @@ module.exports = {
       target: '/csig-completed',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'csig-completed';
+      }
+    }, {
+      target: '/application-submitted',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'application-submitted';
       }
     }],
   },
@@ -44,6 +49,9 @@ module.exports = {
     next: '../csig/'
   },
   '/csig-completed': {
+    next: '../csig/'
+  },
+  '/application-submitted': {
     next: '../csig/'
   }
 };

@@ -372,6 +372,7 @@ module.exports = {
     '/docs-fta': {
         backLink: 'summary',
         next: '/declaration',
+        controller: require('../../../controllers/check-query-string'),
         forks: [{
                 target: '../../../csig/user/need-csig',
                 condition: function (req, res) {
@@ -382,6 +383,12 @@ module.exports = {
                 target: '../../../csig/user-contact/tracking-waiting',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['trackWaiting'] == true;
+                }
+            },
+            { // if user decides to check what documents they need to send on confirmation page
+                target: '/confirmation',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['tracking-status'] == 'confirm-documents';
                 }
             }
         ]
@@ -389,6 +396,7 @@ module.exports = {
     '/docs-renew': {
         backLink: 'summary',
         next: '/declaration',
+        controller: require('../../../controllers/check-query-string'),
         forks: [{
                 target: '../../../csig/user/need-csig',
                 condition: function (req, res) {
@@ -399,6 +407,12 @@ module.exports = {
                 target: '../../../csig/user-contact/tracking-waiting',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['trackWaiting'] == true;
+                }
+            },
+            { // if user decides to check what documents they need to send on confirmation page
+                target: '/confirmation',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['tracking-status'] == 'confirm-documents';
                 }
             }
         ]

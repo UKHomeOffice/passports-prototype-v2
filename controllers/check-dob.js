@@ -38,12 +38,12 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
   var days = moment().diff(dob.add(age, 'years'), 'days', false);
   console.log('Age: ' + age + ' years, ' + days + ' days');
 
-	req.sessionModel.set('feckless-teenager', false);
+	req.sessionModel.set('16-to-18', false);
 	req.sessionModel.set('16-or-older', false);
   req.sessionModel.set('rising-16', false);
 
   if (age >= 16 && age < 18) {
-    req.sessionModel.set('feckless-teenager', true);
+    req.sessionModel.set('16-to-18', true);
   }
 
 	if (age >= 16) {
