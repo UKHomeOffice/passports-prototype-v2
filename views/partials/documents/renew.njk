@@ -5,7 +5,7 @@
 {% endif %}
 
 {% if not values['16-or-older'] %}
-    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' %}
+    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Other' %}
         {% set documents = (documents.push('any court orders (for example that describe parental responsibility or residency arrangements)'), documents) %}
     {% endif %}
 
@@ -17,43 +17,103 @@
 {% endif %}
 
 {% if not values['change-name'] %}
-    <h2 class="govuk-heading-l">Applicant's documents</h2>
-    <h3 class="govuk-heading-m">Send the following:</h3>
-    <ul class="list list-bullet">
-        {% for item in documents %}
-            <li>{{item}}</li>
-        {% endfor %}
-    </ul>
+    {% if not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker' %}
+        <h2 class="govuk-heading-l">Applicant's documents</h2>
+        <h3 class="govuk-heading-m">Under which Care Order is the child being looked after?</h3>
+        <div class="accordion" id="name-change-accordion">
 
-    {% if not values['16-or-older'] %}
-        {% if values['relationship-applicant'] === 'Father' %}
-            <h3 class="govuk-heading-m">If you don't have parental responsibility, also send the following:</h3>
-            <ul class="list list-bullet">
-                <li>a signed and dated letter from the mother (or other person with parental responsibility)
-                    giving consent for the issue of the child's new passport</li>
-            </ul>
+            <div class="accordion-section" id="full-care-order">
+                <div class="accordion-section-header">
+                    <h2 class="heading-small">Full Care Order</h2>
+                </div>
 
-        {% elif values['relationship-applicant'] === 'Other' %}
-            <h3 class="govuk-heading-m">You also need to send evidence to prove your responsibility for the child:</h3>
-            <ul class="list list-bullet">
-                <li>read the guidance to find out which documents you need to send</li>
-            </ul>
+                <div class="accordion-section-body">
+                    <h3 class="govuk-heading-m">Send the following:</h3>
+                    <ul class="list list-bullet">
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
+                        <li>a letter stating the section of the Children Act under which the child is looked after</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-section" id="interim-care-order">
+                <div class="accordion-section-header">
+                    <h2 class="heading-small">Interim Care Order</h2>
+                </div>
+
+                <div class="accordion-section-body">
+                    <h3 class="govuk-heading-m">Send the following:</h3>
+                    <ul class="list list-bullet">
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
+                        <li>original of the Interim Care Order showing the date the order expires (it will need to be valid on the date the new passport is issued)</li>
+                        <li>a letter stating the section of the Children Act under which the child is looked after</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-section" id="accommodated-care-order">
+                <div class="accordion-section-header">
+                    <h2 class="heading-small">Accommodated Care Order</h2>
+                </div>
+
+                <div class="accordion-section-body">
+                    <h3 class="govuk-heading-m">Send the following:</h3>
+                    <ul class="list list-bullet">
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
+                        <li>letter of consent from the person with parental responsibility for the child</li>
+                        <li>a letter stating the section of the Children Act under which the child is looked after</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    {% else %}
+        <h2 class="govuk-heading-l">Applicant's documents</h2>
+        <h3 class="govuk-heading-m">Send the following:</h3>
+        <ul class="list list-bullet">
+            {% for item in documents %}
+                <li>{{item}}</li>
+            {% endfor %}
+        </ul>
+
+        {% if not values['16-or-older'] %}
+            {% if values['relationship-applicant'] === 'Father' %}
+                <h3 class="govuk-heading-m">If you don't have parental responsibility, also send the following:</h3>
+                <ul class="list list-bullet">
+                    <li>a signed and dated letter from the mother (or other person with parental responsibility)
+                        giving consent for the issue of the child's new passport</li>
+                </ul>
+
+            {% elif values['relationship-applicant'] === 'Other' %}
+                <h3 class="govuk-heading-m">You also need to send evidence to prove your responsibility for the child:</h3>
+                <ul class="list list-bullet">
+                    <li>read the guidance to find out which documents you need to send</li>
+                </ul>
+            {% endif %}
+
+        {% elif values['16-to-18'] or values['rising-16'] %}
+            {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' %}
+                <h3 class="govuk-heading-m">If you have parental responsibility:</h3>
+                <ul class="list list-bullet">
+                    <li>include confirmation of this in your letter telling us why you're making the application</li>
+                </ul>
+                <h3 class="govuk-heading-m">If you don't have parental responsibility, also send the following:</h3>
+                <ul class="list list-bullet">
+                    <li>a signed and dated letter from the person with parental responsibility giving permission for you to make the application</li>
+                </ul>
+            {% endif %}
         {% endif %}
 
-    {% elif values['16-to-18'] %}
-        {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' %}
-            <h3 class="govuk-heading-m">If you have parental responsibility:</h3>
-            <ul class="list list-bullet">
-                <li>include confirmation of this in your letter telling us why you're making the application</li>
-            </ul>
-            <h3 class="govuk-heading-m">If you don't have parental responsibility, also send the following:</h3>
-            <ul class="list list-bullet">
-                <li>a signed and dated letter from the person with parental responsibility giving permission for you to make the application</li>
-            </ul>
-        {% endif %}
+        <hr>
+
     {% endif %}
-
-    <hr>
 
 {% else %}
     {% include "views/partials/documents/change-of-name-prototype.njk" %}
