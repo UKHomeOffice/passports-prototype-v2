@@ -25,16 +25,22 @@
         {% endfor %}
     </ul>
 
-    <!-- 12-15s 3rd Party = Father -->
-    {% if not values['16-or-older'] and values['relationship-applicant'] === 'Father' %}
-        <h3 class="govuk-heading-m">If you don't have parental responsibility, also send the following:</h3>
-        <ul class="list list-bullet">
-            <li>a signed and dated letter from the mother (or other person with parental responsibility)
-                giving consent for the issue of the child's new passport</li>
-        </ul>
-    {% endif %}
+    {% if not values['16-or-older'] %}
+        {% if values['relationship-applicant'] === 'Father' %}
+            <h3 class="govuk-heading-m">If you don't have parental responsibility, also send the following:</h3>
+            <ul class="list list-bullet">
+                <li>a signed and dated letter from the mother (or other person with parental responsibility)
+                    giving consent for the issue of the child's new passport</li>
+            </ul>
 
-    {% if values['16-to-18'] %}
+        {% elif values['relationship-applicant'] === 'Other' %}
+            <h3 class="govuk-heading-m">You also need to send evidence to prove your responsibility for the child:</h3>
+            <ul class="list list-bullet">
+                <li>read the guidance to find out which documents you need to send</li>
+            </ul>
+        {% endif %}
+
+    {% elif values['16-to-18'] %}
         {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' %}
             <h3 class="govuk-heading-m">If you have parental responsibility:</h3>
             <ul class="list list-bullet">
