@@ -5,21 +5,43 @@
 
 
 {{$header}}
-  <h1>Suzanne Smith's details</h1>
+  <h1>Confirm these details</h1>
 {{/header}}
 
 
 
 {{$content}}
-<p>Suzanne Smith has applied for a passport on behalf of Patrick Michael Smith.</p>
-<h2>Are they the applicant's mother?</h2>
+<p>This is an application for a child passport. We need to confirm some details.</p>
+<div class="confirmation">
+  <div class="section old-passport-details">
+    <dl class="expiry-date">
+        <dt class="column-half">Person making this application</dt>
+        <dd class="column-half">
+          <p>Suzanne Michaela Smith</p>
+        </dd>
+    </dl>
+    <dl class="expiry-date">
+        <dt class="column-half">Applicant's name</dt>
+        <dd class="column-half">
+          <p>Patrick Michael Smith</p>
+        </dd>
+    </dl>
+    <dl class="expiry-date">
+        <dt class="column-half">Relationship</dt>
+        <dd class="column-half">
+          <p>Mother</p>
+        </dd>
+    </dl>
+  </div>
+</div>
+<!-- <p>Suzanne Michaela Smith is applying on behalf of Michael Patrick Smith.</p>
+ -->
 
+ <h2>Are these details correct?</h2>
 {{< hmpo-partials-form}}
     {{$form}}
-
       {{#radio-group}}child-relationship{{/radio-group}}
-      <h2>How do you know Suzanne Smith?</h2>
-      <label class="form-label" for="">Do you know them personally, for example as a friend, neighbour or colleague?</label>
+      <!-- <label class="form-label" for="">Do you know them personally, for example as a friend, neighbour or colleague?</label>
       {{#radio-group}}applicant-check-friend{{/radio-group}}
       <label class="form-label" for="">Are you related to, in a relationship with or living at the same address
   as them?</label>
@@ -31,16 +53,7 @@
       <div class="form-group form-date">
         <label class="form-label" for="">How many years have you known them?</label>
         {{#input-text}}knowntime{{/input-text}}
-      </div>
-
-
-      <!-- <h2>Are these Susan's previous names?</h2>
-      <ul>
-        <li>Susan Merchant</li>
-        <li>Susan Parker</li>
-      </ul>
-      <br>
-      {{#radio-group}}applicant-check-names{{/radio-group}} -->
+      </div> -->
 
       {{#input-submit}}{{/input-submit}}
 

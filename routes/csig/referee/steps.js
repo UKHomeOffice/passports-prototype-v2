@@ -40,7 +40,7 @@ module.exports = {
     '/csig-identity-confirmed': {
         next: '/confirm-applicant',
         forks: [{
-          target: '/confirm-applicant-child',
+          target: '/confirm-applicant-relationship',
           condition: function(req, res) {
             return req.session['hmpo-wizard-common']['csig-child'] == true;
           }
@@ -51,23 +51,28 @@ module.exports = {
       next: '/confirm-applicant-address',
       controller: require('../../../controllers/check-csig'),
     },
+    '/confirm-applicant-relationship': {
+        fields: [],
+        next: '/confirm-applicant-child-eligibility'
+    },
+    '/confirm-applicant-child-eligibility': {
+        fields: [],
+        next: '/confirm-applicant-child'
+    },
     '/confirm-applicant-child': {
-      fields: ['applicant-check', 'child-place-of-birth'],
-      next: '/confirm-applicant-relationship',
-      //controller: require('../../../controllers/check-csig'),
+        fields: ['applicant-check', 'child-place-of-birth'],
+        next: '/confirm-applicant-parents',
+        //controller: require('../../../controllers/check-csig'),
+      },
+    '/confirm-applicant-parents': {
+        fields: ['child-mother', 'child-mother-year-of-birth', 'child-father', 'child-father-year-of-birth'],
+        next: '/confirm-applicant-address'
     },
     '/applicant-photo-fail': {
       backLink: './confirm-applicant',
       next: '/csig-details-work'
     },
-    '/confirm-applicant-relationship': {
-        fields: ['applicant-check-friend', 'applicant-check-address', 'child-relationship', 'relationship', 'knowntime'],
-        next: '/confirm-applicant-parents'
-    },
-    '/confirm-applicant-parents': {
-        fields: ['child-mother', 'child-mother-year-of-birth', 'child-father', 'child-father-year-of-birth'],
-        next: '/confirm-applicant-address'
-    },
+    
     '/confirm-applicant-address': {
         fields: ['applicant-check-home-address'],
         next: '/csig-details-work'
