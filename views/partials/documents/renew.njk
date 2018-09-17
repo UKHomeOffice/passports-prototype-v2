@@ -4,13 +4,13 @@
     {% set documents = (documents.push('any passports from other countries that haven\'t expired'), documents) %}
 {% endif %}
 
-{% if not values['16-or-older'] %}
+{% if not values['16-or-older'] and not values['rising-16'] %}
     {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Other' %}
         {% set documents = (documents.push('any court orders (for example that describe parental responsibility or residency arrangements)'), documents) %}
     {% endif %}
 
-{% elif values['16-or-older'] or values['rising-16'] %}
-    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' %}
+{% elif values['16-to-18'] or values['rising-16'] %}
+    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other' %}
         {% set documents = (documents.push('a signed and dated letter from a healthcare professional, for example a doctor or carer confirming why the applicant can\'t apply'), documents) %}
     {% endif %}
 {% endif %}
@@ -82,7 +82,7 @@
             {% endfor %}
         </ul>
 
-        {% if not values['16-or-older'] %}
+        {% if not values['16-or-older'] and not values['rising-16'] %}
             {% if values['relationship-applicant'] === 'Father' %}
                 <h3 class="govuk-heading-m">If you don't have parental responsibility, also send the following:</h3>
                 <ul class="list list-bullet">
@@ -98,12 +98,22 @@
             {% endif %}
 
         {% elif values['16-to-18'] or values['rising-16'] %}
-            {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' %}
+            {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other' %}
                 <h3 class="govuk-heading-m">If you don't have parental responsibility, also send the following:</h3>
                 <ul class="list list-bullet">
                     <li>a signed and dated letter from the person with parental responsibility giving permission for you to make the application</li>
                 </ul>
             {% endif %}
+
+        {% else %} {# Over 18s #}
+            {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other' %}
+                <h3 class="govuk-heading-m">And send 1 of the following:</h3>
+                <ul class="list list-bullet">
+                    <li>a signed and dated letter from a healthcare professional, for example a doctor or carer confirming why the applicant can't apply</li>
+                    <li>court order or lasting power of attorney</li>
+                </ul>
+            {% endif %}
+
         {% endif %}
 
         <hr>
