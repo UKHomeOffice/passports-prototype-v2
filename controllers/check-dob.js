@@ -41,6 +41,7 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
 	req.sessionModel.set('16-to-18', false);
 	req.sessionModel.set('16-or-older', false);
   req.sessionModel.set('rising-16', false);
+  req.sessionModel.set('applicant-age', age)
 
   if (age >= 16 && age < 18) {
     req.sessionModel.set('16-to-18', true);

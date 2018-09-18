@@ -75,13 +75,6 @@ module.exports = {
                 return req.session['hmpo-wizard-common']['passport-before'] == false &&
                 req.session['hmpo-wizard-common']['16-or-older'] == true;
             }
-        }, {
-            target: '/you-need-a-different-service',
-            condition: function(req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false &&
-                req.session['hmpo-wizard-common']['16-or-older'] == false &&
-                req.session['hmpo-wizard-common']['rising-16'] == false;
-            }
         }]
         // forks: [
         //     {
