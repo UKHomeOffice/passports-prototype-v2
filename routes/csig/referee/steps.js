@@ -49,30 +49,49 @@ module.exports = {
     '/confirm-applicant': {
       fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime', 'relationship'],
       next: '/confirm-applicant-address',
-      controller: require('../../../controllers/check-csig'),
+      forks: [{
+        target: '/applicant-summary',
+        condition: function (req, res) {
+            return req.session['hmpo-wizard-common']['knowntime'] < 2
+        }
+    }, {
+        target: '/applicant-photo-fail',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['applicant-check'] == "No"
+            }
+        }]
     },
     '/confirm-applicant-relationship': {
-        fields: [],
+        fields: ['child-relationship'],
         next: '/confirm-applicant-child-eligibility'
     },
     '/confirm-applicant-child-eligibility': {
-        fields: [],
+        fields:  ['applicant-check-friend', 'applicant-check-address', 'knowntime', 'relationship'],
         next: '/confirm-applicant-child'
     },
     '/confirm-applicant-child': {
-        fields: ['applicant-check', 'child-place-of-birth'],
+        fields: ['applicant-check-child', 'child-place-of-birth'],
         next: '/confirm-applicant-parents',
-        //controller: require('../../../controllers/check-csig'),
-      },
+        forks: [{
+            target: '/applicant-photo-fail',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['applicant-check-child'] == "No"
+            }
+        }]
+    },
     '/confirm-applicant-parents': {
         fields: ['child-mother', 'child-mother-year-of-birth', 'child-father', 'child-father-year-of-birth'],
         next: '/confirm-applicant-address'
     },
     '/applicant-photo-fail': {
-      backLink: './confirm-applicant',
-      next: '/csig-details-work'
+      next: '/csig-details-work',
+      forks: [{
+        target: '/confirm-applicant-parents',
+        condition: function(req, res) {
+          return req.session['hmpo-wizard-common']['csig-child'] == true;
+        }
+      }],
     },
-    
     '/confirm-applicant-address': {
         fields: ['applicant-check-home-address'],
         next: '/csig-details-work'
