@@ -32,52 +32,48 @@
 
 {{#nunjucks}}
   {% if values['passport-before'] and values['old-blue'] %} {# Hidden FTA #}
-    <p>Based on your answers, you have an old passport that expired some time ago. If this is incorrect, <a href="./">start again</a>.</p>
+    <p>Based on your answers, you have an old passport that expired some time ago. If this is incorrect, you'll need to <a href="./">start again</a>.</p>
     <p>You can't renew this type of passport. You need to apply for a first UK passport and you may need to have a <a href="../../guidance/identity-interviews" target="_blank">passport interview</a>.</p>
     <p>It should take around 6 weeks to get a new passport.</p>
 
   {% elif values['passport-before'] and (values['16-or-older'] or values['rising-16']) and values['passport-damaged'] == 'No' %} {# Renew adult #}
-    <p>Based on your answers, you're renewing a UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+    <p>Based on your answers, you're renewing a UK passport. If this is incorrect, you'll need to <a href="./">start again</a>.</p>
     {% if not values['rising-16'] %}
       <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
     {% elif values['rising-16'] %}
-      <p>As you turn 16 in the next 3 weeks, you'll get an adult passport. It should take around 3 weeks, but the new passport won't be issued until after your 16th birthday.</p>
-      <p>To get a new passport before your 16th birthday, you'll need to apply for a child passport with <a href="https://www.gov.uk/get-a-passport-urgently">1 week Fast Track</a>.</p>
+      <p>As you're about to turn 16, you'll get an adult passport. It should take around 3 weeks - you won't get it before your birthday.</p>
+      <p>To get a child passport before you turn 16, contact us to see if you're eligible for the <a href="https://www.gov.uk/get-a-passport-urgently">1 week Fast Track service</a>.</p>
     {% endif %}
 
   {% elif values['passport-before'] and  values['applicant-age'] > 11 and not values['16-or-older'] and values['passport-damaged'] == 'No' %} {# Renew 12–15s #}
-    <p>Based on your answers, you're renewing a UK passport. If this is incorrect, <a href="./">start again</a>.</p>
-    <p>You need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a> if:</p>
-    <ul class="list list-bullet">
-        <li>your name has changed</li>
-        <li>you can't be recognised as the same person from the photo in your old passport</li>
-    </ul>
+    <p>Based on your answers, you're renewing a UK passport. If this is incorrect, you'll need to <a href="./">start again</a>.</p>
+    <p>If your name has changed, or you can't be recognised as the same person from the photo in your old passport, you need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a></p>
     <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
-  
+
   {% elif values['applicant-age'] < 12  %} {# Renew 0-11s #}
     <br> <code class="error-summary">TODO: Update this content</code> <br> <br> <br> <!-- Remove after editing this content -->
     <p>Based on your answers, you're renewing a child's UK passport. If this is incorrect, <a href="./">start again</a>.</p>
     <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
 
   {% elif values['passport-before'] and (values['16-or-older'] or values['rising-16']) and values['passport-damaged'] == 'Yes' %} {# Damaged adult #}
-    <p>Based on your answers, you're replacing a damaged UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+    <p>Based on your answers, you're replacing a damaged UK passport. If this is incorrect, you'll need to <a href="./">start again</a>.</p>
     {% if not values['rising-16'] %}
       <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
     {% elif values['rising-16'] %}
-      <p>As you turn 16 in the next 3 weeks, you'll get an adult passport. It should take around 3 weeks, but the new passport won't be issued until after your 16th birthday.</p>
-      <p>To get a new passport before your 16th birthday, you'll need to apply for a child passport with <a href="https://www.gov.uk/get-a-passport-urgently">1 week Fast Track</a>.</p>
+    <p>As you're about to turn 16, you'll get an adult passport. It should take around 3 weeks - you won't get it before your birthday.</p>
+    <p>To get a child passport before you turn 16, contact us to see if you're eligible for the <a href="https://www.gov.uk/get-a-passport-urgently">1 week Fast Track service</a>.</p>
     {% endif %}
 
   {# {% elif DPS %}
     <p>Based on your answers, you're renewing a UK passport. If this is incorrect, <a href="./">start again</a>.</p> #}
 
   {% elif not values['passport-before'] and (values['16-or-older'] or values['rising-16']) %} {# FTA #}
-    <p>Based on your answers, you're applying for a first UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+    <p>Based on your answers, you're applying for a first UK passport. If this is incorrect, you'll need to <a href="./">start again</a>.</p>
     <p>You need to have <a href="../../guidance/british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
     {% if not values['rising-16'] %}
       <p>It should take around 6 weeks to get a new passport.</p>
     {% elif values['rising-16'] %}
-      <p>Rising 16 content.</p>
+    <p>Rising 16 content<p>
     {% endif %}
 
   {% elif not values['passport-before'] and not values['16-or-older'] %} {# FTC #}
