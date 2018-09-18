@@ -45,13 +45,19 @@
       <p>To get a new passport before your 16th birthday, you'll need to apply for a child passport with <a href="https://www.gov.uk/get-a-passport-urgently">1 week Fast Track</a>.</p>
     {% endif %}
 
-  {% elif values['passport-before'] and not values['16-or-older'] and values['passport-damaged'] == 'No' %} {# Renew 12–15s #}
+  {% elif values['passport-before'] and  values['applicant-age'] > 11 and not values['16-or-older'] and values['passport-damaged'] == 'No' %} {# Renew 12–15s #}
     <p>Based on your answers, you're renewing a UK passport. If this is incorrect, <a href="./">start again</a>.</p>
     <p>You need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a> if:</p>
     <ul class="list list-bullet">
         <li>your name has changed</li>
         <li>you can't be recognised as the same person from the photo in your old passport</li>
     </ul>
+    <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
+  
+  {% elif values['applicant-age'] < 12  %} {# Renew 0-11s #}
+    <code>TODO: Update this content</code> <br> <br>
+    <p>Based on your answers, you're renewing a child's UK passport. If this is incorrect, <a href="./">start again</a>.</p>
+    <p>You need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a></p>
     <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
 
   {% elif values['passport-before'] and (values['16-or-older'] or values['rising-16']) and values['passport-damaged'] == 'Yes' %} {# Damaged adult #}
