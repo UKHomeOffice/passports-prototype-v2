@@ -11,7 +11,7 @@
 
 {% elif values['16-to-18'] or values['rising-16'] %}
     {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other' %}
-        {% set documents = (documents.push('a signed and dated letter from a healthcare professional, for example a doctor or carer confirming why the applicant can\'t apply'), documents) %}
+        {% set documents = (documents.push('a signed and dated letter (on letterheaded paper) from a healthcare professional, for example a doctor or carer confirming why the applicant can\'t apply'), documents) %}
     {% endif %}
 {% endif %}
 
@@ -109,7 +109,7 @@
             {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other' %}
                 <h3 class="govuk-heading-m">And send 1 of the following:</h3>
                 <ul class="list list-bullet">
-                    <li>a signed and dated letter from a healthcare professional, for example a doctor or carer confirming why the applicant can't apply</li>
+                    <li>a signed and dated letter (on letterheaded paper) from a healthcare professional, for example a doctor or carer confirming why the applicant can't apply</li>
                     <li>court order or lasting power of attorney</li>
                 </ul>
             {% endif %}
@@ -126,7 +126,7 @@
 
     <p>If any of the following apply, you'll need to send <a href="/guidance/additional-documents" target="_blank">additional documents</a>:<p>
     <ul class="list list-bullet">
-        <li>include a title on your passport</li>
+        <li>include a professional, or other title on your passport</li>
         <li>apply for a British National Overseas (BNO) passport</li>
         <li>apply for a British Protected Person passport</li>
         <li>change your gender on your passport</li>
