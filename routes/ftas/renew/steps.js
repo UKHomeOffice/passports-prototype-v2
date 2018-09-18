@@ -421,18 +421,6 @@ module.exports = {
         backLink: 'summary',
         next: '/declaration'
     },
-    '/docs-complicated-scenario-1': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-complicated-scenario-2': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-complicated-scenario-3': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
     '/docs-thirdparty-over16': {
         backLink: 'summary',
         next: '/declaration'
