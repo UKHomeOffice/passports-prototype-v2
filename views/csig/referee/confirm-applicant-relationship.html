@@ -8,26 +8,22 @@
   <h1>Confirm these details</h1>
 {{/header}}
 
-
-
 {{$content}}
-<p>This is an application for a child passport. We need to confirm some details.</p>
+<style>
+.confirmation dl dd p { padding: 0 }
+</style>
+<p>This is an application on behalf of Patrick Michael Smith. We need to confirm the person applying has parental responsibilty.</p>
 <div class="confirmation">
   <div class="section old-passport-details">
     <dl class="expiry-date">
         <dt class="column-half">Person making this application</dt>
         <dd class="column-half">
-          <p>Suzanne Michaela Smith</p>
+          <p>Suzanne Angela Smith</p>
         </dd>
     </dl>
+    
     <dl class="expiry-date">
-        <dt class="column-half">Applicant's name</dt>
-        <dd class="column-half">
-          <p>Patrick Michael Smith</p>
-        </dd>
-    </dl>
-    <dl class="expiry-date">
-        <dt class="column-half">Relationship</dt>
+        <dt class="column-half">Relationship to applicant</dt>
         <dd class="column-half">
           <p>Mother</p>
         </dd>
@@ -41,19 +37,6 @@
 {{< hmpo-partials-form}}
     {{$form}}
       {{#radio-group}}child-relationship{{/radio-group}}
-      <!-- <label class="form-label" for="">Do you know them personally, for example as a friend, neighbour or colleague?</label>
-      {{#radio-group}}applicant-check-friend{{/radio-group}}
-      <label class="form-label" for="">Are you related to, in a relationship with or living at the same address
-  as them?</label>
-      {{#radio-group}}applicant-check-address{{/radio-group}}
-      <div class="form-group">
-        <label class="form-label" for="">How do you know them?</label>
-        {{#input-text}}relationship{{/input-text}}
-      </div>
-      <div class="form-group form-date">
-        <label class="form-label" for="">How many years have you known them?</label>
-        {{#input-text}}knowntime{{/input-text}}
-      </div> -->
 
       {{#input-submit}}{{/input-submit}}
 
