@@ -5,7 +5,7 @@
 {% endif %}
 
 {% if not values['16-or-older'] and not values['rising-16'] %}
-    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Other' %}
+    {% if values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Other' %}
         {% set documents = (documents.push('any court orders (for example that describe parental responsibility or residency arrangements)'), documents) %}
     {% endif %}
 
