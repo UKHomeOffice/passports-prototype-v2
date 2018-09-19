@@ -236,19 +236,22 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         });
     }
 
-    if (values['can-sign']) {
-        newPassportFields.push({
-            step: this.getEditStep('can-sign'),
-            title: 'Signature',
-            value: 'You&rsquo;ll sign your passport when you receive it.'
-        });
-    } else {
-        newPassportFields.push({
-            step: this.getEditStep('no-sign-reason'),
-            title: 'Signature',
-            value: values['no-sign-reason'] ? 'You can’t sign your passport:<br>' + values['no-sign-reason'] : 'You can’t sign your passport'
-        });
+    if (values['applicant-age'] >= 12) { // 0-11s don't need to sign
+        if (values['can-sign']) {
+            newPassportFields.push({
+                step: this.getEditStep('can-sign'),
+                title: 'Signature',
+                value: 'You&rsquo;ll sign your passport when you receive it.'
+            });
+        } else {
+            newPassportFields.push({
+                step: this.getEditStep('no-sign-reason'),
+                title: 'Signature',
+                value: values['no-sign-reason'] ? 'You can’t sign your passport:<br>' + values['no-sign-reason'] : 'You can’t sign your passport'
+            });
+        }
     }
+
 
     newPassportFields.push(
         /*  {
