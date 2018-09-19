@@ -22,6 +22,13 @@
             <h2>Pay for your new passport</h2>
             <p style="margin-left:32px;"> You'll need a debit or credit card. A standard passport is £49 including special delivery.</p>
           </li>
+
+          {{#nunjucks}}
+            {% if values['passport-before'] and values['applicant-age'] <= 11 %} {# 0-11s #}
+              <br> <code class="error-summary">TODO: Add child c-sig</code> <br> <br> <!-- Remove after editing this content -->
+            {% endif %}
+          {{/nunjucks}}
+
           <li><span class="circle circle-step">4</span>
             <h2>Send us your old passport</h2>
             <p style="margin-left:32px;">You need to pay the postage to return your old passport.</p>
