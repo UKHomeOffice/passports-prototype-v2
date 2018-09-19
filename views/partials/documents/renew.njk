@@ -107,10 +107,11 @@
 
         {% else %} {# Over 18s #}
             {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other' %}
-                <h3 class="govuk-heading-m">And send 1 of the following:</h3>
+                <h3 class="govuk-heading-m">And 1 of the following:</h3>
                 <ul class="list list-bullet">
                     <li>a signed and dated letter (on letterheaded paper) from a healthcare professional, for example a doctor or carer confirming why the applicant can't apply</li>
-                    <li>court order or lasting power of attorney</li>
+                    <li>court order</li>
+                    <li>lasting power of attorney</li>
                 </ul>
             {% endif %}
 
