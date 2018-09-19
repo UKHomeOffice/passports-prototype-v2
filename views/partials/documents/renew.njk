@@ -8,6 +8,9 @@
     {% if values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Other' %}
         {% set documents = (documents.push('any court orders (for example that describe parental responsibility or residency arrangements)'), documents) %}
     {% endif %}
+    {% if values['relationship-applicant'] === 'Other' %}
+        {% set documents = (documents.push('send evidence to prove your responsibility for the child'), documents) %}
+    {% endif %}
 
 {% elif values['16-to-18'] or values['rising-16'] %}
     {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other' %}
@@ -88,12 +91,6 @@
                 <ul class="list list-bullet">
                     <li>a signed and dated letter from the mother (or other person with parental responsibility)
                         giving consent for the issue of the child's new passport</li>
-                </ul>
-
-            {% elif values['relationship-applicant'] === 'Other' %}
-                <h3 class="govuk-heading-m">You also need to send evidence to prove your responsibility for the child:</h3>
-                <ul class="list list-bullet">
-                    <li><a href="/guidance/documents-to-prove-responsibility-for-the-child" target="_blank">read the guidance</a> to find out which documents you need to send</li>
                 </ul>
             {% endif %}
 
