@@ -1146,18 +1146,6 @@ module.exports = {
         labelClassName: 'visuallyhidden',
         formatter: 'removehyphens'
     },
-    'address3': {
-        labelClassName: 'visuallyhidden',
-        formatter: 'removehyphens'
-    },
-    'address4': {
-        labelClassName: 'visuallyhidden',
-        formatter: 'removehyphens'
-    },
-    'address5': {
-        labelClassName: 'visuallyhidden',
-        formatter: 'removehyphens'
-    },
     'town': {
         validate: [
             'required'
