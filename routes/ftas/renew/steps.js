@@ -265,13 +265,13 @@ module.exports = {
             'passport-options',
             'braille'
         ],
-        next: '/sign'
-        // forks: [{
-        //     target: '/sign-third-party',
-        //     condition: function (req, res) {
-        //         return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
-        //     }
-        // }],
+        next: '/sign',
+        forks: [{
+            target: '/passport-special-delivery',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['applicant-age'] <= 11;
+            }
+        }],
     },
     '/passport-options-overseas': {
         fields: [
@@ -418,18 +418,6 @@ module.exports = {
         ]
     },
     '/docs-fta-thirdparty': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-complicated-scenario-1': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-complicated-scenario-2': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-complicated-scenario-3': {
         backLink: 'summary',
         next: '/declaration'
     },
