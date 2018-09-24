@@ -1,4 +1,3 @@
-
 /*
   Accordion
 
@@ -37,14 +36,14 @@ function AccordionSection(element, accordion) {
   this.setup()
 }
 
-Accordion.prototype.setup = function() {
+Accordion.prototype.setup = function () {
 
   var accordion_sections = this.element.querySelectorAll('.accordion-section')
 
   var accordion = this
 
   for (var i = accordion_sections.length - 1; i >= 0; i--) {
-     accordion.sections.push(new AccordionSection(accordion_sections[i], accordion))
+    accordion.sections.push(new AccordionSection(accordion_sections[i], accordion))
   };
 
   var accordion_controls = document.createElement('div')
@@ -63,7 +62,7 @@ Accordion.prototype.setup = function() {
   this.element.classList.add('with-js')
 }
 
-Accordion.prototype.openOrCloseAll = function(event) {
+Accordion.prototype.openOrCloseAll = function (event) {
 
   var open_or_close_all_button = event.target
   var now_expanded = !(open_or_close_all_button.getAttribute('aria-expanded') == 'true')
@@ -77,7 +76,7 @@ Accordion.prototype.openOrCloseAll = function(event) {
 }
 
 
-Accordion.prototype.setOpenCloseButtonExpanded = function(expanded) {
+Accordion.prototype.setOpenCloseButtonExpanded = function (expanded) {
 
   var open_or_close_all_button = this.element.querySelector('.accordion-expand-all')
 
@@ -87,7 +86,7 @@ Accordion.prototype.setOpenCloseButtonExpanded = function(expanded) {
 
 }
 
-Accordion.prototype.updateOpenAll = function() {
+Accordion.prototype.updateOpenAll = function () {
 
   var sectionsCount = this.sections.length
 
@@ -107,7 +106,7 @@ Accordion.prototype.updateOpenAll = function() {
 
 }
 
-AccordionSection.prototype.setup = function() {
+AccordionSection.prototype.setup = function () {
   this.element.setAttribute('aria-expanded', 'false')
 
   var header = this.element.querySelector('.accordion-section-header')
@@ -120,14 +119,14 @@ AccordionSection.prototype.setup = function() {
   this.getHash()
 }
 
-AccordionSection.prototype.toggleExpanded = function(){
+AccordionSection.prototype.toggleExpanded = function () {
   var expanded = (this.element.getAttribute('aria-expanded') == 'true')
 
   this.setExpanded(!expanded)
   this.accordion.updateOpenAll()
 }
 
-AccordionSection.prototype.getHash = function() {
+AccordionSection.prototype.getHash = function () {
   if (window.location.hash) {
     var hash = window.location.hash.substr(1)
     var openSection = document.getElementById(hash)
@@ -139,11 +138,11 @@ AccordionSection.prototype.getHash = function() {
   }
 }
 
-AccordionSection.prototype.expanded = function() {
+AccordionSection.prototype.expanded = function () {
   return (this.element.getAttribute('aria-expanded') == 'true')
 }
 
-AccordionSection.prototype.setExpanded = function(expanded) {
+AccordionSection.prototype.setExpanded = function (expanded) {
   this.element.setAttribute('aria-expanded', expanded)
 
   // This is set to trigger reflow for IE8, which doesn't
@@ -154,14 +153,15 @@ AccordionSection.prototype.setExpanded = function(expanded) {
 
 if (
   /docs-fta/.test(window.location.pathname) ||
-  /docs-renew/.test(window.location.pathname)
+  /docs-renew/.test(window.location.pathname) ||
+  /parents-details/.test(window.location.pathname)
 ) {
   new Accordion(document.getElementById('name-change-accordion'))
 }
 
-window.onhashchange = function() {
+window.onhashchange = function () {
   window.location.reload()
-  setTimeout(function() {
+  setTimeout(function () {
     window.scrollTo(0, 0)
   }, 1)
 }
