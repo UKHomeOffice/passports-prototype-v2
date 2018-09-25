@@ -11,13 +11,57 @@
 
     {{< hmpo-partials-form}}
     {{$form}}
-      {{#radio-group}}relationship-applicant{{/radio-group}}
-      <div class="panel panel-border-narrow js-hidden" id="relationship-other" style="margin-top: -20px;">
-        <label for="relationship-other" class="form-label">
-        What is your relationship?
-        </label>
-        {{#input-text}}relationship-other{{/input-text}}
+      <!-- {{#radio-group}}relationship-applicant{{/radio-group}} -->
+
+      <div id="relationship-applicant-group" class="form-group">
+        <fieldset role="radiogroup" aria-required="true">
+
+          <legend>
+            <span class="visuallyhidden">What is your relationship to the applicant?</span>
+          </legend>
+
+          <label class="block-label" for="relationship-applicant-Mother">
+            <input type="radio" name="relationship-applicant" id="relationship-applicant-Mother" value="Mother" required="true">
+            Mother
+          </label>
+
+          <label class="block-label" for="relationship-applicant-Father">
+            <input type="radio" name="relationship-applicant" id="relationship-applicant-Father" value="Father" required="true">
+            Father
+          </label>
+
+          <label class="block-label" for="relationship-applicant-Social Worker">
+            <input type="radio" name="relationship-applicant" id="relationship-applicant-Social Worker" value="Social Worker" required="true" data-toggle="relationship-social-worker" aria-controls="relationship-social-worker" aria-expanded="true">
+            Social Worker
+          </label>
+
+          <div id="relationship-social-worker" class="reveal js-hidden" aria-hidden="false">
+          <div class="panel panel-border-narrow">
+            <p>You can apply for a child that is being looked after by social services.</p>
+            <p>If you're only helping someone to apply for a child, for example they're not comfortable filling in forms, select 'Mother', 'Father', or 'Other'.</p>
+          </div>
+
+          </div><label class="block-label" for="relationship-applicant-Other">
+            <input type="radio" name="relationship-applicant" id="relationship-applicant-Other" value="Other" required="true" data-toggle="relationship-other" aria-controls="relationship-other" aria-expanded="false">
+            Other
+          </label>
+
+          <div class="panel panel-border-narrow js-hidden" id="relationship-other">
+            <label for="relationship-other" class="form-label">
+              What is your relationship?
+            </label>
+            {{#input-text}}relationship-other{{/input-text}}
+          </div>
+
+        </fieldset>
       </div>
+
+      <!-- <div id="relationship-social-worker" class="reveal js-hidden">
+        <div class="panel panel-border-narrow">
+          <p>You can apply for a child that is being looked after by social services.</p>
+          <p>If you're only helping someone to apply for a child, for example they're not comfortable filling in forms, select 'Mother', 'Father', or 'Other'.</p>
+        </div>
+      </div> -->
 
       {{#input-submit}}{{/input-submit}}
     {{/form}}
