@@ -48,18 +48,7 @@ module.exports = {
     },
     '/confirm-applicant': {
       fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime', 'relationship'],
-      next: '/confirm-applicant-address',
-      forks: [{
-        target: '/applicant-summary',
-        condition: function (req, res) {
-            return req.session['hmpo-wizard-common']['knowntime'] < 2
-        }
-    }, {
-        target: '/applicant-photo-fail',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['applicant-check'] == "No"
-            }
-        }]
+      next: '/confirm-applicant-address'
     },
     '/confirm-applicant-relationship': {
         fields: ['child-relationship'],
@@ -67,7 +56,8 @@ module.exports = {
     },
     '/confirm-applicant-child-eligibility': {
         fields:  ['applicant-check-friend', 'applicant-check-address', 'knowntime', 'relationship'],
-        next: '/confirm-applicant-child'
+        next: '/confirm-applicant-child',
+        controller: require('../../../controllers/check-csig')
     },
     '/confirm-applicant-child': {
         fields: ['applicant-check-child', 'child-place-of-birth'],
@@ -137,7 +127,7 @@ module.exports = {
 
     },
     '/applicant-summary': {
-      backLink: 'confirm-applicant'
+
     },
     '/applicant-summary-name-address': {
       backLink: 'confirm-applicant-address'
