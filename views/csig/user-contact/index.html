@@ -24,24 +24,28 @@
               </ul>
 
           <p style="margin-left:32px;">They must have known you personally for at least 2 years, for example as a friend, neighbour or colleague.</p>
-
-            <span class="circle circle-step">2</span><h2>Contact the person</h2>
-            <p style="margin-left:32px;">You must contact the person before we send them an email with details. You need to tell them:</p>
-            <ul class="list-bullet" style="margin-left:32px;">
-              <li>your date of birth, including the year</li>
-              <li>your current address</li>
-            </ul>
           </li>
-          <!-- TODO: add logic to display this for child csig
-          <li>
-            <span class="circle circle-step">2</span><h2>Contact the person</h2>
-            <p style="margin-left:32px;">You must contact the person before we send them an email with details. You need to tell them:</p>
-            <ul class="list-bullet" style="margin-left:32px;">
-              <li>the applicant's date of birth and place of birth</li>
-              <li>the parents' names and year of birth</li>
-            </ul>
-          </li>
-          -->
+           {{#nunjucks}}
+            {% if values['csig-type'] == 'child' %}
+              <li>
+                <span class="circle circle-step">2</span><h2>Contact the person</h2>
+                <p style="margin-left:32px;">You must contact the person before we send them an email with details. You need to tell them the applicant's:</p>
+                <ul class="list-bullet" style="margin-left:32px;">
+                  <li>place and date of birth, including the year</li>
+                  <li>parents' names and years of birth</li>
+                </ul>
+              </li>
+            {% else %}
+              <li>
+                <span class="circle circle-step">2</span><h2>Contact the person</h2>
+                <p style="margin-left:32px;">You must contact the person before we send them an email with details. You need to tell them:</p>
+                <ul class="list-bullet" style="margin-left:32px;">
+                  <li>your date of birth, including the year</li>
+                  <li>your current address</li>
+                </ul>
+              </li>
+            {% endif %}
+          {{/nunjucks}}
           <li>
             <span class="circle circle-step">3</span><h2>Enter their name and email</h2>
             <p style="margin-left:32px;">We'll send them an email with a link to go online. They'll need to enter their UK passport details, look at a photo and answer a few questions.</p>

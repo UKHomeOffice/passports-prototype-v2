@@ -121,6 +121,19 @@ module.exports = {
         'required'
       ]
   },
+  'applicant-check-child': {
+    className: 'inline',
+    legend: {
+        className: 'visuallyhidden'
+    },
+    options: [
+      { value: 'Yes', label: 'Yes' },
+      { value: 'No', label: 'No' }
+    ],
+    validate: [
+      'required'
+    ]
+},
   'applicant-check-friend': {
       options: [
           { value: 'Yes', label: 'Yes' },
