@@ -47,6 +47,39 @@
 // the frontend toolkit.
 @import "shame/tidy-this-up";
 
+@mixin breakpoint($point) {
+    @if $point==desktop {
+        @media (min-width: 70em) {
+            @content ;
+        }
+    }
+
+    @else if $point==laptop {
+        @media (min-width: 64em) {
+            @content ;
+        }
+    }
+
+    @else if $point==tablet {
+        @media (min-width: 50em) {
+            @content ;
+        }
+    }
+
+    @else if $point==phablet {
+        @media (min-width: 37.5em) {
+            @content ;
+        }
+    }
+
+    @else if $point==mobileonly {
+        @media (max-width: 37.5em) {
+            @content ;
+        }
+
+    }
+}
+
 .app-c-print-link {
     margin-top: 2em;
     margin-bottom: 2em;
@@ -60,4 +93,90 @@
 
 .icon {
     float: right;
+}
+
+// Tracking
+
+.app-ref {
+    display: none;
+
+    @include breakpoint(desktop) {
+        display: block;
+    }
+
+    @include breakpoint(laptop) {
+        display: block;
+    }
+}
+
+.photo-preview {
+    @include breakpoint(tablet) {
+        margin-bottom: 1.25em
+    }
+
+    @include breakpoint(phablet) {
+        margin-bottom: 1.25em
+    }
+
+    @include breakpoint(mobileonly) {
+        margin-bottom: 1.25em
+    }
+}
+
+@include breakpoint(desktop) {
+    .photo-preview {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0 15px;
+        float: left;
+        width: 30%;
+    }
+}
+
+@include breakpoint(laptop) {
+    .photo-preview {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0 15px;
+        float: left;
+        width: 30%;
+    }
+}
+
+@include breakpoint(tablet) {
+    .photo-preview {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0 15px;
+        float: left;
+        width: 30%;
+    }
+}
+
+.js-enabled #global-header .header-proposition #proposition-link,
+.js-enabled #global-header .header-proposition #proposition-links {
+    li {
+        border-bottom: none;
+    }
+
+    @include breakpoint(desktop) {
+        display: inline;
+        float: right;
+    }
+
+    @include breakpoint(tablet) {
+        display: inline;
+        float: right;
+    }
+
+    @include breakpoint(phablet) {
+        display: block;
+    }
+
+    @include breakpoint(mobileonly) {
+        display: block;
+    }
 }

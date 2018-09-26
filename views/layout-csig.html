@@ -4,6 +4,15 @@
     <div class="content">
         <nav id="proposition-menu">
             <a href="/" title="Manage your application" id="proposition-name">Manage your application</a>
+            <ul id="proposition-links">
+                <li>
+                {{#nunjucks}}
+                    {% if values['loggedIn'] %}
+                        <a href="/">Sign out</a>
+                    {% endif %}
+                {{/nunjucks}}
+                </li>
+            </ul>
         </nav>
     </div>
 </div>
