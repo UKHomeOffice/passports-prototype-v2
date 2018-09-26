@@ -59,10 +59,18 @@ module.exports = {
   '/application-submitted': {
     next: '../csig/'
   },
-  '/paper-application': {
-    next: '../csig/'
-  },
   '/paper-application-select': {
+    fields: ['confirm-csig-paper'],
+    next: '/paper-application-confirmed',
+    forks: [{
+      target: '/paper-application',
+      condition: {
+          field: 'confirm-csig-paper',
+          value: false
+      }
+    }]
+  },
+  '/paper-application': {
     next: '../csig/'
   },
   '/paper-application-confirmed': {

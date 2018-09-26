@@ -87,4 +87,18 @@ module.exports = {
         'required'
       ]
   },
+  'confirm-csig-paper': {
+    legend: {
+        className: 'visuallyhidden'
+    },
+    className: 'inline',
+    options: [
+        { value: true, label: 'Yes' },
+        { value: false, label: 'No' }
+    ],
+    formatter: ['boolean'],
+    validate: [
+        'required'
+    ],
+},
 };

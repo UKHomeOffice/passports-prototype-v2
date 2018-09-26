@@ -7,7 +7,8 @@
     {{$form}}
      <h1>Download PDF</h1>
      <p>I'm sure I want to continue this application on paper.</p>
-     <a class="button" href="paper-application-confirmed">Continue</a>
+     {{#radio-group}}confirm-csig-paper{{/radio-group}}
+     {{#input-submit}}{{/input-submit}}
     {{/form}}
   {{/ hmpo-partials-form}}
 {{/content}}
