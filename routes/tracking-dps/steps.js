@@ -5,6 +5,7 @@ module.exports = {
         next: '/track-email'
     },
     '/track-email': {
+        controller: require('../../controllers/login'),
         fields: ['age-day', 'age-month', 'age-year'],
         next: '/application-recieved?status=submitted',
         backLink: './'
@@ -18,5 +19,5 @@ module.exports = {
     '/new-photo-arrived': {},
     '/application-approved': {},
     '/we-called-you': {},
-    '/rpd':{}
+    '/rpd': {}
 };

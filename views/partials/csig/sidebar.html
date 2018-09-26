@@ -1,25 +1,26 @@
-<div class="column-one-third">
-  <ul class="sidebar-task">
-    <li class="sidebar-task__panel">
-      <h3>Application reference</h3>
-      <p>PEX 319 825 680X</p>
-    </li>
-    {{#nunjucks}}
-      {% if values['csig-type'] != 'examiner' %}
-      <li class="sidebar-task__panel">
-        <h3>Documents</h3>
-        {% if values['passport-before'] %}
-          <a href="/ftas/renew/docs-renew" target="_blank">
-            Check what you need to send
-          </a><br>
-        {% else %}
-          <a href="/ftas/renew/docs-fta" target="_blank">
-            Check what you need to send
-          </a><br>
-        {% endif %}
+<div class="photo-preview">
+  <div class="photo-preview-inner">
+    <ul class="sidebar-task">
+      <li class="sidebar-task__panel app-ref">
+        <h3>Application reference</h3>
+        <p>PEX 319 825 680X</p>
       </li>
-      {% endif %}
-    {{/nunjucks}}
-  </ul>
-  <p style="margin:15px"><a href="http://www.gov.uk">Sign out</a></p>
+      {{#nunjucks}}
+        {% if values['csig-type'] != 'examiner' %}
+        <li class="sidebar-task__panel">
+          <h3>Documents</h3>
+          {% if values['passport-before'] %}
+            <a href="/ftas/renew/docs-renew" target="_blank">
+              Check what you need to send
+            </a><br>
+          {% else %}
+            <a href="/ftas/renew/docs-fta" target="_blank">
+              Check what you need to send
+            </a><br>
+          {% endif %}
+        </li>
+        {% endif %}
+      {{/nunjucks}}
+    </ul>
+  </div>
 </div>
