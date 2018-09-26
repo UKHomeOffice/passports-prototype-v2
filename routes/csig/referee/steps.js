@@ -47,8 +47,15 @@ module.exports = {
         }],
     },
     '/confirm-applicant': {
-      fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime', 'relationship'],
-      next: '/confirm-applicant-address'
+        fields: ['applicant-check', 'applicant-check-friend', 'applicant-check-address', 'knowntime', 'relationship'],
+        next: '/confirm-applicant-address',
+        forks: [{
+          target: '/applicant-photo-fail',
+          condition: function (req, res) {
+            return req.session['hmpo-wizard-common']['applicant-check'] == "No"
+          }
+        }],
+        controller: require('../../../controllers/check-csig')
     },
     '/confirm-applicant-relationship': {
         fields: ['child-relationship'],
