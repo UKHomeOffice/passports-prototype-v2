@@ -1,5 +1,5 @@
 var express = require('express');
-    session = require('express-session'),
+session = require('express-session'),
     app = express(),
     path = require('path'),
     redis = require('./lib/redis-client'),
@@ -33,7 +33,7 @@ function init(sessionConfig) {
     if (process.env.NODE_ENV && process.env.NODE_ENV.toLowerCase() === 'heroku') {
         var auth = require('express-basic-auth');
 
-       function authoriser(user, pass) {
+        function authoriser(user, pass) {
             return (user === process.env.USER || user === 'fish') && (pass === process.env.PASS || pass === process.env.PASSWORD || pass === 'chips');
         };
 
@@ -48,7 +48,9 @@ function init(sessionConfig) {
     app.use(session(sessionConfig));
 
     app.use(require('i18n-future').middleware());
-    app.use(require('body-parser').urlencoded({ extended: true }));
+    app.use(require('body-parser').urlencoded({
+        extended: true
+    }));
 
     // templates
     app.set('view engine', 'html');
@@ -77,4 +79,20 @@ function init(sessionConfig) {
     var port = process.env.PORT || 3000;
     app.listen(port);
     console.log('App listening on port %s', port);
+    runGulp()
+}
+
+// Run gulp
+function runGulp() {
+    const spawn = require('cross-spawn')
+
+    process.env['FORCE_COLOR'] = 1
+    var gulp = spawn('./node_modules/.bin/gulp')
+    gulp.stdout.pipe(process.stdout)
+    gulp.stderr.pipe(process.stderr)
+    process.stdin.pipe(gulp.stdin)
+
+    gulp.on('exit', function (code) {
+        console.log('gulp exited with code ' + code.toString())
+    })
 }

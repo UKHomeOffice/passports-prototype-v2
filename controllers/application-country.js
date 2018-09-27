@@ -17,13 +17,13 @@ var Controller = function () {
 util.inherits(Controller, Base);
 
 Controller.prototype.successHandler = function successHandler(req, res, callback) {
-    if (req.sessionModel.get('application-country')
-    	&& overseasCountries.indexOf(req.sessionModel.get('application-country')) === -1
-      && overseasNotEligibleCountries.indexOf(req.sessionModel.get('application-country')) === -1
-      && overseasFirstHiddenAsRenew.indexOf(req.sessionModel.get('application-country')) === -1
-      && overseasNotAvailable.indexOf(req.sessionModel.get('application-country')) === -1
-    	&& req.sessionModel.get('application-country') !== "UK"
-    	) {
+    if (req.sessionModel.get('application-country') &&
+        overseasCountries.indexOf(req.sessionModel.get('application-country')) === -1 &&
+        overseasNotEligibleCountries.indexOf(req.sessionModel.get('application-country')) === -1 &&
+        overseasFirstHiddenAsRenew.indexOf(req.sessionModel.get('application-country')) === -1 &&
+        overseasNotAvailable.indexOf(req.sessionModel.get('application-country')) === -1 &&
+        req.sessionModel.get('application-country') !== "UK"
+    ) {
         return res.redirect(config.services.olc);
     }
     Base.prototype.successHandler.call(this, req, res, callback);
