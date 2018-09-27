@@ -9,8 +9,7 @@ var runSequence = require('run-sequence')
 
 gulp.task('default', function (done) {
   runSequence('generate-assets',
-    'watch',
-    'browser-sync', done)
+    'watch', done)
 })
 
 gulp.task('generate-assets', function (done) {
