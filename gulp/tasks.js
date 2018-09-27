@@ -15,11 +15,12 @@ gulp.task('default', function (done) {
 gulp.task('generate-assets', function (done) {
   runSequence('clean',
     'sass',
-    'copy-assets',
-    'copy-js', done)
+    'copy-assets', done)
 })
 
 gulp.task('watch', function (done) {
   runSequence('watch-sass',
-    'watch-assets', done)
+    'watch-assets',
+    'browser-sync', done)
+  console.log('App listening on port 3000')
 })

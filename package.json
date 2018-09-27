@@ -58,6 +58,7 @@
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "babel-polyfill": "^6.26.0",
+    "browser-sync": "^2.24.7",
     "gulp-babel": "^8.0.0",
     "gulp-nodemon": "^2.2.1",
     "watch": "^1.0.1"

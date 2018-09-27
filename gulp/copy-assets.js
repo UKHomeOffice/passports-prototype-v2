@@ -8,7 +8,7 @@ var gulp = require('gulp')
 var config = require('./config.json')
 var babel = require('gulp-babel');
 
-gulp.task('copy-assets', function () {
+gulp.task('copy-assets', ['copy-js'], function () {
   return gulp.src([config.paths.assets + 'images/**'])
     .pipe(gulp.dest(config.paths.public + 'images'))
 })
