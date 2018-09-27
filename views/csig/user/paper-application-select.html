@@ -5,8 +5,10 @@
 {{$content}}
   {{< hmpo-partials-form}}
     {{$form}}
-     <h1>Download PDF</h1>
-     <p>I'm sure I want to continue this application on paper.</p>
+     <h1>Use a paper form</h1>
+     <p>You need to print the paper form and give it to someone who can confirm your identity.</p>
+     <h2>Do you want to download the paper form?</h2>
+     <p class="form-hint" id="dob-hint">You'll no longer be able to ask someone to do this online.</p>
      {{#radio-group}}confirm-csig-paper{{/radio-group}}
      {{#input-submit}}{{/input-submit}}
     {{/form}}
