@@ -20,6 +20,7 @@
       </header>
       
       <h2>What you need to do</h2>
+
       {{#nunjucks}}
       {% if values['document-list'] or values['application-for-someone-else'] or values['change-of-name-reason'] 
           or (values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' 
@@ -29,6 +30,9 @@
         <h3> Send us your old passport </h3>
       {% endif %}
       {{/nunjucks}}
+
+      {{> partials-csig-sidebar}}
+
       <p>We can't complete your application without it. You don't need to include a covering letter.</p>
       
       <p>HM Passport Office<br>
@@ -67,9 +71,6 @@
   {{/ hmpo-partials-form}}
   {{> partials-tracking-tracking-fta-links}} 
 {{/content}}
-{{$sidebar}}
-  {{> partials-csig-sidebar}}
-{{/sidebar}}
 
 {{/ layout-csig}}
 

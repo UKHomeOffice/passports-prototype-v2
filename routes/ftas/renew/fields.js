@@ -1350,6 +1350,7 @@ module.exports = {
             value: 'What is your relationship to the applicant?',
             className: 'visuallyhidden'
         },
+        className: 'inline',
         options: [{
                 value: 'Mother',
                 label: 'Mother'
@@ -1360,7 +1361,8 @@ module.exports = {
             },
             {
                 value: 'Social Worker',
-                label: 'Social Worker'
+                label: 'Social Worker',
+                toggle: "relationship-social-worker"
             },
             {
                 value: 'Other',

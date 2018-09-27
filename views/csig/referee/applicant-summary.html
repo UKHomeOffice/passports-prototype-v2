@@ -8,31 +8,18 @@
     <h1 class="heading-large">Confirm your answers</h1>
 {{/header}}
 {{$content}}
-<p>It looks like you're not eligible to do this for this applicant. Please confirm your answers.</p>
-{{#values.csig-child}}
-  <img src="../../public/images/thumbnail-child.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
-{{/values.csig-child}}
-{{^values.csig-child}}
-  <img src="../../public/images/photoguide/csig-confirm.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
-{{/values.csig-child}}
+  {{#values.csig-child}}
+    <p>It looks like you're not eligible to do this for Suzanne Angela Smith. Please confirm your answers.</p>
+  {{/values.csig-child}}
+  {{^values.csig-child}}
+    <p>It looks like you're not eligible to do this for the applicant. Please confirm your answers.</p>
+  {{/values.csig-child}}
 
-<br>
-<br>
+
 <div class="confirmation">
   <div class="section old-passport-details">
-    {{#values.csig-child}}
-    <dl class="child-relationship">
-        <dt class="column-half">Are they Patrick Michael Smith's mother?
-        <dd class="column-half">
-          <p>{{values.child-relationship}}</p>
-          <div class="button-wrapper">
-              <a href="javascript:history.back()">Change<span class="visuallyhidden"> expiry date</span></a>
-          </div>
-        </dd>
-    </dl>
-    {{/values.csig-child}}
       <dl class="passport-number">
-          <dt class="column-half">Do you know the applicant personally, for example as a friend, neighbour or colleague?</dt>
+          <dt class="column-half">Do you know them personally, for example as a friend, neighbour or colleague?</dt>
           <dd class="column-half">
             <p>{{values.applicant-check-friend}}</p>
             <div class="button-wrapper">
@@ -42,7 +29,7 @@
       </dl>
       <dl class="expiry-date">
           <dt class="column-half">Are you related to, in a relationship with or living at the same address
-    as the applicant?</dt>
+    as them?</dt>
           <dd class="column-half">
             <p>{{values.applicant-check-address}}</p>
             <div class="button-wrapper">
@@ -51,7 +38,7 @@
           </dd>
       </dl>
       <dl class="expiry-date">
-          <dt class="column-half">How do you know the applicant?</dt>
+          <dt class="column-half">How do you know them?</dt>
           <dd class="column-half">
             <p>{{values.relationship}}</p>
             <div class="button-wrapper">
@@ -60,7 +47,7 @@
           </dd>
       </dl>
       <dl class="passport-number">
-          <dt class="column-half"> How many years have you known the applicant?</dt>
+          <dt class="column-half"> How many years have you known them?</dt>
           <dd class="column-half">
             <p>{{values.knowntime}}</p>
             <div class="button-wrapper">

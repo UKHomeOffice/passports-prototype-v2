@@ -9,6 +9,9 @@ util.inherits(Controller, Base)
 
 Controller.prototype.get = function (req, res, next) {
 
+	//Set the loggedIn flag false
+	req.sessionModel.set('loggedIn', false);
+
 	req.sessionModel.set('pex', req.query.pex);
 	req.sessionModel.set('tracking-status', '');
 	req.sessionModel.set('csig-type', '');
@@ -20,7 +23,7 @@ Controller.prototype.get = function (req, res, next) {
 		req.sessionModel.set('csig-type', req.query.csigtype)
 	}
 	console.log(req.query)
-    Base.prototype.get.call(this, req, res, next);
+	Base.prototype.get.call(this, req, res, next);
 
 };
 

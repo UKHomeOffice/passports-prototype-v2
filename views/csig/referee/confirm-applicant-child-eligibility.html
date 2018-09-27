@@ -1,0 +1,36 @@
+{{< layout-referee}}
+
+
+{{$pageTitle}}How you know Suzanne Angela Smith{{/pageTitle}}
+
+
+{{$header}}
+  <h1>How you know Suzanne Angela Smith</h1>
+{{/header}}
+
+
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+    {{$form}}
+     <label class="form-label" for="">Do you know them personally, for example as a friend, neighbour or colleague?</label>
+      {{#radio-group}}applicant-check-friend{{/radio-group}}
+      <label class="form-label" for="">Are you related to, in a relationship with or living at the same address
+  as them?</label>
+      {{#radio-group}}applicant-check-address{{/radio-group}}
+      <div class="form-group">
+        <label class="form-label" for="">How do you know them?</label>
+        {{#input-text}}relationship{{/input-text}}
+      </div>
+      <div class="form-group form-date">
+        <label class="form-label" for="">How many years have you known them?</label>
+        {{#input-text}}knowntime{{/input-text}}
+      </div>
+      {{#input-submit}}{{/input-submit}}
+
+    {{/form}}
+{{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout-referee}}
