@@ -55,11 +55,10 @@
     "van11y-accessible-tab-panel-aria": "git+https://github.com/gavboulton/van11y-accessible-tab-panel-aria.git#feature/keep-href"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "babel-polyfill": "^6.26.0",
-    "gulp-babel": "^8.0.0",
     "gulp-nodemon": "^2.2.1",
+    "gulp-uglify": "^3.0.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
     "watch": "^1.0.1"
   }
 }
