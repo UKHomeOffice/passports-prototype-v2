@@ -8,7 +8,6 @@
 var gulp = require('gulp')
 var sass = require('gulp-sass')
 var sourcemaps = require('gulp-sourcemaps')
-var bs = require('browser-sync').create();
 
 var config = require('./config.json')
 
@@ -23,7 +22,4 @@ gulp.task('sass', function () {
     }).on('error', sass.logError))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.paths.public + '/stylesheets/'))
-    .pipe(bs.reload({
-      stream: true
-    }))
 })
