@@ -6,7 +6,10 @@
 
 var gulp = require('gulp')
 var config = require('./config.json')
-var babel = require('gulp-babel');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
+var uglify = require('gulp-uglify')
 
 gulp.task('copy-assets', ['copy-js'], function () {
   return gulp.src([config.paths.assets + 'images/**'])
@@ -14,12 +17,11 @@ gulp.task('copy-assets', ['copy-js'], function () {
 })
 
 gulp.task('copy-js', function () {
-  return gulp.src([
-      'node_modules/babel-polyfill/dist/polyfill.js',
-      config.paths.assets + 'javascripts/**'
-    ])
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
+  return browserify(config.paths.assets + 'javascripts/app.js')
+    .bundle()
+    .pipe(source('app.js')) // Readable Stream -> Stream Of Vinyl Files
+    .pipe(buffer()) // Vinyl Files -> Buffered Vinyl Files
+    // Gulp Plugins Here
+    .pipe(uglify())
     .pipe(gulp.dest(config.paths.public + 'javascripts'))
 })
