@@ -8,5 +8,5 @@ gulp.task('browser-sync', function () {
         notify: false,
         open: false
     });
-    gulp.watch("views/**.html").on('change', reload);
+    gulp.watch("views/**").on('change', reload);
 });
