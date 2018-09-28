@@ -74,10 +74,10 @@
 
         {# Pop documents, populated in fta.njk, from start of array #}
         {% if values['old-blue'] %}
-            {% set documents = (documents.shift(), documents) %} {# Remove old passport from array #}
-            {% set documents = (documents.shift(), documents) %} {# Remove full birth or adoption certificate from array #}
+            {% set documents = (documents.shift(), documents) %} {# Remove `old passport` from array #}
+            {% set documents = (documents.shift(), documents) %} {# Remove `full birth or adoption certificate` or `naturalisation or registration certificate` from array #}
         {% else %}
-            {% set documents = (documents.shift(), documents) %} {# Remove full birth or adoption certificate from array #}
+            {% set documents = (documents.shift(), documents) %} {# Remove `full birth or adoption certificate` or `naturalisation or registration certificate` from array #}
         {% endif %}
 
         <h2 class="govuk-heading-l">Applicant's documents</h2>
@@ -95,7 +95,9 @@
                         {% if values['old-blue'] %} {# Add back after being removed from array #}
                             <li>old passport</li>
                         {% endif %}
-                        {% if not values['naturalisation-registration-certificate'] %} {# Replace with naturalisation or registration certificate #}
+                        {% if values['naturalisation-registration-certificate'] %} {# Replace with `naturalisation or registration certificate` #}
+                            <li>naturalisation or registration certificate</li>
+                        {% elif not values['naturalisation-registration-certificate'] %}
                             <li>full birth or adoption certificate in your birth gender</li>
                         {% endif %}
                         <li>a letter from your doctor or medical consultant confirming that your change of gender is likely to be permanent</li>
@@ -147,7 +149,9 @@
                             <li>old passport</li>
                         {% endif %}
                         <li>gender recognition certificate</li>
-                        {% if not values['naturalisation-registration-certificate'] %} {# Replace with naturalisation or registration certificate #}
+                        {% if values['naturalisation-registration-certificate'] %} {# Replace with `naturalisation or registration certificate` #}
+                            <li>naturalisation or registration certificate</li>
+                        {% elif not values['naturalisation-registration-certificate'] %}
                             <li>full birth or adoption certificate in your birth gender</li>
                         {% endif %}
                         {% for item in documents %}
@@ -167,6 +171,9 @@
                     <ul class="list list-bullet">
                         {% if values['old-blue'] %} {# Add back after being removed from array #}
                             <li>old passport</li>
+                        {% endif %}
+                        {% if values['naturalisation-registration-certificate'] %} {# Add back after being removed from array #}
+                            <li>naturalisation or registration certificate</li>
                         {% endif %}
                         <li>full birth or adoption certificate in your acquired gender</li>
                         {% for item in documents %}
