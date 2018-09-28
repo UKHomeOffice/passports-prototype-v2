@@ -9,7 +9,7 @@ var runSequence = require('run-sequence')
 
 gulp.task('default', function (done) {
   runSequence('generate-assets',
-    'watch', done)
+    'watch', 'browser-sync', done)
 })
 
 gulp.task('generate-assets', function (done) {
@@ -20,7 +20,6 @@ gulp.task('generate-assets', function (done) {
 
 gulp.task('watch', function (done) {
   runSequence('watch-sass',
-    'watch-assets',
-    'browser-sync', done)
+    'watch-assets', done)
   console.log('App listening on port 3000')
 })
