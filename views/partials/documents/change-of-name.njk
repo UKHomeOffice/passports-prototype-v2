@@ -95,7 +95,9 @@
                         {% if values['old-blue'] %} {# Add back after being removed from array #}
                             <li>old passport</li>
                         {% endif %}
-                        <li>full birth or adoption certificate in your birth gender</li>
+                        {% if not values['naturalisation-registration-certificate'] %} {# Replace with naturalisation or registration certificate #}
+                            <li>full birth or adoption certificate in your birth gender</li>
+                        {% endif %}
                         <li>a letter from your doctor or medical consultant confirming that your change of gender is likely to be permanent</li>
                         {% for item in documents %}
                             <li>{{item}}</li>
@@ -145,7 +147,9 @@
                             <li>old passport</li>
                         {% endif %}
                         <li>gender recognition certificate</li>
-                        <li>full birth or adoption certificate in your birth gender</li>
+                        {% if not values['naturalisation-registration-certificate'] %} {# Replace with naturalisation or registration certificate #}
+                            <li>full birth or adoption certificate in your birth gender</li>
+                        {% endif %}
                         {% for item in documents %}
                             <li>{{item}}</li>
                         {% endfor %}
