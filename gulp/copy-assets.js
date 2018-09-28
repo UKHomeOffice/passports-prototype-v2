@@ -22,6 +22,6 @@ gulp.task('copy-js', function () {
     .pipe(source('app.js')) // Readable Stream -> Stream Of Vinyl Files
     .pipe(buffer()) // Vinyl Files -> Buffered Vinyl Files
     // Gulp Plugins Here
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(config.paths.public + 'javascripts'))
 })
