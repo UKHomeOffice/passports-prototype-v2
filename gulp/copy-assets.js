@@ -11,7 +11,7 @@ var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var uglify = require('gulp-uglify')
 
-gulp.task('copy-assets', function () {
+gulp.task('copy-assets', ['copy-js'], function () {
   return gulp.src([config.paths.assets + 'images/**'])
     .pipe(gulp.dest(config.paths.public + 'images'))
 })
@@ -22,6 +22,6 @@ gulp.task('copy-js', function () {
     .pipe(source('app.js')) // Readable Stream -> Stream Of Vinyl Files
     .pipe(buffer()) // Vinyl Files -> Buffered Vinyl Files
     // Gulp Plugins Here
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(config.paths.public + 'javascripts'))
 })
