@@ -6,8 +6,11 @@
   right: 0;
   padding: 10px;
   text-align: right;
+  z-index: 1;
 }
-.button__fill, .button__fill:visited {
+
+.button__fill,
+.button__fill:visited {
   background: #6F777B;
   padding: 2px 6px;
   cursor: pointer;
@@ -15,6 +18,7 @@
   text-decoration: none;
   display: inline-block;
 }
+
 .button__fill:hover {
   color: white;
 }
