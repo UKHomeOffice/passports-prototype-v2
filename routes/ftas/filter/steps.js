@@ -40,13 +40,12 @@ module.exports = {
         next: '/lost-stolen',
         forks: [{
             target: '/dob',
-            condition: function(req, res) {
+            condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == false;
             }
         }]
     },
-    '/you-need-a-different-service': {
-    },
+    '/you-need-a-different-service': {},
     '/lost-stolen': {
         fields: [
             'lost-stolen'
@@ -71,9 +70,8 @@ module.exports = {
         next: '/passport-date-of-issue',
         forks: [{
             target: '/naturalisation-registration-details',
-            condition: function(req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false &&
-                req.session['hmpo-wizard-common']['16-or-older'] == true;
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false
             }
         }]
         // forks: [
