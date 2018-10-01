@@ -9,13 +9,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "clean": "rm -rf public/; mkdir public",
-    "sass": "rm -rf public/stylesheets; mkdir public/stylesheets && npm-sass ./assets/sass/app.scss > ./public/stylesheets/app.css",
-    "js": "rm -rf public/javascripts; mkdir public/javascripts && browserify -r hmpo-frontend-toolkit -r underscore ./assets/javascripts/app.js | uglifyjs -c > ./public/javascripts/app.js",
-    "postinstall": "npm run clean && npm run sass && npm run js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:js": "watch 'npm run js' ./assets/javascripts",
-    "watch:sass": "watch 'npm run sass' ./assets/sass"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -38,6 +32,11 @@
     "express-partial-templates": "^0.2.0",
     "express-session": "^1.14.0",
     "govuk-elements-sass": "2.1.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-util": "^3.0.7",
     "hmpo-form-wizard": "^5.1.0",
     "hmpo-frontend-toolkit": "^7.0.0",
     "hmpo-template-mixins": "^4.5.0",
@@ -49,11 +48,18 @@
     "npm-sass": "^1.2.0",
     "nunjucks": "^3.1.3",
     "redis": "^2.6.2",
+    "require-dir": "^1.0.0",
+    "run-sequence": "^2.2.1",
     "typeahead-aria": "git+https://github.com/UKHomeOffice/typeahead-aria.git",
     "uglify-js": "^3.3.16",
     "van11y-accessible-tab-panel-aria": "git+https://github.com/gavboulton/van11y-accessible-tab-panel-aria.git#feature/keep-href"
   },
   "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-uglify": "^3.0.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
     "watch": "^1.0.1"
   }
 }

@@ -66,81 +66,198 @@
             <li>visa or residence permit (a colour photocopy will do)</li>
         {% endif %}
     </ul>
-    <!-- Add hr if chane of name reason is Divorce or dissolutiobn -->
+
     <hr>
 
 {% elif values['change-of-name-reason'] == 'Gender-transition' %}
-    <h2 class="govuk-heading-l">Applicant's documents</h2>
-    <h3 class="govuk-heading-m">Do you have a Gender Recognition Certificate?</h3>
-    <div class="accordion" id="name-change-accordion">
+    {% if not values['passport-before'] or values['old-blue'] %} {# FTA #}
 
-        <div class="accordion-section" id="gender-recognition-certificate-false">
-            <div class="accordion-section-header">
-                <h2 class="heading-small">I don't have a Gender Recognition Certificate</h2>
+        {# Pop documents, populated in fta.njk, from start of array #}
+        {% if values['old-blue'] %}
+            {% set documents = (documents.shift(), documents) %} {# Remove `old passport` from array #}
+            {% set documents = (documents.shift(), documents) %} {# Remove `full birth or adoption certificate` or `naturalisation or registration certificate` from array #}
+        {% else %}
+            {% set documents = (documents.shift(), documents) %} {# Remove `full birth or adoption certificate` or `naturalisation or registration certificate` from array #}
+        {% endif %}
+
+        <h2 class="govuk-heading-l">Applicant's documents</h2>
+        <h3 class="govuk-heading-m">Do you have a birth certificate in your acquired gender, or a gender recognition certificate?</h3>
+        <div class="accordion" id="name-change-accordion">
+
+            <div class="accordion-section" id="gender-recognition-certificate-false">
+                <div class="accordion-section-header">
+                    <h2 class="heading-small">I don't have a gender recognition certificate, or a birth certificate in my acquired gender</h2>
+                </div>
+
+                <div class="accordion-section-body">
+                    <h3 class="govuk-heading-m">Send the following:</h3>
+                    <ul class="list list-bullet">
+                        {% if values['old-blue'] %} {# Add back after being removed from array #}
+                            <li>old passport</li>
+                        {% endif %}
+                        {% if values['naturalisation-registration-certificate'] %} {# Replace with `naturalisation or registration certificate` #}
+                            <li>naturalisation or registration certificate</li>
+                        {% elif not values['naturalisation-registration-certificate'] %}
+                            <li>full birth or adoption certificate in your birth gender</li>
+                        {% endif %}
+                        <li>a letter from your doctor or medical consultant confirming that your change of gender is likely to be permanent</li>
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
+                    </ul>
+
+                    <h3 class="govuk-heading-m">And 1 of the following that proves you changed your name:</h3>
+                    <ul class="list list-bullet">
+                        {% if values['apply-uk'] %}
+                            <li>deed poll</li>
+                        {% elif not values['apply-uk'] %} {# OVS Group 1 #}
+                            <li>enrolled deed poll</li>
+                        {% endif %}
+                        <li>change of name deed</li>
+                        <li>statutory declaration</li>
+                        <li>affidavit</li>
+                    </ul>
+
+                    <h3 class="govuk-heading-m">And 1 of the following from the last 12 months, that shows you’re using your new name:</h3>
+                    <ul class="list list-bullet">
+                        {% if values['apply-uk'] %}
+                            <li>utility bill</li>
+                            <li>bank statement</li>
+                        {% endif %}
+                        <li>letter from your employer</li>
+                        <li>driving licence</li>
+                        <li>medical card</li>
+                        <li>letter from your local council or a government department</li>
+                        {% if not values['apply-uk'] %} {# OVS Group 1 #}
+                            <li>national identity card (a colour photocopy will do)</li>
+                            <li>voter's card</li>
+                            <li>visa or residence permit (a colour photocopy will do)</li>
+                        {% endif %}
+                    </ul>
+                </div>
             </div>
 
-            <div class="accordion-section-body">
-                <h3 class="govuk-heading-m">Send the following:</h3>
-                <ul class="list list-bullet">
-                    {% for item in documents %}
-                        <li>{{item}}</li>
-                    {% endfor %}
-                    <li>a letter from your doctor or medical consultant confirming that your change of gender is likely to be permanent</li>
-                </ul>
+            <div class="accordion-section" id="gender-recognition-certificate-true">
+                <div class="accordion-section-header">
+                    <h2 class="heading-small">I have a gender recognition certificate</h2>
+                </div>
 
-                <h3 class="govuk-heading-m">And 1 of the following that proves you changed your name:</h3>
-                <ul class="list list-bullet">
-                    {% if values['apply-uk'] %}
-                        <li>deed poll</li>
-                    {% elif not values['apply-uk'] %} {# OVS Group 1 #}
-                        <li>enrolled deed poll</li>
-                    {% endif %}
-                    <li>change of name deed</li>
-                    <li>statutory declaration</li>
-                    <li>affidavit</li>
-                </ul>
-
-                <h3 class="govuk-heading-m">And 1 of the following from the last 12 months, that shows you’re using your new name:</h3>
-                <ul class="list list-bullet">
-                    {% if values['apply-uk'] %}
-                        <li>utility bill</li>
-                        <li>bank statement</li>
-                    {% endif %}
-                    <li>letter from your employer</li>
-                    <li>driving licence</li>
-                    <li>medical card</li>
-                    <li>letter from your local council or a government department</li>
-                    {% if not values['apply-uk'] %} {# OVS Group 1 #}
-                        <li>national identity card (a colour photocopy will do)</li>
-                        <li>voter's card</li>
-                        <li>visa or residence permit (a colour photocopy will do)</li>
-                    {% endif %}
-                </ul>
+                <div class="accordion-section-body">
+                    <h3 class="govuk-heading-m">Send the following:</h3>
+                    <ul class="list list-bullet">
+                        {% if values['old-blue'] %} {# Add back after being removed from array #}
+                            <li>old passport</li>
+                        {% endif %}
+                        <li>gender recognition certificate</li>
+                        {% if values['naturalisation-registration-certificate'] %} {# Replace with `naturalisation or registration certificate` #}
+                            <li>naturalisation or registration certificate</li>
+                        {% elif not values['naturalisation-registration-certificate'] %}
+                            <li>full birth or adoption certificate in your birth gender</li>
+                        {% endif %}
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
+
+            <div class="accordion-section" id="gender-recognition-certificate-false">
+                <div class="accordion-section-header">
+                    <h2 class="heading-small">I have a birth certificate in my acquired gender</h2>
+                </div>
+
+                <div class="accordion-section-body">
+                    <h3 class="govuk-heading-m">Send the following:</h3>
+                    <ul class="list list-bullet">
+                        {% if values['old-blue'] %} {# Add back after being removed from array #}
+                            <li>old passport</li>
+                        {% endif %}
+                        {% if values['naturalisation-registration-certificate'] %} {# Add back after being removed from array #}
+                            <li>naturalisation or registration certificate</li>
+                        {% endif %}
+                        <li>full birth or adoption certificate in your acquired gender</li>
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
         </div>
 
-        <div class="accordion-section" id="gender-recognition-certificate-true">
-            <div class="accordion-section-header">
-                <h2 class="heading-small">I do have a Gender Recognition Certificate</h2>
+    {% elif values['passport-before'] %} {# Renewal #}
+        <h2 class="govuk-heading-l">Applicant's documents</h2>
+        <h3 class="govuk-heading-m">Do you have a gender recognition certificate?</h3>
+        <div class="accordion" id="name-change-accordion">
+
+            <div class="accordion-section" id="gender-recognition-certificate-false">
+                <div class="accordion-section-header">
+                    <h2 class="heading-small">I don't have a gender recognition certificate</h2>
+                </div>
+
+                <div class="accordion-section-body">
+                    <h3 class="govuk-heading-m">Send the following:</h3>
+                    <ul class="list list-bullet">
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
+                        <li>a letter from your doctor or medical consultant confirming that your change of gender is likely to be permanent</li>
+                    </ul>
+
+                    <h3 class="govuk-heading-m">And 1 of the following that proves you changed your name:</h3>
+                    <ul class="list list-bullet">
+                        {% if values['apply-uk'] %}
+                            <li>deed poll</li>
+                        {% elif not values['apply-uk'] %} {# OVS Group 1 #}
+                            <li>enrolled deed poll</li>
+                        {% endif %}
+                        <li>change of name deed</li>
+                        <li>statutory declaration</li>
+                        <li>affidavit</li>
+                    </ul>
+
+                    <h3 class="govuk-heading-m">And 1 of the following from the last 12 months, that shows you’re using your new name:</h3>
+                    <ul class="list list-bullet">
+                        {% if values['apply-uk'] %}
+                            <li>utility bill</li>
+                            <li>bank statement</li>
+                        {% endif %}
+                        <li>letter from your employer</li>
+                        <li>driving licence</li>
+                        <li>medical card</li>
+                        <li>letter from your local council or a government department</li>
+                        {% if not values['apply-uk'] %} {# OVS Group 1 #}
+                            <li>national identity card (a colour photocopy will do)</li>
+                            <li>voter's card</li>
+                            <li>visa or residence permit (a colour photocopy will do)</li>
+                        {% endif %}
+                    </ul>
+                </div>
             </div>
 
-            <div class="accordion-section-body">
-                <h3 class="govuk-heading-m">Send the following:</h3>
-                <ul class="list list-bullet">
-                    {% for item in documents %}
-                        <li>{{item}}</li>
-                    {% endfor %}
-                </ul>
+            <div class="accordion-section" id="gender-recognition-certificate-true">
+                <div class="accordion-section-header">
+                    <h2 class="heading-small">I do have a gender recognition certificate</h2>
+                </div>
 
-                <h3 class="govuk-heading-m">And 1 of the following:</h3>
-                <ul class="list list-bullet">
-                    <li>Gender Recognition Certificate</li>
-                    <li>a new birth or adoption certificate in your acquired gender</li>
-                </ul>
+                <div class="accordion-section-body">
+                    <h3 class="govuk-heading-m">Send the following:</h3>
+                    <ul class="list list-bullet">
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
+                    </ul>
+
+                    <h3 class="govuk-heading-m">And 1 of the following:</h3>
+                    <ul class="list list-bullet">
+                        <li>gender recognition certificate</li>
+                        <li>a new birth or adoption certificate in your acquired gender</li>
+                    </ul>
+                </div>
             </div>
+
         </div>
-
-    </div>
+    {% endif %}
 
 {% elif values['change-of-name-reason'] == 'I-changed-my-name-another-way' %}
     <h2 class="govuk-heading-l">Applicant's documents</h2>
