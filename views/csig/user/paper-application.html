@@ -1,0 +1,47 @@
+{{< layout-csig}}
+
+{{$pageTitle}}Track a passport application{{/pageTitle}}
+{{$back}}
+{{/back}}
+{{$content}}
+  {{< hmpo-partials-form}}
+    {{$form}}
+      <header class="update-notice update-notice--grey">
+        <h1>Ask someone to confirm<br>your identity</h1>
+      </header>
+      {{#nunjucks}}
+        {% if values['csig-type'] == 'examiner' %}
+          <p>We can't work on your application until this is done.</p>
+        {% else %}
+        <p>We can't work on your application until this is done.</p>
+        <p>We'll let you know when and where to send your documents &ndash; we can't receive them until your identity is confirmed.</p>
+        {% endif %}
+      {{/nunjucks}}
+
+      <input type="hidden" name="renominate" id="renominate" value="false">
+      {{#input-submit}}{{/input-submit}}
+      <p>If you can't find someone who can do this online, you can <a href="paper-application-select">use a paper form</a>.</p>
+      <hr>
+      <h2>Application history</h2>
+      <article>
+        <table>
+          <tbody>
+            <tr>
+              <td>Ask someone to confirm your identity</td>
+              <td>10:05am on 19 July 2018</td>
+            </tr>
+            <tr>
+              <td>Application submitted</td>
+              <td>10:05am on 19 July 2018</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    {{/form}}
+  {{/ hmpo-partials-form}}
+{{/content}}
+{{$sidebar}}
+  {{> partials-csig-sidebar}}
+{{/sidebar}}
+
+{{/ layout-csig}}

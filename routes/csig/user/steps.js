@@ -9,6 +9,11 @@ module.exports = {
     next: '/need-csig',
     backLink: './',
     forks: [{
+      target: '/paper-application',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'paper-csig';
+      }
+    }, {
       target: '/send-docs',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'send-docs';
@@ -22,7 +27,7 @@ module.exports = {
       target: '/application-submitted',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'application-submitted';
-      }
+      } 
     }],
   },
   '/waiting-for-old-pass': {
@@ -52,6 +57,23 @@ module.exports = {
     next: '../csig/'
   },
   '/application-submitted': {
+    next: '../csig/'
+  },
+  '/paper-application-select': {
+    fields: ['confirm-csig-paper'],
+    next: '/paper-application-confirmed',
+    forks: [{
+      target: '/paper-application',
+      condition: {
+          field: 'confirm-csig-paper',
+          value: false
+      }
+    }]
+  },
+  '/paper-application': {
+    next: '/../user-contact',
+  },
+  '/paper-application-confirmed': {
     next: '../csig/'
   }
 };

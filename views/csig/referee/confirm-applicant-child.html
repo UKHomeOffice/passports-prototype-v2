@@ -22,7 +22,14 @@
       </div>
       {{#radio-group}}applicant-check-child{{/radio-group}}
       <label class="form-label" for="">Were they born in Dagenham?</label>
-      {{#radio-group}}child-place-of-birth{{/radio-group}}
+      <div class="form-group">
+        {{#radio-group}}child-place-of-birth{{/radio-group}}
+        <div id="please-continue" class="reveal js-hidden" style="margin-top: -20px">
+          <div class="panel panel-border-narrow">
+            <p>We'll look into this – please continue.</p>
+          </div>
+        </div>
+      </div>
       {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}
