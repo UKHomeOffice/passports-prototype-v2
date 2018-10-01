@@ -29,11 +29,15 @@
                         <h2>Send us your documents</h2>
                         <p style="margin-left:32px;">They need to be originals. We'll tell you what you need to send.</p>
                     </li>
+                    {{#nunjucks}}
+                    {% if values['applicant-age'] > 16 %} {# Not required for FTC #}
                     <li>
                         <span class="circle circle-step">5</span>
                         <h2>Go for an interview</h2>
                         <p style="margin-left:32px;">If you need an <a href="../../guidance/identity-interviews" target="_blank">interview</a>, we'll write to you with the details.</p>
                     </li>
+                    {% endif %}
+                    {{/nunjucks}}
                 </ul>
                 <br>
                 <!-- <div class="panel panel-border-narrow">
