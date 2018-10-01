@@ -110,7 +110,7 @@ var values = {
 function clicks() {
     // Filter questions
     $('#apply-uk-true').click();
-    $('#passport-before-false').click();
+    $('#passport-before-true').click();
     $('#lost-stolen-false').click();
     $('#name-changed-false').click();
     $('#uncancelled-No').click();
