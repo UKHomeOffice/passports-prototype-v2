@@ -71,7 +71,7 @@ module.exports = {
     }]
   },
   '/paper-application': {
-    next: '../csig/'
+    next: '/../user-contact',
   },
   '/paper-application-confirmed': {
     next: '../csig/'
