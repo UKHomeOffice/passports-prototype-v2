@@ -77,7 +77,7 @@ module.exports = {
         }]
     },
     '/confirm-applicant-parents': {
-        fields: ['child-mother', 'child-mother-year-of-birth', 'child-father', 'child-father-year-of-birth'],
+        fields: ['child-mother', 'child-father'],
         next: '/confirm-applicant-address'
     },
     '/applicant-photo-fail': {

@@ -11,23 +11,58 @@
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-
     <p>We need to check that the applicant can get a UK passport.</p>
-      <h2>Mother or parent 1</h2>
-      <label class="form-label" for="">Is Suzanne Smith their mother or parent 1?</label>
-      {{#radio-group}}child-mother{{/radio-group}}
-
-      <label class="form-label" for="">Was Suzanne Smith born in 1982?</label>
-      {{#radio-group}}child-mother-year-of-birth{{/radio-group}}
+    <h2>Mother or parent 1</h2>
+    <div class="confirmation">
+      <div class="section" style="margin-bottom: 10px">
+        <dl class="expiry-date">
+            <dt class="column-half">First and middle names</dt>
+            <dd class="column-half">
+              <p>Suzanne Angela </p>
+            </dd>
+        </dl>
+        <dl class="expiry-date">
+            <dt class="column-half">Last name</dt>
+            <dd class="column-half">
+              <p>Smith</p>
+            </dd>
+        </dl>
+        <dl class="expiry-date">
+            <dt class="column-half">Year of birth</dt>
+            <dd class="column-half">
+              <p>1982</p>
+            </dd>
+        </dl>
+      </div>
+    </div>
+    <label class="form-label" for="">Are these details correct?</label>
+    {{#radio-group}}child-mother{{/radio-group}}
+        <br>
       <h2>Father or parent 2</h2>
-      <label class="form-label" for="">Is Jason Smith their father or parent 2?</label>
-      {{#radio-group}}child-father{{/radio-group}}
-
-      <label class="form-label" for="">Was Jason Smith born in 1984?</label>
-      {{#radio-group}}child-father-year-of-birth{{/radio-group}}
-
-      <!-- <label class="form-label-bold" for="">Declaration name</label>
-      {{#radio-group}}child-declaration-name{{/radio-group}} -->
+      <div class="confirmation">
+      <div class="section" style="margin-bottom: 10px">
+        <dl class="expiry-date">
+            <dt class="column-half">First and middle names</dt>
+            <dd class="column-half">
+              <p>Jason Peter</p>
+            </dd>
+        </dl>
+        <dl class="expiry-date">
+            <dt class="column-half">Last name</dt>
+            <dd class="column-half">
+              <p>Smith</p>
+            </dd>
+        </dl>
+        <dl class="expiry-date">
+            <dt class="column-half">Year of birth</dt>
+            <dd class="column-half">
+              <p>1980</p>
+            </dd>
+        </dl>
+      </div>
+    </div>
+    <label class="form-label" for="">Are these details correct?</label>
+    {{#radio-group}}child-father{{/radio-group}}
 
       {{#input-submit}}{{/input-submit}}
     {{/form}}
