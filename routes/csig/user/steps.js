@@ -5,6 +5,7 @@ module.exports = {
     next: '/track-email'
   },
   '/track-email': {
+    controller: require('../../../controllers/login'),
     fields: ['age-day', 'age-month', 'age-year'],
     next: '/need-csig',
     backLink: './',
@@ -27,7 +28,7 @@ module.exports = {
       target: '/application-submitted',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'application-submitted';
-      } 
+      }
     }],
   },
   '/waiting-for-old-pass': {
@@ -65,8 +66,8 @@ module.exports = {
     forks: [{
       target: '/paper-application',
       condition: {
-          field: 'confirm-csig-paper',
-          value: false
+        field: 'confirm-csig-paper',
+        value: false
       }
     }]
   },
