@@ -24,7 +24,8 @@
       <h2>What happens next</h2>
       <p>After you've supplied a new photo, we check it. If there are no more problems, 
       we issue your new passport. If there is another problem, we will notify you.</p>
-
+      {{> partials-csig-sidebar-no-docs}}
+      <hr>
       <h2>Application history</h2>
       <article>
         <table>
@@ -57,9 +58,6 @@
   {{/ hmpo-partials-form}}
   {{> partials-tracking-tracking-con-links}} 
 {{/content}}
-{{$sidebar}}
-  {{> partials-csig-sidebar-no-docs}}
-{{/sidebar}}
 
 {{/ layout-csig}}
 
