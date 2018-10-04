@@ -192,7 +192,7 @@ module.exports = {
       },
       options: [
           { value: 'Yes', label: 'Yes' },
-          { value: 'No', label: 'No', toggle: 'please-continue' },
+          { value: 'No', label: 'No' },
       ],
       validate: [
         'required'
@@ -205,7 +205,7 @@ module.exports = {
       },
       options: [
         { value: true, label: 'Yes'},
-        { value: false, label: 'No', toggle: 'please-continue'}
+        { value: false, label: 'No'}
       ],
       className: 'inline',
       formatter: ['boolean'],
@@ -217,7 +217,7 @@ module.exports = {
       },
       options: [
         { value: true, label: 'Yes'},
-        { value: false, label: 'No', toggle: 'please-continue'}
+        { value: false, label: 'No'}
       ],
       className: 'inline',
       formatter: ['boolean'],
@@ -241,7 +241,7 @@ module.exports = {
       },
       options: [
         { value: true, label: 'Yes'},
-        { value: false, label: 'No', toggle: 'please-continue-2'}
+        { value: false, label: 'No'}
       ],
       className: 'inline',
       formatter: ['boolean'],
@@ -277,7 +277,7 @@ module.exports = {
       },
       options: [
         { value: 'Yes', label: 'Yes'},
-        { value: 'No', label: 'No', toggle: 'please-continue'}
+        { value: 'No', label: 'No'}
       ],
       className: 'inline',
       validate: ['required']
