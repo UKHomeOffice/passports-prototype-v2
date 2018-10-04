@@ -1,5 +1,7 @@
 @import "hmpo-frontend-toolkit/assets/stylesheets/app";
 
+@import "mixins/breakpoints";
+
 @import "modules/phase";
 @import "modules/nav-bar";
 @import "modules/app-photo";
@@ -18,75 +20,11 @@
 @import "modules/table-multiselect";
 @import "modules/task-list";
 @import "modules/update-notice";
+@import "modules/sidebar-panel";
 
-// Larger font sizes, based on the govuk front end
-
-// h1.govuk-heading-xl {
-//     margin-top: 28px;
-//     margin-bottom: 50px;
-//     font-size: 48px;
-// }
-//
-// h2.govuk-heading-l {
-//     margin-top: 40px;
-//     font-size: 36 px;
-// }
-//
-// h3.govuk-heading-m {
-//     margin-top: 30px;
-//     margin-bottom: 20px;
-//     font-size: 24px;
-// }
-//
-// h4.govuk-heading-s {
-//     margin-top: 20px;
-//     font-size: 19px;
-// }
-
-// inherited junk that needs tidying up. at a guess it looks like the compiled scss from
-// the frontend toolkit.
 @import "shame/tidy-this-up";
 
-@mixin breakpoint($point) {
-    @if $point==mobile {
-        @media only screen and (max-width: 768px) {
-            @content;
-        }
-    }
-
-    @else if $point==tablet {
-        @media only screen and (min-width: 769px) and (max-width: 1024px) {
-            @content;
-        }
-    }
-
-    @else if $point==desktop {
-        @media only screen and (min-width: 1024px) {
-            @content;
-        }
-    }
-}
-
-// mixin required for different screen sizes
-@mixin respond-to($media) {
-    @if $media==mobile {
-        @media only screen and (max-width: 768px) {
-            @content;
-        }
-    }
-
-    @else if $media==tablet {
-        @media only screen and (min-width: 769px) and (max-width: 1024px) {
-            @content;
-        }
-    }
-
-    @else if $media==desktop {
-        @media only screen and (min-width: 1024px) {
-            @content;
-        }
-    }
-}
+// and this junk below.............
 
 .app-c-print-link {
     margin-top: 2em;
@@ -101,57 +39,6 @@
 
 .icon {
     float: right;
-}
-
-// Tracking
-
-.app-ref {
-    display: none;
-
-    @include breakpoint(desktop) {
-        display: block;
-    }
-
-    @include breakpoint(tablet) {
-        display: block;
-    }
-}
-
-.photo-preview {
-    @include breakpoint(desktop) {
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 0 15px;
-        float: left;
-        width: 30%;
-    }
-
-    @include breakpoint(tablet) {
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 0 15px;
-        float: left;
-        width: 30%;
-    }
-
-    @include breakpoint(tablet) {
-        margin-bottom: 1.25em
-    }
-
-    .sidebar-task {
-        @include breakpoint(mobile) {
-            .sidebar-task__panel {
-                padding: 0px 0px 15px 0;
-                border: none !important;
-
-                h3 {
-                    display: none;
-                }
-            }
-        }
-    }
 }
 
 .js-enabled #global-header .header-proposition #proposition-link,

@@ -10,7 +10,7 @@
         <h1>Ask someone to confirm <br>
           {{> partials-applicant-yours-the-applicants}} identity</h1>
       </header>
-      {{> partials-csig-sidebar}}
+      
       {{#nunjucks}}
         {% if values['csig-type'] == 'examiner' %}
           <p>We can't work on your application until this is done.</p>
@@ -22,6 +22,7 @@
 
       <input type="hidden" name="renominate" id="renominate" value="false">
       {{#input-submit}}{{/input-submit}}
+      {{> partials-csig-sidebar}}
       <hr>
       <h2>Application history</h2>
       <article>
