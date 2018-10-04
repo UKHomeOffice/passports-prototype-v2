@@ -48,35 +48,43 @@
 @import "shame/tidy-this-up";
 
 @mixin breakpoint($point) {
-    @if $point==desktop {
-        @media (min-width: 70em) {
-            @content ;
-        }
-    }
-
-    @else if $point==laptop {
-        @media (min-width: 64em) {
-            @content ;
+    @if $point==mobile {
+        @media only screen and (max-width: 768px) {
+            @content;
         }
     }
 
     @else if $point==tablet {
-        @media (min-width: 50em) {
-            @content ;
+        @media only screen and (min-width: 769px) and (max-width: 1024px) {
+            @content;
         }
     }
 
-    @else if $point==phablet {
-        @media (min-width: 37.5em) {
-            @content ;
+    @else if $point==desktop {
+        @media only screen and (min-width: 1024px) {
+            @content;
+        }
+    }
+}
+
+// mixin required for different screen sizes
+@mixin respond-to($media) {
+    @if $media==mobile {
+        @media only screen and (max-width: 768px) {
+            @content;
         }
     }
 
-    @else if $point==mobileonly {
-        @media (max-width: 37.5em) {
-            @content ;
+    @else if $media==tablet {
+        @media only screen and (min-width: 769px) and (max-width: 1024px) {
+            @content;
         }
+    }
 
+    @else if $media==desktop {
+        @media only screen and (min-width: 1024px) {
+            @content;
+        }
     }
 }
 
@@ -104,55 +112,45 @@
         display: block;
     }
 
-    @include breakpoint(laptop) {
+    @include breakpoint(tablet) {
         display: block;
     }
 }
 
 .photo-preview {
+    @include breakpoint(desktop) {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0 15px;
+        float: left;
+        width: 30%;
+    }
+
+    @include breakpoint(tablet) {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0 15px;
+        float: left;
+        width: 30%;
+    }
+
     @include breakpoint(tablet) {
         margin-bottom: 1.25em
     }
 
-    @include breakpoint(phablet) {
-        margin-bottom: 1.25em
-    }
+    .sidebar-task {
+        @include breakpoint(mobile) {
+            .sidebar-task__panel {
+                padding: 0px 0px 15px 0;
+                border: none !important;
 
-    @include breakpoint(mobileonly) {
-        margin-bottom: 1.25em
-    }
-}
-
-@include breakpoint(desktop) {
-    .photo-preview {
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 0 15px;
-        float: left;
-        width: 30%;
-    }
-}
-
-@include breakpoint(laptop) {
-    .photo-preview {
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 0 15px;
-        float: left;
-        width: 30%;
-    }
-}
-
-@include breakpoint(tablet) {
-    .photo-preview {
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 0 15px;
-        float: left;
-        width: 30%;
+                h3 {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
@@ -172,11 +170,7 @@
         float: right;
     }
 
-    @include breakpoint(phablet) {
-        display: block;
-    }
-
-    @include breakpoint(mobileonly) {
+    @include breakpoint(mobile) {
         display: block;
     }
 }
