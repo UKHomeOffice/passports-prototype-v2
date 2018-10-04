@@ -10,7 +10,8 @@ Visit <a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a
 
 # Development
 
-Watch for JS and Sass changes and automatically compile using `npm run watch:js` and `npm run watch:sass`.
+Gulp is used to compile and watch assets. Browsersync watches html files and reloads automatically on port 3001. 
+Visit <a href="http://localhost:3001/" target="_blank">http://localhost:3001/</a> in your browser.
 
 # View the prototype online
 
