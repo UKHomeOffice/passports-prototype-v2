@@ -1,11 +1,12 @@
 module.exports = {
   '/': {
     backLink: '../intro/choose-photo-method',
-    next: '../uploadphoto',
+    next: '/../uploadphoto',
+    controller: require('../../../controllers/check-query-string'),
     forks: [{
-      target: '../uploadphoto/child',
+      target: '/../uploadphoto-child',
       condition: function (req, res) {
-        return req.session['hmpo-wizard-common']['applicant-age'] <= 15 && req.session['hmpo-wizard-common']['passport-before'] === false // If they are child FTA then child photo journey
+        return req.session['hmpo-wizard-common']['status'] == 'retry'
       }
     }]
   }

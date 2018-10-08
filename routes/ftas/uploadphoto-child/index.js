@@ -8,7 +8,9 @@ app.use(require('hmpo-template-mixins')(fields, {
 }));
 
 app.use(wizard(steps, fields, {
-    templatePath: 'ftas/uploadphoto/child'
+    templatePath: 'ftas/uploadphoto/child',
+    name: 'common',
+    params: '/:action?'
 }));
 
 module.exports = app;

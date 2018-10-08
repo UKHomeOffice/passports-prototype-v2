@@ -1,43 +1,17 @@
 {{< layout}}
 
-{{$pageTitle}}Upload your photo{{/pageTitle}}
 
-{{$header}}
-    <h1>Upload your photo</h1>
-{{/header}}
+{{$main-content}}
+            <link rel="stylesheet" href="{{assetPath}}/stylesheets/app-photo.css">
 
-{{$content}}
-    <p>Your photo must meet the rules for digital passport photos.<br><a href="../../../ftas/photoguide-static/photorules">Read the photo guide</a>.</p>
-    
-    <a href="/ftas/uploadphoto-child/processing" class="button" role="button">Upload your photo</a>
+            <div class="column-full" style="text-align:center">
+                <img src="../../../public/images/progress.gif" style="width:50px" class="animated-progress"/>
+                <h3>Processing image</h3>
+                <script>
+                    setTimeout(function(){window.location.href='/ftas/uploadphoto-child/photo-uploaded-success'},1000);
+                </script>
+            </div>
 
-    <details role="group" class="">
-        <summary role="button" aria-controls="details-content-0" aria-expanded="true"><span class="summary" id="details-printed-photo">I have a printed photo</span></summary>
-        <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="false">
-            <p>You can’t use a printed photo with this service. You’ll need to
-                <a href="../../intro/choose-photo-method">get a digital photo</a>, or <a href="https://passportapplication.service.gov.uk/ips-olc/" id="different-service-photo">use a different service</a> to renew your passport.
-            </p>
-        </div>
-    </details>
-    <h2>How to take a good passport photo</h2>
-    <div class="grid-row photo-upload-eg">
-        <div class="column-half img">
-            <object type="image/jpg" data="/public/images/woman-with-reddish-hair_ex@2x.jpg"type="image/svg+xml" class="svg" tabindex="-1">
-            <img src="/public/images/woman-with-reddish-hair_ex@2x.jpg" width="206" height= alt="">
-            </object>
-        </div>
-        <div class="column-half">
-            <ol class="list list-number">
-                <li>Get a friend to take your photo.</li>
-                <li>Use a plain background.</li>
-                <li>Don’t crop your photo, include your face, shoulders and upper body.</li>
-                <li>Keep your hair away from your face and brushed down.</li>
-                <li>Make sure there are no shadows on your face or behind you.</li>
-            </ol>
-        </div>
-    </div>
-    <br/>
-    <p>We keep all photos for up to 30 days in line with our <a href="">privacy policy</a>.</p>
-{{/content}}
+{{/main-content}}
 
 {{/ layout}}

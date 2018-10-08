@@ -3,8 +3,14 @@ var app = require('express')(),
     steps = require('./steps'),
     fields = require('./fields');
 
-app.use(require('hmpo-template-mixins')(fields, { sharedTranslationKey: 'prototype' }));
+app.use(require('hmpo-template-mixins')(fields, {
+    sharedTranslationKey: 'prototype'
+}));
 
-app.use(wizard(steps, fields, { templatePath: 'ftas/upload' }));
+app.use(wizard(steps, fields, {
+    templatePath: 'ftas/upload',
+    name: 'common',
+    params: '/:action?'
+}));
 
 module.exports = app;

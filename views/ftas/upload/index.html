@@ -8,7 +8,11 @@
 
 {{$content}}
     <p>Your photo must meet the rules for digital passport photos.<br><a href="/../ftas/photoguide-static/photorules">Read the photo guide</a>.</p>
-    <a href="/ftas/uploadphoto/" class="button" role="button">Upload your photo</a>
+    {{< hmpo-partials-form}}
+        {{$form}}
+            {{#input-submit}}upload-your-photo{{/input-submit}}
+        {{/form}}
+    {{/ hmpo-partials-form}}
 
     <details role="group" class="">
         <summary role="button" aria-controls="details-content-0" aria-expanded="true"><span class="summary" id="details-printed-photo">I have a printed photo</span></summary>

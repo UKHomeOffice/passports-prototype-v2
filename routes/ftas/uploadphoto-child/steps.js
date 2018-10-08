@@ -1,10 +1,7 @@
 module.exports = {
-    '/': {
-        next: '/processing'
-    },
-    '/processing': {},
+    '/': {},
     '/photo-uploaded-success': {
-        backLink: './processing'
+        backLink: '../../upload'
     },
     '/check-photo-and-submit': {
         fields: [
@@ -18,22 +15,22 @@ module.exports = {
                     return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
                 }
             }, {
-                target: '../../../renew/name',
+                target: '../../renew/name',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
                 }
             },
             {
-                target: '/upload',
+                target: '../../upload?status=retry',
                 condition: {
                     field: 'submit-photo',
-                    value: 'No'
+                    value: false
                 }
             }
         ]
     },
     '/not-accepted': {
-        backLink: './upload'
+        backLink: '../../upload'
     },
     '/questions-intro': {
         backLink: './not-accepted'
@@ -46,7 +43,7 @@ module.exports = {
         backLink: './questions-intro',
         next: '/final-checks-override',
         forks: [{
-            target: '/',
+            target: '../../upload?status=retry',
             condition: {
                 field: 'photo-override',
                 value: false
@@ -55,6 +52,6 @@ module.exports = {
     },
     '/final-checks-override': {
         backLink: './override',
-        next: '../../ftas/renew/name'
+        next: '../../renew/name'
     }
 };
