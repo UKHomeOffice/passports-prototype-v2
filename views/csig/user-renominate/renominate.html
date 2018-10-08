@@ -11,6 +11,7 @@
       <p>Charlotte Moore can't do this for you &ndash; you need to ask someone else. We can't work on your application until your identity is confirmed.</p>
       <input type="hidden" name="renominate" id="renominate" value="true">
       {{#input-submit}}{{/input-submit}}
+      {{> partials-csig-sidebar}}
       <hr>
       <h2>Your application history</h2>
       <article>
@@ -39,7 +40,7 @@
 {{/ hmpo-partials-form}}
 {{/content}}
 {{$sidebar}}
-  {{> partials-csig-sidebar}}
+ 
 {{/sidebar}}
 
 {{/ layout-csig}}

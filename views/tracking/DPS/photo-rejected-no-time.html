@@ -43,7 +43,8 @@
       <div class="panel-important" style="margin:-10px 0 10px 0;">
         <p>Your old passport will be cancelled on the day of your collection appointment. You won't be able to use it.</p>
       </div>
-
+      {{> partials-csig-sidebar-no-docs}}
+      <hr>
       <h2>Application history</h2>
       <article>
         <table>
@@ -72,9 +73,6 @@
   {{/ hmpo-partials-form}}
   {{> partials-tracking-tracking-dps-links}}
 {{/content}}
-{{$sidebar}}
-  {{> partials-csig-sidebar-no-docs}}
-{{/sidebar}}
 
 {{/ layout-csig}}
 
