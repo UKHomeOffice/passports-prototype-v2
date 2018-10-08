@@ -21,7 +21,7 @@ module.exports = {
                 }
             },
             {
-                target: '../../upload?status=retry',
+                target: '/../intro/choose-photo-method',
                 condition: {
                     field: 'submit-photo',
                     value: false
