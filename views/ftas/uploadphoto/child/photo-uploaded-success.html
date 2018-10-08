@@ -1,0 +1,38 @@
+{{< layout}}
+
+{{$pageTitle}}Photo uploaded{{/pageTitle}}
+
+{{$header}}
+    <h1>Photo uploaded</h1>
+{{/header}}
+
+{{$content}}
+<div class="panel-indent panel-photo-result panel-photo-pass">
+  <h2>Your photo has passed the automated checks</h2>
+  <p>Next, you'll check your photo for common mistakes.</p>
+</div>
+<p>We may also check your photo manually. If something doesn't look right, we'll ask you for a different photo.</p>
+<br>
+<a href="/ftas/uploadphoto-child/check-photo-and-submit" class="button">Continue</a><br/><br/>
+
+<div>
+  <p>
+    <a href="./">Upload a different photo</a>
+  </p>
+</div>
+{{/content}}
+
+{{$sidebar}}
+<div class="column-one-third">
+  <div class="sidebar related">
+    <div class="photo-preview-inner">
+      <h2 class="heading-medium">Your photo</h2>
+      <div class="photo">
+        <img src="../../../public/images/thumbnail.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+      </div>
+    </div>
+  </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}

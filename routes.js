@@ -1,4 +1,3 @@
-
 // routes
 app.use(require('./routes/start'));
 app.use(require('./routes/guidance'));
@@ -69,6 +68,7 @@ app.use('/ftas/overseas-not-eligible', require('./routes/ftas/overseas-not-eligi
 app.use('/ftas/overseas-first', require('./routes/ftas/overseas-first'));
 app.use('/ftas/overseas-lost-change', require('./routes/ftas/overseas-lost-change'));
 app.use('/ftas/uploadphoto', require('./routes/ftas/uploadphoto'));
+app.use('/ftas/uploadphoto-child', require('./routes/ftas/uploadphoto-child'));
 app.use('/ftas/renew', require('./routes/ftas/renew'));
 app.use('/ftas/intro', require('./routes/ftas/intro'));
 app.use('/ftas/filter', require('./routes/ftas/filter'));
