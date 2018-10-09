@@ -21,6 +21,7 @@
         {% include "views/partials/documents/message-alert-default.njk" %}
         {% include "views/partials/documents/fta.njk" %}
 
+    {% if not values['routeFromCsig'] %}
         <div class="panel panel-border-narrow">
             <p>
                 We'll return your documents by
@@ -32,6 +33,7 @@
                 <a href="/ftas/renew/passport-special-delivery/edit">Change delivery option</a>
             </p>
         </div>
+    {% endif %}
     {{/nunjucks}}
 
     {{< hmpo-partials-form}}
