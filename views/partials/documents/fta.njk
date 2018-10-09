@@ -55,9 +55,11 @@
         {% endfor %}
 
         {% if documents.length == 0 %}
-        <li>old passport</li>
+            <li>old passport</li>
         {% endif %}
+        {% include "views/partials/documents/third-party-first-list.njk" %}
     </ul>
+    {% include "views/partials/documents/third-party.njk" %}
 
     <hr>
 
