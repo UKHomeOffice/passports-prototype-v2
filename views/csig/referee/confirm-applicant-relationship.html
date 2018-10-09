@@ -12,7 +12,7 @@
 <style>
 .confirmation dl dd p { padding: 0 }
 </style>
-<p>This is an application on behalf of Patrick Michael Smith. We need to confirm the person applying has parental responsibilty.</p>
+<p>This is an application on behalf of Patrick Michael Smith. We need to confirm the person applying has parental responsibility.</p>
 <div class="confirmation">
   <div class="section old-passport-details">
     <dl class="expiry-date">
@@ -21,7 +21,7 @@
           <p>Suzanne Angela Smith</p>
         </dd>
     </dl>
-    
+
     <dl class="expiry-date">
         <dt class="column-half">Relationship to applicant</dt>
         <dd class="column-half">
@@ -33,17 +33,11 @@
 <!-- <p>Suzanne Michaela Smith is applying on behalf of Michael Patrick Smith.</p>
  -->
 
- <h2>Are these details correct?</h2>
+ <h2>Can you confirm these details are correct?</h2>
 {{< hmpo-partials-form}}
     {{$form}}
       {{#radio-group}}child-relationship{{/radio-group}}
-       <div class="form-group">
-        <div id="please-continue" class="reveal js-hidden" style="margin-top: -20px">
-          <div class="panel panel-border-narrow">
-            <p>We'll look into this – please continue.</p>
-          </div>
-        </div>
-      </div>
+
 
       {{#input-submit}}{{/input-submit}}
 

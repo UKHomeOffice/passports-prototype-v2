@@ -11,6 +11,7 @@
       <p>Charlotte Moore can't do this for you &ndash; you need to ask someone else. We can't work on your application until your identity is confirmed.</p>
       <input type="hidden" name="renominate" id="renominate" value="true">
       {{#input-submit}}{{/input-submit}}
+      {{> partials-csig-sidebar}}
       <hr>
       <h2>Your application history</h2>
       <article>
@@ -18,20 +19,24 @@
           <tbody>
             <tr>
               <td>Person not eligible</td>
-              <td>7:30pm on 27 July 2018</td>
+              <td>7:30pm on 11 October 2018</td>
             </tr>
             <tr>
-              <td>Email sent to person confirming your identity</td>
-              <td>2:30pm on 25 July 2018</td>
-            </tr>
-            <tr>
-                <td>Ask someone to confirm your identity</td>
-                <td>10:05am on 19 July 2018</td>
-              </tr>
-            <tr>
-              <td>Application submitted</td>
-              <td>10:05am on 19 July 2018</td>
-            </tr>
+            <td>Email sent to person confirming your identity</td>
+            <td>10:14am on 8 October 2018</td>
+          </tr>
+          <tr>
+            <td>Ask someone to confirm your identity</td>
+            <td>10:09am on 8 October 2018</td>
+          </tr>
+          <tr>
+            <td>Application received</td>
+            <td>10:06am on 8 October 2018</td>
+          </tr>
+          <tr>
+            <td>Application submitted</td>
+            <td>10:05am on 8 October 2018</td>
+          </tr>
           </tbody>
         </table>
       </article>
@@ -39,7 +44,7 @@
 {{/ hmpo-partials-form}}
 {{/content}}
 {{$sidebar}}
-  {{> partials-csig-sidebar}}
+
 {{/sidebar}}
 
 {{/ layout-csig}}

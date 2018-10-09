@@ -24,13 +24,14 @@
           <p>Sign in to check who can do this and provide their details. You'll need your application reference: PEX 319 825 680X</p>
 
           <h2>2. Get your documents ready</h2>
+          <p>Sign into your application to check what you need to send.</p>
           <p>We can only receive your documents after your identity has been confirmed. We'll let you know when and where to send them.</p>
 
           <a href="/../csig/user" class="button">Sign in</a>
         {% endif %}
-        
+
         {% if not values['old-blue'] %} <!-- Passport before and its not old blue -->
-          {% if values['document-list'] or values['application-for-someone-else'] or values['change-of-name-reason'] 
+          {% if values['document-list'] or values['application-for-someone-else'] or values['change-of-name-reason']
               or (values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other') %}
             <h2> Send us your documents </h2>
             <p><a href="./docs-renew?status=confirm-documents" target="_blank">Check what you need to send</a></p>
@@ -61,7 +62,7 @@
         <p>Sign in to check who can do this and provide their details. You'll need your application reference: PEX 319 825 680X</p>
 
         <h2>2. Get your documents ready</h2>
-        <p>We can only receive your documents after your identity has been confirmed. We'll let you know when and where to send them.</p>
+        <p>Sign in  to check what you need to send. We can only receive your documents after your identity has been confirmed. We'll let you know when and where to send them.</p>
 
         <a href="/../csig/user" class="button">Sign in</a>
       {% endif %}

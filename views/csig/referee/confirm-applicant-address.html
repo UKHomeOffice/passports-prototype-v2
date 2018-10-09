@@ -7,8 +7,6 @@
     <h1>Is this the applicant's address?</h1>
 {{/header}}
 
-
-
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
@@ -24,21 +22,7 @@
       <p>If you don't know the full address, answer to the best of your knowledge.</p>
 
       {{#radio-group}}applicant-check-home-address{{/radio-group}}
-      <div class="form-group">
-        <div id="please-continue" class="reveal js-hidden" style="margin-top: -20px">
-          <div class="panel panel-border-narrow">
-            <p>We'll look into this – please continue.</p>
-          </div>
-        </div>
-      </div>
-      <!-- <h2>Are these Susan's previous names?</h2>
-      <ul>
-        <li>Susan Merchant</li>
-        <li>Susan Parker</li>
-      </ul>
-      <br>
-      {{#radio-group}}applicant-check-names{{/radio-group}} -->
-
+    
       {{#input-submit}}{{/input-submit}}
 
     {{/form}}

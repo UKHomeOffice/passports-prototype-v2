@@ -37,9 +37,15 @@ app.get('/ftas/renew/interstitial-require-grandparents-details', function (req, 
     res.render('ftas/renew/interstitial-require-grandparents-details');
 });
 
-// Brexit ready 
+// Brexit ready
 app.get('/guidance/brexit-ready', function (req, res, next) {
     res.render('guidance/brexit-ready');
 });
+
+app.get('/guidance/who-can-confirm', function (req, res, next) {
+    res.render('guidance/who-can-confirm');
+});
+
+
 
 module.exports = app;

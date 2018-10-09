@@ -1,5 +1,7 @@
 @import "hmpo-frontend-toolkit/assets/stylesheets/app";
 
+@import "mixins/breakpoints";
+
 @import "modules/phase";
 @import "modules/nav-bar";
 @import "modules/app-photo";
@@ -19,65 +21,40 @@
 @import "modules/task-list";
 @import "modules/update-notice";
 @import "utility/form-override";
-
-// Larger font sizes, based on the govuk front end
-
-// h1.govuk-heading-xl {
-//     margin-top: 28px;
-//     margin-bottom: 50px;
-//     font-size: 48px;
-// }
-//
-// h2.govuk-heading-l {
-//     margin-top: 40px;
-//     font-size: 36 px;
-// }
-//
-// h3.govuk-heading-m {
-//     margin-top: 30px;
-//     margin-bottom: 20px;
-//     font-size: 24px;
-// }
-//
-// h4.govuk-heading-s {
-//     margin-top: 20px;
-//     font-size: 19px;
-// }
-
-// inherited junk that needs tidying up. at a guess it looks like the compiled scss from
-// the frontend toolkit.
+@import "modules/sidebar-panel";
 @import "shame/tidy-this-up";
 
-@mixin breakpoint($point) {
-    @if $point==desktop {
-        @media (min-width: 70em) {
-            @content ;
+// and this junk below.............
+
+.attachment {
+    position: relative;
+    padding: 0 0 0 129px;
+    display: inline-block;
+
+    .attachment-thumb {
+        position: relative;
+        float: left;
+        margin-top: 5px;
+        margin-left: -124px;
+        padding-bottom: 15px;
+    
+        img {
+            display: block;
+            width: 99px;
+            height: 140px;
+            background: #fff;
+            outline: 5px solid rgba(11,12,12,0.1);
+            box-shadow: 0 2px 2px rgba(11,12,12,0.4);
         }
     }
-
-    @else if $point==laptop {
-        @media (min-width: 64em) {
-            @content ;
-        }
+    .attachment-details h2 {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.1111111111;
     }
-
-    @else if $point==tablet {
-        @media (min-width: 50em) {
-            @content ;
-        }
-    }
-
-    @else if $point==phablet {
-        @media (min-width: 37.5em) {
-            @content ;
-        }
-    }
-
-    @else if $point==mobileonly {
-        @media (max-width: 37.5em) {
-            @content ;
-        }
-
+    .attachment-details .metadata {
+        font-size: 14px;
+        line-height: 1.4285714286;
     }
 }
 
@@ -96,67 +73,6 @@
     float: right;
 }
 
-// Tracking
-
-.app-ref {
-    display: none;
-
-    @include breakpoint(desktop) {
-        display: block;
-    }
-
-    @include breakpoint(laptop) {
-        display: block;
-    }
-}
-
-.photo-preview {
-    @include breakpoint(tablet) {
-        margin-bottom: 1.25em
-    }
-
-    @include breakpoint(phablet) {
-        margin-bottom: 1.25em
-    }
-
-    @include breakpoint(mobileonly) {
-        margin-bottom: 1.25em
-    }
-}
-
-@include breakpoint(desktop) {
-    .photo-preview {
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 0 15px;
-        float: left;
-        width: 30%;
-    }
-}
-
-@include breakpoint(laptop) {
-    .photo-preview {
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 0 15px;
-        float: left;
-        width: 30%;
-    }
-}
-
-@include breakpoint(tablet) {
-    .photo-preview {
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 0 15px;
-        float: left;
-        width: 30%;
-    }
-}
-
 .js-enabled #global-header .header-proposition #proposition-link,
 .js-enabled #global-header .header-proposition #proposition-links {
     li {
@@ -173,11 +89,7 @@
         float: right;
     }
 
-    @include breakpoint(phablet) {
-        display: block;
-    }
-
-    @include breakpoint(mobileonly) {
+    @include breakpoint(mobile) {
         display: block;
     }
 }
