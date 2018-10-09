@@ -53,6 +53,10 @@
         {% for item in documents %}
             <li>{{item}}</li>
         {% endfor %}
+
+        {% if documents.length == 0 %}
+        <li>old passport</li>
+        {% endif %}
     </ul>
 
     <hr>
