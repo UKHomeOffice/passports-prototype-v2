@@ -12,6 +12,8 @@
         {% for item in documents %}
             <li>{{item}}</li>
         {% endfor %}
+        {% include "views/partials/documents/third-party-first-list.njk" %}
+    </ul>
     {% include "views/partials/documents/third-party.njk" %}
 
     <hr>
