@@ -4,16 +4,6 @@
     {% set documents = (documents.push('any passports from other countries that haven\'t expired'), documents) %}
 {% endif %}
 
-{% if not values['16-or-older'] and not values['rising-16'] %}
-    {% if values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Other' %}
-        {% set documents = (documents.push('any court orders (for example that describe parental responsibility or residency arrangements)'), documents) %}
-    {% endif %}
-
-{% elif values['16-to-18'] or values['rising-16'] %}
-    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other' %}
-        {% set documents = (documents.push('a signed and dated letter (on letterheaded paper) from a healthcare professional, for example a doctor or carer confirming why the applicant can\'t apply'), documents) %}
-    {% endif %}
-{% endif %}
 
 {% if not values['change-name'] %}
     <h2 class="govuk-heading-l">Applicant's documents</h2>
@@ -22,8 +12,20 @@
         {% for item in documents %}
             <li>{{item}}</li>
         {% endfor %}
-        {% if not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker' %}
-            <li>a letter stating the section of the <a href="/guidance/children-acts" target="_blank">Children Act</a> under which the child is looked after</li>
+
+        {% if not values['16-or-older'] and not values['rising-16'] %}
+            {% if values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Other' %}
+                <li>any court orders (for example that describe parental responsibility or residency arrangements)</li>
+            {% endif %}
+        {% elif values['16-to-18'] or values['rising-16'] %}
+            {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other' %}
+                <li>a signed and dated letter (on letterheaded paper) from a healthcare professional, for example a doctor or carer confirming why the applicant can't apply</li>
+            {% endif %}
+        {% endif %}
+        {% if not values['16-or-older'] and not values['rising-16'] %}
+            {% if values['relationship-applicant'] === 'Social Worker' %}
+                <li>a letter stating the section of the <a href="/guidance/children-acts" target="_blank">Children Act</a> under which the child is looked after</li>
+            {% endif %}
         {% endif %}
     </ul>
 
