@@ -15,7 +15,9 @@
                         <li>{{item}}</li>
                     {% endfor %}
                     <li>marriage or civil partnership certificate</li>
+                    {% include "views/partials/documents/third-party-first-list.njk" %}
                 </ul>
+                {% include "views/partials/documents/third-party.njk" %}
             </div>
         </div>
 
@@ -31,7 +33,9 @@
                         <li>{{item}}</li>
                     {% endfor %}
                     <li>a completed <a href="https://www.gov.uk/government/publications/passports-for-newly-weds-and-civil-partners" target="_blank">passports for newly weds and civil partners</a> form</li>
+                    {% include "views/partials/documents/third-party-first-list.njk" %}
                 </ul>
+                {% include "views/partials/documents/third-party.njk" %}
             </div>
         </div>
 
@@ -48,6 +52,7 @@
         <li>decree absolute or final order</li>
         <li>marriage or civil partnership certificate (if you don’t have the original you need to get a replacement)</li>
         <li>a signed and dated letter saying that you use your previous name for all purposes</li>
+        {% include "views/partials/documents/third-party-first-list.njk" %}
     </ul>
 
     <h3 class="govuk-heading-m">And 1 of the following from the last 12 months, that shows you’re using your new name:</h3>
@@ -66,6 +71,7 @@
             <li>visa or residence permit (a colour photocopy will do)</li>
         {% endif %}
     </ul>
+    {% include "views/partials/documents/third-party.njk" %}
 
     <hr>
 
@@ -104,6 +110,7 @@
                         {% for item in documents %}
                             <li>{{item}}</li>
                         {% endfor %}
+                        {% include "views/partials/documents/third-party-first-list.njk" %}
                     </ul>
 
                     <h3 class="govuk-heading-m">And 1 of the following that proves you changed your name:</h3>
@@ -134,6 +141,7 @@
                             <li>visa or residence permit (a colour photocopy will do)</li>
                         {% endif %}
                     </ul>
+                    {% include "views/partials/documents/third-party.njk" %}
                 </div>
             </div>
 
@@ -157,7 +165,9 @@
                         {% for item in documents %}
                             <li>{{item}}</li>
                         {% endfor %}
+                        {% include "views/partials/documents/third-party-first-list.njk" %}
                     </ul>
+                    {% include "views/partials/documents/third-party.njk" %}
                 </div>
             </div>
 
@@ -179,7 +189,9 @@
                         {% for item in documents %}
                             <li>{{item}}</li>
                         {% endfor %}
+                        {% include "views/partials/documents/third-party-first-list.njk" %}
                     </ul>
+                    {% include "views/partials/documents/third-party.njk" %}
                 </div>
             </div>
 
@@ -202,6 +214,7 @@
                             <li>{{item}}</li>
                         {% endfor %}
                         <li>a letter from your doctor or medical consultant confirming that your change of gender is likely to be permanent</li>
+                        {% include "views/partials/documents/third-party-first-list.njk" %}
                     </ul>
 
                     <h3 class="govuk-heading-m">And 1 of the following that proves you changed your name:</h3>
@@ -232,6 +245,7 @@
                             <li>visa or residence permit (a colour photocopy will do)</li>
                         {% endif %}
                     </ul>
+                    {% include "views/partials/documents/third-party.njk" %}
                 </div>
             </div>
 
@@ -246,6 +260,7 @@
                         {% for item in documents %}
                             <li>{{item}}</li>
                         {% endfor %}
+                        {% include "views/partials/documents/third-party-first-list.njk" %}
                     </ul>
 
                     <h3 class="govuk-heading-m">And 1 of the following:</h3>
@@ -253,6 +268,7 @@
                         <li>gender recognition certificate</li>
                         <li>a new birth or adoption certificate in your acquired gender</li>
                     </ul>
+                    {% include "views/partials/documents/third-party.njk" %}
                 </div>
             </div>
 
@@ -275,6 +291,7 @@
                     {% for item in documents %}
                         <li>{{item}}</li>
                     {% endfor %}
+                    {% include "views/partials/documents/third-party-first-list.njk" %}
                 </ul>
 
                 <h3 class="govuk-heading-m">And 2 of the following from the last 12 months, that show you’re using your new name:</h3>
@@ -293,6 +310,7 @@
                         <li>visa or residence permit (a colour photocopy will do)</li>
                     {% endif %}
                 </ul>
+                {% include "views/partials/documents/third-party.njk" %}
             </div>
         </div>
 
@@ -307,6 +325,7 @@
                     {% for item in documents %}
                         <li>{{item}}</li>
                     {% endfor %}
+                    {% include "views/partials/documents/third-party-first-list.njk" %}
                 </ul>
 
                 <h3 class="govuk-heading-m">And 1 of the following that proves you changed your name:</h3>
@@ -340,6 +359,7 @@
                     {% endif %}
                 </ul>
                 <p>If you've changed your name more than once, you'll need to send proof of every name change.</p>
+                {% include "views/partials/documents/third-party.njk" %}
             </div>
         </div>
 
