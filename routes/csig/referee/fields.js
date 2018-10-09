@@ -364,7 +364,6 @@ module.exports = {
   'phone-number': {
       labelClassName: 'visuallyhidden',
       validate: [
-          'numeric',
           'required'
         ]
   },
