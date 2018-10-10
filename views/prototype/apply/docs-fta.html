@@ -19,8 +19,9 @@
 
     {{#nunjucks}}
         {% include "views/partials/documents/message-alert-default.njk" %}
-        {% include "views/partials/documents/renew.njk" %}
+        {% include "views/partials/documents/fta.njk" %}
 
+    {% if not values['routeFromCsig'] %}
         <div class="panel panel-border-narrow">
             <p>
                 We'll return your documents by
@@ -29,9 +30,10 @@
                 {% else %}
                     standard post.
                 {% endif %}
-                <a href="/prototype/renew/passport-special-delivery/edit">Change delivery option</a>
+                <a href="/prototype/apply/passport-special-delivery/edit">Change delivery option</a>
             </p>
         </div>
+    {% endif %}
     {{/nunjucks}}
 
     {{< hmpo-partials-form}}

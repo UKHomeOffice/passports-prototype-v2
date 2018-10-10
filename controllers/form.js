@@ -40,15 +40,15 @@ _.extend(Form.prototype, {
 
         // Set edit delivery options next page for fta and renew
         // var host = req.get('host') === 'hmpo-prototypes.herokuapp.com' ? 'https://' + req.get('host') : req.protocol + '://' + req.get('host')
-        // if (req.get('referer') === host + '/prototype/renew/summary') {
+        // if (req.get('referer') === host + '/prototype/apply/summary') {
         //     req.sessionModel.set('changeDeliveryNextPage', '/summary')
-        // } else if (req.get('referer') === host + '/prototype/renew/docs-fta') {
+        // } else if (req.get('referer') === host + '/prototype/apply/docs-fta') {
         //     req.sessionModel.set('changeDeliveryNextPage', '/docs-fta')
-        // } else if (req.get('referer') === host + '/prototype/renew/docs-renew') {
+        // } else if (req.get('referer') === host + '/prototype/apply/docs-renew') {
         //     req.sessionModel.set('changeDeliveryNextPage', '/docs-renew')
         // }
 
-        // if (req.params.action === 'edit' && req.get('referer') === host + '/prototype/renew/passport-special-delivery/edit') {
+        // if (req.params.action === 'edit' && req.get('referer') === host + '/prototype/apply/passport-special-delivery/edit') {
         //     next = req.baseUrl === '/' ? req.sessionModel.get('changeDeliveryNextPage') : req.baseUrl + req.sessionModel.get('changeDeliveryNextPage');
         // }
 

@@ -64,7 +64,7 @@ module.exports = {
       // {
       //   type:'equal',
       //   arguments:['No'],
-      //   redirect:'/../renew'
+      //   redirect:'/../apply'
       // }
     ]
   }
