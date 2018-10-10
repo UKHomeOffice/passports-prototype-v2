@@ -8,14 +8,14 @@ module.exports = {
             'submit-photo'
         ],
         backLink: '/photo-uploaded-success',
-        next: '../../renew',
+        next: '../../apply',
         forks: [{
-                target: '../../renew',
+                target: '../../apply',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
                 }
             }, {
-                target: '../../renew/name',
+                target: '../../apply/name',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
                 }
@@ -52,6 +52,6 @@ module.exports = {
     },
     '/final-checks-override': {
         backLink: './override',
-        next: '../../renew/name'
+        next: '../../apply/name'
     }
 };

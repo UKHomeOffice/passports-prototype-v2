@@ -33,8 +33,8 @@ app.get('/guidance/documents-to-prove-responsibility-for-the-child', function (r
 
 // Temporary page for interstitial grandparents details
 
-app.get('/prototype/renew/interstitial-require-grandparents-details', function (req, res, next) {
-    res.render('prototype/renew/interstitial-require-grandparents-details');
+app.get('/prototype/apply/interstitial-require-grandparents-details', function (req, res, next) {
+    res.render('prototype/apply/interstitial-require-grandparents-details');
 });
 
 // Brexit ready

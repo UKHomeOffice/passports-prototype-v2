@@ -69,7 +69,7 @@ app.use('/prototype/overseas-first', require('./routes/prototype/overseas-first'
 app.use('/prototype/overseas-lost-change', require('./routes/prototype/overseas-lost-change'));
 app.use('/prototype/uploadphoto', require('./routes/prototype/uploadphoto'));
 app.use('/prototype/uploadphoto-child', require('./routes/prototype/uploadphoto-child'));
-app.use('/prototype/renew', require('./routes/prototype/renew'));
+app.use('/prototype/apply', require('./routes/prototype/apply'));
 app.use('/prototype/intro', require('./routes/prototype/intro'));
 app.use('/prototype/filter', require('./routes/prototype/filter'));
 app.use('/prototype/startpage', require('./routes/prototype/startpage'));
