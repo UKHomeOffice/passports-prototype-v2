@@ -7,8 +7,3 @@
         <li>a signed and dated letter (on letterheaded paper) from a healthcare professional, for example a doctor or carer confirming why the applicant can't apply</li>
     {% endif %}
 {% endif %}
-{% if not values['16-or-older'] and not values['rising-16'] %}
-    {% if values['relationship-applicant'] === 'Social Worker' %}
-        <li>a letter stating the section of the <a href="/guidance/children-acts" target="_blank">Children Act</a> under which the child is looked after</li>
-    {% endif %}
-{% endif %}
