@@ -1,0 +1,62 @@
+{{< layout}}
+
+{{$back}}
+    {{#values.routeFromCsig}}
+        <a href="javascript:history.back()" class="back-link">Back</a>
+    {{/values.routeFromCsig}}
+    {{^values.routeFromCsig}}
+        {{> hmpo-partials-back-link}}
+    {{/values.routeFromCsig}}
+{{/back}}
+
+{{$pageTitle}}Required Documents{{/pageTitle}}
+
+{{$header}}
+    <h1 class="govuk-heading-xl">What you need to send</h1>
+{{/header}}
+
+{{$content}}
+
+    {{#nunjucks}}
+        {% include "views/partials/documents/message-alert-default.njk" %}
+        {% include "views/partials/documents/renew.njk" %}
+
+        <div class="panel panel-border-narrow">
+            <p>
+                We'll return your documents by
+                {% if values['secure-return'] %}
+                    secure delivery.
+                {% else %}
+                    standard post.
+                {% endif %}
+                <a href="/prototype/renew/passport-special-delivery/edit">Change delivery option</a>
+            </p>
+        </div>
+    {{/nunjucks}}
+
+    {{< hmpo-partials-form}}
+        {{$form}}
+            {{#input-submit}}{{/input-submit}}
+        {{/form}}
+    {{/ hmpo-partials-form}}
+
+    <details>
+        <summary>
+            <span class="summary">My documents aren't in English or Welsh</span>
+        </summary>
+        <div class="panel panel-border-narrow">
+            <p>If your documents aren't in English or Welsh you'll need to get
+                <a href="https://www.gov.uk/certifying-a-document">certified translation.</a>
+            </p>
+        </div>
+    </details>
+
+    <div class="app-c-print-link">
+        <a href="#" class="app-c-print-link__link" rel="alternate">
+            Print page
+        </a>
+    </div>
+
+{{/content}}
+
+{{/ layout}}

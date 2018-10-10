@@ -1,0 +1,47 @@
+{{< layout}}
+
+{{$back}}
+<div class="photo-guide">
+    <a href="/../prototype/intro/choose-photo-method" class="back-link">Other ways to get a photo</a>
+    <span class="marker">Guide part 4 of 9</span>
+</div>
+{{/back}}
+
+{{$main-content}}
+        <div class="column-full">
+           <div class="flash-card">
+               <header>
+                   <h1>Get the lighting right</h1>
+               </header>
+               <div class="grid-row">
+                   <div class="column-half">
+                       <p>It's best to use natural daylight, for example facing a window.</p>
+                       <p>If it isn't daylight, use a ceiling light or a lamp. </p>
+                       <p>You need to stand in the light but not directly under it.</p>
+                     <br/>
+                     <br/>
+                   </div>
+                    <div class="column-half">
+                       <!-- lighting image -->
+                      <object type="image/svg+xml" data="/public/images/photoguide/lighting-diagram.svg" type="image/svg+xml" class="centred" tabindex="-1" >
+                        <img src="/public/images/photoguide/lighting-diagram.png" width="242" alt="" class="centred" />
+                      </object>
+                    </div>
+                    <nav class="guide-nav">
+                        <ul>
+                            <li class="button-guide button-guide-previous">
+                                <a href="{{backLink}}" style="font-size: 20px">Back</a>
+                            </li>
+                            <li class="button-guide button-guide-next">
+                                <a href="{{nextPage}}" style="font-size: 20px">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+
+{{/main-content}}
+
+{{/ layout}}
