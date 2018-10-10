@@ -15,13 +15,13 @@
 
         {{#nunjucks}}
           {% if values['applicant-age'] >= 16 or values['rising-16'] %}
-            <h2>Explain why the applicant can't apply</h2>
-            <p class="form-hint" id="dob-hint">We'll let you know what evidence to send.</span></p>
+            <h2>Why are you applying for someone else?</h2>
+            <p class="form-hint" id="dob-hint">Explain the circumstances.</span></p>
             <textarea name="why-cant-apply" id="why-cant-apply" class="form-control textarea" aria-required="false">{{values['why-cant-apply']}}</textarea>
             <br>
           {% elif values['applicant-age'] < 16 and (values['relationship-applicant'] == 'Social Worker' or values['relationship-applicant'] == 'Other') %}
-            <h2>Explain why the applicant can't apply</h2>
-            <p class="form-hint" id="dob-hint">We'll let you know what evidence to send.</span></p>
+            <h2>Why are you applying for someone else?</h2>
+            <p class="form-hint" id="dob-hint">Explain the circumstances.</span></p>
             <textarea name="why-cant-apply" id="why-cant-apply" class="form-control textarea" aria-required="false">{{values['why-cant-apply']}}</textarea>
             <br>
           {% else %}
