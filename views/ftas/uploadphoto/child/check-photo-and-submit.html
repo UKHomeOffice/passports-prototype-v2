@@ -1,0 +1,72 @@
+{{< layout}}
+
+{{$pageTitle}}Check your photo and submit{{/pageTitle}}
+
+{{$header}}
+    <h1>Check your photo</h1>
+{{/header}}
+
+{{$content}}
+
+<p>Before you submit your photo, check that it meets all of these rules.</p>
+
+
+<ol class="list-number">
+            <li class="list-item-bold">Your appearance
+                <p>Make sure:</p>
+                <ul class="list-bullet">
+                    <li>the photo is a good likeness taken in the last month</li>
+                    <li>your whole face is visible</li>
+                    <li>you have a plain or neutral expression</li>
+                    <li>there are no reflections or glare (if you wear glasses)</li>
+                    <li>you’re not wearing headwear (unless for religious or medical reasons)</li>
+                </ul>
+            </li>
+            <li class="list-item-bold">Photo set up
+                <p>Your photo must:</p>
+                <ul class="list-bullet">
+                    <li>have no other people or objects in it</li>
+                    <li>be taken against a plain background</li>
+                    <li>have no shadows on your face or behind you</li>
+                </ul>
+            </li>
+            <li class="list-item-bold">Photo quality and format
+                <p>Your photo must:</p>
+                <ul class="list-bullet">
+                    <li>be in colour, with no effects or filters</li>
+                    <li>not be blurred or have ‘red eye’</li>
+                    <li>be unedited – you can’t ‘correct’ your passport photo</li>
+                </ul>
+            </li>
+        </ol>
+
+
+            <div class="panel panel-border-wide alert-default">
+              <p>If you submit a photo that doesn't meet these rules, we'll ask you for a different one. This may delay your application.</p>
+      </div>
+
+<h2>Do you want to submit this photo?</h2>
+{{< hmpo-partials-form}}
+{{$form}}
+    {{#radio-group}}submit-photo{{/radio-group}}
+    {{#input-submit}}{{/input-submit}}
+{{/form}}
+{{/ hmpo-partials-form}}
+<!-- <a href="/../damaged_171018/renew/" class="button">Continue</a><br/><br/> -->
+
+{{/content}}
+
+{{$sidebar}}
+<div class="column-one-third" style="margin-top:50px">
+  <div class="sidebar related">
+    <div class="photo-preview-inner">
+      <h2 class="heading-medium">Your photo</h2>
+      <div class="photo">
+        <img src="../../../public/images/thumbnail.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+      </div>
+    </div>
+  </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}

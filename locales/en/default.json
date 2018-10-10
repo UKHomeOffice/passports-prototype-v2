@@ -1,7 +1,8 @@
 {
     "buttons": {
         "next": "Continue",
-        "declaration": "Continue to payment"
+        "declaration": "Continue to payment",
+        "upload-your-photo": "Upload your photo"
     },
     "fields": {
         "what-you-will-need-declaration": {

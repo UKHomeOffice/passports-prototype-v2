@@ -1,0 +1,33 @@
+{{< layout}}
+
+{{$pageTitle}}Photo uploaded{{/pageTitle}}
+
+{{$header}}
+    <h1>Photo uploaded</h1>
+{{/header}}
+
+{{$content}}
+<p>This photo has failed the automated check.</p>
+<p>You'll need to explain why you think we should accept it.</p>
+<div class="form-group">
+    <a href="/ftas/upload?status=retry">Use a different photo</a>
+</div>
+<div class="form-group">
+  <a id="choose-photo-method-button" href="/ftas/uploadphoto-child/override" class="button" role="button">Use this photo</a>
+</div>
+{{/content}}
+
+{{$sidebar}}
+<div class="column-one-third">
+  <div class="sidebar related">
+    <div class="photo-preview-inner">
+      <h2 class="heading-medium">Your photo</h2>
+      <div class="photo">
+        <img src="../../../public/images/thumbnail.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+      </div>
+    </div>
+  </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}

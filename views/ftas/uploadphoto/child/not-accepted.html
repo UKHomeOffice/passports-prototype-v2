@@ -1,0 +1,59 @@
+{{< layout}}
+
+{{$pageTitle}}You need another photo{{/pageTitle}}
+
+{{$header}}
+    <h1>You need another photo</h1>
+{{/header}}
+
+{{$content}}
+<p>This photo has failed our automated checks for the following reasons:</p>
+<ul>
+  <li>
+      <div class="panel panel-photo-result panel-photo-error">
+          <h2 class="bold-medium">It looks like you’re not facing the camera</h2>
+          <p>If you tilt your head it may appear you’re not facing the camera.</p>
+          <p>You can still submit your photo if you believe it should be accepted (eg there’s a medical reason why you can’t face the camera).</p>
+      </div>
+  </li>
+  <li>
+      <div class="panel panel-photo-result panel-photo-error">
+          <h2 class="bold-medium">It looks like your mouth is open</h2>
+          <p>Sometimes this is caused by facial hair or shadows near your mouth. Please try different lighting.</p>
+          <p>You can still submit your photo if you believe it should be accepted (eg there’s a medical reason why your mouth appears to be open).</p>
+      </div>
+  </li>
+</ul>
+<details role="group" class="">
+  <summary role="button" aria-controls="details-content-0" aria-expanded="false"><span class="summary">Can I use this photo?</span></summary>
+  <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+      <p>You can only use this photo if you:</p>
+      <ul class="list list-bullet">
+          <li>have a medical or religious reason why it doesn’t meet the rules</li>
+          <li>think that the reason it failed is not correct</li>
+      </ul>
+      <p>Your application will be delayed if we have to ask you for a different photo.</p>
+      <div class="form-group">
+          <a href="/ftas/uploadphoto-child/questions-intro" class="button-secondary">I understand – use this photo</a>
+      </div>
+  </div>
+</details>
+<div class="form-group">
+  <a id="choose-photo-method-button" href="/ftas/upload?status=retry" class="button" role="button">Try another photo</a>
+</div>
+{{/content}}
+
+{{$sidebar}}
+<div class="column-one-third">
+  <div class="sidebar related">
+    <div class="photo-preview-inner">
+      <h2 class="heading-medium">Your photo</h2>
+      <div class="photo">
+        <img src="../../../public/images/thumbnail.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+      </div>
+    </div>
+  </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}
