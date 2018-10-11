@@ -92,6 +92,40 @@ app.use('/prototype/photo-code', require('./routes/prototype/photo-code'));
 app.use('/prototype/mismatch', require('./routes/prototype/mismatch'));
 app.use('/prototype/redirect-tracking', require('./routes/prototype/redirect-tracking'));
 
+// Temporary routes for changing:
+// `/ftas` to `/prototype`
+// `/renew` to `/apply`
+// to make sure any URLs don't get broken
+app.use('/ftas/overseas', require('./routes/prototype/overseas'));
+app.use('/ftas/overseas-not-eligible', require('./routes/prototype/overseas-not-eligible'));
+app.use('/ftas/overseas-first', require('./routes/prototype/overseas-first'));
+app.use('/ftas/overseas-lost-change', require('./routes/prototype/overseas-lost-change'));
+app.use('/ftas/uploadphoto', require('./routes/prototype/uploadphoto'));
+app.use('/ftas/uploadphoto-child', require('./routes/prototype/uploadphoto-child'));
+app.use('/ftas/apply', require('./routes/prototype/apply'));
+app.use('/ftas/renew', require('./routes/prototype/apply'));
+app.use('/prototype/renew', require('./routes/prototype/apply'));
+app.use('/ftas/intro', require('./routes/prototype/intro'));
+app.use('/ftas/filter', require('./routes/prototype/filter'));
+app.use('/ftas/startpage', require('./routes/prototype/startpage'));
+app.use('/ftas/startpage-overseas', require('./routes/prototype/startpage-overseas'));
+app.use('/ftas/photoguide-short', require('./routes/prototype/photoguide-short'));
+app.use('/ftas/photoguide-static', require('./routes/prototype/photoguide-static'));
+app.use('/ftas/photoguide-shop', require('./routes/prototype/photoguide-shop'));
+app.use('/ftas/takephoto', require('./routes/prototype/takephoto'));
+app.use('/ftas/upload', require('./routes/prototype/upload'));
+app.use('/ftas/rejectedphoto', require('./routes/prototype/rejectedphoto'));
+app.use('/ftas/filter-common-temp', require('./routes/prototype/filter-common-temp'));
+app.use('/ftas/startpage-temp', require('./routes/prototype/startpage-temp'));
+app.use('/ftas/overseas-not-available', require('./routes/prototype/overseas-not-available'));
+app.use('/ftas/throttle', require('./routes/prototype/throttle'));
+app.use('/ftas/payment', require('./routes/prototype/payment'));
+app.use('/ftas/submission-failed', require('./routes/prototype/submission-failed'));
+app.use('/ftas/sar', require('./routes/prototype/sar'));
+app.use('/ftas/photo-url', require('./routes/prototype/photo-url'));
+app.use('/ftas/photo-code', require('./routes/prototype/photo-code'));
+app.use('/ftas/mismatch', require('./routes/prototype/mismatch'));
+app.use('/ftas/redirect-tracking', require('./routes/prototype/redirect-tracking'));
 
 //csig
 app.use('/csig/track', require('./routes/csig/track'));
