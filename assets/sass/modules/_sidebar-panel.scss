@@ -1,39 +1,42 @@
 .sidebar-task {
-  margin-top: $gutter / 2;
-  .sidebar-task__panel {
-    border: 1px solid $border-colour;
-    padding: 15px;
-    h3, p {
-      padding: 0;
-      margin: 0;
-    }
-    &:nth-child(2) {
-      border-top: 0
-    }
-  }
-  @include breakpoint(mobile) {
     display: flex;
     flex-flow: column-reverse;
-    margin-top: 30px;
+    margin-top: $gutter;
     .sidebar-task__panel {
-        padding: 30px 0;
+        padding: $gutter 0;
+        border: 1px solid $border-colour;
         border-width: 1px 0 0 0;
         h3 {
             font-size: 18px;
             margin: 0 0 5px 0;
         }
+        p {
+            margin: 0
+        }
         &:first-child {
             padding-bottom: 0
         }
-        &:nth-child(2) {
-            border-top: 1px solid $border-colour;
+       
+    }
+    @media only screen and (min-width: 769px) {
+        display: block;
+        margin-top: $gutter / 2;
+        .sidebar-task__panel {
+            padding: $gutter / 2;
+            border-width: 1px;
+            h3, p {
+                padding: 0;
+                margin: 0;
+            }
+            &:first-child {
+                padding-bottom: $gutter / 2;
+                border-bottom: 0;
+            }
         }
     }
-  }
 }
-
-.photo-preview {
-    @include breakpoint(desktop) {
+.sidebar-container {
+    @media only screen and (min-width: 769px) {
         position: absolute;
         right: 0;
         top: 0;
@@ -41,18 +44,4 @@
         float: left;
         width: 30%;
     }
-
-    @include breakpoint(tablet) {
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 0 15px;
-        float: left;
-        width: 30%;
-    }
-
-    @include breakpoint(tablet) {
-        margin-bottom: 1.25em
-    }
-
 }
