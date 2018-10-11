@@ -99,8 +99,9 @@ app.use('/prototype/redirect-tracking', require('./routes/prototype/redirect-tra
 app.get('/ftas*', function(req, res) {
     res.redirect('/prototype' + req.params[0]);
 });
-app.use('/ftas/renew', require('./routes/prototype/apply'));
-app.use('/prototype/renew', require('./routes/prototype/apply'));
+app.get('/prototype/renew*', function(req, res) {
+    res.redirect('/prototype/apply' + req.params[0]);
+});
 
 //csig
 app.use('/csig/track', require('./routes/csig/track'));
