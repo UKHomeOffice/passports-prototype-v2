@@ -2,36 +2,6 @@
 app.use(require('./routes/start'));
 app.use(require('./routes/guidance'));
 
-// production
-app.use('/production/overseas', require('./routes/production/overseas'));
-app.use('/production/overseas-not-eligible', require('./routes/production/overseas-not-eligible'));
-app.use('/production/overseas-first', require('./routes/production/overseas-first'));
-app.use('/production/overseas-lost-change', require('./routes/production/overseas-lost-change'));
-app.use('/production/uploadphoto', require('./routes/production/uploadphoto'));
-app.use('/production/uploadphoto-oix', require('./routes/production/uploadphoto-oix'));
-app.use('/production/renew', require('./routes/production/renew'));
-app.use('/production/intro', require('./routes/production/intro'));
-app.use('/production/filter', require('./routes/production/filter'));
-app.use('/production/startpage', require('./routes/production/startpage'));
-app.use('/production/startpage-overseas', require('./routes/production/startpage-overseas'));
-app.use('/production/photoguide-short', require('./routes/production/photoguide-short'));
-app.use('/production/photoguide-static', require('./routes/production/photoguide-static'));
-app.use('/production/photoguide-shop', require('./routes/production/photoguide-shop'));
-app.use('/production/takephoto', require('./routes/production/takephoto'));
-app.use('/production/upload', require('./routes/production/upload'));
-app.use('/production/rejectedphoto', require('./routes/production/rejectedphoto'));
-app.use('/production/filter-common-temp', require('./routes/production/filter-common-temp'));
-app.use('/production/startpage-temp', require('./routes/production/startpage-temp'));
-app.use('/production/overseas-not-available', require('./routes/production/overseas-not-available'));
-app.use('/production/throttle', require('./routes/production/throttle'));
-app.use('/production/payment', require('./routes/production/payment'));
-app.use('/production/submission-failed', require('./routes/production/submission-failed'));
-app.use('/production/sar', require('./routes/production/sar'));
-app.use('/production/photo-url', require('./routes/production/photo-url'));
-app.use('/production/photo-code', require('./routes/production/photo-code'));
-app.use('/production/mismatch', require('./routes/production/mismatch'));
-app.use('/production/redirect-tracking', require('./routes/production/redirect-tracking'));
-
 // 12_15s
 app.use('/12_15s/overseas', require('./routes/12_15s/overseas'));
 app.use('/12_15s/overseas-not-eligible', require('./routes/12_15s/overseas-not-eligible'));
