@@ -279,11 +279,11 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
 
     parentsFields.push({
         step: this.getEditStep('parent1-first-names'),
-        title: 'Mother',
+        title: 'Mother or parent 1',
         value: join(values, ['parent1-first-names', 'parent1-last-name'])
     }, {
         step: this.getEditStep('parent2-first-names'),
-        title: 'Father',
+        title: 'Father or parent 2',
         value: join(values, ['parent2-first-names', 'parent2-last-name'])
     }, {
         step: this.getEditStep('marriage-year'),
@@ -297,7 +297,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
 
     response.sections.push({
         className: 'parent1-details',
-        title: 'Mother',
+        title: 'Mother or parent 1',
         fields: parent1Fields
     });
 
@@ -344,7 +344,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
 
     response.sections.push({
         className: 'parent2-details',
-        title: 'Father',
+        title: 'Father or parent 2',
         fields: parent2Fields
     });
 
