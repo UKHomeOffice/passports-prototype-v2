@@ -2,37 +2,7 @@
 app.use(require('./routes/start'));
 app.use(require('./routes/guidance'));
 
-// 12_15s
-app.use('/12_15s/overseas', require('./routes/12_15s/overseas'));
-app.use('/12_15s/overseas-not-eligible', require('./routes/12_15s/overseas-not-eligible'));
-app.use('/12_15s/overseas-first', require('./routes/12_15s/overseas-first'));
-app.use('/12_15s/overseas-lost-change', require('./routes/12_15s/overseas-lost-change'));
-app.use('/12_15s/uploadphoto', require('./routes/12_15s/uploadphoto'));
-app.use('/12_15s/uploadphoto-oix', require('./routes/12_15s/uploadphoto-oix'));
-app.use('/12_15s/renew', require('./routes/12_15s/renew'));
-app.use('/12_15s/intro', require('./routes/12_15s/intro'));
-app.use('/12_15s/filter', require('./routes/12_15s/filter'));
-app.use('/12_15s/startpage', require('./routes/12_15s/startpage'));
-app.use('/12_15s/startpage-overseas', require('./routes/12_15s/startpage-overseas'));
-app.use('/12_15s/photoguide-short', require('./routes/12_15s/photoguide-short'));
-app.use('/12_15s/photoguide-static', require('./routes/12_15s/photoguide-static'));
-app.use('/12_15s/photoguide-shop', require('./routes/12_15s/photoguide-shop'));
-app.use('/12_15s/takephoto', require('./routes/12_15s/takephoto'));
-app.use('/12_15s/upload', require('./routes/12_15s/upload'));
-app.use('/12_15s/rejectedphoto', require('./routes/12_15s/rejectedphoto'));
-app.use('/12_15s/filter-common-temp', require('./routes/12_15s/filter-common-temp'));
-app.use('/12_15s/startpage-temp', require('./routes/12_15s/startpage-temp'));
-app.use('/12_15s/overseas-not-available', require('./routes/12_15s/overseas-not-available'));
-app.use('/12_15s/throttle', require('./routes/12_15s/throttle'));
-app.use('/12_15s/payment', require('./routes/12_15s/payment'));
-app.use('/12_15s/submission-failed', require('./routes/12_15s/submission-failed'));
-app.use('/12_15s/sar', require('./routes/12_15s/sar'));
-app.use('/12_15s/photo-url', require('./routes/12_15s/photo-url'));
-app.use('/12_15s/photo-code', require('./routes/12_15s/photo-code'));
-app.use('/12_15s/mismatch', require('./routes/12_15s/mismatch'));
-app.use('/12_15s/redirect-tracking', require('./routes/12_15s/redirect-tracking'));
-
-// FTAs
+// DCS user journeys
 app.use('/prototype/overseas', require('./routes/prototype/overseas'));
 app.use('/prototype/overseas-not-eligible', require('./routes/prototype/overseas-not-eligible'));
 app.use('/prototype/overseas-first', require('./routes/prototype/overseas-first'));
