@@ -220,11 +220,21 @@ module.exports = {
     },
     '/home-address': {
         fields: [
+            'postcode'
+        ],
+        next: '/home-address-select'
+    },
+    '/home-address-select': {
+        next: '/contact-details'
+    },
+    '/home-address-manual': {
+        fields: [
             'address1',
             'address2',
             'town',
             'postcode'
         ],
+        backLink: './home-address-select',
         next: '/contact-details'
     },
     '/home-address-overseas': {

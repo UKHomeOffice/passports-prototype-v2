@@ -13,23 +13,14 @@
 
     <p>Tell us where you live. We'll send your new passport and return any documents to this address. They will arrive separately.</p>
 
-    {{#input-text-compound}}address1{{/input-text-compound}}
-    {{#input-text}}address2{{/input-text}}
+    <div id="postcode-group" class="form-group">
+        <label for="postcode" class="form-label-bold">
+            Postcode
+        </label>
+        <input type="text" name="postcode" id="postcode" class="form-control input-code" aria-required="true" value="SE1 7XH">
+    </div>
 
-    {{#input-text}}town{{/input-text}}
-
-    {{#input-text}}postcode{{/input-text}}
-
-    {{#input-submit}}{{/input-submit}}
-
-    <details role="group" class="">
-        <summary role="button" aria-controls="details-content-0" aria-expanded="false">
-            <span class="summary">I live outside the UK</span>
-        </summary>
-        <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
-            <p>You’ll need to use <a href="https://www.gov.uk/overseas-passports">another service</a> to renew your passport.</p>
-        </div>
-    </details>
+    {{#input-submit}}find-address{{/input-submit}}
 
 {{/form}}
 {{/ hmpo-partials-form}}
