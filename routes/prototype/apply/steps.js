@@ -355,7 +355,7 @@ module.exports = {
     //     next: '/summary'
     // },
     '/summary': {
-        controller: require('../../../controllers/confirmFTA'),
+        controller: require('../../../controllers/confirm'),
         template: 'confirm',
         next: '/documents-required',
         forks: [{ // For prototype purpose, set csig vars to false
