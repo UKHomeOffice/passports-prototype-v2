@@ -11,6 +11,7 @@ module.exports = {
         backLink: './'
     },
     '/waiting-for-old': {},
+    '/send-us-your-documents': {},
     '/recieved-your-documents': {},
     '/photo-rejected': {},
     '/new-photo-arrived': {},
