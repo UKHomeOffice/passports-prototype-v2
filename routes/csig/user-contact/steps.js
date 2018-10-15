@@ -32,5 +32,8 @@ module.exports = {
     },
     '/email-confirmation': {
 
+    },
+    '/how-to': {
+
     }
 };
