@@ -101,37 +101,6 @@ app.use('/pod', require('./routes/pod'));
 //How to
 app.use('/how-to', require('./routes/how-to'));
 
-// Address Capture
-app.use('/address/overseas', require('./routes/address/overseas'));
-app.use('/address/overseas-not-eligible', require('./routes/address/overseas-not-eligible'));
-app.use('/address/overseas-first', require('./routes/address/overseas-first'));
-app.use('/address/overseas-lost-change', require('./routes/address/overseas-lost-change'));
-app.use('/address/uploadphoto', require('./routes/address/uploadphoto'));
-app.use('/address/uploadphoto-oix', require('./routes/address/uploadphoto-oix'));
-app.use('/address/renew', require('./routes/address/renew'));
-app.use('/address/intro', require('./routes/address/intro'));
-app.use('/address/filter', require('./routes/address/filter'));
-app.use('/address/startpage', require('./routes/address/startpage'));
-app.use('/address/startpage-overseas', require('./routes/address/startpage-overseas'));
-app.use('/address/photoguide-short', require('./routes/address/photoguide-short'));
-app.use('/address/photoguide-static', require('./routes/address/photoguide-static'));
-app.use('/address/photoguide-shop', require('./routes/address/photoguide-shop'));
-app.use('/address/takephoto', require('./routes/address/takephoto'));
-app.use('/address/upload', require('./routes/address/upload'));
-app.use('/address/rejectedphoto', require('./routes/address/rejectedphoto'));
-app.use('/address/filter-common-temp', require('./routes/address/filter-common-temp'));
-app.use('/address/startpage-temp', require('./routes/address/startpage-temp'));
-app.use('/address/overseas-not-available', require('./routes/address/overseas-not-available'));
-app.use('/address/throttle', require('./routes/address/throttle'));
-app.use('/address/payment', require('./routes/address/payment'));
-app.use('/address/submission-failed', require('./routes/address/submission-failed'));
-app.use('/address/sar', require('./routes/address/sar'));
-app.use('/address/photo-url', require('./routes/address/photo-url'));
-app.use('/address/photo-code', require('./routes/address/photo-code'));
-app.use('/address/mismatch', require('./routes/address/mismatch'));
-app.use('/address/redirect-tracking', require('./routes/address/redirect-tracking'));
-
-
 // Priority Service (DPS)
 // app.use('/priority-service/overseas', require('./routes/priority-service/overseas'));
 // app.use('/priority-service/overseas-not-eligible', require('./routes/priority-service/overseas-not-eligible'));
