@@ -1,7 +1,13 @@
-var app = require('express').Router();
+var app = require('express')(),
+    wizard = require('hmpo-form-wizard'),
+    steps = require('./steps'),
+    fields = require('./fields');
 
-app.get('/', function (req, res, next) {
-    res.render('./csig/start');
-});
+app.use(require('hmpo-template-mixins')(fields, { sharedTranslationKey: 'prototype' }));
 
+app.use(wizard(steps, fields, {
+    controller: require('../../../controllers/form'),
+    templatePath: 'csig/start',
+    name: 'common'
+}));
 module.exports = app;

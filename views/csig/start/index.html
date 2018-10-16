@@ -1,52 +1,65 @@
-{{< layout-csig}}
-{{$propositionHeader}}Renew a passport{{/propositionHeader}}
+{{< layout-referee}}
 
-{{$pageTitle}}Give a countersignature{{/pageTitle}}
+{{$pageTitle}}Confirm someone's identity{{/pageTitle}}
 
 
 {{$header}}
-    <h1>Confirm someone's identity</h1>
+    <h1 class="heading-xlarge">Confirm someone's<br>identity</h1>
 {{/header}}
 
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
 
-      <p>To confirm somebody's identity for a UK passport, you must:</p>
-        <ul class="list-bullet">
-          <li>have a current UK passport</li>
-          <li>work in or be retired from a <a href="/govuk/" target="_blank">recognised profession</a></li>
-          <li>have known the person as a friend, neighbour or colleague for at least <br>2 years</li>
-        </ul>
+    <p>Before you start, you'll need your UK passport details.
 
-        <p>We'll ask a few questions about you then we'll show you a photo of the person. It takes about 10 minutes.</p>
+    <p>You'll need to:</p>
+    <ul class="list-bullet">
+      <li>enter the applicant's date of birth, including the year</li>
+      <li>confirm their current address</li>
+    </ul>
 
-        <a href="/csig/referee/" class="button">Start</a>
+      <p>If the applicant is a child, you'll also need to confirm their:</p>
+
+      <ul class="list-bullet">
+        <li>place of birth</li>
+        <li>parents' names and years of birth</li>
+      </ul>
+
+      <p>Make sure you do this on a secure device.</p>
+
+      <p>It takes about 10 minutes.</p>
+
+        <a href="/csig/start/applicant-info" class="button">Sign in</a>
 
         <br/><br/>
 
-          <p><a href="">I don't meet the criteria</a></p>
+        {{/form}}
+    {{/ hmpo-partials-form}}
+    {{/content}}
+
+    {{$sidebar}}
+    <div class="column-one-third">
+        <div class="sidebar" style="margin-top:50px">
+          <div class="photo-preview-inner">
+              <h2 class="heading-medium">Find out more</h2>
 
 
+              <p>There are rules about who can confirm someone's identity.</p>
+              <ul>
+                <li style="margin-bottom:10px"><a href="/guidance/who-can-confirm">Who can do this</a></li>
+                <li><a href="/guidance/confirming-your-identity">How to do this online</a></li>
+              </ul>
 
-    {{/form}}
-{{/ hmpo-partials-form}}
-{{/content}}
+              <!-- <ul class="list-bullet">
+                <li>have known the person applying for at least 2 years</li>
+                <li>work in or be retired from a <a href="https://www.gov.uk/countersigning-passport-applications/accepted-occupations-for-countersignatories" target="_blank">recognised profession</a></li>
+                <li>live in the UK with a current UK passport</li>
+              </ul>
+              </div> -->
 
-{{$sidebar}}
-<div class="column-one-third">
-    <div class="sidebar" style="margin-top:50px">
-      <div class="photo-preview-inner">
-          <h2 class="heading-medium">What you'll need</h2>
-          <ul class="list-bullet" >
-            <li style="list-style-type: disc;"> your UK passport</li>
-            <li>national insurance number</li>
-            <li>employer's details</li>
-          </ul>
-      </div>
-
+        </div>
     </div>
-</div>
-{{/sidebar}}
+    {{/sidebar}}
 
-{{/ layout-csig}}
+    {{/ layout-referee}}
