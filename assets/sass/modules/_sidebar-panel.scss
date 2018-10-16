@@ -30,8 +30,12 @@
             }
             &:first-child {
                 padding-bottom: $gutter / 2;
-                border-bottom: 0;
+                
             }
+            &:nth-of-type(2) {
+                border-top: 0;
+            }
+            
         }
     }
 }
