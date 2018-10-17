@@ -64,7 +64,7 @@ module.exports = {
         next: '/family-intro',
         nextAlt: './home-address-overseas',
         forks: [{
-            target: '/home-address',
+            target: '/home-address-manual-prototype',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == true &&
                     req.session['hmpo-wizard-common']['old-blue'] == false &&
@@ -148,7 +148,7 @@ module.exports = {
         // controller: require('../../../controllers/go-overseas'),
         nextAlt: './home-address-overseas',
         forks: [{
-            target: '/home-address',
+            target: '/home-address-manual-prototype',
             condition: function (req, res) { // If they are Naturalisated/Registered OR Born Before 01/01/1983 OR Passport issued Before 01/01/1994 (Old blue) Hidden FTA
                 return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == true ||
                     req.session['hmpo-wizard-common']['born-before-1983'] == true ||
@@ -156,7 +156,7 @@ module.exports = {
                     req.session['hmpo-wizard-common']['passport-before'] == true;
             }
         }, {
-            target: '/home-address',
+            target: '/home-address-manual-prototype',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
             }
@@ -216,7 +216,7 @@ module.exports = {
             'parent2-parents-marriage-month',
             'parent2-parents-marriage-year'
         ],
-        next: '/home-address'
+        next: '/home-address-manual-prototype'
     },
     '/home-address': {
         fields: [
@@ -235,6 +235,15 @@ module.exports = {
             'postcode'
         ],
         backLink: './home-address-select',
+        next: '/contact-details'
+    },
+    '/home-address-manual-prototype': {
+        fields: [
+            'address1',
+            'address2',
+            'town',
+            'postcode'
+        ],
         next: '/contact-details'
     },
     '/home-address-overseas': {
