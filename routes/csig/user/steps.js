@@ -10,6 +10,11 @@ module.exports = {
     next: '/need-csig',
     backLink: './',
     forks: [{
+      target: '/renominate',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate';
+      }
+    },{
       target: '/paper-application',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'paper-csig';
@@ -43,6 +48,11 @@ module.exports = {
         req.sessionModel.set('routeFromCsig', true)
       }
     }]
+  },
+  '/renominate': {
+    fields: ['renominate'],
+    next: '/../user-contact/',
+    controller: require('../../../controllers/csig-email-pre'),
   },
   '/need-csig-complete': {
     fields: ['renominate'],
