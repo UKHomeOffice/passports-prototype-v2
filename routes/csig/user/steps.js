@@ -15,6 +15,11 @@ module.exports = {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate';
       }
     },{
+      target: '/renominate-anytime',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate-anytime';
+      }
+    },{
       target: '/paper-application',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'paper-csig';
@@ -50,6 +55,11 @@ module.exports = {
     }]
   },
   '/renominate': {
+    fields: ['renominate'],
+    next: '/../user-contact/',
+    controller: require('../../../controllers/csig-email-pre'),
+  },
+  '/renominate-anytime': {
     fields: ['renominate'],
     next: '/../user-contact/',
     controller: require('../../../controllers/csig-email-pre'),

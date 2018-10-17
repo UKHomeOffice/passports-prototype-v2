@@ -47,7 +47,6 @@ app.get('/prototype/renew*', function(req, res) {
 app.use('/csig/track', require('./routes/csig/track'));
 app.use('/csig/user', require('./routes/csig/user'));
 app.use('/csig/user-send-book', require('./routes/csig/user-send-book'));
-app.use('/csig/user-renominate-anytime', require('./routes/csig/user-renominate-anytime'));
 app.use('/csig/user-contact', require('./routes/csig/user-contact'));
 app.use('/csig/referee', require('./routes/csig/referee'));
 app.use('/csig/start', require('./routes/csig/start'));
