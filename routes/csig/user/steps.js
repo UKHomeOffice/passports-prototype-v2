@@ -10,6 +10,11 @@ module.exports = {
     next: '/need-csig',
     backLink: './',
     forks: [{
+      target: '/send-book',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'send-passport';
+      }
+    },{
       target: '/renominate',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate';
