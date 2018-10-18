@@ -44,14 +44,13 @@ app.get('/prototype/renew*', function(req, res) {
 });
 
 //csig
-app.use('/csig/track', require('./routes/csig/track'));
 app.use('/csig/user', require('./routes/csig/user'));
 app.use('/csig/user-contact', require('./routes/csig/user-contact'));
 app.use('/csig/referee', require('./routes/csig/referee'));
 app.use('/csig/start', require('./routes/csig/start'));
+
+// Temporary csig route to make sure old URL doesn't break
 app.use('/csig/referee-5', require('./routes/csig/start'));
-app.use('/confirm-identity', require('./routes/csig/start'));
-app.use('/track', require('./routes/csig/user'));
 
 //Tracking
 app.use('/tracking', require('./routes/tracking'));
