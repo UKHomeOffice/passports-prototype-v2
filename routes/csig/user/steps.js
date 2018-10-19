@@ -10,6 +10,21 @@ module.exports = {
     next: '/need-csig',
     backLink: './',
     forks: [{
+      target: '/send-book',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'send-passport';
+      }
+    },{
+      target: '/renominate',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate';
+      }
+    },{
+      target: '/renominate-anytime',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate-anytime';
+      }
+    },{
       target: '/paper-application',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'paper-csig';
@@ -43,6 +58,16 @@ module.exports = {
         req.sessionModel.set('routeFromCsig', true)
       }
     }]
+  },
+  '/renominate': {
+    fields: ['renominate'],
+    next: '/../user-contact/',
+    controller: require('../../../controllers/csig-email-pre'),
+  },
+  '/renominate-anytime': {
+    fields: ['renominate'],
+    next: '/../user-contact/',
+    controller: require('../../../controllers/csig-email-pre'),
   },
   '/need-csig-complete': {
     fields: ['renominate'],
