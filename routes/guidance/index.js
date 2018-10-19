@@ -27,8 +27,8 @@ app.get('/guidance/additional-documents', function (req, res, next) {
 app.get('/guidance/children-acts', function (req, res, next) {
     res.render('guidance/children-acts');
 });
-app.get('/guidance/documents-to-prove-responsibility-for-the-child', function (req, res, next) {
-    res.render('guidance/documents-to-prove-responsibility-for-the-child');
+app.get('/guidance/prove-responsibility-for-a-child', function (req, res, next) {
+    res.render('guidance/prove-responsibility-for-a-child');
 });
 
 // Temporary page for interstitial grandparents details
