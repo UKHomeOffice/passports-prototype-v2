@@ -4,12 +4,14 @@ var app = require("express")(),
   fields = require("./fields");
 
 app.use(
-  require("hmpo-template-mixins")(fields, { sharedTranslationKey: "prototype" })
+  require("hmpo-template-mixins")(fields, {
+    sharedTranslationKey: "prototype"
+  })
 );
 
 app.use(
   wizard(steps, fields, {
-    controller: require("../../controllers/form"),
+    controller: require("../../../controllers/form"),
     templatePath: "tracking/CON",
     name: 'common'
   })

@@ -36,31 +36,39 @@ app.use('/prototype/redirect-tracking', require('./routes/prototype/redirect-tra
 // `/ftas` to `/prototype`
 // `/renew` to `/apply`
 // to make sure any URLs don't get broken
-app.get('/ftas*', function(req, res) {
+app.get('/ftas*', (req, res) => {
     res.redirect('/prototype' + req.params[0]);
 });
-app.get('/prototype/renew*', function(req, res) {
+app.get('/prototype/renew*', (req, res) => {
     res.redirect('/prototype/apply' + req.params[0]);
 });
 
-//csig
-app.use('/csig/user', require('./routes/csig/user'));
-app.use('/csig/user-contact', require('./routes/csig/user-contact'));
+//old csig routes > Redirecting to new tracking routes with query params attached
+app.use('/csig/user*', (req, res) => {
+    var i = req.url.indexOf('?');
+    var query = req.url.substr(i + 1);
+    res.redirect('/tracking/user/?' + query);
+})
+app.use('/csig/user-contact*', (req, res) => {
+    var i = req.url.indexOf('?');
+    var query = req.url.substr(i + 1);
+    res.redirect('/tracking/user-contact/?' + query);
+})
+//csig refree pages
 app.use('/csig/referee', require('./routes/csig/referee'));
 app.use('/csig/start', require('./routes/csig/start'));
-
 // Temporary csig route to make sure old URL doesn't break
 app.use('/csig/referee-5', require('./routes/csig/start'));
 
 //Tracking
 app.use('/tracking', require('./routes/tracking'));
+app.use('/tracking/user', require('./routes/tracking/user'));
+app.use('/tracking/user-contact', require('./routes/tracking/user-contact'));
 
 //DPS Tracking
-app.use('/tracking-dps', require('./routes/tracking-dps'));
-
+app.use('/tracking-dps', require('./routes/tracking/tracking-dps'));
 //Change Of Name Tracking
-app.use('/tracking-con', require('./routes/tracking-con'));
-
+app.use('/tracking-con', require('./routes/tracking/tracking-con'));
 //How to
 app.use('/how-to', require('./routes/how-to'));
 
@@ -92,12 +100,12 @@ app.use('/how-to', require('./routes/how-to'));
 // app.use('/priority-service/service-intro', require('./routes/priority-service/service-intro'));
 
 // Temporary route to dps next steps page
-app.get('/priority-service/confirmation', function (req, res) {
+app.get('/priority-service/confirmation', (req, res) => {
     res.render('priority-service/renew/confirmation');
 })
 
 // Temporary route to overseas next steps page
-app.get('/overseas/confirmation', function (req, res) {
+app.get('/overseas/confirmation', (req, res) => {
     res.render('priority-service/renew/confirmation');
 })
 
