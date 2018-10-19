@@ -80,6 +80,10 @@ module.exports = {
         fields: ['child-mother', 'child-father'],
         next: '/confirm-applicant-address'
     },
+    '/confirm-applicant-parents-missing': {
+        fields: ['child-mother'],
+        next: '/confirm-applicant-address'
+    },
     '/applicant-photo-fail': {
       next: '/csig-details-work',
       forks: [{
