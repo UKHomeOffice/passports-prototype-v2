@@ -1,11 +1,11 @@
 module.exports = {
     '/': {
-        controller: require('../../controllers/check-query-string'),
+        controller: require('../../../controllers/check-query-string'),
         fields: ['reference'],
         next: '/track-email'
     },
     '/track-email': {
-        controller: require('../../controllers/login'),
+        controller: require('../../../controllers/login'),
         fields: ['age-day', 'age-month', 'age-year'],
         next: '/waiting-for-old',
         backLink: './'

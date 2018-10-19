@@ -9,7 +9,7 @@ app.use(
 
 app.use(
   wizard(steps, fields, {
-    controller: require("../../controllers/form"),
+    controller: require("../../../controllers/form"),
     templatePath: "tracking/DPS",
     name: 'common'
   })
