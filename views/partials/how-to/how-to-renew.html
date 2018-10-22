@@ -1,14 +1,14 @@
 <div class="column-full">
   <div class="flash-card">
     <header>
-      <h1>How to apply for a passport online</h1>
+      <h1>How to apply</h1>
     </header>
     <div class="grid-row">
       <div class="column-two-thirds">
         <ul>
           <li><span class="circle circle-step">1</span>
-            <h2>Get your digital passport photo</h2>
-            <p style="margin-left:32px;">We'll show you 3 ways to get a digital photo. Your photo must meet the <a href="/how-to">rules for digital photos</a>.</p>
+            <h2>Get a digital passport photo</h2>
+            <p style="margin-left:32px;">We'll show you how to get a digital photo that <a href="/how-to">meets the rules</a>.</p>
             </p>
             </p>
           </li>
@@ -22,9 +22,9 @@
             <h2>Pay for your new passport</h2>
             {{#nunjucks}}
               {% if values['applicant-age'] >= 16 %}
-                <p style="margin-left:32px;"> You'll need a debit or credit card. A standard passport costs £75.50.</p>
+                <p style="margin-left:32px;"> A standard passport costs £75.50.</p>
               {% elif values['applicant-age'] < 16 %}
-                <p style="margin-left:32px;"> You'll need a debit or credit card. A standard passport costs £49.</p>
+                <p style="margin-left:32px;"> A standard passport costs £49.</p>
               {% endif %}
             {{/nunjucks}}
           </li>
