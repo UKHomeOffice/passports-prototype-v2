@@ -31,14 +31,22 @@
 
           {{#nunjucks}}
             {% if values['passport-before'] and values['applicant-age'] <= 11 %} {# 0-11s #}
-              <br> <code class="error-summary">TODO: Add child c-sig</code> <br> <br> <!-- Remove after editing this content -->
+            <li><span class="circle circle-step">4</span>
+              <h2>Ask someone to confirm your identity</h2>
+              <p style="margin-left:32px;">They can <a href="../../guidance/confirming-your-identity" target="_blank">confirm your identity online</a> without a printed photo.</p>
+            </li>
+            <li><span class="circle circle-step">5</span>
+              <h2>Send us your old passport</h2>
+              <p style="margin-left:32px;">You need to pay the postage to return your old passport.</p>
+            </li>
+            {% else %}
+            <li><span class="circle circle-step">4</span>
+              <h2>Send us your old passport</h2>
+              <p style="margin-left:32px;">You need to pay the postage to return your old passport.</p>
+            </li>
             {% endif %}
           {{/nunjucks}}
 
-          <li><span class="circle circle-step">4</span>
-            <h2>Send us your old passport</h2>
-            <p style="margin-left:32px;">You need to pay the postage to return your old passport.</p>
-          </li>
         </ul>
         <a href="./intro/you-need-a-photo" class="button">Continue</a>
         <details>
