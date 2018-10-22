@@ -28,7 +28,12 @@
 
                 <p>If you can't provide their details, you'll need to tell us why and it may delay your application.</p>
 
-                <p>In most cases we won't contact {{> partials-applicant-yours-the-applicants}} family &ndash; if we do, we'll ask your permission first. Their details won't appear on the new passport.</p>
+                {{#nunjucks}}
+                    {% if values['applicant-age'] > 16 %} {# Not required for FTC #}
+                    <p>In most cases we won't contact your family &ndash; if we do, we'll ask your permission first. Their details won't appear on the new passport.</p>
+                    {% endif %}
+                {{/nunjucks}}
+
                 <br>
 
                 {{#input-submit}}{{/input-submit}}

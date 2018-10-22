@@ -16,7 +16,13 @@
                     <li>
                         <span class="circle circle-step">2</span>
                         <h2>Apply and pay online</h2>
-                        <p style="margin-left:32px;">A standard passport costs £75.50.</p>
+                        {{#nunjucks}}
+                          {% if values['applicant-age'] >= 16 %}
+                            <p style="margin-left:32px;"> A standard passport costs £75.50.</p>
+                          {% elif values['applicant-age'] < 16 %}
+                            <p style="margin-left:32px;"> A standard passport costs £49.</p>
+                          {% endif %}
+                        {{/nunjucks}}
                     </li>
                     <li>
                         <span class="circle circle-step">3</span>
