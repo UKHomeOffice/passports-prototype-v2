@@ -1,9 +1,9 @@
 {
     "buttons": {
         "next": "Continue",
+        "upload-your-photo": "Upload your photo",
         "find-address": "Find address",
-        "declaration": "Continue to payment",
-        "upload-your-photo": "Upload your photo"
+        "declaration": "Continue to payment"
     },
     "fields": {
         "what-you-will-need-declaration": {
