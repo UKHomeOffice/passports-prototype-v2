@@ -18,7 +18,7 @@
     {% if not values['passport-before'] or (values['passport-before'] and values['old-blue']) %}
       <h1>Apply for a first UK passport</h1>
     {% elif values['passport-before'] and values['passport-damaged'] == 'No' %}
-      <h1>Renew a UK passport</h1>
+      <h1>Apply for a UK passport</h1>
     {% elif values['passport-before'] and values['passport-damaged'] == 'Yes' %}
       <h1>Replace a UK passport</h1>
     {% endif %}
@@ -37,7 +37,7 @@
     <p>It should take around 6 weeks to get a new passport.</p>
 
   {% elif values['passport-before'] and (values['16-or-older'] or values['rising-16']) and values['passport-damaged'] == 'No' %} {# Renew adult #}
-    <p>Based on your answers, you're renewing a UK passport. If this is incorrect, you'll need to <a href="./">start again</a>.</p>
+    <p>Based on your answers, you've had a UK passport before and want to apply for a new one.</p>
     {% if not values['rising-16'] %}
       <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
     {% elif values['rising-16'] %}
@@ -46,7 +46,7 @@
     {% endif %}
 
   {% elif values['passport-before'] and values['applicant-age'] <= 15 and values['applicant-age'] > 11 and values['passport-damaged'] == 'No' %} {# Renew 12–15s #}
-    <p>Based on your answers, you're renewing a UK passport. If this is incorrect, you'll need to <a href="./">start again</a>.</p>
+    <p>Based on your answers, you've had a UK passport before and want to apply for a new one.</p>
     <p>If your name has changed, or you can't be recognised as the same person from the photo in your old passport, you need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a>.</p>
     <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
 
