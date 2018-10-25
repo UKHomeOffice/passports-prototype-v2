@@ -31,7 +31,7 @@ module.exports = {
         next: '/../uploadphoto'
     },
     '/get-photo-code': {
-        fields: ['photo-code-photo'],
+        fields: ['photo-code-path'],
         backLink: './choose-photo-method',
         next: '/retrieving'
     },
