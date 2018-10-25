@@ -1,0 +1,16 @@
+{{< layout}}
+
+
+{{$main-content}}
+            <link rel="stylesheet" href="{{assetPath}}/stylesheets/app-photo.css">
+
+            <div class="column-full" style="text-align:center">
+                <img src="../../public/images/progress.gif" style="width:50px" class="animated-progress"/>
+                <h3>Processing image</h3>
+                <script>setTimeout(function(){window.location.href='./photo-uploaded-failure'},3000);</script>
+            </div>
+
+
+{{/main-content}}
+
+{{/ layout}}

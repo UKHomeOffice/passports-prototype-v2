@@ -1,0 +1,118 @@
+{{< layout}}
+
+{{$pageTitle}}Photo uploaded{{/pageTitle}}
+
+{{$header}}
+    <h1>Your photo failed the checks</h1>
+{{/header}}
+
+{{$content}}
+
+
+<form action="/" method="POST" autocomplete="off" novalidate="true" spellcheck="false">
+            <p>It failed for the following reasons:</p>
+            <ul>
+                    <li>
+                        <div class="panel panel-photo-result panel-photo-error">
+                            <h2 class="bold-medium">We can’t find the outline of your head</h2>
+                            <p>Our automated checks can’t find the outline of your head.</p>
+
+                              <p>Please try:</p>
+                            <ul class="list list-bullet">
+                                <li>standing in front of a plain, light-coloured (eg, cream or grey) background</li>
+                                <li>tying your hair back or brushing it down if it’s loose</li>
+                                <li>standing further away from the wall to avoid shadows</li>
+                                <li>to make sure the background has no glare or patterns</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="panel panel-photo-result panel-photo-error">
+                            <h2 class="bold-medium">Your photo is blurred</h2>
+                            <p>Make sure:</p>
+                            <ul class="list list-bullet">
+                                <li>there's enough light in the room</li>
+                                <li>the lens on your camera or device is clean</li>
+                                <li>you and the camera are still when the photo is taken</li>
+                            </ul>
+                        </div>
+                    </li>
+            </ul>
+
+
+           
+<!-- RADIO TOGGLE OPTIONS-->
+
+
+  <div class="form-group" style="margin-top:50px">
+    <fieldset>
+
+      <legend>
+        <h2 class="heading-medium" style="padding-bottom:15px">
+          Do you want to use this photo?
+        </h2>
+
+      </legend>
+
+      <div class="block-label" data-target="contact-by-email">
+        <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes" aria-controls="override" aria-expanded="false">
+        <label for="example-contact-by-email">Yes</label>
+      </div>
+      
+
+
+      <div class="block-label" data-target="contact-by-phone" style="margin-left: 10px;
+    clear: none;}">
+        <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+        <label for="example-contact-by-phone">No</label>
+      </div>
+     
+      <div class="panel panel-border-narrow js-hidden" id="override" aria-hidden="true">
+        <label class="form-label" for="contact-phone">
+        <p>You can only use this photo if you:</p>
+                        <ul class="list list-bullet">
+                            <li>think that the reason it failed is not correct</li>
+                            <li>got the digital photo from a photo booth or shop</li>
+                            <li>have a medical or religious reason why it doesn't meet the rules</li>
+                        </ul>
+                        <p>You’ll have to explain why you want to use this photo. Your application will be delayed if we have to ask you for a different photo.</p>
+                        </label>
+      </div>
+
+
+    </fieldset>
+  </div>
+</form>
+
+<div class="form-group">
+                <a href="./plain-expression" class="button" role="button">Continue</a>
+            </div>
+
+     
+
+<!-- END OF TOGGLE -->
+
+
+
+
+{{/content}}
+
+{{$sidebar}}
+<div class="column-one-third" style="margin-top:50px">
+    <div class="sidebar related">
+      <div class="photo-preview-inner">
+<h2 class="heading-medium">Your photo</h2>
+          <div class="photo">
+            <object type="image/jpg" data="/public/images/thumbnail.jpeg"type="image/svg+xml" tabindex="-1" style="width:150px">
+            <img src="/public/images/woman-with-reddish-hair_ex@2x.jpg" alt="Head nad shoulder image of a woman with reddish hair standing in front of a grey background with neutral expression.">
+            </object>
+            
+        </div>
+      </div>
+
+    </div>
+</div>
+{{/sidebar}}
+
+{{/ layout}}
