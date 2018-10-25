@@ -1,0 +1,25 @@
+{{< layout}}
+
+{{$main-content}}
+
+{{< hmpo-partials-form}}
+  {{$form}}
+    <!-- Renewals -->
+    {{#values.passport-before}}
+      {{#values.old-blue}}
+        {{> partials-how-to-how-to-fta}}
+      {{/values.old-blue}}
+      {{^values.old-blue}}
+        {{> partials-how-to-how-to-renew}}
+      {{/values.old-blue}}
+    {{/values.passport-before}}
+    <!-- First time applications  -->
+    {{^values.passport-before}}
+      {{> partials-how-to-how-to-fta}}
+    {{/values.passport-before}}
+  {{/form}}
+{{/ hmpo-partials-form}}
+
+{{/ main-content}}
+
+{{/ layout}}
