@@ -16,7 +16,7 @@
 {{$header}}
   {{#nunjucks}}
     {% if not values['passport-before'] or (values['passport-before'] and values['old-blue']) %}
-      <h1>Apply for a first UK passport</h1>
+      <h1>Apply for a UK passport</h1>
     {% elif values['passport-before'] and values['passport-damaged'] == 'No' %}
       <h1>Apply for a UK passport</h1>
     {% elif values['passport-before'] and values['passport-damaged'] == 'Yes' %}
@@ -32,8 +32,8 @@
 
 {{#nunjucks}}
   {% if values['passport-before'] and values['old-blue'] %} {# Hidden FTA #}
-    <p>Based on your answers, you have an old passport that expired some time ago. If this is incorrect, you'll need to <a href="./">start again</a>.</p>
-    <p>You can't renew this type of passport. You need to apply for a first UK passport and you may need to have a <a href="../../guidance/identity-interviews" target="_blank">passport interview</a>.</p>
+    <p>Based on your answers, you have an old passport that was issued in {{values['issue-year']}}.</p>
+    <p>You can't renew a passport if it was issued a long time ago. You must apply for a first UK passport and you may need to have a <a href="../../guidance/identity-interviews" target="_blank">passport interview</a>.</p>
     <p>It should take around 6 weeks to get a new passport.</p>
 
   {% elif values['passport-before'] and (values['16-or-older'] or values['rising-16']) and values['passport-damaged'] == 'No' %} {# Renew adult #}
@@ -70,7 +70,7 @@
     <p>Based on your answers, you're renewing a UK passport. If this is incorrect, <a href="./">start again</a>.</p> #}
 
   {% elif not values['passport-before'] and (values['16-or-older'] or values['rising-16']) %} {# FTA #}
-    <p>Based on your answers, you're applying for a first UK passport. If this is incorrect, you'll need to <a href="./">start again</a>.</p>
+    <p>Based on your answers, you're applying for a first UK passport.</p>
     <p>You need to have <a href="../../guidance/british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
     {% if not values['rising-16'] %}
       <p>It should take around 6 weeks to get a new passport.</p>
