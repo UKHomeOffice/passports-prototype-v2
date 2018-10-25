@@ -15,8 +15,8 @@ app.use('/prototype/intro', require('./routes/prototype/intro'));
 app.use('/prototype/filter', require('./routes/prototype/filter'));
 app.use('/prototype/startpage', require('./routes/prototype/startpage'));
 app.use('/prototype/startpage-overseas', require('./routes/prototype/startpage-overseas'));
-app.use('/prototype/photo-guide', require('./routes/prototype/photo-guide'));
 app.use('/prototype/help', require('./routes/prototype/help'));
+app.use('/prototype/photo-guide', require('./routes/prototype/photo-guide'));
 app.use('/prototype/photo-booth-shop', require('./routes/prototype/photo-booth-shop'));
 app.use('/prototype/takephoto', require('./routes/prototype/takephoto'));
 app.use('/prototype/upload', require('./routes/prototype/upload'));
@@ -68,8 +68,6 @@ app.use('/tracking/user-contact', require('./routes/tracking/user-contact'));
 app.use('/tracking-dps', require('./routes/tracking/tracking-dps'));
 //Change Of Name Tracking
 app.use('/tracking-con', require('./routes/tracking/tracking-con'));
-//How to
-app.use('/how-to', require('./routes/how-to'));
 
 // Priority Service (DPS)
 // app.use('/priority-service/overseas', require('./routes/priority-service/overseas'));
