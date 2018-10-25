@@ -59,7 +59,7 @@ module.exports = {
       // {
       //   type:'equal',
       //   arguments:['Yes'],
-      //   redirect:'/../intro/choose-photo-method'
+      //   redirect:'/../photo/choose-photo-method'
       // },
       // {
       //   type:'equal',

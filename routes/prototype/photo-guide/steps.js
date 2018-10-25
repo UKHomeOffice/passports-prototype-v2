@@ -1,7 +1,7 @@
 module.exports = {
   '/': {
     next: '/short-plain-bg',
-    backLink: '/../change_of_name_180122/intro/choose-photo-method'
+    backLink: '/../change_of_name_180122/photo/choose-photo-method'
   },
   '/find-a-camera': {
     next: '/short-plain-bg'

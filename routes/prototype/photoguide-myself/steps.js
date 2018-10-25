@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-      backLink: '/../intro/choose-photo-method'
+      backLink: '/../photo/choose-photo-method'
     },
     '/guidemyself-find-a-camera': {
       backLink: './choose-photo-method'

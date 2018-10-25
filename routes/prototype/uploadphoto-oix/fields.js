@@ -13,7 +13,7 @@ module.exports = {
       {
         type: 'equal',
         arguments: ['Yes'],
-        redirect: '/../intro/choose-photo-method'
+        redirect: '/../photo/choose-photo-method'
       }
     ]
   },
@@ -42,7 +42,7 @@ module.exports = {
       {
         type:'equal',
         arguments:['No','No'],
-        redirect:'/intro/choose-photo-method'
+        redirect:'/photo/choose-photo-method'
       },
       {
         type:'equal',

@@ -21,7 +21,7 @@ module.exports = {
                 }
             },
             {
-                target: '/../intro/choose-photo-method',
+                target: '/../photo/choose-photo-method',
                 condition: {
                     field: 'submit-photo',
                     value: false
