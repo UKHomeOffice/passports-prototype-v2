@@ -20,7 +20,6 @@ app.use('/prototype/uploadphoto', require('./routes/prototype/uploadphoto'));
 app.use('/prototype/uploadphoto-oix', require('./routes/prototype/uploadphoto-oix'));
 app.use('/prototype/uploadphoto-child', require('./routes/prototype/uploadphoto-child'));
 app.use('/prototype/takephoto', require('./routes/prototype/takephoto'));
-app.use('/prototype/rejectedphoto', require('./routes/prototype/rejectedphoto'));
 app.use('/prototype/filter-common-temp', require('./routes/prototype/filter-common-temp'));
 app.use('/prototype/startpage-temp', require('./routes/prototype/startpage-temp'));
 app.use('/prototype/overseas-not-available', require('./routes/prototype/overseas-not-available'));
