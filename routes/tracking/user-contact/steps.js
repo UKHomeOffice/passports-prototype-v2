@@ -1,8 +1,12 @@
 module.exports = {
     '/': {
-        backLink: '../user/need-csig',
-        next: '/give-csig-details',
+        backLink: '../user/paper-application',
+        next: '/how-to',
         controller: require('../../../controllers/csig-email-pre')
+    },
+    '/how-to': {
+        backLink: './',
+        next: '/give-csig-details',
     },
     '/give-csig-details': {
         fields: ['csig-email', 'csig-name', 'csig-last-name', 'contact-csig'],

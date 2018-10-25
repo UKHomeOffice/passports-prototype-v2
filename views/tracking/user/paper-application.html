@@ -9,17 +9,17 @@
       <header class="update-notice update-notice--grey">
         <h1>Ask someone to confirm<br>your identity</h1>
       </header>
-      {{#nunjucks}}
-        {% if values['csig-type'] == 'examiner' %}
-          <p>We can't work on your application until this is done.</p>
-        {% else %}
-        <p>We can't work on your application until this is done.</p>
         <h2>What you need to do</h2>
-        <p>You need to <a href="/csig/user-contact">ask someone to do this online</a>.</p>
-        <p>If they can't do this online, they can use a paper form. You'll need to <a href="paper-application-select">download a form to confirm your identity</a>.</p>
+        <p>You need to ask someone to do this online. We can't work on your application until this is done.</p>
+        {{#input-submit}}{{/input-submit}}
+        <details>
+          <summary><span class="summary">They can't do this online</span></summary>
+          <div class="panel panel-border-narrow">
+          <p>If they can't do this online, they can use a paper form. You'll need to <a href="who-can-paper">download a form to confirm your identity</a>.</p>
+          </div>
+        </details>
+  
         <p>We can't receive your documents until your identity is confirmed. Once this is done, we’ll let you know where to send your documents.</p>
-        {% endif %}
-      {{/nunjucks}}
 
       <input type="hidden" name="renominate" id="renominate" value="false">
       {{> partials-csig-sidebar}}
