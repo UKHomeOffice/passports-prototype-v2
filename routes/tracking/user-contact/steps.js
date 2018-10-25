@@ -1,6 +1,5 @@
 module.exports = {
     '/': {
-        backLink: '../user/paper-application',
         next: '/how-to',
         controller: require('../../../controllers/csig-email-pre')
     },

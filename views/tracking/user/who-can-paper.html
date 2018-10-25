@@ -8,20 +8,19 @@
 <div class="column-full">
   <div class="flash-card">
     <header>
-      <h1>Who can confirm your identity</h1>
+      <h1>Confirm your identity using a form</h1>
     </header>
   <div class="grid-row">
       <div class="column-two-thirds">
-
+        <h2>Who can do this</h2>
         <p>You need to ask someone who:</p>
         <ul class="list-bullet" style="margin-left:32px;">
-            <li>is 18 or older</li>
-                {{#nunjucks}}
+            {{#nunjucks}}
                 {% if values['csig-type'] !="overseas" %}
-                    <li>and lives in the UK</li>
-                    <li>and has a current UK passport</li>
+                    <li>lives in the UK</li>
+                    <li>has a current UK or Irish passport</li>
                 {% else %}
-                    <li>and has a current UK, Irish or other EU, US or Commonwealth passport (in order of preference)
+                    <li>has a current UK, Irish or other EU, US or Commonwealth passport (in order of preference)
                 {% endif %}
             {{/nunjucks}} 
             <li>and works in or is retired from a <a href="/guidance/recognised-professions" target="_blank">recognised profession</a></li>
