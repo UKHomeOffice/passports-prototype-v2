@@ -28,11 +28,11 @@ module.exports = {
             {
                 type: 'equal',
                 arguments: ['upload', 'shop', 'code'],
-                redirect: '/../photoguide-short'
+                redirect: '/../photo-guide'
             }, {
                 type: 'equal',
                 arguments: ['upload', 'myself', 'code'],
-                redirect: '/../photoguide-shop'
+                redirect: '/../photo-booth-shop'
             }, {
                 type: 'equal',
                 arguments: ['upload', 'upload', 'code'],
@@ -61,7 +61,7 @@ module.exports = {
             {
                 type: 'equal',
                 arguments: ['upload', 'shop'],
-                redirect: '/../photoguide-short'
+                redirect: '/../photo-guide'
             }, {
                 type: 'equal',
                 arguments: ['upload', 'upload'],
