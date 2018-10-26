@@ -10,14 +10,14 @@
     <p>Your photo must meet the rules for digital passport photos.<br><a href="/../prototype/photoguide-static/photorules">Read the photo guide</a>.</p>
     {{< hmpo-partials-form}}
         {{$form}}
-            <div id="photo-photo-choose-file-group" class="form-group">
+            <!--<div id="photo-photo-choose-file-group" class="form-group">
                 <label for="photo-choose-file" class="button photo-upload-label" role="button">
                     <span id="photo-label-text">Upload your photo</span>
                 </label>
                 <input type="file" accept="image/jpeg" onchange="form.submit()" id="photo-choose-file" class="photo-choose-file" name="photo-choose-file" aria-controls="progress-container" aria-required="true">
-            </div>
+            </div>-->
 
-            <!-- {{#input-submit}}upload-your-photo{{/input-submit}} -->
+             {{#input-submit}}upload-your-photo{{/input-submit}}
         {{/form}}
     {{/ hmpo-partials-form}}
 
