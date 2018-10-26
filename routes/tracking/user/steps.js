@@ -15,6 +15,11 @@ module.exports = {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'send-passport';
       }
     },{
+      target: '/renominate-paper',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate-paper';
+      }
+    },{
       target: '/renominate',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate';
@@ -58,6 +63,11 @@ module.exports = {
         req.sessionModel.set('routeFromCsig', true)
       }
     }]
+  },
+  '/renominate': {
+    fields: ['renominate'],
+    next: '/../user-contact/',
+    controller: require('../../../controllers/csig-email-pre'),
   },
   '/renominate': {
     fields: ['renominate'],

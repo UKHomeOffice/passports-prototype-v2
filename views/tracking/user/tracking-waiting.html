@@ -12,7 +12,14 @@
         <span>Email sent to {{values.csig-email}}</span>
       </header>
       <h2>What happens next</h2>
-      <p>If you don’t get an update in the next few days, remind the person doing this for you or  <a href="/csig/user-contact/" id="someone-else">ask someone else</a>. You can only ask one person at a time.</p>
+      <p>If you don’t get an update in the next few days, remind the person doing this for you.</p>
+      <p><a href="/tracking/user/who-can/" id="someone-else">Ask someone else</a>. You can only ask one person at a time.</p>
+      <details>
+        <summary><span class="summary">The person I asked can't do this online</span></summary>
+        <div class="panel panel-border-narrow">
+        <p>If they can't do this online, they can use a paper form. You'll need to <a href="who-can-paper">download a form to confirm your identity</a>.</p>
+        </div>
+      </details>
       {{#nunjucks}}
         {% if values['csig-type'] != 'examiner' %}
           <p>You can get your documents ready. Once your identity is confirmed, we'll let you know where to send them.</p>
@@ -47,16 +54,16 @@
         </table>
       </article>
       <input type="hidden" name="renominate" id="renominate" value="anytime">
-      <input type="submit" value="Continue" id="submit-hidden" class="button visuallyhidden">
+      <!-- <input type="submit" value="Continue" id="submit-hidden" class="button visuallyhidden"> -->
     {{/form}}
 
 {{/ hmpo-partials-form}}
-<script>
+<!-- <script>
   $("#someone-else").click(function(e){
     e.preventDefault();
     $("#submit-hidden").click();
   })
-</script>
+</script> -->
 {{/content}}
 {{$sidebar}}
   {{> partials-csig-sidebar}}
