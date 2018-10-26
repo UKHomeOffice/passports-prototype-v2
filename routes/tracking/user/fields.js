@@ -100,7 +100,7 @@ module.exports = {
     },
     className: 'inline',
     options: [
-        { value: true, label: 'Yes' },
+        { value: true, label: 'Yes', toggle: 'use-form' },
         { value: false, label: 'No' }
     ],
     formatter: ['boolean'],

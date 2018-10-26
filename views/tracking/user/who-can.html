@@ -22,7 +22,16 @@
               </ul>
 
           <p>They must have known you personally for at least 2 years, for example as a friend, neighbour or colleague.</p>
-
+          {{#nunjucks}}
+            {% if values['csig-type'] =="overseas" %}
+              <details>
+                <summary><span class="summary">I can’t find someone to do this online</span></summary>
+                <div class="panel panel-border-narrow">
+                <p>For example, if the person confirming your identity doesn't live in the UK or have a current UK passport or they struggle to do things online, you'll need to <a href="who-can-paper">download a form</a>.</p>
+                </div>
+              </details>
+            {% endif %}
+          {{/nunjucks}} 
           <h2>Who can't do this</h2>
 
           <p>You can't ask anyone who is related to you, in a relationship with or living at the same address as you. They can't work at HM Passport Office.</p>

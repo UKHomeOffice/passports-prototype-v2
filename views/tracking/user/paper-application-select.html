@@ -6,15 +6,16 @@
   {{< hmpo-partials-form}}
     {{$form}}
      <h1>Use a form to confirm your identity</h1>
-     <p>You'll no longer be able to ask someone to do this online.</p>
+
      <h2>Do you want to download the form?</h2>
 
      {{#radio-group}}confirm-csig-paper{{/radio-group}}
+      <div class="panel panel-border-narrow js-hidden" id="use-form">
+        <p>You'll no longer be able to ask someone to do this online.</p>
+      </div>
      {{#input-submit}}{{/input-submit}}
     {{/form}}
   {{/ hmpo-partials-form}}
 {{/content}}
-{{$sidebar}}
-{{/sidebar}}
 
 {{/ layout-csig}}
