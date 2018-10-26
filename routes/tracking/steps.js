@@ -8,7 +8,13 @@ module.exports = {
         controller: require('../../controllers/login'),
         fields: ['age-day', 'age-month', 'age-year'],
         next: '/waiting-for-old',
-        backLink: './'
+        backLink: './',
+        forks: [{
+            target: '/send-us-your-documents',
+            condition: function (req, res) {
+              return req.session['hmpo-wizard-common']['tracking-status'] == 'send-us-your-docs';
+            }
+        }]
     },
     '/waiting-for-old': {},
     '/send-us-your-documents': {},

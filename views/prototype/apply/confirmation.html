@@ -32,7 +32,7 @@
 
         {% if not values['old-blue'] %} <!-- Passport before and its not old blue -->
           {% if values['document-list'] or values['application-for-someone-else'] or values['change-of-name-reason']
-              or (values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other') %}
+              or (values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other') %}
             <h2> Send us your documents </h2>
             <p><a href="./docs-renew?status=confirm-documents" target="_blank">Check what you need to send</a></p>
           {% else %}
@@ -51,7 +51,12 @@
           </p>
 
           <h2>Track your application</h2>
-          <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking">https://www.passport.service.gov.uk/track</a></p>
+          {% if values['document-list'] or values['application-for-someone-else'] or values['change-of-name-reason']
+              or (values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other') %}
+            <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking?status=send-us-your-docs">https://www.passport.service.gov.uk/track</a></p>
+          {% else %}
+            <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking">https://www.passport.service.gov.uk/track</a></p>
+          {% endif %}
 
           <a href="" class="button">Give feedback</a><br/><br/>
         {% endif %}
