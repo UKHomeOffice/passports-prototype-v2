@@ -63,7 +63,7 @@ app.use('/csig/referee-5', require('./routes/csig/start'));
 //Tracking
 app.use('/tracking', require('./routes/tracking'));
 app.use('/tracking/user', require('./routes/tracking/user'));
-app.use('/tracking/user-contact', require('./routes/tracking/user-contact'));
+//app.use('/tracking/user-contact', require('./routes/tracking/user-contact'));
 
 //DPS Tracking
 app.use('/tracking-dps', require('./routes/tracking/tracking-dps'));
