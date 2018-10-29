@@ -40,6 +40,10 @@
 
 {% endif %}
 
+{% if values['dual-nationality'] %}
+    {% set documents = (documents.push('any passports from other countries that haven’t expired'), documents) %}
+{% endif %}
+
 {% if values['old-blue'] %}
     {% set documents = (documents.push('old passport'), documents) %}
 {% endif %}
