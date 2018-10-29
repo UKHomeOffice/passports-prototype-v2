@@ -19,7 +19,7 @@ function isValidUrl(req) {
 }
 Controller.prototype.successHandler = function successHandler(req, res, callback) {
     if (isValidUrl(req) ) {
-        return res.redirect('retrieving');
+        return res.redirect('retrieving-image');
     }
     Base.prototype.successHandler.call(this, req, res, callback);
 };

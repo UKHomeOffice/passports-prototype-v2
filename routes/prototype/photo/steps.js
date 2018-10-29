@@ -1,7 +1,7 @@
 module.exports = {
     '/': {
     },
-    '/you-need-a-photo': {
+    '/digital-photo': {
         next: '/choose-photo-method'
     },
     '/choose-photo-method': {
@@ -11,19 +11,16 @@ module.exports = {
     '/photo-retrieved': {
         next: '/../photo/uploadphoto'
     },
-    '/get-photo-code': {
+    '/retrieve': {
         fields: ['photo-code-path'],
         backLink: './choose-photo-method',
-        next: '/retrieving'
+        next: '/retrieving-image'
     },
-    '/retrieving': {
-        backLink: './get-photo-code',
+    '/retrieving-image': {
+        backLink: './retrieve',
     },
     '/fetch-result': {
         controller: require('../../../controllers/fetch-result')
-    },
-    '/error': {
-        backLink: './get-photo-code',
     },
     '/upload': {
         next: '/../photo/uploadphoto',

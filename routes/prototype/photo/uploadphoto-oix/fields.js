@@ -89,7 +89,7 @@ module.exports = {
       {
         type:'equal',
         arguments:['No','No'],
-        redirect:'/check-photo-and-submit'
+        redirect:'/final-checks'
       },
       {
         type:'equal',

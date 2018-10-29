@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-        backLink: '../intro/you-need-a-photo',
+        backLink: '../photo/digital-photo',
         next: '/processing-image'
     },
     '/uploading': {
@@ -10,12 +10,12 @@ module.exports = {
     '/processing-image': {
         backLink: './uploading'
     },
-    '/photo-uploaded-success': {
+    '/questions-intro': {
         backLink: './'
     },
     '/plain-expression': {
         fields: ['plain-expression'],
-        backLink: './photo-uploaded-success',
+        backLink: './questions-intro',
         next: '/you-need-another-photo'
     },
     '/shadows-face': {
@@ -27,11 +27,11 @@ module.exports = {
         backLink: './shadows-face',
         next: './'
     },
-    '/check-photo-and-submit': {
+    '/final-checks': {
         fields: [
             'submit-photo'
         ],
-        backLink: './photo-uploaded-success',
+        backLink: './questions-intro',
         next: '/../../apply',
         forks: [{
                 target: '/../../apply',

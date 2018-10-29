@@ -1,13 +1,13 @@
 module.exports = {
     '/': {},
-    '/photo-uploaded-success': {
+    '/questions-intro': {
         backLink: '../../upload'
     },
-    '/check-photo-and-submit': {
+    '/final-checks': {
         fields: [
             'submit-photo'
         ],
-        backLink: '/photo-uploaded-success',
+        backLink: '/questions-intro',
         next: '../../apply',
         forks: [{
                 target: '../../apply',
@@ -33,6 +33,8 @@ module.exports = {
         backLink: '../../upload'
     },
     '/questions-intro': {
+    },
+    '/questions-intro-failed': {
         backLink: './not-accepted'
     },
     '/override': {
@@ -40,7 +42,7 @@ module.exports = {
             'photo-override',
             'override-reason'
         ],
-        backLink: './questions-intro',
+        backLink: './questions-intro-failed',
         next: '/final-checks-override',
         forks: [{
             target: '../../upload?status=retry',

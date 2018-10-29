@@ -10,14 +10,14 @@ module.exports = {
     '/processing-image': {
         // backLink: './uploading'
     },
-    '/photo-uploaded-success': {
-        // backLink: '../intro/get-photo-code'
+    '/questions-intro': {
+        // backLink: '../intro/retrieve'
     },
     '/photo-uploaded-failure': {
         // backLink: '../upload'
     },
     '/photo-code-failure': {
-        backLink: '../get-photo-code'
+        backLink: '../retrieve'
     },
     '/plain-expression': {
         fields: ['plain-expression'],
@@ -36,15 +36,18 @@ module.exports = {
     '/you-need-another-photo': {
         next: './'
     },
-    '/happy-check-photo-and-submit': {
-        backLink: '../get-photo-code'
+    '/check-and-submit-passed-photo': {
+        backLink: '../retrieve'
     },
-    '/error-check-photo-and-submit': {
-        backLink: '../get-photo-code'
+    '/not-accepted': {
+        backLink: '../retrieve'
     },
-    '/check-photo-and-submit': {
+    '/check-and-submit-photo': {
         fields: ['oix-override', 'oix-override-reason'],
-        backLink: '../get-photo-code',
+        backLink: '../retrieve',
         next: '/../../apply'
-    }
+    },
+    '/code-error': {
+        backLink: '../retrieve',
+    },
 };
