@@ -153,7 +153,7 @@ module.exports = {
         }]
     },
     '/dual-national': {
-        controller: require('../../../controllers/go-overseas'),
+        //controller: require('../../../controllers/go-overseas'),
         fields: [
             'dual-nationality'
         ],
