@@ -5,7 +5,13 @@ module.exports = {
     },
     '/choose-photo-method': {
         fields: ['choose-photo'],
-        next: '/upload'
+        next: '/upload',
+        forks: [{
+            target: '/retrieve',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['choose-photo'] == 'code';
+            }
+        }]
     },
     '/upload': {
         next: '/processing-image',
@@ -30,5 +36,22 @@ module.exports = {
     },
     '/fetch-result': {
         controller: require('../../../controllers/fetch-result')
+    },
+    '/check-and-submit-passed-photo': {
+        backLink: './retrieve',
+        next: '/../apply'
+    },
+    '/check-and-submit-photo': {
+        fields: ['oix-override', 'oix-override-reason'],
+        backLink: './retrieve',
+        next: '/../apply'
+    },
+    '/not-accepted': {
+        backLink: './retrieve',
+        next: '/choose-photo-method'
+    },
+    '/code-error': {
+        backLink: './retrieve',
+        next: '/retrieve'
     }
 };
