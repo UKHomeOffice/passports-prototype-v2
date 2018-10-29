@@ -1,6 +1,5 @@
 module.exports = {
-    '/': {
-    },
+    '/': {},
     '/digital-photo': {
         next: '/choose-photo-method'
     },
@@ -8,8 +7,18 @@ module.exports = {
         fields: ['choose-photo'],
         next: '/upload'
     },
-    '/photo-retrieved': {
-        next: '/../photo/uploadphoto'
+    '/upload': {
+        next: '/processing-image',
+        controller: require('../../../controllers/check-query-string'),
+        forks: [{
+            target: '/../photo/upload-errors',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['status'] == 'retry'
+            }
+        }]
+    },
+    '/processing-image': {
+        backLink: './upload',
     },
     '/retrieve': {
         fields: ['photo-code-path'],
@@ -19,20 +28,7 @@ module.exports = {
     '/retrieving-image': {
         backLink: './retrieve',
     },
-    '/processing-image': {
-        backLink: './upload',
-    },
     '/fetch-result': {
         controller: require('../../../controllers/fetch-result')
-    },
-    '/upload': {
-        next: '/processing-image',
-        controller: require('../../../controllers/check-query-string'),
-        forks: [{
-          target: '/../photo/upload-errors',
-          condition: function (req, res) {
-            return req.session['hmpo-wizard-common']['status'] == 'retry'
-          }
-        }]
-      }
+    }
 };
