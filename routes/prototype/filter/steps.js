@@ -7,7 +7,7 @@ module.exports = {
             'application-country'
         ],
         backLink: '../startpage',
-        next: '/first-uk',
+        next: '/dob',
         /* if Yes is selected */
         nextAlt: 'what-do-you-want-to-do-overseas',
         /* if they are from Germany/France */
@@ -17,40 +17,36 @@ module.exports = {
         /* if they are from Spain - first hidden as renewal */
         nextAltAltAltAlt: '../overseas-not-available' /* if they are from Syria - not available */
     },
-    // '/who-for-why': {
-    //     fields: [
-    //         'application-capacity'
-    //     ],
-    //     next: '/first-uk',
-    // },
-    // '/who-for-help': {
-    //   backLink: 'who-for',
-    // },
-    // '/rising-16': {
-    //     fields: [
-    //         'rising-16'
-    //     ],
-    //     next: '/first-uk'
-    // },
-    '/first-uk': {
+    '/dob': {
         backLink: './',
+        controller: require('../../../controllers/check-dob'),
+        fields: [
+            'age-day',
+            'age-year',
+            'age-month'
+        ],
+        next: '/first-uk'
+    },
+    '/first-uk': {
+        backLink: './dob',
         fields: [
             'passport-before'
         ],
         next: '/lost-stolen',
         forks: [{
-            target: '/dob',
+            target: '/naturalisation-registration-details',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false;
+                return req.session['hmpo-wizard-common']['passport-before'] == false
             }
-        }]
+        }],
     },
     '/you-need-a-different-service': {},
     '/lost-stolen': {
+        backLink: './first-uk',
         fields: [
             'lost-stolen'
         ],
-        next: '/dob',
+        next: '/passport-date-of-issue',
         forks: [{
             target: '/lost',
             condition: {
@@ -58,35 +54,6 @@ module.exports = {
                 value: true
             }
         }]
-    },
-    '/dob': {
-        controller: require('../../../controllers/check-dob'),
-        //controller: require('../../../controllers/go-overseas'),
-        fields: [
-            'age-day',
-            'age-year',
-            'age-month'
-        ],
-        next: '/passport-date-of-issue',
-        forks: [{
-            target: '/naturalisation-registration-details',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false
-            }
-        }]
-        // forks: [
-        //     {
-        //     target: '/first-uk',
-        //     condition: function (req, res) {
-        //         return req.session['hmpo-wizard-common']['16-or-older'] == false;
-        //     }
-        // },
-        // {
-        //     target: '/rising-16',
-        //     condition: function (req, res) {
-        //         return req.session['hmpo-wizard-common']['rising-16'] == true;
-        //     }
-        // }]
     },
     '/naturalisation-registration-details': {
         fields: [
@@ -132,6 +99,7 @@ module.exports = {
         /* if they are from Afganistan */
     },
     '/passport-date-of-issue': {
+        backLink: './lost-stolen',
         fields: [
             'issue-day',
             'issue-month',
@@ -160,36 +128,8 @@ module.exports = {
         next: '/summary',
         nextAlt: '../overseas'
     },
-    // '/relationship-applicant': {
-    //     fields: [
-    //         'relationship-applicant',
-    //         'other-why-apply'
-    //     ],
-    //     backLink: './dual-national',
-    //     next: '/third-party-name'
-    // },
-    // '/third-party-name': {
-    //     fields: [
-    //         'third-party-first-name',
-    //         'third-party-last-name'
-    //     ],
-    //     backLink: './relationship-applicant',
-    //     next: '/parental-responsibility',
-    //     forks: [{
-    //         target: '/summary',
-    //         condition: function (req, res) {
-    //             return req.session['hmpo-wizard-common']['16-or-older'] == true;
-    //         }
-    //     }],
-    // },
-    // '/parental-responsibility': {
-    //     fields: [
-    //         'parental-responsibility'
-    //     ],
-    //     backLink: './relationship-applicant',
-    //     next: '/summary'
-    // },
     '/summary': {
+        backLink: './dual-national',
         next: '/../intro'
     }
 };

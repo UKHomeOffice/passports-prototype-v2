@@ -14,12 +14,15 @@
         <fieldset class="inline">
             {{#radio-group}}passport-before{{/radio-group}}
         </fieldset>
-
-        <div id="passport-before-no" class="reveal js-hidden">
-            <div class="panel panel-border-narrow">
-                <p>You may need to have a <a href="../../guidance/identity-interviews" target="_blank">passport interview</a>. We'll tell you if that happens and what you need to do.</p>
+        {{#nunjucks}}
+        {% if values['applicant-age'] > 15 %}
+            <div id="passport-before-no" class="reveal js-hidden">
+                <div class="panel panel-border-narrow">
+                    <p>You may need to have a <a href="../../guidance/identity-interviews" target="_blank">passport interview</a>. We'll tell you if that happens and what you need to do.</p>
+                </div>
             </div>
-        </div>
+        {% endif %}
+        {{/nunjucks}}
 
         {{#input-submit}}{{/input-submit}}
 

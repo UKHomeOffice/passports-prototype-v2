@@ -40,8 +40,16 @@
 
 {% endif %}
 
-{% if values['dual-nationality'] %}
-    {% set documents = (documents.push('any passports from other countries that haven\'t expired'), documents) %}
+{% if values['old-blue'] %}
+    {% set documents = (documents.push('old passport'), documents) %}
+{% endif %}
+
+<!-- FTC temporary -->
+{% if values['applicant-age'] < 16 %}
+    {% set documents = (documents.push('full birth or adoption certificate'), documents) %}
+    {% if not values['born-in-uk'] %} <!-- OLC PDF 10 -->
+        {% set documents = (documents.push('the passport used to enter the UK'), documents) %}
+    {% endif %}
 {% endif %}
 
 
