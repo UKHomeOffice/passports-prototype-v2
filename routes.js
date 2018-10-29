@@ -18,7 +18,7 @@ app.use('/prototype/photo-guide', require('./routes/prototype/photo-guide'));
 app.use('/prototype/photo-booth-shop', require('./routes/prototype/photo-booth-shop'));
 app.use('/prototype/photo/uploadphoto', require('./routes/prototype/photo/uploadphoto'));
 app.use('/prototype/photo/uploadphoto-oix', require('./routes/prototype/photo/uploadphoto-oix'));
-app.use('/prototype/photo/uploadphoto/uploadphoto-child', require('./routes/prototype/photo/uploadphoto/uploadphoto-child'));
+app.use('/prototype/photo/uploadphoto/upload-errors', require('./routes/prototype/photo/uploadphoto/upload-errors'));
 app.use('/prototype/takephoto', require('./routes/prototype/takephoto'));
 app.use('/prototype/filter-common-temp', require('./routes/prototype/filter-common-temp'));
 app.use('/prototype/startpage-temp', require('./routes/prototype/startpage-temp'));

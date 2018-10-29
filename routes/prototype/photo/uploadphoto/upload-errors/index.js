@@ -8,7 +8,7 @@ app.use(require('hmpo-template-mixins')(fields, {
 }));
 
 app.use(wizard(steps, fields, {
-    templatePath: 'prototype/photo/uploadphoto/child',
+    templatePath: 'prototype/photo/uploadphoto/upload-errors',
     name: 'common',
     params: '/:action?'
 }));

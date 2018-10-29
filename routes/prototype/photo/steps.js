@@ -29,7 +29,7 @@ module.exports = {
         next: '/processing-image',
         controller: require('../../../controllers/check-query-string'),
         forks: [{
-          target: '/../photo/uploadphoto-child',
+          target: '/../photo/upload-errors',
           condition: function (req, res) {
             return req.session['hmpo-wizard-common']['status'] == 'retry'
           }
