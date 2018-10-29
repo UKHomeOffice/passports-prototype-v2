@@ -69,9 +69,8 @@ module.exports = {
     next: '/../user-contact/',
     controller: require('../../../controllers/csig-email-pre'),
   },
-  '/renominate': {
-    fields: ['renominate'],
-    next: '/../user-contact/',
+  '/renominate-paper': {
+    next: '/who-can',
     controller: require('../../../controllers/csig-email-pre'),
   },
   '/renominate-anytime': {
