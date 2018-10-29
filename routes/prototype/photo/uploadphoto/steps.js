@@ -32,14 +32,14 @@ module.exports = {
             'submit-photo'
         ],
         backLink: './photo-uploaded-success',
-        next: '/../apply',
+        next: '/../../apply',
         forks: [{
-                target: '/../apply',
+                target: '/../../apply',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
                 }
             }, {
-                target: '/../apply/name',
+                target: '/../../apply/name',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
                 }
@@ -59,7 +59,7 @@ module.exports = {
             //     }
             // },
             {
-                target: '/../photo/choose-photo-method',
+                target: '/../choose-photo-method',
                 condition: {
                     field: 'submit-photo',
                     value: 'No'

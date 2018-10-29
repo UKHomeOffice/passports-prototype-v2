@@ -9,7 +9,7 @@ module.exports = {
         next: '/upload'
     },
     '/photo-retrieved': {
-        next: '/../uploadphoto'
+        next: '/../photo/uploadphoto'
     },
     '/get-photo-code': {
         fields: ['photo-code-path'],
@@ -26,10 +26,10 @@ module.exports = {
         backLink: './get-photo-code',
     },
     '/upload': {
-        next: '/../uploadphoto',
+        next: '/../photo/uploadphoto',
         controller: require('../../../controllers/check-query-string'),
         forks: [{
-          target: '/../uploadphoto-child',
+          target: '/../photo/uploadphoto-child',
           condition: function (req, res) {
             return req.session['hmpo-wizard-common']['status'] == 'retry'
           }
