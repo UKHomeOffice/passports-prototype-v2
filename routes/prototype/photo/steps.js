@@ -19,11 +19,14 @@ module.exports = {
     '/retrieving-image': {
         backLink: './retrieve',
     },
+    '/processing-image': {
+        backLink: './upload',
+    },
     '/fetch-result': {
         controller: require('../../../controllers/fetch-result')
     },
     '/upload': {
-        next: '/../photo/uploadphoto',
+        next: '/processing-image',
         controller: require('../../../controllers/check-query-string'),
         forks: [{
           target: '/../photo/uploadphoto-child',
