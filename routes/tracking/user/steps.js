@@ -120,7 +120,7 @@ module.exports = {
     controller: require('../../../controllers/csig-email-pre')
   },
   '/how-to': {
-      backLink: './',
+      backLink: './who-can',
       next: '/give-csig-details',
   },
   '/give-csig-details': {
