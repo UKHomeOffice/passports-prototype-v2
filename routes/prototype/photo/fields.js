@@ -1,17 +1,17 @@
 module.exports = {
     'choose-photo': {
         legend: {
-                value: 'I already have a digital photo',
-                className: 'visuallyhidden'
-            },
-            options: [{
-                value: 'upload',
-                label: 'I have a digital photo to upload'
-            }, {
-                value: 'code',
-                label: 'I have a code to enter',
-                toggle: 'photo-code'
-            }]
+            value: 'I already have a digital photo',
+            className: 'visuallyhidden'
+        },
+        options: [{
+            value: 'upload',
+            label: 'I have a digital photo to upload'
+        }, {
+            value: 'code',
+            label: 'I have a code to enter',
+            toggle: 'photo-code'
+        }]
     },
     'choose-photo-overseas': {
         legend: {
