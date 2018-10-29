@@ -8,13 +8,20 @@
 {{/header}}
 
 {{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
 <p>Check your code and try again. You need to enter the code exactly as it’s written.
 
 <p>You entered: ab.de/1fG2h3i</p>
 
 <p>If this keeps happening, contact the company that provided your digital photo.</p>
 
-<a href="/prototype/photo/retrieve" class="button">Try again</a><br/><br/>
+{{#input-submit}}try-again{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
 
 {{/content}}
 

@@ -1,7 +1,8 @@
 module.exports = {
     '/': {},
     '/check-and-submit-passed-photo': {
-        backLink: '../retrieve'
+        backLink: '../retrieve',
+        next: '/../../apply'
     },
     '/check-and-submit-photo': {
         fields: ['oix-override', 'oix-override-reason'],
@@ -9,9 +10,11 @@ module.exports = {
         next: '/../../apply'
     },
     '/not-accepted': {
-        backLink: '../retrieve'
+        backLink: '../retrieve',
+        next: '/../choose-photo-method'
     },
     '/code-error': {
         backLink: '../retrieve',
+        next: '/../retrieve'
     },
 };
