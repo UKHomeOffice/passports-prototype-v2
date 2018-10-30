@@ -71,9 +71,8 @@
 
 <h2>Would you like to submit this photo?</h2>
 
-{{#radio-group}}oix-override{{/radio-group}}
+<!-- {{#radio-group}}oix-override{{/radio-group}}
 
-<!-- TODO: Move reveal under first radio option -->
 <div id="oix-override" class="reveal js-hidden">
     <div class="panel panel-border-narrow" style="margin-top:-20px; margin-bottom:20px;">
         <label for="oix-override-reason" class="form-label">
@@ -82,6 +81,31 @@
         {{#textarea}}oix-override-reason{{/textarea}}
     </div>
     <br>
+</div> -->
+
+<div id="oix-override-group" class="form-group">
+    <fieldset role="radiogroup" aria-required="true">
+        <legend>
+            <span class="visuallyhidden">Do you want to use this photo?</span>
+        </legend>
+
+        <label class="block-label selected" for="oix-override-true">
+            <input type="radio" name="oix-override" id="oix-override-true" value="true" required="true" data-toggle="oix-override" aria-controls="oix-override" aria-expanded="true" data-com.agilebits.onepassword.user-edited="yes">
+            Yes, I want to submit it
+        </label>
+
+        <div class="panel panel-border-narrow js-hidden" id="oix-override" style="margin-top:10px; margin-bottom:0px;">
+            <label for="oix-override-reason" class="form-label">
+                Tell us why you’d like to use this photo:
+            </label>
+            {{#textarea}}oix-override-reason{{/textarea}}
+        </div>
+
+        <label class="block-label" for="oix-override-false">
+            <input type="radio" name="oix-override" id="oix-override-false" value="false" required="true" data-com.agilebits.onepassword.user-edited="yes">
+            No, I want to get another photo
+        </label>
+    </fieldset>
 </div>
 
 {{#input-submit}}{{/input-submit}}
