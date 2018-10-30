@@ -32,7 +32,7 @@ module.exports = {
         next: '/retrieving-image'
     },
     '/retrieving-image': {
-        backLink: './retrieve',
+        // backLink: './retrieve',
     },
     '/fetch-result': {
         controller: require('../../../controllers/fetch-result')
@@ -44,7 +44,13 @@ module.exports = {
     '/check-and-submit-photo': {
         fields: ['oix-override', 'oix-override-reason'],
         backLink: './retrieve',
-        next: '/../apply'
+        next: '/../apply',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
     },
     '/not-accepted': {
         backLink: './retrieve',

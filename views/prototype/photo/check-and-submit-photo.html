@@ -67,44 +67,21 @@
 
 <p>If you decide to use this photo we’ll check it manually. We’ll ask for another photo if something doesn’t
     look right.</p>
+<br>
 
-<div class="form-group{{#errors.oix-override}} error{{/errors.oix-override}}" style="margin-top:50px">
-    <fieldset>
+<h2>Would you like to submit this photo?</h2>
 
-        <legend>
-            <h2 class="heading-medium" style="padding-bottom:15px">
-                Would you like to submit this photo?
-            </h2>
-            {{#errors.oix-override}}<span id="oix-override-error" class="error-message">{{errors.oix-override.message}}</span>{{/errors.oix-override}}
-        </legend>
+{{#radio-group}}oix-override{{/radio-group}}
 
-        <div class="block-label" data-target="oix-override-yes">
-            <input id="oix-override-yes" type="radio" name="oix-override" value="Yes" aria-required="true"
-                aria-controls="oix-override-toggle" aria-expanded="true" {{#selected}} oix-override=Yes{{/selected}}>
-                <label for="oix-override-yes">
-            Yes, I want to submit it
-            </label>
-        </div>
-
-        <div class="panel panel-border-narrow js-hidden" id="oix-override-toggle">
-            <div class="form-group {{#errors.oix-override}} error{{/errors.oix-override}}">
-                <label class="form-label" for="oix-override-reason">
-                    <p>Tell us why you’d like to use this photo:</p>
-                    {{#errors.oix-override-reason}}<span id="oix-override-reason-error" class="error-message">{{errors.oix-override-reason.message}}</span>{{/errors.oix-override-reason}}
-                    <textarea name="oix-override-reason" id="oix-override-reason" class="form-control textarea"
-                        aria-required="true" maxlength="250" spellcheck="true" autocapitalize="sentences"></textarea>
-                </label>
-            </div>
-        </div>
-
-        <div class="block-label" data-target="oix-override-no">
-            <input id="oix-override-no" type="radio" name="oix-override" value="No" aria-required="true" {{#selected}}
-                oix-override=No{{/selected}}> <label for="oix-override-no">
-            No, I want to get another photo
-            </label>
-        </div>
-
-    </fieldset>
+<!-- TODO: Move reveal under first radio option -->
+<div id="oix-override" class="reveal js-hidden">
+    <div class="panel panel-border-narrow" style="margin-top:-20px; margin-bottom:20px;">
+        <label for="oix-override-reason" class="form-label">
+            Tell us why you’d like to use this photo:
+        </label>
+        {{#textarea}}oix-override-reason{{/textarea}}
+    </div>
+    <br>
 </div>
 
 {{#input-submit}}{{/input-submit}}
