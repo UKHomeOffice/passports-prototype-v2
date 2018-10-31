@@ -40,7 +40,6 @@
       <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
     {% elif values['rising-16'] %}
       <p>As you're about to turn 16, you'll get an adult passport. It should take around 3 weeks - you won't get it before your birthday.</p>
-      <p>To get a passport before you turn 16, contact us to see if you're eligible for the <a href="https://www.gov.uk/get-a-passport-urgently">1 week Fast Track service</a>.</p>
     {% endif %}
 
   {% elif values['passport-before'] and values['applicant-age'] <= 15 and values['applicant-age'] > 11 and values['passport-damaged'] == 'No' %} {# Renew 12–15s #}
@@ -56,12 +55,11 @@
 
 
   {% elif values['passport-before'] and (values['16-or-older'] or values['rising-16']) and values['passport-damaged'] == 'Yes' %} {# Damaged adult #}
-    <p>Based on your answers, you're replacing a damaged UK passport. If this is incorrect, you'll need to <a href="./">start again</a>.</p>
+    <p>Based on your answers, you've had a UK passport before and want to apply for a new one.</p>
     {% if not values['rising-16'] %}
       <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
     {% elif values['rising-16'] %}
     <p>As you're about to turn 16, you'll get an adult passport. It should take around 3 weeks - you won't get it before your birthday.</p>
-    <p>To get a passport before you turn 16, contact us to see if you're eligible for the <a href="https://www.gov.uk/get-a-passport-urgently">1 week Fast Track service</a>.</p>
     {% endif %}
 
   {# {% elif DPS %}
@@ -73,7 +71,7 @@
     {% if not values['rising-16'] %}
       <p>It should take around 6 weeks to get a new passport.</p>
     {% elif values['rising-16'] %}
-    <p>Rising 16 content<p>
+    <p>As you're about to turn 16, you'll get an adult passport. It should take around 6 weeks - you won't get it before your birthday.<p>
     {% endif %}
 
   {% elif not values['passport-before'] and not values['16-or-older'] %} {# FTC #}
