@@ -13,10 +13,49 @@ module.exports = {
             }
         }]
     },
-    '/upload': {
-        next: '/processing-image',
-        controller: require('../../../controllers/check-query-string'),
+    '/photo-guide': {
+        next: '/photo-guide-find-camera'
+    },
+    '/photo-guide-find-camera': {
+        next: '/photo-guide-background'
+    },
+    '/photo-guide-background': {
+        next: '/photo-guide-lighting'
+    },
+    '/photo-guide-lighting': {
+        next: '/photo-guide-distance'
+    },
+    '/photo-guide-distance': {
+        next: '/photo-guide-space'
+    },
+    '/photo-guide-space': {
+        next: '/photo-guide-shadows'
+    },
+    '/photo-guide-shadows': {
+        next: '/photo-guide-face'
+    },
+    '/photo-guide-face': {
+        next: '/photo-guide-get-ready-for-photo'
+    },
+    '/photo-guide-get-ready-for-photo': {
+        next: '/upload',
         forks: [{
+            condition: function (req, res) {
+                // setter for `upload` page to dynamically change heading
+                req.sessionModel.set('routeFromPhotoGuide', true)
+            }
+        }]
+    },
+    '/upload': {
+        controller: require('../../../controllers/check-query-string'),
+        backLink: './choose-photo-method',
+        next: '/processing-image',
+        forks: [{
+            condition: function (req, res) {
+                // setter for `upload` page to dynamically change heading
+                req.sessionModel.set('routeFromPhotoGuide', false) // reset
+            }
+        }, {
             target: '/../photo/upload-errors',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['status'] == 'retry'
