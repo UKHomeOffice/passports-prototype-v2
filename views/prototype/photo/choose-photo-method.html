@@ -1,0 +1,65 @@
+{{< layout}}
+
+{{$pageTitle}}Get a digital photo{{/pageTitle}}
+
+{{$header}}
+    <h1>Get a digital photo</h1>
+{{/header}}
+
+{{$main-content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+<div class="grid-row" style="margin:15px;">
+    <h1>Get your digital photo</h1>
+
+    <div class="grid-row">
+        <div class="column-one-third">
+            <!-- nothing here but keep it -->
+        </div>
+        <div class="column-full">
+            <a href="./photo-guide" class="guide-box">
+                <img src="../../public/images/photo-guide-myself.png" alt="Your uploaded photo" title="Your uploaded photo"
+                    style="width:25.2%">
+                <h3 style="margin-top:0;">Get a friend to take one</h3>
+                <p>Follow the step-by-step guide to taking a good digital passport photo.</p>
+            </a>
+            <a href="./photo-booth-shop" class="guide-box last">
+                <img src="../../public/images/photo-guide-shop.png" alt="Your uploaded photo" title="Your uploaded photo"
+                    width="200">
+                <h3 style="margin-top:0;">Go to a booth or a shop</h3>
+                <p>Check what you'll get from a booth and what to ask for at a shop.</p>
+            </a>
+        </div>
+    </div>
+    <br>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h2>I already have a digital photo</h2>
+
+            {{#radio-group}}choose-photo{{/radio-group}}
+
+            <div id="photo-code" class="reveal js-hidden">
+                <div class="panel panel-border-narrow" style="margin-top:-20px; margin-bottom:20px;">
+                    <p>Check if your printed photos have a photo code - you'll need to enter this code to retrieve your
+                        photo.<br><br>
+                        The photo code is a new service and may not be available yet from photo booths or shops in your
+                        area.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    {{#input-submit}}{{/input-submit}}
+
+</div>
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+{{/main-content}}
+
+{{/ layout}}

@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-        backLink: '../uploadphoto/check-photo-and-submit',
+        backLink: '../photo/final-checks',
         fields: [
             'passport-number',
             // 'expiry-day',

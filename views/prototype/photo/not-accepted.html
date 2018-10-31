@@ -1,0 +1,28 @@
+{{< layout}}
+
+{{$pageTitle}}Check your photo and submit{{/pageTitle}}
+
+{{$header}}
+    <h1>Photo error</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+<p>This photo has failed our automated checks for the following reasons:</p>
+
+<div class="panel panel-photo-result panel-photo-error">
+    <h2 class="bold-medium">Sorry, we can’t crop this photo</h2>
+    <p>We’re having problems uploading your photo. Please try again or upload another one.</p>
+</div>
+
+{{#input-submit}}get-another-photo{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}
