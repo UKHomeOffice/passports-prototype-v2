@@ -77,12 +77,6 @@ module.exports = {
         // backLink: './questions-intro',
         next: '/../apply',
         forks: [{
-                target: '/choose-photo-method',
-                condition: {
-                    field: 'submit-photo',
-                    value: false
-                }
-            }, {
                 target: '/../apply',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
@@ -91,6 +85,12 @@ module.exports = {
                 target: '/../apply/name',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
+                }
+            }, {
+                target: '/choose-photo-method',
+                condition: {
+                    field: 'submit-photo',
+                    value: false
                 }
             }
             // {
