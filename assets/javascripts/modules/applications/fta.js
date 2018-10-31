@@ -129,7 +129,7 @@ function clicks() {
     $('#passport-options-34').click();
     $('#can-sign-true').click();
     $('#secure-return-false').click();
-    $('#submit-photo-Yes').click();
+    $('#submit-photo-true').click();
     $('#parental-responsibility-true').click();
 
     // FTAs
