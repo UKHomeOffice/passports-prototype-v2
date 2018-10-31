@@ -46,6 +46,7 @@ module.exports = {
             }
         }]
     },
+    '/photo-booth-shop': {},
     '/upload': {
         controller: require('../../../controllers/check-query-string'),
         backLink: './choose-photo-method',
