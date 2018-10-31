@@ -38,6 +38,23 @@ module.exports = {
     //         }
     //     ]
     // },
+    'submit-photo': {
+        legend: {
+            value: 'Do you want to submit this photo?',
+            className: 'visuallyhidden'
+        },
+        options: [{
+                value: true,
+                label: 'Yes, this photo meets the rules'
+            },
+            {
+                value: false,
+                label: 'No, I want to get a different photo'
+            }
+        ],
+        validate: ['required'],
+        formatter: 'boolean'
+    },
     'oix-override': {
         legend: {
             value: 'Do you want to use this photo?',
