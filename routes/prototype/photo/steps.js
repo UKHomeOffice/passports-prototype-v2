@@ -27,7 +27,8 @@ module.exports = {
         // backLink: './upload',
     },
     '/questions-intro': {
-        backLink: './upload'
+        backLink: './upload',
+        next: '/final-checks'
     },
     '/final-checks': {
         fields: [
