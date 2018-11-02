@@ -1,0 +1,39 @@
+{{< hmpo-partials-form}}
+{{$form}}
+    <header class="update-notice update-notice--grey">
+    <h1>Ask someone to confirm <br>
+        {{> partials-applicant-yours-the-applicants}} identity</h1>
+    </header>
+
+    {{#nunjucks}}
+    {% if values['csig-type'] == 'examiner' %}
+        <p>We can't work on your application until this is done.</p>
+    {% else %}
+    <p>We can't work on your application until this is done.</p>
+    <p>You can get your documents ready but we can’t receive them until your identity is confirmed.</p>
+
+    <p>Once this is done, we’ll let you know the address to send your documents to.</p>
+    {% endif %}
+    {{/nunjucks}}
+
+    <input type="hidden" name="renominate" id="renominate" value="false">
+    {{#input-submit}}{{/input-submit}}
+    {{> partials-csig-sidebar}}
+    <hr>
+    <h2>Application history</h2>
+    <article>
+    <table>
+        <tbody>
+        <tr>
+            <td>Ask someone to confirm your identity</td>
+            <td>10:05am on 8 October 2018</td>
+        </tr>
+        <tr>
+            <td>Application submitted</td>
+            <td>10:05am on 8 October 2018</td>
+        </tr>
+        </tbody>
+    </table>
+    </article>
+{{/form}}
+{{/ hmpo-partials-form}}
