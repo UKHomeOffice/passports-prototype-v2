@@ -155,6 +155,6 @@ module.exports = {
     },
     '/code-error': {
         backLink: './retrieve',
-        next: '/retrieve'
+        next: '/choose-photo-method'
     }
 };
