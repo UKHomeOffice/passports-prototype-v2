@@ -10,17 +10,45 @@
 
     {{< hmpo-partials-form}}
     {{$form}}
-        <div id="photo-code-group" class="form-group">
-            <h2 class="heading-medium">Photo code</h2>
-            <p class="form-hint" id="dob-hint" style="margin-bottom:10px">This is case-sensitive, for example abc.de/1fG2h3i4</p>
 
-            <input type="text" name="photo-code-sld" id="photo-code-sld" class="form-control input-code photo-code-long" aria-required="true">
-            <span id="reference-prefix" class="prefix" style="font-weight:bold;">.</span>
-            <input type="text" name="photo-code-tld" id="photo-code-tld" class="form-control input-code photo-code" aria-required="true">
-            <span id="reference-prefix" class="prefix" style="font-weight:bold;">/</span>
-            <input type="text" name="photo-code-path" id="photo-code-path" class="form-control input-code photo-code-long" aria-required="true">
+        <div id="photo-code-group" class="form-group">
+            <fieldset>
+                <legend>
+                    <span class="form-label-bold">Photo code</span>
+                    <span id="photo-code-hint" class="form-hint">This is case-sensitive, for example abc.de/1fG2h3i4</span>
+                </legend>
+
+
+                <div class="photo-code" data-gakey="photo-code">
+                    <div id="photo-code-sld-group" class="form-group">
+                        <label for="photo-code-sld" class="visually-hidden">
+                            Photo code first part
+                        </label>
+                        <input type="text" name="photo-code-sld" id="photo-code-sld" class="form-control" aria-required="true"
+                            maxlength="6" aria-describedby="photo-code-sld-hint">
+                    </div>
+
+                    <span>.</span>
+                    <div id="photo-code-tld-group" class="form-group">
+                        <label for="photo-code-tld" class="visually-hidden">
+                            Photo code second part
+                        </label>
+                        <input type="text" name="photo-code-tld" id="photo-code-tld" class="form-control" aria-required="true"
+                            maxlength="3" aria-describedby="photo-code-tld-hint">
+                    </div>
+
+                    <span>/</span>
+                    <div id="photo-code-path-group" class="form-group">
+                        <label for="photo-code-path" class="visually-hidden">
+                            Photo code third part
+                        </label>
+                        <input type="text" name="photo-code-path" id="photo-code-path" class="form-control" aria-required="true"
+                            maxlength="8" aria-describedby="photo-code-path-hint">
+                    </div>
+
+                </div>
+            </fieldset>
         </div>
-        <br>
 
         {{#input-submit}}{{/input-submit}}
 
@@ -36,9 +64,7 @@
     <div class="sidebar related">
         <div class="photo-preview-inner">
             <h2 class="heading-medium">Where to find your code</h2>
-            <div class="photo">
-                <img src="../../public/images/printed-photo-code.png" width="250" height="285" alt="">
-            </div>
+            <img src="../../public/images/printed-photo-code.png" width="250" height="285" alt="">
         </div>
     </div>
 </div>
