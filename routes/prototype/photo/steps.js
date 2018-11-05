@@ -5,13 +5,16 @@ module.exports = {
     },
     '/choose-photo-method': {
         fields: ['choose-photo'],
-        next: '/upload',
+        next: '/photo-guidance',
         forks: [{
             target: '/retrieve',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['choose-photo'] == 'code';
             }
         }]
+    },
+    '/photo-guidance': {
+        next: '/upload'
     },
     '/photo-guide': {
         next: '/photo-guide-find-camera'
@@ -49,7 +52,7 @@ module.exports = {
     '/photo-booth-shop': {},
     '/upload': {
         controller: require('../../../controllers/check-query-string'),
-        backLink: './choose-photo-method',
+        // backLink: './choose-photo-method',
         next: '/processing-image',
         forks: [{
             condition: function (req, res) {
