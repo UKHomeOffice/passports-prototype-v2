@@ -56,7 +56,7 @@ module.exports = {
   },
   '/need-csig': {
     fields: ['renominate'],
-    next: '/../user-contact',
+    next: '/what-you-need-to-do',
     forks: [{
       condition: function (req, res) {
         // setter for Document page to redirect back to Csig
@@ -66,7 +66,7 @@ module.exports = {
   },
   '/renominate': {
     fields: ['renominate'],
-    next: '/../user-contact/',
+    next: '/what-you-need-to-do',
     controller: require('../../../controllers/csig-email-pre'),
   },
   '/renominate-paper': {
@@ -122,6 +122,9 @@ module.exports = {
   '/how-to': {
       backLink: './who-can',
       next: '/give-csig-details',
+  },
+  '/what-you-need-to-do': {
+    next: '/give-csig-details',
   },
   '/give-csig-details': {
       fields: ['csig-email', 'csig-name', 'csig-last-name', 'contact-csig'],

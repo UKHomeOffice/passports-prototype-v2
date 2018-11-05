@@ -1,0 +1,72 @@
+{{< layout-csig}}
+
+{{$pageTitle}}Track a passport application{{/pageTitle}}
+
+{{$main-content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+<div class="column-full">
+  <div class="flash-card">
+    <header>
+      <h1>What you need to do</h1>
+    </header>
+  <div class="grid-row">
+      <div class="column-two-thirds">
+        <ul>
+          <li>
+            <span class="circle circle-step">1</span><h2>Decide who can do this</h2>
+              <p style="margin-left:32px;">You need to ask someone who:</p>
+              <ul class="list-bullet" style="margin-left:32px;">
+                <li>is 18 or older</li>
+                <li>and lives in the UK</li>
+                <li>and has a current UK passport</li>
+                <li>and works in or is retired from a <a href="/guidance/recognised-professions" target="_blank">recognised profession</a></li>
+              </ul>
+
+          <p style="margin-left:32px;">They must have known you personally for at least 2 years, for example as a friend, neighbour or colleague.</p>
+
+          <p style="margin-left:32px;">They must not be related, in a relationship with or living at the same address as you. They can't work at HM Passport Office.</p>
+
+          </li>
+           {{#nunjucks}}
+            {% if values['csig-type'] == 'child' %}
+              <li>
+                <span class="circle circle-step">1</span><h2>Contact the person</h2>
+                <p style="margin-left:32px;">Once you've decided who can do this, you must contact them before we send them an email. You need to tell them the applicant's:</p>
+                <ul class="list-bullet" style="margin-left:32px;">
+                  <li>current address</li>
+                  <li>place and date of birth, including the year</li>
+                  <li>parents' names and years they were born</li>
+                </ul>
+              </li>
+            {% else %}
+              <li>
+                <span class="circle circle-step">1</span><h2>Contact the person</h2>
+                <p style="margin-left:32px;">Once you've decided who can do this, you must contact them before we send them an email. You need to tell them:</p>
+                <ul class="list-bullet" style="margin-left:32px;">
+                  <li>your date of birth, including the year</li>
+                  <li>your current address</li>
+                </ul>
+              </li>
+            {% endif %}
+          {{/nunjucks}}
+          <li>
+            <span class="circle circle-step">2</span><h2>Enter their name and email</h2>
+            <p style="margin-left:32px;">We'll send them an email with a link to go online. They'll need to look at a photo and answer a few questions.</p>
+          </li>
+          <br>
+        </ul>
+        {{#input-submit}}{{/input-submit}}
+        <p><a href="http://www.gov.uk">I'll do this later (sign out)</a></p>
+        </br>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{/form}}
+{{/ hmpo-partials-form}}
+{{/main-content}}
+
+
+{{/ layout-csig}}
