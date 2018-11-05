@@ -2,7 +2,8 @@
     "buttons": {
         "next": "Continue",
         "upload-your-photo": "Upload your photo",
-        "get-another-photo": "Get another photo",
+        "submit": "Submit",
+        "try-another-photo": "Try another photo",
         "try-again": "Try again",
         "find-address": "Find address",
         "declaration": "Continue to payment"

@@ -65,6 +65,10 @@ select {
     }
 }
 
+.panel-flash-card {
+  border-color: #fff;
+}
+
 .button-guide-next a{
     background-image:url("../images/icon-arrow-right.svg")!important;
     background-repeat: no-repeat;
@@ -82,50 +86,66 @@ select {
 
 /* guidance-photos */
 
-    @media (min-width: 641px){
-    .guidance-photos {
-        overflow-x: auto;
-    }}
-    .guidance-photos {
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-    }
-    .guidance-photos ul {
-        margin-left: -8px;
-    }
-    @media (min-width: 769px){
+@media (min-width: 641px) {
+  .guidance-photos {
+    overflow-x: auto;
+  }
+}
+
+.guidance-photos {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.guidance-photos ul {
+  margin-left: -8px;
+}
+
 .guidance-photos ul li {
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+  min-width: 120px;
+  max-width: 172px;
+  margin-bottom: 1.05263em;
+  padding-left: 8px;
+}
+
+@media (min-width: 769px) {
+  .guidance-photos ul li {
     max-width: 188px;
-}}
-.guidance-photos ul li {
-    position: relative;
-    box-sizing: border-box;
-    float: left;
-    min-width: 120px;
-    max-width: 172px;
-    margin-bottom: 1.05263em;
-    padding-left: 8px;
+  }
 }
+
 .guidance-photos img {
-    width: 100%;
-    vertical-align: bottom;
+  width: 100%;
+  vertical-align: bottom;
 }
+
 .guidance-photos .result {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 85%;
-    height: 57px;
-    background: #fff;
-    font-family: "nta",Arial,sans-serif;
-    font-size: 12px;
-    line-height: 1.25;
-    font-weight: 400;
-    text-transform: none;
-    font-size-adjust: 0.5;
-    color: #0b0c0c;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 85%;
+  height: 43px;
+  background: #fff;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #0b0c0c;
 }
+
+@media (min-width: 641px) {
+  .guidance-photos .result {
+    font-size: 14px;
+    line-height: 1.42857;
+    height: 57px;
+  }
+}
+
 .guidance-photos ul div {
     float: left;
 }
@@ -160,9 +180,9 @@ select {
     background-position: right 7px center;
     background-size: 18px;
 }
-.guidance-photos p{
-  font-size:14px;
-}
+// .guidance-photos p{
+//   font-size:14px;
+// }
 
 
 /* other blue screens */
@@ -1221,14 +1241,48 @@ padding: 10px;
 
 
 /* photo code styles */
-.photo-code{
-  width:40px!important;
-  text-transform: none!important;
+
+.photo {
+  position: relative;
+  width: 120px;
 }
 
-.photo-code-long{
-  width:120px!important;
-  text-transform: none!important;
+@media (min-width: 769px) {
+  .photo {
+      width: 150px;
+  }
+}
+
+.photo-code {
+  margin-top: 0.5em;
+}
+
+.photo-code #photo-code-sld-group {
+  width: 5em;
+}
+
+.photo-code #photo-code-tld-group {
+  width: 3em;
+}
+
+.photo-code #photo-code-path-group {
+  width: 6em;
+}
+
+.photo-code .form-group {
+  float: left;
+}
+
+.photo-code .form-group input {
+  width: 100%;
+}
+
+.photo-code span {
+  float: left;
+  margin-top: 0.5em;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  font-weight: bold;
 }
 
 /* start button fix */
