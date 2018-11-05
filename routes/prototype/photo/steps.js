@@ -4,8 +4,7 @@ module.exports = {
     },
     '/choose-photo-method': {
         fields: ['choose-photo'],
-        backLink: './',
-        next: '/photo-guide-find-camera',
+        next: '/photo-guidance',
         forks: [{
             target: '/upload',
             condition: function (req, res) {
@@ -64,7 +63,7 @@ module.exports = {
     '/upload': {
         controller: require('../../../controllers/check-photo-file-name'),
         // backLink: './choose-photo-method',
-        next: '/processing-or-retrieving-image',
+        next: '/processing-image',
         forks: [{
             condition: function (req, res) {
                 // setter for `upload` page to dynamically change heading
