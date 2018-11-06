@@ -6,7 +6,7 @@ module.exports = {
         },
         options: [{
             value: 'upload',
-            label: 'I‘ll take or upload a digital photo'
+            label: 'I’ll take or upload a digital photo'
         }, {
             value: 'code',
             label: 'I have a code to enter',
