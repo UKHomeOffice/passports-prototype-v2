@@ -8,12 +8,12 @@
 <div class="column-full">
   <div class="flash-card">
     <header>
-      <h1>How to confirm someone's identity</h1>
+      <h1>What you need to do</h1>
     </header>
   <div class="grid-row">
       <div class="column-two-thirds">
         <ul>
-          <li>
+          <!-- <li>
             <span class="circle circle-step">1</span><h2>Decide who can do this</h2>
               <p style="margin-left:32px;">You need to ask someone who:</p>
               <ul class="list-bullet" style="margin-left:32px;">
@@ -27,12 +27,12 @@
 
           <p style="margin-left:32px;">They must not be related, in a relationship with or living at the same address as you. They can't work at HM Passport Office.</p>
 
-          </li>
+          </li> -->
            {{#nunjucks}}
             {% if values['csig-type'] == 'child' %}
               <li>
-                <span class="circle circle-step">2</span><h2>Contact the person</h2>
-                <p style="margin-left:32px;">You must contact the person before we send them an email with details. You need to tell them the applicant's:</p>
+                <span class="circle circle-step">1</span><h2>Contact the person</h2>
+                <p style="margin-left:32px;">Once you've decided who can do this, you must contact them before we send them an email. You need to tell them the applicant's:</p>
                 <ul class="list-bullet" style="margin-left:32px;">
                   <li>current address</li>
                   <li>place and date of birth, including the year</li>
@@ -41,8 +41,8 @@
               </li>
             {% else %}
               <li>
-                <span class="circle circle-step">2</span><h2>Contact the person</h2>
-                <p style="margin-left:32px;">You must contact the person before we send them an email with details. You need to tell them:</p>
+                <span class="circle circle-step">1</span><h2>Contact the person</h2>
+                <p style="margin-left:32px;">Once you've decided who can do this, you must contact them before we send them an email. You need to tell them:</p>
                 <ul class="list-bullet" style="margin-left:32px;">
                   <li>your date of birth, including the year</li>
                   <li>your current address</li>
@@ -51,7 +51,7 @@
             {% endif %}
           {{/nunjucks}}
           <li>
-            <span class="circle circle-step">3</span><h2>Enter their name and email</h2>
+            <span class="circle circle-step">2</span><h2>Enter their name and email</h2>
             <p style="margin-left:32px;">We'll send them an email with a link to go online. They'll need to look at a photo and answer a few questions.</p>
           </li>
           <br>

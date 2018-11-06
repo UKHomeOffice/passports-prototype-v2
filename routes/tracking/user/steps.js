@@ -15,6 +15,11 @@ module.exports = {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'send-passport';
       }
     },{
+      target: '/renominate-paper',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate-paper';
+      }
+    },{
       target: '/renominate',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate';
@@ -51,7 +56,7 @@ module.exports = {
   },
   '/need-csig': {
     fields: ['renominate'],
-    next: '/../user-contact',
+    next: '/what-you-need-to-do',
     forks: [{
       condition: function (req, res) {
         // setter for Document page to redirect back to Csig
@@ -61,7 +66,11 @@ module.exports = {
   },
   '/renominate': {
     fields: ['renominate'],
-    next: '/../user-contact/',
+    next: '/what-you-need-to-do',
+    controller: require('../../../controllers/csig-email-pre'),
+  },
+  '/renominate-paper': {
+    next: '/who-can',
     controller: require('../../../controllers/csig-email-pre'),
   },
   '/renominate-anytime': {
@@ -85,6 +94,10 @@ module.exports = {
   '/application-submitted': {
     next: '../csig/'
   },
+  '/who-can-paper':{
+    backLink: '../user/paper-application',
+    next: '/paper-application-select',
+  },
   '/paper-application-select': {
     fields: ['confirm-csig-paper'],
     next: '/paper-application-confirmed',
@@ -97,9 +110,49 @@ module.exports = {
     }]
   },
   '/paper-application': {
-    next: '/../user-contact',
+    next: '/who-can',
   },
   '/paper-application-confirmed': {
     next: '../csig/'
+  },
+  '/who-can': {
+    next: '/how-to',
+    controller: require('../../../controllers/csig-email-pre')
+  },
+  '/how-to': {
+      backLink: './who-can',
+      next: '/give-csig-details',
+  },
+  '/what-you-need-to-do': {
+    next: '/give-csig-details',
+  },
+  '/give-csig-details': {
+      fields: ['csig-email', 'csig-name', 'csig-last-name', 'contact-csig'],
+      backLink: './',
+      next: '/email-sent'
+  },
+  '/email-sent': {
+      backLink: '/give-csig-details',
+      controller: require('../../../controllers/csig-email'),
+      next: '/tracking-waiting'
+  },
+  '/tracking-waiting': {
+      fields: ['renominate'],
+      next: '/../user-contact',
+      forks: [{
+          condition: function (req, res) {
+              // setter for Document page to redirect back to Csig
+              req.sessionModel.set('trackWaiting', true)
+          }
+      }]
+  },
+  '/tracking-waiting-renominate': {
+      next: '/track'
+  },
+  '/tracking-waiting-renominate-anytime': {
+      next: '/track'
+  },
+  '/email-confirmation': {
+
   }
 };

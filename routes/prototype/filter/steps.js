@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-        controller: require('../../../controllers/go-overseas'),
+        //controller: require('../../../controllers/go-overseas'),
         //controller: require('../../../controllers/init'), // Initialise
         fields: [
             'apply-uk',
@@ -121,7 +121,7 @@ module.exports = {
         }]
     },
     '/dual-national': {
-        controller: require('../../../controllers/go-overseas'),
+        //controller: require('../../../controllers/go-overseas'),
         fields: [
             'dual-nationality'
         ],
