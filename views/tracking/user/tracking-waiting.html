@@ -12,19 +12,21 @@
         <span>Email sent to {{values.csig-email}}</span>
       </header>
       <h2>What happens next</h2>
-      <p>If you don’t get an update in the next few days, remind the person doing this for you.</p>
-      <p><a href="/tracking/user/who-can/" id="someone-else">Ask someone else</a>. You can only ask one person at a time.</p>
-      <details>
-        <summary><span class="summary">The person I asked can't do this online</span></summary>
-        <div class="panel panel-border-narrow">
-        <p>If they can't do this online, they can use a paper form. You'll need to <a href="who-can-paper">download a form to confirm your identity</a>.</p>
-        </div>
-      </details>
+      <p>If you don’t get an update in the next few days, remind the person doing this for you. Or, you can <a href="/tracking/user/who-can/" id="someone-else">ask someone else</a> to do this online. You can only ask one person at a time.</p>
+
       {{#nunjucks}}
         {% if values['csig-type'] != 'examiner' %}
-          <p>You can get your documents ready. Once your identity is confirmed, we'll let you know where to send them.</p>
+        <p>Get your documents ready. Once your identity is confirmed, we'll let you know where to send them.</p>
         {% endif %}
       {{/nunjucks}}
+
+      <details>
+        <summary><span class="summary">If the person you ask can't do this online</span></summary>
+        <div class="panel panel-border-narrow">
+        <p>You need to ask them to <a href="who-can-paper">use a paper form</a>.</p>
+        </div>
+      </details>
+
       <hr>
       <h2>Application history</h2>
       <article>
