@@ -4,6 +4,7 @@ module.exports = {
     },
     '/choose-photo-method': {
         fields: ['choose-photo'],
+        backLink: './',
         next: '/photo-guidance',
         forks: [{
             target: '/retrieve',
@@ -126,14 +127,13 @@ module.exports = {
     // },
     '/retrieve': {
         fields: ['photo-code-path'],
-        backLink: './choose-photo-method',
+        // backLink: './choose-photo-method',
         next: '/processing-or-retrieving-image'
     },
     '/fetch-result': {
         controller: require('../../../controllers/fetch-result')
     },
     '/check-and-submit-passed-photo': {
-        backLink: './retrieve',
         next: '/../apply',
         forks: [{
             target: '/../apply',
@@ -149,7 +149,6 @@ module.exports = {
     },
     '/check-and-submit-photo': {
         fields: ['oix-override', 'oix-override-reason'],
-        backLink: './retrieve',
         next: '/../apply',
         forks: [{
             target: '/../apply',
@@ -169,7 +168,6 @@ module.exports = {
         }]
     },
     '/not-accepted': {
-        backLink: './retrieve',
         next: '/../photo'
     },
     '/code-error': {
