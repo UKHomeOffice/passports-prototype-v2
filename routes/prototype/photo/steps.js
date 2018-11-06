@@ -167,16 +167,6 @@ module.exports = {
         fields: ['oix-override', 'oix-override-reason'],
         next: '/../apply',
         forks: [{
-            target: '/../apply',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
-            }
-        }, {
-            target: '/../apply/name',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
-            }
-        }, {
             target: '/../photo',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['oix-override'] == false;
@@ -184,6 +174,7 @@ module.exports = {
         }]
     },
     '/not-accepted': {
+        backLink: './retrieve',
         next: '/../photo'
     },
     '/code-error': {
