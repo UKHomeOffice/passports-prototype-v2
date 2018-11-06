@@ -63,7 +63,7 @@ module.exports = {
     '/upload': {
         controller: require('../../../controllers/check-photo-file-name'),
         // backLink: './choose-photo-method',
-        next: '/processing-image',
+        next: '/processing-or-retrieving-image',
         forks: [{
             condition: function (req, res) {
                 // setter for `upload` page to dynamically change heading
@@ -137,7 +137,7 @@ module.exports = {
     // },
     '/retrieve': {
         fields: ['photo-code-path'],
-        // backLink: './choose-photo-method',
+        backLink: './choose-photo-method',
         next: '/processing-or-retrieving-image'
     },
     '/fetch-photo-result': {
@@ -167,6 +167,16 @@ module.exports = {
         fields: ['oix-override', 'oix-override-reason'],
         next: '/../apply',
         forks: [{
+            target: '/../apply',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
+            }
+        }, {
+            target: '/../apply/name',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
+            }
+        }, {
             target: '/../photo',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['oix-override'] == false;
