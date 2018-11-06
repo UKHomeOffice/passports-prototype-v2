@@ -1,6 +1,18 @@
 {{< layout}}
 
-{{$pageTitle}}Check your photo and submit{{/pageTitle}}
+{{$back}}
+    {{#nunjucks}}
+        {% if values['choose-photo'] == 'upload' %}
+            <a href="upload" class="back-link">Back</a>
+        {% elif values['choose-photo'] == 'code' %}
+            <a href="retrieve" class="back-link">Back</a>
+        {% endif %}
+    {{/nunjucks}}
+{{/back}}
+
+{{$pageTitle}}
+    You need another photo
+{{/pageTitle}}
 
 {{$header}}
     <h1>You need another photo</h1>
