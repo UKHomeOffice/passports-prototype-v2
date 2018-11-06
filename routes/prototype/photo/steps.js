@@ -4,6 +4,7 @@ module.exports = {
     },
     '/choose-photo-method': {
         fields: ['choose-photo'],
+        backLink: './',
         next: '/photo-guidance',
         forks: [{
             target: '/upload',
@@ -137,7 +138,7 @@ module.exports = {
     // },
     '/retrieve': {
         fields: ['photo-code-path'],
-        backLink: './choose-photo-method',
+        // backLink: './choose-photo-method',
         next: '/processing-or-retrieving-image'
     },
     '/fetch-photo-result': {
@@ -184,7 +185,6 @@ module.exports = {
         }]
     },
     '/not-accepted': {
-        backLink: './retrieve',
         next: '/../photo'
     },
     '/code-error': {
