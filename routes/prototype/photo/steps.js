@@ -1,6 +1,5 @@
 module.exports = {
-    '/': {},
-    '/digital-photo': {
+    '/': {
         next: '/choose-photo-method'
     },
     '/choose-photo-method': {
@@ -146,7 +145,7 @@ module.exports = {
         backLink: './retrieve',
         next: '/../apply',
         forks: [{
-            target: '/choose-photo-method',
+            target: '/../photo',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['oix-override'] == false;
             }
@@ -154,7 +153,7 @@ module.exports = {
     },
     '/not-accepted': {
         backLink: './retrieve',
-        next: '/choose-photo-method'
+        next: '/../photo'
     },
     '/code-error': {
         backLink: './retrieve',

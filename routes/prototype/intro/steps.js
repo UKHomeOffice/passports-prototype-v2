@@ -8,7 +8,7 @@ module.exports = {
                 return req.session['hmpo-wizard-common']['passport-before'] == false ||
                     req.session['hmpo-wizard-common']['old-blue'] == true
             }
-        },{
+        }, {
             target: '/what-you-need',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == true &&
@@ -23,6 +23,6 @@ module.exports = {
     '/what-you-need': {
         backLink: './',
         fields: ['what-you-will-need-declaration'],
-        next: '/../photo/digital-photo'
+        next: '/../photo'
     }
 };
