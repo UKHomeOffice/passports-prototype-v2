@@ -2,46 +2,27 @@
 
 {{$pageTitle}}Track a passport application{{/pageTitle}}
 
-{{$main-content}}
-{{< hmpo-partials-form}}
+{{$content}}
+  {{< hmpo-partials-form}}
     {{$form}}
-<div class="column-full">
-  <div class="flash-card">
-    <header>
-      <h1>Use a paper form to confirm your identity</h1>
-    </header>
-  <div class="grid-row">
-      <div class="column-two-thirds">
-        <h2>Who can do this</h2>
-        <p>You need to ask someone who:</p>
-        <ul class="list-bullet" style="margin-left:32px;">
-            {{#nunjucks}}
-                {% if values['csig-type'] !="overseas" %}
-                    <li>lives in the UK</li>
-                    <li>has a current UK or Irish passport</li>
-                {% else %}
-                    <li>has a current UK, Irish or other EU, US or Commonwealth passport (in order of preference)
-                {% endif %}
-            {{/nunjucks}}
-            <li>works in or is retired from a <a href="/guidance/recognised-professions" target="_blank">recognised profession</a></li>
-        </ul>
+     <h1>Use a form to confirm your identity</h1>
+      {{#nunjucks}}
+        {% if values['csig-type'] =="overseas" %}
+          <p>The person completing the form needs a current UK, Irish or other EU, US or Commonwealth passport.</p>
+        {% else %}
+          <p>The person completing the form needs a current UK or Irish passport.</p>
+        {% endif %}
+      {{/nunjucks}}
 
+     <h2>Do you want to download the form?</h2>
 
-        <p>They must have known you personally for at least 2 years, for example as a friend, neighbour or colleague.</p>
-
-        <h2>Who can't do this</h2>
-
-        <p>You can't ask anyone who is related to you, in a relationship with or living at the same address as you. They can't work at HM Passport Office.</p>
-
-        {{#input-submit}}{{/input-submit}}
-
+     {{#radio-group}}confirm-csig-paper{{/radio-group}}
+      <div class="panel panel-border-narrow js-hidden" id="use-form">
+        <p>You'll no longer be able to ask someone to do this online.</p>
       </div>
-    </div>
-  </div>
-</div>
-
-{{/form}}
-{{/ hmpo-partials-form}}
-{{/main-content}}
+     {{#input-submit}}{{/input-submit}}
+    {{/form}}
+  {{/ hmpo-partials-form}}
+{{/content}}
 
 {{/ layout-csig}}

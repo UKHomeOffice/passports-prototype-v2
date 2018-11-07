@@ -27,16 +27,15 @@
               <div class="panel panel-border-narrow">
                 <p>If they don't live in the UK or have a current UK passport, you need to ask them to <a href="who-can-paper">use a paper form</a>.</p>
               </div>
+            {% else %}
+              <details>
+                <summary><span class="summary">If they can't do this online</span></summary>
+                <div class="panel panel-border-narrow">
+                <p>You need to ask them to <a href="who-can-paper">use a paper form</a>.</p>
+                </div>
+              </details>
             {% endif %}
           {{/nunjucks}}
-
-          <details>
-            <summary><span class="summary">If they can't do this online</span></summary>
-            <div class="panel panel-border-narrow">
-            <p>You need to ask them to <a href="who-can-paper">use a paper form</a>.</p>
-            </div>
-          </details>
-
           <h2>Who can't do this</h2>
 
           <p>You can't ask anyone who is related to you, in a relationship with or living at the same address as you. They can't work at HM Passport Office.</p>

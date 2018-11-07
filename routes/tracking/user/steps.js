@@ -95,8 +95,9 @@ module.exports = {
     next: '../csig/'
   },
   '/who-can-paper':{
-    backLink: '../user/paper-application',
-    next: '/paper-application-select',
+    // backLink: '../user/paper-application',
+    fields: ['confirm-csig-paper'],
+    next: '/paper-application-confirmed',
   },
   '/paper-application-select': {
     fields: ['confirm-csig-paper'],
