@@ -31,7 +31,7 @@
 <p>Check the <a href="../../guidance/parents-details" target="_blank">rules about parents</a> if you're not sure whose details to provide.</p>
 
 {{#nunjucks}}
-    {% if not values['born-before-1983'] and not values['naturalisation-registration-certificate'] %}
+    {% if not values['born-before-1983'] and not values['naturalisation-registration-certificate'] and not values['passport-before']%}
         <h2>Grandparents' details</h2>
         <p>Based on what you tell us, we may ask for their:</p>
         <ul class="list list-bullet">

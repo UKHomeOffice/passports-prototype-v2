@@ -1,12 +1,18 @@
 module.exports = {
     '/': {
         backLink: '../filter/summary',
-        next: '/what-you-need',
+        next: '/../photo/digital-photo',
         forks: [{
-            target: '/../photo/digital-photo',
+            target: '/what-you-need',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false ||
+                    req.session['hmpo-wizard-common']['old-blue'] == true
+            }
+        },{
+            target: '/what-you-need',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == true &&
-                    req.session['hmpo-wizard-common']['old-blue'] == false;
+                    req.session['hmpo-wizard-common']['16-or-older'] == false
             }
         }]
     },
