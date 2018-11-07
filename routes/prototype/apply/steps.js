@@ -144,7 +144,7 @@ module.exports = {
             'parent2-passport-issue-month',
             'parent2-passport-issue-year'
         ],
-        next: '/parent-1-grandparents',
+        next: '/grandparents-intro',
         // controller: require('../../../controllers/go-overseas'),
         nextAlt: './home-address-overseas',
         forks: [{
@@ -161,6 +161,9 @@ module.exports = {
                 return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
             }
         }]
+    },
+    '/grandparents-intro': {
+        next: '/parent-1-grandparents'
     },
     '/parent-1-grandparents': {
         controller: require('../../../controllers/validation-parent-1-grandparents'),
