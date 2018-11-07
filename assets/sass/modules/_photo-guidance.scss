@@ -1,0 +1,110 @@
+/* guidance-photos */
+
+.guidance-photos {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+}
+
+// @media (min-width: 641px) {
+//     .guidance-photos {
+//         overflow-x: auto;
+//     }
+// }
+
+// .guidance-photos ul {
+//     margin-left: -8px;
+// }
+
+
+.guidance-photos ul {
+    display: flex;
+    width: 100%;
+    li {
+        flex: 1;
+        margin: 0 1%;
+    }
+}
+
+// @media (min-width: 769px) {
+//     .guidance-photos ul li {
+//         max-width: 188px;
+//     }
+// }
+
+.guidance-photos img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.guidance-photos .result {
+    background: #fff;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 12px;
+    line-height: 1.25;
+    color: #0b0c0c;
+    width: 100%;
+}
+
+@media (min-width: 641px) {
+    .guidance-photos .result {
+        font-size: 16px;
+        line-height: 1.42857;
+        height: 57px;
+        position: relative;
+        top: -57px;
+        right: -11%;
+        width: 90%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.guidance-photos ul div {
+    float: left;
+}
+
+.js-enabled .guidance-photos .result .approved,
+.js-enabled .guidance-photos .result .failed {
+    // position: absolute;
+    // top: 50%;
+    // box-sizing: border-box;
+    // -webkit-transform: translate(0, -50%);
+    // -moz-transform: translate(0, -50%);
+    // -ms-transform: translate(0, -50%);
+    // -o-transform: translate(0, -50%);
+    // transform: translate(0, -50%);
+}
+
+.guidance-photos .result .approved {
+    background-image: url("../images/icon_thick_tick.svg");
+}
+
+.guidance-photos .result .failed {
+    background-image: url("../images/icon_thick_cross.svg");
+}
+
+.guidance-photos .result .approved,
+.guidance-photos .result .failed {
+    margin: 0;
+    padding: 5px 0;
+    background-repeat: no-repeat;
+    background-position: right 7px center;
+    background-size: 14px;
+}
+
+@media (min-width: 641px) {
+
+    .guidance-photos .result .approved,
+    .guidance-photos .result .failed {
+        padding: 10px;
+        width: 100%;
+        padding-top: 11px;
+        padding-right: 34px;
+        padding-bottom: 8px;
+        background-size: 22px;
+    }
+}
