@@ -7,7 +7,7 @@ module.exports = {
             'application-country'
         ],
         backLink: '../startpage',
-        next: '/dob',
+        next: '/first-uk',
         /* if Yes is selected */
         nextAlt: 'what-do-you-want-to-do-overseas',
         /* if they are from Germany/France */
@@ -17,24 +17,14 @@ module.exports = {
         /* if they are from Spain - first hidden as renewal */
         nextAltAltAltAlt: '../overseas-not-available' /* if they are from Syria - not available */
     },
-    '/dob': {
-        backLink: './',
-        controller: require('../../../controllers/check-dob'),
-        fields: [
-            'age-day',
-            'age-year',
-            'age-month'
-        ],
-        next: '/first-uk'
-    },
     '/first-uk': {
-        backLink: './dob',
+        backLink: './',
         fields: [
             'passport-before'
         ],
         next: '/lost-stolen',
         forks: [{
-            target: '/naturalisation-registration-details',
+            target: '/dob',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == false
             }
@@ -46,12 +36,28 @@ module.exports = {
         fields: [
             'lost-stolen'
         ],
-        next: '/passport-date-of-issue',
+        next: '/dob',
         forks: [{
             target: '/lost',
             condition: {
                 field: 'lost-stolen',
                 value: true
+            }
+        }]
+    },
+    '/dob': {
+        backLink: './lost-stolen',
+        controller: require('../../../controllers/check-dob'),
+        fields: [
+            'age-day',
+            'age-year',
+            'age-month'
+        ],
+        next: '/passport-date-of-issue',
+        forks: [{
+            target: '/naturalisation-registration-details',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false
             }
         }]
     },
