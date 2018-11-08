@@ -94,12 +94,8 @@ module.exports = {
   '/application-submitted': {
     next: '../csig/'
   },
-  '/who-can-paper':{
-    // backLink: '../user/paper-application',
-    fields: ['confirm-csig-paper'],
-    next: '/paper-application-confirmed',
-  },
-  '/paper-application-select': {
+  '/paper-application-select':{
+    backLink: './who-can',
     fields: ['confirm-csig-paper'],
     next: '/paper-application-confirmed',
     forks: [{
@@ -129,7 +125,6 @@ module.exports = {
   },
   '/give-csig-details': {
       fields: ['csig-email', 'csig-name', 'csig-last-name', 'contact-csig'],
-      backLink: './',
       next: '/email-sent'
   },
   '/email-sent': {
