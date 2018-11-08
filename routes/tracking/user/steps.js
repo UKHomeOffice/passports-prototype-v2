@@ -66,17 +66,14 @@ module.exports = {
   },
   '/renominate': {
     fields: ['renominate'],
-    next: '/what-you-need-to-do',
-    controller: require('../../../controllers/csig-email-pre'),
+    next: '/what-you-need-to-do'
   },
   '/renominate-paper': {
-    next: '/who-can',
-    controller: require('../../../controllers/csig-email-pre'),
+    next: '/who-can'
   },
   '/renominate-anytime': {
     fields: ['renominate'],
-    next: '/../user-contact/',
-    controller: require('../../../controllers/csig-email-pre'),
+    next: '/../user-contact/'
   },
   '/need-csig-complete': {
     fields: ['renominate'],
@@ -114,7 +111,6 @@ module.exports = {
   },
   '/who-can': {
     next: '/how-to',
-    controller: require('../../../controllers/csig-email-pre')
   },
   '/how-to': {
       backLink: './who-can',
@@ -148,7 +144,4 @@ module.exports = {
   '/tracking-waiting-renominate-anytime': {
       next: '/track'
   },
-  '/email-confirmation': {
-
-  }
 };
