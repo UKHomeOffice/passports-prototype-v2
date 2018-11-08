@@ -30,7 +30,7 @@ module.exports = {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate-anytime';
       }
     },{
-      target: '/paper-application',
+      target: '/confirm-your-identity',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'paper-csig';
       }
@@ -96,14 +96,14 @@ module.exports = {
     fields: ['confirm-csig-paper'],
     next: '/paper-application-confirmed',
     forks: [{
-      target: '/paper-application',
+      target: '/confirm-your-identity',
       condition: {
         field: 'confirm-csig-paper',
         value: false
       }
     }]
   },
-  '/paper-application': {
+  '/confirm-your-identity': {
     next: '/who-can',
   },
   '/paper-application-confirmed': {
