@@ -32,7 +32,7 @@ module.exports = {
     },{
       target: '/confirm-your-identity',
       condition: function (req, res) {
-        return req.session['hmpo-wizard-common']['tracking-status'] == 'paper-csig';
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'exceptions';
       }
     }, {
       target: '/send-docs',
