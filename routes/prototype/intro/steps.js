@@ -1,7 +1,7 @@
 module.exports = {
     '/': {
         backLink: '../filter/summary',
-        next: '/../photo/digital-photo',
+        next: '/../photo',
         forks: [{
             target: '/what-you-need',
             condition: function (req, res) {
