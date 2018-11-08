@@ -1,11 +1,24 @@
 {{< layout-csig}}
 
+{{$back}}
+   
+        <a href="javascript:history.back()" class="back-link">Back</a>
+  
+{{/back}}
+
 {{$pageTitle}}Track a passport application{{/pageTitle}}
 
 {{$content}}
   {{< hmpo-partials-form}}
     {{$form}}
      <h1>Use a form to confirm your identity</h1>
+      {{#nunjucks}}
+        {% if values['csig-type'] =="overseas" %}
+          <p>The person completing the form needs a current UK, Irish or other EU, US or Commonwealth passport.</p>
+        {% else %}
+          <p>The person completing the form needs a current UK or Irish passport.</p>
+        {% endif %}
+      {{/nunjucks}}
 
      <h2>Do you want to download the form?</h2>
 
