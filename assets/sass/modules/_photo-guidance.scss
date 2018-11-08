@@ -1,4 +1,11 @@
-/* guidance-photos */
+h2.guidance {
+    margin-top: 1.25em;
+    margin-bottom: .5em;
+    @media (min-width: 641px) {
+        margin-top: 1.875em;
+        margin-bottom: .83333em;
+    }
+}
 
 .guidance-photos {
     overflow-x: auto;
@@ -10,10 +17,7 @@
         overflow: hidden;
         li {
             flex: 1;
-            margin: 0 1%;
-            &:first-child {
-                margin-left: 0;
-            }
+            margin: 0 2% 0 0;
             &:last-child {
                 margin-right: 0;
             }
@@ -26,18 +30,19 @@
 }
 
 .guidance-photos .result {
-    background: #fff;
     font-size: 12px;
     width: 100%;
     @media (min-width: 641px) {
-        font-size: 16px;
-        height: 57px;
         position: relative;
-        top: -57px;
-        right: -11%;
-        width: 90%;
         display: flex;
         align-items: center;
+        background: #fff;
+        font-size: 16px;
+        width: 90%;
+        height: 60px;
+        top: -60px;
+        right: -10%;
+        margin-bottom: -60px;
     }
     .approved {
         background-image: url("../images/icon_thick_tick.svg");
@@ -50,15 +55,14 @@
 .guidance-photos .result .approved,
 .guidance-photos .result .failed {
     margin: 0;
-    padding: 5px 25px 5px 0;
+    padding: 4px 22px 4px 0;
     background-repeat: no-repeat;
-    background-position: right 7px top 6px;
+    background-position: right 4px top 4px;
     background-size: 14px;
     @media (min-width: 641px) {
-        padding: 10px;
         width: 100%;
-        padding: 10px 34px 8px 10px;
-        background-position: right 7px center;
+        padding: 10px 38px 8px 10px;
+        background-position: right 8px center;
         background-size: 22px;
     }
 }
