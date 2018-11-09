@@ -1,14 +1,15 @@
 .fill-banner {
-  position: fixed;
-  width: 100%;
+  position: absolute;
   height: 30px;
   top: 0;
   right: 0;
   padding: 10px;
   text-align: right;
   z-index: 1;
+  select {
+    width: auto;
+  }
 }
-
 .button__fill,
 .button__fill:visited {
   background: #6F777B;
@@ -21,4 +22,9 @@
 
 .button__fill:hover {
   color: white;
+}
+@media (max-width: 641px){
+  #global-header {
+    padding-top: 30px;
+  }
 }

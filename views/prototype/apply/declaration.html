@@ -16,14 +16,16 @@
     <li>the information you've given is correct</li>
     {{#values.application-for-someone-else}}
         <li>you agree to the <a href="/govuk/terms" target="_blank">terms and conditions<span class="visuallyhidden">(opens in a new window)</span></a></li>
-    {{/values.application-for-someone-else}}
+        <li>HM Passport Office can use your data in line with our <a href="https://www.passport.service.gov.uk/help/privacy" target="_blank">privacy policy<span class="visuallyhidden">(opens in a new window)</span></a></li>
+{{/values.application-for-someone-else}}
     {{^values.application-for-someone-else}}
-        <li>you agree to the <a href="/govuk/terms" class="new-window" target="_blank">terms and conditions<span class="visuallyhidden">(opens in a new window)</span></a></li>
+        <li>you agree to the <a href="/govuk/terms" target="_blank">terms and conditions<span class="visuallyhidden">(opens in a new window)</span></a></li>
+        <li>HM Passport Office will record, store, use and share your data in accordance with our <a href="https://www.passport.service.gov.uk/help/privacy" target="_blank">privacy policy<span class="visuallyhidden">(opens in a new window)</span></a></li>
     {{/values.application-for-someone-else}}
 </ul>
 
 <div class="panel-important">
-    <p>If you give untrue or misleading information, we may share information with the police in the UK or abroad and you could be prosecuted.</p>
+    <p>If you give untrue or misleading information to get a passport you could be prosecuted.</p>
 </div>
 
 {{#checkbox}}declaration{{/checkbox}}

@@ -30,9 +30,9 @@ module.exports = {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate-anytime';
       }
     },{
-      target: '/paper-application',
+      target: '/confirm-your-identity',
       condition: function (req, res) {
-        return req.session['hmpo-wizard-common']['tracking-status'] == 'paper-csig';
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'exceptions';
       }
     }, {
       target: '/send-docs',
@@ -66,17 +66,14 @@ module.exports = {
   },
   '/renominate': {
     fields: ['renominate'],
-    next: '/what-you-need-to-do',
-    controller: require('../../../controllers/csig-email-pre'),
+    next: '/what-you-need-to-do'
   },
   '/renominate-paper': {
-    next: '/who-can',
-    controller: require('../../../controllers/csig-email-pre'),
+    next: '/who-can'
   },
   '/renominate-anytime': {
     fields: ['renominate'],
-    next: '/../user-contact/',
-    controller: require('../../../controllers/csig-email-pre'),
+    next: '/../user-contact/'
   },
   '/need-csig-complete': {
     fields: ['renominate'],
@@ -94,22 +91,19 @@ module.exports = {
   '/application-submitted': {
     next: '../csig/'
   },
-  '/who-can-paper':{
-    backLink: '../user/paper-application',
-    next: '/paper-application-select',
-  },
-  '/paper-application-select': {
+  '/paper-application-select':{
+    backLink: './who-can',
     fields: ['confirm-csig-paper'],
     next: '/paper-application-confirmed',
     forks: [{
-      target: '/paper-application',
+      target: '/confirm-your-identity',
       condition: {
         field: 'confirm-csig-paper',
         value: false
       }
     }]
   },
-  '/paper-application': {
+  '/confirm-your-identity': {
     next: '/who-can',
   },
   '/paper-application-confirmed': {
@@ -117,7 +111,6 @@ module.exports = {
   },
   '/who-can': {
     next: '/how-to',
-    controller: require('../../../controllers/csig-email-pre')
   },
   '/how-to': {
       backLink: './who-can',
@@ -128,7 +121,6 @@ module.exports = {
   },
   '/give-csig-details': {
       fields: ['csig-email', 'csig-name', 'csig-last-name', 'contact-csig'],
-      backLink: './',
       next: '/email-sent'
   },
   '/email-sent': {
@@ -152,7 +144,4 @@ module.exports = {
   '/tracking-waiting-renominate-anytime': {
       next: '/track'
   },
-  '/email-confirmation': {
-
-  }
 };
