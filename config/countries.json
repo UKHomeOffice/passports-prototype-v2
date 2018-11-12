@@ -1,1170 +1,1857 @@
-[
-    {
-        "id": "UK",
-        "name": "United Kingdom",
-        "altName": [
-            "GB",
-            "Great Britain",
-            "England",
-            "Wales",
-            "Scotland",
-            "Northern Ireland"
-        ]
-    },
-    {
-        "id": "AF",
-        "name": "Afghanistan",
-        "altName": ""
-    },
-    {
-        "id": "AL",
-        "name": "Albania",
-        "altName": ""
-    },
-    {
-        "id": "DZ",
-        "name": "Algeria",
-        "altName": ""
-    },
-    {
-        "id": "AS",
-        "name": "American Samoa",
-        "altName": ""
-    },
-    {
-        "id": "AD",
-        "name": "Andorra",
-        "altName": ""
-    },
-    {
-        "id": "AO",
-        "name": "Angola",
-        "altName": ""
-    },
-    {
-        "id": "AI",
-        "name": "Anguilla",
-        "altName": ""
-    },
-    {
-        "id": "AG",
-        "name": "Antigua and Barbuda",
-        "altName": ""
-    },
-    {
-        "id": "AR",
-        "name": "Argentina",
-        "altName": ""
-    },
-    {
-        "id": "AM",
-        "name": "Armenia",
-        "altName": ""
-    },
-    {
-        "id": "AW",
-        "name": "Aruba",
-        "altName": ""
-    },
-    {
-        "id": "AU",
-        "name": "Australia",
-        "altName": ""
-    },
-    {
-        "id": "AT",
-        "name": "Austria",
-        "altName": ""
-    },
-    {
-        "id": "AZ",
-        "name": "Azerbaijan",
-        "altName": ""
-    },
-    {
-        "id": "BS",
-        "name": "Bahamas",
-        "altName": ""
-    },
-    {
-        "id": "BH",
-        "name": "Bahrain",
-        "altName": ""
-    },
-    {
-        "id": "BD",
-        "name": "Bangladesh",
-        "altName": ""
-    },
-    {
-        "id": "BB",
-        "name": "Barbados",
-        "altName": ""
-    },
-    {
-        "id": "BY",
-        "name": "Belarus",
-        "altName": ""
-    },
-    {
-        "id": "BE",
-        "name": "Belgium",
-        "altName": "",
-        "countrycode": "+32"
-    },
-    {
-        "id": "BZ",
-        "name": "Belize",
-        "altName": ""
-    },
-    {
-        "id": "BJ",
-        "name": "Benin",
-        "altName": ""
-    },
-    {
-        "id": "BM",
-        "name": "Bermuda",
-        "altName": ""
-    },
-    {
-        "id": "BT",
-        "name": "Bhutan",
-        "altName": ""
-    },
-    {
-        "id": "BO",
-        "name": "Bolivia",
-        "altName": ""
-    },
-    {
-        "id": "BQ",
-        "name": "Bonaire/St Eustatius/Saba",
-        "altName": ""
-    },
-    {
-        "id": "BA",
-        "name": "Bosnia and Herzegovina",
-        "altName": ""
-    },
-    {
-        "id": "BW",
-        "name": "Botswana",
-        "altName": ""
-    },
-    {
-        "id": "BR",
-        "name": "Brazil",
-        "altName": ""
-    },
-    {
-        "id": "IO",
-        "name": "British Indian Ocean Territory",
-        "altName": ""
-    },
-    {
-        "id": "VG",
-        "name": "British Virgin Islands",
-        "altName": ""
-    },
-    {
-        "id": "BN",
-        "name": "Brunei",
-        "altName": ""
-    },
-    {
-        "id": "BG",
-        "name": "Bulgaria",
-        "altName": ""
-    },
-    {
-        "id": "BF",
-        "name": "Burkina Faso",
-        "altName": ""
-    },
-    {
-        "id": "MM",
-        "name": "Burma",
-        "altName": ""
-    },
-    {
-        "id": "BI",
-        "name": "Burundi",
-        "altName": ""
-    },
-    {
-        "id": "KH",
-        "name": "Cambodia",
-        "altName": ""
-    },
-    {
-        "id": "CM",
-        "name": "Cameroon",
-        "altName": ""
-    },
-    {
-        "id": "CA",
-        "name": "Canada",
-        "altName": ""
-    },
-    {
-        "id": "CV",
-        "name": "Cape Verde",
-        "altName": ""
-    },
-    {
-        "id": "KY",
-        "name": "Cayman Islands",
-        "altName": ""
-    },
-    {
-        "id": "CF",
-        "name": "Central African Republic",
-        "altName": ""
-    },
-    {
-        "id": "TD",
-        "name": "Chad",
-        "altName": ""
-    },
-    {
-        "id": "CL",
-        "name": "Chile",
-        "altName": ""
-    },
-    {
-        "id": "CN",
-        "name": "China",
-        "altName": ""
-    },
-    {
-        "id": "CO",
-        "name": "Colombia",
-        "altName": ""
-    },
-    {
-        "id": "KM",
-        "name": "Comoros",
-        "altName": ""
-    },
-    {
-        "id": "CG",
-        "name": "Congo",
-        "altName": ""
-    },
-    {
-        "id": "CR",
-        "name": "Costa Rica",
-        "altName": ""
-    },
-    {
-        "id": "CI",
-        "name": "Cote d'Ivoire",
-        "altName": ""
-    },
-    {
-        "id": "HR",
-        "name": "Croatia",
-        "altName": ""
-    },
-    {
-        "id": "CU",
-        "name": "Cuba",
-        "altName": ""
-    },
-    {
-        "id": "CW",
-        "name": "Curacao",
-        "altName": ""
-    },
-    {
-        "id": "CY",
-        "name": "Cyprus",
-        "altName": ""
-    },
-    {
-        "id": "CZ",
-        "name": "Czech Republic",
-        "altName": ""
-    },
-    {
-        "id": "CD",
-        "name": "Democratic Republic of Congo",
-        "altName": ""
-    },
-    {
-        "id": "DK",
-        "name": "Denmark",
-        "altName": ""
-    },
-    {
-        "id": "DJ",
-        "name": "Djibouti",
-        "altName": ""
-    },
-    {
-        "id": "DM",
-        "name": "Dominica",
-        "altName": ""
-    },
-    {
-        "id": "DO",
-        "name": "Dominican Republic",
-        "altName": ""
-    },
-    {
-        "id": "EC",
-        "name": "Ecuador",
-        "altName": ""
-    },
-    {
-        "id": "EG",
-        "name": "Egypt",
-        "altName": ""
-    },
-    {
-        "id": "SV",
-        "name": "El Salvador",
-        "altName": ""
-    },
-    {
-        "id": "GQ",
-        "name": "Equatorial Guinea",
-        "altName": ""
-    },
-    {
-        "id": "ER",
-        "name": "Eritrea",
-        "altName": ""
-    },
-    {
-        "id": "EE",
-        "name": "Estonia",
-        "altName": ""
-    },
-    {
-        "id": "ET",
-        "name": "Ethiopia",
-        "altName": ""
-    },
-    {
-        "id": "FK",
-        "name": "Falkland Islands",
-        "altName": ""
-    },
-    {
-        "id": "FJ",
-        "name": "Fiji",
-        "altName": ""
-    },
-    {
-        "id": "FI",
-        "name": "Finland",
-        "altName": ""
-    },
-    {
-        "id": "FR",
-        "name": "France",
-        "altName": "",
-        "countrycode": "+33"
-    },
-    {
-        "id": "GF",
-        "name": "French Guiana",
-        "altName": ""
-    },
-    {
-        "id": "PF",
-        "name": "French Polynesia",
-        "altName": ""
-    },
-    {
-        "id": "GA",
-        "name": "Gabon",
-        "altName": ""
-    },
-    {
-        "id": "GM",
-        "name": "Gambia",
-        "altName": ""
-    },
-    {
-        "id": "GE",
-        "name": "Georgia",
-        "altName": ""
-    },
-    {
-        "id": "DE",
-        "name": "Germany",
-        "altName": "",
-        "countrycode": "+49"
-    },
-    {
-        "id": "GH",
-        "name": "Ghana",
-        "altName": ""
-    },
-    {
-        "id": "GI",
-        "name": "Gibraltar",
-        "altName": ""
-    },
-    {
-        "id": "GR",
-        "name": "Greece",
-        "altName": ""
-    },
-    {
-        "id": "GD",
-        "name": "Grenada",
-        "altName": ""
-    },
-    {
-        "id": "GP",
-        "name": "Guadeloupe",
-        "altName": ""
-    },
-    {
-        "id": "GT",
-        "name": "Guatemala",
-        "altName": ""
-    },
-    {
-        "id": "GN",
-        "name": "Guinea",
-        "altName": ""
-    },
-    {
-        "id": "GW",
-        "name": "Guinea-Bissau",
-        "altName": ""
-    },
-    {
-        "id": "GY",
-        "name": "Guyana",
-        "altName": ""
-    },
-    {
-        "id": "HT",
-        "name": "Haiti",
-        "altName": ""
-    },
-    {
-        "id": "HM",
-        "name": "Honduras",
-        "altName": ""
-    },
-    {
-        "id": "HK",
-        "name": "Hong Kong",
-        "altName": ""
-    },
-    {
-        "id": "HU",
-        "name": "Hungary",
-        "altName": ""
-    },
-    {
-        "id": "IS",
-        "name": "Iceland",
-        "altName": ""
-    },
-    {
-        "id": "IN",
-        "name": "India",
-        "altName": ""
-    },
-    {
-        "id": "ID",
-        "name": "Indonesia",
-        "altName": ""
-    },
-    {
-        "id": "IR",
-        "name": "Iran",
-        "altName": ""
-    },
-    {
-        "id": "IQ",
-        "name": "Iraq",
-        "altName": ""
-    },
-    {
-        "id": "IE",
-        "name": "Ireland",
-        "altName": ""
-    },
-    {
-        "id": "IL",
-        "name": "Israel",
-        "altName": "",
-        "countrycode": "+972"
-    },
-    {
-        "id": "IT",
-        "name": "Italy",
-        "altName": ""
-    },
-    {
-        "id": "JM",
-        "name": "Jamaica",
-        "altName": ""
-    },
-    {
-        "id": "JP",
-        "name": "Japan",
-        "altName": ""
-    },
-    {
-        "id": "JO",
-        "name": "Jordan",
-        "altName": ""
-    },
-    {
-        "id": "KZ",
-        "name": "Kazakhstan",
-        "altName": ""
-    },
-    {
-        "id": "KE",
-        "name": "Kenya",
-        "altName": ""
-    },
-    {
-        "id": "KI",
-        "name": "Kiribati",
-        "altName": ""
-    },
-    {
-        "id": "XK",
-        "name": "Kosovo",
-        "altName": ""
-    },
-    {
-        "id": "KW",
-        "name": "Kuwait",
-        "altName": ""
-    },
-    {
-        "id": "KG",
-        "name": "Kyrgyzstan",
-        "altName": ""
-    },
-    {
-        "id": "LA",
-        "name": "Laos",
-        "altName": ""
-    },
-    {
-        "id": "LV",
-        "name": "Latvia",
-        "altName": ""
-    },
-    {
-        "id": "LB",
-        "name": "Lebanon",
-        "altName": ""
-    },
-    {
-        "id": "LS",
-        "name": "Lesotho",
-        "altName": ""
-    },
-    {
-        "id": "LR",
-        "name": "Liberia",
-        "altName": ""
-    },
-    {
-        "id": "LY",
-        "name": "Libya",
-        "altName": ""
-    },
-    {
-        "id": "LI",
-        "name": "Liechtenstein",
-        "altName": ""
-    },
-    {
-        "id": "LT",
-        "name": "Lithuania",
-        "altName": ""
-    },
-    {
-        "id": "LU",
-        "name": "Luxembourg",
-        "altName": ""
-    },
-    {
-        "id": "MO",
-        "name": "Macao",
-        "altName": ""
-    },
-    {
-        "id": "MK",
-        "name": "Macedonia",
-        "altName": ""
-    },
-    {
-        "id": "MG",
-        "name": "Madagascar",
-        "altName": ""
-    },
-    {
-        "id": "MW",
-        "name": "Malawi",
-        "altName": ""
-    },
-    {
-        "id": "MY",
-        "name": "Malaysia",
-        "altName": ""
-    },
-    {
-        "id": "MV",
-        "name": "Maldives",
-        "altName": ""
-    },
-    {
-        "id": "ML",
-        "name": "Mali",
-        "altName": ""
-    },
-    {
-        "id": "MT",
-        "name": "Malta",
-        "altName": ""
-    },
-    {
-        "id": "MH",
-        "name": "Marshall Islands",
-        "altName": ""
-    },
-    {
-        "id": "MQ",
-        "name": "Martinique",
-        "altName": ""
-    },
-    {
-        "id": "MR",
-        "name": "Mauritania",
-        "altName": ""
-    },
-    {
-        "id": "MU",
-        "name": "Mauritius",
-        "altName": ""
-    },
-    {
-        "id": "YT",
-        "name": "Mayotte",
-        "altName": ""
-    },
-    {
-        "id": "MX",
-        "name": "Mexico",
-        "altName": ""
-    },
-    {
-        "id": "FM",
-        "name": "Micronesia",
-        "altName": ""
-    },
-    {
-        "id": "MD",
-        "name": "Moldova",
-        "altName": ""
-    },
-    {
-        "id": "MC",
-        "name": "Monaco",
-        "altName": ""
-    },
-    {
-        "id": "MN",
-        "name": "Mongolia",
-        "altName": ""
-    },
-    {
-        "id": "ME",
-        "name": "Montenegro",
-        "altName": ""
-    },
-    {
-        "id": "MS",
-        "name": "Montserrat",
-        "altName": ""
-    },
-    {
-        "id": "MA",
-        "name": "Morocco",
-        "altName": ""
-    },
-    {
-        "id": "MZ",
-        "name": "Mozambique",
-        "altName": ""
-    },
-    {
-        "id": "NA",
-        "name": "Namibia",
-        "altName": ""
-    },
-    {
-        "id": "NR",
-        "name": "Nauru",
-        "altName": ""
-    },
-    {
-        "id": "NP",
-        "name": "Nepal",
-        "altName": ""
-    },
-    {
-        "id": "NL",
-        "name": "Netherlands",
-        "altName": "",
-        "countrycode": "+31"
-    },
-    {
-        "id": "NC",
-        "name": "New Caledonia",
-        "altName": ""
-    },
-    {
-        "id": "NZ",
-        "name": "New Zealand",
-        "altName": ""
-    },
-    {
-        "id": "NI",
-        "name": "Nicaragua",
-        "altName": ""
-    },
-    {
-        "id": "NE",
-        "name": "Niger",
-        "altName": ""
-    },
-    {
-        "id": "NG",
-        "name": "Nigeria",
-        "altName": ""
-    },
-    {
-        "id": "KP",
-        "name": "North Korea",
-        "altName": ""
-    },
-    {
-        "id": "NO",
-        "name": "Norway",
-        "altName": ""
-    },
-    {
-        "id": "OM",
-        "name": "Oman",
-        "altName": ""
-    },
-    {
-        "id": "PK",
-        "name": "Pakistan",
-        "altName": ""
-    },
-    {
-        "id": "PW",
-        "name": "Palau",
-        "altName": ""
-    },
-    {
-        "id": "PA",
-        "name": "Panama",
-        "altName": ""
-    },
-    {
-        "id": "PG",
-        "name": "Papua New Guinea",
-        "altName": ""
-    },
-    {
-        "id": "PY",
-        "name": "Paraguay",
-        "altName": ""
-    },
-    {
-        "id": "PE",
-        "name": "Peru",
-        "altName": ""
-    },
-    {
-        "id": "PH",
-        "name": "Philippines",
-        "altName": ""
-    },
-    {
-        "id": "PN",
-        "name": "Pitcairn Island",
-        "altName": ""
-    },
-    {
-        "id": "PL",
-        "name": "Poland",
-        "altName": ""
-    },
-    {
-        "id": "PT",
-        "name": "Portugal",
-        "altName": ""
-    },
-    {
-        "id": "QA",
-        "name": "Qatar",
-        "altName": ""
-    },
-    {
-        "id": "RE",
-        "name": "Reunion",
-        "altName": ""
-    },
-    {
-        "id": "RO",
-        "name": "Romania",
-        "altName": ""
-    },
-    {
-        "id": "RU",
-        "name": "Russia",
-        "altName": ""
-    },
-    {
-        "id": "RW",
-        "name": "Rwanda",
-        "altName": ""
-    },
-    {
-        "id": "BL",
-        "name": "Saint-Barthelemy",
-        "altName": ""
-    },
-    {
-        "id": "WS",
-        "name": "Samoa",
-        "altName": ""
-    },
-    {
-        "id": "SM",
-        "name": "San Marino",
-        "altName": ""
-    },
-    {
-        "id": "ST",
-        "name": "Sao Tome and Principe",
-        "altName": ""
-    },
-    {
-        "id": "SA",
-        "name": "Saudi Arabia",
-        "altName": ""
-    },
-    {
-        "id": "SN",
-        "name": "Senegal",
-        "altName": ""
-    },
-    {
-        "id": "RS",
-        "name": "Serbia",
-        "altName": ""
-    },
-    {
-        "id": "SC",
-        "name": "Seychelles",
-        "altName": ""
-    },
-    {
-        "id": "SL",
-        "name": "Sierra Leone",
-        "altName": ""
-    },
-    {
-        "id": "SG",
-        "name": "Singapore",
-        "altName": ""
-    },
-    {
-        "id": "SK",
-        "name": "Slovakia",
-        "altName": ""
-    },
-    {
-        "id": "SI",
-        "name": "Slovenia",
-        "altName": ""
-    },
-    {
-        "id": "SB",
-        "name": "Solomon Islands",
-        "altName": ""
-    },
-    {
-        "id": "SO",
-        "name": "Somalia",
-        "altName": ""
-    },
-    {
-        "id": "ZA",
-        "name": "South Africa",
-        "altName": ""
-    },
-    {
-        "id": "GS",
-        "name": "South Georgia and the South Sandwich Islands",
-        "altName": ""
-    },
-    {
-        "id": "KR",
-        "name": "South Korea",
-        "altName": ""
-    },
-    {
-        "id": "SS",
-        "name": "South Sudan",
-        "altName": ""
-    },
-    {
-        "id": "ES",
-        "name": "Spain",
-        "altName": "",
-        "countrycode": "+34"
-    },
-    {
-        "id": "LK",
-        "name": "Sri Lanka",
-        "altName": ""
-    },
-    {
-        "id": "SH",
-        "name": "St Helena, Ascension & Tristan da Cunha",
-        "altName": ""
-    },
-    {
-        "id": "KN",
-        "name": "St Kitts and Nevis",
-        "altName": ""
-    },
-    {
-        "id": "LC",
-        "name": "St Lucia",
-        "altName": ""
-    },
-    {
-        "id": "SX",
-        "name": "St Maarten",
-        "altName": ""
-    },
-    {
-        "id": "MF",
-        "name": "St Martin",
-        "altName": ""
-    },
-    {
-        "id": "PM",
-        "name": "St Pierre & Miquelon",
-        "altName": ""
-    },
-    {
-        "id": "VC",
-        "name": "St Vincent and The Grenadines",
-        "altName": ""
-    },
-    {
-        "id": "SD",
-        "name": "Sudan",
-        "altName": ""
-    },
-    {
-        "id": "SR",
-        "name": "Suriname",
-        "altName": ""
-    },
-    {
-        "id": "SZ",
-        "name": "Swaziland",
-        "altName": ""
-    },
-    {
-        "id": "SE",
-        "name": "Sweden",
-        "altName": ""
-    },
-    {
-        "id": "CH",
-        "name": "Switzerland",
-        "altName": ""
-    },
-    {
-        "id": "SY",
-        "name": "Syria",
-        "altName": ""
-    },
-    {
-        "id": "TW",
-        "name": "Taiwan",
-        "altName": ""
-    },
-    {
-        "id": "TJ",
-        "name": "Tajikistan",
-        "altName": ""
-    },
-    {
-        "id": "TZ",
-        "name": "Tanzania",
-        "altName": ""
-    },
-    {
-        "id": "TH",
-        "name": "Thailand",
-        "altName": ""
-    },
-    {
-        "id": "PS",
-        "name": "The Occupied Palestinian Territories - Gaza",
-        "altName": ""
-    },
-    {
-        "id": "??",
-        "name": "The Occupied Palestinian Territories - Jerusalem and the West Bank",
-        "altName": ""
-    },
-    {
-        "id": "TL",
-        "name": "Timor Leste",
-        "altName": ""
-    },
-    {
-        "id": "TG",
-        "name": "Togo",
-        "altName": ""
-    },
-    {
-        "id": "TO",
-        "name": "Tonga",
-        "altName": ""
-    },
-    {
-        "id": "TT",
-        "name": "Trinidad and Tobago",
-        "altName": ""
-    },
-    {
-        "id": "TN",
-        "name": "Tunisia",
-        "altName": ""
-    },
-    {
-        "id": "TR",
-        "name": "Turkey",
-        "altName": ""
-    },
-    {
-        "id": "TM",
-        "name": "Turkmenistan",
-        "altName": ""
-    },
-    {
-        "id": "TC",
-        "name": "Turks and Caicos Islands",
-        "altName": ""
-    },
-    {
-        "id": "TV",
-        "name": "Tuvalu",
-        "altName": ""
-    },
-    {
-        "id": "US",
-        "name": "USA",
-        "altName": [
-            "America",
-            "United States of America"
-        ]
-    },
-    {
-        "id": "UG",
-        "name": "Uganda",
-        "altName": ""
-    },
-    {
-        "id": "UA",
-        "name": "Ukraine",
-        "altName": ""
-    },
-    {
-        "id": "AE",
-        "name": "United Arab Emirates",
-        "altName": ""
-    },
-    {
-        "id": "UK",
-        "name": "United Kingdom",
-        "altName": [
-            "GB",
-            "Great Britain",
-            "England",
-            "Wales",
-            "Scotland",
-            "Northern Ireland"
-        ]
-    },
-    {
-        "id": "UY",
-        "name": "Uruguay",
-        "altName": ""
-    },
-    {
-        "id": "UZ",
-        "name": "Uzbekistan",
-        "altName": ""
-    },
-    {
-        "id": "VU",
-        "name": "Vanuatu",
-        "altName": ""
-    },
-    {
-        "id": "VE",
-        "name": "Venezuela",
-        "altName": ""
-    },
-    {
-        "id": "VN",
-        "name": "Vietnam",
-        "altName": ""
-    },
-    {
-        "id": "WF",
-        "name": "Wallis and Futuna",
-        "altName": ""
-    },
-    {
-        "id": "EH",
-        "name": "Western Sahara",
-        "altName": ""
-    },
-    {
-        "id": "YE",
-        "name": "Yemen",
-        "altName": ""
-    },
-    {
-        "id": "ZM",
-        "name": "Zambia",
-        "altName": ""
-    },
-    {
-        "id": "ZW",
-        "name": "Zimbabwe",
-        "altName": ""
+[{
+    "countryCode": "AF",
+    "displayName": "Afghanistan",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "93",
+        "ndd": "0"
     }
-]
+}, {
+    "countryCode": "AL",
+    "displayName": "Albania",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "355",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "DZ",
+    "displayName": "Algeria",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "213",
+        "ndd": "7"
+    }
+}, {
+    "countryCode": "AS",
+    "displayName": "American Samoa",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "AD",
+    "displayName": "Andorra",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "376",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "AO",
+    "displayName": "Angola",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "244",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "AI",
+    "displayName": "Anguilla",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "AG",
+    "displayName": "Antigua and Barbuda",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "AR",
+    "displayName": "Argentina",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "54",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "AM",
+    "displayName": "Armenia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "374",
+        "ndd": "8"
+    }
+}, {
+    "countryCode": "AW",
+    "displayName": "Aruba",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "297",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "AU",
+    "displayName": "Australia",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "61",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "AT",
+    "displayName": "Austria",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "43",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "AZ",
+    "displayName": "Azerbaijan",
+    "diallingDetails": {
+        "idd": "810",
+        "code": "994",
+        "ndd": "8"
+    }
+}, {
+    "countryCode": "BS",
+    "displayName": "Bahamas",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "BH",
+    "displayName": "Bahrain",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "973",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "BD",
+    "displayName": "Bangladesh",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "880",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "BB",
+    "displayName": "Barbados",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "BY",
+    "displayName": "Belarus",
+    "diallingDetails": {
+        "idd": "810",
+        "code": "375",
+        "ndd": "8"
+    }
+}, {
+    "countryCode": "BE",
+    "displayName": "Belgium",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "32",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "BZ",
+    "displayName": "Belize",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "501",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "BJ",
+    "displayName": "Benin",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "229",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "BM",
+    "displayName": "Bermuda",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "BT",
+    "displayName": "Bhutan",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "975",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "BO",
+    "displayName": "Bolivia",
+    "diallingDetails": {
+        "idd": "10",
+        "code": "591",
+        "ndd": "10"
+    }
+}, {
+    "countryCode": "BQ",
+    "displayName": "Bonaire/St Eustatius/Saba",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "599",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "BA",
+    "displayName": "Bosnia and Herzegovina",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "387",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "BW",
+    "displayName": "Botswana",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "267",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "BR",
+    "displayName": "Brazil",
+    "diallingDetails": {
+        "idd": "14",
+        "code": "55",
+        "ndd": "14"
+    }
+}, {
+    "countryCode": "IO",
+    "displayName": "British Indian Ocean Territory",
+    "diallingDetails": {
+        "idd": "",
+        "code": null,
+        "ndd": ""
+    }
+}, {
+    "countryCode": "VG",
+    "displayName": "British Virgin Islands",
+    "diallingDetails": {
+        "idd": "",
+        "code": null,
+        "ndd": ""
+    }
+}, {
+    "countryCode": "BN",
+    "displayName": "Brunei",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "673",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "BG",
+    "displayName": "Bulgaria",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "359",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "BF",
+    "displayName": "Burkina Faso",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "226",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "MM",
+    "displayName": "Burma",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "95",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "BI",
+    "displayName": "Burundi",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "257",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "KH",
+    "displayName": "Cambodia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "855",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "CM",
+    "displayName": "Cameroon",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "237",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "CA",
+    "displayName": "Canada",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "CV",
+    "displayName": "Cape Verde",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "238",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "KY",
+    "displayName": "Cayman Islands",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "CF",
+    "displayName": "Central African Republic",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "236",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "TD",
+    "displayName": "Chad",
+    "diallingDetails": {
+        "idd": "15",
+        "code": "235",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "CL",
+    "displayName": "Chile",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "56",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "CN",
+    "displayName": "China",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "86",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "CO",
+    "displayName": "Colombia",
+    "diallingDetails": {
+        "idd": "5",
+        "code": "57",
+        "ndd": "5"
+    }
+}, {
+    "countryCode": "KM",
+    "displayName": "Comoros",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "269",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "CG",
+    "displayName": "Congo",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "242",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "CR",
+    "displayName": "Costa Rica",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "506",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "CI",
+    "displayName": "Cote d'Ivoire",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "225",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "HR",
+    "displayName": "Croatia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "385",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "CU",
+    "displayName": "Cuba",
+    "diallingDetails": {
+        "idd": "119",
+        "code": "53",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "CW",
+    "displayName": "Curacao",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "599",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "CY",
+    "displayName": "Cyprus",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "357",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "CZ",
+    "displayName": "Czech Republic",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "420",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "CD",
+    "displayName": "Democratic Republic of Congo",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "243",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "DK",
+    "displayName": "Denmark",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "45",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "DJ",
+    "displayName": "Djibouti",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "253",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "DM",
+    "displayName": "Dominica",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "DO",
+    "displayName": "Dominican Republic",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "EC",
+    "displayName": "Ecuador",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "593",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "EG",
+    "displayName": "Egypt",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "20",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "SV",
+    "displayName": "El Salvador",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "503",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "GQ",
+    "displayName": "Equatorial Guinea",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "240",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "ER",
+    "displayName": "Eritrea",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "291",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "EE",
+    "displayName": "Estonia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "372",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "SZ",
+    "displayName": "Eswatini",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "268",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "ET",
+    "displayName": "Ethiopia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "251",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "FK",
+    "displayName": "Falkland Islands",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "500",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "FJ",
+    "displayName": "Fiji",
+    "diallingDetails": {
+        "idd": "5",
+        "code": "679",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "FI",
+    "displayName": "Finland",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "358",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "FR",
+    "displayName": "France",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "33",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "GF",
+    "displayName": "French Guiana",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "594",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "PF",
+    "displayName": "French Polynesia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "689",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "GA",
+    "displayName": "Gabon",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "241",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "GM",
+    "displayName": "Gambia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "220",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "GE",
+    "displayName": "Georgia",
+    "diallingDetails": {
+        "idd": "810",
+        "code": "995",
+        "ndd": "8"
+    }
+}, {
+    "countryCode": "DE",
+    "displayName": "Germany",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "49",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "GH",
+    "displayName": "Ghana",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "233",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "GI",
+    "displayName": "Gibraltar",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "350",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "GR",
+    "displayName": "Greece",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "30",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "GD",
+    "displayName": "Grenada",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "GP",
+    "displayName": "Guadeloupe",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "590",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "GT",
+    "displayName": "Guatemala",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "502",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "GG",
+    "displayName": "Guernsey",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "44",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "GN",
+    "displayName": "Guinea",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "224",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "GW",
+    "displayName": "Guinea-Bissau",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "245",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "GY",
+    "displayName": "Guyana",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "592",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "HT",
+    "displayName": "Haiti",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "509",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "HM",
+    "displayName": "Honduras",
+    "diallingDetails": {
+        "idd": "1",
+        "code": "504",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "HK",
+    "displayName": "Hong Kong",
+    "diallingDetails": {
+        "idd": "1",
+        "code": "852",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "HU",
+    "displayName": "Hungary",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "36",
+        "ndd": "6"
+    }
+}, {
+    "countryCode": "IS",
+    "displayName": "Iceland",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "354",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "IN",
+    "displayName": "India",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "91",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "ID",
+    "displayName": "Indonesia",
+    "diallingDetails": {
+        "idd": "1",
+        "code": "62",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "IR",
+    "displayName": "Iran",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "98",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "IQ",
+    "displayName": "Iraq",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "964",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "IE",
+    "displayName": "Ireland",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "353",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "IM",
+    "displayName": "Isle of Man",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "44",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "IL",
+    "displayName": "Israel",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "972",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "IT",
+    "displayName": "Italy",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "39",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "JM",
+    "displayName": "Jamaica",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "JP",
+    "displayName": "Japan",
+    "diallingDetails": {
+        "idd": "10",
+        "code": "81",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "JE",
+    "displayName": "Jersey",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "44",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "JO",
+    "displayName": "Jordan",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "962",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "KZ",
+    "displayName": "Kazakhstan",
+    "diallingDetails": {
+        "idd": "810",
+        "code": "7",
+        "ndd": "8"
+    }
+}, {
+    "countryCode": "KE",
+    "displayName": "Kenya",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "254",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "KI",
+    "displayName": "Kiribati",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "686",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "XK",
+    "displayName": "Kosovo",
+    "diallingDetails": {
+        "idd": "",
+        "code": null,
+        "ndd": ""
+    }
+}, {
+    "countryCode": "KW",
+    "displayName": "Kuwait",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "965",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "KG",
+    "displayName": "Kyrgyzstan",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "996",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "LA",
+    "displayName": "Laos",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "856",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "LV",
+    "displayName": "Latvia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "371",
+        "ndd": "8"
+    }
+}, {
+    "countryCode": "LB",
+    "displayName": "Lebanon",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "961",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "LS",
+    "displayName": "Lesotho",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "266",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "LR",
+    "displayName": "Liberia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "231",
+        "ndd": "22"
+    }
+}, {
+    "countryCode": "LY",
+    "displayName": "Libya",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "218",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "LI",
+    "displayName": "Liechtenstein",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "423",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "LT",
+    "displayName": "Lithuania",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "370",
+        "ndd": "8"
+    }
+}, {
+    "countryCode": "LU",
+    "displayName": "Luxembourg",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "352",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "MO",
+    "displayName": "Macao",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "853",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "MK",
+    "displayName": "Macedonia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "389",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "MG",
+    "displayName": "Madagascar",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "261",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "MW",
+    "displayName": "Malawi",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "265",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "MY",
+    "displayName": "Malaysia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "60",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "MV",
+    "displayName": "Maldives",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "960",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "ML",
+    "displayName": "Mali",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "223",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "MT",
+    "displayName": "Malta",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "356",
+        "ndd": "21"
+    }
+}, {
+    "countryCode": "MH",
+    "displayName": "Marshall Islands",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "692",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "MQ",
+    "displayName": "Martinique",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "596",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "MR",
+    "displayName": "Mauritania",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "222",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "MU",
+    "displayName": "Mauritius",
+    "diallingDetails": {
+        "idd": "20",
+        "code": "230",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "YT",
+    "displayName": "Mayotte",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "262",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "MX",
+    "displayName": "Mexico",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "52",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "FM",
+    "displayName": "Micronesia",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "691",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "MD",
+    "displayName": "Moldova",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "373",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "MC",
+    "displayName": "Monaco",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "377",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "MN",
+    "displayName": "Mongolia",
+    "diallingDetails": {
+        "idd": "1",
+        "code": "976",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "ME",
+    "displayName": "Montenegro",
+    "diallingDetails": {
+        "idd": "99",
+        "code": "382",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "MS",
+    "displayName": "Montserrat",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "MA",
+    "displayName": "Morocco",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "212",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "MZ",
+    "displayName": "Mozambique",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "258",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "NA",
+    "displayName": "Namibia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "264",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "NR",
+    "displayName": "Nauru",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "674",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "NP",
+    "displayName": "Nepal",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "977",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "NL",
+    "displayName": "Netherlands",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "31",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "NC",
+    "displayName": "New Caledonia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "687",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "NZ",
+    "displayName": "New Zealand",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "64",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "NI",
+    "displayName": "Nicaragua",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "505",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "NE",
+    "displayName": "Niger",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "227",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "NG",
+    "displayName": "Nigeria",
+    "diallingDetails": {
+        "idd": "9",
+        "code": "234",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "KP",
+    "displayName": "North Korea",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "850",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "NO",
+    "displayName": "Norway",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "47",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "OM",
+    "displayName": "Oman",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "968",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "PK",
+    "displayName": "Pakistan",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "92",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "PW",
+    "displayName": "Palau",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "680",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "PA",
+    "displayName": "Panama",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "507",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "PG",
+    "displayName": "Papua New Guinea",
+    "diallingDetails": {
+        "idd": "5",
+        "code": "675",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "PY",
+    "displayName": "Paraguay",
+    "diallingDetails": {
+        "idd": "2",
+        "code": "595",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "PE",
+    "displayName": "Peru",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "51",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "PH",
+    "displayName": "Philippines",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "63",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "PN",
+    "displayName": "Pitcairn Island",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "872",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "PL",
+    "displayName": "Poland",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "48",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "PT",
+    "displayName": "Portugal",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "351",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "QA",
+    "displayName": "Qatar",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "974",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "RE",
+    "displayName": "Reunion",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "262",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "RO",
+    "displayName": "Romania",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "40",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "RU",
+    "displayName": "Russia",
+    "diallingDetails": {
+        "idd": "810",
+        "code": "7",
+        "ndd": "8"
+    }
+}, {
+    "countryCode": "RW",
+    "displayName": "Rwanda",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "250",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "BL",
+    "displayName": "Saint-Barthelemy",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "590",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "WS",
+    "displayName": "Samoa",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "685",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "SM",
+    "displayName": "San Marino",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "378",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "ST",
+    "displayName": "Sao Tome and Principe",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "239",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "SA",
+    "displayName": "Saudi Arabia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "966",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "SN",
+    "displayName": "Senegal",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "221",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "RS",
+    "displayName": "Serbia",
+    "diallingDetails": {
+        "idd": "99",
+        "code": "381",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "SC",
+    "displayName": "Seychelles",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "248",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "SL",
+    "displayName": "Sierra Leone",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "232",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "SG",
+    "displayName": "Singapore",
+    "diallingDetails": {
+        "idd": "1",
+        "code": "65",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "SK",
+    "displayName": "Slovakia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "421",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "SI",
+    "displayName": "Slovenia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "386",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "SB",
+    "displayName": "Solomon Islands",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "677",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "SO",
+    "displayName": "Somalia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "252",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "ZA",
+    "displayName": "South Africa",
+    "diallingDetails": {
+        "idd": "9",
+        "code": "27",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "GS",
+    "displayName": "South Georgia and the South Sandwich Islands",
+    "diallingDetails": {
+        "idd": "",
+        "code": null,
+        "ndd": ""
+    }
+}, {
+    "countryCode": "KR",
+    "displayName": "South Korea",
+    "diallingDetails": {
+        "idd": "1",
+        "code": "82",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "SS",
+    "displayName": "South Sudan",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "249",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "ES",
+    "displayName": "Spain",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "34",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "LK",
+    "displayName": "Sri Lanka",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "94",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "SH",
+    "displayName": "St Helena Ascension & Tristan da Cunha",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "290",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "KN",
+    "displayName": "St Kitts and Nevis",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "LC",
+    "displayName": "St Lucia",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "SX",
+    "displayName": "St Maarten",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "1",
+        "ndd": "5"
+    }
+}, {
+    "countryCode": "MF",
+    "displayName": "St Martin",
+    "diallingDetails": {
+        "idd": "",
+        "code": "590",
+        "ndd": ""
+    }
+}, {
+    "countryCode": "PM",
+    "displayName": "St Pierre & Miquelon",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "508",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "VC",
+    "displayName": "St Vincent and The Grenadines",
+    "diallingDetails": {
+        "idd": "",
+        "code": null,
+        "ndd": ""
+    }
+}, {
+    "countryCode": "SD",
+    "displayName": "Sudan",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "249",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "SR",
+    "displayName": "Suriname",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "597",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "SE",
+    "displayName": "Sweden",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "46",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "CH",
+    "displayName": "Switzerland",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "41",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "SY",
+    "displayName": "Syria",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "963",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "TW",
+    "displayName": "Taiwan",
+    "diallingDetails": {
+        "idd": "2",
+        "code": "886",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "TJ",
+    "displayName": "Tajikistan",
+    "diallingDetails": {
+        "idd": "810",
+        "code": "992",
+        "ndd": "8"
+    }
+}, {
+    "countryCode": "TZ",
+    "displayName": "Tanzania",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "255",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "TH",
+    "displayName": "Thailand",
+    "diallingDetails": {
+        "idd": "1",
+        "code": "66",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "PS",
+    "displayName": "The Occupied Palestinian Territories",
+    "diallingDetails": {
+        "idd": "",
+        "code": null,
+        "ndd": ""
+    }
+}, {
+    "countryCode": "PZ",
+    "displayName": "The Occupied Palestinian Territories - Gaza",
+    "diallingDetails": {
+        "idd": "",
+        "code": null,
+        "ndd": ""
+    }
+}, {
+    "countryCode": "PJ",
+    "displayName": "The Occupied Palestinian Territories - Jerusalem and the West Bank",
+    "diallingDetails": {
+        "idd": "",
+        "code": null,
+        "ndd": ""
+    }
+}, {
+    "countryCode": "TL",
+    "displayName": "Timor Leste",
+    "diallingDetails": {
+        "idd": "NONE",
+        "code": "670",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "TG",
+    "displayName": "Togo",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "228",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "TO",
+    "displayName": "Tonga",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "676",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "TT",
+    "displayName": "Trinidad and Tobago",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "TN",
+    "displayName": "Tunisia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "216",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "TR",
+    "displayName": "Turkey",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "90",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "TM",
+    "displayName": "Turkmenistan",
+    "diallingDetails": {
+        "idd": "810",
+        "code": "993",
+        "ndd": "8"
+    }
+}, {
+    "countryCode": "TC",
+    "displayName": "Turks and Caicos Islands",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "TV",
+    "displayName": "Tuvalu",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "688",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "US",
+    "displayName": "USA",
+    "diallingDetails": {
+        "idd": "11",
+        "code": "1",
+        "ndd": "1"
+    }
+}, {
+    "countryCode": "UG",
+    "displayName": "Uganda",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "256",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "UA",
+    "displayName": "Ukraine",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "380",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "AE",
+    "displayName": "United Arab Emirates",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "971",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "GB",
+    "displayName": "United Kingdom",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "44",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "UY",
+    "displayName": "Uruguay",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "598",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "UZ",
+    "displayName": "Uzbekistan",
+    "diallingDetails": {
+        "idd": "810",
+        "code": "998",
+        "ndd": "8"
+    }
+}, {
+    "countryCode": "VU",
+    "displayName": "Vanuatu",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "678",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "VE",
+    "displayName": "Venezuela",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "58",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "VN",
+    "displayName": "Vietnam",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "84",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "WF",
+    "displayName": "Wallis and Futuna",
+    "diallingDetails": {
+        "idd": "19",
+        "code": "681",
+        "ndd": "NONE"
+    }
+}, {
+    "countryCode": "EH",
+    "displayName": "Western Sahara",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "212",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "YE",
+    "displayName": "Yemen",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "967",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "ZM",
+    "displayName": "Zambia",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "260",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "ZW",
+    "displayName": "Zimbabwe",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "263",
+        "ndd": "0"
+    }
+}]

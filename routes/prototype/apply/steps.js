@@ -55,7 +55,6 @@ module.exports = {
         next: '/place-of-birth'
     },
     '/place-of-birth': {
-        controller: require('../../../controllers/go-overseas'),
         fields: [
             'born-in-uk',
             'town-of-birth',
@@ -145,8 +144,6 @@ module.exports = {
             'parent2-passport-issue-year'
         ],
         next: '/grandparents-intro',
-        // controller: require('../../../controllers/go-overseas'),
-        nextAlt: './home-address-overseas',
         forks: [{
             target: '/home-address-manual-prototype',
             condition: function (req, res) { // If they are Naturalisated/Registered OR Born Before 01/01/1983 OR Passport issued Before 01/01/1994 (Old blue) Hidden FTA
@@ -304,10 +301,7 @@ module.exports = {
             'can-sign',
             'no-sign-reason'
         ],
-        next: '/passport-special-delivery',
-        /* if they are from the UK */
-        controller: require('../../../controllers/go-overseas'),
-        nextAlt: './summary-overseas'
+        next: '/passport-special-delivery'
     },
     '/sign-third-party': {
         fields: [
@@ -315,9 +309,6 @@ module.exports = {
             'no-sign-reason-third-party'
         ],
         next: '/passport-special-delivery',
-        /* if they are from the UK */
-        controller: require('../../../controllers/go-overseas'),
-        nextAlt: './summary-overseas'
     },
     '/summary-overseas': {
         controller: require('../../../controllers/confirm-overseas'),
