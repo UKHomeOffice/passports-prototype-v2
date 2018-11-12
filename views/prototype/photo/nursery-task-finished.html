@@ -1,0 +1,35 @@
+{{< layout}}
+
+{{$back}}
+    {{#nunjucks}}
+        {% if values['choose-photo'] == 'upload' %}
+            <a href="upload" class="back-link">Back</a>
+        {% elif values['choose-photo'] == 'code' %}
+            <a href="retrieve" class="back-link">Back</a>
+        {% endif %}
+    {{/nunjucks}}
+{{/back}}
+
+{{$pageTitle}}
+    Thank you
+{{/pageTitle}}
+
+{{$header}}
+    <h1>Thank you</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+<p>The task is finished.</p>
+<p>The next step is to...</p>
+<p>Thank you for taking time to participate in this piece of research.</p>
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}
