@@ -270,7 +270,7 @@ module.exports = {
       return true
     }), function (c) {
       return {
-        value: c.countryCode,
+        value: c.displayName,
         label: c.displayName
       }
     })),

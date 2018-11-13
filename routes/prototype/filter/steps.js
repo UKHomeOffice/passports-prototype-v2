@@ -72,12 +72,12 @@ module.exports = {
         forks: [{
             target: '/../overseas/information/spain-first',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['country-birth'] == "ES"
+                return req.session['hmpo-wizard-common']['country-birth'] == "Spain"
             }
         }, {
             target: '/../overseas/information/france-first',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['country-birth'] == "FR"
+                return req.session['hmpo-wizard-common']['country-birth'] == "France"
             }
         }]
     },
@@ -120,7 +120,15 @@ module.exports = {
         forks: [{
                 target: '/british-citizen',
                 condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['application-country'] !== ''
+                    return req.session['hmpo-wizard-common']['application-country'] !== '' &&
+                        req.session['hmpo-wizard-common']['passport-before']
+                }
+            },
+            {
+                target: '/overseas-service',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['application-country'] !== '' &&
+                        req.session['hmpo-wizard-common']['passport-before'] === false
                 }
             },
             {

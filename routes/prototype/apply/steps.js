@@ -296,11 +296,20 @@ module.exports = {
         ],
         next: '/passport-special-delivery',
         forks: [{
-            target: '/summary',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['overseas-service'];
+                target: '/summary',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['overseas-service'] &&
+                        req.session['hmpo-wizard-common']['passport-before'];
+                }
+            },
+            {
+                target: '/who-for',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['overseas-service'] &&
+                        req.session['hmpo-wizard-common']['passport-before'] === false;
+                }
             }
-        }]
+        ]
     },
     '/passport-special-delivery': {
         // next: '/summary-family-details',
