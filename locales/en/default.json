@@ -96,6 +96,9 @@
         "email": {
             "label": "Email"
         },
+        "email-confirm": {
+            "label": "Confirm your email"
+        },
         "country-code": {
             "value": "Country code"
         },
@@ -631,6 +634,7 @@
         },
 
         "email": "You must enter a valid email",
+        "email-confirm": "Your email doesn’t match. Check and try again.",
         "exactlength": "{{label}} must be 9 characters",
         "ninoformat": "{{label}} format incorrect"
     }

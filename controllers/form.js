@@ -38,20 +38,6 @@ _.extend(Form.prototype, {
     getNextStep: function (req) {
         var next = Base.prototype.getNextStep.apply(this, arguments);
 
-        // Set edit delivery options next page for fta and renew
-        // var host = req.get('host') === 'hmpo-prototypes.herokuapp.com' ? 'https://' + req.get('host') : req.protocol + '://' + req.get('host')
-        // if (req.get('referer') === host + '/prototype/apply/summary') {
-        //     req.sessionModel.set('changeDeliveryNextPage', '/summary')
-        // } else if (req.get('referer') === host + '/prototype/apply/docs-fta') {
-        //     req.sessionModel.set('changeDeliveryNextPage', '/docs-fta')
-        // } else if (req.get('referer') === host + '/prototype/apply/docs-renew') {
-        //     req.sessionModel.set('changeDeliveryNextPage', '/docs-renew')
-        // }
-
-        // if (req.params.action === 'edit' && req.get('referer') === host + '/prototype/apply/passport-special-delivery/edit') {
-        //     next = req.baseUrl === '/' ? req.sessionModel.get('changeDeliveryNextPage') : req.baseUrl + req.sessionModel.get('changeDeliveryNextPage');
-        // }
-
         // Get edit next page
         if (req.params.action === 'edit' && !this.options.continueOnEdit) {
             next = req.baseUrl === '/' ? '/summary' : req.baseUrl + '/summary';
