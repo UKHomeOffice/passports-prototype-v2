@@ -704,15 +704,29 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             // },
             { /* FTA docs */
                 step: values.veteran ? null : this.getEditStep('secure-return'),
-                title: values.veteran ? 'Delivery' : 'Documents',
+                title: function () {
+                    if (values.veteran) {
+                        return 'Delivery'
+                    } else if (values['overseas-service']) {
+                        return 'Courier fee'
+                    } else {
+                        return 'Documents'
+                    }
+                },
                 value: function () {
-                    if (values['secure-return']) {
+                    if (values['secure-return'] && values['overseas-service'] === false) {
                         var output = 'You need to post your documents to us. We’ll return them to you by ';
                         var cost = model.delivery();
                         if (cost) {
                             output += ' secure delivery. <br/>£' + cost;
                         }
                         return output;
+                    } else if (values['overseas-service']) {
+                        if (values['passport-before']) {
+                            return 'Your old passport and extra documents will be in a different envelope to your new passport £19.86'
+                        } else {
+                            return 'Your documents will be in a different envelope to your new passport £19.86'
+                        }
                     } else {
                         return 'You need to post your documents to us. We’ll return them to you by standard post. <br/>£0.00';
                     }

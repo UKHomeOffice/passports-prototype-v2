@@ -285,35 +285,22 @@ module.exports = {
         forks: [{
             target: '/passport-special-delivery',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['applicant-age'] <= 11;
+                return req.session['hmpo-wizard-common']['applicant-age'] <= 11
             }
         }],
-    },
-    '/passport-options-overseas': {
-        fields: [
-            'passport-options-overseas',
-            'braille'
-        ],
-        next: '/sign'
     },
     '/sign': {
         fields: [
             'can-sign',
             'no-sign-reason'
         ],
-        next: '/passport-special-delivery'
-    },
-    '/sign-third-party': {
-        fields: [
-            'can-sign-third-party',
-            'no-sign-reason-third-party'
-        ],
         next: '/passport-special-delivery',
-    },
-    '/summary-overseas': {
-        controller: require('../../../controllers/confirm-overseas'),
-        template: 'confirm',
-        next: '/declaration'
+        forks: [{
+            target: '/summary',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['overseas-service'];
+            }
+        }]
     },
     '/passport-special-delivery': {
         // next: '/summary-family-details',

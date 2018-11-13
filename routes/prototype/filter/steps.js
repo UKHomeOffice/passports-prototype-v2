@@ -55,8 +55,8 @@ module.exports = {
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['passport-before'] == false
                 }
-            },
-            // {
+            }
+            // ,{
             //     target: '/country-birth',
             //     condition: function (req, res) {
             //         return req.session['hmpo-wizard-common']['passport-before'] == false &&
@@ -95,13 +95,12 @@ module.exports = {
             'issue-year',
             'passport-issuing-authority'
         ],
-        next: '/passport-damaged',
+        next: '/passport-damaged'
         // Issue date = 91 - 03 && Issue auth = Other && Over 16 = Yes
         // Issue date = 91 - 03 && Issue auth = HMPO && Over 16 = Yes
         // Issue date = 94 - 97 && Issue auth = HMPO && Over 16 = Yes
         // Issue date = 91 - 93 && Issue auth = Other && Over 16 = No
         // Issue date = 91 - 03 && Issue auth = Other && Over 16 = No
-        forks: [{}]
     },
     '/passport-damaged': {
         controller: require('../../../controllers/check-old-blue'),
