@@ -54,7 +54,7 @@ module.exports = {
         controller: require('../../../controllers/check-query-string'),
         // backLink: './choose-photo-method',
         // next: '/processing-or-retrieving-image',
-        next: '/nursery-task-finished',
+        next: '/research-task-finished',
         forks: [{
             condition: function (req, res) {
                 // setter for `upload` page to dynamically change heading
@@ -134,7 +134,7 @@ module.exports = {
     '/fetch-result': {
         controller: require('../../../controllers/fetch-result')
     },
-    '/nursery-task-finished': {},
+    '/research-task-finished': {},
     '/check-and-submit-passed-photo': {
         next: '/../apply',
         forks: [{

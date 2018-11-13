@@ -3,13 +3,15 @@ module.exports = {
         backLink: '../filter/summary',
         next: '/../photo',
         forks: [{
-            target: '/what-you-need',
+            // target: '/what-you-need',
+            target: '/../photo',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == false ||
                     req.session['hmpo-wizard-common']['old-blue'] == true
             }
         }, {
-            target: '/what-you-need',
+            // target: '/what-you-need',
+            target: '/../photo',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == true &&
                     req.session['hmpo-wizard-common']['16-or-older'] == false
