@@ -1,7 +1,6 @@
 {{< layout}}
-{{$propositionHeader}}Apply first passport{{/propositionHeader}}
-
-
+{{$propositionHeader}}
+{{/propositionHeader}}
 {{$pageTitle}}Which country were you born in?{{/pageTitle}}
 
 {{$header}}
@@ -9,13 +8,12 @@
 {{/header}}
 
 {{$content}}
-
-    {{< hmpo-partials-form}}
+{{< hmpo-partials-form}}
     {{$form}}
-        {{#select}}application-country{{/select}}
+        {{#select}}country-birth{{/select}}
         {{#input-submit}}{{/input-submit}}
     {{/form}}
-    {{/ hmpo-partials-form}}
+{{/ hmpo-partials-form}}
 {{/content}}
 
 {{/ layout}}

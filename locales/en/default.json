@@ -19,6 +19,9 @@
         "application-country": {
             "label": "Country"
         },
+        "country-birth": {
+            "label": "Country"
+        },
         "age": {
             "label": "Your age"
         },
@@ -95,6 +98,9 @@
         },
         "country-code": {
             "value": "Country code"
+        },
+        "passport-issuing-authority": {
+            "label": "Which is your passport issuing authority?"
         },
         "mobile": {
             "label": "Mobile or home phone"
@@ -488,6 +494,9 @@
         },
         "country": {
             "required": "You must answer this question - country"
+        },
+        "country-birth": {
+            "required": "Please select your country"
         },
         "apply-uk": {
             "required": "Please tell us if you're applying from the UK"

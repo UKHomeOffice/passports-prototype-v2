@@ -40,7 +40,7 @@ module.exports = {
         }].concat(_.map(countries, function (c) {
             return {
                 value: c.id,
-                label: c.name,
+                label: c.displayName,
                 attributes: [{
                     attribute: 'data-synonyms',
                     value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
@@ -71,7 +71,7 @@ module.exports = {
                 toggle: 'no-sign'
             }
         ]
-      },
+    },
     'no-sign-reason': {
         labelClassName: 'visuallyhidden',
         legend: {
@@ -148,13 +148,19 @@ module.exports = {
     'name': {
         validate: [
             'required',
-            { type: 'regex', arguments: /^[A-Za-z .'-]+$/ }
+            {
+                type: 'regex',
+                arguments: /^[A-Za-z .'-]+$/
+            }
         ]
     },
     'lastname': {
         validate: [
             'required',
-            { type: 'regex', arguments: /^[A-Za-z .'-]+$/ }
+            {
+                type: 'regex',
+                arguments: /^[A-Za-z .'-]+$/
+            }
         ]
     },
     'change-name': {
@@ -252,7 +258,7 @@ module.exports = {
             className: 'visuallyhidden'
         },
         validate: [
-          'required'
+            'required'
         ]
     },
     'born-in-uk': {
@@ -307,8 +313,8 @@ module.exports = {
             label: ' '
         }].concat(_.map(countries, function (c) {
             return {
-                value: c.name,
-                label: c.name,
+                value: c.displayName,
+                label: c.displayName,
                 attributes: [{
                     attribute: 'data-synonyms',
                     value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
@@ -392,8 +398,8 @@ module.exports = {
             label: ' '
         }].concat(_.map(countries, function (c) {
             return {
-                value: c.name,
-                label: c.name,
+                value: c.displayName,
+                label: c.displayName,
                 attributes: [{
                     attribute: 'data-synonyms',
                     value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
@@ -434,8 +440,7 @@ module.exports = {
             value: 'Do they have a UK passport?',
             className: 'form-label-bold'
         },
-        options: [
-            {
+        options: [{
                 value: 'Yes',
                 label: 'Yes',
                 toggle: 'parent1-uk-passport'
@@ -516,8 +521,8 @@ module.exports = {
             label: ' '
         }].concat(_.map(countries, function (c) {
             return {
-                value: c.name,
-                label: c.name,
+                value: c.displayName,
+                label: c.displayName,
                 attributes: [{
                     attribute: 'data-synonyms',
                     value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
@@ -558,8 +563,7 @@ module.exports = {
             value: 'Do they have a UK passport?',
             className: 'form-label-bold'
         },
-        options: [
-            {
+        options: [{
                 value: 'Yes',
                 label: 'Yes',
                 toggle: 'parent2-uk-passport'
@@ -673,8 +677,8 @@ module.exports = {
             label: ' '
         }].concat(_.map(countries, function (c) {
             return {
-                value: c.name,
-                label: c.name,
+                value: c.displayName,
+                label: c.displayName,
                 attributes: [{
                     attribute: 'data-synonyms',
                     value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
@@ -713,8 +717,8 @@ module.exports = {
             label: ' '
         }].concat(_.map(countries, function (c) {
             return {
-                value: c.name,
-                label: c.name,
+                value: c.displayName,
+                label: c.displayName,
                 attributes: [{
                     attribute: 'data-synonyms',
                     value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
@@ -785,8 +789,8 @@ module.exports = {
             label: ' '
         }].concat(_.map(countries, function (c) {
             return {
-                value: c.name,
-                label: c.name,
+                value: c.displayName,
+                label: c.displayName,
                 attributes: [{
                     attribute: 'data-synonyms',
                     value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
@@ -825,8 +829,8 @@ module.exports = {
             label: ' '
         }].concat(_.map(countries, function (c) {
             return {
-                value: c.name,
-                label: c.name,
+                value: c.displayName,
+                label: c.displayName,
                 attributes: [{
                     attribute: 'data-synonyms',
                     value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
@@ -932,8 +936,8 @@ module.exports = {
             label: ' '
         }].concat(_.map(countries, function (c) {
             return {
-                value: c.name,
-                label: c.name,
+                value: c.displayName,
+                label: c.displayName,
                 attributes: [{
                     attribute: 'data-synonyms',
                     value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
@@ -972,8 +976,8 @@ module.exports = {
             label: ' '
         }].concat(_.map(countries, function (c) {
             return {
-                value: c.name,
-                label: c.name,
+                value: c.displayName,
+                label: c.displayName,
                 attributes: [{
                     attribute: 'data-synonyms',
                     value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
@@ -1044,8 +1048,8 @@ module.exports = {
             label: ' '
         }].concat(_.map(countries, function (c) {
             return {
-                value: c.name,
-                label: c.name,
+                value: c.displayName,
+                label: c.displayName,
                 attributes: [{
                     attribute: 'data-synonyms',
                     value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
@@ -1084,8 +1088,8 @@ module.exports = {
             label: ' '
         }].concat(_.map(countries, function (c) {
             return {
-                value: c.name,
-                label: c.name,
+                value: c.displayName,
+                label: c.displayName,
                 attributes: [{
                     attribute: 'data-synonyms',
                     value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
@@ -1196,8 +1200,7 @@ module.exports = {
         validate: [
             'required'
         ],
-        options: [
-            {
+        options: [{
                 value: true,
                 label: 'I can attend an interview',
             },

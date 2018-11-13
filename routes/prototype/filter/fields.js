@@ -25,8 +25,7 @@ module.exports = {
       value: 'Who is the new passport for?',
       className: 'visuallyhidden'
     },
-    options: [
-      {
+    options: [{
         value: true,
         label: 'I’m helping someone to apply online',
       },
@@ -264,14 +263,15 @@ module.exports = {
     options: [{
       value: '',
       label: ' '
-    }].concat(_.map(countries, function(c) {
+    }].concat(_.map(countries.filter(function (c) {
+      if (c.countryCode.split('.').pop() === "GB") {
+        return false; // skip
+      }
+      return true
+    }), function (c) {
       return {
-        value: c.id,
-        label: c.name,
-        attributes: [{
-          attribute: 'data-synonyms',
-          value: Array.isArray(c.altName) ? c.altName.join(',') : c.altName
-        }]
+        value: c.displayName,
+        label: c.displayName
       }
     })),
     validate: [
@@ -281,6 +281,20 @@ module.exports = {
       field: 'apply-uk',
       value: false
     }
+  },
+  'country-birth': {
+    options: [{
+      value: '',
+      label: ' '
+    }].concat(_.map(countries, function (c) {
+      return {
+        value: c.countryCode,
+        label: c.displayName
+      }
+    })),
+    validate: [
+      'required'
+    ]
   },
   'age-day': {
     labelClassName: 'form-label',
@@ -349,6 +363,22 @@ module.exports = {
       'required'
     ]
   },
+  'passport-issuing-authority': {
+    legend: {
+      value: 'Which is your passport issuing authority?',
+      className: 'form-label-bold'
+    },
+    options: [{
+        value: 'UKPA, UKPS, IPS or HMPO',
+        label: 'UKPA, UKPS, IPS or HMPO',
+      },
+      {
+        value: 'Other',
+        label: 'Other'
+      }
+    ],
+    className: 'inline'
+  },
   'dual-nationality': {
     legend: {
       value: 'Do you have any uncancelled passport from other countries?',
@@ -364,6 +394,41 @@ module.exports = {
         label: 'No'
       }
     ],
+    formatter: ['boolean'],
+    validate: [
+      'required'
+    ]
+  },
+  'british-citizen': {
+    legend: {
+      value: 'What nationality is written on your passport?',
+      className: 'visuallyhidden'
+    },
+    options: [{
+      value: true,
+      label: 'British Citizen'
+    }, {
+      value: false,
+      label: 'Other'
+    }],
+    formatter: ['boolean'],
+    validate: [
+      'required'
+    ],
+    className: 'inline'
+  },
+  'overseas-service': {
+    legend: {
+      value: 'Do you want to try the new service?',
+      className: 'visuallyhidden'
+    },
+    options: [{
+      value: true,
+      label: 'Yes, I’d like to try the new service'
+    }, {
+      value: false,
+      label: 'No, I’d prefer not to'
+    }],
     formatter: ['boolean'],
     validate: [
       'required'
@@ -385,56 +450,4 @@ module.exports = {
       }
     ]
   }
-  // 'relationship-applicant-other': {
-  //   legend: {
-  //     value: 'What is your relationship to the applicant?',
-  //     className: 'visuallyhidden'
-  //   },
-  //   options: [{
-  //       value: 'Social Worker',
-  //       label: 'Social Worker'
-  //     },
-  //     {
-  //       value: 'Carer',
-  //       label: 'Carer'
-  //     },
-  //     {
-  //       value: 'Solicitor',
-  //       label: 'Solicitor'
-  //     },
-  //     {
-  //       value: 'Social Worker',
-  //       label: 'Social Worker'
-  //     },
-  //     {
-  //       value: 'Other',
-  //       label: 'Other',
-  //       toggle: 'relationship-other',
-  //     }
-  //   ],
-  //   validate: [
-  //     'required'
-  //   ]
-  // },
-  // 'parental-responsibility': {
-  //   legend: {
-  //     value: 'Do you have parental responsibility?',
-  //     className: 'visuallyhidden'
-  //   },
-  //   options: [{
-  //       value: true,
-  //       label: 'Yes'
-  //     },
-  //     {
-  //       value: false,
-  //       label: 'No',
-  //       toggle: "parental-no"
-  //     }
-  //   ],
-  //   formatter: ['boolean'],
-  //   validate: [
-  //     'required'
-  //   ],
-  //   className: 'inline'
-  // }
 };

@@ -1,21 +1,17 @@
 module.exports = {
     '/': {
-        //controller: require('../../../controllers/go-overseas'),
-        //controller: require('../../../controllers/init'), // Initialise
         fields: [
             'apply-uk',
             'application-country'
         ],
         backLink: '../startpage',
         next: '/first-uk',
-        /* if Yes is selected */
-        nextAlt: 'what-do-you-want-to-do-overseas',
-        /* if they are from Germany/France */
-        nextAltAlt: 'what-do-you-want-to-do-overseas',
-        /* if they are from Afganistan */
-        nextAltAltAlt: 'what-do-you-want-to-do-overseas',
-        /* if they are from Spain - first hidden as renewal */
-        nextAltAltAltAlt: '../overseas-not-available' /* if they are from Syria - not available */
+        forks: [{
+            target: '/../overseas/information/syria',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['application-country'] == 'SY'
+            }
+        }]
     },
     '/first-uk': {
         backLink: './',
@@ -55,69 +51,60 @@ module.exports = {
         ],
         next: '/passport-date-of-issue',
         forks: [{
-            target: '/naturalisation-registration-details',
+                target: '/naturalisation-registration-details',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['passport-before'] == false
+                }
+            }
+            // ,{
+            //     target: '/country-birth',
+            //     condition: function (req, res) {
+            //         return req.session['hmpo-wizard-common']['passport-before'] == false &&
+            //             req.session['hmpo-wizard-common']['application-country'] !== ''
+            //     }
+            // }
+        ]
+    },
+    '/country-birth': {
+        backLink: './dob',
+        fields: ['country-birth'],
+        next: '/../overseas/overseas-british',
+        forks: [{
+            target: '/../overseas/information/spain-first',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false
+                return req.session['hmpo-wizard-common']['country-birth'] == "Spain"
+            }
+        }, {
+            target: '/../overseas/information/france-first',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['country-birth'] == "France"
             }
         }]
     },
     '/naturalisation-registration-details': {
-        fields: [
-            'naturalisation-registration-certificate'
-        ],
+        fields: ['naturalisation-registration-certificate'],
         next: '/dual-national'
-    },
-    '/what-do-you-want-to-do': {
-        fields: [
-            'what-to-do'
-        ],
-        backLink: './',
-        next: '/dob'
     },
     '/lost': {},
     '/application-method': {},
-    '/what-do-you-want-to-do-overseas': {
-        controller: require('../../../controllers/go-overseas'),
-        fields: [
-            'what-to-do-overseas'
-        ],
-        backLink: './',
-        next: '/dob',
-        nextAlt: 'dob-overseas',
-        /* if they are from Germany/France */
-        nextAltAlt: 'dob-overseas',
-        /* if they are from Afganistan */
-        nextAltAltAlt: '../overseas-first' /* if they are from Spain - first hidden as renewal */
-    },
-    '/dob-overseas': {
-        fields: [
-            'age-day',
-            'age-year',
-            'age-month'
-        ],
-        controller: require('../../../controllers/go-overseas'),
-        backLink: './',
-        next: '/../filter',
-        /* if they are from the UK */
-        nextAlt: '../overseas',
-        /* if they are from Germany/France */
-        nextAltAlt: '../overseas-not-eligible',
-        /* if they are from Afganistan */
-    },
     '/passport-date-of-issue': {
         backLink: './lost-stolen',
         fields: [
             'issue-day',
             'issue-month',
-            'issue-year'
+            'issue-year',
+            'passport-issuing-authority'
         ],
         next: '/passport-damaged'
+        // Issue date = 91 - 03 && Issue auth = Other && Over 16 = Yes
+        // Issue date = 91 - 03 && Issue auth = HMPO && Over 16 = Yes
+        // Issue date = 94 - 97 && Issue auth = HMPO && Over 16 = Yes
+        // Issue date = 91 - 93 && Issue auth = Other && Over 16 = No
+        // Issue date = 91 - 03 && Issue auth = Other && Over 16 = No
     },
     '/passport-damaged': {
         controller: require('../../../controllers/check-old-blue'),
-        fields: [
-            'passport-damaged'
-        ],
+        fields: ['passport-damaged'],
         next: '/dual-national', // If they are NOT a UK Hidden FTA
         forks: [{ // If they are a UK Hidden FTA
             target: '/naturalisation-registration-details',
@@ -127,12 +114,52 @@ module.exports = {
         }]
     },
     '/dual-national': {
-        //controller: require('../../../controllers/go-overseas'),
-        fields: [
-            'dual-nationality'
-        ],
+        backLink: './passport-damaged',
+        fields: ['dual-nationality'],
         next: '/summary',
-        nextAlt: '../overseas'
+        forks: [{
+                target: '/british-citizen',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['application-country'] !== '' &&
+                        req.session['hmpo-wizard-common']['passport-before']
+                }
+            },
+            {
+                target: '/overseas-service',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['application-country'] !== '' &&
+                        req.session['hmpo-wizard-common']['passport-before'] === false
+                }
+            },
+            {
+                target: '/../overseas/overseas-british',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['dual-nationality'] == true
+                }
+            }
+        ]
+    },
+    '/british-citizen': {
+        backLink: './dual-national',
+        fields: ['british-citizen'],
+        next: '/overseas-service',
+        forks: [{
+            target: '/../overseas/overseas-british',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['british-citizen'] == false
+            }
+        }]
+    },
+    '/overseas-service': {
+        backLink: './british-citizen',
+        fields: ['overseas-service'],
+        next: '/summary',
+        forks: [{
+            target: '/../overseas/overseas-british',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['overseas-service'] == false
+            }
+        }]
     },
     '/summary': {
         backLink: './dual-national',

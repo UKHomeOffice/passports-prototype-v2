@@ -1,0 +1,15 @@
+{
+    "costs": {
+        "standard-service": 86,
+        "__comment": "Set Base cost of CostModel in costs.js",
+        "standard-child": 56,
+        "__comment": "Set Base cost of CostModel in costs.js",
+        "premium-service": 177,
+        "__comment": "Set Base cost of CostModel in costs.js – NOTE: I think this variable MAY be for 'Fast-track service (one week)' rather than for 'Premium service (one day)' ",
+        "large-passport": 10,
+        "__comment": "Add to Base cost of CostModel in costs.js",
+        "delivery": 19.86,
+        "__comment": "Add to Base cost of CostModel in costs.js"
+    },
+    "veteranEndDate": "1929-09-03"
+}

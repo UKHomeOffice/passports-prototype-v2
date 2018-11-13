@@ -41,12 +41,18 @@
     <input type="text" name="postcode" id="postcode" class="form-control input-code" aria-required="true">
   </div>
 
-  <!-- <div class="form-group">
+  <div class="form-group">
       <label class="form-label-bold">
           Country
       </label>
-      United Kingdom
-  </div> -->
+      {{#nunjucks}}
+        {% if values['overseas-service'] %}
+          {{values['application-country']}}
+        {% else %}
+          United Kindom
+        {% endif %}
+      {{/nunjucks}}
+  </div>
 
   {{#input-submit}}{{/input-submit}}
 

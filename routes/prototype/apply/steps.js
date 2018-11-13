@@ -55,7 +55,6 @@ module.exports = {
         next: '/place-of-birth'
     },
     '/place-of-birth': {
-        controller: require('../../../controllers/go-overseas'),
         fields: [
             'born-in-uk',
             'town-of-birth',
@@ -145,8 +144,6 @@ module.exports = {
             'parent2-passport-issue-year'
         ],
         next: '/grandparents-intro',
-        // controller: require('../../../controllers/go-overseas'),
-        nextAlt: './home-address-overseas',
         forks: [{
             target: '/home-address-manual-prototype',
             condition: function (req, res) { // If they are Naturalisated/Registered OR Born Before 01/01/1983 OR Passport issued Before 01/01/1994 (Old blue) Hidden FTA
@@ -288,16 +285,9 @@ module.exports = {
         forks: [{
             target: '/passport-special-delivery',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['applicant-age'] <= 11;
+                return req.session['hmpo-wizard-common']['applicant-age'] <= 11
             }
         }],
-    },
-    '/passport-options-overseas': {
-        fields: [
-            'passport-options-overseas',
-            'braille'
-        ],
-        next: '/sign'
     },
     '/sign': {
         fields: [
@@ -305,24 +295,21 @@ module.exports = {
             'no-sign-reason'
         ],
         next: '/passport-special-delivery',
-        /* if they are from the UK */
-        controller: require('../../../controllers/go-overseas'),
-        nextAlt: './summary-overseas'
-    },
-    '/sign-third-party': {
-        fields: [
-            'can-sign-third-party',
-            'no-sign-reason-third-party'
-        ],
-        next: '/passport-special-delivery',
-        /* if they are from the UK */
-        controller: require('../../../controllers/go-overseas'),
-        nextAlt: './summary-overseas'
-    },
-    '/summary-overseas': {
-        controller: require('../../../controllers/confirm-overseas'),
-        template: 'confirm',
-        next: '/declaration'
+        forks: [{
+                target: '/summary',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['overseas-service'] &&
+                        req.session['hmpo-wizard-common']['passport-before'];
+                }
+            },
+            {
+                target: '/who-for',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['overseas-service'] &&
+                        req.session['hmpo-wizard-common']['passport-before'] === false;
+                }
+            }
+        ]
     },
     '/passport-special-delivery': {
         // next: '/summary-family-details',

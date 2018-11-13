@@ -4,9 +4,6 @@ app.use(require('./routes/guidance'));
 
 // DCS user journeys
 app.use('/prototype/overseas', require('./routes/prototype/overseas'));
-app.use('/prototype/overseas-not-eligible', require('./routes/prototype/overseas-not-eligible'));
-app.use('/prototype/overseas-first', require('./routes/prototype/overseas-first'));
-app.use('/prototype/overseas-lost-change', require('./routes/prototype/overseas-lost-change'));
 app.use('/prototype/startpage', require('./routes/prototype/startpage'));
 app.use('/prototype/startpage-overseas', require('./routes/prototype/startpage-overseas'));
 app.use('/prototype/filter', require('./routes/prototype/filter'));
@@ -15,9 +12,7 @@ app.use('/prototype/intro', require('./routes/prototype/intro'));
 app.use('/prototype/photo', require('./routes/prototype/photo'));
 app.use('/prototype/photo/upload-errors', require('./routes/prototype/photo/upload-errors'));
 app.use('/prototype/help', require('./routes/prototype/help'));
-app.use('/prototype/filter-common-temp', require('./routes/prototype/filter-common-temp'));
 app.use('/prototype/startpage-temp', require('./routes/prototype/startpage-temp'));
-app.use('/prototype/overseas-not-available', require('./routes/prototype/overseas-not-available'));
 app.use('/prototype/throttle', require('./routes/prototype/throttle'));
 app.use('/prototype/payment', require('./routes/prototype/payment'));
 app.use('/prototype/submission-failed', require('./routes/prototype/submission-failed'));
