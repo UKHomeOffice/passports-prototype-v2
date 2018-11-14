@@ -1165,6 +1165,11 @@ module.exports = {
             'required'
         ]
     },
+    'email-confirm': {
+        validate: [
+            'required'
+        ]
+    },
     'country-code': {
         labelClassName: 'visuallyhidden',
         formatter: 'removehyphens',

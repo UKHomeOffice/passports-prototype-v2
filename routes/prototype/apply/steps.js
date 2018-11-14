@@ -259,7 +259,7 @@ module.exports = {
         next: '/contact-details-overseas'
     },
     '/contact-details': {
-        fields: ['email', 'mobile'],
+        fields: ['email', 'email-confirm', 'mobile'],
         next: '/get-updates'
     },
     '/contact-details-overseas': {
