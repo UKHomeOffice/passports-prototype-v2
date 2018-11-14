@@ -23,6 +23,7 @@ var values = {
     "phone-number": "02081234567",
     "reference": "1234567890",
     "email-address": "c.moore@test-corp.co.uk",
+    "email-confirm": "c.moore@test-corp.co.uk",
     "csig-name": "Charlotte",
     "csig-last-name": "Moore",
     "csig-email": "c.moore@test-corp.co.uk",
