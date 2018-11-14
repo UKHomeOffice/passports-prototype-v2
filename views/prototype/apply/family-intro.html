@@ -17,14 +17,14 @@
             <div class="column-two-thirds">
 
                 {{#nunjucks}}
-                   {% if values['naturalisation-registration-certificate'] and values['applicant-age'] >= 16 or (values['born-before-1983'] and values['born-in-uk']) %}
-                   <p>We need to ask for parents' details to help confirm your identity.</p>
+                   {% if values['naturalisation-registration-certificate'] and values['applicant-age'] >= 16 or (values['born-before-1983'] and values['born-in-uk']) %} {#FTA nat/reg or born UK before 1.1.83#}
+                   <p>We need to ask for parents' details to confirm your identity.</p>
 
-                   {% elif values['naturalisation-registration-certificate'] and values['applicant-age'] < 16 %}
-                   <p>Children Nat/Reg</p>
+                   {% elif values['naturalisation-registration-certificate'] and values['applicant-age'] < 16 %} {#FTC nat/reg#}
+                   <p>We need to ask for parents' details to confirm who has <a href="https://www.gov.uk/parental-rights-responsibilities" target="_blank">parental responsibility</a>.</p>
 
-                   {% elif not values['naturalisation-registration-certificate'] and not values['passport-before'] and values['applicant-age'] < 16 %}
-                   <p> FTC not through NAT/REG </p>
+                   {% elif not values['naturalisation-registration-certificate'] and not values['passport-before'] and values['applicant-age'] < 16 %} {#FTC#}
+                   <p>We need to ask for parents' details to confirm British nationality and who has <a href="https://www.gov.uk/parental-rights-responsibilities" target="_blank">parental responsibility</a>.</p>
 
                     {% elif not (values['naturalisation-registration-certificate'] and values['applicant-age'] >= 16) or (values['born-before-1983'] and not values['born-in-uk']) or not values['born-before-1983'] %}
                    <p>We need to confirm <a href="../../guidance/british-nationality" target="_blank">British nationality</a> &ndash; this may depend on your parents or grandparents.</p>
@@ -32,7 +32,7 @@
                    {% endif %}
                 {{/nunjucks}}
 
-                <p>If you can't provide their details, you'll need to tell us why and it may delay your application.</p>
+                <p>If you can't provide these details, you'll need to tell us why and it may delay your application.</p>
 
                 {{#nunjucks}}
                     {% if values['applicant-age'] > 16 %} {# Not required for FTC #}
