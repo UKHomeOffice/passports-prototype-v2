@@ -122,8 +122,7 @@
             "hint": "If you have evidence, include it when you send the old passport."
         },
         "previous-name": {
-            "legend": "Have you ever been known by any other names?",
-            "hint": "For example, a name from previous marriage or civil partnership."
+            "legend": "Have you ever been known by any other names?"
         },
         "previous-name-change": {
             "legend": "Have you ever been known by any other names?"

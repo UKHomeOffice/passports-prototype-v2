@@ -49,7 +49,7 @@
 
 
   {% elif values['passport-before'] and values['applicant-age'] <= 11 and values['passport-damaged'] == 'No' %} {# Renew 0-11s #}
-    <p>Based on your answers, you've had a UK passport before and want to apply for a new one.</p>
+    <p>Based on your answers, you're applying for a child passport. </p>
     <p>If your name has changed, you need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a>.</p>
     <p>It should take around 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
 
@@ -75,7 +75,7 @@
     {% endif %}
 
   {% elif not values['passport-before'] and not values['16-or-older'] %} {# FTC #}
-    <p>Based on your answers, you're applying for a first UK passport.</p>
+    <p>Based on your answers, you're applying for a first child passport.</p>
     <p>You need to have <a href="../../guidance/british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
     <p>It should take around 3 weeks to get a new passport.</p>
 

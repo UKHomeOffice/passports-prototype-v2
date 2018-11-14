@@ -4,7 +4,7 @@
 {{$pageTitle}}Have you had a UK passport before?{{/pageTitle}}
 
 {{$header}}
-    <h1>Have {{> partials-applicant-you-they}} had a UK passport before?</h1>
+    <h1>Have you had a UK passport before?</h1>
 {{/header}}
 
 {{$content}}
@@ -12,6 +12,7 @@
     {{$form}}
 
         <fieldset class="inline">
+
             {{#radio-group}}passport-before{{/radio-group}}
         </fieldset>
         <div id="passport-before-no" class="reveal js-hidden">
@@ -21,6 +22,14 @@
         </div>
 
         {{#input-submit}}{{/input-submit}}
+
+        <details>
+            <summary><span class="summary">I'm applying on behalf of someone else</span></summary>
+            <div class="panel panel-border-narrow">
+              <p>You can apply on behalf of a child or adult. Answer these questions with their details rather than your own.</p>
+            </div>
+        </details>
+
 
     {{/form}}
 {{/ hmpo-partials-form}}
