@@ -1,0 +1,74 @@
+{{< layout}}
+
+{{$back}}
+<div class="photo-guide">
+    <a href="{{backLink}}" class="back-link">Back</a>
+    <span class="marker">Guide part 9 of 10</span>
+</div>
+{{/back}}
+
+{{$main-content}}
+
+<div class="column-full photo-guide-start">
+    <div class="flash-card">
+        <header>
+            <h1>Children and babies</h1>
+        </header>
+        <div class="grid-row">
+            <div class="column-full">
+                <p>Children must be on their own in the picture – no toys or dummies.</p>
+
+                <h2>If the child is under 6, they don't have to:</h2>
+                <ul class="list list-bullet">
+                    <li>look directly at the camera</li>
+                    <li>have a plain expression</li>
+                </ul>
+
+                <h2>If the child is under 1:</h2>
+                <ul class="list list-bullet">
+                    <li>they don’t have to have their eyes open</li>
+                    <li>you can support their head with your hand, but your hand must not be visible</li>
+                </ul>
+
+                <div class="guidance-photos" aria-hidden="true">
+                    <ul>
+                        <li>
+                            <img src="/public/images/photoguide/uncropped-photos/image-child-1.jpg" alt="">
+                            <div class="result">
+                                <p class="approved">Approved</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/public/images/photoguide/uncropped-photos/image-child-2.jpg" alt="">
+                            <div class="result">
+                                <p class="failed">No dummies</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/public/images/photoguide/uncropped-photos/image-child-3.jpg" alt="">
+                            <div class="result">
+                                <p class="failed">1 person only in photo</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="grid-row">
+            <nav class="guide-nav">
+                <ul style="margin-left:18px">
+                    <li class="button-guide button-guide-previous">
+                        <a href="{{backLink}}" style="font-size: 20px">Back</a>
+                    </li>
+                    <li class="button-guide button-guide-next">
+                        <a href="{{nextPage}}" style="font-size: 20px">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+{{/main-content}}
+
+{{/ layout}}

@@ -1,17 +1,20 @@
 module.exports = {
-    '/': {},
-    '/digital-photo': {
+    '/': {
         next: '/choose-photo-method'
     },
     '/choose-photo-method': {
         fields: ['choose-photo'],
-        next: '/upload',
+        backLink: './',
+        next: '/photo-guide-find-camera',
         forks: [{
             target: '/retrieve',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['choose-photo'] == 'code';
             }
         }]
+    },
+    '/photo-guidance': {
+        next: '/upload'
     },
     '/photo-guide': {
         next: '/photo-guide-find-camera'
@@ -38,6 +41,12 @@ module.exports = {
         next: '/photo-guide-get-ready-for-photo'
     },
     '/photo-guide-get-ready-for-photo': {
+        next: '/photo-guide-child'
+    },
+    '/photo-guide-child': {
+        next: '/photo-guide-video'
+    },
+    '/photo-guide-video': {
         next: '/upload',
         forks: [{
             condition: function (req, res) {
@@ -49,8 +58,8 @@ module.exports = {
     '/photo-booth-shop': {},
     '/upload': {
         controller: require('../../../controllers/check-query-string'),
-        backLink: './choose-photo-method',
-        next: '/processing-image',
+        // backLink: './choose-photo-method',
+        next: '/processing-or-retrieving-image',
         forks: [{
             condition: function (req, res) {
                 // setter for `upload` page to dynamically change heading
@@ -63,7 +72,7 @@ module.exports = {
             }
         }]
     },
-    '/processing-image': {
+    '/processing-or-retrieving-image': {
         // backLink: './upload',
     },
     '/questions-intro': {
@@ -77,37 +86,36 @@ module.exports = {
         // backLink: './questions-intro',
         next: '/../apply',
         forks: [{
-                target: '/../apply',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
-                }
-            }, {
-                target: '/../apply/name',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
-                }
-            }, {
-                target: '/choose-photo-method',
-                condition: {
-                    field: 'submit-photo',
-                    value: false
-                }
+            target: '/../apply',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
             }
-            // {
-            //     target: '/../apply',
-            //     condition: function (req, res) { // If they have had UK passport before AND NOT a Hidden FTA
-            //         return req.session['hmpo-wizard-common']['passport-before'] == true
-            //             && req.session['hmpo-wizard-common']['old-blue'] == false;
-            //     }
-            // }, {
-            //     target: '/csig-required',
-            //     condition: function (req, res) { // If they are an FTA OR Hidden FTA
-            //         return req.session['hmpo-wizard-common']['passport-before'] == false
-            //             || req.session['hmpo-wizard-common']['passport-before'] == true
-            //             && req.session['hmpo-wizard-common']['old-blue'] == true;
-            //     }
-            // }
-        ]
+        }, {
+            target: '/../apply/name',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
+            }
+        }, {
+            target: '/choose-photo-method',
+            condition: {
+                field: 'submit-photo',
+                value: false
+            }
+        }]
+        // {
+        //     target: '/../apply',
+        //     condition: function (req, res) { // If they have had UK passport before AND NOT a Hidden FTA
+        //         return req.session['hmpo-wizard-common']['passport-before'] == true
+        //             && req.session['hmpo-wizard-common']['old-blue'] == false;
+        //     }
+        // }, {
+        //     target: '/csig-required',
+        //     condition: function (req, res) { // If they are an FTA OR Hidden FTA
+        //         return req.session['hmpo-wizard-common']['passport-before'] == false
+        //             || req.session['hmpo-wizard-common']['passport-before'] == true
+        //             && req.session['hmpo-wizard-common']['old-blue'] == true;
+        //     }
+        // }
     },
     // '/csig-required': {
     //     next: '/../apply',
@@ -125,33 +133,48 @@ module.exports = {
     // },
     '/retrieve': {
         fields: ['photo-code-path'],
-        backLink: './choose-photo-method',
-        next: '/retrieving-image'
-    },
-    '/retrieving-image': {
-        // backLink: './retrieve',
+        // backLink: './choose-photo-method',
+        next: '/processing-or-retrieving-image'
     },
     '/fetch-result': {
         controller: require('../../../controllers/fetch-result')
     },
     '/check-and-submit-passed-photo': {
-        backLink: './retrieve',
-        next: '/../apply'
+        next: '/../apply',
+        forks: [{
+            target: '/../apply',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
+            }
+        }, {
+            target: '/../apply/name',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
+            }
+        }]
     },
     '/check-and-submit-photo': {
         fields: ['oix-override', 'oix-override-reason'],
-        backLink: './retrieve',
         next: '/../apply',
         forks: [{
-            target: '/choose-photo-method',
+            target: '/../apply',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
+            }
+        }, {
+            target: '/../apply/name',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
+            }
+        }, {
+            target: '/../photo',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['oix-override'] == false;
             }
         }]
     },
     '/not-accepted': {
-        backLink: './retrieve',
-        next: '/choose-photo-method'
+        next: '/../photo'
     },
     '/code-error': {
         backLink: './retrieve',
