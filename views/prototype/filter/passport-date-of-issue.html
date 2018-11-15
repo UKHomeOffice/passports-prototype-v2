@@ -21,12 +21,26 @@
                 </div>
             </fieldset>
         </div>
-            {{^values.apply-uk}}
-                {{#radio-group}}passport-issuing-authority{{/radio-group}}
-            {{/values.apply-uk}}
+        {{^values.apply-uk}}
+            {{#radio-group}}passport-issuing-authority{{/radio-group}}
+        {{/values.apply-uk}}
+
         {{#input-submit}}{{/input-submit}}
     {{/form}}
     {{/ hmpo-partials-form}}
 {{/content}}
+
+{{$sidebar}}
+<div class="column-one-third">
+    <br>
+    <br>
+    <div class="sidebar related">
+        <div class="photo-preview-inner">
+            <h2 class="heading-medium">Where to find your code</h2>
+            <img src="../../public/images/Issue_date_illustration.png" width="300" alt="">
+        </div>
+    </div>
+</div>
+{{/sidebar}}
 
 {{/ layout}}
