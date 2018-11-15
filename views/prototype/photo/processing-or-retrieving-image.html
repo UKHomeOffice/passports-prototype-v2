@@ -1,0 +1,35 @@
+{{< layout}}
+
+{{$main-content}}
+
+<link rel="stylesheet" href="{{assetPath}}/stylesheets/app-photo.css">
+
+<div class="column-full" style="text-align:center">
+    <img src="../../public/images/progress.gif" style="width:50px" class="animated-progress" />
+
+    {{#nunjucks}}
+        {% if values['choose-photo'] == 'upload' %}
+            <h3>Processing image</h3>
+            <script>
+                if (localStorage.journey === 'FTC') {
+                    // Error journey
+                    // setTimeout(function(){window.location.href='../photo/upload-errors/not-accepted'},1000);
+                    setTimeout(function(){window.location.href='../photo/questions-intro'},1000);
+                } else {
+                    setTimeout(function(){window.location.href='../photo/questions-intro'},1000);
+                }
+            </script>
+        {% elif values['choose-photo'] == 'code' %}
+            <h3>Retrieving image</h3>
+            <script>
+                setTimeout(function () {
+                    window.location.href = 'fetch-result'
+                }, 1000);
+            </script>
+        {% endif %}
+    {{/nunjucks}}
+</div>
+
+{{/main-content}}
+
+{{/ layout}}
