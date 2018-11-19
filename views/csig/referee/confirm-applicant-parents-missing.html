@@ -12,6 +12,7 @@
 {{< hmpo-partials-form}}
     {{$form}}
     <p>We need to check the applicant is eligible for a UK passport. Answer to the best of your knowledge.</p>
+    
     <h2>Mother or parent 1</h2>
     <div class="confirmation">
       <div class="section" style="margin-bottom: 10px">
@@ -37,6 +38,23 @@
     </div>
     <label class="form-label" for="">Can you confirm these details are correct?</label>
     {{#radio-group}}child-mother{{/radio-group}}
+
+    <!-- <br>
+    <h2>Father or parent 2</h2>
+    <p>Details not provided.</p>
+    <br> -->
+    <br>
+    <h2>Father or parent 2</h2>
+    <div class="confirmation">
+      <div class="section" style="margin-bottom: 10px">
+        <dl class="">
+            <dd class="column-half">
+              <p>Details not provided</p>
+            </dd>
+        </dl>
+      </div>
+    </div>
+    <br>
 
       {{#input-submit}}{{/input-submit}}
     {{/form}}

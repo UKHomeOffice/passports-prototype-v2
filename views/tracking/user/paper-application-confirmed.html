@@ -21,10 +21,24 @@
         <p>The person confirming your identity needs to complete this form and give it back to you. You can print it in black and white or colour.</p>
         <section class="attachment">
           <div class="attachment-thumb">
-            <a aria-hidden="true" class="thumbnail" href="/public/images/pdf/confirm-id-child.pdf"><img alt="" src="/public/images/pdf/csig-child-form-thumbnail.png"></a>
+            {{#nunjucks}}
+              {% if values['csig-type'] == "child" %}
+                <a aria-hidden="true" class="thumbnail" href="/public/images/pdf/confirm-id-child.pdf"><img alt="" src="/public/images/pdf/csig-child-form-thumbnail.png"></a>
+              {% else %}
+                <a aria-hidden="true" class="thumbnail" href="/public/images/pdf/confirm-id-adult.pdf"><img alt="" src="/public/images/pdf/csig-child-form-thumbnail.png"></a>
+              {% endif %}
+            {{/nunjucks}}
+            
           </div>
           <div class="attachment-details">
-            <h2 class="title"><a aria-describedby="attachment-2771744-accessibility-help" href="/public/images/pdf/confirm-id-child.pdf">Download the form</a></h2>
+            {{#nunjucks}}
+              {% if values['csig-type'] == "child" %}
+                <h2 class="title"><a aria-describedby="attachment-2771744-accessibility-help" href="/public/images/pdf/confirm-id-child.pdf">Download the form</a></h2>
+              {% else %}
+                <h2 class="title"><a aria-describedby="attachment-2771744-accessibility-help" href="/public/images/pdf/confirm-id-adult.pdf">Download the form</a></h2>
+              {% endif %}
+            {{/nunjucks}}
+            
             <p class="metadata">
               <span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">140KB</span>, <span class="page-length">2 pages</span>
             </p>
