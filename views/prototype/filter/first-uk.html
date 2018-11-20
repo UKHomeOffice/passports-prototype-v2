@@ -10,7 +10,7 @@
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-
+        <p>If you're applying on behalf of a child or adult, answer these questions with their details rather than your own.</p>
         <fieldset class="inline">
 
             {{#radio-group}}passport-before{{/radio-group}}
@@ -22,14 +22,6 @@
         </div>
 
         {{#input-submit}}{{/input-submit}}
-
-        <details>
-            <summary><span class="summary">I'm applying on behalf of someone else</span></summary>
-            <div class="panel panel-border-narrow">
-              <p>You can apply on behalf of a child or adult. Answer these questions with their details rather than your own.</p>
-            </div>
-        </details>
-
 
     {{/form}}
 {{/ hmpo-partials-form}}
