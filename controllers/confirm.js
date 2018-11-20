@@ -714,7 +714,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                     }
                 },
                 value: function () {
-                    if (values['secure-return'] && values['overseas-service'] === false) {
+                    if (values['secure-return'] && values['application-country'] === '') {
                         var output = 'You need to post your documents to us. We’ll return them to you by ';
                         var cost = model.delivery();
                         if (cost) {
