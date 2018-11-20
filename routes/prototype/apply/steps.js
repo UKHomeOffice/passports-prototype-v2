@@ -160,11 +160,10 @@ module.exports = {
             },
             {
                 target: '/home-address-manual-prototype',
-                condition: function (req, res) { // No grand parents detail required if both parents passport details provided
+                condition: function (req, res) { // Grandparents details logic
                     return req.session['hmpo-wizard-common']['passport-before'] === false &&
-                        req.session['hmpo-wizard-common']['parents-married'] === 'Yes' ||
-                        (req.session['hmpo-wizard-common']['parent1-passport-number'] !== '' &&
-                            req.session['hmpo-wizard-common']['parent2-passport-number'] !== '')
+                        (req.session['hmpo-wizard-common']['parent1-uk-passport'] === 'Yes' && req.session['hmpo-wizard-common']['parents-married'] === 'Yes') ||
+                        (req.session['hmpo-wizard-common']['parent1-uk-passport'] === 'Yes' && req.session['hmpo-wizard-common']['parent2-uk-passport'] === 'Yes')
                 }
             }
         ]
