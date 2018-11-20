@@ -145,19 +145,29 @@ module.exports = {
         ],
         next: '/grandparents-intro',
         forks: [{
-            target: '/home-address-manual-prototype',
-            condition: function (req, res) { // If they are Naturalisated/Registered OR Born Before 01/01/1983 OR Passport issued Before 01/01/1994 (Old blue) Hidden FTA
-                return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == true ||
-                    req.session['hmpo-wizard-common']['born-before-1983'] == true ||
-                    req.session['hmpo-wizard-common']['old-blue'] == true ||
-                    req.session['hmpo-wizard-common']['passport-before'] == true;
+                target: '/home-address-manual-prototype',
+                condition: function (req, res) { // If they are Naturalisated/Registered OR Born Before 01/01/1983 OR Passport issued Before 01/01/1994 (Old blue) Hidden FTA
+                    return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == true ||
+                        req.session['hmpo-wizard-common']['born-before-1983'] == true ||
+                        req.session['hmpo-wizard-common']['old-blue'] == true ||
+                        req.session['hmpo-wizard-common']['passport-before'] == true;
+                }
+            }, {
+                target: '/home-address-manual-prototype',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
+                }
+            },
+            {
+                target: '/home-address-manual-prototype',
+                condition: function (req, res) { // No grand parents detail required if both parents passport details provided
+                    return req.session['hmpo-wizard-common']['passport-before'] === false &&
+                        req.session['hmpo-wizard-common']['parents-married'] === 'Yes' ||
+                        (req.session['hmpo-wizard-common']['parent1-passport-number'] !== '' &&
+                            req.session['hmpo-wizard-common']['parent2-passport-number'] !== '')
+                }
             }
-        }, {
-            target: '/home-address-manual-prototype',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
-            }
-        }]
+        ]
     },
     '/grandparents-intro': {
         next: '/parent-1-grandparents'

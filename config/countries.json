@@ -1,4 +1,12 @@
 [{
+    "countryCode": "GB",
+    "displayName": "United Kingdom",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "44",
+        "ndd": "0"
+    }
+}, {
     "countryCode": "AF",
     "displayName": "Afghanistan",
     "diallingDetails": {
@@ -1764,14 +1772,6 @@
     "diallingDetails": {
         "idd": "0",
         "code": "971",
-        "ndd": "0"
-    }
-}, {
-    "countryCode": "GB",
-    "displayName": "United Kingdom",
-    "diallingDetails": {
-        "idd": "0",
-        "code": "44",
         "ndd": "0"
     }
 }, {
