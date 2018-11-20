@@ -157,15 +157,15 @@ module.exports = {
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
                 }
-            },
-            {
-                target: '/home-address-manual-prototype',
-                condition: function (req, res) { // Grandparents details logic
-                    return req.session['hmpo-wizard-common']['passport-before'] === false &&
-                        (req.session['hmpo-wizard-common']['parent1-uk-passport'] === 'Yes' && req.session['hmpo-wizard-common']['parents-married'] === 'Yes') ||
-                        (req.session['hmpo-wizard-common']['parent1-uk-passport'] === 'Yes' && req.session['hmpo-wizard-common']['parent2-uk-passport'] === 'Yes')
-                }
             }
+            // ,{
+            //     target: '/home-address-manual-prototype',
+            //     condition: function (req, res) { // Grandparents details logic
+            //         return req.session['hmpo-wizard-common']['passport-before'] === false &&
+            //             (req.session['hmpo-wizard-common']['parent1-uk-passport'] === 'Yes' && req.session['hmpo-wizard-common']['parents-married'] === 'Yes') ||
+            //             (req.session['hmpo-wizard-common']['parent1-uk-passport'] === 'Yes' && req.session['hmpo-wizard-common']['parent2-uk-passport'] === 'Yes')
+            //     }
+            // }
         ]
     },
     '/grandparents-intro': {
