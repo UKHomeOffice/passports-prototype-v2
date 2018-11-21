@@ -23,6 +23,9 @@ Controller.prototype.get = function (req, res, next) {
 	if (req.query.csigtype) {
 		req.sessionModel.set('csig-type', req.query.csigtype)
 	}
+	if (req.query.group) {
+		req.sessionModel.set('group', req.query.group)
+	}
 	console.log(req.query)
 	Base.prototype.get.call(this, req, res, next);
 
