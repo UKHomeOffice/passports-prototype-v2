@@ -75,6 +75,10 @@
       {% if not values['passport-before'] and values['applicant-age'] <= 11 %}
         <a href="/tracking/user/?status=exceptions&csigtype=child&group=overseas" class="button">Sign in</a>
       {% endif %}
+      {% if values['passport-before'] and values['applicant-age'] <= 11 %}
+        <a href="/tracking/user/?status=exceptions&csigtype=child&group=overseas" class="button">Sign in</a>
+      {% endif %}
+
     {{/nunjucks}}
   {{/form}}
 {{/ hmpo-partials-form}}
