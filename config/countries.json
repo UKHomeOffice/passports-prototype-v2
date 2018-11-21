@@ -1775,6 +1775,14 @@
         "ndd": "0"
     }
 }, {
+    "countryCode": "GB",
+    "displayName": "United Kingdom",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "44",
+        "ndd": "0"
+    }
+}, {
     "countryCode": "UY",
     "displayName": "Uruguay",
     "diallingDetails": {
