@@ -298,7 +298,7 @@ module.exports = {
                     req.session['hmpo-wizard-common']['application-country'] === ''
             }
         }, { // Overseas skip delivery page
-            target: '/who-for',
+            target: '/relationship-applicant',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
                     req.session['hmpo-wizard-common']['application-country'] !== ''
@@ -312,20 +312,20 @@ module.exports = {
         ],
         next: '/passport-special-delivery',
         forks: [{
-                target: '/summary',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['application-country'] !== '' &&
-                        req.session['hmpo-wizard-common']['passport-before'];
-                }
-            },
-            {
-                target: '/who-for',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['application-country'] !== '' &&
-                        req.session['hmpo-wizard-common']['passport-before'] === false;
-                }
+            target: '/who-for',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['application-country'] !== '' &&
+                    req.session['hmpo-wizard-common']['16-or-older'] == true ||
+                    req.session['hmpo-wizard-common']['rising-16'] == true;
             }
-        ]
+        }, {
+            target: '/relationship-applicant',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['application-country'] !== '' &&
+                    req.session['hmpo-wizard-common']['16-or-older'] == false &&
+                    req.session['hmpo-wizard-common']['rising-16'] == false;
+            }
+        }]
     },
     '/passport-special-delivery': {
         // next: '/summary-family-details',
