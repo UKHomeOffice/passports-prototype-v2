@@ -16,7 +16,13 @@
 <h2>Applicant's details</h2>
 <ul class="list list-bullet">
     {{#values.naturalisation-registration-certificate}}<li>naturalisation or registration certificate</li>{{/values.naturalisation-registration-certificate}}
-    {{^values.naturalisation-registration-certificate}}<li>birth or adoption certificate</li>{{/values.naturalisation-registration-certificate}}
+    {{#nunjucks}}
+        {% if not values['passport-before'] and not values['naturalisation-registration-certificate'] %}
+            <li>birth or adoption certificate</li>
+        {% else %}
+            <li>old passport</li>
+        {% endif %}
+    {{/nunjucks}}
     {{#values.old-blue}}<li>UK passport details</li>{{/values.old-blue}}
 </ul>
 
