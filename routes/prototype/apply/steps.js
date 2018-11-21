@@ -294,9 +294,16 @@ module.exports = {
         forks: [{
             target: '/passport-special-delivery',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['applicant-age'] <= 11
+                return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
+                    req.session['hmpo-wizard-common']['application-country'] === ''
             }
-        }],
+        }, { // Overseas skip delivery page
+            target: '/who-for',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
+                    req.session['hmpo-wizard-common']['application-country'] !== ''
+            }
+        }]
     },
     '/sign': {
         fields: [
@@ -307,14 +314,14 @@ module.exports = {
         forks: [{
                 target: '/summary',
                 condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['overseas-service'] &&
+                    return req.session['hmpo-wizard-common']['application-country'] !== '' &&
                         req.session['hmpo-wizard-common']['passport-before'];
                 }
             },
             {
                 target: '/who-for',
                 condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['overseas-service'] &&
+                    return req.session['hmpo-wizard-common']['application-country'] !== '' &&
                         req.session['hmpo-wizard-common']['passport-before'] === false;
                 }
             }
