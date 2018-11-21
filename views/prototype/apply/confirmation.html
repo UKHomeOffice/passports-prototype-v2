@@ -27,7 +27,7 @@
           <h2>2. Get your documents ready</h2>
           <p>We can only receive your documents after your identity has been confirmed. We'll let you know when and where to send them.</p>
 
-          <a href="/tracking/user/?status=exceptions" class="button">Sign in</a>
+          <a href="/tracking/user/?status=exceptions&group=overseas" class="button">Sign in</a>
         {% endif %}
 
         {% if not values['old-blue'] %} <!-- Passport before and its not old blue -->
@@ -70,10 +70,10 @@
         <p>We can only receive your documents after your identity has been confirmed. We'll let you know when and where to send them.</p>
       {% endif %}
       {% if not values['passport-before'] and values['applicant-age'] > 11 %}
-        <a href="/tracking/user/?status=exceptions" class="button">Sign in</a>
+        <a href="/tracking/user/?status=exceptions&group=overseas" class="button">Sign in</a>
       {% endif %}
-      {% if not values['passport-before'] or values['applicant-age'] <= 11 %}
-        <a href="/tracking/user/?status=exceptions&csigtype=child" class="button">Sign in</a>
+      {% if not values['passport-before'] and values['applicant-age'] <= 11 %}
+        <a href="/tracking/user/?status=exceptions&csigtype=child&group=overseas" class="button">Sign in</a>
       {% endif %}
     {{/nunjucks}}
   {{/form}}
