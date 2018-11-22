@@ -7,6 +7,11 @@ module.exports = {
         backLink: './',
         next: '/photo-guide-find-camera',
         forks: [{
+            target: '/upload',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['choose-photo'] == 'upload';
+            }
+        }, {
             target: '/retrieve',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['choose-photo'] == 'code';

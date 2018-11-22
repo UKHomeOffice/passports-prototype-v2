@@ -2,7 +2,7 @@
 
 {{$back}}
     {{#nunjucks}}
-        {% if values['choose-photo'] == 'upload' %}
+        {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
             <a href="upload" class="back-link">Back</a>
         {% elif values['choose-photo'] == 'code' %}
             <a href="retrieve" class="back-link">Back</a>
