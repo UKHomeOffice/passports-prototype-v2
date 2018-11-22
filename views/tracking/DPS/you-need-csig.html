@@ -8,35 +8,41 @@
     {{$form}}
       <header class="update-notice update-notice--grey">
         <h1>You need a countersignature</h1>
-        <p>Your application is on hold. Your appearance has changed since your last passport. </p>
+        <p>Your application is on hold. Your appearance has changed too much since your last passport. </p>
       </header>
 
       <h2>What you need to do</h2>
       <p>We've posted a form to you that includes your recent photo. You need to get someone to sign the form, then post it back to us.</p>
       <p>To keep your appointment, it's important to do this as soon as you can.</p>
-      
+
       <h2>Your collection appointment</h2>
 
-      <div class="panel panel-border-narrow">
-        <p><strong>Tuesday 30 May 2018<br></strong>at <strong>1:00pm</strong></p>
-      </div>
- 
+      <p><strong>Tuesday 30 May 2018<br></strong>at <strong>1:00pm</strong></p>
+
       <p>London HM Passport Office<br>
         Globe House<br>
         89 Eccleston Square<br>
         London<br>
         SW1 1PN</p>
 
-      <p>You must go in person. If you're unable to, someone else can go on your behalf.</p>
-      <p>If you need to change your collection appointment, <a href="/">contact us</a>. Your new appointment details will be sent to you by email.</p>
-      
+      <p>Follow signs to the main reception and tell staff at the check-in desk you've arrived. Don't go to the collections desk.</p>
+      <p>If you can't go to your collection appointment, <a href="/">contact us</a>. Your new appointment details will be sent to you by email.</p>
+
       <h2>What you need to bring</h2>
       <p>You must bring your old passport with you.</p>
+
+      <p>If someone is collecting your new passport for you, they need to bring:
+        <ul class="list list-bullet">
+          <li>your old passport
+          <li>a signed and dated letter from you, confirming their full name and giving them permission to collect your passport</li>
+          <li>proof of their identity, for example a driving licence or passport</li>
+        </ul>
+      </p>
 
       <div class="panel-important" style="margin:-10px 0 10px 0;">
         <p>Your old passport will be cancelled on the day of your collection appointment. You won't be able to use it.</p>
       </div>
-      {{> partials-csig-sidebar-no-docs}}
+      {{> partials-csig-sidebar}}
       <hr>
       <h2>Application history</h2>
       <article>
@@ -80,4 +86,3 @@
 {{/content}}
 
 {{/ layout-csig}}
-
