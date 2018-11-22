@@ -5,8 +5,11 @@ module.exports = {
             className: 'visuallyhidden'
         },
         options: [{
+            value: 'take',
+            label: 'I’ll take a digital photo – show me how'
+        }, {
             value: 'upload',
-            label: 'I’ll take or upload a digital photo'
+            label: 'I have a digital photo – upload it now'
         }, {
             value: 'code',
             label: 'I have a code to enter',
