@@ -117,8 +117,13 @@
         <div class="photo-preview-inner">
             <h2 class="heading-medium">Your photo</h2>
             <div class="photo">
-                <img src="/public/images/thumbnail.jpeg" alt="Your photo" title="Your photo">
                 {{#nunjucks}}
+                    {% if values['applicant-age'] <= 11 %}
+                        <img src="/public/images/thumbnail-child.jpg" alt="Your photo" title="Your photo" width="150">
+                    {% else %}
+                        <img src="/public/images/thumbnail.jpeg" alt="Your photo" title="Your photo" width="150">
+                    {% endif %}
+
                     {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
                         {# Show nothing #}
                     {% elif values['choose-photo'] == 'code' %}
