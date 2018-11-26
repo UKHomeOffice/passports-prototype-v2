@@ -405,11 +405,32 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [{
-      value: true,
+      value: 'British Citizen',
       label: 'British Citizen'
     }, {
-      value: false,
+      value: 'British National Overseas',
+      label: 'British National Overseas'
+    }, {
+      value: 'Other',
       label: 'Other'
+    }],
+    // formatter: ['boolean'],
+    validate: [
+      'required'
+    ],
+    // className: 'inline'
+  },
+  'change-nationality': {
+    legend: {
+      value: 'Are you changing your nationality?',
+      className: 'visuallyhidden'
+    },
+    options: [{
+      value: true,
+      label: 'Yes'
+    }, {
+      value: false,
+      label: 'No'
     }],
     formatter: ['boolean'],
     validate: [

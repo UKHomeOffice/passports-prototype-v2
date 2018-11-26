@@ -114,7 +114,6 @@ module.exports = {
         }]
     },
     '/dual-national': {
-        backLink: './passport-damaged',
         fields: ['dual-nationality'],
         next: '/summary',
         forks: [{
@@ -140,18 +139,31 @@ module.exports = {
         ]
     },
     '/british-citizen': {
-        backLink: './dual-national',
         fields: ['british-citizen'],
+        next: '/overseas-service',
+        forks: [{
+            target: '/british-national-overseas',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['british-citizen'] == 'British National Overseas'
+            }
+        }, {
+            target: '/../overseas/overseas-british',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['british-citizen'] == 'Other'
+            }
+        }]
+    },
+    '/british-national-overseas': {
+        fields: ['change-nationality'],
         next: '/overseas-service',
         forks: [{
             target: '/../overseas/overseas-british',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['british-citizen'] == false
+                return req.session['hmpo-wizard-common']['change-nationality'] == true
             }
         }]
     },
     '/overseas-service': {
-        backLink: './british-citizen',
         fields: ['overseas-service'],
         next: '/summary',
         forks: [{
