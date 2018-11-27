@@ -104,6 +104,9 @@ module.exports = {
     }]
   },
   '/confirm-your-identity': {
+    next: '/select-overseas-method',
+  },
+  '/select-overseas-method':{
     next: '/who-can',
   },
   '/paper-application-confirmed': {
