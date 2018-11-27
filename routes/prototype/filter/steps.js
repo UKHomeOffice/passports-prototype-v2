@@ -131,12 +131,12 @@ module.exports = {
                         req.session['hmpo-wizard-common']['passport-before'] === false
                 }
             },
-            {
-                target: '/../overseas/overseas-british',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['dual-nationality'] == true
-                }
-            }
+            // {
+            //     target: '/../overseas/overseas-british',
+            //     condition: function (req, res) {
+            //         return req.session['hmpo-wizard-common']['dual-nationality'] == true
+            //     }
+            // }
         ]
     },
     '/british-citizen': {

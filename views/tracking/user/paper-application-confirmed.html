@@ -12,7 +12,6 @@
         <h1>Send the form and your documents</h1>
       </header>
 
-
         <h2>What you need to do</h2>
 
         <p>Before we can work on your application, you need to:</p>
@@ -23,9 +22,9 @@
           <div class="attachment-thumb">
             {{#nunjucks}}
               {% if values['csig-type'] == "child" %}
-                <a aria-hidden="true" class="thumbnail" href="/public/images/pdf/confirm-id-child.pdf"><img alt="" src="/public/images/pdf/csig-child-form-thumbnail.png"></a>
+                <a aria-hidden="true" class="thumbnail" href="/public/images/pdf/confirm-id-child.pdf" target="_blank"><img alt="" src="/public/images/pdf/csig-child-form-thumbnail.png"></a>
               {% else %}
-                <a aria-hidden="true" class="thumbnail" href="/public/images/pdf/confirm-id-adult.pdf"><img alt="" src="/public/images/pdf/csig-child-form-thumbnail.png"></a>
+                <a aria-hidden="true" class="thumbnail" href="/public/images/pdf/confirm-id-adult.pdf" target="_blank"><img alt="" src="/public/images/pdf/csig-child-form-thumbnail.png"></a>
               {% endif %}
             {{/nunjucks}}
             
@@ -33,9 +32,9 @@
           <div class="attachment-details">
             {{#nunjucks}}
               {% if values['csig-type'] == "child" %}
-                <h2 class="title"><a aria-describedby="attachment-2771744-accessibility-help" href="/public/images/pdf/confirm-id-child.pdf">Download the form</a></h2>
+                <h2 class="title"><a aria-describedby="attachment-2771744-accessibility-help" target="_blank" href="/public/images/pdf/confirm-id-child.pdf">Download the form</a></h2>
               {% else %}
-                <h2 class="title"><a aria-describedby="attachment-2771744-accessibility-help" href="/public/images/pdf/confirm-id-adult.pdf">Download the form</a></h2>
+                <h2 class="title"><a aria-describedby="attachment-2771744-accessibility-help" target="_blank" href="/public/images/pdf/confirm-id-adult.pdf">Download the form</a></h2>
               {% endif %}
             {{/nunjucks}}
             

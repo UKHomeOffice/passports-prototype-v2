@@ -23,7 +23,7 @@
 
           <p>They must have known you personally for at least 2 years, for example as a friend, neighbour or colleague.</p>
           {{#nunjucks}}
-            {% if values['csig-type'] =="overseas" %}
+            {% if values['group'] =="overseas" %}
               <div class="panel panel-border-narrow">
                 <p>If they don't live in the UK or have a current UK passport, you need to ask them to <a href="paper-application-select">use a paper form</a>.</p>
               </div>
@@ -37,8 +37,12 @@
             {% endif %}
           {{/nunjucks}}
           <h2>Who can't do this</h2>
-
-          <p>You can't ask anyone who is related to you, in a relationship with or living at the same address as you.</p>
+          <p>You can't ask someone to confirm your identity if you’re:</p>
+          <ul class="list-bullet" style="margin-left:32px;">
+            <li>related to them by birth or marriage</li>
+            <li>in a relationship with or live at the same address as them</li>
+          </ul>
+          
           <p>They can't work at HM Passport Office or some areas of UK Visas and Immigration.</p>
 
 
