@@ -57,7 +57,7 @@ module.exports = {
     },
     '/photo-booth-shop': {},
     '/upload': {
-        controller: require('../../../controllers/check-query-string'),
+        controller: require('../../../controllers/check-photo-file-name'),
         // backLink: './choose-photo-method',
         next: '/processing-or-retrieving-image',
         forks: [{
@@ -136,8 +136,8 @@ module.exports = {
         // backLink: './choose-photo-method',
         next: '/processing-or-retrieving-image'
     },
-    '/fetch-result': {
-        controller: require('../../../controllers/fetch-result')
+    '/fetch-photo-result': {
+        controller: require('../../../controllers/fetch-photo-result')
     },
     '/check-and-submit-passed-photo': {
         next: '/../apply',
