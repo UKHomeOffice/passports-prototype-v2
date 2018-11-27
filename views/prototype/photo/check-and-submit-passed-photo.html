@@ -11,11 +11,11 @@
 {{/back}}
 
 {{$pageTitle}}
-    Check your photo and submit
+    Check your photo
 {{/pageTitle}}
 
 {{$header}}
-    <h1>Check your photo and submit</h1>
+    <h1>Check your photo</h1>
 {{/header}}
 
 {{$content}}
@@ -23,28 +23,23 @@
 {{< hmpo-partials-form}}
 {{$form}}
 
-<p>Your photo has passed the automated checks. We still need to check it manually
-    and may ask you for another photo if something isn’t right.
-</p>
-<p>Check your photo meets all the requirements in the following 3 categories:</p>
-
 <ol class="list-number">
+    <li class="list-item-bold">Background and lighting
+        <p>Your photo must have:</p>
+        <ul class="list-bullet">
+            <li>a plain light-coloured background - without texture or pattern</li>
+            <li>balanced light - no shadows on your face or behind you</li>
+            <li>no objects behind you</li>
+        </ul>
+    </li>
     <li class="list-item-bold">Your appearance
         <p>Make sure:</p>
         <ul class="list-bullet">
             <li>the photo is a good likeness taken in the last month</li>
-            <li>your whole face is visible</li>
-            <li>you have a plain or neutral expression</li>
-            <li>there are no reflections or glare (if you wear glasses)</li>
+            <li>your whole face is visible with your eyes open</li>
+            <li>you have a plain expression - no smile and mouth closed</li>
+            <li>there are no reflections or glare (if you have to wear glasses)</li>
             <li>you’re not wearing headwear (unless for religious or medical reasons)</li>
-        </ul>
-    </li>
-    <li class="list-item-bold">Photo set up
-        <p>Your photo must:</p>
-        <ul class="list-bullet">
-            <li>have no other people or objects in it</li>
-            <li>be taken against a plain, light coloured background</li>
-            <li>have no shadows on your face or behind you</li>
         </ul>
     </li>
     <li class="list-item-bold">Photo quality and format
@@ -57,16 +52,9 @@
     </li>
 </ol>
 
-{{#nunjucks}}
-    {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
-        <div class="panel panel-border-wide alert-default">
-            If you submit a photo that doesn’t meet these rules, we’ll ask you for a different one. This may delay your
-            application.
+        <div class="panel panel-border-wide">
+            <p>If your photo doesn't meet the rules you may have problems with your application or when you travel.</p>
         </div>
-
-        {# <h2>Do you want to submit this photo?</h2>
-        {{#radio-group}}submit-photo{{/radio-group}}
-        {{#input-submit}}{{/input-submit}} #}
 
         <h2>Do you want to submit this photo?</h2>
         <div id="submit-photo-group" class="form-group">
@@ -77,7 +65,7 @@
 
                 <label class="block-label selected" for="submit-photo-true">
                     <input type="radio" name="submit-photo" id="submit-photo-true" value="true" required="true">
-                    Yes, this photo meets the rules
+                    Yes, I want to submit it
                 </label>
 
                 <label class="block-label" for="submit-photo-false">
@@ -90,21 +78,6 @@
         <div class="form-group">
             <input type="submit" value="Continue" class="button">
         </div>
-
-    {% elif values['choose-photo'] == 'code' %}
-        <p><a href="choose-photo-method">Get a new photo</a> if you’re unsure.</p>
-
-        {# {{#input-submit}}submit{{/input-submit}} #}
-
-        <div class="form-group">
-            <input type="submit" value="Submit" class="button">
-        </div>
-    {% endif %}
-{{/nunjucks}}
-
-<div class="panel panel-border-wide">
-    <p>If we have to ask for a different photo your application may be delayed.</p>
-</div>
 
 {{/form}}
 {{/ hmpo-partials-form}}
