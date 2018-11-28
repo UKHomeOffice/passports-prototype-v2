@@ -414,46 +414,9 @@ module.exports = {
       value: 'Other',
       label: 'Other'
     }],
-    // formatter: ['boolean'],
     validate: [
       'required'
     ],
-    // className: 'inline'
-  },
-  'change-nationality': {
-    legend: {
-      value: 'Are you changing your nationality?',
-      className: 'visuallyhidden'
-    },
-    options: [{
-      value: true,
-      label: 'Yes'
-    }, {
-      value: false,
-      label: 'No'
-    }],
-    formatter: ['boolean'],
-    validate: [
-      'required'
-    ],
-    className: 'inline'
-  },
-  'overseas-service': {
-    legend: {
-      value: 'Do you want to try the new service?',
-      className: 'visuallyhidden'
-    },
-    options: [{
-      value: true,
-      label: 'Yes, I’d like to try the new service'
-    }, {
-      value: false,
-      label: 'No, I’d prefer not to'
-    }],
-    formatter: ['boolean'],
-    validate: [
-      'required'
-    ]
   },
   'uncancelled': {
     legend: {
