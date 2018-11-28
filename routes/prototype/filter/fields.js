@@ -405,34 +405,18 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [{
-      value: true,
+      value: 'British Citizen',
       label: 'British Citizen'
     }, {
-      value: false,
+      value: 'British National Overseas',
+      label: 'British National Overseas'
+    }, {
+      value: 'Other',
       label: 'Other'
     }],
-    formatter: ['boolean'],
     validate: [
       'required'
     ],
-    className: 'inline'
-  },
-  'overseas-service': {
-    legend: {
-      value: 'Do you want to try the new service?',
-      className: 'visuallyhidden'
-    },
-    options: [{
-      value: true,
-      label: 'Yes, I’d like to try the new service'
-    }, {
-      value: false,
-      label: 'No, I’d prefer not to'
-    }],
-    formatter: ['boolean'],
-    validate: [
-      'required'
-    ]
   },
   'uncancelled': {
     legend: {

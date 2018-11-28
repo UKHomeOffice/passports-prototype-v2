@@ -114,55 +114,27 @@ module.exports = {
         }]
     },
     '/dual-national': {
-        backLink: './passport-damaged',
         fields: ['dual-nationality'],
         next: '/summary',
         forks: [{
-                target: '/british-citizen',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['application-country'] !== '' &&
-                        req.session['hmpo-wizard-common']['passport-before']
-                }
-            },
-            {
-                target: '/overseas-service',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['application-country'] !== '' &&
-                        req.session['hmpo-wizard-common']['passport-before'] === false
-                }
-            },
-            // {
-            //     target: '/../overseas/overseas-british',
-            //     condition: function (req, res) {
-            //         return req.session['hmpo-wizard-common']['dual-nationality'] == true
-            //     }
-            // }
-        ]
-    },
-    '/british-citizen': {
-        backLink: './dual-national',
-        fields: ['british-citizen'],
-        next: '/overseas-service',
-        forks: [{
-            target: '/../overseas/overseas-british',
+            target: '/british-citizen',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['british-citizen'] == false
+                return req.session['hmpo-wizard-common']['application-country'] !== '' &&
+                    req.session['hmpo-wizard-common']['passport-before']
             }
         }]
     },
-    '/overseas-service': {
-        backLink: './british-citizen',
-        fields: ['overseas-service'],
+    '/british-citizen': {
+        fields: ['british-citizen'],
         next: '/summary',
         forks: [{
             target: '/../overseas/overseas-british',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['overseas-service'] == false
+                return req.session['hmpo-wizard-common']['british-citizen'] == 'Other'
             }
         }]
     },
     '/summary': {
-        backLink: './dual-national',
         next: '/../intro'
     }
 };
