@@ -8,7 +8,7 @@
 <div class="column-full">
   <div class="flash-card">
     <header>
-      <h1>Select how to confirm your identity</h1>
+      <h1>Ask someone to confirm your identity</h1>
     </header>
   <style>
     table {margin-bottom: 30px}
@@ -22,8 +22,9 @@
       border-bottom: 0;
     }
   </style>
-  <!-- <div class="grid-row">
+  <div class="grid-row">
     <div class="column-two-thirds">
+    <h2>Who can do this</h2>
     <p>You need to ask someone who:</p>
     <ul class="list-bullet">
       <li>has known you personally for at least 2 years, for example as a friend, neighbour or colleague.</li>
@@ -31,105 +32,82 @@
     </ul>
     <h2>Who can't do this</h2>
           <p>You can't ask someone to confirm your identity if you’re:</p>
-          <ul class="list-bullet" style="margin-left:32px;">
+          <ul class="list-bullet">
             <li>related to them by birth or marriage</li>
             <li>in a relationship with or live at the same address as them</li>
           </ul>
           
           <p>They can't work at HM Passport Office or some areas of UK Visas and Immigration.</p>
     </div>
-  </div> -->
-  <div class="grid-row">
-    <div class="column-two-thirds">
-        <p>If you are applying from outside the UK, you need to choose how your identity is confirmed.</p>
-    </div>
   </div>
   <div class="grid-row">
+      <div class="column-full">
+        <h2>Choose how they confirm your identity</h2>
+        <!-- <p>How they confirm your identity depends on where they live and<br>what type of passport they have.</p> -->
        
-      <div class="column-half">
-        
-        <h2>Online</h2>
-        <p>You need to ask someone who:</p>
-        <ul class="list-bullet">
-            <li>has a current UK Passport</li>
-            <li>lives in the UK</li>
-            <br><br>
-        </ul>
-          <!-- <table>
-            <tr>
-                <td>Confirm your identity online</td>
-
-              </tr>
-            <tr>
-              <td>Current UK Passport<br><br><br></td>
-
-            </tr>
-            <tr>
-              <td>lives in UK</td>
-
-            </tr>
-             <tr>
-              <td class="footer"></td>
-            </tr>
-          </table> -->
-          <a class="button" href="who-can">Confirm identity online</a>
-        </div>
-        <div class="column-half">
-            <h2>Paper</h2>
-            <p>You need to ask someone who:</p>
-            <ul class="list-bullet">
-                <li>has a current UK, Irish or other EU, US or Commonwealth passport (in order of preference).</li>
-                <li>lives outside or in the UK</li>
-                
-            </ul>
-          <!-- <table>
-            <tr>
-                <td>Download form</td>
-            </tr>
-            <tr>
-              <td>Current UK, Irish or other EU, US or Commonwealth passport (in order of preference).</td>
-            </tr>
-            <tr>
-
-              <td>lives abroad or in the UK</td>
-            </tr>
-          </table> -->
-          <a class="button" href="paper-application-select">Confirm using a form</a>
-        </div>
-          <!-- <h2>Who can do this</h2>
-          <p>You need to ask someone who:</p>
-              <ul class="list-bullet" style="margin-left:32px;">
-                <li>is 18 or older</li>
-                <li>and lives in the UK</li>
-                <li>and has a current UK passport</li>
-                <li>and works in or is retired from a <a href="/guidance/who-can-confirm" target="_blank">recognised profession</a></li>
+        <!-- <div class="grid-row">
+            <div class="column-half">
+              <ul class="list-table">
+                <li><h3>Online</h3></li>
+                <li>Current UK Passport<br><br></li>
+                <li>lives in the UK</li>
               </ul>
-
-          <p>They must have known you personally for at least 2 years, for example as a friend, neighbour or colleague.</p>
-          {{#nunjucks}}
-            {% if values['group'] =="overseas" %}
-              <div class="panel panel-border-narrow">
-                <p>If they don't live in the UK or have a current UK passport, you need to ask them to <a href="paper-application-select">use a paper form</a>.</p>
-              </div>
-            {% else %}
-              <details>
-                <summary><span class="summary">If they can't do this online</span></summary>
-                <div class="panel panel-border-narrow">
-                <p>You need to ask them to <a href="paper-application-select">use a paper form</a>.</p>
-                </div>
-              </details>
-            {% endif %}
-          {{/nunjucks}}
-          <h2>Who can't do this</h2>
-          <p>You can't ask someone to confirm your identity if you’re:</p>
-          <ul class="list-bullet" style="margin-left:32px;">
-            <li>related to them by birth or marriage</li>
-            <li>in a relationship with or live at the same address as them</li>
-          </ul>
-          
-          <p>They can't work at HM Passport Office or some areas of UK Visas and Immigration.</p> -->
-
-
+              <a href="" class="button">Continue online</a>
+            </div>
+            <div class="column-half ">
+              <ul class="list-table">
+                  <li><h3>Paper</h3></li>
+                  <li>Current UK, Irish or other EU, US or Commonwealth passport</li>
+                  <li>lives in the UK or overseas</li>
+              </ul>
+              <a href="" class="button">Download a form</a>
+            </div>
+        </div> -->
+        <!-- <br>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col"></th>
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col">Online</th>
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col">Paper form</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="row">Passport type</th>
+              <td class="govuk-table__cell govuk-table__cell--numeric">Current UK Passport</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">Current UK, Irish or other EU, US or Commonwealth passport</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="row">Location</th>
+              <td class="govuk-table__cell govuk-table__cell--numeric">lives in the UK</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">lives in the UK or overseas</td>
+            </tr>
+            
+          </tbody>
+        </table> -->
+        <div class="grid-row"> 
+            <div class="column-half">
+              <h3>Online</h3>
+              <p>Choose to do this online if they:</p>
+              <ul class="list-bullet">
+                <li>live in the UK</li>
+                <li>and have a current UK passport</li>
+                <li>and are 18 or older</li>
+              </ul>
+              <a href="how-to" class="button">Continue online</a>
+            </div>
+            <div class="column-half ">
+                <h3 >Paper form</h3>
+                <p>Download a paper form if they:</p>
+              <ul class="list-bullet">
+                  <li>live in or outside the UK</li>
+                  <li>and have a current UK, Irish or other EU, US or Commonwealth passport</li>
+                  
+              </ul>
+              <a href="paper-application-select" class="button">Download a form</a>
+            </div>
+        </div>
       </div>
     </div>
   </div>
@@ -140,3 +118,4 @@
 {{/main-content}}
 
 {{/ layout-csig}}
+
