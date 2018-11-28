@@ -1,6 +1,7 @@
 // routes
 app.use(require('./routes/start'));
 app.use(require('./routes/guidance'));
+app.use(require('./routes/lab-photo-result-scenarios'));
 
 // DCS user journeys
 app.use('/prototype/overseas', require('./routes/prototype/overseas'));
