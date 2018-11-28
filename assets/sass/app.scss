@@ -26,6 +26,27 @@
 
 // and this junk below.............
 
+.flex-container {
+    display: flex;
+    flex-flow: column;
+    > div {
+    padding-bottom: 20px; 
+    display: flex;
+    flex-flow: column nowrap;
+    }
+    .button {
+        margin-top:auto;
+        text-align: center;
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+        width: inherit;
+        min-width: 240px;
+    }
+    @media (min-width: 769px) {
+        flex-flow: row;
+    }
+}
+
 .attachment {
     position: relative;
     padding: 0 0 0 129px;
