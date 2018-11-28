@@ -22,20 +22,17 @@
               </ul>
 
           <p>They must have known you personally for at least 2 years, for example as a friend, neighbour or colleague.</p>
-          {{#nunjucks}}
-            {% if values['group'] =="overseas" %}
-              <div class="panel panel-border-narrow">
-                <p>If they don't live in the UK or have a current UK passport, you need to ask them to <a href="paper-application-select">use a paper form</a>.</p>
-              </div>
-            {% else %}
+         
+
               <details>
                 <summary><span class="summary">If they can't do this online</span></summary>
                 <div class="panel panel-border-narrow">
-                <p>You need to ask them to <a href="paper-application-select">use a paper form</a>.</p>
+                
+                <p>You need to ask them to <a href="paper-application-select">use a paper form</a>. The person needs a current UK or Irish passport.</p>
+  
                 </div>
               </details>
-            {% endif %}
-          {{/nunjucks}}
+       
           <h2>Who can't do this</h2>
           <p>You can't ask someone to confirm your identity if you’re:</p>
           <ul class="list-bullet" style="margin-left:32px;">

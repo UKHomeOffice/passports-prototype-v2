@@ -104,10 +104,16 @@ module.exports = {
     }]
   },
   '/confirm-your-identity': {
-    next: '/select-overseas-method',
+    next: '/who-can',
+    forks: [{
+      target: '/select-overseas-method',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['group'] == 'overseas';
+      }
+    }]
   },
   '/select-overseas-method':{
-    next: '/who-can',
+    next: '/how-to',
   },
   '/paper-application-confirmed': {
     next: '../csig/'

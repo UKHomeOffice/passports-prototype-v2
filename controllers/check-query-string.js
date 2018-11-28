@@ -16,6 +16,8 @@ Controller.prototype.get = function (req, res, next) {
 	req.sessionModel.set('tracking-status', '');
 	req.sessionModel.set('csig-type', '');
 	req.sessionModel.set('status', '');
+	req.sessionModel.set('group', '');
+	
 	if (req.query.status) {
 		req.sessionModel.set('tracking-status', req.query.status)
 		req.sessionModel.set('status', req.query.status)
