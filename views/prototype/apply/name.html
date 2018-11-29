@@ -13,17 +13,63 @@
 
 <fieldset class="inline">
     <h2>Title</h2>
-    {{#radio-group}}title{{/radio-group}}
+    <!-- {{#radio-group}}title{{/radio-group}} -->
+    <div id="title-group" class="form-group">
+        <fieldset role="radiogroup" aria-required="true">
+            <legend>
+                <span class="visuallyhidden">Your title</span>
+            </legend>
+
+            {{#nunjucks}}
+                {% if values['applicant-age'] >= 16 or values['rising-16'] == true %}
+                    <label class="block-label" for="title-Mr">
+                        <input type="radio" name="title" id="title-Mr" value="Mr" required="true">
+                        Mr
+                    </label>
+                    <label class="block-label" for="title-Mrs">
+                        <input type="radio" name="title" id="title-Mrs" value="Mrs" required="true">
+                        Mrs
+                    </label>
+                    <label class="block-label" for="title-Miss">
+                        <input type="radio" name="title" id="title-Miss" value="Miss" required="true">
+                        Miss
+                    </label>
+                    <label class="block-label" for="title-Ms">
+                        <input type="radio" name="title" id="title-Ms" value="Ms" required="true">
+                        Ms
+                    </label>
+
+                {% else %}
+                    <label class="block-label" for="title-Master">
+                        <input type="radio" name="title" id="title-Master" value="Master" required="true">
+                        Master
+                    </label>
+                    <label class="block-label" for="title-Miss">
+                        <input type="radio" name="title" id="title-Miss" value="Miss" required="true">
+                        Miss
+                    </label>
+
+                {% endif %}
+
+                <label class="block-label selected" for="title-Other">
+                    <input type="radio" name="title" id="title-Other" value="Other" required="true" data-toggle="other-titles"
+                        aria-controls="other-titles" aria-expanded="true">
+                    Other
+                </label>
+
+            {{/nunjucks}}
+        </fieldset>
+    </div>
     <div id="other-titles" class="reveal js-hidden">
         <div class="panel panel-border-narrow">
             <div id="other-title-group" class="form-group">
                 <label for="other-title" class="form-label-bold">
                     Other title
                 </label>
-                <input type="text" name="other-title" id="other-title" class="form-control" aria-required="true" maxlength="20">
-                <p>You'll need to send proof of a new professional or honorary title if you want it added to your passport.</p>
-                </p>
+                <input type="text" name="other-title" id="other-title" class="form-control" aria-required="true" maxlength="20"
+                    aria-describedby="other-title-hint">
             </div>
+            <p>You’ll need to send proof of a new professional or honorary title if you want it added to your passport.</p>
         </div>
     </div>
 </fieldset>
