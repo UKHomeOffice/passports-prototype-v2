@@ -8,7 +8,7 @@
     <img src="../../public/images/progress.gif" style="width:50px" class="animated-progress" />
 
     {{#nunjucks}}
-        {% if values['choose-photo'] == 'upload' %}
+        {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
             <h3>Processing image</h3>
         {% elif values['choose-photo'] == 'code' %}
             <h3>Retrieving image</h3>

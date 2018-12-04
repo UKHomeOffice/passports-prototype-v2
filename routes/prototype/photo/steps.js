@@ -7,6 +7,11 @@ module.exports = {
         backLink: './',
         next: '/photo-guide-find-camera',
         forks: [{
+            target: '/upload',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['choose-photo'] == 'upload';
+            }
+        }, {
             target: '/retrieve',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['choose-photo'] == 'code';
@@ -140,6 +145,7 @@ module.exports = {
         controller: require('../../../controllers/fetch-photo-result')
     },
     '/check-and-submit-passed-photo': {
+        fields: ['submit-photo'],
         next: '/../apply',
         forks: [{
             target: '/../apply',
@@ -150,6 +156,11 @@ module.exports = {
             target: '/../apply/name',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
+            }
+        }, {
+            target: '/../photo',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['submit-photo'] == false;
             }
         }]
     },
