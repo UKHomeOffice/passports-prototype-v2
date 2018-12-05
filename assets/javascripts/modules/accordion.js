@@ -152,6 +152,7 @@ AccordionSection.prototype.setExpanded = function (expanded) {
 }
 
 if (
+  /photo-guidance/.test(window.location.pathname) ||
   /docs-fta/.test(window.location.pathname) ||
   /docs-renew/.test(window.location.pathname) ||
   /parents-details/.test(window.location.pathname)||
