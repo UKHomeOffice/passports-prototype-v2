@@ -20,7 +20,7 @@
 
 {{$content}}
 
-{{<hmpo-partials-form}}
+{{< hmpo-partials-form}}
 {{$form}}
 
 <ol class="list-number">
@@ -51,72 +51,36 @@
         </ul>
     </li>
 </ol>
-<br>
 
-<div class="panel panel-border-wide" style="border-color: #2B8CC4;background-color: rgba(43, 140, 196, 0.1);">
-    <p class="list-item-bold">
-        Our automated check suggests </p>
-    <p>
-        <ul class="list-bullet">
-            <li>it looks like your mouth is open</li>
-            <li>we can’t find the outline of your head</li>
-        </ul>
-    </p>
-</div>
-<h2 class="heading-medium">
-    You can use the photo</h2>
-<ul class="list-bullet">
-    <li>if you have a medical or religious reason why it doesn't meet the rules</li>
-    <li>if you think it meets all the rules</li>
-</ul>
-
-<div class="panel panel-border-wide">
-    <p>If your photo doesn't meet the rules you may have problems with your application or when you travel.</p>
-</div>
-
-<h2>Do you want to submit this photo?</h2>
-
-<!-- {{#radio-group}}oix-override{{/radio-group}}
-
-<div id="oix-override" class="reveal js-hidden">
-    <div class="panel panel-border-narrow" style="margin-top:-20px; margin-bottom:20px;">
-        <label for="oix-override-reason" class="form-label">
-            Tell us why you’d like to use this photo:
-        </label>
-        {{#textarea}}oix-override-reason{{/textarea}}
-    </div>
-    <br>
-</div> -->
-
-<div id="oix-override-group" class="form-group">
-    <fieldset role="radiogroup" aria-required="true">
-        <legend>
-            <span class="visuallyhidden">Do you want to use this photo?</span>
-        </legend>
-
-        <label class="block-label selected" for="oix-override-true">
-            <input type="radio" name="oix-override" id="oix-override-true" value="true" required="true" data-toggle="oix-override" aria-controls="oix-override" aria-expanded="true">
-            Yes, I want to submit it
-        </label>
-
-        <div class="panel panel-border-narrow js-hidden" id="oix-override" style="margin-top:10px; margin-bottom:0px;">
-            <label for="oix-override-reason" class="form-label">
-                Explain why you’d like to use this photo
-            </label>
-            <textarea name="oix-override-reason" id="oix-override-reason" class="form-control textarea" aria-required="true" maxlength="250"></textarea>
+        <div class="panel panel-border-wide">
+            <p>If your photo doesn't meet the rules you may have problems with your application or when you travel.</p>
         </div>
 
-        <label class="block-label" for="oix-override-false">
-            <input type="radio" name="oix-override" id="oix-override-false" value="false" required="true">
-            No, I want to get another photo
-        </label>
-    </fieldset>
-</div>
+        <h2>Do you want to submit this photo?</h2>
+        <div id="submit-photo-group" class="form-group">
+            <fieldset role="radiogroup" aria-required="true">
+                <legend>
+                    <span class="visuallyhidden">Do you want to submit this photo?</span>
+                </legend>
 
-{{#input-submit}}{{/input-submit}}
+                <label class="block-label selected" for="submit-photo-true">
+                    <input type="radio" name="submit-photo" id="submit-photo-true" value="true" required="true">
+                    Yes, I want to submit it
+                </label>
+
+                <label class="block-label" for="submit-photo-false">
+                    <input type="radio" name="submit-photo" id="submit-photo-false" value="false" required="true">
+                    No, I want to get a different photo
+                </label>
+            </fieldset>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Continue" class="button">
+        </div>
 
 {{/form}}
-{{/hmpo-partials-form}}
+{{/ hmpo-partials-form}}
 
 {{/content}}
 
@@ -130,13 +94,13 @@
                     {% if values['applicant-age'] <= 11 %}
                         <img src="/public/images/thumbnail-child.jpg" alt="Your photo" title="Your photo" width="150">
                     {% else %}
-                        <img src="/public/images/thumbnail2.jpeg" alt="Your photo" title="Your photo" width="150">
+                        <img src="/public/images/thumbnail.jpeg" alt="Your photo" title="Your photo" width="150">
                     {% endif %}
 
                     {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
                         {# Show nothing #}
                     {% elif values['choose-photo'] == 'code' %}
-                        <p style="font-size:16px; font-weight:bold; color:grey">abc.de/2jdD4hk</p>
+                        <p style="font-size:16px; font-weight:bold; color:grey">abc.de/2AtDAiw</p>
                     {% endif %}
                 {{/nunjucks}}
             </div>
