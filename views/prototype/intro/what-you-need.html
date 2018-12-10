@@ -19,6 +19,8 @@
     {{#nunjucks}}
         {% if not values['passport-before'] and not values['naturalisation-registration-certificate'] %}
             <li>birth or adoption certificate</li>
+        {% elif not values['passport-before'] and values['naturalisation-registration-certificate']%}
+            <!-- show nothing -->
         {% else %}
             <li>old passport</li>
         {% endif %}
