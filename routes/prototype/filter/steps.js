@@ -104,7 +104,7 @@ module.exports = {
     },
     '/passport-damaged': {
         controller: require('../../../controllers/check-old-blue'),
-        fields: ['passport-damaged'],
+        fields: ['passport-damaged', 'damaged-reason'],
         next: '/dual-national', // If they are NOT a UK Hidden FTA
         forks: [{ // If they are a UK Hidden FTA
             target: '/naturalisation-registration-details',

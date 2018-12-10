@@ -52,6 +52,9 @@
         "issue-day": {
             "label": "Day"
         },
+        "damaged-reason": {
+            "label": "How was the passport damaged?"
+        },
         "name": {
             "label": "First and middle names"
         },
@@ -511,6 +514,9 @@
         },
         "lost-stolen": {
             "required": "You must answer this question."
+        },
+        "damaged-reason": {
+            "required": "Explain how the passport was damaged"
         },
         "16-or-older": {
             "required": "You must answer this question"
