@@ -24,5 +24,8 @@ app.get('/lab-photo-result-scenarios/participant-7', function (req, res, next) {
 app.get('/lab-photo-result-scenarios/participant-8', function (req, res, next) {
     res.render('lab-photo-result-scenarios/participant-8');
 });
+app.get('/lab-photo-result-scenarios/participant-error', function (req, res, next) {
+    res.render('lab-photo-result-scenarios/participant-error');
+});
 
 module.exports = app;
