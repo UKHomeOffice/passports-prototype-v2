@@ -8,25 +8,20 @@
         <ul>
           <li><span class="circle circle-step">1</span>
             <h2>Get a digital passport photo</h2>
-            <p style="margin-left:32px;">We'll show you how to get a digital photo.</p>
+            <p style="margin-left:32px;">We'll show you how to get a digital photo that <a href="../../prototype/help/photo-rules">meets the rules</a>.</p>
           </li>
 
           <li><span class="circle circle-step">2</span>
-            <h2>Apply online</h2>
-            <p style="margin-left:32px;">You'll need to check the details in your old passport.</p>
-          </li>
-
-          <li><span class="circle circle-step">3</span>
-            <h2>Pay for your new passport</h2>
+            <h2>Apply and pay online</h2>
             {{#nunjucks}}
-              {% if values['applicant-age'] >= 16 and not values['overseas-service'] %}
+              {% if values['applicant-age'] >= 16 and values['application-country'] === '' %}
                 <p style="margin-left:32px;"> A standard passport costs £75.50.</p>
-              {% elif values['applicant-age'] < 16 and not values['overseas-service'] %}
+              {% elif values['applicant-age'] < 16 and values['application-country'] === '' %}
                 <p style="margin-left:32px;"> A standard passport costs £49.</p>
               <!-- Overseas-->
-              {% elif values['applicant-age'] >= 16 and values['overseas-service'] %}
+              {% elif values['applicant-age'] >= 16 and values['application-country'] !== '' %}
                 <p style="margin-left:32px;"> A standard passport costs £86 plus a £19.86 courier fee.</p>
-              {% elif values['applicant-age'] < 16 and values['overseas-service'] %}
+              {% elif values['applicant-age'] < 16 and values['application-country'] !== '' %}
                 <p style="margin-left:32px;"> A standard passport costs £56 plus a £19.86 courier fee.</p>
               {% endif %}
             {{/nunjucks}}
@@ -34,16 +29,16 @@
 
           {{#nunjucks}}
             {% if values['passport-before'] and values['applicant-age'] <= 11 %} {# 0-11s #}
-            <li><span class="circle circle-step">4</span>
+            <li><span class="circle circle-step">3</span>
               <h2>Ask someone to confirm your identity</h2>
               <p style="margin-left:32px;">They can <a href="../../guidance/confirming-your-identity" target="_blank">confirm your identity online</a> without a printed photo.</p>
             </li>
-            <li><span class="circle circle-step">5</span>
+            <li><span class="circle circle-step">4</span>
               <h2>Send us your old passport</h2>
               <p style="margin-left:32px;">You need to pay the postage to return your old passport.</p>
             </li>
             {% else %}
-            <li><span class="circle circle-step">4</span>
+            <li><span class="circle circle-step">3</span>
               <h2>Send us your old passport</h2>
               <p style="margin-left:32px;">You need to pay the postage to return your old passport.</p>
             </li>
