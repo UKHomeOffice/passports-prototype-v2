@@ -524,6 +524,9 @@
         "contact-csig": {
             "required": "You need to contact this person before we send them an email"
         },
+        "csig-email-confirm": {
+            "required": "Please confirm the person's email"
+        },
         "application-country": {
             "required": "You must answer this question"
         },

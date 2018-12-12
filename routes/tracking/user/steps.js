@@ -129,7 +129,7 @@ module.exports = {
     next: '/give-csig-details',
   },
   '/give-csig-details': {
-      fields: ['csig-email', 'csig-name', 'csig-last-name', 'contact-csig'],
+      fields: ['csig-email', 'csig-email-confirm', 'csig-name', 'csig-last-name', 'contact-csig'],
       next: '/email-sent'
   },
   '/email-sent': {

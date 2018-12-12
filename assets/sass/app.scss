@@ -26,7 +26,7 @@
 
 // and this junk below.............
 
-.flex-container {
+.grid-flex-column {
     display: flex;
     flex-flow: column;
     > div {
@@ -35,7 +35,7 @@
     flex-flow: column nowrap;
     }
     .button {
-        margin-top:auto;
+        margin-top: auto;
         text-align: center;
         padding-left: 2.5em;
         padding-right: 2.5em;

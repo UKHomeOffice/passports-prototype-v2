@@ -27,6 +27,7 @@ var values = {
     "csig-name": "Charlotte",
     "csig-last-name": "Moore",
     "csig-email": "c.moore@test-corp.co.uk",
+    "csig-email-confirm": "c.moore@test-corp.co.uk",
     "town-of-birth": "London",
     "town": "London",
 
