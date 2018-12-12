@@ -76,6 +76,12 @@ module.exports = {
           'required'
         ]
   },
+  'csig-email-confirm': {
+    labelClassName: 'visuallyhidden',
+    validate: [
+        'required'
+      ]
+  },
   'csig-name': {
       labelClassName: 'visuallyhidden',
       validate: [
