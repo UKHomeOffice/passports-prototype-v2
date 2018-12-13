@@ -320,7 +320,6 @@ module.exports = {
       'required'
     ]
   },
-
   'passport-damaged': {
     legend: {
       value: 'Is your passport damaged?',
@@ -328,7 +327,9 @@ module.exports = {
     },
     options: [{
         value: 'Yes',
-        label: 'Yes'
+        label: 'Yes',
+        toggle: 'damaged-reason',
+        child: 'textarea'
       },
       {
         value: 'No',
@@ -338,6 +339,31 @@ module.exports = {
     validate: [
       'required'
     ]
+  },
+  'damaged-reason': {
+    validate: [
+      'required',
+      'alphanumex1',
+      {
+        type: 'maxlength',
+        arguments: 250
+      }
+    ],
+    dependent: {
+      field: 'passport-damaged',
+      value: 'Yes'
+    },
+    attributes: [{
+        attribute: 'spellcheck',
+        value: 'true'
+      },
+      {
+        attribute: 'autocapitalize',
+        value: 'sentences'
+      }
+    ],
+    className: 'textarea',
+    labelClassName: 'form-label'
   },
   'issue-day': {
     labelClassName: 'form-label',
