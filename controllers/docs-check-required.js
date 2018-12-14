@@ -10,12 +10,14 @@ util.inherits(Controller, Base)
 Controller.prototype.get = function successHandler(req, res, callback) {
 
 	if (req.sessionModel.get('passport-before') == false || req.sessionModel.get('old-blue') == true) {
-		return res.redirect('./docs-fta')
-	}
-	else if (req.sessionModel.get('passport-before') == true) {
+		if (req.sessionModel.get('applicant-age') >= 16) {
+			return res.redirect('./docs-fta')
+		} else {
+			return res.redirect('./docs-ftc')
+		}
+	} else if (req.sessionModel.get('passport-before') == true) {
 		return res.redirect('./docs-renew')
-	}
-	else {
+	} else {
 		return
 	}
 }

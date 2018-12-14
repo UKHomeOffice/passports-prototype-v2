@@ -5,9 +5,9 @@ module.exports = {
     '/choose-photo-method': {
         fields: ['choose-photo'],
         backLink: './',
-        next: '/photo-guide-find-camera',
+        next: '/photo-guidance',
         forks: [{
-            target: '/upload',
+            target: '/photo-guidance',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['choose-photo'] == 'upload';
             }
