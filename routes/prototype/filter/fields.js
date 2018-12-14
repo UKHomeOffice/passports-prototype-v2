@@ -183,7 +183,8 @@ module.exports = {
     },
     options: [{
         value: true,
-        label: 'Yes'
+        label: 'Yes',
+        toggle: 'lost-stolen'
       },
       {
         value: false,
@@ -195,6 +196,12 @@ module.exports = {
       'required'
     ],
     className: 'inline'
+  },
+  'lost-reference': {
+    labelClassName: 'form-label',
+    validate: [
+      'required'
+    ]
   },
   'passport-colour': {
     legend: {

@@ -30,16 +30,17 @@ module.exports = {
     '/lost-stolen': {
         backLink: './first-uk',
         fields: [
-            'lost-stolen'
+            'lost-stolen',
+            'lost-reference'
         ],
         next: '/dob',
-        forks: [{
-            target: '/lost',
-            condition: {
-                field: 'lost-stolen',
-                value: true
-            }
-        }]
+        // forks: [{
+        //     target: '/lost',
+        //     condition: {
+        //         field: 'lost-stolen',
+        //         value: true
+        //     }
+        // }]
     },
     '/dob': {
         backLink: './lost-stolen',
