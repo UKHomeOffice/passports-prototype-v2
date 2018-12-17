@@ -159,6 +159,12 @@
         "photo-code": {
             "label": "Code"
         },
+        "oix-override": {
+            "label": "Do you want to submit this photo?"
+        },
+        "oix-override-reason": {
+            "label": "Explain why you’d like to use this photo"
+        },
         "passport-number": {
             "label": "Passport Number"
         },
@@ -523,6 +529,12 @@
         },
         "dual-nationality": {
             "required": "You must answer this question"
+        },
+        "oix-override": {
+            "required": "Do you want to submit this photo?"
+        },
+        "oix-override-reason": {
+            "required": "Explain why you’d like to use this photo"
         },
         "applicant-check": {
             "required": "Is this Susan Smith?"

@@ -14,6 +14,7 @@ var values = {
     "age-day": "12",
     "age-month": "07",
     "age-year": "2010",
+    "oix-override-reason": "I think it looks fine.",
     "national-insurance": "JL123456C",
     "profession": "Thundercat",
     "employer": "HMPO",
@@ -119,12 +120,14 @@ function clicks() {
     $('#passport-damaged-No').click();
     $('#dual-nationality-false').click();
     $('#choose-photo-upload').click();
+    $('#oix-override-true').click();
     $('#plain-expression-Yes').click();
     $('#shadows-face-Yes').click();
     $('#yes').click();
 
     // Renew/Apply flow
-    $('#title-Mr').click();
+    // $('#title-Mr').click();
+    $('#title-Master').click();
     $('#previous-name-false').click();
     $('#gender-M').click();
     $('#born-in-uk-true').click();
