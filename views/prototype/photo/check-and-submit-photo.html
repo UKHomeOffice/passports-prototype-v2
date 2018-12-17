@@ -66,8 +66,16 @@
         Our automated check suggests </p>
     <p>
         <ul class="list-bullet">
-            <li>it looks like your mouth is open</li>
-            <li>we can’t find the outline of your head</li>
+            {{#nunjucks}}
+                {% if values['applicant-age'] <= 5 %}
+                    <li>it looks like your eyes are closed</li>
+                    <li>it looks like you’re not facing the camera</li>
+                    <li>we can’t find the outline of your head</li>
+                {% else %}
+                    <li>it looks like your mouth is open</li>
+                    <li>we can’t find the outline of your head</li>
+                {% endif %}
+            {{/nunjucks}}
         </ul>
     </p>
 </div>
@@ -135,7 +143,9 @@
             <h2 class="heading-medium">Your photo</h2>
             <div class="photo">
                 {{#nunjucks}}
-                    {% if values['applicant-age'] <= 11 %}
+                    {% if values['applicant-age'] <= 5 %}
+                        <img src="/public/images/thumbnail-child-age-0-5-fail.jpg" alt="Your photo" title="Your photo" width="150"> <!-- replace with child-fail.jpg -->
+                    {% elif values['applicant-age'] <= 11 %}
                         <img src="/public/images/thumbnail-child.jpg" alt="Your photo" title="Your photo" width="150">
                     {% else %}
                         <img src="/public/images/thumbnail2.jpeg" alt="Your photo" title="Your photo" width="150">
