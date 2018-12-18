@@ -9,8 +9,16 @@ module.exports = {
         ],
         next: '/name'
     },
+    '/lost-stolen-passport': {
+        backLink: '../photo/final-checks',
+        fields: [
+            // 'expiry-day',
+            // 'expiry-month',
+            // 'expiry-year'
+        ],
+        next: '/name'
+    },
     '/name': {
-        backLink: './',
         fields: [
             'title',
             'name',
