@@ -121,6 +121,13 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         title: 'Expiry date',
         value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
     });
+    if (values['lost-stolen']) {
+        oldPassportFields.push({
+            step: this.getEditStep('lost-reference'),
+            title: 'Lost passport reference',
+            value: values['lost-reference']
+        });
+    };
     if (values['what-damaged']) {
         oldPassportFields.push({
             step: this.getEditStep('what-damaged'),
@@ -165,7 +172,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
 
     // Logic to remove fields from stack
     if (values['naturalisation-registration-certificate'] == false || // NOT naturalised or registered
-        values['old-blue'] == false // Passport issued On or After 01/01/1994 (NOT Old blue) Renewal
+        values['old-blue'] == false || // Passport issued On or After 01/01/1994 (NOT Old blue) Renewal
+        values['lost-stolen'] == true // Passport has been lost/stolen
     ) {
         console.log('DELETE nat/reg fields')
         response.sections.pop({
