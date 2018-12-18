@@ -96,7 +96,13 @@ module.exports = {
             'issue-year',
             'passport-issuing-authority'
         ],
-        next: '/passport-damaged'
+        next: '/passport-damaged',
+        forks: [{ // If their passport is lost/stolen
+            target: '/dual-national',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['lost-stolen'] == true;
+            }
+        }]
         // Issue date = 91 - 03 && Issue auth = Other && Over 16 = Yes
         // Issue date = 91 - 03 && Issue auth = HMPO && Over 16 = Yes
         // Issue date = 94 - 97 && Issue auth = HMPO && Over 16 = Yes

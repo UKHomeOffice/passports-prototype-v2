@@ -1,0 +1,58 @@
+<div class="column-full">
+  <div class="flash-card">
+    <header>
+      <h1>How to apply lost stolen</h1>
+    </header>
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <ul>
+          <li><span class="circle circle-step">1</span>
+            <h2>Get a digital passport photo</h2>
+            <p style="margin-left:32px;">We'll show you how to get a digital photo that <a href="../../prototype/help/photo-rules">meets the rules</a>.</p>
+          </li>
+
+          <li><span class="circle circle-step">2</span>
+            <h2>Apply and pay online</h2>
+            {{#nunjucks}}
+              {% if values['applicant-age'] >= 16 and values['application-country'] === '' %}
+                <p style="margin-left:32px;"> A standard passport costs £75.50.</p>
+              {% elif values['applicant-age'] < 16 and values['application-country'] === '' %}
+                <p style="margin-left:32px;"> A standard passport costs £49.</p>
+              <!-- Overseas-->
+              {% elif values['applicant-age'] >= 16 and values['application-country'] !== '' %}
+                <p style="margin-left:32px;"> A standard passport costs £86 plus a £19.86 courier fee.</p>
+              {% elif values['applicant-age'] < 16 and values['application-country'] !== '' %}
+                <p style="margin-left:32px;"> A standard passport costs £56 plus a £19.86 courier fee.</p>
+              {% endif %}
+            {{/nunjucks}}
+          </li>
+
+          <li>
+            <span class="circle circle-step">3</span>
+            <h2>Ask someone to confirm your identity</h2>
+            <p style="margin-left:32px;">They can <a href="../../guidance/confirming-your-identity" target="_blank">confirm your identity online</a> without a printed photo.</p>
+          </li>
+
+        </ul>
+
+        {{#input-submit}}{{/input-submit}}
+
+        <details>
+          <summary><span class="summary">I need help doing things online</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>You can call the Passport Adviceline for help.</p>
+            <ul>
+              <li>Telephone: 0300 330 0901</li>
+              <li>Textphone: 0300 330 0808</li>
+              <li>Monday to Friday, 8:00am to 8:00pm</li>
+              <li>Weekends and public holidays, 9:00am to 5:30pm</li>
+              <p></p>
+              <li><a href="https://www.gov.uk/call-charges">Find out about call charges</a></li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</div>
