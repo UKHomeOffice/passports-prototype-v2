@@ -16,34 +16,32 @@
             <h1>What you need to do</h1>
             <p>Before we can work on your application, you need to:</p>
 
-            {% if (values['passport-before'] and not values['old-blue']) %}
-                {% if not values['lost-stolen'] %}
-                    {# >=12 Renewals #}
-                    {% if values['applicant-age'] >= 12 %}
-                        {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
-                            <h2> Send us your documents </h2>
-                            <p><a href="./docs-renew?status=confirm-documents" target="_blank">Check what you need to send</a></p>
-                        {% else %}
-                            <h2> Send us your old passport </h2>
-                            <p>Check if you need to send any <a href="./docs-renew?status=confirm-documents" target="_blank">additional documents</a>.</p>
-                        {% endif %}
+            {% if (values['passport-before'] and not values['old-blue']) and not values['lost-stolen'] %}
+                {# >=12 Renewals #}
+                {% if values['applicant-age'] >= 12 %}
+                    {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
+                        <h2> Send us your documents </h2>
+                        <p><a href="./docs-renew?status=confirm-documents" target="_blank">Check what you need to send</a></p>
+                    {% else %}
+                        <h2> Send us your old passport </h2>
+                        <p>Check if you need to send any <a href="./docs-renew?status=confirm-documents" target="_blank">additional documents</a>.</p>
+                    {% endif %}
 
-                        <p>Use a strong envelope that is the right size for your documents. You can use standard post or special delivery.</p>
+                    <p>Use a strong envelope that is the right size for your documents. You can use standard post or special delivery.</p>
 
-                        <p>HM Passport Office<br>
-                            Ref: PEX 319 825 680X<br>
-                            Aragon Court<br>
-                            Northminster Road<br>
-                            Peterborough<br>
-                            PE1 1QG
-                        </p>
+                    <p>HM Passport Office<br>
+                        Ref: PEX 319 825 680X<br>
+                        Aragon Court<br>
+                        Northminster Road<br>
+                        Peterborough<br>
+                        PE1 1QG
+                    </p>
 
-                        <h2>Track your application</h2>
-                        {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
-                            <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking?status=send-us-your-docs">https://www.passport.service.gov.uk/track</a></p>
-                        {% else %}
-                            <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking">https://www.passport.service.gov.uk/track</a></p>
-                        {% endif %}
+                    <h2>Track your application</h2>
+                    {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
+                        <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking?status=send-us-your-docs">https://www.passport.service.gov.uk/track</a></p>
+                    {% else %}
+                        <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking">https://www.passport.service.gov.uk/track</a></p>
                     {% endif %}
                 {% endif %}
 
@@ -71,7 +69,6 @@
                     {% endif %}
                 {% endif %}
             {% endif %}
-
 
             {% if (values['passport-before'] and not values['old-blue']) %}
                 {# >=12 Renewals #}
