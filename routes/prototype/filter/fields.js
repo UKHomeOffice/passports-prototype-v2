@@ -198,7 +198,7 @@ module.exports = {
     className: 'inline'
   },
   'lost-reference': {
-    labelClassName: 'form-label',
+    labelClassName: 'visuallyhidden',
     validate: [
       'required'
     ]
@@ -350,7 +350,6 @@ module.exports = {
   'damaged-reason': {
     validate: [
       'required',
-      'alphanumex1',
       {
         type: 'maxlength',
         arguments: 250

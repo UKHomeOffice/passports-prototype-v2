@@ -31,16 +31,21 @@ module.exports = {
         backLink: './first-uk',
         fields: [
             'lost-stolen',
-            'lost-reference'
         ],
         next: '/dob',
-        // forks: [{
-        //     target: '/lost',
-        //     condition: {
-        //         field: 'lost-stolen',
-        //         value: true
-        //     }
-        // }]
+        forks: [{
+            target: '/lost',
+            condition: {
+                field: 'lost-stolen',
+                value: true
+            }
+        }]
+    },
+    '/lost': {
+        fields: [
+            'lost-reference'
+        ],
+        next: '/dob'
     },
     '/dob': {
         backLink: './lost-stolen',
@@ -86,7 +91,7 @@ module.exports = {
         fields: ['naturalisation-registration-certificate'],
         next: '/dual-national'
     },
-    '/lost': {},
+    
     '/application-method': {},
     '/passport-date-of-issue': {
         backLink: './lost-stolen',

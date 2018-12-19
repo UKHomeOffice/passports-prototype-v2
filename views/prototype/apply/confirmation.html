@@ -20,7 +20,7 @@
     {{#nunjucks}}
       <!-- Renewals  -->
       {% if values['passport-before'] and values['applicant-age'] >= 12 %}
-        {% if values['old-blue'] %} <!-- Passport before and its old blue = FTA -->
+        {% if values['old-blue'] or values['lost-stolen'] %} <!-- Passport before and its old blue = FTA -->
           <h2>1. Ask someone to confirm your identity</h2>
           <p>Sign in to check who can do this and provide their details. You'll need your application reference: PEX 319 825 680X</p>
 
@@ -30,7 +30,7 @@
           <a href="/tracking/user/?status=exceptions" class="button">Sign in</a>
         {% endif %}
 
-        {% if not values['old-blue'] %} <!-- Passport before and its not old blue -->
+        {% if not values['old-blue'] and not values['lost-stolen'] %} <!-- Passport before and its not old blue -->
           {% if values['document-list'] or values['application-for-someone-else'] or values['change-of-name-reason']
               or (values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other') %}
             <h2> Send us your documents </h2>

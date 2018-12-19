@@ -121,7 +121,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         title: 'Expiry date',
         value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
     });
-    if (values['lost-stolen']) {
+    if (values['lost-reference']) {
         oldPassportFields.push({
             step: this.getEditStep('lost-reference'),
             title: 'Lost passport reference',

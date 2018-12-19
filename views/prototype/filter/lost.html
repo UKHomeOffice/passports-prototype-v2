@@ -7,15 +7,23 @@
 {{$content}}
 
 <header>
-  <h1>You need a different service</h1>
+  <h1>What is your lost and stolen reference number?</h1>
 </header>
 
-<p>You must <a href="https://www.gov.uk/report-a-lost-or-stolen-passport/y/in_the_uk">cancel your old passport</a> as soon as you can if it's lost or stolen.</p>
 
-<p>If you've already cancelled your passport, you can <a href="https://passportapplication.service.gov.uk/ips-olc/">apply for a replacement</a>, or you can get a passport urgently with <a href="https://www.gov.uk/get-a-passport-urgently">Fast Track</a>.</p>
 
-<a class="button" href="https://passportapplication.service.gov.uk/ips-olc/">Continue</a>
 
+
+{{< hmpo-partials-form}}
+  {{$form}}
+        
+        <!-- <p>If you've already cancelled your passport, you can <a href="https://passportapplication.service.gov.uk/ips-olc/">apply for a replacement</a>, or you can get a passport urgently with <a href="https://www.gov.uk/get-a-passport-urgently">Fast Track</a>.</p> -->
+        <h2>Reference number</h2>
+        {{#input-text}}lost-reference{{/input-text}}
+        {{#input-submit}}{{/input-submit}}
+        <p>Get a passport urgently with <a href="https://www.gov.uk/get-a-passport-urgently">Fast Track</a>.</p>
+  {{/form}}
+{{/ hmpo-partials-form}}
 {{/ content}}
 
 {{/ layout}}
