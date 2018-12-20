@@ -36,8 +36,16 @@
         <p>Make sure:</p>
         <ul class="list-bullet">
             <li>the photo is a good likeness taken in the last month</li>
-            <li>your whole face is visible with your eyes open</li>
-            <li>you have a plain expression - no smile and mouth closed</li>
+            <li>your whole face is visible
+
+            {{#nunjucks}}
+                {% if values['applicant-age'] >= 6 %}
+                    with your eyes open</li>
+                    <li>you have a plain expression - no smile and mouth closed
+                {% endif %}
+            {{/nunjucks}}
+
+            </li>
             <li>there are no reflections or glare (if you have to wear glasses)</li>
             <li>you’re not wearing headwear (unless for religious or medical reasons)</li>
         </ul>
@@ -58,8 +66,16 @@
         Our automated check suggests </p>
     <p>
         <ul class="list-bullet">
-            <li>it looks like your mouth is open</li>
-            <li>we can’t find the outline of your head</li>
+            {{#nunjucks}}
+                {% if values['applicant-age'] <= 11 %}
+                    <li>it looks like your eyes are closed</li>
+                    <li>it looks like you’re not facing the camera</li>
+                    <li>we can’t find the outline of your head</li>
+                {% else %}
+                    <li>it looks like your mouth is open</li>
+                    <li>we can’t find the outline of your head</li>
+                {% endif %}
+            {{/nunjucks}}
         </ul>
     </p>
 </div>
@@ -128,7 +144,7 @@
             <div class="photo">
                 {{#nunjucks}}
                     {% if values['applicant-age'] <= 11 %}
-                        <img src="/public/images/thumbnail-child.jpg" alt="Your photo" title="Your photo" width="150">
+                        <img src="/public/images/thumbnail-child-age-0-5-fail.jpg" alt="Your photo" title="Your photo" width="150">
                     {% else %}
                         <img src="/public/images/thumbnail2.jpeg" alt="Your photo" title="Your photo" width="150">
                     {% endif %}

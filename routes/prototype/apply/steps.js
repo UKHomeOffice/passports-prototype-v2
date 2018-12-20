@@ -373,7 +373,12 @@ module.exports = {
             'relationship-applicant',
             'relationship-other'
         ],
-        next: '/third-party-name'
+        next: '/third-party-name',
+        forks: [{ // For prototype purpose, set third-party application vars to true
+            condition: function (req, res) {
+                req.session['hmpo-wizard-common']['application-for-someone-else'] = true
+            }
+        }]
     },
     '/third-party-name': {
         fields: [
