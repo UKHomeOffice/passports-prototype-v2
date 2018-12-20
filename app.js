@@ -34,7 +34,7 @@ function init(sessionConfig) {
         var auth = require('express-basic-auth');
 
         function authoriser(user, pass) {
-            return (user === process.env.USER || user === 'fish') && (pass === process.env.PASS || pass === process.env.PASSWORD || pass === 'chips');
+            return (user === process.env.USER || user === 'photo') && (pass === process.env.PASS || pass === process.env.PASSWORD || pass === 'research');
         };
 
         app.use(auth({
