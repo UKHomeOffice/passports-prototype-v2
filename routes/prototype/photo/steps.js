@@ -21,6 +21,7 @@ module.exports = {
     '/photo-guidance': {
         next: '/upload'
     },
+    '/photo-guidance-no-accordion': {},
     '/photo-guide': {
         next: '/photo-guide-find-camera'
     },
