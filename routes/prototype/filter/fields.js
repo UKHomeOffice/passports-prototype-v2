@@ -197,6 +197,27 @@ module.exports = {
     ],
     className: 'inline'
   },
+  'lost-stolen-reported': {
+    legend: {
+      value: 'Have you reported it?',
+      className: 'visuallyhidden'
+    },
+    options: [{
+        value: true,
+        label: 'Yes',
+        toggle: 'lost-stolen-reported'
+      },
+      {
+        value: false,
+        label: 'No'
+      }
+    ],
+    formatter: ['boolean'],
+    validate: [
+      'required'
+    ],
+    className: 'inline'
+  },
   'lost-reference': {
     labelClassName: 'visuallyhidden',
     validate: [
