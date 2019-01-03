@@ -13,32 +13,39 @@
 
 <p style="margin-bottom: 30px;">You won't be able to save your application – get this information ready before you continue. If you can't provide these details, you'll need to tell us why.</p>
 
-<h2>Applicant's details</h2>
-<ul class="list list-bullet">
-    {{#values.naturalisation-registration-certificate}}<li>naturalisation or registration certificate</li>{{/values.naturalisation-registration-certificate}}
-    {{#nunjucks}}
-        {% if not values['passport-before'] and not values['naturalisation-registration-certificate'] %}
-            <li>birth or adoption certificate</li>
-        {% elif not values['passport-before'] and values['naturalisation-registration-certificate']%}
-            <!-- show nothing -->
-        {% else %}
-            <li>old passport</li>
-        {% endif %}
-    {{/nunjucks}}
-    {{#values.old-blue}}<li>UK passport details</li>{{/values.old-blue}}
-</ul>
-
-<h2>Parents' details</h2>
-<ul class="list list-bullet">
-    <li>name, date and place of birth</li>
-    <li>nationality</li>
-    <li>UK passport details (if this applies)</li>
-    <li>date of marriage or civil partnership (if this applies)</li>
-</ul>
-
-<p>Check the <a href="../../guidance/parents-details" target="_blank">rules about parents</a> if you're not sure whose details to provide.</p>
-
 {{#nunjucks}}
+    {% if not values['lost-stolen'] %}
+        <h2>Applicant's details</h2>
+        <ul class="list list-bullet">
+            {% if values['naturalisation-registration-certificate'] %}
+                <li>naturalisation or registration certificate</li>
+            {% endif %}
+            {% if not values['passport-before'] and not values['naturalisation-registration-certificate'] %}
+                <li>birth or adoption certificate</li>
+            {% elif not values['passport-before'] and values['naturalisation-registration-certificate']%}
+                <!-- show nothing -->
+            {% else %}
+                <li>old passport</li>
+            {% endif %}
+            {% if values['old-blue'] %}
+                <li>UK passport details</li>
+            {% endif %}
+        </ul>
+    {% endif %}
+
+
+    <h2>Parents' details</h2>
+    <ul class="list list-bullet">
+        <li>name, date and place of birth</li>
+        <li>nationality</li>
+        <li>UK passport details (if this applies)</li>
+        <li>date of marriage or civil partnership (if this applies)</li>
+    </ul>
+
+    {% if not values['lost-stolen'] %}
+        <p>Check the <a href="../../guidance/parents-details" target="_blank">rules about parents</a> if you're not sure whose details to provide.</p>
+    {% endif %}
+
     {% if not values['born-before-1983'] and not values['naturalisation-registration-certificate'] and not values['passport-before']%}
         <h2>Grandparents' details</h2>
         <p>Based on what you tell us, we may ask for their:</p>
