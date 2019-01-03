@@ -115,7 +115,6 @@ function clicks() {
     $('#passport-before-false').click();
     $('#lost-stolen-false').click();
     $('#name-changed-false').click();
-    $('#uncancelled-No').click();
     $('#passport-damaged-No').click();
     $('#dual-nationality-false').click();
     $('#choose-photo-upload').click();

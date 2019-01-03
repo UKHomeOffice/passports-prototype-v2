@@ -443,21 +443,5 @@ module.exports = {
     validate: [
       'required'
     ],
-  },
-  'uncancelled': {
-    legend: {
-      value: 'Do you have any uncancelled passport from a different country?',
-      className: 'visuallyhidden'
-    },
-    options: [{
-        value: 'Yes',
-        label: 'Yes',
-        toggle: 'which-passport'
-      },
-      {
-        value: 'No',
-        label: 'No'
-      }
-    ]
   }
 };

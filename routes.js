@@ -5,20 +5,16 @@ app.use(require('./routes/guidance'));
 // DCS user journeys
 app.use('/prototype/overseas', require('./routes/prototype/overseas'));
 app.use('/prototype/startpage', require('./routes/prototype/startpage'));
-app.use('/prototype/startpage-overseas', require('./routes/prototype/startpage-overseas'));
 app.use('/prototype/filter', require('./routes/prototype/filter'));
-app.use('/prototype/apply', require('./routes/prototype/apply'));
 app.use('/prototype/intro', require('./routes/prototype/intro'));
 app.use('/prototype/photo', require('./routes/prototype/photo'));
 app.use('/prototype/photo/upload-errors', require('./routes/prototype/photo/upload-errors'));
 app.use('/prototype/help', require('./routes/prototype/help'));
-app.use('/prototype/startpage-temp', require('./routes/prototype/startpage-temp'));
-app.use('/prototype/throttle', require('./routes/prototype/throttle'));
-app.use('/prototype/payment', require('./routes/prototype/payment'));
-app.use('/prototype/submission-failed', require('./routes/prototype/submission-failed'));
-app.use('/prototype/sar', require('./routes/prototype/sar'));
+app.use('/prototype/apply', require('./routes/prototype/apply'));
 app.use('/prototype/mismatch', require('./routes/prototype/mismatch'));
 app.use('/prototype/redirect-tracking', require('./routes/prototype/redirect-tracking'));
+app.use('/prototype/submission-failed', require('./routes/prototype/submission-failed'));
+app.use('/prototype/throttle', require('./routes/prototype/throttle'));
 
 // Temporary routes for changing:
 // `/ftas` to `/prototype`
