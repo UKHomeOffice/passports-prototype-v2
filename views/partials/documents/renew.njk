@@ -1,4 +1,9 @@
-{% set documents = ['old passport'] %}
+{# Set document list for Applicant's documents #}
+{% set documents = [] %}
+
+{% if values['passport-before'] and not values['lost-stolen'] %}
+    {% set documents = (documents.push('old passport'), documents) %}
+{% endif %}
 
 {% if values['dual-nationality'] %}
     {% set documents = (documents.push('any passports from other countries that haven\'t expired'), documents) %}
@@ -6,17 +11,40 @@
 
 
 {% if not values['change-name'] %}
-    <h2 class="govuk-heading-l">Applicant's documents</h2>
-    <h3 class="govuk-heading-m">Send the following:</h3>
-    <ul class="list list-bullet">
-        {% for item in documents %}
-            <li>{{item}}</li>
-        {% endfor %}
-        {% include "views/partials/documents/third-party-first-list.njk" %}
-    </ul>
-    {% include "views/partials/documents/third-party.njk" %}
+    {% if values['lost-stolen'] and not values['application-for-someone-else'] %}
+        {# Show nothing #}
+    {% else %}
 
-    <hr>
+        {% if not values['16-or-older'] and not values['rising-16'] %}
+            {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Other' %}
+                <h2 class="govuk-heading-l">Applicant's documents</h2>
+                <h3 class="govuk-heading-m">Send the following:</h3>
+                <ul class="list list-bullet">
+                    {% for item in documents %}
+                        <li>{{item}}</li>
+                    {% endfor %}
+                    {% include "views/partials/documents/third-party-first-list.njk" %}
+                </ul>
+            {% endif %}
+        {% elif values['16-to-18'] or values['rising-16'] %}
+            {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other' %}
+                <h2 class="govuk-heading-l">Applicant's documents</h2>
+                <h3 class="govuk-heading-m">Send the following:</h3>
+                <ul class="list list-bullet">
+                    {% for item in documents %}
+                        <li>{{item}}</li>
+                    {% endfor %}
+                    {% include "views/partials/documents/third-party-first-list.njk" %}
+                </ul>
+            {% endif %}
+        {% else %}
+            {# Show nothing #}
+        {% endif %}
+
+        {% include "views/partials/documents/third-party.njk" %}
+
+        <hr>
+    {% endif %}
 
 {% else %}
     {% include "views/partials/documents/change-of-name.njk" %}
