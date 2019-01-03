@@ -22,7 +22,9 @@
           <a href="/tracking/user/who-can" id="someone-else">ask someone else</a>.</p>
         {% endif %}
         {% if values['csig-type'] != 'examiner' %}
-          <p>Get your documents ready. Once your identity is confirmed, we'll let you know where to send them.</p>
+          {% if values['change-of-name-reason'] or values['lost-stolen-docs'] %}
+            <p>Get your documents ready. Once your identity is confirmed, we'll let you know where to send them.</p>
+          {% endif %}
         {% endif %}
       {{/nunjucks}}
 

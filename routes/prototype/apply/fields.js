@@ -1358,11 +1358,11 @@ module.exports = {
             className: 'visuallyhidden'
         },
         options: [{
-                value: false,
+                value: true,
                 label: 'Yes'
             },
             {
-                value: true,
+                value: false,
                 label: 'No'
             }
         ],
