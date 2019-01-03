@@ -16,10 +16,6 @@ module.exports = {
             }
         }]
     },
-    '/before-you-continue-overseas': {
-        backLink: '/../prototype/overseas/give-contact-details',
-        next: '/what-you-need-overseas'
-    },
     '/what-you-need': {
         backLink: './',
         fields: ['what-you-will-need-declaration'],
