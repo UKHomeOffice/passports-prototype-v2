@@ -130,9 +130,6 @@
         "previous-name-change": {
             "legend": "Have you ever been known by any other names?"
         },
-        "previous-names": {
-            "label": "All of your previous names"
-        },
         "braille": {
             "label": "They need a braille sticker."
         },
@@ -557,9 +554,6 @@
         "what-to-do": {
             "required": "You must answer this question - what to do"
         },
-        "uncancelled": {
-            "required": "You must answer this question - uncancelled"
-        },
         "what-you-will-need-declaration": {
             "required": "You need to confirm you're ready to continue"
         },
@@ -586,9 +580,6 @@
             "required": "Enter your mobile or home phone number"
         },
         "passport-options": {
-            "required": "You must answer this question"
-        },
-        "return-passport": {
             "required": "You must answer this question"
         },
 

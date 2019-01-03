@@ -31,16 +31,6 @@ app.get('/guidance/prove-responsibility-for-a-child', function (req, res, next) 
     res.render('guidance/prove-responsibility-for-a-child');
 });
 
-// Temporary page for interstitial grandparents details
-
-app.get('/prototype/apply/interstitial-require-grandparents-details', function (req, res, next) {
-    res.render('prototype/apply/interstitial-require-grandparents-details');
-});
-
-// app.get('/prototype/photo/upload', function (req, res, next) {
-//     res.render('prototype/photo/upload');
-// });
-
 // Brexit ready
 app.get('/guidance/brexit-ready', function (req, res, next) {
     res.render('guidance/brexit-ready');

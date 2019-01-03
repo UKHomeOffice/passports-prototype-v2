@@ -8,31 +8,6 @@ module.exports = {
             'required'
         ]
     },
-    'uncancelled': {
-        legend: {
-            value: 'Do you have any uncancelled passport from a different country?',
-            className: 'visuallyhidden'
-        },
-        options: [{
-                value: 'Yes',
-                label: 'Yes',
-                toggle: 'which-passport'
-            },
-            {
-                value: 'No',
-                label: 'No'
-            }
-        ],
-        validate: [
-            'required',
-            {
-                type: 'equal',
-                arguments: ['No'],
-                /* if Yes is selected */
-                redirect: '/dual-national-details'
-            }
-        ]
-    },
     'application-country': {
         options: [{
             value: '',
@@ -225,12 +200,8 @@ module.exports = {
             }
         ]
     },
-    'previous-last-name': {
-
-    },
-    'previous-first-name': {
-
-    },
+    'previous-last-name': {},
+    'previous-first-name': {},
     'gender': {
         validate: [
             'required'
@@ -1292,24 +1263,6 @@ module.exports = {
         legend: {
             value: 'Add a Braille sticker'
         },
-    },
-    'return-passport': {
-        legend: {
-            value: 'How would you like us to return your ols passport?',
-            className: 'visuallyhidden'
-        },
-        options: [{
-                value: 'Special-delivery',
-                label: 'Secure delivery (£5 extra)'
-            },
-            {
-                value: 'Standard',
-                label: 'Standard post (free)'
-            }
-        ],
-        validate: [
-            'required'
-        ]
     },
     'secure-return': {
         formatter: 'boolean',

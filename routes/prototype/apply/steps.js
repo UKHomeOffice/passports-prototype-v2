@@ -337,7 +337,6 @@ module.exports = {
         }]
     },
     '/passport-special-delivery': {
-        // next: '/summary-family-details',
         next: '/summary',
         fields: [
             'secure-return'
@@ -388,11 +387,6 @@ module.exports = {
         ],
         next: '/summary'
     },
-    // '/summary-family-details': {
-    //     controller: require('../../../controllers/confirm-family-details'),
-    //     template: 'confirm-family-details',
-    //     next: '/summary'
-    // },
     '/summary': {
         controller: require('../../../controllers/confirm'),
         template: 'confirm',
@@ -478,22 +472,6 @@ module.exports = {
                 }
             }
         ]
-    },
-    '/docs-fta-thirdparty': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-thirdparty-over16': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-thirdparty-under16': {
-        backLink: 'summary',
-        next: '/declaration'
-    },
-    '/docs-thirdparty-parents': {
-        backLink: 'summary',
-        next: '/declaration'
     },
     '/declaration': {
         fields: ['declaration'],
