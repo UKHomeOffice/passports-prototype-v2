@@ -276,7 +276,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     } else {
         newPassportFields.push({
             title: 'Your photo',
-            custom: '<div class="photo"><img src="../../public/images/thumbnail.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150"></div>'
+            custom: '<div class="photo"><img src="../../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150"></div>'
         });
     }
 
