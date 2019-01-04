@@ -106,20 +106,10 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
 
     // Old passport
     var oldPassportFields = [];
-
     response.sections.push({
         className: 'old-passport-details',
         title: 'Old passport',
         fields: oldPassportFields
-    });
-    oldPassportFields.push({
-        step: this.getEditStep('passport-number'),
-        title: 'Passport number',
-        value: values['passport-number']
-    }, {
-        step: this.getEditStep('expiry-year'),
-        title: 'Expiry date',
-        value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
     });
     if (values['lost-reference']) {
         oldPassportFields.push({
@@ -127,7 +117,24 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             title: 'Lost passport reference',
             value: values['lost-reference']
         });
-    };
+        if (values['passport-number']) {
+            oldPassportFields.push({
+                step: this.getEditStep('passport-number'),
+                title: 'Passport number',
+                value: values['passport-number']
+            });
+        };
+    } else {
+        oldPassportFields.push({
+            step: this.getEditStep('passport-number'),
+            title: 'Passport number',
+            value: values['passport-number']
+        }, {
+            step: this.getEditStep('expiry-year'),
+            title: 'Expiry date',
+            value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
+        });
+    }
     if (values['what-damaged']) {
         oldPassportFields.push({
             step: this.getEditStep('what-damaged'),
