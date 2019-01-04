@@ -96,7 +96,7 @@ module.exports = {
         next: '/parents'
     },
     '/parents': {
-        controller: require('../../../controllers/parents'),
+        controller: require('../../../controllers/validate-parents-and-check-parents-dob'),
         fields: [
             'parent1-first-names',
             'parent1-last-name',
@@ -172,7 +172,7 @@ module.exports = {
         next: '/parent-1-grandparents'
     },
     '/parent-1-grandparents': {
-        controller: require('../../../controllers/validation-parent-1-grandparents'),
+        controller: require('../../../controllers/validate-parent-1-grandparents'),
         fields: [
             'parent1-parent1-first-names',
             'parent1-parent1-last-name',
@@ -200,7 +200,7 @@ module.exports = {
         next: '/parent-2-grandparents'
     },
     '/parent-2-grandparents': {
-        controller: require('../../../controllers/validation-parent-2-grandparents'),
+        controller: require('../../../controllers/validate-parent-2-grandparents'),
         fields: [
             'parent2-parent1-first-names',
             'parent2-parent1-last-name',
@@ -390,7 +390,7 @@ module.exports = {
         }]
     },
     '/documents-required': {
-        controller: require('../../../controllers/docs-check-required')
+        controller: require('../../../controllers/fetch-documents-required')
     },
     '/docs-fta': {
         backLink: 'summary',
