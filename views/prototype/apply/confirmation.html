@@ -4,18 +4,17 @@
 
 {{< hmpo-partials-form}}
     {{$form}}
-        {{#nunjucks}}
             <br>
             <div class="panel panel-border-wide alert-success">
                 <h2>You've paid {{values.application-cost}}</h2>
                 <p>We've saved your application and sent confirmation to:<br>
-                    {{values.email}}. <a href="">Download your confirmation</a></p>
+                {{values.email}}. <a href="">Download your confirmation</a></p>
             </div>
             <p>Application reference <strong>PEX 319 825 680X</strong></p>
 
             <h1>What you need to do</h1>
             <p>Before we can work on your application, you need to:</p>
-
+            {{#nunjucks}}
             {% if (values['passport-before'] and not values['old-blue']) and not values['lost-stolen'] %}
                 {# >=12 Renewals #}
                 {% if values['applicant-age'] >= 12 %}
