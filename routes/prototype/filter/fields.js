@@ -184,7 +184,6 @@ module.exports = {
     options: [{
         value: true,
         label: 'Yes',
-        toggle: 'lost-stolen'
       },
       {
         value: false,
