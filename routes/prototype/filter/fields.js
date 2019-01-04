@@ -216,7 +216,7 @@ module.exports = {
       'required',
       {
         type:'equal',
-        arguments:['No'],
+        arguments:[true],
         redirect:'https://www.gov.uk/report-a-lost-or-stolen-passport'
       }
     ],
