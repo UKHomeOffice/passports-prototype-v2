@@ -213,7 +213,12 @@ module.exports = {
     ],
     formatter: ['boolean'],
     validate: [
-      'required'
+      'required',
+      {
+        type:'equal',
+        arguments:['No'],
+        redirect:'https://www.gov.uk/report-a-lost-or-stolen-passport'
+      }
     ],
     className: 'inline'
   },
@@ -221,7 +226,11 @@ module.exports = {
     labelClassName: 'visuallyhidden',
     validate: [
       'required'
-    ]
+    ],
+    dependent: {
+      field: 'lost-stolen-reported',
+      value: true
+    }
   },
   'passport-colour': {
     legend: {

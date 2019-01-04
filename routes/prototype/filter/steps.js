@@ -43,7 +43,7 @@ module.exports = {
     },
     '/lost': {
         fields: [
-            'lost-reference'
+            'lost-reference', 'lost-stolen-reported'
         ],
         next: '/dob'
     },
