@@ -117,11 +117,11 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             title: 'Lost passport reference',
             value: values['lost-reference']
         });
-        if (values['passport-number']) {
+        if (values['passport-number-lost-stolen']) {
             oldPassportFields.push({
-                step: this.getEditStep('passport-number'),
+                step: this.getEditStep('passport-number-lost-stolen'),
                 title: 'Passport number',
-                value: values['passport-number']
+                value: values['passport-number-lost-stolen']
             });
         };
     } else {

@@ -1,6 +1,7 @@
 var values = {
     "pex-number": "4234567890",
     "passport-number": "502135326",
+    "passport-number-lost-stolen": "502135326",
     "expiry-day": "27",
     "expiry-month": "12",
     "expiry-year": "17",
@@ -123,6 +124,7 @@ function clicks() {
     $('#plain-expression-Yes').click();
     $('#shadows-face-Yes').click();
     $('#yes').click();
+    $('#lost-stolen-reported').click();
 
     // Renew/Apply flow
     $('#title-Mr').click();
