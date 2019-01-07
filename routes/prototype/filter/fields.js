@@ -405,7 +405,7 @@ module.exports = {
     formatter: 'removehyphens',
     validate: [
       'numeric',
-      'required'
+      //'required'
     ]
   },
   'issue-month': {
@@ -413,7 +413,7 @@ module.exports = {
     formatter: 'removehyphens',
     validate: [
       'numeric',
-      'required'
+      //'required'
     ]
   },
   'issue-year': {
@@ -421,7 +421,7 @@ module.exports = {
     formatter: 'removehyphens',
     validate: [
       'numeric',
-      'required'
+      //'required'
     ]
   },
   'passport-issuing-authority': {
