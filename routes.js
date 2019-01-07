@@ -1,6 +1,9 @@
-// routes
+// Routes
 app.use(require('./routes/start'));
-app.use(require('./routes/guidance'));
+
+//GOV.UK pages
+app.use('/govuk', require('./routes/govuk'));
+app.use('/govuk/damaged', require('./routes/govuk/damaged'));
 
 // DCS user journeys
 app.use('/prototype/overseas', require('./routes/prototype/overseas'));
@@ -90,7 +93,3 @@ app.get('/priority-service/confirmation', (req, res) => {
 app.get('/overseas/confirmation', (req, res) => {
     res.render('priority-service/renew/confirmation');
 })
-
-//Gov.uk pages
-app.use('/govuk', require('./routes/govuk'));
-app.use('/govuk/damaged', require('./routes/govuk/damaged'));
