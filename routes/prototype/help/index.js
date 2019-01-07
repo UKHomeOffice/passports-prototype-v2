@@ -27,6 +27,9 @@ app.get('/prove-responsibility-for-a-child', function (req, res, next) {
 app.get('/recognised-professions', function (req, res, next) {
     res.render('prototype/help/recognised-professions');
 });
+app.get('/terms-and-conditions', function (req, res, next) {
+    res.render('prototype/help/terms-and-conditions');
+});
 app.get('/who-can-confirm', function (req, res, next) {
     res.render('prototype/help/who-can-confirm');
 });

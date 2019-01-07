@@ -6,7 +6,5 @@ module.exports = {
     '/how-confirm': {
     },
     '/who-can-do-this': {
-    },
-    '/terms': {
     }
 };
