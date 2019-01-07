@@ -21,12 +21,6 @@ app.get('/parents-details', function (req, res, next) {
 app.get('/photo-rules', function (req, res, next) {
 	res.render('prototype/help/photo-rules');
 });
-app.get('/prove-responsibility-for-a-child', function (req, res, next) {
-    res.render('prototype/help/prove-responsibility-for-a-child');
-});
-app.get('/recognised-professions', function (req, res, next) {
-    res.render('prototype/help/recognised-professions');
-});
 app.get('/terms-and-conditions', function (req, res, next) {
     res.render('prototype/help/terms-and-conditions');
 });
