@@ -31,7 +31,7 @@ var values = {
     "csig-email-confirm": "c.moore@test-corp.co.uk",
     "town-of-birth": "London",
     "town": "London",
-    "lost-reference": "2347981729",
+    "lost-reference": "L1234567899",
 
     "naturalisation-registration-certificate-number": "808294932",
     "naturalisation-registration-certificate-issue-day": "28",
