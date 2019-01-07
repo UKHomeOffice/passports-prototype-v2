@@ -1,6 +1,8 @@
-var app = require('express')(),
-    steps = require('./steps');
+var app = require('express').Router();
 
-app.use(require('hmpo-form-wizard')(steps, {}, { templatePath: 'govuk' }));
+// Brexit ready
+app.get('/brexit-ready', function (req, res, next) {
+    res.render('govuk/brexit-ready');
+});
 
 module.exports = app;

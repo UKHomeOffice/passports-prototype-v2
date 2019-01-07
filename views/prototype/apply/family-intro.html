@@ -27,7 +27,7 @@
                    <p>We need to ask for parents' details to confirm British nationality and who has <a href="https://www.gov.uk/parental-rights-responsibilities" target="_blank">parental responsibility</a>.</p>
 
                     {% elif not (values['naturalisation-registration-certificate'] and values['applicant-age'] >= 16) or (values['born-before-1983'] and not values['born-in-uk']) or not values['born-before-1983'] %}
-                   <p>We need to confirm <a href="../../guidance/british-nationality" target="_blank">British nationality</a> &ndash; this may depend on your parents or grandparents.</p>
+                   <p>We need to confirm <a href="https://www.gov.uk/types-of-british-nationality" target="_blank">British nationality</a> &ndash; this may depend on your parents or grandparents.</p>
 
                    {% endif %}
                 {{/nunjucks}}
