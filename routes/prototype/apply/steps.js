@@ -160,7 +160,8 @@ module.exports = {
                     return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == true ||
                         req.session['hmpo-wizard-common']['born-before-1983'] == true ||
                         req.session['hmpo-wizard-common']['old-blue'] == true ||
-                        req.session['hmpo-wizard-common']['passport-before'] == true;
+                        req.session['hmpo-wizard-common']['passport-before'] == true ||
+                        req.session['hmpo-wizard-common']['lost-stolen'] == true;
                 }
             }, {
                 target: '/home-address-manual-prototype',
