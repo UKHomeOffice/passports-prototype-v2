@@ -29,7 +29,7 @@
 
   {% if values['passport-before'] and values['old-blue'] %} {# Hidden FTA #}
     <p>Based on your answers, you have an old passport that was issued in {{values['issue-year']}}.</p>
-    <p>As your passport was issued a long time ago, you must apply for a first UK passport and you may need to have a <a href="../../guidance/identity-interviews" target="_blank">passport interview</a>.</p>
+    <p>As your passport was issued a long time ago, you must apply for a first UK passport and you may need to have a <a href="./help/identity-interviews" target="_blank">passport interview</a>.</p>
     <p>It should take around 6 weeks to get a new passport.</p>
 
 
@@ -88,7 +88,7 @@
 
   {% elif not values['passport-before'] and (values['applicant-age'] >= 16 or values['rising-16']) %} {# FTA #}
     <p>Based on your answers, you're applying for a first, adult passport.</p>
-    <p>You need to have <a href="../../guidance/british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
+    <p>You need to have <a href="https://www.gov.uk/types-of-british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
     {% if not values['rising-16'] %}
       <p>It should take around 6 weeks to get a new passport.</p>
     {% elif values['rising-16'] %}
@@ -98,7 +98,7 @@
 
   {% elif not values['passport-before'] and values['applicant-age'] < 16 %} {# FTC #}
     <p>Based on your answers, you're applying for a first, child passport. If your name has changed, you need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a>.</p>
-    <p>You need to have <a href="../../guidance/british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
+    <p>You need to have <a href="https://www.gov.uk/types-of-british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
     <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
 
 
