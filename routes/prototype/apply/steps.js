@@ -401,7 +401,16 @@ module.exports = {
         }]
     },
     '/csig-required': {
-        next: '/documents-required'
+        next: '/documents-required',
+        forks: [{ // if lost and stolen with no docs
+            target: '/declaration',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['lost-stolen'] == true &&
+                    req.session['hmpo-wizard-common']['change-name'] == false &&
+                    req.session['hmpo-wizard-common']['application-for-someone-else'] == false
+
+            }
+        }]
     },
     '/documents-required': {
         controller: require('../../../controllers/fetch-documents-required')
@@ -458,31 +467,6 @@ module.exports = {
         backLink: 'summary',
         next: '/declaration',
         controller: require('../../../controllers/check-query-string'),
-        forks: [{
-                target: '../../../csig/user/need-csig',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['routeFromCsig'] == true;
-                }
-            },
-            {
-                target: '../../../csig/user-contact/tracking-waiting',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['trackWaiting'] == true;
-                }
-            },
-            { // if user decides to check what documents they need to send on confirmation page
-                target: '/confirmation',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['tracking-status'] == 'confirm-documents';
-                }
-            }
-        ]
-    },
-    '/docs-lost-stolen': {
-        backLink: 'summary',
-        next: '/declaration',
-        controller: require('../../../controllers/check-query-string'),
-        fields: ['lost-stolen-docs'],
         forks: [{
                 target: '../../../csig/user/need-csig',
                 condition: function (req, res) {
