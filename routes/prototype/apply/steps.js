@@ -297,13 +297,14 @@ module.exports = {
         next: '/passport-options'
     },
     '/passport-options': {
+        controller: require('../../../controllers/costs-edit-step'),
         fields: [
             'passport-options',
             'braille'
         ],
         next: '/sign',
         forks: [{
-            target: '/passport-special-delivery',
+            target: '/relationship-applicant',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
                     req.session['hmpo-wizard-common']['application-country'] === ''
@@ -321,38 +322,12 @@ module.exports = {
             'can-sign',
             'no-sign-reason'
         ],
-        next: '/passport-special-delivery',
+        next: '/who-for',
         forks: [{
-            target: '/who-for',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['application-country'] !== '' &&
-                    req.session['hmpo-wizard-common']['16-or-older'] == true ||
-                    req.session['hmpo-wizard-common']['rising-16'] == true;
-            }
-        }, {
             target: '/relationship-applicant',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['application-country'] !== '' &&
                     req.session['hmpo-wizard-common']['16-or-older'] == false &&
-                    req.session['hmpo-wizard-common']['rising-16'] == false;
-            }
-        }]
-    },
-    '/passport-special-delivery': {
-        next: '/summary',
-        fields: [
-            'secure-return'
-        ],
-        forks: [{
-            target: '/who-for',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['16-or-older'] == true ||
-                    req.session['hmpo-wizard-common']['rising-16'] == true;
-            }
-        }, {
-            target: '/relationship-applicant',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['16-or-older'] == false &&
                     req.session['hmpo-wizard-common']['rising-16'] == false;
             }
         }]
@@ -403,7 +378,7 @@ module.exports = {
     '/csig-required': {
         next: '/documents-required',
         forks: [{ // if lost and stolen with no docs
-            target: '/declaration',
+            target: '/passport-special-delivery',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['lost-stolen'] == true &&
                     req.session['hmpo-wizard-common']['change-name'] == false &&
@@ -417,7 +392,7 @@ module.exports = {
     },
     '/docs-fta': {
         backLink: 'summary',
-        next: '/declaration',
+        next: '/passport-special-delivery',
         controller: require('../../../controllers/check-query-string'),
         forks: [{
                 target: '../../../csig/user/need-csig',
@@ -441,7 +416,7 @@ module.exports = {
     },
     '/docs-ftc': {
         backLink: 'summary',
-        next: '/declaration',
+        next: '/passport-special-delivery',
         controller: require('../../../controllers/check-query-string'),
         forks: [{
                 target: '../../../csig/user/need-csig',
@@ -465,7 +440,7 @@ module.exports = {
     },
     '/docs-renew': {
         backLink: 'summary',
-        next: '/declaration',
+        next: '/passport-special-delivery',
         controller: require('../../../controllers/check-query-string'),
         forks: [{
                 target: '../../../csig/user/need-csig',
@@ -486,6 +461,31 @@ module.exports = {
                 }
             }
         ]
+    },
+    '/passport-special-delivery': {
+        controller: require('../../../controllers/costs-edit-step'),
+        next: '/cost',
+        fields: [
+            'secure-return'
+        ],
+        // forks: [{
+        //     target: '/who-for',
+        //     condition: function (req, res) {
+        //         return req.session['hmpo-wizard-common']['16-or-older'] == true ||
+        //             req.session['hmpo-wizard-common']['rising-16'] == true;
+        //     }
+        // }, {
+        //     target: '/relationship-applicant',
+        //     condition: function (req, res) {
+        //         return req.session['hmpo-wizard-common']['16-or-older'] == false &&
+        //             req.session['hmpo-wizard-common']['rising-16'] == false;
+        //     }
+        // }]
+    },
+    '/cost': {
+        controller: require('../../../controllers/confirm-cost'),
+        template: 'confirm-cost',
+        next: '/declaration'
     },
     '/declaration': {
         fields: ['declaration'],
