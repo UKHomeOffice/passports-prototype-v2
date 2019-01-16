@@ -54,6 +54,10 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         sections: []
     });
 
+    if (values['lost-stolen'] == true && values['change-name'] == false && values['application-for-someone-else'] == false) {  
+        var lostStolenNoDocs = true;
+    }
+
     // Cost
     response.sections.push({
         className: 'cost-details',
@@ -91,9 +95,9 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             //   }
             // },
             { /* FTA docs */
-                step: values.veteran ? null : this.getEditStep('secure-return'),
+                step: (values.veteran || lostStolenNoDocs) ? null : this.getEditStep('secure-return'),
                 title: function () {
-                    if (values.veteran) {
+                    if (values.veteran || lostStolenNoDocs) {
                         return 'Delivery'
                     } else if (values['overseas-service']) {
                         return 'Courier fee'
@@ -115,6 +119,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                         } else {
                             return 'Your documents will be in a different envelope to your new passport £19.86'
                         }
+                    } else if (lostStolenNoDocs) {
+                        return 'We\'ll send your new passport by secure delivery. The cost is included in the passport fee.';
                     } else {
                         return 'You need to post your documents to us. We’ll return them to you by standard post. <br/>£0.00';
                     }
