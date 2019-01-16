@@ -10,15 +10,12 @@
 	</header>
 	{{< hmpo-partials-form}}
 		{{$form}}
-			<p>You must <a href="https://www.gov.uk/report-a-lost-or-stolen-passport">cancel your old passport</a> if it's lost or stolen.</p>
 			<fieldset class="inline">
 				{{#radio-group}}lost-stolen-reported{{/radio-group}}
 			</fieldset>
 			<div id="lost-stolen-reported" class="reveal js-hidden">
 				<div class="panel panel-border-narrow">
-					<h2>Reference number</h2>
-					<p class="form-hint" id="dob-hint">For example L123456789. You'll find this in your email or text message from HM Passport Office.</p>
-					{{#input-text}}lost-reference{{/input-text}}
+					<p>You must report your passport lost or stolen before you replace a passport.</p>
 				</div>
 			</div>	
 			{{#input-submit}}{{/input-submit}}

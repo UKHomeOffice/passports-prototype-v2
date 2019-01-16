@@ -203,12 +203,12 @@ module.exports = {
     },
     options: [{
         value: true,
-        label: 'Yes',
-        toggle: 'lost-stolen-reported'
+        label: 'Yes'
       },
       {
         value: false,
-        label: 'No'
+        label: 'No',
+        toggle: 'lost-stolen-reported'
       }
     ],
     formatter: ['boolean'],
@@ -222,16 +222,7 @@ module.exports = {
     ],
     className: 'inline'
   },
-  'lost-reference': {
-    labelClassName: 'visuallyhidden',
-    validate: [
-      'required'
-    ],
-    dependent: {
-      field: 'lost-stolen-reported',
-      value: true
-    }
-  },
+  
   'passport-colour': {
     legend: {
       value: 'What colour of UK passport did you have before?',
