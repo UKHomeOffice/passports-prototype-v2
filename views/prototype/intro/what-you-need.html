@@ -35,6 +35,10 @@
 
 
     <h2>Parents' details</h2>
+        {% if values['lost-stolen'] %}
+            <p>You'll need to tell us about your parents. This is because you're replacing a lost or stolen passport.</p>
+            <p>You'll need to tell us their:<p>
+        {% endif %}
     <ul class="list list-bullet">
         <li>name, date and place of birth</li>
         <li>nationality</li>
