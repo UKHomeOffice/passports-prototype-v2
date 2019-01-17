@@ -36,6 +36,16 @@
                         PE1 1QG
                     </p>
 
+                    <details>
+                        <summary>
+                            <span class="summary">If you're applying as part of a family or couple</span>
+                        </summary>
+                        <div class="panel panel-border-narrow">
+                            <p>Find out how to send your documents if you're <a href="../help/group-applications" target="_blank">applying as part of a <br>family or couple</a>.</p>
+                        </div>
+                    </details>
+
+
                     <h2>Track your application</h2>
                     {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
                         <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking?status=send-us-your-docs">https://www.passport.service.gov.uk/track</a></p>
@@ -51,7 +61,11 @@
                     <p>Sign in to check who can do this and provide their details. You'll need your application reference: PEX 319 825 680X</p>
 
                     <h2>2. Get your documents ready</h2>
-                    <p>We can only receive your documents after your identity has been confirmed. We'll let you know when and where to send them.</p>
+                    <p>We can only receive documents after your identity has been confirmed. This includes anyone you're <a href="../help/group-applications" target="_blank">applying with as part of a family or couple</a>.</p>
+
+                    <p>We'll let you know when and where to send them.</p>
+
+
                 {% else %}
                     {# LSR #}
                     {% if not values['change-of-name-reason'] and values['lost-stolen-no-docs'] %}
