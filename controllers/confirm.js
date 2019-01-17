@@ -54,6 +54,13 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         sections: []
     });
 
+    // If no docs are required for lost and stolen
+    if (values['lost-stolen'] == true && values['change-name'] == false && values['application-for-someone-else'] == false) {  
+        req.sessionModel.set('lost-stolen-no-docs', true);
+    } else {
+        req.sessionModel.set('lost-stolen-no-docs', false);
+    };
+
     // Third-party
     var thirdPartyFields = [];
 
