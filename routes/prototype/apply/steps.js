@@ -378,12 +378,9 @@ module.exports = {
     '/csig-required': {
         next: '/documents-required',
         forks: [{ // if lost and stolen with no docs
-            target: '/passport-special-delivery',
+            target: '/cost',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['lost-stolen'] == true &&
-                    req.session['hmpo-wizard-common']['change-name'] == false &&
-                    req.session['hmpo-wizard-common']['application-for-someone-else'] == false
-
+                return req.session['hmpo-wizard-common']['lost-stolen-no-docs'] == true 
             }
         }]
     },
