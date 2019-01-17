@@ -155,9 +155,6 @@ function clicks() {
     $('#application-for-someone-else-false').click();
     $('#relationship-applicant-Mother').click();
 
-    // lost stolen
-    $('#lost-stolen-docs-true').click();
-
     // CSIG
     $('#applicant-check-home-address-Yes').click();
     $('#applicant-check-names-Yes').click();

@@ -1355,25 +1355,6 @@ module.exports = {
         labelClassName: 'visuallyhidden',
         className: 'textarea',
     },
-    'lost-stolen-docs': {
-        className: 'inline',
-        legend: {
-            className: 'visuallyhidden'
-        },
-        options: [{
-                value: true,
-                label: 'Yes'
-            },
-            {
-                value: false,
-                label: 'No'
-            }
-        ],
-        formatter: ['boolean'],
-        validate: [
-            'required'
-        ]
-    },
     'declaration': {
         formatter: 'boolean',
         validate: [

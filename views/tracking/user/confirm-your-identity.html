@@ -11,7 +11,7 @@
       </header>
         <h2>What you need to do</h2>
         {{#nunjucks}}
-          {% if values['change-of-name-reason'] or values['lost-stolen-docs'] %}
+          {% if values['change-of-name-reason'] or not values['lost-stolen-no-docs'] %}
             <p>You need to ask someone to confirm your identity. We can't receive your documents until this is done.</p>
             <p>Once your identity is confirmed, we’ll let you know where to send your documents.</p>
           {% else %}
