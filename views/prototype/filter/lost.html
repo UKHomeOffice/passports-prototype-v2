@@ -2,22 +2,20 @@
 
 {{$propositionHeader}}{{/propositionHeader}}
 
-{{$pageTitle}}Information about urgent passport{{/pageTitle}}
+{{$pageTitle}}Have you cancelled your passport?{{/pageTitle}}
 
 {{$content}}
 	<header>
-		<h1>Have you reported it lost or stolen?</h1>
+		<h1>Have you cancelled your passport?</h1>
 	</header>
+		
+		<p>You must cancel your lost or stolen passport before you apply for a replacement.</p>
+
 	{{< hmpo-partials-form}}
 		{{$form}}
 			<fieldset class="inline">
 				{{#radio-group}}lost-stolen-reported{{/radio-group}}
 			</fieldset>
-			<div id="lost-stolen-reported" class="reveal js-hidden">
-				<div class="panel panel-border-narrow">
-					<p>You must report your passport lost or stolen before you replace a passport.</p>
-				</div>
-			</div>	
 			{{#input-submit}}{{/input-submit}}
 			<!-- <p>If you need your replacement passport within a week, apply with <a href="https://www.gov.uk/get-a-passport-urgently">Fast Track</a>.</p> -->
 		{{/form}}
