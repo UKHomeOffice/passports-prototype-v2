@@ -17,7 +17,11 @@
                     <li>marriage or civil partnership certificate</li>
                     {% include "views/partials/documents/third-party-first-list.njk" %}
                 </ul>
-                {% include "views/partials/documents/third-party.njk" %}
+                {% if values['lost-stolen'] == true %}
+                    {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                {% else %}
+                    {% include "views/partials/documents/third-party.njk" %}
+                {% endif %}
             </div>
         </div>
 
@@ -35,7 +39,11 @@
                     <li>a completed <a href="https://www.gov.uk/government/publications/passports-for-newly-weds-and-civil-partners" target="_blank">passports for newly weds and civil partners</a> form</li>
                     {% include "views/partials/documents/third-party-first-list.njk" %}
                 </ul>
-                {% include "views/partials/documents/third-party.njk" %}
+                {% if values['lost-stolen'] == true %}
+                    {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                {% else %}
+                    {% include "views/partials/documents/third-party.njk" %}
+                {% endif %}
             </div>
         </div>
 
@@ -71,7 +79,11 @@
             <li>visa or residence permit (a colour photocopy will do)</li>
         {% endif %}
     </ul>
-    {% include "views/partials/documents/third-party.njk" %}
+    {% if values['lost-stolen'] == true %}
+        {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+    {% else %}
+        {% include "views/partials/documents/third-party.njk" %}
+    {% endif %}
 
     <hr>
 
@@ -141,7 +153,11 @@
                             <li>visa or residence permit (a colour photocopy will do)</li>
                         {% endif %}
                     </ul>
-                    {% include "views/partials/documents/third-party.njk" %}
+                    {% if values['lost-stolen'] == true %}
+                        {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                    {% else %}
+                        {% include "views/partials/documents/third-party.njk" %}
+                    {% endif %}
                 </div>
             </div>
 
@@ -167,7 +183,11 @@
                         {% endfor %}
                         {% include "views/partials/documents/third-party-first-list.njk" %}
                     </ul>
-                    {% include "views/partials/documents/third-party.njk" %}
+                    {% if values['lost-stolen'] == true %}
+                        {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                    {% else %}
+                        {% include "views/partials/documents/third-party.njk" %}
+                    {% endif %}
                 </div>
             </div>
 
@@ -191,7 +211,11 @@
                         {% endfor %}
                         {% include "views/partials/documents/third-party-first-list.njk" %}
                     </ul>
-                    {% include "views/partials/documents/third-party.njk" %}
+                    {% if values['lost-stolen'] == true %}
+                        {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                    {% else %}
+                        {% include "views/partials/documents/third-party.njk" %}
+                    {% endif %}
                 </div>
             </div>
 
@@ -245,7 +269,11 @@
                             <li>visa or residence permit (a colour photocopy will do)</li>
                         {% endif %}
                     </ul>
-                    {% include "views/partials/documents/third-party.njk" %}
+                    {% if values['lost-stolen'] == true %}
+                        {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                    {% else %}
+                        {% include "views/partials/documents/third-party.njk" %}
+                    {% endif %}
                 </div>
             </div>
 
@@ -268,7 +296,11 @@
                         <li>gender recognition certificate</li>
                         <li>a new birth or adoption certificate in your acquired gender</li>
                     </ul>
-                    {% include "views/partials/documents/third-party.njk" %}
+                    {% if values['lost-stolen'] == true %}
+                        {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                    {% else %}
+                        {% include "views/partials/documents/third-party.njk" %}
+                    {% endif %}
                 </div>
             </div>
 
@@ -310,7 +342,11 @@
                         <li>visa or residence permit (a colour photocopy will do)</li>
                     {% endif %}
                 </ul>
-                {% include "views/partials/documents/third-party.njk" %}
+                {% if values['lost-stolen'] == true %}
+                    {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                {% else %}
+                    {% include "views/partials/documents/third-party.njk" %}
+                {% endif %}
             </div>
         </div>
 
@@ -359,7 +395,11 @@
                     {% endif %}
                 </ul>
                 <p>If you've changed your name more than once, you'll need to send proof of every name change.</p>
-                {% include "views/partials/documents/third-party.njk" %}
+                {% if values['lost-stolen'] == true %}
+                    {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                {% else %}
+                    {% include "views/partials/documents/third-party.njk" %}
+                {% endif %}
             </div>
         </div>
 
