@@ -57,6 +57,11 @@ module.exports = {
         ],
         next: '/passport-date-of-issue',
         forks: [{
+                target: '/dual-national',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['lost-stolen'] == true
+                }
+            },{
                 target: '/naturalisation-registration-details',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['passport-before'] == false
