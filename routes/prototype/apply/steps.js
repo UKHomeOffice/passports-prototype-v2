@@ -355,7 +355,7 @@ module.exports = {
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['16-or-older'] == false &&
                     req.session['hmpo-wizard-common']['rising-16'] == false &&
-                    req.session['hmpo-wizard-common']['relationship-applicant'] != "Social Worker" ;
+                    req.session['hmpo-wizard-common']['relationship-applicant'] != "Social Worker";
             }
             },{ // For prototype purpose, set third-party application vars to true
             condition: function (req, res) {
