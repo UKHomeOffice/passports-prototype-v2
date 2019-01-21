@@ -33,7 +33,7 @@
     <p>It should take around 6 weeks to get a new passport.</p>
 
 
-  {% elif values['passport-before'] and (values['applicant-age'] >= 16 or values['rising-16']) and values['lost-stolen'] %} {# lost/stolen adult #}
+  {% elif values['passport-before'] and values['lost-stolen'] %} {# lost/stolen adult #}
     <p>Based on your answers, you're replacing a lost or stolen passport.</p>
     <p>If you want to change the name on your passport, we'll ask for the details <br>later on.</p>
     {% if not values['rising-16'] %}
