@@ -1307,28 +1307,6 @@ module.exports = {
         ],
         className: 'inline'
     },
-    'court-orders-child': {
-        legend: {
-            value: 'Any court orders?',
-            className: 'visuallyhidden'
-        },
-        options: [{
-                value: true,
-                label: 'Yes'
-            },
-            {
-                value: false,
-                label: 'No',
-            },
-        ],
-        formatter: [
-            'boolean'
-        ],
-        validate: [
-            'required'
-        ],
-        className: 'inline'
-    },
     'relationship-applicant': {
         legend: {
             value: 'What is your relationship to the applicant?',

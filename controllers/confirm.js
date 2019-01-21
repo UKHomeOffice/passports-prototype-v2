@@ -58,8 +58,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     if (values['lost-stolen'] == true && 
         values['dual-national'] == false &&
         values['change-name'] == false && 
-        values['application-for-someone-else'] == false ||
-        (values['application-for-someone-else'] == true && values['court-orders-child'] == false)
+        values['application-for-someone-else'] == false
         ) {  
         req.sessionModel.set('lost-stolen-no-docs', true);
     } else {

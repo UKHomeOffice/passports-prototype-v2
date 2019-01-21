@@ -350,24 +350,11 @@ module.exports = {
             'relationship-other'
         ],
         next: '/third-party-name',
-        forks: [{
-            target: '/court-orders-child',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['16-or-older'] == false &&
-                    req.session['hmpo-wizard-common']['rising-16'] == false &&
-                    req.session['hmpo-wizard-common']['relationship-applicant'] != "Social Worker";
-            }
-            },{ // For prototype purpose, set third-party application vars to true
+        forks: [{ // For prototype purpose, set third-party application vars to true
             condition: function (req, res) {
                 req.session['hmpo-wizard-common']['application-for-someone-else'] = true
             }
         }]
-    },
-    '/court-orders-child': {
-        fields: [
-            'court-orders-child',
-        ],
-        next: '/third-party-name'
     },
     '/third-party-name': {
         fields: [
