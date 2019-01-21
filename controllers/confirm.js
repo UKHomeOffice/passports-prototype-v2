@@ -56,7 +56,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
 
     // If no docs are required for lost and stolen
     if (values['lost-stolen'] == true && 
-        values['dual-national'] == false &&
+        values['dual-nationality'] == false &&
         values['change-name'] == false && 
         values['application-for-someone-else'] == false
         ) {  
