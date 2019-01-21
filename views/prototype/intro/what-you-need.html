@@ -11,9 +11,17 @@
 {{< hmpo-partials-form}}
 {{$form}}
 
-<p style="margin-bottom: 30px;">You won't be able to save your application – get this information ready before you continue. If you can't provide these details, you'll need to tell us why.</p>
-
 {{#nunjucks}}
+
+<p style="margin-bottom: 30px;">You won't be able to save your application – get this information ready before you continue. 
+
+{% if not values['lost-stolen'] %}
+
+If you can't provide these details, you'll need to tell us why.
+{% endif %}
+
+</p>
+
     {% if not values['lost-stolen'] %}
         <h2>Applicant's details</h2>
         <ul class="list list-bullet">
@@ -33,10 +41,18 @@
         </ul>
     {% endif %}
 
+    {% if values['lost-stolen'] %}
+    <h2>Old passport details</h2>
+    <p>You should give us your old passport details if you know them, for example if you have a photocopy. We'll ask you the:<p>
+        <ul class="list list-bullet">
+            <li>passport number</li>
+            <li>expiry date</li>
+        </ul>
+    {% endif %}
 
     <h2>Parents' details</h2>
         {% if values['lost-stolen'] %}
-            <p>You'll need to tell us about your parents. This is because you're replacing a lost or stolen passport.</p>
+            <p>You'll need to tell us about your parents. This is because you're replacing a lost or stolen passport.</p> 
             <p>You'll need to tell us their:<p>
         {% endif %}
     <ul class="list list-bullet">
@@ -45,6 +61,8 @@
         <li>UK passport details (if this applies)</li>
         <li>date of marriage or civil partnership (if this applies)</li>
     </ul>
+
+    <p>If you can't provide these details, you'll need to tell us why.</p>
 
     {% if not values['lost-stolen'] %}
         <p>Check the <a href="../../guidance/parents-details" target="_blank">rules about parents</a> if you're not sure whose details to provide.</p>
