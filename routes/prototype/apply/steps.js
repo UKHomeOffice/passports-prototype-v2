@@ -326,8 +326,7 @@ module.exports = {
         forks: [{
             target: '/relationship-applicant',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['application-country'] !== '' &&
-                    req.session['hmpo-wizard-common']['16-or-older'] == false &&
+                return req.session['hmpo-wizard-common']['16-or-older'] == false &&
                     req.session['hmpo-wizard-common']['rising-16'] == false;
             }
         }]

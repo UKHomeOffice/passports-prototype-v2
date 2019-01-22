@@ -155,6 +155,8 @@ function clicks() {
     $('#application-for-someone-else-false').click();
     $('#relationship-applicant-Mother').click();
 
+    $('#title-Master').click();
+
     // CSIG
     $('#applicant-check-home-address-Yes').click();
     $('#applicant-check-names-Yes').click();
