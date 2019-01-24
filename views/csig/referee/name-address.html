@@ -12,22 +12,22 @@
     {{$form}}
       <fieldset>
         <legend><span class="form-label-bold">First name</span></legend>
-        {{#input-text}}name{{/input-text}}
+        {{#input-text}}ref-name{{/input-text}}
       </fieldset>
       <fieldset>
         <legend><span class="form-label-bold">Middle names</span></legend>
-        {{#input-text}}middlename{{/input-text}}
+        {{#input-text}}ref-middlename{{/input-text}}
       </fieldset>
       <fieldset>
         <legend><span class="form-label-bold">Last name</span></legend>
         <p class="form-hint" id="dob-hint">As written on your passport</p>
-        {{#input-text}}lastname{{/input-text}}
+        {{#input-text}}ref-lastname{{/input-text}}
       </fieldset>
       <div id="address-postcode-group" class="form-group">
         <label for="address-postcode" class="form-label-bold">
           Postcode
         </label>
-        {{#input-text}}address-postcode{{/input-text}}
+        {{#input-text}}ref-address-postcode{{/input-text}}
       </div>
       {{#input-submit}}{{/input-submit}}
     {{/form}}

@@ -6,7 +6,7 @@ module.exports = {
         controller: require('../../../controllers/csig-email')
     },
     '/name-address': {
-        fields: ['name', 'middlename', 'lastname', 'address-postcode'],
+        fields: ['ref-name', 'ref-middlename', 'ref-lastname', 'ref-address-postcode'],
         backLink: './',
         next: '/home-address-select'
     },
@@ -17,7 +17,7 @@ module.exports = {
         forks: [{
           target: '/csig-identity-auth-fail',
           condition: function(req, res) {
-            return req.session['hmpo-wizard-common']['address-postcode'].startsWith('NG1');
+            return req.session['hmpo-wizard-common']['ref-address-postcode'].startsWith('NG1');
           }
         }],
     },

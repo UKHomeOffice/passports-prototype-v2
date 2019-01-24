@@ -298,16 +298,16 @@ module.exports = {
       'required'
     ]
   },
-  'name': {
+  'ref-name': {
       labelClassName: 'visuallyhidden',
       validate: [
           'required'
         ]
   },
-  'middlename': {
+  'ref-middlename': {
       labelClassName: 'visuallyhidden',
   },
-  'lastname': {
+  'ref-lastname': {
       labelClassName: 'visuallyhidden',
       validate: [
           'required'
@@ -354,7 +354,7 @@ module.exports = {
           'required'
         ]
   },
-  'address-postcode': {
+  'ref-address-postcode': {
       className: 'input-code',
       labelClassName: 'visuallyhidden',
       validate: [
