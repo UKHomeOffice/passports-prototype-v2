@@ -1,0 +1,8 @@
+{# Store the documents in overseasDocs #}
+{% set overseasDocs = [] %}
+
+{% set overseasDocs = (overseasDocs.push('test document'), overseasDocs) %}
+
+{% for doc in overseasDocs %}
+ <h2 style="color: red">OVERSEAS DOCS!!! </h2>
+{% endfor %}
