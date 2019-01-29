@@ -20,6 +20,7 @@ module.exports = {
         next: '/name'
     },
     '/name': {
+        backLink: './',
         fields: [
             'title',
             'name',
