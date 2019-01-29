@@ -33,14 +33,21 @@
     <p>It should take around 6 weeks to get a new passport.</p>
 
 
-  {% elif values['passport-before'] and values['lost-stolen'] %} {# lost/stolen adult #}
-    <p>Based on your answers, you're replacing a lost or stolen passport.</p>
+  {% elif values['passport-before'] and values['lost-stolen'] and (values['applicant-age'] >= 16 or values['rising-16']) %} {# lost/stolen adult #}
+    <p>Based on your answers, your passport was lost or stolen. You're applying for a replacement adult passport.</p>
     <p>If you want to change the name on your passport, we'll ask for the details <br>later on.</p>
     {% if not values['rising-16'] %}
       <p>It should take 3 weeks to get a new passport. Use the 1 week Fast Track service if you need to <a href="https://www.gov.uk/get-a-passport-urgently/1-week-fast-track-service">get a passport urgently</a>.</p>
     {% elif values['rising-16'] %}
-      <p>As you're about to turn 16, you'll get an adult passport. It should take <br>3 weeks - you won't get it before your birthday.</p>
+      <p>You'll get an adult passport because you're about to turn 16. It should take <br>3 weeks - you won't get it before your birthday.</p>
     {% endif %}
+
+
+  {% elif values['passport-before'] and values['lost-stolen'] and (values['applicant-age'] < 16 and not values['rising-16']) %} {# lost/stolen child #}
+    <p>Based on your answers, your passport was lost or stolen. You're applying for a replacement child passport.</p>
+    <p>If you want to change the name on your passport, we'll ask for the details <br>later on.</p>
+    <p>It should take 3 weeks to get a new passport. Use the 1 week Fast Track service if you need to <a href="https://www.gov.uk/get-a-passport-urgently/1-week-fast-track-service">get a passport urgently</a>.</p>
+
 
   {% elif values['passport-before'] and (values['applicant-age'] >= 16 or values['rising-16']) and values['passport-damaged'] == 'No' %} {# Renew adult #}
     <p>Based on your answers, you're applying for an adult renewal.</p>
