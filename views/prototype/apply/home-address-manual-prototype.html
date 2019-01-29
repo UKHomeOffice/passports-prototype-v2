@@ -10,9 +10,13 @@
 
 {{< hmpo-partials-form}}
 {{$form}}
-
-  <p>Tell us where you live. We'll send your new passport to this address. </p>
-
+  {{#nunjucks}}
+    {% if values['lost-stolen'] %}
+      <p>Tell us where you live. We'll send your new passport to this address.</p>
+    {% else %}
+      <p>Tell us where you live. We'll send your new passport and return any documents to this address. They will arrive separately.</p>
+    {% endif %}
+  {{/nunjucks}}
   <div id="address1-group" class="form-group form-group-compound">
     <label for="address1" class="form-label-bold">
       Address<span class="visuallyhidden"> line 1</span>

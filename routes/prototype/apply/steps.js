@@ -464,19 +464,6 @@ module.exports = {
         fields: [
             'secure-return'
         ],
-        // forks: [{
-        //     target: '/who-for',
-        //     condition: function (req, res) {
-        //         return req.session['hmpo-wizard-common']['16-or-older'] == true ||
-        //             req.session['hmpo-wizard-common']['rising-16'] == true;
-        //     }
-        // }, {
-        //     target: '/relationship-applicant',
-        //     condition: function (req, res) {
-        //         return req.session['hmpo-wizard-common']['16-or-older'] == false &&
-        //             req.session['hmpo-wizard-common']['rising-16'] == false;
-        //     }
-        // }]
     },
     '/cost': {
         controller: require('../../../controllers/confirm-cost'),

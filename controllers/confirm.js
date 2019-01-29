@@ -115,7 +115,6 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         });
     }
 
-
     // Old passport
     var oldPassportFields = [];
     response.sections.push({
@@ -123,19 +122,12 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         title: 'Old passport',
         fields: oldPassportFields
     });
-    if (values['lost-reference']) {
+    if (values['passport-number-lost-stolen']) {
         oldPassportFields.push({
-            step: this.getEditStep('lost-reference'),
-            title: 'Lost passport reference',
-            value: values['lost-reference']
+            step: this.getEditStep('passport-number-lost-stolen'),
+            title: 'Passport number',
+            value: values['passport-number-lost-stolen']
         });
-        if (values['passport-number-lost-stolen']) {
-            oldPassportFields.push({
-                step: this.getEditStep('passport-number-lost-stolen'),
-                title: 'Passport number',
-                value: values['passport-number-lost-stolen']
-            });
-        };
     } else {
         oldPassportFields.push({
             step: this.getEditStep('passport-number'),
