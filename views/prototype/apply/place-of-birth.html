@@ -21,7 +21,9 @@
 
 <label for="town-of-birth" class="form-label-bold">
     Town of birth
-    <span id="town-of-birth-hint" class="form-hint">As written on {{> partials-applicant-your-their}} {{> partials-information-compared-to-document}}</span>
+    {{^values.lost-stolen}}
+        <span id="town-of-birth-hint" class="form-hint">As written on {{> partials-applicant-your-their}} {{> partials-information-compared-to-document}}</span>
+    {{/values.lost-stolen}}
 </label>
 {{#input-text}}town-of-birth{{/input-text}}
 

@@ -30,7 +30,7 @@ module.exports = {
     '/lost-stolen': {
         backLink: './first-uk',
         fields: [
-            'lost-stolen'
+            'lost-stolen',
         ],
         next: '/dob',
         forks: [{
@@ -40,6 +40,12 @@ module.exports = {
                 value: true
             }
         }]
+    },
+    '/lost': {
+        fields: [
+            'lost-reference', 'lost-stolen-reported'
+        ],
+        next: '/dob'
     },
     '/dob': {
         backLink: './lost-stolen',
@@ -51,6 +57,11 @@ module.exports = {
         ],
         next: '/passport-date-of-issue',
         forks: [{
+                target: '/dual-national',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['lost-stolen'] == true
+                }
+            },{
                 target: '/naturalisation-registration-details',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['passport-before'] == false
@@ -85,7 +96,7 @@ module.exports = {
         fields: ['naturalisation-registration-certificate'],
         next: '/dual-national'
     },
-    '/lost': {},
+    
     '/application-method': {},
     '/passport-date-of-issue': {
         backLink: './lost-stolen',
@@ -95,7 +106,13 @@ module.exports = {
             'issue-year',
             'passport-issuing-authority'
         ],
-        next: '/passport-damaged'
+        next: '/passport-damaged',
+        forks: [{ // If their passport is lost/stolen
+            target: '/dual-national',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['lost-stolen'] == true;
+            }
+        }]
         // Issue date = 91 - 03 && Issue auth = Other && Over 16 = Yes
         // Issue date = 91 - 03 && Issue auth = HMPO && Over 16 = Yes
         // Issue date = 94 - 97 && Issue auth = HMPO && Over 16 = Yes

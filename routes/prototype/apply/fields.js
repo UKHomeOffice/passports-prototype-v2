@@ -8,6 +8,9 @@ module.exports = {
             'required'
         ]
     },
+    'passport-number-lost-stolen': {
+        labelClassName: 'visuallyhidden',
+    },
     'application-country': {
         options: [{
             value: '',

@@ -1,0 +1,71 @@
+{% if not values['16-or-older'] and not values['rising-16'] %}
+    {% if values['relationship-applicant'] === 'Father' %}
+        {% if values['lost-stolen'] == true and (not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18) %}
+            {# First `Send the following` block not shown #}
+            <h3 class="govuk-heading-m">If you don't have parental responsibility, send the following:</h3>
+        {% else %}
+            <h3 class="govuk-heading-m">If you don't have parental responsibility, also send the following:</h3>
+        {% endif %}
+        <ul class="list list-bullet">
+            <li>a signed and dated letter from the mother (or other person with parental responsibility)
+                giving consent for the issue of the child's new passport</li>
+        </ul>
+
+    {% elif values['relationship-applicant'] === 'Social Worker' %}     
+        {% if values['lost-stolen'] == true and (not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18) %}
+            {# First `Send the following` block not shown #}
+            <h3 class="govuk-heading-m">A signed and dated letter (on letterheaded paper) from the Head of Social Services to confirm:</h3>
+        {% else %}
+            <h3 class="govuk-heading-m">And a signed and dated letter (on letterheaded paper) from the Head of Social Services to confirm:</h3>
+        {% endif %}
+        <ul class="list list-bullet">
+            <li>why you're making this application</li>
+            <li>the section of the <a href="./help/children-acts" target="_blank">Children Act</a> under which the child is looked after (if this applies)</li>
+        </ul>
+
+        <h3 class="govuk-heading-m">If the child is subject to an Interim Care Order, you also need to send:</h3>
+        <ul class="list list-bullet">
+            <li>original of the Interim Care Order showing the date the order expires (it will need to be valid on the date the new passport is issued)</li>
+        </ul>
+
+        <h3 class="govuk-heading-m">If the child is subject to an Accommodated Care Order, you also need to send:</h3>
+        <ul class="list list-bullet">
+            <li>letter of consent from the person with parental responsibility for the child</li>
+        </ul>
+
+    {% elif values['relationship-applicant'] === 'Other' %}
+        <h3 class="govuk-heading-m">If you're caring for a child in the absence of anyone with parental responsibility or court involvement, send the following:</h3>
+        <ul class="list list-bullet">
+            <li>evidence to prove your responsibility for the child – if you aren't sure what documents you need <a href="https://www.passport.service.gov.uk/help">contact the Passport Adviceline</a></li>
+        </ul>
+    {% endif %}
+
+{% elif values['16-to-18'] or values['rising-16'] %}
+    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other' %}
+        {% if values['lost-stolen'] == true and (not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18) %}
+            {# First `Send the following` block not shown #}
+            <h3 class="govuk-heading-m">If you don't have parental responsibility, send the following:</h3>
+        {% else %}
+            <h3 class="govuk-heading-m">If you don't have parental responsibility, also send the following:</h3>
+        {% endif %}
+        <ul class="list list-bullet">
+            <li>a signed and dated letter from the person with parental responsibility giving permission for you to make the application</li>
+        </ul>
+    {% endif %}
+
+{% else %} {# Over 18s #}
+    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other' %}
+        {% if values['lost-stolen'] == true and (not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18) %}
+            {# First `Send the following` block not shown #}
+            <h3 class="govuk-heading-m">Send 1 of the following:</h3>
+        {% else %}
+            <h3 class="govuk-heading-m">And 1 of the following:</h3>
+        {% endif %}
+        <ul class="list list-bullet">
+            <li>a signed and dated letter (on letterheaded paper) from a healthcare professional, for example a doctor or carer confirming why the applicant can't apply</li>
+            <li>court order</li>
+            <li>lasting power of attorney</li>
+        </ul>
+    {% endif %}
+
+{% endif %}
