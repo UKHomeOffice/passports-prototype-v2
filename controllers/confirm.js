@@ -597,8 +597,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     // Logic to remove fields from stack
     // Adult Renewal
     if (values['passport-before'] == true &&
-        values['old-blue'] == false &&
-        values['16-or-older'] == true
+        values['16-or-older'] == true &&
+        (values['old-blue'] == false || values['lost-stolen'] == true)
     ) {
         console.log('DELETE parents fields')
         response.sections.pop({
