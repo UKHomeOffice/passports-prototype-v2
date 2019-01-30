@@ -10,11 +10,27 @@
             <p>We've sent confirmation to:
             {{values.email}}<br> <a href="">Download your confirmation</a></p>
         </div>
-        <p> Your application has been saved.<br>Application reference <strong>PEX 319 825 680X</strong></p>
-        
+
         {{#nunjucks}}
+
+        {% if values['lost-stolen-no-docs'] %}
+
+        <p> Your application has been saved and we're now processing it.
+
+        {% else %}
+
+        <p> Your application has been saved.
+
+        {% endif %}
+
+
+
+        <br>Application reference <strong>PEX 319 825 680X</strong></p>
+        
             {% if values['lost-stolen-no-docs'] and values['16-or-older'] %}
-                <h2>lost stolen no docs over 16 here...</h2>
+                <h2>Track your application</h2>
+                <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking">https://www.passport.service.gov.uk/track</a></p>
+
             {% else %}
                 <h1>What you need to do</h1>
                 <p>Before we can work on your application, you need to:</p>
@@ -88,7 +104,7 @@
                 {% endif %}
             {% endif %}
 
-            {% if (values['passport-before'] and not values['old-blue']) and not values['lost-stolen'] %}
+            {% if ((values['passport-before'] and not values['old-blue']) and not values['lost-stolen']) or values['lost-stolen-no-docs'] %}
                 {# >=12 Renewals #}
                 {% if values['applicant-age'] >= 12 %}
                     <a href="" class="button">Give feedback</a><br><br>
