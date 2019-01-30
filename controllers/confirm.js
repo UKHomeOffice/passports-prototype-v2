@@ -59,7 +59,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         values['dual-nationality'] == false &&
         values['change-name'] == false && 
         values['application-for-someone-else'] == false ||
-        (values['16-or-older'] == false && values['application-for-someone-else'] == true && (values['relationship-applicant'] == "Mother" || values['relationship-applicant'] == "Father"))
+        (values['lost-stolen'] == true && values['16-or-older'] == false && values['application-for-someone-else'] == true && (values['relationship-applicant'] == "Mother" || values['relationship-applicant'] == "Father"))
         ) {  
         req.sessionModel.set('lost-stolen-no-docs', true);
     } else {
@@ -597,8 +597,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     // Logic to remove fields from stack
     // Adult Renewal
     if (values['passport-before'] == true &&
-        values['old-blue'] == false &&
-        values['16-or-older'] == true
+        values['16-or-older'] == true &&
+        (values['old-blue'] == false || values['lost-stolen'] == true)
     ) {
         console.log('DELETE parents fields')
         response.sections.pop({

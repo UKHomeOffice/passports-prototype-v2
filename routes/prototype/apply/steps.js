@@ -76,16 +76,16 @@ module.exports = {
             target: '/home-address-manual-prototype',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == true &&
-                    req.session['hmpo-wizard-common']['old-blue'] == false &&
-                    req.session['hmpo-wizard-common']['16-or-older'] == true;
+                    req.session['hmpo-wizard-common']['16-or-older'] == true &&
+                    (req.session['hmpo-wizard-common']['old-blue'] == false || req.session['hmpo-wizard-common']['lost-stolen'] == true);
+                    
             }
         }, {
             target: '/parents',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == true &&
-                    req.session['hmpo-wizard-common']['old-blue'] == false &&
-                    req.session['hmpo-wizard-common']['16-or-older'] == false ||
-                    req.session['hmpo-wizard-common']['lost-stolen'] == true;
+                    req.session['hmpo-wizard-common']['16-or-older'] == false &&
+                    (req.session['hmpo-wizard-common']['old-blue'] == false || req.session['hmpo-wizard-common']['lost-stolen'] == true);
             }
         }, {
             target: '/naturalisation-registration-details',
@@ -367,8 +367,19 @@ module.exports = {
     '/summary': {
         controller: require('../../../controllers/confirm'),
         template: 'confirm',
-        next: '/csig-required',
-        forks: [{ // For prototype purpose, set csig vars to false
+        next: '/documents-required',
+        forks: [{ // if lost and stolen with no docs
+            target: '/cost',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['lost-stolen-no-docs'] == true 
+            }
+        },{ // if csig required
+            target: '/csig-required',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false ||
+                    req.session['hmpo-wizard-common']['12-or-older'] == false
+            }
+        },{ // For prototype purpose, set csig vars to false
             condition: function (req, res) {
                 req.session['hmpo-wizard-common']['routeFromCsig'] = false
                 req.session['hmpo-wizard-common']['trackWaiting'] = false

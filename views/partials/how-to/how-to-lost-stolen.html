@@ -5,15 +5,16 @@
     </header>
     <div class="grid-row">
       <div class="column-two-thirds">
+        {{#nunjucks}}
         <ul>
           <li><span class="circle circle-step">1</span>
             <h2>Get a digital passport photo</h2>
-            <p style="margin-left:32px;">We'll show you how to get a digital photo that <a href="../../prototype/help/photo-rules">meets the rules</a>.</p>
+            <p style="margin-left:32px;">We’ll show you how to get a digital photo.</p>
           </li>
 
           <li><span class="circle circle-step">2</span>
             <h2>Apply and pay online</h2>
-            {{#nunjucks}}
+            
               {% if values['applicant-age'] >= 16 and values['application-country'] === '' %}
                 <p style="margin-left:32px;"> A standard passport costs £75.50.</p>
               {% elif values['applicant-age'] < 16 and values['application-country'] === '' %}
@@ -24,17 +25,17 @@
               {% elif values['applicant-age'] < 16 and values['application-country'] !== '' %}
                 <p style="margin-left:32px;"> A standard passport costs £56 plus a £19.86 courier fee.</p>
               {% endif %}
-            {{/nunjucks}}
+            
           </li>
-
-          <li>
-            <span class="circle circle-step">3</span>
-            <h2>Ask someone to confirm your identity</h2>
-            <p style="margin-left:32px;">They can <a href="../../guidance/confirming-your-identity" target="_blank">confirm your identity online</a> without a printed photo.</p>
-          </li>
-
+          {% if not values['12-or-older'] %}
+            <li>
+              <span class="circle circle-step">3</span>
+              <h2>Ask someone to confirm your identity</h2>
+              <p style="margin-left:32px;">They can <a href="help/confirming-your-identity" target="_blank">confirm your identity online</a> without a printed photo.</p>
+            </li>
+          {% endif %}
         </ul>
-
+        {{/nunjucks}}
         {{#input-submit}}{{/input-submit}}
 
         <details>
