@@ -77,15 +77,15 @@ module.exports = {
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == true &&
                     req.session['hmpo-wizard-common']['16-or-older'] == true &&
-                    (req.session['hmpo-wizard-common']['old-blue'] == false || req.session['hmpo-wizard-common']['lost-stolen'] == true)
+                    (req.session['hmpo-wizard-common']['old-blue'] == false || req.session['hmpo-wizard-common']['lost-stolen'] == true);
                     
             }
         }, {
             target: '/parents',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == true &&
-                    req.session['hmpo-wizard-common']['old-blue'] == false &&
-                    req.session['hmpo-wizard-common']['16-or-older'] == false;
+                    req.session['hmpo-wizard-common']['16-or-older'] == false &&
+                    (req.session['hmpo-wizard-common']['old-blue'] == false || req.session['hmpo-wizard-common']['lost-stolen'] == true);
             }
         }, {
             target: '/naturalisation-registration-details',
