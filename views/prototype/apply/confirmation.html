@@ -18,7 +18,7 @@
             {% else %}
                 <h1>What you need to do</h1>
                 <p>Before we can work on your application, you need to:</p>
-                {% if (values['passport-before'] and not values['old-blue']) and not values['lost-stolen'] %}
+                {% if (values['passport-before'] and not values['old-blue']) and (not values['lost-stolen-no-docs'] and values['16-or-older']) %}
                     {# >=12 Renewals #}
                     {% if values['applicant-age'] >= 12 %}
                         {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
