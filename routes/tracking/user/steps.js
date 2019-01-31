@@ -10,6 +10,11 @@ module.exports = {
     next: '/need-csig',
     backLink: './',
     forks: [{
+      target: '/application-in-queue',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'application-in-queue';
+      }
+    },{
       target: '/send-book',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'send-passport';
@@ -90,6 +95,9 @@ module.exports = {
   },
   '/application-submitted': {
     next: '../csig/'
+  },
+  '/application-in-queue': {
+  
   },
   '/paper-application-select':{
     backLink: './who-can',
