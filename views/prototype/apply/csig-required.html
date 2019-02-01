@@ -10,11 +10,20 @@
 
 {{< hmpo-partials-form}}
 {{$form}}
-    <p>You'll need to ask someone to check this photo to <a href="./help/confirming-your-identity" target="_blank">confirm your identity</a>.</p>
+{{#nunjucks}}
+    <p>You'll need to ask someone to check this photo to <a href="./help/confirming-your-identity" target="_blank">confirm your identity</a>.
+
+{% if values['lost-stolen'] %}
+    This is because you're replacing a lost or stolen passport.     
+{% endif %}
+
+</p>
 
     <p>The way they can do this has changed &ndash; they can do it online. They don't have to sign a printed photo.</p>
 
     <p>We'll tell you what you need to do after you've paid.</p>
+
+{{/nunjucks}}
 
     {{#input-submit}}{{/input-submit}}
 {{/form}}
@@ -28,7 +37,13 @@
         <div class="photo-preview-inner">
             <h2 class="heading-medium">Your photo</h2>
             <div class="photo">
-                <img src="../../public/images/thumbnail.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
+                {{#nunjucks}}
+                    {% if values['applicant-age'] <= 11 %}
+                        <img src="/public/images/thumbnail-child.jpg" alt="Your photo" title="Your photo" width="150">
+                    {% else %}
+                        <img src="/public/images/thumbnail.jpeg" alt="Your photo" title="Your photo" width="150">
+                    {% endif %}
+                {{/nunjucks}}
             </div>
         </div>
     </div>

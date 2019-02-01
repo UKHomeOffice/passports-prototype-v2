@@ -6,6 +6,7 @@ module.exports = {
         ],
         backLink: '../startpage',
         next: '/first-uk',
+        controller: require('../../../controllers/is-overseas'), // Sets the country to GB if not overseas
         forks: [{
             target: '/../overseas/information/syria',
             condition: function (req, res) {
@@ -28,9 +29,8 @@ module.exports = {
     },
     '/you-need-a-different-service': {},
     '/lost-stolen': {
-        backLink: './first-uk',
         fields: [
-            'lost-stolen'
+            'lost-stolen',
         ],
         next: '/dob',
         forks: [{
@@ -41,8 +41,14 @@ module.exports = {
             }
         }]
     },
+    '/lost': {
+        fields: [
+            'lost-reference',
+            'lost-stolen-reported'
+        ],
+        next: '/dob'
+    },
     '/dob': {
-        backLink: './lost-stolen',
         controller: require('../../../controllers/check-dob'),
         fields: [
             'age-day',
@@ -51,6 +57,11 @@ module.exports = {
         ],
         next: '/passport-date-of-issue',
         forks: [{
+                target: '/dual-national',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['lost-stolen'] == true
+                }
+            }, {
                 target: '/naturalisation-registration-details',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['passport-before'] == false
@@ -66,8 +77,9 @@ module.exports = {
         ]
     },
     '/country-birth': {
-        backLink: './dob',
-        fields: ['country-birth'],
+        fields: [
+            'country-birth'
+        ],
         next: '/../overseas/overseas-british',
         forks: [{
             target: '/../overseas/information/spain-first',
@@ -82,20 +94,26 @@ module.exports = {
         }]
     },
     '/naturalisation-registration-details': {
-        fields: ['naturalisation-registration-certificate'],
+        fields: [
+            'naturalisation-registration-certificate'
+        ],
         next: '/dual-national'
     },
-    '/lost': {},
     '/application-method': {},
     '/passport-date-of-issue': {
-        backLink: './lost-stolen',
         fields: [
             'issue-day',
             'issue-month',
             'issue-year',
             'passport-issuing-authority'
         ],
-        next: '/passport-damaged'
+        next: '/passport-damaged',
+        forks: [{ // If their passport is lost/stolen
+            target: '/dual-national',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['lost-stolen'] == true;
+            }
+        }]
         // Issue date = 91 - 03 && Issue auth = Other && Over 16 = Yes
         // Issue date = 91 - 03 && Issue auth = HMPO && Over 16 = Yes
         // Issue date = 94 - 97 && Issue auth = HMPO && Over 16 = Yes
@@ -104,7 +122,10 @@ module.exports = {
     },
     '/passport-damaged': {
         controller: require('../../../controllers/check-old-blue'),
-        fields: ['passport-damaged', 'damaged-reason'],
+        fields: [
+            'passport-damaged',
+            'damaged-reason'
+        ],
         next: '/dual-national', // If they are NOT a UK Hidden FTA
         forks: [{ // If they are a UK Hidden FTA
             target: '/naturalisation-registration-details',
@@ -114,18 +135,22 @@ module.exports = {
         }]
     },
     '/dual-national': {
-        fields: ['dual-nationality'],
+        fields: [
+            'dual-nationality'
+        ],
         next: '/summary',
         forks: [{
             target: '/british-citizen',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['application-country'] !== '' &&
+                return req.session['hmpo-wizard-common']['is-overseas'] === true &&
                     req.session['hmpo-wizard-common']['passport-before']
             }
         }]
     },
     '/british-citizen': {
-        fields: ['british-citizen'],
+        fields: [
+            'british-citizen'
+        ],
         next: '/summary',
         forks: [{
             target: '/../overseas/overseas-british',

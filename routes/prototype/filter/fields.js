@@ -183,7 +183,7 @@ module.exports = {
     },
     options: [{
         value: true,
-        label: 'Yes'
+        label: 'Yes',
       },
       {
         value: false,
@@ -196,6 +196,33 @@ module.exports = {
     ],
     className: 'inline'
   },
+  'lost-stolen-reported': {
+    legend: {
+      value: 'Have you reported it?',
+      className: 'visuallyhidden'
+    },
+    options: [{
+        value: true,
+        label: 'Yes'
+      },
+      {
+        value: false,
+        label: 'No',
+        toggle: 'lost-stolen-reported'
+      }
+    ],
+    formatter: ['boolean'],
+    validate: [
+      'required',
+      {
+        type:'equal',
+        arguments:[true],
+        redirect:'https://www.gov.uk/report-a-lost-or-stolen-passport'
+      }
+    ],
+    className: 'inline'
+  },
+  
   'passport-colour': {
     legend: {
       value: 'What colour of UK passport did you have before?',
@@ -343,7 +370,6 @@ module.exports = {
   'damaged-reason': {
     validate: [
       'required',
-      'alphanumex1',
       {
         type: 'maxlength',
         arguments: 250

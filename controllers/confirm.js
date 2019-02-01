@@ -54,6 +54,17 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         sections: []
     });
 
+    // If no docs are required for lost and stolen
+    if (values['lost-stolen'] == true &&
+        values['dual-nationality'] == false &&
+        values['change-name'] == false &&
+        values['application-for-someone-else'] == false
+    ) {
+        req.sessionModel.set('lost-stolen-no-docs', true);
+    } else {
+        req.sessionModel.set('lost-stolen-no-docs', false);
+    };
+
     // Third-party
     var thirdPartyFields = [];
 
@@ -103,24 +114,30 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         });
     }
 
-
     // Old passport
     var oldPassportFields = [];
-
     response.sections.push({
         className: 'old-passport-details',
         title: 'Old passport',
         fields: oldPassportFields
     });
-    oldPassportFields.push({
-        step: this.getEditStep('passport-number'),
-        title: 'Passport number',
-        value: values['passport-number']
-    }, {
-        step: this.getEditStep('expiry-year'),
-        title: 'Expiry date',
-        value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
-    });
+    if (values['passport-number-lost-stolen']) {
+        oldPassportFields.push({
+            step: this.getEditStep('passport-number-lost-stolen'),
+            title: 'Passport number',
+            value: values['passport-number-lost-stolen']
+        });
+    } else {
+        oldPassportFields.push({
+            step: this.getEditStep('passport-number'),
+            title: 'Passport number',
+            value: values['passport-number']
+        }, {
+            step: this.getEditStep('expiry-year'),
+            title: 'Expiry date',
+            value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
+        });
+    }
     if (values['what-damaged']) {
         oldPassportFields.push({
             step: this.getEditStep('what-damaged'),
@@ -165,7 +182,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
 
     // Logic to remove fields from stack
     if (values['naturalisation-registration-certificate'] == false || // NOT naturalised or registered
-        values['old-blue'] == false // Passport issued On or After 01/01/1994 (NOT Old blue) Renewal
+        values['old-blue'] == false || // Passport issued On or After 01/01/1994 (NOT Old blue) Renewal
+        values['lost-stolen'] == true // Passport has been lost/stolen
     ) {
         console.log('DELETE nat/reg fields')
         response.sections.pop({
@@ -261,7 +279,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     } else {
         newPassportFields.push({
             title: 'Your photo',
-            custom: '<div class="photo"><img src="../../public/images/thumbnail.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150"></div>'
+            custom: '<div class="photo"><img src="../../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150"></div>'
         });
     }
 
@@ -578,8 +596,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     // Logic to remove fields from stack
     // Adult Renewal
     if (values['passport-before'] == true &&
-        values['old-blue'] == false &&
-        values['16-or-older'] == true
+        values['16-or-older'] == true &&
+        (values['old-blue'] == false || values['lost-stolen'] == true)
     ) {
         console.log('DELETE parents fields')
         response.sections.pop({
@@ -666,81 +684,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     });
 
 
-    // Cost
-    response.sections.push({
-        className: 'cost-details',
-        title: 'Cost',
-        fields: [{
-                step: this.getEditStep('passport-options'),
-                title: 'New passport',
-                value: function () {
-                    var output = [];
-                    if (values['passport-options'] == '50') {
-                        var cost = currency(model.standardPassport() + model.largePassport())
-                        output.push('Jumbo passport');
-                        output.push(cost);
-                    } else {
-                        output.push('Standard passport');
-                        output.push(currency(model.standardPassport()));
-                    }
-                    return output.join('<br>');
-                }
-            },
-            // { /* Keep this here for old blues */
-            //   step: values.veteran ? null : this.getEditStep('secure-return'),
-            //   title: values.veteran ? 'Delivery' : 'Old passport',
-            //   value: function () {
-            //     if (values['secure-return']) {
-            //       var output = 'You need to post your old passport to us. We’ll return it to you by ';
-            //       var cost = model.delivery();
-            //       if (cost) {
-            //         output += ' secure delivery. <br/>£5.00 ';
-            //       }
-            //       return output;
-            //     } else {
-            //       return 'You need to post your old passport to us. We’ll return it to you by standard post. <br/>£0.00';
-            //     }
-            //   }
-            // },
-            { /* FTA docs */
-                step: values.veteran ? null : this.getEditStep('secure-return'),
-                title: function () {
-                    if (values.veteran) {
-                        return 'Delivery'
-                    } else if (values['overseas-service']) {
-                        return 'Courier fee'
-                    } else {
-                        return 'Documents'
-                    }
-                },
-                value: function () {
-                    if (values['secure-return'] && values['application-country'] === '') {
-                        var output = 'You need to post your documents to us. We’ll return them to you by ';
-                        var cost = model.delivery();
-                        if (cost) {
-                            output += ' secure delivery. <br/>£' + cost;
-                        }
-                        return output;
-                    } else if (values['overseas-service']) {
-                        if (values['passport-before']) {
-                            return 'Your old passport and extra documents will be in a different envelope to your new passport £19.86'
-                        } else {
-                            return 'Your documents will be in a different envelope to your new passport £19.86'
-                        }
-                    } else {
-                        return 'You need to post your documents to us. We’ll return them to you by standard post. <br/>£0.00';
-                    }
-                }
-            },
-            {
-                className: 'cost',
-                title: 'Total',
-                value: function () {
-                    return currency(model.getCost());
-                }
-            }
-        ]
-    });
+   
     callback(null, response);
 };
 

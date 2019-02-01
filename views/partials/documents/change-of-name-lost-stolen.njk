@@ -1,0 +1,438 @@
+{% if values['change-of-name-reason'] == 'Marriage-or-civil-partnership' %}
+    <h2 class="govuk-heading-l">Applicant's documents</h2>
+    <h3 class="govuk-heading-m">When do you want the new passport in your new name?</h3>
+    <div class="accordion" id="name-change-accordion">
+
+        <div class="accordion-section" id="after-the-ceremony">
+            <div class="accordion-section-header">
+                <h2 class="heading-small">After the ceremony</h2>
+            </div>
+
+            <div class="accordion-section-body">
+                <h3 class="govuk-heading-m">Send the following:</h3>
+                <ul class="list list-bullet">
+                    {% for item in documents %}
+                        <li>{{item}}</li>
+                    {% endfor %}
+                    <li>marriage or civil partnership certificate</li>
+                    {% include "views/partials/documents/third-party-first-list.njk" %}
+                </ul>
+                {% if values['lost-stolen'] == true %}
+                    {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                {% else %}
+                    {% include "views/partials/documents/third-party.njk" %}
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="accordion-section" id="before-the-ceremony">
+            <div class="accordion-section-header">
+                <h2 class="heading-small">Before the ceremony</h2>
+            </div>
+
+            <div class="accordion-section-body">
+                <h3 class="govuk-heading-m">Send the following:</h3>
+                <ul class="list list-bullet">
+                    {% for item in documents %}
+                        <li>{{item}}</li>
+                    {% endfor %}
+                    <li>a completed <a href="https://www.gov.uk/government/publications/passports-for-newly-weds-and-civil-partners" target="_blank">passports for newly weds and civil partners</a> form</li>
+                    {% include "views/partials/documents/third-party-first-list.njk" %}
+                </ul>
+                {% if values['lost-stolen'] == true %}
+                    {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                {% else %}
+                    {% include "views/partials/documents/third-party.njk" %}
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+
+{% elif values['change-of-name-reason'] == 'Divorce-or-dissolution' %}
+    <h2 class="govuk-heading-l">Applicant's documents</h2>
+    <h3 class="govuk-heading-m">Send the following:</h3>
+    <ul class="list list-bullet">
+        {% for item in documents %}
+            <li>{{item}}</li>
+        {% endfor %}
+        <li>full birth or adoption certificate</li>
+        <li>decree absolute or final order</li>
+        <li>marriage or civil partnership certificate (if you don’t have the original you need to get a replacement)</li>
+        <li>a signed and dated letter saying that you use your previous name for all purposes</li>
+        {% include "views/partials/documents/third-party-first-list.njk" %}
+    </ul>
+
+    <h3 class="govuk-heading-m">And 1 of the following from the last 12 months, that shows you’re using your new name:</h3>
+    <ul class="list list-bullet">
+        {% if values['apply-uk'] %}
+            <li>utility bill</li>
+            <li>bank statement</li>
+        {% endif %}
+        <li>letter from your employer</li>
+        <li>driving licence</li>
+        <li>medical card</li>
+        <li>letter from your local council or a government department</li>
+        {% if not values['apply-uk'] %} {# OVS Group 1 #}
+            <li>national identity card (a colour photocopy will do)</li>
+            <li>voter's card</li>
+            <li>visa or residence permit (a colour photocopy will do)</li>
+        {% endif %}
+    </ul>
+    {% if values['lost-stolen'] == true %}
+        {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+    {% else %}
+        {% include "views/partials/documents/third-party.njk" %}
+    {% endif %}
+
+    <hr>
+
+{% elif values['change-of-name-reason'] == 'Gender-transition' %}
+    {% if not values['passport-before'] or values['old-blue'] %} {# FTA #}
+
+        {# Pop documents, populated in fta.njk, from start of array #}
+        {% if values['old-blue'] %}
+            {% set documents = (documents.shift(), documents) %} {# Remove `old passport` from array #}
+            {% set documents = (documents.shift(), documents) %} {# Remove `full birth or adoption certificate` or `naturalisation or registration certificate` from array #}
+        {% else %}
+            {% set documents = (documents.shift(), documents) %} {# Remove `full birth or adoption certificate` or `naturalisation or registration certificate` from array #}
+        {% endif %}
+
+        <h2 class="govuk-heading-l">Applicant's documents</h2>
+        <h3 class="govuk-heading-m">Do you have a birth certificate in your acquired gender, or a gender recognition certificate?</h3>
+        <div class="accordion" id="name-change-accordion">
+
+            <div class="accordion-section" id="gender-recognition-certificate-false">
+                <div class="accordion-section-header">
+                    <h2 class="heading-small">I don't have a gender recognition certificate, or a birth certificate in my acquired gender</h2>
+                </div>
+
+                <div class="accordion-section-body">
+                    <h3 class="govuk-heading-m">Send the following:</h3>
+                    <ul class="list list-bullet">
+                        {% if values['old-blue'] %} {# Add back after being removed from array #}
+                            <li>old passport</li>
+                        {% endif %}
+                        {% if values['naturalisation-registration-certificate'] %} {# Replace with `naturalisation or registration certificate` #}
+                            <li>naturalisation or registration certificate</li>
+                        {% elif not values['naturalisation-registration-certificate'] %}
+                            <li>full birth or adoption certificate in your birth gender</li>
+                        {% endif %}
+                        <li>a letter from your doctor or medical consultant confirming that your change of gender is likely to be permanent</li>
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
+                        {% include "views/partials/documents/third-party-first-list.njk" %}
+                    </ul>
+
+                    <h3 class="govuk-heading-m">And 1 of the following that proves you changed your name:</h3>
+                    <ul class="list list-bullet">
+                        {% if values['apply-uk'] %}
+                            <li>deed poll</li>
+                        {% elif not values['apply-uk'] %} {# OVS Group 1 #}
+                            <li>enrolled deed poll</li>
+                        {% endif %}
+                        <li>change of name deed</li>
+                        <li>statutory declaration</li>
+                        <li>affidavit</li>
+                    </ul>
+
+                    <h3 class="govuk-heading-m">And 1 of the following from the last 12 months, that shows you’re using your new name:</h3>
+                    <ul class="list list-bullet">
+                        {% if values['apply-uk'] %}
+                            <li>utility bill</li>
+                            <li>bank statement</li>
+                        {% endif %}
+                        <li>letter from your employer</li>
+                        <li>driving licence</li>
+                        <li>medical card</li>
+                        <li>letter from your local council or a government department</li>
+                        {% if not values['apply-uk'] %} {# OVS Group 1 #}
+                            <li>national identity card (a colour photocopy will do)</li>
+                            <li>voter's card</li>
+                            <li>visa or residence permit (a colour photocopy will do)</li>
+                        {% endif %}
+                    </ul>
+                    {% if values['lost-stolen'] == true %}
+                        {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                    {% else %}
+                        {% include "views/partials/documents/third-party.njk" %}
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="accordion-section" id="gender-recognition-certificate-true">
+                <div class="accordion-section-header">
+                    <h2 class="heading-small">I have a gender recognition certificate</h2>
+                </div>
+
+                <div class="accordion-section-body">
+                    <h3 class="govuk-heading-m">Send the following:</h3>
+                    <ul class="list list-bullet">
+                        {% if values['old-blue'] %} {# Add back after being removed from array #}
+                            <li>old passport</li>
+                        {% endif %}
+                        <li>gender recognition certificate</li>
+                        {% if values['naturalisation-registration-certificate'] %} {# Replace with `naturalisation or registration certificate` #}
+                            <li>naturalisation or registration certificate</li>
+                        {% elif not values['naturalisation-registration-certificate'] %}
+                            <li>full birth or adoption certificate in your birth gender</li>
+                        {% endif %}
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
+                        {% include "views/partials/documents/third-party-first-list.njk" %}
+                    </ul>
+                    {% if values['lost-stolen'] == true %}
+                        {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                    {% else %}
+                        {% include "views/partials/documents/third-party.njk" %}
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="accordion-section" id="gender-recognition-certificate-false">
+                <div class="accordion-section-header">
+                    <h2 class="heading-small">I have a birth certificate in my acquired gender</h2>
+                </div>
+
+                <div class="accordion-section-body">
+                    <h3 class="govuk-heading-m">Send the following:</h3>
+                    <ul class="list list-bullet">
+                        {% if values['old-blue'] %} {# Add back after being removed from array #}
+                            <li>old passport</li>
+                        {% endif %}
+                        {% if values['naturalisation-registration-certificate'] %} {# Add back after being removed from array #}
+                            <li>naturalisation or registration certificate</li>
+                        {% endif %}
+                        <li>full birth or adoption certificate in your acquired gender</li>
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
+                        {% include "views/partials/documents/third-party-first-list.njk" %}
+                    </ul>
+                    {% if values['lost-stolen'] == true %}
+                        {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                    {% else %}
+                        {% include "views/partials/documents/third-party.njk" %}
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+
+    {% elif values['passport-before'] %} {# Renewal #}
+        <h2 class="govuk-heading-l">Applicant's documents</h2>
+        <h3 class="govuk-heading-m">Do you have a gender recognition certificate?</h3>
+        <div class="accordion" id="name-change-accordion">
+
+            <div class="accordion-section" id="gender-recognition-certificate-false">
+                <div class="accordion-section-header">
+                    <h2 class="heading-small">I don't have a gender recognition certificate</h2>
+                </div>
+
+                <div class="accordion-section-body">
+                    <h3 class="govuk-heading-m">Send the following:</h3>
+                    <ul class="list list-bullet">
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
+                        <li>a letter from your doctor or medical consultant confirming that your change of gender is likely to be permanent</li>
+                        {% include "views/partials/documents/third-party-first-list.njk" %}
+                    </ul>
+
+                    <h3 class="govuk-heading-m">And 1 of the following that proves you changed your name:</h3>
+                    <ul class="list list-bullet">
+                        {% if values['apply-uk'] %}
+                            <li>deed poll</li>
+                        {% elif not values['apply-uk'] %} {# OVS Group 1 #}
+                            <li>enrolled deed poll</li>
+                        {% endif %}
+                        <li>change of name deed</li>
+                        <li>statutory declaration</li>
+                        <li>affidavit</li>
+                    </ul>
+
+                    <h3 class="govuk-heading-m">And 1 of the following from the last 12 months, that shows you’re using your new name:</h3>
+                    <ul class="list list-bullet">
+                        {% if values['apply-uk'] %}
+                            <li>utility bill</li>
+                            <li>bank statement</li>
+                        {% endif %}
+                        <li>letter from your employer</li>
+                        <li>driving licence</li>
+                        <li>medical card</li>
+                        <li>letter from your local council or a government department</li>
+                        {% if not values['apply-uk'] %} {# OVS Group 1 #}
+                            <li>national identity card (a colour photocopy will do)</li>
+                            <li>voter's card</li>
+                            <li>visa or residence permit (a colour photocopy will do)</li>
+                        {% endif %}
+                    </ul>
+                    {% if values['lost-stolen'] == true %}
+                        {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                    {% else %}
+                        {% include "views/partials/documents/third-party.njk" %}
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="accordion-section" id="gender-recognition-certificate-true">
+                <div class="accordion-section-header">
+                    <h2 class="heading-small">I do have a gender recognition certificate</h2>
+                </div>
+
+                <div class="accordion-section-body">
+
+                    {% if (values['lost-stolen'] == true and values['dual-nationality'] == false) and ((not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18)) %}
+                        {# Show nothing #}
+                    {% else %}
+                        <h3 class="govuk-heading-m">Send the following:</h3>
+                        <ul class="list list-bullet">
+                            {% for item in documents %}
+                                <li>{{item}}</li>
+                            {% endfor %}
+                            {% include "views/partials/documents/third-party-first-list.njk" %}
+                        </ul>
+                    {% endif %}
+                    
+                    {% if values['lost-stolen'] == true and (not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18) %}
+                        {# First `Send the following` block not shown #}
+                        <h3 class="govuk-heading-m">Send 1 of the following:</h3>
+                    {% else %}
+                        <h3 class="govuk-heading-m">And 1 of the following:</h3>
+                    {% endif %}
+                    <ul class="list list-bullet">
+                        <li>gender recognition certificate</li>
+                        <li>a new birth or adoption certificate in your acquired gender</li>
+                    </ul>
+                    {% if values['lost-stolen'] == true %}
+                        {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                    {% else %}
+                        {% include "views/partials/documents/third-party.njk" %}
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+    {% endif %}
+
+{% elif values['change-of-name-reason'] == 'I-changed-my-name-another-way' %}
+    <h2 class="govuk-heading-l">Applicant's documents</h2>
+    <h3 class="govuk-heading-m">How did you change your name?</h3>
+    <div class="accordion" id="name-change-accordion">
+
+        <div class="accordion-section" id="first-name">
+            <div class="accordion-section-header">
+                <h2 class="heading-small" style="width:70%">I changed the spelling or order of my first names, or dropped a first name</h2>
+            </div>
+
+            <div class="accordion-section-body">
+
+                {% if (values['lost-stolen'] == true and values['dual-nationality'] == false) and ((not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18)) %}
+                    {# Show nothing #}
+                {% else %}
+                    <h3 class="govuk-heading-m">Send the following:</h3>
+                    <ul class="list list-bullet">
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
+                        {% include "views/partials/documents/third-party-first-list.njk" %}
+                    </ul>
+                {% endif %}
+
+                {% if values['lost-stolen'] == true and (not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18) %}
+                    {# First `Send the following` block not shown #}
+                    <h3 class="govuk-heading-m">Send 2 of the following from the last 12 months, that show you’re using your new name:</h3>
+                {% else %}
+                    <h3 class="govuk-heading-m">And 2 of the following from the last 12 months, that show you’re using your new name:</h3>
+                {% endif %}
+                <ul class="list list-bullet">
+                    {% if values['apply-uk'] %}
+                        <li>utility bill</li>
+                        <li>bank statement</li>
+                    {% endif %}
+                    <li>letter from your employer</li>
+                    <li>driving licence</li>
+                    <li>medical card</li>
+                    <li>letter from your local council or a government department</li>
+                    {% if not values['apply-uk'] %} {# OVS Group 1 #}
+                        <li>national identity card (a colour photocopy will do)</li>
+                        <li>voter's card</li>
+                        <li>visa or residence permit (a colour photocopy will do)</li>
+                    {% endif %}
+                </ul>
+                {% if values['lost-stolen'] == true %}
+                    {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                {% else %}
+                    {% include "views/partials/documents/third-party.njk" %}
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="accordion-section" id="other">
+            <div class="accordion-section-header">
+                <h2 class="heading-small">I changed my name another way</h2>
+            </div>
+
+            <div class="accordion-section-body">
+
+                {% if (values['lost-stolen'] == true and values['dual-nationality'] == false) and ((not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18)) %}
+                    {# Show nothing #}
+                {% else %}
+                    <h3 class="govuk-heading-m">Send the following:</h3>
+                    <ul class="list list-bullet">
+                        {% for item in documents %}
+                            <li>{{item}}</li>
+                        {% endfor %}
+                        {% include "views/partials/documents/third-party-first-list.njk" %}
+                    </ul>
+                {% endif %}
+
+                {% if values['lost-stolen'] == true and (not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18) %}
+                    {# First `Send the following` block not shown #}
+                    <h3 class="govuk-heading-m">Send 1 of the following that proves you changed your name:</h3>
+                {% else %}
+                    <h3 class="govuk-heading-m">And 1 of the following that proves you changed your name:</h3>
+                {% endif %}
+                <ul class="list list-bullet">
+                    <li>marriage certificate</li>
+                    <li>civil partnership certificate</li>
+                    {% if values['apply-uk'] %}
+                        <li>deed poll</li>
+                    {% elif not values['apply-uk'] %} {# OVS Group 1 #}
+                        <li>enrolled deed poll</li>
+                    {% endif %}
+                    <li>change of name deed</li>
+                    <li>statutory declaration</li>
+                    <li>affidavit</li>
+                </ul>
+
+                <h3 class="govuk-heading-m">And 1 of the following from the last 12 months, that shows you’re using your new name:</h3>
+                <ul class="list list-bullet">
+                    {% if values['apply-uk'] %}
+                        <li>utility bill</li>
+                        <li>bank statement</li>
+                    {% endif %}
+                    <li>letter from your employer</li>
+                    <li>driving licence</li>
+                    <li>medical card</li>
+                    <li>letter from your local council or a government department</li>
+                    {% if not values['apply-uk'] %} {# OVS Group 1 #}
+                        <li>national identity card (a colour photocopy will do)</li>
+                        <li>voter's card</li>
+                        <li>visa or residence permit (a colour photocopy will do)</li>
+                    {% endif %}
+                </ul>
+                <p>If you've changed your name more than once, you'll need to send proof of every name change.</p>
+                {% if values['lost-stolen'] == true %}
+                    {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+                {% else %}
+                    {% include "views/partials/documents/third-party.njk" %}
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+
+{% endif %}

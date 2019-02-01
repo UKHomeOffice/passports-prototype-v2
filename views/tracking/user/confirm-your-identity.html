@@ -10,8 +10,14 @@
         <h1>Ask someone to confirm<br>your identity</h1>
       </header>
         <h2>What you need to do</h2>
-        <p>You need to ask someone to confirm your identity. We can't receive your documents until this is done.</p>
-        <p> Once your identity is confirmed, we’ll let you know where to send your documents.</p>
+        {{#nunjucks}}
+          {% if values['change-of-name-reason'] or not values['lost-stolen-no-docs'] %}
+            <p>You need to ask someone to confirm your identity. We can't receive your documents until this is done.</p>
+            <p>Once your identity is confirmed, we’ll let you know where to send your documents.</p>
+          {% else %}
+            <p>You need to ask someone to confirm your identity. We can't complete your application until this is done.</p>
+          {% endif %}
+        {{/nunjucks}}
         {{#input-submit}}{{/input-submit}}
         <!-- <details>
           <summary><span class="summary">If the person you ask can't do this online</span></summary>

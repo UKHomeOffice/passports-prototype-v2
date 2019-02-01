@@ -12,6 +12,9 @@ app.get('/children-acts', function (req, res, next) {
 app.get('/confirming-your-identity', function (req, res, next) {
     res.render('prototype/help/confirming-your-identity');
 });
+app.get('/group-applications', function (req, res, next) {
+    res.render('prototype/help/group-applications');
+});
 app.get('/identity-interviews', function (req, res, next) {
     res.render('prototype/help/identity-interviews');
 });

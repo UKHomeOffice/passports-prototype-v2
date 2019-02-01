@@ -11,7 +11,11 @@
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-        {{#radio-group}}lost-stolen{{/radio-group}}
+        <fieldset class="inline">
+
+            {{#radio-group}}lost-stolen{{/radio-group}}
+        </fieldset>
+        
         {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}

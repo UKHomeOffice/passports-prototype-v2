@@ -10,10 +10,16 @@
         {{> partials-how-to-how-to-fta}}
       {{/values.old-blue}}
       {{^values.old-blue}}
-        {{> partials-how-to-how-to-renew}}
+        <!-- lost/stolen -->
+        {{#values.lost-stolen}}
+          {{> partials-how-to-how-to-lost-stolen}}
+        {{/values.lost-stolen}}
+        {{^values.lost-stolen}}
+          {{> partials-how-to-how-to-renew}}
+        {{/values.lost-stolen}}   
       {{/values.old-blue}}
     {{/values.passport-before}}
-    <!-- First time applications  -->
+    <!-- First time applications -->
     {{^values.passport-before}}
       {{> partials-how-to-how-to-fta}}
     {{/values.passport-before}}
