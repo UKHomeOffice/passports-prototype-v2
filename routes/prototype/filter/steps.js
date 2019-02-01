@@ -6,6 +6,7 @@ module.exports = {
         ],
         backLink: '../startpage',
         next: '/first-uk',
+        controller: require('../../../controllers/is-overseas'), // Sets the country to GB if not overseas
         forks: [{
             target: '/../overseas/information/syria',
             condition: function (req, res) {
@@ -141,7 +142,7 @@ module.exports = {
         forks: [{
             target: '/british-citizen',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['application-country'] !== '' &&
+                return req.session['hmpo-wizard-common']['is-overseas'] === true &&
                     req.session['hmpo-wizard-common']['passport-before']
             }
         }]

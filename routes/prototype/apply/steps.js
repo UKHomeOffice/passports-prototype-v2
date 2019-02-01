@@ -78,7 +78,7 @@ module.exports = {
                 return req.session['hmpo-wizard-common']['passport-before'] == true &&
                     req.session['hmpo-wizard-common']['16-or-older'] == true &&
                     (req.session['hmpo-wizard-common']['old-blue'] == false || req.session['hmpo-wizard-common']['lost-stolen'] == true);
-                    
+
             }
         }, {
             target: '/parents',
@@ -308,13 +308,13 @@ module.exports = {
             target: '/relationship-applicant',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
-                    req.session['hmpo-wizard-common']['application-country'] === ''
+                    req.session['hmpo-wizard-common']['is-overseas'] === true
             }
         }, { // Overseas skip delivery page
             target: '/relationship-applicant',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
-                    req.session['hmpo-wizard-common']['application-country'] !== ''
+                    req.session['hmpo-wizard-common']['is-overseas'] === false
             }
         }]
     },
@@ -371,15 +371,15 @@ module.exports = {
         forks: [{ // if lost and stolen with no docs
             target: '/cost',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['lost-stolen-no-docs'] == true 
+                return req.session['hmpo-wizard-common']['lost-stolen-no-docs'] == true
             }
-        },{ // if csig required
+        }, { // if csig required
             target: '/csig-required',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == false ||
                     req.session['hmpo-wizard-common']['12-or-older'] == false
             }
-        },{ // For prototype purpose, set csig vars to false
+        }, { // For prototype purpose, set csig vars to false
             condition: function (req, res) {
                 req.session['hmpo-wizard-common']['routeFromCsig'] = false
                 req.session['hmpo-wizard-common']['trackWaiting'] = false
@@ -391,7 +391,7 @@ module.exports = {
         forks: [{ // if lost and stolen with no docs
             target: '/cost',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['lost-stolen-no-docs'] == true 
+                return req.session['hmpo-wizard-common']['lost-stolen-no-docs'] == true
             }
         }]
     },

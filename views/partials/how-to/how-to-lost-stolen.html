@@ -15,14 +15,14 @@
           <li><span class="circle circle-step">2</span>
             <h2>Apply and pay online</h2>
             
-              {% if values['applicant-age'] >= 16 and values['application-country'] === '' %}
+              {% if values['applicant-age'] >= 16 and values['is-overseas'] === false %}
                 <p style="margin-left:32px;"> A standard passport costs £75.50.</p>
-              {% elif values['applicant-age'] < 16 and values['application-country'] === '' %}
+              {% elif values['applicant-age'] < 16 and values['is-overseas'] === false %}
                 <p style="margin-left:32px;"> A standard passport costs £49.</p>
               <!-- Overseas-->
-              {% elif values['applicant-age'] >= 16 and values['application-country'] !== '' %}
+              {% elif values['applicant-age'] >= 16 and values['is-overseas'] === true %}
                 <p style="margin-left:32px;"> A standard passport costs £86 plus a £19.86 courier fee.</p>
-              {% elif values['applicant-age'] < 16 and values['application-country'] !== '' %}
+              {% elif values['applicant-age'] < 16 and values['is-overseas'] === true %}
                 <p style="margin-left:32px;"> A standard passport costs £56 plus a £19.86 courier fee.</p>
               {% endif %}
             
