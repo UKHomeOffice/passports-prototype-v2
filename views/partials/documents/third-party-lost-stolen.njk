@@ -11,10 +11,10 @@
                 giving consent for the issue of the child's new passport</li>
         </ul>
 
-    {% elif values['relationship-applicant'] === 'Social Worker' %}     
+    {% elif values['relationship-applicant'] === 'Social Worker' %}
         {% if values['lost-stolen'] == true and (not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18) %}
             {# First `Send the following` block not shown #}
-            <h3 class="govuk-heading-m">A signed and dated letter (on letterheaded paper) from the Head of Social Services to confirm:</h3>
+            <h3 class="govuk-heading-m">Send a signed and dated letter (on letterheaded paper) from the Head of Social Services to confirm:</h3>
         {% else %}
             <h3 class="govuk-heading-m">And a signed and dated letter (on letterheaded paper) from the Head of Social Services to confirm:</h3>
         {% endif %}
