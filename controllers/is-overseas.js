@@ -1,3 +1,11 @@
+/*
+Describe the use of this controller
+
+- Set the session vars for overseas
+- Set the application country to GB
+
+*/
+
 var util = require('util')
 var Base = require('hmpo-form-wizard').Controller
 
@@ -9,7 +17,6 @@ util.inherits(Controller, Base)
 
 Controller.prototype.successHandler = function (req, res, next) {
 
-  //Set the is-overseas flag
   if (req.sessionModel.get('application-country') !== '' && req.sessionModel.get('apply-uk') === false) {
     req.sessionModel.set('is-overseas', true);
   } else {

@@ -257,7 +257,9 @@ values['parent2-born-before-1983']) %}
 {% endif %}
 
 <!-- Overseas documents -->
-{% include "views/partials/documents/ftc-overseas.njk" %}
+{% if values['is-overseas'] %}
+  {% include "views/partials/documents/ftc-overseas.njk" %}
+{% endif %}
 
 <p>If any of the following apply, you'll need to send <a href="./help/additional-documents" target="_blank">additional
         documents</a>:<p>
