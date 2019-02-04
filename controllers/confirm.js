@@ -274,12 +274,12 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     if (values['applicant-age'] <= 11) {
         newPassportFields.push({
             title: 'Your photo',
-            custom: '<div class="photo"><img src="../../public/images/thumbnail-child.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150"></div>'
+            custom: '<div class="photo"><img src="../../public/images/photo/result/thumbnail-child.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150"></div>'
         });
     } else {
         newPassportFields.push({
             title: 'Your photo',
-            custom: '<div class="photo"><img src="../../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150"></div>'
+            custom: '<div class="photo"><img src="../../public/images/photo/result/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150"></div>'
         });
     }
 
