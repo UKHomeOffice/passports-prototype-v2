@@ -128,12 +128,24 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 title: 'Passport number',
                 value: values['passport-number-lost-stolen']
             });        
+        } else {
+            oldPassportFields.push({
+                step: this.getEditStep('passport-number-lost-stolen'),
+                title: 'Passport number',
+                value: 'Not supplied'
+            });  
         }
         if (values['expiry-year-lost']) {
             oldPassportFields.push({
                 step: this.getEditStep('expiry-year-lost'),
                 title: 'Expiry date',
                 value: moment(values['expiry-year-lost'] + '-' + values['expiry-month-lost'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
+            });
+        } else {
+            oldPassportFields.push({
+                step: this.getEditStep('expiry-year-lost'),
+                title: 'Expiry date',
+                value: 'Not supplied'
             });
         }
     }

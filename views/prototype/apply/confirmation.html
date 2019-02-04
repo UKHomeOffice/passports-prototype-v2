@@ -37,7 +37,7 @@
                 {% if (values['passport-before'] and not values['old-blue']) and (not values['lost-stolen-no-docs'] and values['12-or-older']) %}
                     {# >=12 Renewals #}
                     {% if values['applicant-age'] >= 12 %}
-                        {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
+                        {% if values['change-of-name-reason'] or values['application-for-someone-else'] or values['lost-stolen'] %}
                             <h2> Send us your documents </h2>
                             <p><a href="./docs-renew?status=confirm-documents" target="_blank">Check what you need to send</a></p>
                         {% else %}
