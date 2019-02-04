@@ -13,9 +13,9 @@ module.exports = {
         backLink: '../photo/final-checks',
         fields: [
             'passport-number-lost-stolen',
-            // 'expiry-day',
-            // 'expiry-month',
-            // 'expiry-year'
+            'expiry-day-lost',
+            'expiry-month-lost',
+            'expiry-year-lost'
         ],
         next: '/name'
     },

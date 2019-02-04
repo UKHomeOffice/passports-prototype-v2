@@ -43,6 +43,15 @@
         "expiry-year": {
             "label": "Year"
         },
+        "expiry-day-lost": {
+            "label": "Day"
+        },
+        "expiry-month-lost": {
+            "label": "Month"
+        },
+        "expiry-year-lost": {
+            "label": "Year"
+        },
         "issue-year": {
             "label": "Year"
         },

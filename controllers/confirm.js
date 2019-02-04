@@ -121,13 +121,23 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         title: 'Old passport',
         fields: oldPassportFields
     });
-    if (values['passport-number-lost-stolen']) {
-        oldPassportFields.push({
-            step: this.getEditStep('passport-number-lost-stolen'),
-            title: 'Passport number',
-            value: values['passport-number-lost-stolen']
-        });
-    } else {
+    if (values['lost-stolen']) {
+        if (values['passport-number-lost-stolen']) {
+            oldPassportFields.push({
+                step: this.getEditStep('passport-number-lost-stolen'),
+                title: 'Passport number',
+                value: values['passport-number-lost-stolen']
+            });        
+        }
+        if (values['expiry-year-lost']) {
+            oldPassportFields.push({
+                step: this.getEditStep('expiry-year-lost'),
+                title: 'Expiry date',
+                value: moment(values['expiry-year-lost'] + '-' + values['expiry-month-lost'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
+            });
+        }
+    }
+    if (values['lost-stolen'] == false) {
         oldPassportFields.push({
             step: this.getEditStep('passport-number'),
             title: 'Passport number',
@@ -137,7 +147,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             title: 'Expiry date',
             value: moment(values['expiry-year'] + '-' + values['expiry-month'] + '-01', 'YYYY-MM-DD').format('MMMM YYYY')
         });
-    }
+    };
     if (values['what-damaged']) {
         oldPassportFields.push({
             step: this.getEditStep('what-damaged'),
