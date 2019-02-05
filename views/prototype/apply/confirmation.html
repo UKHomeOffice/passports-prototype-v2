@@ -115,10 +115,12 @@
                 {# >=12 FTA or Old blue #}
                 {% if values['applicant-age'] >= 12 and not values['lost-stolen-no-docs'] %}
                     <a href="/tracking/user/?status=exceptions" class="button">Sign in</a>
-                {# <12 Renewals or <12 FTC #}
-                {% elif values['applicant-age'] < 12 %}
-                    <a href="/tracking/user/?status=exceptions&csigtype=child" class="button">Sign in</a>
                 {% endif %}
+            {% endif %}
+
+            {# <12 Renewals or <12 FTC #}
+            {% if values['applicant-age'] < 12 %}
+                <a href="/tracking/user/?status=exceptions&csigtype=child" class="button">Sign in</a>
             {% endif %}
 
         {{/nunjucks}}
