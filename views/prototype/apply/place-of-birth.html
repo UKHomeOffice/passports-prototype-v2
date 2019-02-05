@@ -21,9 +21,15 @@
 
 <label for="town-of-birth" class="form-label-bold">
     Town of birth
+
     {{^values.lost-stolen}}
         <span id="town-of-birth-hint" class="form-hint">As written on {{> partials-applicant-your-their}} {{> partials-information-compared-to-document}}</span>
     {{/values.lost-stolen}}
+
+    {{#values.lost-stolen}}
+    <span id="town-of-birth-hint" class="form-hint">As written on {{> partials-applicant-your-their}} old passport, or your birth or adoption certificate</span>
+    {{/values.lost-stolen}}
+
 </label>
 {{#input-text}}town-of-birth{{/input-text}}
 

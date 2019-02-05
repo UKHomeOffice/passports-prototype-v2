@@ -1,0 +1,57 @@
+
+{{< layout-csig}}
+{{$back}}
+{{/back}}
+{{$pageTitle}}Track a passport application{{/pageTitle}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+      <header class="update-notice update-notice--grey">
+        <h1>Your application is in the queue</h1>
+      </header>
+      <p>Your application is in a queue, waiting to be checked.</p>
+      <h2>What happens next</h2>
+      <p>We'll check your application. If we need more information, we'll contact you.</p>
+      <p>When we've finished checking your application, we'll update this page.</p>
+      <p>We'll text you when your application is approved.</p>
+
+        <!-- {{#input-submit}}{{/input-submit}} -->
+
+        <!-- <details>
+          <summary><span class="summary">If the person you ask can't do this online</span></summary>
+          <div class="panel panel-border-narrow">
+          <p>You need to ask them to <a href="who-can-paper">use a paper form</a>.</p>
+          </div>
+        </details> -->
+
+
+      {{> partials-csig-sidebar}}
+      <hr>
+      <h2>Application history</h2>
+      <article>
+      <table>
+          <tbody>
+            <tr>
+              <td>Joined processing queue</td>
+              <td>10:07am on 8 October 2018</td>
+            </tr>
+          <tr>
+            <td>Application received</td>
+            <td>10:06am on 8 October 2018</td>
+          </tr>
+          <tr>
+            <td>Application submitted</td>
+            <td>10:05am on 8 October 2018</td>
+          </tr>
+          </tbody>
+        </table>
+      </article>
+    {{/form}}
+{{/ hmpo-partials-form}}
+{{/content}}
+{{$sidebar}}
+
+{{/sidebar}}
+
+{{/ layout-csig}}

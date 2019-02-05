@@ -7,26 +7,34 @@
     <h1>Previous names</h1>
   {{/values.change-name}}
   {{^values.change-name}}
-    <h1>Have {{> partials-applicant-you-they}} ever been known by any other names?</h1>
+  <h1>Have {{> partials-applicant-you-they}} ever been known by any other names?</h1>
+  
   {{/values.change-name}}
 {{/header}}
 
 {{$content}}
+
 {{< hmpo-partials-form}}
 
 {{$form}}
 
 {{#values.change-name}}
-  <p>Tell us the name on {{> partials-applicant-your-their}} {{> partials-information-compared-to-document}} and any other names {{> partials-applicant-you-they}} have been known by.</p>
+  <p>Tell us the name on {{> partials-applicant-your-their}} {{> partials-information-compared-to-document}} and any other names {{> partials-applicant-you-they}} have been known by. For example a maiden name, a previous married name or a name which you changed for another reason.</p>
+
   <input type="hidden" name="previous-name" value="true" required="true">
 {{/values.change-name}}
 
 {{^values.change-name}}
+
+<p>For example a maiden name, a previous married name or a name which you changed for another reason.</p>
+
+
   {{#radio-group}}previous-name{{/radio-group}}
 {{/values.change-name}}
 
 <div id="previous-names" class="previous-names-form {{^values.change-name}}js-hidden{{/values.change-name}} reveal">
   <h2>List all previous names</h2>
+
   <br>
   <div class="grid-row duplicate-row">
     <div class="fields-wrap">

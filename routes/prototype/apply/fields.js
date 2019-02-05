@@ -318,6 +318,28 @@ module.exports = {
             'required'
         ]
     },
+    'expiry-year-lost': {
+        labelClassName: 'form-label',
+        formatter: 'removehyphens',
+        validate: [
+            'numeric'
+        ]
+    },
+    'expiry-month-lost': {
+        labelClassName: 'form-label',
+        formatter: 'removehyphens',
+        validate: [
+            'numeric'
+        ]
+    },
+    'expiry-day-lost': {
+        labelClassName: 'form-label',
+        formatter: 'removehyphens',
+        validate: [
+            'numeric'
+
+        ]
+    },
     'parents-married': {
         legend: {
             value: 'Parents married',
