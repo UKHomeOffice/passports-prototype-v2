@@ -39,22 +39,22 @@
 
                 {% if values['lost-stolen'] and values['applicant-age'] < 16 and (values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father') %}
                     <h2>I have documents to send</h2>
-                    <div id="lost-stolen-sending-docs-group" class="form-group inline ">
+                    <div id="lost-stolen-sending-no-docs-group" class="form-group inline ">
                         <fieldset role="radiogroup" aria-required="true">
                             <legend>
                                 <span class="visuallyhidden">Are you sending any documents?</span>
                             </legend>
-                                <label class="block-label" for="lost-stolen-sending-docs-true">
-                                    <input type="radio" name="lost-stolen-sending-docs" id="lost-stolen-sending-docs-true" value="true" required="true">
+                                <label class="block-label" for="lost-stolen-sending-no-docs-false">
+                                    <input type="radio" name="lost-stolen-sending-no-docs" id="lost-stolen-sending-no-docs-false" value="false" required="true">
                                     Yes
                                 </label>
-                                <label class="block-label" for="lost-stolen-sending-docs-false">
-                                    <input type="radio" name="lost-stolen-sending-docs" id="lost-stolen-sending-docs-false" value="false" required="true">
+                                <label class="block-label" for="lost-stolen-sending-no-docs-true">
+                                    <input type="radio" name="lost-stolen-sending-no-docs" id="lost-stolen-sending-no-docs-true" value="true" required="true">
                                     No
                                 </label>
                         </fieldset>
                     </div>
-                    {# {{#radio-group}}lost-stolen-sending-docs{{/radio-group}} #}
+                    {# {{#radio-group}}lost-stolen-sending-no-docs{{/radio-group}} #}
                 {% endif %}
 
             {{/nunjucks}}

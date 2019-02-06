@@ -474,13 +474,13 @@ module.exports = {
         controller: require('../../../controllers/check-query-string'),
         backLink: 'summary',
         fields: [
-            'lost-stolen-sending-docs'
+            'lost-stolen-sending-no-docs'
         ],
         next: '/passport-special-delivery',
         forks: [{
                 target: '/cost',
                 condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['lost-stolen-sending-docs'] === false;
+                    return req.session['hmpo-wizard-common']['lost-stolen-sending-no-docs'] === true;
                 }
             },
             {

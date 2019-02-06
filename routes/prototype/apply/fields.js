@@ -1377,18 +1377,18 @@ module.exports = {
         labelClassName: 'visuallyhidden',
         className: 'textarea',
     },
-    'lost-stolen-sending-docs': {
+    'lost-stolen-sending-no-docs': {
         legend: {
             value: 'Are you sending any documents?',
             className: 'visuallyhidden'
         },
         className: 'inline',
         options: [{
-                value: true,
+                value: false,
                 label: 'Yes'
             },
             {
-                value: false,
+                value: true,
                 label: 'No'
             }
         ],
