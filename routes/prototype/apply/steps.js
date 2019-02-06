@@ -449,6 +449,30 @@ module.exports = {
     '/docs-renew': {
         controller: require('../../../controllers/check-query-string'),
         backLink: 'summary',
+        next: '/passport-special-delivery',
+        forks: [{
+                target: '../../../csig/user/need-csig',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['routeFromCsig'] == true;
+                }
+            },
+            {
+                target: '../../../csig/user-contact/tracking-waiting',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['trackWaiting'] == true;
+                }
+            },
+            { // if user decides to check what documents they need to send on confirmation page
+                target: '/confirmation',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['tracking-status'] == 'confirm-documents';
+                }
+            }
+        ]
+    },
+    '/docs-renew-lost-stolen-parents': {
+        controller: require('../../../controllers/check-query-string'),
+        backLink: 'summary',
         fields: [
             'lost-stolen-sending-docs'
         ],
