@@ -399,9 +399,9 @@ module.exports = {
         controller: require('../../../controllers/fetch-documents-required')
     },
     '/docs-fta': {
+        controller: require('../../../controllers/check-query-string'),
         backLink: 'summary',
         next: '/passport-special-delivery',
-        controller: require('../../../controllers/check-query-string'),
         forks: [{
                 target: '../../../csig/user/need-csig',
                 condition: function (req, res) {
@@ -423,9 +423,9 @@ module.exports = {
         ]
     },
     '/docs-ftc': {
+        controller: require('../../../controllers/check-query-string'),
         backLink: 'summary',
         next: '/passport-special-delivery',
-        controller: require('../../../controllers/check-query-string'),
         forks: [{
                 target: '../../../csig/user/need-csig',
                 condition: function (req, res) {
@@ -447,10 +447,19 @@ module.exports = {
         ]
     },
     '/docs-renew': {
-        backLink: 'summary',
-        next: '/passport-special-delivery',
         controller: require('../../../controllers/check-query-string'),
+        backLink: 'summary',
+        fields: [
+            'lost-stolen-sending-docs'
+        ],
+        next: '/passport-special-delivery',
         forks: [{
+                target: '/cost',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['lost-stolen-sending-docs'] === false;
+                }
+            },
+            {
                 target: '../../../csig/user/need-csig',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['routeFromCsig'] == true;
