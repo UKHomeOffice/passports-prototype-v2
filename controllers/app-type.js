@@ -17,7 +17,8 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
   console.log(req.session)
 
   let issueDate = moment(req.sessionModel.get('issue-year') + '-' + req.sessionModel.get('issue-month') + '-' + req.sessionModel.get('issue-day'), 'YYYY-MM-DD');
-  let hiddenFirstTime = '1929-09-02'
+  let hiddenFirstTime = moment(issueDate).isBefore('1929-09-02');
+  let oldBlue = moment(issueDate).isBefore('1994-01-01', 'years');
   let age = req.sessionModel.get('applicant-age')
   let passportBefore = req.sessionModel.get('passport-before')
 
@@ -29,12 +30,9 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
   }
 
   // Renew
-
   if (passportBefore) {
     req.sessionModel.set('application-type', 'renew')
-
     // Old Blue
-    let oldBlue = moment(date).isBefore('1994-01-01', 'years');
     if (oldBlue) {
       req.sessionModel.set('old-blue', true)
       req.sessionModel.set('application-type', 'renew-old-blue')
@@ -44,7 +42,7 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
   }
 
   // Hidden FTA (Vetran)
-  if (passportBefore && issueDate.isBefore(hiddenFirstTime)) {
+  if (passportBefore && hiddenFirstTime) {
     req.sessionModel.set('application-type', 'first-hidden')
   }
 
@@ -71,7 +69,7 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
 
   /* Overseas */
   if (req.sessionModel.get('is-overseas')) {
-    let applicationType = req.sessionModel.get('application-type')
+    let applicationType = req.sessionModel.get('application-type') // Would get set by any of the above conditions
     req.sessionModel.set('application-type', 'overseas-' + applicationType)
   }
 
