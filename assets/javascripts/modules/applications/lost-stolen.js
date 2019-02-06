@@ -157,6 +157,9 @@ function clicks() {
 
     $('#title-Master').click();
 
+    // Lost and stolen
+    $('#lost-stolen-sending-docs-true').click();
+
     // CSIG
     $('#applicant-check-home-address-Yes').click();
     $('#applicant-check-names-Yes').click();
