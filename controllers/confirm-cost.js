@@ -118,7 +118,14 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                     } else if (values['lost-stolen-no-docs']) {
                         return 'We\'ll send your new passport by secure delivery. The cost is included in the passport fee. <br/>£0.00';
                     } else {
-                        return 'You need to post your documents to us. We’ll return them to you by standard post. <br/>£0.00';
+                        var output = 'You need to post your documents to us. We’ll return them to you by ';
+                        var cost = model.delivery();
+                        if (cost) {
+                            output += ' secure delivery. <br/>£' + cost;
+                        } else {
+                            output += ' standard post. <br/>£' + cost;
+                        }
+                        return output;
                     }
                 }
             },

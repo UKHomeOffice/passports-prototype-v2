@@ -1395,9 +1395,9 @@ module.exports = {
         formatter: [
             'boolean'
         ],
-        // validate: [
-        //     'required'
-        // ]
+        validate: [
+            'required'
+        ]
     },
     'declaration': {
         formatter: 'boolean',
