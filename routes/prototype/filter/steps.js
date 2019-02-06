@@ -121,7 +121,7 @@ module.exports = {
         // Issue date = 91 - 03 && Issue auth = Other && Over 16 = No
     },
     '/passport-damaged': {
-        controller: require('../../../controllers/check-old-blue'),
+        controller: require('../../../controllers/app-type'),
         fields: [
             'passport-damaged',
             'damaged-reason'
@@ -160,6 +160,7 @@ module.exports = {
         }]
     },
     '/summary': {
+        controller: require('../../../controllers/app-type.js'),
         next: '/../intro'
     }
 };
