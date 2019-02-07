@@ -367,11 +367,11 @@ module.exports = {
     '/summary': {
         controller: require('../../../controllers/confirm'),
         template: 'confirm',
-        next: '/csig-required',
-        forks: [{ // if lost and stolen with no docs
-            target: '/cost',
+        next: '/documents-required',
+        forks: [{ // if lost and stolen
+            target: '/csig-required',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['lost-stolen-no-docs'] == true
+                return req.session['hmpo-wizard-common']['lost-stolen'] == true
             }
         }, { // if csig required
             target: '/csig-required',
