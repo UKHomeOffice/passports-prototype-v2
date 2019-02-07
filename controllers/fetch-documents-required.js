@@ -9,7 +9,12 @@ util.inherits(Controller, Base)
 
 Controller.prototype.get = function successHandler(req, res, callback) {
 
-	if (req.sessionModel.get('lost-stolen') == true && req.sessionModel.get('applicant-age') < 16 && (req.sessionModel.get('relationship-applicant') === 'Mother' || req.sessionModel.get('relationship-applicant') === 'Father')) {
+	if (req.sessionModel.get('lost-stolen') == true
+		&& req.sessionModel.get('dual-nationality') == false
+		&& req.sessionModel.get('change-name') == false
+		&& req.sessionModel.get('applicant-age') < 16
+		&& (req.sessionModel.get('relationship-applicant') === 'Mother' || req.sessionModel.get('relationship-applicant') === 'Father')
+	) {
 		req.sessionModel.set('lost-stolen-no-docs', ''); // reset variable for use on docs page, so radio option is not pre-filled
 		return res.redirect('./docs-lost-stolen-parents')
 	}
