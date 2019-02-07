@@ -1377,7 +1377,7 @@ module.exports = {
         labelClassName: 'visuallyhidden',
         className: 'textarea',
     },
-    'lost-stolen-sending-no-docs': {
+    'lost-stolen-no-docs': {
         legend: {
             value: 'Are you sending any documents?',
             className: 'visuallyhidden'

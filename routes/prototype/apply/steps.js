@@ -470,17 +470,17 @@ module.exports = {
             }
         ]
     },
-    '/docs-renew-lost-stolen-parents': {
+    '/docs-lost-stolen-parents': {
         controller: require('../../../controllers/check-query-string'),
         backLink: 'summary',
         fields: [
-            'lost-stolen-sending-no-docs'
+            'lost-stolen-no-docs'
         ],
         next: '/passport-special-delivery',
         forks: [{
                 target: '/cost',
                 condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['lost-stolen-sending-no-docs'] === true;
+                    return req.session['hmpo-wizard-common']['lost-stolen-no-docs'] === true;
                 }
             },
             {

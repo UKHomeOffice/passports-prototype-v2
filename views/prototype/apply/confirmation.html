@@ -27,7 +27,7 @@
 
         <br>Application reference <strong>PEX 319 825 680X</strong></p>
 
-            {% if (values['lost-stolen-no-docs'] and values['16-or-older']) or values['lost-stolen-sending-no-docs'] === true %}
+            {% if values['lost-stolen-no-docs'] and values['16-or-older'] %}
                 <h2>Track your application</h2>
                 <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking/user/?status=application-in-queue">https://www.passport.service.gov.uk/track</a></p>
 
@@ -89,7 +89,7 @@
 
                     {% else %}
                         {# LSR #}
-                        {% if (not values['change-of-name-reason'] and values['lost-stolen-no-docs']) or values['lost-stolen-sending-no-docs'] === true %}
+                        {% if not values['change-of-name-reason'] and values['lost-stolen-no-docs'] %}
                         <h2>Ask someone to confirm your identity</h2>
                         <p>Sign in to check who can do this and provide their details. You'll need your application reference: PEX 319 825 680X</p>
                         {# LSR with CoN #}

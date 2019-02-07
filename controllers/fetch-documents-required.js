@@ -10,7 +10,7 @@ util.inherits(Controller, Base)
 Controller.prototype.get = function successHandler(req, res, callback) {
 
 	if (req.sessionModel.get('lost-stolen') == true && req.sessionModel.get('applicant-age') < 16 && (req.sessionModel.get('relationship-applicant') === 'Mother' || req.sessionModel.get('relationship-applicant') === 'Father')) {
-		return res.redirect('./docs-renew-lost-stolen-parents')
+		return res.redirect('./docs-lost-stolen-parents')
 	}
 	if (req.sessionModel.get('passport-before') == false || req.sessionModel.get('old-blue') == true) {
 		if (req.sessionModel.get('applicant-age') >= 16) {
