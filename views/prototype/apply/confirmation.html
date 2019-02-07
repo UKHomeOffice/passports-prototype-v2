@@ -94,14 +94,14 @@
             {% endif %}
 
 
-            {% if (values['passport-before'] and not values['old-blue'] and not values['lost-stolen']) or values['lost-stolen-no-docs'] %}
+            {% if values['passport-before'] and not values['old-blue'] and not values['lost-stolen'] %}
                 {# >=12 Renewals #}
                 {% if values['applicant-age'] >= 12 %}
                     <a href="" class="button">Give feedback</a><br><br>
                 {% endif %}
             {% else %}
                 {# >=12 FTA or Old blue #}
-                {% if values['applicant-age'] >= 12 and not values['lost-stolen-no-docs'] %}
+                {% if values['applicant-age'] >= 12 %}
                     <a href="/tracking/user/?status=exceptions" class="button">Sign in</a>
                 {% endif %}
             {% endif %}
