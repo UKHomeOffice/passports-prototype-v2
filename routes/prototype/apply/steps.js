@@ -367,7 +367,7 @@ module.exports = {
     '/summary': {
         controller: require('../../../controllers/confirm'),
         template: 'confirm',
-        next: '/documents-required',
+        next: '/csig-required',
         forks: [{ // if lost and stolen with no docs
             target: '/cost',
             condition: function (req, res) {
