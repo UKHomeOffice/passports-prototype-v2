@@ -25,7 +25,7 @@
             {% if values['passport-before'] and not values['old-blue'] and not values['lost-stolen'] %}
                 {# >=12 Renewals #}
                 {% if values['applicant-age'] >= 12 %}
-                    {% if values['change-of-name-reason'] or values['application-for-someone-else'] or values['lost-stolen'] %}
+                    {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
                         <h2> Send us your documents </h2>
                         <p><a href="./docs-renew?status=confirm-documents" target="_blank">Check what you need to send</a></p>
                     {% else %}
@@ -94,21 +94,32 @@
             {% endif %}
 
 
-            {% if values['passport-before'] and not values['old-blue'] and not values['lost-stolen'] %}
-                {# >=12 Renewals #}
-                {% if values['applicant-age'] >= 12 %}
-                    <a href="" class="button">Give feedback</a><br><br>
-                {% endif %}
-            {% else %}
-                {# >=12 FTA or Old blue #}
-                {% if values['applicant-age'] >= 12 %}
+            {% if values['lost-stolen'] %}
+                {# >=16 LSR #}
+                {% if values['applicant-age'] >= 16 %}
                     <a href="/tracking/user/?status=exceptions" class="button">Sign in</a>
+                {# <16 LSR #}
+                {% else %}
+                    <a href="/tracking/user/?status=exceptions&csigtype=child" class="button">Sign in</a>
                 {% endif %}
-            {% endif %}
 
-            {# <12 Renewals or <12 FTC #}
-            {% if values['applicant-age'] < 12 %}
-                <a href="/tracking/user/?status=exceptions&csigtype=child" class="button">Sign in</a>
+            {% else %}
+                {% if values['passport-before'] and not values['old-blue'] %}
+                    {# >=12 Renewals #}
+                    {% if values['applicant-age'] >= 12 %}
+                        <a href="" class="button">Give feedback</a><br><br>
+                    {% endif %}
+                {% else %}
+                    {# >=12 FTA or Old blue #}
+                    {% if values['applicant-age'] >= 12 %}
+                        <a href="/tracking/user/?status=exceptions" class="button">Sign in</a>
+                    {% endif %}
+                {% endif %}
+
+                {# <12 Renewals or <12 FTC #}
+                {% if values['applicant-age'] < 12 %}
+                    <a href="/tracking/user/?status=exceptions&csigtype=child" class="button">Sign in</a>
+                {% endif %}
             {% endif %}
 
         {{/nunjucks}}
