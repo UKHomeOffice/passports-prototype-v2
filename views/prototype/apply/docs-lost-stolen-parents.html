@@ -36,8 +36,11 @@
                         </p>
                     </div>
                 {% endif %} #}
-
             {{/nunjucks}}
+
+            <h2>I have documents to send</h2>
+            {{#radio-group}}lost-stolen-no-docs{{/radio-group}}
+
             {{#input-submit}}{{/input-submit}}
         {{/form}}
     {{/ hmpo-partials-form}}
