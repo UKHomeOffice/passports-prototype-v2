@@ -85,7 +85,7 @@ module.exports = {
         next: '/confirm-applicant-address'
     },
     '/applicant-photo-fail': {
-      next: '/csig-details-work',
+      next: '/confirm-applicant-address',
       forks: [{
         target: '/confirm-applicant-parents',
         condition: function(req, res) {
