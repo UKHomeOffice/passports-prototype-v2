@@ -127,13 +127,13 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 step: this.getEditStep('passport-number-lost-stolen'),
                 title: 'Passport number',
                 value: values['passport-number-lost-stolen']
-            });        
+            });
         } else {
             oldPassportFields.push({
                 step: this.getEditStep('passport-number-lost-stolen'),
                 title: 'Passport number',
                 value: 'Not supplied'
-            });  
+            });
         }
         if (values['expiry-year-lost']) {
             oldPassportFields.push({
@@ -706,7 +706,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     });
 
 
-   
+
     callback(null, response);
 };
 
