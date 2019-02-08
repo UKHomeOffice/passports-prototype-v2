@@ -14,10 +14,10 @@ var Controller = function () {
 util.inherits(Controller, Base)
 
 Controller.prototype.successHandler = function successHandler(req, res, callback) {
-  console.log(req.session)
 
   let issueDate = moment(req.sessionModel.get('issue-year') + '-' + req.sessionModel.get('issue-month') + '-' + req.sessionModel.get('issue-day'), 'YYYY-MM-DD');
-  let hiddenFirstTime = moment(issueDate).isBefore('1929-09-02');
+  let dob = moment(req.sessionModel.get('age-year') + '-' + req.sessionModel.get('age-month') + '-' + req.sessionModel.get('age-day'), 'YYYY-MM-DD');
+  let veteran = moment(dob).isSameOrBefore('1929-09-03');
   let oldBlue = moment(issueDate).isBefore('1994-01-01', 'years');
   let age = req.sessionModel.get('applicant-age')
   let passportBefore = req.sessionModel.get('passport-before')
@@ -35,15 +35,15 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     // Old Blue
     if (oldBlue) {
       req.sessionModel.set('old-blue', true)
-      req.sessionModel.set('application-type', 'renew-old-blue')
+      req.sessionModel.set('application-type', 'old-blue')
     } else {
       req.sessionModel.set('old-blue', false)
     }
   }
 
-  // Hidden FTA (Vetran)
-  if (passportBefore && hiddenFirstTime) {
-    req.sessionModel.set('application-type', 'first-hidden')
+  // Veteran
+  if (veteran) {
+    req.sessionModel.set('application-type', 'veteran')
   }
 
   // Replacements
@@ -72,7 +72,8 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     let applicationType = req.sessionModel.get('application-type') // Would get set by any of the above conditions
     req.sessionModel.set('application-type', 'overseas-' + applicationType)
   }
-
+  
+  console.log(req.session)
   Base.prototype.successHandler.call(this, req, res, callback);
 };
 
