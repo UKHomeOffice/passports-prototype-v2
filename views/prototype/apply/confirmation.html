@@ -22,9 +22,10 @@
 
             <h1>What you need to do</h1>
             <p>Before we can work on your application, you need to:</p>
-            {% if values['passport-before'] and not values['old-blue'] and not values['lost-stolen'] %}
+
+            {% if values['passport-before'] and not values['lost-stolen'] %}
                 {# >=12 Renewals #}
-                {% if values['applicant-age'] >= 12 %}
+                {% if values['applicant-age'] >= 12 and not values['old-blue'] %}
                     {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
                         <h2> Send us your documents </h2>
                         <p><a href="./docs-renew?status=confirm-documents" target="_blank">Check what you need to send</a></p>
@@ -54,18 +55,15 @@
                         </div>
                     </details>
 
-
                     <h2>Track your application</h2>
                     {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
                         <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking?status=send-us-your-docs">https://www.passport.service.gov.uk/track</a></p>
                     {% else %}
                         <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking">https://www.passport.service.gov.uk/track</a></p>
                     {% endif %}
-                {% endif %}
 
-            {% else %}
-                {% if not values['lost-stolen'] %}
-                    {# <12 Renewals or FTA or FTC or Old blue #}
+                {# <12 Renewals or FTA or FTC or Old blue #}
+                {% else %}
                     <h2>1. Ask someone to confirm your identity</h2>
                     <p>Sign in to check who can do this and provide their details. You'll need your application reference: PEX 319 825 680X</p>
 
@@ -73,24 +71,26 @@
                     <p>We can only receive documents after your identity has been confirmed. This includes anyone you're <a href="../help/group-applications" target="_blank">applying with as part of a family or couple</a>.</p>
 
                     <p>We'll let you know when and where to send them.</p>
-
-
-                {% else %}
-                    {# LSR no docs #}
-                    {% if not values['change-of-name-reason'] and values['lost-stolen-no-docs'] %}
-                    <h2>Ask someone to confirm your identity</h2>
-                    <p>Sign in to check who can do this and provide their details. You'll need your application reference: PEX 319 825 680X</p>
-                    {# LSR with docs #}
-                    {% else %}
-                        <h2>1. Ask someone to confirm your identity</h2>
-                        <p>Sign in to check who can do this and provide their details. You'll need your application reference: PEX 319 825 680X</p>
-
-                        <h2>2. Get your documents ready</h2>
-                        <p>We can only receive documents after your identity has been confirmed. This includes anyone you're <a href="../help/group-applications" target="_blank">applying with as part of a family or couple</a>.</p>
-
-                        <p>We'll let you know when and where to send them.</p>
-                    {% endif %}
                 {% endif %}
+
+            {% else %}
+
+                {# LSR no docs #}
+                {% if not values['change-of-name-reason'] and values['lost-stolen-no-docs'] %}
+                <h2>Ask someone to confirm your identity</h2>
+                <p>Sign in to check who can do this and provide their details. You'll need your application reference: PEX 319 825 680X</p>
+
+                {# LSR with docs #}
+                {% else %}
+                    <h2>1. Ask someone to confirm your identity</h2>
+                    <p>Sign in to check who can do this and provide their details. You'll need your application reference: PEX 319 825 680X</p>
+
+                    <h2>2. Get your documents ready</h2>
+                    <p>We can only receive documents after your identity has been confirmed. This includes anyone you're <a href="../help/group-applications" target="_blank">applying with as part of a family or couple</a>.</p>
+
+                    <p>We'll let you know when and where to send them.</p>
+                {% endif %}
+
             {% endif %}
 
 
