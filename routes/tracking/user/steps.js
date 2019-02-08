@@ -20,11 +20,6 @@ module.exports = {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'send-passport';
       }
     },{
-      target: '/renominate-paper',
-      condition: function (req, res) {
-        return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate-paper';
-      }
-    },{
       target: '/renominate',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate';
@@ -70,10 +65,6 @@ module.exports = {
     }]
   },
   '/renominate': {
-    fields: ['renominate'],
-    next: '/what-you-need-to-do'
-  },
-  '/renominate-paper': {
     next: '/who-can'
   },
   '/renominate-anytime': {
