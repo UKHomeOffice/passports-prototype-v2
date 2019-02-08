@@ -13,59 +13,81 @@
 
         {{#nunjucks}}
 
-            {% if values['lost-stolen-no-docs'] %}
-                <p> Your application has been saved and we're now processing it.
-            {% else %}
-                <p> Your application has been saved.
-            {% endif %}
+            <p>{{ "Your application has been saved and we're now processing it." if values['lost-stolen-no-docs'] else "Your application has been saved." }}
             <br>Application reference <strong>PEX 319 825 680X</strong></p>
 
             <h1>What you need to do</h1>
             <p>Before we can work on your application, you need to:</p>
-            {% if values['passport-before'] and not values['old-blue'] and not values['lost-stolen'] %}
-                {# >=12 Renewals #}
-                {% if values['applicant-age'] >= 12 %}
-                    {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
-                        <h2> Send us your documents </h2>
-                        <p><a href="./docs-renew?status=confirm-documents" target="_blank">Check what you need to send</a></p>
-                    {% else %}
-                        <h2> Send us your old passport </h2>
-                        <p>Check if you need to send any <a href="./docs-renew?status=confirm-documents" target="_blank">additional documents</a>.</p>
-                    {% endif %}
-
-                    <p>Use a strong envelope that is the right size for your documents. You do not need to include a covering letter.</p>
-
-                    <p>You can use standard post or special delivery.</p>
-
-                    <p>HM Passport Office<br>
-                    UK-DAP<br>
-                    PEX 318 437 555X<br>
-                    Aragon Court<br>
-                    Northminster Road<br>
-                    Peterborough<br>
-                    PE1 1QG</p>
-
-                    <details>
-                        <summary>
-                            <span class="summary">If you're applying as part of a family or couple</span>
-                        </summary>
-                        <div class="panel panel-border-narrow">
-                            <p>Find out how to send your documents if you're <a href="../help/group-applications" target="_blank">applying as part of a <br>family or couple</a>.</p>
-                        </div>
-                    </details>
 
 
-                    <h2>Track your application</h2>
-                    {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
-                        <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking?status=send-us-your-docs">https://www.passport.service.gov.uk/track</a></p>
-                    {% else %}
-                        <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking">https://www.passport.service.gov.uk/track</a></p>
-                    {% endif %}
+            {#
+                Main content
+            #}
+
+            {# 12–15 Renewals, Adult Renewals #}
+            {% if values['application-type'] === 'renew-child-12-15' or
+                  values['application-type'] === 'renew-adult' %}
+
+                {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
+                    <h2> Send us your documents </h2>
+                    <p><a href="./docs-renew?status=confirm-documents" target="_blank">Check what you need to send</a></p>
+                {% else %}
+                    <h2> Send us your old passport </h2>
+                    <p>Check if you need to send any <a href="./docs-renew?status=confirm-documents" target="_blank">additional documents</a>.</p>
                 {% endif %}
 
-            {% else %}
-                {% if not values['lost-stolen'] %}
-                    {# <12 Renewals or FTA or FTC or Old blue #}
+                <p>Use a strong envelope that is the right size for your documents. You do not need to include a covering letter.</p>
+
+                <p>You can use standard post or special delivery.</p>
+
+                <p>HM Passport Office<br>
+                UK-DAP<br>
+                PEX 318 437 555X<br>
+                Aragon Court<br>
+                Northminster Road<br>
+                Peterborough<br>
+                PE1 1QG</p>
+
+                <details>
+                    <summary>
+                        <span class="summary">If you're applying as part of a family or couple</span>
+                    </summary>
+                    <div class="panel panel-border-narrow">
+                        <p>Find out how to send your documents if you're <a href="../help/group-applications" target="_blank">applying as part of a <br>family or couple</a>.</p>
+                    </div>
+                </details>
+
+                <h2>Track your application</h2>
+                {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
+                    <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking?status=send-us-your-docs">https://www.passport.service.gov.uk/track</a></p>
+                {% else %}
+                    <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking">https://www.passport.service.gov.uk/track</a></p>
+                {% endif %}
+
+            {# 0–11 Renewals, FTC, FTA, Old blue #}
+            {% elif values['application-type'] === 'renew-child-0-11' or
+                    values['application-type'] === 'first-child' or
+                    values['application-type'] === 'first-adult' or
+                    values['application-type'] === 'old-blue' %}
+
+                <h2>1. Ask someone to confirm your identity</h2>
+                <p>Sign in to check who can do this and provide their details. You'll need your application reference: PEX 319 825 680X</p>
+
+                <h2>2. Get your documents ready</h2>
+                <p>We can only receive documents after your identity has been confirmed. This includes anyone you're <a href="../help/group-applications" target="_blank">applying with as part of a family or couple</a>.</p>
+
+                <p>We'll let you know when and where to send them.</p>
+
+            {# Lost and Stolen #}
+            {% elif values['application-type'] === 'replacement' %}
+
+                {# LSR no docs #}
+                {% if not values['change-of-name-reason'] and values['lost-stolen-no-docs'] %}
+                <h2>Ask someone to confirm your identity</h2>
+                <p>Sign in to check who can do this and provide their details. You'll need your application reference: PEX 319 825 680X</p>
+
+                {# LSR with docs #}
+                {% else %}
                     <h2>1. Ask someone to confirm your identity</h2>
                     <p>Sign in to check who can do this and provide their details. You'll need your application reference: PEX 319 825 680X</p>
 
@@ -73,56 +95,46 @@
                     <p>We can only receive documents after your identity has been confirmed. This includes anyone you're <a href="../help/group-applications" target="_blank">applying with as part of a family or couple</a>.</p>
 
                     <p>We'll let you know when and where to send them.</p>
-
-
-                {% else %}
-                    {# LSR no docs #}
-                    {% if not values['change-of-name-reason'] and values['lost-stolen-no-docs'] %}
-                    <h2>Ask someone to confirm your identity</h2>
-                    <p>Sign in to check who can do this and provide their details. You'll need your application reference: PEX 319 825 680X</p>
-                    {# LSR with docs #}
-                    {% else %}
-                        <h2>1. Ask someone to confirm your identity</h2>
-                        <p>Sign in to check who can do this and provide their details. You'll need your application reference: PEX 319 825 680X</p>
-
-                        <h2>2. Get your documents ready</h2>
-                        <p>We can only receive documents after your identity has been confirmed. This includes anyone you're <a href="../help/group-applications" target="_blank">applying with as part of a family or couple</a>.</p>
-
-                        <p>We'll let you know when and where to send them.</p>
-                    {% endif %}
                 {% endif %}
+
             {% endif %}
 
 
-            {% if values['lost-stolen'] %}
-                {# >=16 LSR #}
-                {% if values['applicant-age'] >= 16 %}
+            {#
+                Sign in and feedback
+            #}
+
+            {# 12–15s Renewals, Adult Renewals #}
+            {% if values['application-type'] === 'renew-child-12-15' or
+                  values['application-type'] === 'renew-adult' %}
+
+                <a href="" class="button">Give feedback</a><br><br>
+
+            {# 0–11s Renewals, FTC #}
+            {% elif values['application-type'] === 'renew-child-0-11' or
+                    values['application-type'] === 'first-child' %}
+
+                <a href="/tracking/user/?status=exceptions&csigtype=child" class="button">Sign in</a>
+
+            {# FTA, Old blue #}
+            {% elif values['application-type'] === 'first-adult' or
+                    values['application-type'] === 'old-blue' %}
+
+                <a href="/tracking/user/?status=exceptions" class="button">Sign in</a>
+
+            {# Lost and Stolen #}
+            {% elif values['application-type'] === 'replacement' %}
+
+                {% if values['applicant-age'] < 16 %}
+                    <a href="/tracking/user/?status=exceptions&csigtype=child" class="button">Sign in</a>
+                {% else %}
                     <a href="/tracking/user/?status=exceptions" class="button">Sign in</a>
-                {# <16 LSR #}
-                {% else %}
-                    <a href="/tracking/user/?status=exceptions&csigtype=child" class="button">Sign in</a>
                 {% endif %}
 
-            {% else %}
-                {% if values['passport-before'] and not values['old-blue'] %}
-                    {# >=12 Renewals #}
-                    {% if values['applicant-age'] >= 12 %}
-                        <a href="" class="button">Give feedback</a><br><br>
-                    {% endif %}
-                {% else %}
-                    {# >=12 FTA or Old blue #}
-                    {% if values['applicant-age'] >= 12 %}
-                        <a href="/tracking/user/?status=exceptions" class="button">Sign in</a>
-                    {% endif %}
-                {% endif %}
-
-                {# <12 Renewals or <12 FTC #}
-                {% if values['applicant-age'] < 12 %}
-                    <a href="/tracking/user/?status=exceptions&csigtype=child" class="button">Sign in</a>
-                {% endif %}
             {% endif %}
 
         {{/nunjucks}}
+
     {{/form}}
 {{/ hmpo-partials-form}}
 

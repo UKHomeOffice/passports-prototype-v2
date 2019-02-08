@@ -26,12 +26,12 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
 
   // FTA
   if (passportBefore === false) {
-    req.sessionModel.set('application-type', 'first')
+    req.sessionModel.set('application-type', 'first-adult')
   }
 
   // Renew
   if (passportBefore) {
-    req.sessionModel.set('application-type', 'renew')
+    req.sessionModel.set('application-type', 'renew-adult')
     // Old Blue
     if (oldBlue) {
       req.sessionModel.set('old-blue', true)
@@ -68,11 +68,11 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
   }
 
   /* Overseas */
-  if (req.sessionModel.get('is-overseas')) {
-    let applicationType = req.sessionModel.get('application-type') // Would get set by any of the above conditions
-    req.sessionModel.set('application-type', 'overseas-' + applicationType)
-  }
-  
+  // if (req.sessionModel.get('is-overseas')) {
+  //   let applicationType = req.sessionModel.get('application-type') // Would get set by any of the above conditions
+  //   req.sessionModel.set('application-type', 'overseas-' + applicationType)
+  // }
+
   console.log(req.session)
   Base.prototype.successHandler.call(this, req, res, callback);
 };
