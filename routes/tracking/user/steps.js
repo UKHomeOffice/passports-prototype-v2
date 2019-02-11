@@ -14,25 +14,20 @@ module.exports = {
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'application-in-queue';
       }
-    },{
+    }, {
       target: '/send-book',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'send-passport';
       }
-    },{
+    }, {
       target: '/renominate',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate';
       }
-    },{
+    }, {
       target: '/renominate-anytime',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate-anytime';
-      }
-    },{
-      target: '/confirm-your-identity',
-      condition: function (req, res) {
-        return req.session['hmpo-wizard-common']['tracking-status'] == 'exceptions';
       }
     }, {
       target: '/send-docs',
