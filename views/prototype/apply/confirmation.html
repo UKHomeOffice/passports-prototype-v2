@@ -24,9 +24,10 @@
                 Main content
             #}
 
-            {# 12–15 Renewals, Adult Renewals #}
+            {# 12–15 Renewals, Adult Renewals, Adult Damaged Replacements, Child Damaged Replacements #}
             {% if values['application-type'] === 'renew-child-12-15' or
-                  values['application-type'] === 'renew-adult' %}
+                  values['application-type'] === 'renew-adult'  or
+                  values['application-type'] === 'replacement-damaged' %}
 
                 {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
                     <h2> Send us your documents </h2>
