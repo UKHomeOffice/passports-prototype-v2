@@ -21,6 +21,9 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
   let oldBlue = moment(issueDate).isBefore('1994-01-01', 'years');
   let age = req.sessionModel.get('applicant-age')
   let passportBefore = req.sessionModel.get('passport-before')
+  let damaged = req.sessionModel.get('passport-damaged')
+  let lostOrStolen = req.sessionModel.get('lost-stolen')
+
 
   /* Adult applications types */
 
@@ -46,11 +49,19 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     req.sessionModel.set('application-type', 'veteran')
   }
 
-  // Replacements
-  let lostAndStolen = req.sessionModel.get('lost-stolen')
-  if (lostAndStolen && passportBefore) {
+
+  /* Replacement application types */
+
+  // Replace Damaged
+  if (passportBefore && damaged) {
+    req.sessionModel.set('application-type', 'replacement-damaged')
+  }
+
+  // Replace Lost or Stolen
+  if (passportBefore && lostOrStolen) {
     req.sessionModel.set('application-type', 'replacement')
   }
+
 
   /* Child application types */
 
@@ -67,11 +78,13 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     req.sessionModel.set('application-type', 'renew-child-12-15')
   }
 
+
   /* Overseas */
   // if (req.sessionModel.get('is-overseas')) {
   //   let applicationType = req.sessionModel.get('application-type') // Would get set by any of the above conditions
   //   req.sessionModel.set('application-type', 'overseas-' + applicationType)
   // }
+
 
   console.log(req.session)
   Base.prototype.successHandler.call(this, req, res, callback);
