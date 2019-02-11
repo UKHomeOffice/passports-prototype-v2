@@ -116,7 +116,7 @@ function clicks() {
     $('#passport-before-false').click();
     $('#lost-stolen-false').click();
     $('#name-changed-false').click();
-    $('#passport-damaged-No').click();
+    $('#passport-damaged-false').click();
     $('#dual-nationality-false').click();
     $('#choose-photo-upload').click();
     $('#oix-override-true').click();
