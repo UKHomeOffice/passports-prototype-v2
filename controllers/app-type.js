@@ -50,19 +50,6 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
   }
 
 
-  /* Replacement application types */
-
-  // Replace Damaged
-  if (passportBefore && damaged) {
-    req.sessionModel.set('application-type', 'replacement-damaged')
-  }
-
-  // Replace Lost or Stolen
-  if (passportBefore && lostOrStolen) {
-    req.sessionModel.set('application-type', 'replacement')
-  }
-
-
   /* Child application types */
 
   // Child First Time
@@ -76,6 +63,19 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
   // Child renew 12-15s
   if (passportBefore && age > 11 && age < 16) {
     req.sessionModel.set('application-type', 'renew-child-12-15')
+  }
+
+
+  /* Replacement application types */
+
+  // Replace Damaged
+  if (passportBefore && damaged) {
+    req.sessionModel.set('application-type', 'replacement-damaged')
+  }
+
+  // Replace Lost or Stolen
+  if (passportBefore && lostOrStolen) {
+    req.sessionModel.set('application-type', 'replacement')
   }
 
 
