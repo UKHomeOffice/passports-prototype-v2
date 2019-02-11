@@ -68,14 +68,29 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
 
   /* Replacement application types */
 
-  // Replace Damaged
-  if (passportBefore && damaged) {
-    req.sessionModel.set('application-type', 'replacement-damaged')
+  // Replace Damaged Child 0–11s
+  if (passportBefore && damaged && age < 12) {
+    req.sessionModel.set('application-type', 'replacement-damaged-child-0-11')
   }
-
-  // Replace Lost or Stolen
-  if (passportBefore && lostOrStolen) {
-    req.sessionModel.set('application-type', 'replacement')
+  // Replace Damaged Child 12–15s
+  if (passportBefore && damaged && (age >= 12 && age < 16)) {
+    req.sessionModel.set('application-type', 'replacement-damaged-child-12-15')
+  }
+  // Replace Damaged Adult
+  if (passportBefore && damaged && age >= 16) {
+    req.sessionModel.set('application-type', 'replacement-damaged-adult')
+  }
+  // Replace Lost or Stolen Child 0–11s
+  if (passportBefore && lostOrStolen && age < 12) {
+    req.sessionModel.set('application-type', 'replacement-lost-or-stolen-child-0-11')
+  }
+  // Replace Lost or Stolen Child 12–15s
+  if (passportBefore && lostOrStolen && (age >= 12 && age < 16)) {
+    req.sessionModel.set('application-type', 'replacement-lost-or-stolen-child-12-15')
+  }
+  // Replace Lost or Stolen Adult
+  if (passportBefore && lostOrStolen && age >= 16) {
+    req.sessionModel.set('application-type', 'replacement-lost-or-stolen-adult')
   }
 
 
