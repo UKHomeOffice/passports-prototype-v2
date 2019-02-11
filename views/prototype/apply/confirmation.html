@@ -122,13 +122,13 @@
                     values['application-type'] === 'replacement-damaged-child-0-11' or
                     values['application-type'] === 'first-child' %}
 
-                <a href="/tracking/user/?status=exceptions&csigtype=child" class="button">Sign in</a>
+                <a href="/tracking/user/?csigtype=child" class="button">Sign in</a>
 
             {# FTA, Old blue #}
             {% elif values['application-type'] === 'first-adult' or
                     values['application-type'] === 'old-blue' %}
 
-                <a href="/tracking/user/?status=exceptions" class="button">Sign in</a>
+                <a href="/tracking/user" class="button">Sign in</a>
 
             {# Lost or Stolen Child 0–11s, Lost or Stolen Child 12–15s, Lost or Stolen Adult #}
             {% elif values['application-type'] === 'replacement-lost-or-stolen-child-0-11' or
@@ -136,9 +136,9 @@
                     values['application-type'] === 'replacement-lost-or-stolen-adult' %}
 
                 {% if values['applicant-age'] < 16 %}
-                    <a href="/tracking/user/?status=exceptions&csigtype=child" class="button">Sign in</a>
+                    <a href="/tracking/user/?csigtype=child" class="button">Sign in</a>
                 {% else %}
-                    <a href="/tracking/user/?status=exceptions" class="button">Sign in</a>
+                    <a href="/tracking/user" class="button">Sign in</a>
                 {% endif %}
 
             {% endif %}
