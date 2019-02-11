@@ -94,12 +94,6 @@ module.exports = {
         'required'
       ]
 },
-
-  'renominate': {
-    validate: [
-        'required'
-      ]
-  },
   'confirm-csig-paper': {
     legend: {
         className: 'visuallyhidden'

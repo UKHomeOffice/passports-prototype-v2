@@ -7,7 +7,7 @@ module.exports = {
   '/track-email': {
     controller: require('../../../controllers/login'),
     fields: ['age-day', 'age-month', 'age-year'],
-    next: '/need-csig',
+    next: '/confirm-your-identity',
     backLink: './',
     forks: [{
       target: '/application-in-queue',
@@ -54,25 +54,13 @@ module.exports = {
   '/waiting-for-old-pass': {
     next: '/track'
   },
-  '/need-csig': {
-    fields: ['renominate'],
-    next: '/what-you-need-to-do',
-    forks: [{
-      condition: function (req, res) {
-        // setter for Document page to redirect back to Csig
-        req.sessionModel.set('routeFromCsig', true)
-      }
-    }]
-  },
   '/renominate': {
     next: '/who-can'
   },
   '/renominate-anytime': {
-    fields: ['renominate'],
     next: '/../user-contact/'
   },
   '/need-csig-complete': {
-    fields: ['renominate'],
     next: '/../user-contact'
   },
   '/send-book': {
@@ -109,6 +97,11 @@ module.exports = {
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['group'] == 'overseas';
       }
+    },{
+      condition: function (req, res) {
+        // setter for Document page to redirect back to Csig
+        req.sessionModel.set('routeFromCsig', true)
+      }
     }]
   },
   '/select-overseas-method':{
@@ -137,7 +130,6 @@ module.exports = {
       next: '/tracking-waiting'
   },
   '/tracking-waiting': {
-      fields: ['renominate'],
       next: '/../user-contact',
       forks: [{
           condition: function (req, res) {
