@@ -24,9 +24,11 @@
                 Main content
             #}
 
-            {# 12–15 Renewals, Adult Renewals #}
+            {# 12–15 Renewals, Adult Renewals, Replacements Damaged Child 12–15s, Replacements Damaged Adult #}
             {% if values['application-type'] === 'renew-child-12-15' or
-                  values['application-type'] === 'renew-adult' %}
+                  values['application-type'] === 'renew-adult' or
+                  values['application-type'] === 'replacement-damaged-child-12-15' or
+                  values['application-type'] === 'replacement-damaged-adult' %}
 
                 {% if values['change-of-name-reason'] or values['application-for-someone-else'] %}
                     <h2> Send us your documents </h2>
@@ -64,8 +66,9 @@
                     <p>You'll need your application reference: PEX 319 825 680X <br><a href="/tracking">https://www.passport.service.gov.uk/track</a></p>
                 {% endif %}
 
-            {# 0–11 Renewals, FTC, FTA, Old blue #}
+            {# 0–11 Renewals, Replacements Damaged Child 0–11s, FTC, FTA, Old blue #}
             {% elif values['application-type'] === 'renew-child-0-11' or
+                    values['application-type'] === 'replacement-damaged-child-0-11' or
                     values['application-type'] === 'first-child' or
                     values['application-type'] === 'first-adult' or
                     values['application-type'] === 'old-blue' %}
@@ -78,8 +81,10 @@
 
                 <p>We'll let you know when and where to send them.</p>
 
-            {# Lost and Stolen #}
-            {% elif values['application-type'] === 'replacement' %}
+            {# Lost or Stolen Child 0–11s, Lost or Stolen Child 12–15s, Lost or Stolen Adult #}
+            {% elif values['application-type'] === 'replacement-lost-or-stolen-child-0-11' or
+                    values['application-type'] === 'replacement-lost-or-stolen-child-12-15' or
+                    values['application-type'] === 'replacement-lost-or-stolen-adult' %}
 
                 {# LSR no docs #}
                 {% if not values['change-of-name-reason'] and values['lost-stolen-no-docs'] %}
@@ -104,14 +109,17 @@
                 Sign in and feedback
             #}
 
-            {# 12–15s Renewals, Adult Renewals #}
+            {# 12–15 Renewals, Adult Renewals, Replacements Damaged Child 12–15s, Replacements Damaged Adult #}
             {% if values['application-type'] === 'renew-child-12-15' or
-                  values['application-type'] === 'renew-adult' %}
+                  values['application-type'] === 'renew-adult' or
+                  values['application-type'] === 'replacement-damaged-child-12-15' or
+                  values['application-type'] === 'replacement-damaged-adult' %}
 
                 <a href="" class="button">Give feedback</a><br><br>
 
-            {# 0–11s Renewals, FTC #}
+            {# 0–11 Renewals, Replacements Damaged Child 0–11s, FTC #}
             {% elif values['application-type'] === 'renew-child-0-11' or
+                    values['application-type'] === 'replacement-damaged-child-0-11' or
                     values['application-type'] === 'first-child' %}
 
                 <a href="/tracking/user/?status=exceptions&csigtype=child" class="button">Sign in</a>
@@ -122,8 +130,10 @@
 
                 <a href="/tracking/user/?status=exceptions" class="button">Sign in</a>
 
-            {# Lost and Stolen #}
-            {% elif values['application-type'] === 'replacement' %}
+            {# Lost or Stolen Child 0–11s, Lost or Stolen Child 12–15s, Lost or Stolen Adult #}
+            {% elif values['application-type'] === 'replacement-lost-or-stolen-child-0-11' or
+                    values['application-type'] === 'replacement-lost-or-stolen-child-12-15' or
+                    values['application-type'] === 'replacement-lost-or-stolen-adult' %}
 
                 {% if values['applicant-age'] < 16 %}
                     <a href="/tracking/user/?status=exceptions&csigtype=child" class="button">Sign in</a>

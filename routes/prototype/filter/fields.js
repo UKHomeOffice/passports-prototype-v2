@@ -352,14 +352,17 @@ module.exports = {
       value: 'Is your passport damaged?',
       className: 'visuallyhidden'
     },
+    formatter: [
+      'boolean'
+    ],
     options: [{
-        value: 'Yes',
+        value: true,
         label: 'Yes',
         toggle: 'damaged-reason',
         child: 'textarea'
       },
       {
-        value: 'No',
+        value: false,
         label: 'No'
       }
     ],
@@ -377,7 +380,7 @@ module.exports = {
     ],
     dependent: {
       field: 'passport-damaged',
-      value: 'Yes'
+      value: true
     },
     attributes: [{
         attribute: 'spellcheck',

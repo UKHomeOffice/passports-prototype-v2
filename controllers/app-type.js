@@ -21,6 +21,9 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
   let oldBlue = moment(issueDate).isBefore('1994-01-01', 'years');
   let age = req.sessionModel.get('applicant-age')
   let passportBefore = req.sessionModel.get('passport-before')
+  let damaged = req.sessionModel.get('passport-damaged')
+  let lostOrStolen = req.sessionModel.get('lost-stolen')
+
 
   /* Adult applications types */
 
@@ -46,11 +49,6 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     req.sessionModel.set('application-type', 'veteran')
   }
 
-  // Replacements
-  let lostAndStolen = req.sessionModel.get('lost-stolen')
-  if (lostAndStolen && passportBefore) {
-    req.sessionModel.set('application-type', 'replacement')
-  }
 
   /* Child application types */
 
@@ -67,11 +65,41 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     req.sessionModel.set('application-type', 'renew-child-12-15')
   }
 
+
+  /* Replacement application types */
+
+  // Replace Damaged Child 0–11s
+  if (passportBefore && damaged && age < 12) {
+    req.sessionModel.set('application-type', 'replacement-damaged-child-0-11')
+  }
+  // Replace Damaged Child 12–15s
+  if (passportBefore && damaged && (age >= 12 && age < 16)) {
+    req.sessionModel.set('application-type', 'replacement-damaged-child-12-15')
+  }
+  // Replace Damaged Adult
+  if (passportBefore && damaged && age >= 16) {
+    req.sessionModel.set('application-type', 'replacement-damaged-adult')
+  }
+  // Replace Lost or Stolen Child 0–11s
+  if (passportBefore && lostOrStolen && age < 12) {
+    req.sessionModel.set('application-type', 'replacement-lost-or-stolen-child-0-11')
+  }
+  // Replace Lost or Stolen Child 12–15s
+  if (passportBefore && lostOrStolen && (age >= 12 && age < 16)) {
+    req.sessionModel.set('application-type', 'replacement-lost-or-stolen-child-12-15')
+  }
+  // Replace Lost or Stolen Adult
+  if (passportBefore && lostOrStolen && age >= 16) {
+    req.sessionModel.set('application-type', 'replacement-lost-or-stolen-adult')
+  }
+
+
   /* Overseas */
   // if (req.sessionModel.get('is-overseas')) {
   //   let applicationType = req.sessionModel.get('application-type') // Would get set by any of the above conditions
   //   req.sessionModel.set('application-type', 'overseas-' + applicationType)
   // }
+
 
   console.log(req.session)
   Base.prototype.successHandler.call(this, req, res, callback);
