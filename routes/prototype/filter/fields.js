@@ -203,11 +203,11 @@ module.exports = {
     },
     options: [{
         value: true,
-        label: 'Yes'
+        label: 'Yes – I’ve cancelled it'
       },
       {
         value: false,
-        label: 'No',
+        label: 'No – I need to cancel it now',
         toggle: 'lost-stolen-reported'
       }
     ],
@@ -219,8 +219,7 @@ module.exports = {
         arguments:[true],
         redirect:'https://www.gov.uk/report-a-lost-or-stolen-passport'
       }
-    ],
-    className: 'inline'
+    ]
   },
   
   'passport-colour': {
