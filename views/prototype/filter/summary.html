@@ -49,7 +49,7 @@
     <p>It should take 3 weeks to get a new passport. Use the 1 week Fast Track service if you need to <a href="https://www.gov.uk/get-a-passport-urgently/1-week-fast-track-service">get a passport urgently</a>.</p>
 
 
-  {% elif values['passport-before'] and (values['applicant-age'] >= 16 or values['rising-16']) and values['passport-damaged'] == 'No' %} {# Renew adult #}
+  {% elif values['passport-before'] and (values['applicant-age'] >= 16 or values['rising-16']) and not values['passport-damaged'] %} {# Renew adult #}
     <p>Based on your answers, you're applying for an adult renewal.</p>
     <p>If you want to change the name on your passport, we'll ask for the details <br>later on.</p>
     {% if not values['rising-16'] %}
@@ -59,19 +59,19 @@
     {% endif %}
 
 
-  {% elif values['passport-before'] and (values['applicant-age'] >= 12 and values['applicant-age'] < 16) and values['passport-damaged'] == 'No' %} {# Renew 12–15s #}
+  {% elif values['passport-before'] and (values['applicant-age'] >= 12 and values['applicant-age'] < 16) and not values['passport-damaged'] %} {# Renew 12–15s #}
     <p>Based on your answers, you're renewing a child passport.</p>
     <p>If your name has changed, or you can't be recognised as the same person from the photo in your old passport, you need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a>.</p>
     <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
 
 
-  {% elif values['passport-before'] and (values['applicant-age'] < 12) and values['passport-damaged'] == 'No' %} {# Renew 0-11s #}
+  {% elif values['passport-before'] and (values['applicant-age'] < 12) and not values['passport-damaged'] %} {# Renew 0-11s #}
     <p>Based on your answers, you're renewing a child passport.</p>
     <p>If your name has changed, you need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a>.</p>
     <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
 
 
-  {% elif values['passport-before'] and (values['applicant-age'] >= 16 or values['rising-16']) and values['passport-damaged'] == 'Yes' %} {# Damaged adult #}
+  {% elif values['passport-before'] and (values['applicant-age'] >= 16 or values['rising-16']) and values['passport-damaged'] %} {# Damaged adult #}
     <p>Based on your answers, you're applying for a replacement, adult passport.</p>
     <p>If you want to change the name on your passport, we'll ask for the details <br>later on.</p>
     {% if not values['rising-16'] %}
@@ -81,13 +81,13 @@
     {% endif %}
 
 
-  {% elif values['passport-before'] and (values['applicant-age'] >= 12 and values['applicant-age'] < 16) and values['passport-damaged'] == 'Yes' %} {# Damaged 12–15s #}
+  {% elif values['passport-before'] and (values['applicant-age'] >= 12 and values['applicant-age'] < 16) and values['passport-damaged'] %} {# Damaged 12–15s #}
     <p>Based on your answers, you're applying for a replacement, child passport.</p>
     <p>If your name has changed, or you can't be recognised as the same person from the photo in your old passport, you need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a>.</p>
     <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
 
 
-  {% elif values['passport-before'] and (values['applicant-age'] < 12) and values['passport-damaged'] == 'Yes' %} {# Damaged 0-11s #}
+  {% elif values['passport-before'] and (values['applicant-age'] < 12) and values['passport-damaged'] %} {# Damaged 0-11s #}
     <p>Based on your answers, you're applying for a replacement, child passport.</p>
     <p>If your name has changed, you need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a>.</p>
     <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
