@@ -90,7 +90,7 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     req.sessionModel.set('application-type', 'replacement-lost-or-stolen-child-12-15')
   }
   // Replace Lost or Stolen Adult
-  if (passportBefore && lostOrStolen && age >= 16 || (passportBefore && damaged && rising16)) {
+  if (passportBefore && lostOrStolen && age >= 16 || (passportBefore && lostOrStolen && rising16)) {
     req.sessionModel.set('application-type', 'replacement-lost-or-stolen-adult')
   }
 
