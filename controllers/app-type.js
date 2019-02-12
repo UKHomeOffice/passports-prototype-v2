@@ -23,6 +23,7 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
   let passportBefore = req.sessionModel.get('passport-before')
   let damaged = req.sessionModel.get('passport-damaged')
   let lostOrStolen = req.sessionModel.get('lost-stolen')
+  let rising16 = re.sessionModel.get('rising-16')
 
 
   /* Adult applications types */
@@ -77,7 +78,7 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     req.sessionModel.set('application-type', 'replacement-damaged-child-12-15')
   }
   // Replace Damaged Adult
-  if (passportBefore && damaged && age >= 16) {
+  if (passportBefore && damaged && age >= 16 || (passportBefore && damaged && rising16)) {
     req.sessionModel.set('application-type', 'replacement-damaged-adult')
   }
   // Replace Lost or Stolen Child 0–11s

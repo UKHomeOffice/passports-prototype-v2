@@ -139,6 +139,7 @@ module.exports = {
             'dual-nationality'
         ],
         next: '/summary',
+        controller: require('../../../controllers/app-type.js'), // Sets the application-type to be used for the rest of the journey
         forks: [{
             target: '/british-citizen',
             condition: function (req, res) {
@@ -160,7 +161,6 @@ module.exports = {
         }]
     },
     '/summary': {
-        controller: require('../../../controllers/app-type.js'),
         next: '/../intro'
     }
 };
