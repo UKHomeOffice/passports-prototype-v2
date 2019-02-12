@@ -25,11 +25,6 @@ module.exports = {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate';
       }
     }, {
-      target: '/renominate-anytime',
-      condition: function (req, res) {
-        return req.session['hmpo-wizard-common']['tracking-status'] == 'renominate-anytime';
-      }
-    }, {
       target: '/send-docs',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'send-docs';
