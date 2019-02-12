@@ -46,45 +46,6 @@ module.exports = {
       }
     }],
   },
-  '/waiting-for-old-pass': {
-    next: '/track'
-  },
-  '/renominate': {
-    next: '/who-can'
-  },
-  '/renominate-anytime': {
-    next: '/../user-contact/'
-  },
-  '/need-csig-complete': {
-    next: '/../user-contact'
-  },
-  '/send-book': {
-    next: '../csig/'
-  },
-  '/send-docs': {
-    next: '../csig/'
-  },
-  '/csig-completed': {
-    next: '../csig/'
-  },
-  '/application-submitted': {
-    next: '../csig/'
-  },
-  '/application-in-queue': {
-  
-  },
-  '/paper-application-select':{
-    backLink: './who-can',
-    fields: ['confirm-csig-paper'],
-    next: '/paper-application-confirmed',
-    forks: [{
-      target: '/confirm-your-identity',
-      condition: {
-        field: 'confirm-csig-paper',
-        value: false
-      }
-    }]
-  },
   '/confirm-your-identity': {
     next: '/who-can',
     forks: [{
@@ -99,21 +60,12 @@ module.exports = {
       }
     }]
   },
-  '/select-overseas-method':{
-    next: '/how-to',
-  },
-  '/paper-application-confirmed': {
-    next: '../csig/'
-  },
   '/who-can': {
     next: '/how-to',
   },
   '/how-to': {
       backLink: './who-can',
       next: '/give-csig-details',
-  },
-  '/what-you-need-to-do': {
-    next: '/give-csig-details',
   },
   '/give-csig-details': {
       fields: ['csig-email', 'csig-email-confirm', 'csig-name', 'csig-last-name', 'contact-csig'],
@@ -133,10 +85,42 @@ module.exports = {
           }
       }]
   },
-  '/tracking-waiting-renominate': {
-      next: '/track'
+  '/renominate': {
+    next: '/who-can'
   },
-  '/tracking-waiting-renominate-anytime': {
-      next: '/track'
+  '/renominate-anytime': {
+    next: '/../user-contact/'
+  },
+  '/send-book': {
+    next: '../csig/'
+  },
+  '/send-docs': {
+    next: '../csig/'
+  },
+  '/csig-completed': {
+    next: '../csig/'
+  },
+  '/application-submitted': {
+    next: '../csig/'
+  },
+  '/paper-application-select':{
+    backLink: './who-can',
+    fields: ['confirm-csig-paper'],
+    next: '/paper-application-confirmed',
+    forks: [{
+      target: '/confirm-your-identity',
+      condition: {
+        field: 'confirm-csig-paper',
+        value: false
+      }
+    }]
+  },
+  '/select-overseas-method':{
+    next: '/how-to',
+  },
+  '/paper-application-confirmed': {
+    next: '../csig/'
+  },
+  '/application-in-queue': {
   },
 };
