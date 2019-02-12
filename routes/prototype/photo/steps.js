@@ -175,14 +175,14 @@ module.exports = {
         fields: ['oix-override', 'oix-override-reason'],
         next: '/../apply',
         forks: [{
-            target: '/../lost-stolen-passport',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['lost-stolen'] == true; // If their passport is lost/stolen
-            }
-        },{
             target: '/../apply',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
+            }
+        }, { 
+            target: '/../apply/lost-stolen-passport',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['lost-stolen'] == true; // If their passport is lost/stolen
             }
         }, {
             target: '/../apply/name',
