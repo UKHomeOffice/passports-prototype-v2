@@ -10,6 +10,21 @@ module.exports = {
     next: '/confirm-your-identity',
     backLink: './',
     forks: [{
+      target: '/paper-application-confirmed-no-docs',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'paper-form-no-docs';
+      }
+    }, {
+      target: '/your-passport-is-coming',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'passport-on-its-way';
+      }
+    }, {
+      target: '/application-approved',
+      condition: function (req, res) {
+        return req.session['hmpo-wizard-common']['tracking-status'] == 'application-approved';
+      }
+    }, {
       target: '/application-in-queue',
       condition: function (req, res) {
         return req.session['hmpo-wizard-common']['tracking-status'] == 'application-in-queue';
@@ -116,6 +131,10 @@ module.exports = {
   '/paper-application-confirmed': {
     next: '../csig/'
   },
-  '/application-in-queue': {
+  '/paper-application-confirmed-no-docs': {
+    next: '../csig/'
   },
+  '/application-in-queue': {},
+  '/application-approved': {},
+  '/your-passport-is-coming': {}
 };
