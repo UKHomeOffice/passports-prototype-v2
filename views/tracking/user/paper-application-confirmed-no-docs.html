@@ -1,0 +1,111 @@
+{{< layout-csig}}
+
+{{$back}}
+{{/back}}
+
+{{$pageTitle}}Track a passport application{{/pageTitle}}
+
+{{$content}}
+  {{< hmpo-partials-form}}
+    {{$form}}
+      <header class="update-notice update-notice--grey">
+        <h1>Send the form and your documents</h1>
+      </header>
+
+        <h2>What you need to do</h2>
+
+        <p>Before we can work on your application, you need to:</p>
+        <ul class="list-bullet">
+          <li>ask someone to confirm your identity</li>
+          <li>send the completed form and your documents</li>
+        </ul>
+
+        <h3>1. Ask someone to confirm your identity</h3>
+        <p>The person confirming your identity needs to complete this form and give it back to you. Print the form:</p>
+        <ul class="list-bullet">
+          <li>single sided</li>
+          <li>on A4 or US letter sized paper</li>
+          <li>at its default size (sometimes called 'no scaling' or '100% scale')</li>
+          <li>in either black and white or colour</li>
+        </ul>
+       
+        <section class="attachment">
+          <div class="attachment-thumb">
+            {{#nunjucks}}
+              {% if values['csig-type'] == "child" %}
+                <a aria-hidden="true" class="thumbnail" href="/public/images/pdf/confirm-id-child.pdf" target="_blank"><img alt="" src="/public/images/pdf/csig-child-form-thumbnail.png"></a>
+              {% else %}
+                <a aria-hidden="true" class="thumbnail" href="/public/images/pdf/confirm-id-adult.pdf" target="_blank"><img alt="" src="/public/images/pdf/csig-child-form-thumbnail.png"></a>
+              {% endif %}
+            {{/nunjucks}}
+            
+          </div>
+          <div class="attachment-details">
+            {{#nunjucks}}
+              {% if values['csig-type'] == "child" %}
+                <h2 class="title"><a aria-describedby="attachment-2771744-accessibility-help" target="_blank" href="/public/images/pdf/confirm-id-child.pdf">Download the form</a></h2>
+              {% else %}
+                <h2 class="title"><a aria-describedby="attachment-2771744-accessibility-help" target="_blank" href="/public/images/pdf/confirm-id-adult.pdf">Download the form</a></h2>
+              {% endif %}
+            {{/nunjucks}}
+            
+            <p class="metadata">
+              <span class="type"><abbr title="Portable Document Format">PDF</abbr></span>, <span class="file-size">681KB</span>, <span class="page-length">3 pages</span>
+            </p>
+              <!-- <div data-module="toggle" class="accessibility-warning">
+                <h2>This file may not be suitable for users of assistive technology.
+                  <a class="toggler" href="#attachment-2771744-accessibility-request" data-controls="attachment-2771744-accessibility-request" data-expanded="false" role="button" aria-controls="attachment-2771744-accessibility-request" aria-expanded="false">Request an accessible format.</a>
+                </h2>
+                <p class="js-hidden" aria-live="polite" role="region">
+                  If you use assistive technology (such as a screen reader) and need a
+                  version of this document in a more accessible format, please email <a>alternativeformats@homeoffice.gsi.gov.uk</a>.
+                  Please tell us what format you need. It will help us if you say what assistive technology you use.
+                </p>
+              </div> -->
+          </div>
+        </section>
+
+
+
+       <h3>2. Send the completed form and your documents</h3>
+
+       <p>Use a strong envelope that is the right size for your documents. You can use standard post or special delivery.</p>
+
+      <p>Send the form and your documents to:</p>
+
+        HM Passport Office<br>
+        UK-FTA<br>
+        PEX 319 825 680X<br>
+        Aragon Court<br>
+        Northminster Road<br>
+        Peterborough<br>
+        PE1 1QG
+      </p>
+      <hr>
+      <h2>Application history</h2>
+      <article>
+        <table>
+          <tbody>
+            <tr>
+              <td>Use paper form to confirm identity</td>
+              <td>4:23pm on 20 October 2018</td>
+            </tr>
+            <tr>
+              <td>Ask someone to confirm your identity</td>
+              <td>10:09am on 8 October 2018</td>
+            </tr>
+            <tr>
+              <td>Application submitted</td>
+              <td>10:05am on 8 October 2018</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    {{/form}}
+  {{/ hmpo-partials-form}}
+{{/content}}
+{{$sidebar}}
+  {{> partials-csig-sidebar}}
+{{/sidebar}}
+
+{{/ layout-csig}}
