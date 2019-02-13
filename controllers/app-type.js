@@ -23,18 +23,18 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
   let passportBefore = req.sessionModel.get('passport-before')
   let damaged = req.sessionModel.get('passport-damaged')
   let lostOrStolen = req.sessionModel.get('lost-stolen')
-  let rising16 = re.sessionModel.get('rising-16')
+  let rising16 = req.sessionModel.get('rising-16')
 
 
   /* Adult applications types */
 
   // FTA
-  if (passportBefore === false) {
+  if (passportBefore === false || (passportBefore === false && rising16)) {
     req.sessionModel.set('application-type', 'first-adult')
   }
 
   // Renew
-  if (passportBefore) {
+  if (passportBefore || (passportBefore && rising16)) {
     req.sessionModel.set('application-type', 'renew-adult')
     // Old Blue
     if (oldBlue) {
@@ -54,7 +54,7 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
   /* Child application types */
 
   // Child First Time
-  if (passportBefore === false && age < 16) {
+  if (passportBefore === false && age < 16 && !rising16) {
     req.sessionModel.set('application-type', 'first-child')
   }
   // Child renew 0-11s
@@ -62,7 +62,7 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     req.sessionModel.set('application-type', 'renew-child-0-11')
   }
   // Child renew 12-15s
-  if (passportBefore && age > 11 && age < 16) {
+  if (passportBefore && age > 11 && age < 16 && !rising16) {
     req.sessionModel.set('application-type', 'renew-child-12-15')
   }
 
@@ -74,7 +74,7 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     req.sessionModel.set('application-type', 'replacement-damaged-child-0-11')
   }
   // Replace Damaged Child 12–15s
-  if (passportBefore && damaged && (age >= 12 && age < 16)) {
+  if (passportBefore && damaged && (age >= 12 && age < 16 && !rising16)) {
     req.sessionModel.set('application-type', 'replacement-damaged-child-12-15')
   }
   // Replace Damaged Adult
@@ -86,11 +86,11 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     req.sessionModel.set('application-type', 'replacement-lost-or-stolen-child-0-11')
   }
   // Replace Lost or Stolen Child 12–15s
-  if (passportBefore && lostOrStolen && (age >= 12 && age < 16)) {
+  if (passportBefore && lostOrStolen && (age >= 12 && age < 16 && !rising16)) {
     req.sessionModel.set('application-type', 'replacement-lost-or-stolen-child-12-15')
   }
   // Replace Lost or Stolen Adult
-  if (passportBefore && lostOrStolen && age >= 16) {
+  if (passportBefore && lostOrStolen && age >= 16 || (passportBefore && lostOrStolen && rising16)) {
     req.sessionModel.set('application-type', 'replacement-lost-or-stolen-adult')
   }
 
