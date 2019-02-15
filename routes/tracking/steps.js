@@ -16,8 +16,12 @@ module.exports = {
             }
         }]
     },
-    '/waiting-for-old': {},
-    '/send-us-your-documents': {},
+    '/waiting-for-old': {
+        controller: require('../../controllers/check-query-string'),
+    },
+    '/send-us-your-documents': {
+        controller: require('../../controllers/check-query-string'),
+    },
     '/recieved-your-documents': {},
     '/photo-rejected': {},
     '/new-photo-arrived': {},

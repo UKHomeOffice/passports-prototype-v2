@@ -101,6 +101,13 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
   //   req.sessionModel.set('application-type', 'overseas-' + applicationType)
   // }
 
+  /* Countersignitures */
+  let applicationType = req.sessionModel.get('application-type')
+  if(applicationType === 'first-adult' || applicationType === 'first-child' || applicationType === 'renew-child-0-11') {
+    req.sessionModel.set('csig-required', true)
+  } else {
+    req.sessionModel.set('csig-required', false)
+  }
 
   console.log(req.session)
   Base.prototype.successHandler.call(this, req, res, callback);

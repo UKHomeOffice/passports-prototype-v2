@@ -22,15 +22,48 @@
         Aragon Court<br>
         Northminster Road<br>
         Peterborough<br>
-        PE1 1QG</p>
+        PE1 1QG
+      </p>
       
+      <p>Find out how to send your documents if you're <a href="../../prototype/help/group-applications.html">applying as part of a family or couple</a>.</p>
+
       <details>
         <summary><span class="summary">Already sent</span></summary>
         <div class="panel panel-border-narrow">
           <p>Check again in 3 days. If we still haven’t received your documents, <a href="/help" target="_blank">contact HM Passport Office <span class="visuallyhidden">(Opens in a new window)</span></a></p>
         </div>
       </details>
-      {{> partials-csig-sidebar}}
+      {{#nunjucks}}
+        <div class="sidebar-container">
+          <ul class="sidebar-task">
+            <li class="sidebar-task__panel">
+              <h3>Application reference</h3>
+              <p>PEX 319 825 680X</p>
+            </li>
+              {% if values['csig-type'] != 'examiner' %}
+                {% if values['change-of-name-reason'] or not values['lost-stolen-no-docs'] %}
+                  <li class="sidebar-task__panel">
+                    <h3>Documents</h3>
+                    {% if values['passport-before'] %}
+                      <a href="/prototype/apply/docs-renew" target="_blank">
+                        What you need to send
+                      </a>
+                    {% else %}
+                      <a href="/prototype/apply/docs-fta" target="_blank">
+                        What you need to send
+                      </a><br>
+                    {% endif %}
+                  </li>
+                {% endif %}
+              {% endif %}
+              <li class="sidebar-task__panel" style="border-top: none;">
+                <h3>Other links</h3>
+                <p><a href="/prototype/startpage">Start a new application</a></p>
+                <p><a href="/prototype/startpage">Give feedback</a></p>
+              </li>
+          </ul>
+        </div>
+      {{/nunjucks}}
       <hr>
       <h2>Application history</h2>
       <article>
