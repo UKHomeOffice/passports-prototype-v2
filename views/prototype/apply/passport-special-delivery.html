@@ -1,31 +1,38 @@
 {{< layout}}
 
-{{$title}}Delivery options{{/title}}
+{{$title}}How should we return your documents?{{/title}}
 
 {{$header}}
-    <h1>Delivery {{^values.lost-stolen-no-docs}}options{{/values.lost-stolen-no-docs}}</h1>
+    <h1>How should we return your documents?</h1>
 {{/header}}
 
 {{$content}}
 
 {{< hmpo-partials-form}}
 {{$form}}
-    {{^values.lost-stolen-no-docs}}
-        <div class="panel panel-border-wide alert-default">
-            <h2>New passport</h2>
-            <p>We'll send your new passport by secure delivery. The cost is included in the passport fee.</p>
-        </div>
-        <h2>Documents</h2>
-        <p>Choose how your documents are sent back to you. They won't be in the same envelope as your new passport.</p>
-        {{#radio-group}}secure-return{{/radio-group}}
-        <p>We’ll send everything to {{values.address1}}, {{#values.address2}} {{values.address2}}, {{/values.address2}} {{values.town}}, {{values.postcode}}.</p>
-    {{/values.lost-stolen-no-docs}}
-    {{#values.lost-stolen-no-docs}}
-        <h2>New passport</h2>
-        <p>We'll send your new passport by secure delivery. The cost is included in the passport fee.</p>
-        <p>We'll send your passport to {{values.address1}}, {{#values.address2}} {{values.address2}}, {{/values.address2}} {{values.town}}, {{values.postcode}}.</p>   
-        <input type="hidden" value="false" name="secure-return" />
-    {{/values.lost-stolen-no-docs}}
+
+    {{#nunjucks}}
+
+        {# Renew, Renew with CoN, Damaged #}
+        {% if values['application-type'] === 'renew-child-0-11' or
+              values['application-type'] === 'renew-child-12-15' or
+              values['application-type'] === 'renew-adult' or
+              values['application-type'] === 'replacement-damaged-child-0-11' or
+              values['application-type'] === 'replacement-damaged-child-12-15' or
+              values['application-type'] === 'replacement-damaged-adult' %}
+            <p>Choose how your old passport and any extra documents are sent back to you. They won't be in the same envelope as your new passport.</p>
+        {% else %}
+            <p>Choose how your documents are sent back to you. They won't be in the same envelope as your new passport.</p>
+        {% endif %}
+
+    {{/nunjucks}}
+
+    {{#radio-group}}secure-return{{/radio-group}}
+
+    <div class="panel panel-border-wide">
+        <p>We'll send your new passport by secure delivery at no extra cost.</p>
+    </div>
+
     {{#input-submit}}{{/input-submit}}
 
 {{/form}}
