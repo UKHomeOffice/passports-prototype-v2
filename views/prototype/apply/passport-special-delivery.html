@@ -11,7 +11,21 @@
 {{< hmpo-partials-form}}
 {{$form}}
 
-    <p>Choose how your documents are sent back to you. They won't be in the same envelope as your new passport.</p>
+    {{#nunjucks}}
+
+        {# Renew, Renew with CoN, Damaged #}
+        {% if values['application-type'] === 'renew-child-0-11' or
+              values['application-type'] === 'renew-child-12-15' or
+              values['application-type'] === 'renew-adult' or
+              values['application-type'] === 'replacement-damaged-child-0-11' or
+              values['application-type'] === 'replacement-damaged-child-12-15' or
+              values['application-type'] === 'replacement-damaged-adult' %}
+            <p>Choose how your old passport and any extra documents are sent back to you. They won't be in the same envelope as your new passport.</p>
+        {% else %}
+            <p>Choose how your documents are sent back to you. They won't be in the same envelope as your new passport.</p>
+        {% endif %}
+
+    {{/nunjucks}}
 
     {{#radio-group}}secure-return{{/radio-group}}
 
