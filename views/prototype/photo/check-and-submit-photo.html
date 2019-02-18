@@ -61,12 +61,16 @@
 </ol>
 <br>
 
-<div class="panel panel-border-wide alert-warning">
-    <p class="list-item-bold">
-        Our automated check suggests </p>
-    <p>
-        <ul class="list-bullet">
-            {{#nunjucks}}
+{{#nunjucks}}
+    {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
+        <div class="panel panel-border-wide alert-warning">
+    {% elif values['choose-photo'] == 'code' %}
+        <div class="panel panel-border-wide alert-default">
+    {% endif %}
+        <p class="list-item-bold">
+            Our automated check suggests </p>
+        <p>
+            <ul class="list-bullet">
                 {% if values['applicant-age'] <= 11 %}
                     <li>it looks like your eyes are closed</li>
                     <li>it looks like you’re not facing the camera</li>
@@ -75,16 +79,25 @@
                     <li>it looks like your mouth is open</li>
                     <li>we can’t find the outline of your head</li>
                 {% endif %}
-            {{/nunjucks}}
-        </ul>
-    </p>
-</div>
+            </ul>
+        </p>
+    </div>
+{{/nunjucks}}
+
 <h2 class="heading-medium">
     You can use the photo</h2>
 <ul class="list-bullet">
     <li>if you have a medical or religious reason why it doesn't meet the rules</li>
     <li>if you think it meets all the rules</li>
 </ul>
+
+{{#nunjucks}}
+    {% if values['choose-photo'] == 'code' %}
+        <div class="panel panel-border-wide">
+            <p>If your photo doesn't meet the rules you may have problems with your application or when you travel.</p>
+        </div>
+    {% endif %}
+{{/nunjucks}}
 
 <h2>Do you want to submit this photo?</h2>
 
@@ -127,9 +140,13 @@
 
 {{#input-submit}}{{/input-submit}}
 
-<div class="panel panel-border-wide">
-    <p>If your photo doesn't meet the rules you may have problems with your application or when you travel.</p>
-</div>
+{{#nunjucks}}
+    {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
+        <div class="panel panel-border-wide">
+            <p>If your photo doesn't meet the rules you may have problems with your application or when you travel.</p>
+        </div>
+    {% endif %}
+{{/nunjucks}}
 
 {{/form}}
 {{/hmpo-partials-form}}
