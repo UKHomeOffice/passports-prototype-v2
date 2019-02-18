@@ -46,6 +46,11 @@ select {
   background-color: mix(white, $turquoise, 90%);
 }
 
+.alert-warning {
+  border-color: $red;
+  background-color: mix(white, $mellow-red, 90%);
+}
+
 /* photo guide styles */
 .panel-photo-pass {
    background-image: url("../images/icon_thick_tick.svg");
