@@ -368,16 +368,12 @@ module.exports = {
         controller: require('../../../controllers/confirm'),
         template: 'confirm',
         next: '/documents-required',
-        forks: [{ // if lost and stolen
-            target: '/csig-required',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['lost-stolen'] == true
-            }
-        }, { // if csig required
-            target: '/csig-required',
+        forks: [{ // If csig required
+            target: '/cost',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == false ||
-                    req.session['hmpo-wizard-common']['12-or-older'] == false
+                    req.session['hmpo-wizard-common']['12-or-older'] == false ||
+                    req.session['hmpo-wizard-common']['lost-stolen'] == true
             }
         }, { // For prototype purpose, set csig vars to false
             condition: function (req, res) {
