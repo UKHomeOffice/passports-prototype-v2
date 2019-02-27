@@ -11,7 +11,19 @@
     display: none;
   }
 </style>
-
+<!--
+                            /$$ /$$  /$$$$$$  /$$                                                                             /$$                           /$$                                     /$$                    
+                              | $$|__/ /$$__  $$| $$                                                                            | $$                          | $$                                    |__/                    
+  /$$$$$$$  /$$$$$$  /$$   /$$| $$ /$$| $$  \__/| $$  /$$$$$$  /$$  /$$  /$$  /$$$$$$   /$$$$$$         /$$$$$$  /$$$$$$$   /$$$$$$$        /$$$$$$  /$$   /$$| $$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$ /$$$$$$$   /$$$$$$ 
+ /$$_____/ |____  $$| $$  | $$| $$| $$| $$$$    | $$ /$$__  $$| $$ | $$ | $$ /$$__  $$ /$$__  $$       |____  $$| $$__  $$ /$$__  $$       |____  $$| $$  | $$| $$__  $$ /$$__  $$ /$$__  $$ /$$__  $$| $$| $$__  $$ /$$__  $$
+| $$        /$$$$$$$| $$  | $$| $$| $$| $$_/    | $$| $$  \ $$| $$ | $$ | $$| $$$$$$$$| $$  \__/        /$$$$$$$| $$  \ $$| $$  | $$        /$$$$$$$| $$  | $$| $$  \ $$| $$$$$$$$| $$  \__/| $$  \ $$| $$| $$  \ $$| $$$$$$$$
+| $$       /$$__  $$| $$  | $$| $$| $$| $$      | $$| $$  | $$| $$ | $$ | $$| $$_____/| $$             /$$__  $$| $$  | $$| $$  | $$       /$$__  $$| $$  | $$| $$  | $$| $$_____/| $$      | $$  | $$| $$| $$  | $$| $$_____/
+|  $$$$$$$|  $$$$$$$|  $$$$$$/| $$| $$| $$      | $$|  $$$$$$/|  $$$$$/$$$$/|  $$$$$$$| $$            |  $$$$$$$| $$  | $$|  $$$$$$$      |  $$$$$$$|  $$$$$$/| $$$$$$$/|  $$$$$$$| $$      |  $$$$$$$| $$| $$  | $$|  $$$$$$$
+ \_______/ \_______/ \______/ |__/|__/|__/      |__/ \______/  \_____/\___/  \_______/|__/             \_______/|__/  |__/ \_______/       \_______/ \______/ |_______/  \_______/|__/       \____  $$|__/|__/  |__/ \_______/
+                                                                                                                                                                                             /$$  \ $$                        
+                                                                                                                                                                                            |  $$$$$$/                        
+                                                                                                                                                                                             \______/                         
+-->
 <nav id="nav">
   <div class="navbar">
     <ul class="navbar__list-items">
@@ -51,15 +63,15 @@
     <li><a href="./csig/user?status=send-docs">Identity details received</a></li>
     
   </ul>
-  <h3>Applicant &ndash; no docs</h3>
+  <h3>Applicant &ndash; examiner initiated/no docs</h3>
   <ul>
+    <li><a href="./csig/user?status=application-in-queue&csigtype=examiner">Your application is in the queue</a></li>
+    <li><a href="./csig/user?status=application-approved&csigtype=examiner">Application approved</a></li>
+    <li><a href="./csig/user?status=passport-on-its-way&csigtype=examiner">Your passport is on its way</a></li>
     <li><a href="./csig/user?csigtype=examiner">Ask someone to confirm your identity</a></li>
     <li><a href="./csig/user?status=csig-completed&csigtype=examiner">Identity details received</a></li>
     <li><a href="./csig/user?status=renominate&csigtype=examiner">Person not eligible</a></li>
-    <li><a href="./csig/user?status=application-approved&csigtype=examiner">Application approved</a></li>
-    <li><a href="./csig/user?status=passport-on-its-way&csigtype=examiner">Your passport is on its way</a></li>
     <li><a href="./csig/user?status=paper-form-no-docs&csigtype=examiner">Send the form</a></li>
-    <li><a href="./csig/user?status=application-in-queue&csigtype=examiner">Application in queue</a></li>
   </ul>
   <h3>Person confirming identity</h3>
   <ul>
