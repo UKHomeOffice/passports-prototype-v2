@@ -35,11 +35,11 @@ module.exports = {
                 value: true
             }
         }, {
-            target: '/you-need-a-different-service',
+            target: '/previous-names',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['change-name'] == true &&
-                    req.session['hmpo-wizard-common']['16-or-older'] == false &&
-                    req.session['hmpo-wizard-common']['rising-16'] == false;
+                return req.session['hmpo-wizard-common']['change-name'] === true &&
+                    (req.session['hmpo-wizard-common']['applicant-age'] < 16 &&
+                    req.session['hmpo-wizard-common']['rising-16'] === false);
             }
         }]
     },
@@ -49,7 +49,6 @@ module.exports = {
         ],
         next: '/previous-names'
     },
-    '/you-need-a-different-service': {},
     '/previous-names': {
         fields: [
             'previous-name',

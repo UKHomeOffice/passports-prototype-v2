@@ -234,14 +234,22 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         value: join(values, ['name', 'lastname'])
     });
 
-    if (values['change-name'] == true) {
-        var str = values['change-of-name-reason'];
-        reason = str.replace(/-/g, ' ');
-        newPassportFields.push({
-            step: this.getEditStep('change-of-name-reason'),
-            title: 'Name change',
-            value: reason
-        });
+    if (values['change-name'] === true) {
+        if (values['applicant-age'] < 16 && values['rising-16'] === false) {
+            newPassportFields.push({
+                step: this.getEditStep('change-name'),
+                title: 'Name change',
+                value: 'Yes'
+            });
+        } else {
+            var str = values['change-of-name-reason'];
+            reason = str.replace(/-/g, ' ');
+            newPassportFields.push({
+                step: this.getEditStep('change-of-name-reason'),
+                title: 'Name change',
+                value: reason
+            });
+        }
     }
 
     var allPreviousNames = _.zip(values['previous-first-name'], values['previous-last-name']);
