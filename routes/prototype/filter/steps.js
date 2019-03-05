@@ -139,7 +139,7 @@ module.exports = {
             'dual-nationality'
         ],
         next: '/summary',
-        controller: require('../../../controllers/app-type.js'), // Sets the application-type to be used for the rest of the journey
+        controller: require('../../../controllers/app-type'), // Sets the application-type to be used for the rest of the journey
         forks: [{
             target: '/british-citizen',
             condition: function (req, res) {
@@ -153,12 +153,24 @@ module.exports = {
             'british-citizen'
         ],
         next: '/summary',
-        forks: [{
-            target: '/../overseas/overseas-british',
+        forks: [{ // Change of national status journey
+            target: '/change-nationality',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['british-citizen'] == 'Other'
             }
         }]
+    },
+    '/change-nationality': { // Change of national status journey
+        fields: [
+            'change-nationality'
+        ],
+        next: '/naturalisation-certificate'
+    },
+    '/naturalisation-certificate': { // Change of national status journey
+        fields: [
+            'naturalisation-registration-certificate'
+        ],
+        next: '/summary'
     },
     '/summary': {
         next: '/../intro'

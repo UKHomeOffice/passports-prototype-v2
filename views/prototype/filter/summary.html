@@ -51,7 +51,7 @@
 
 
   {% elif values['application-type'] === 'renew-adult' %} {# Renew adult #}
-    <p>Based on your answers, you're applying for an adult renewal.</p>
+    <p>Based on your answers, you're applying for an adult renewal {{ "and changing your national status" if values['change-nationality'] else "" }}.</p>
     <p>If you want to change the name on your passport, we'll ask for the details <br>later on.</p>
     {% if not values['rising-16'] %}
       <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>

@@ -1,0 +1,27 @@
+{{< layout}}
+{{$propositionHeader}}
+{{/propositionHeader}}
+{{$pageTitle}}Do you have a naturalisation or registration certificate?{{/pageTitle}}
+
+{{$header}}
+    <h1>Do {{> partials-applicant-you-they}} have a naturalisation or registration certificate?</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+<fieldset class="inline">
+    <p>You'll only have one of these certificates if you applied for British nationality through the Home Office.</p>
+    {{#radio-group}}naturalisation-registration-certificate{{/radio-group}}
+</fieldset>
+
+{{#input-submit}}{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}

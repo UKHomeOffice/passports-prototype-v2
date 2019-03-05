@@ -80,6 +80,9 @@
         "born-in-uk": {
             "legend": "Were they born in the UK?"
         },
+        "change-nationality": {
+            "label": "Have you changed your nationality to British Citizen?"
+        },
         "naturalisation-registration-certificate": {
             "label": "Naturalisation or registration certificate"
         },
@@ -556,6 +559,9 @@
         },
         "british-citizen": {
             "required": "You must answer this question - british citizen"
+        },
+        "change-nationality": {
+            "required": "You must answer this question - Have you changed your nationality to British Citizen?"
         },
         "issuing-authority": {
             "required": "You must answer this question - issuing-authority"
