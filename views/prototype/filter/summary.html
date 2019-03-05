@@ -24,9 +24,7 @@
 
 {{< hmpo-partials-form}}
     {{$form}}
-
         {{#nunjucks}}
-
             {# 0–11 Renewals, 12–15 Renewals #}
             {% if values['application-type'] === 'renew-child-0-11' or
                   values['application-type'] === 'renew-child-12-15' %}
@@ -36,7 +34,7 @@
 
             {# Adult Renewals #}
             {% elif values['application-type'] === 'renew-adult' %}
-                <p>Based on your answers, you're applying for an adult renewal.</p>
+                <p><p>Based on your answers, you're applying for an adult renewal {{ "and changing your national status" if values['change-nationality'] else "" }}.</p>
                 <p>If you want to change the name on your passport, we'll ask for the details later on.</p>
                 {% if not values['rising-16'] %}
                     <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>

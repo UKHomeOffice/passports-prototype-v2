@@ -39,7 +39,7 @@ module.exports = {
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['change-name'] === true &&
                     (req.session['hmpo-wizard-common']['applicant-age'] < 16 &&
-                    req.session['hmpo-wizard-common']['rising-16'] === false);
+                        req.session['hmpo-wizard-common']['rising-16'] === false);
             }
         }]
     },
@@ -89,7 +89,7 @@ module.exports = {
         }, {
             target: '/naturalisation-registration-details',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == true;
+                return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == true || req.sessionModel.get('change-nationality') == true;
             }
         }]
     },
@@ -368,26 +368,27 @@ module.exports = {
         template: 'confirm',
         next: '/documents-required',
         forks: [
-        //     { // If csig required
-        //     target: '/csig-required',
-        //     condition: function (req, res) {
-        //         return req.session['hmpo-wizard-common']['passport-before'] == false ||
-        //             req.session['hmpo-wizard-common']['12-or-older'] == false ||
-        //             req.session['hmpo-wizard-common']['lost-stolen'] == true
-        //     }
-        // },
-        { // if lost and stolen with no docs
-            target: '/cost',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['lost-stolen-no-docs'] == true
+            //     { // If csig required
+            //     target: '/csig-required',
+            //     condition: function (req, res) {
+            //         return req.session['hmpo-wizard-common']['passport-before'] == false ||
+            //             req.session['hmpo-wizard-common']['12-or-older'] == false ||
+            //             req.session['hmpo-wizard-common']['lost-stolen'] == true
+            //     }
+            // },
+            { // if lost and stolen with no docs
+                target: '/cost',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['lost-stolen-no-docs'] == true
+                }
+            },
+            { // For prototype purpose, set csig vars to false
+                condition: function (req, res) {
+                    req.session['hmpo-wizard-common']['routeFromCsig'] = false
+                    req.session['hmpo-wizard-common']['trackWaiting'] = false
+                }
             }
-        },
-        { // For prototype purpose, set csig vars to false
-            condition: function (req, res) {
-                req.session['hmpo-wizard-common']['routeFromCsig'] = false
-                req.session['hmpo-wizard-common']['trackWaiting'] = false
-            }
-        }]
+        ]
     },
     '/csig-required': {
         next: '/documents-required',

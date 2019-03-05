@@ -117,6 +117,7 @@ function clicks() {
     $('#name-changed-false').click();
     $('#passport-damaged-false').click();
     $('#dual-nationality-false').click();
+    $('#change-nationality-true').click();
     $('#choose-photo-upload').click();
     $('#plain-expression-Yes').click();
     $('#shadows-face-Yes').click();

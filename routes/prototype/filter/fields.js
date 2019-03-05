@@ -215,13 +215,13 @@ module.exports = {
     validate: [
       'required',
       {
-        type:'equal',
-        arguments:[true],
-        redirect:'https://www.gov.uk/report-a-lost-or-stolen-passport'
+        type: 'equal',
+        arguments: [true],
+        redirect: 'https://www.gov.uk/report-a-lost-or-stolen-passport'
       }
     ]
   },
-  
+
   'passport-colour': {
     legend: {
       value: 'What colour of UK passport did you have before?',
@@ -463,7 +463,7 @@ module.exports = {
       label: 'British Citizen'
     }, {
       value: 'British National Overseas',
-      label: 'British National Overseas'
+      label: 'British National Overseas (usually resident in Hong Kong)'
     }, {
       value: 'Other',
       label: 'Other'
@@ -471,5 +471,24 @@ module.exports = {
     validate: [
       'required'
     ],
+  },
+  'change-nationality': {
+    legend: {
+      value: 'Have you changed your nationality to British Citizen?',
+      className: 'visuallyhidden'
+    },
+    options: [{
+        value: true,
+        label: 'Yes'
+      },
+      {
+        value: false,
+        label: 'No'
+      }
+    ],
+    formatter: ['boolean'],
+    validate: [
+      'required'
+    ]
   }
 };
