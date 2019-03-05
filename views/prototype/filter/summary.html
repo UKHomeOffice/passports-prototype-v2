@@ -1,125 +1,112 @@
 {{< layout}}
 
 {{$pageTitle}}
-  {{#nunjucks}}
-    {% if not values['passport-before'] %}
-      Apply for a first UK passport
-    {% elif values['passport-before'] %}
-      Apply for a UK passport
-    {% endif %}
-  {{/nunjucks}}
+    {{#nunjucks}}
+        {% if not values['passport-before'] %}
+            Apply for a first UK passport
+        {% elif values['passport-before'] %}
+            Apply for a UK passport
+        {% endif %}
+    {{/nunjucks}}
 {{/pageTitle}}
 
 {{$header}}
-  {{#nunjucks}}
-    {% if not values['passport-before'] %}
-      <h1>Apply for a first UK passport</h1>
-    {% elif values['passport-before'] %}
-      <h1>Apply for a UK passport</h1>
-    {% endif %}
-  {{/nunjucks}}
+    {{#nunjucks}}
+        {% if not values['passport-before'] %}
+            <h1>Apply for a first UK passport</h1>
+        {% elif values['passport-before'] %}
+            <h1>Apply for a UK passport</h1>
+        {% endif %}
+    {{/nunjucks}}
 {{/header}}
 
 {{$content}}
 
 {{< hmpo-partials-form}}
-{{$form}}
+    {{$form}}
+        {{#nunjucks}}
+            {# 0–11 Renewals, 12–15 Renewals #}
+            {% if values['application-type'] === 'renew-child-0-11' or
+                  values['application-type'] === 'renew-child-12-15' %}
+                <p>Based on your answers, you're renewing a child passport.</p>
+                <p>If you want to change the name on your passport, we'll ask for the details later on.</p>
+                <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
 
-{{#nunjucks}}
+            {# Adult Renewals #}
+            {% elif values['application-type'] === 'renew-adult' %}
+                <p><p>Based on your answers, you're applying for an adult renewal {{ "and changing your national status" if values['change-nationality'] else "" }}.</p>
+                <p>If you want to change the name on your passport, we'll ask for the details later on.</p>
+                {% if not values['rising-16'] %}
+                    <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
+                {% elif values['rising-16'] %}
+                    <p>As you're about to turn 16, you'll get an adult passport. It should take 3 weeks - you won't get it before your birthday.</p>
+                {% endif %}
 
-  {% if values['application-type'] === 'old-blue'  %} {# Hidden FTA #}
-    <p>Based on your answers, you have an old passport that was issued in {{values['issue-year']}}.</p>
-    <p>As your passport was issued a long time ago, you must apply for a first UK passport and you may need to have a <a href="./help/identity-interviews" target="_blank">passport interview</a>.</p>
-    <p>It should take around 6 weeks to get a new passport.</p>
+            {# FTC #}
+            {% elif values['application-type'] === 'first-child' %}
+                <p>Based on your answers, you're applying for a first, child passport. If your name has changed, you need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a>.</p>
+                <p>You need to have <a href="https://www.gov.uk/types-of-british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
+                <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
 
+            {# FTA #}
+            {% elif values['application-type'] === 'first-adult' %}
+                <p>Based on your answers, you're applying for a first, adult passport.</p>
+                <p>You need to have <a href="https://www.gov.uk/types-of-british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
+                {% if not values['rising-16'] %}
+                    <p>It should take around 6 weeks to get a new passport.</p>
+                {% elif values['rising-16'] %}
+                    <p>As you're about to turn 16, you'll get an adult passport. It should take around 6 weeks - you won't get it before your birthday.<p>
+                {% endif %}
 
-  {% elif values['application-type'] === 'replacement-lost-or-stolen-adult' %} {# lost/stolen adult #}
-    <p>Based on your answers, your passport was lost or stolen. You're applying for a replacement adult passport.</p>
-    <p>If you want to change the name on your passport, we'll ask for the details <br>later on.</p>
-    {% if not values['rising-16'] %}
-      <p>It should take 3 weeks to get a new passport. Use the 1 week Fast Track service if you need to <a href="https://www.gov.uk/get-a-passport-urgently/1-week-fast-track-service">get a passport urgently</a>.</p>
-    {% elif values['rising-16'] %}
-      <p>As you're about to turn 16, you'll get an adult passport. It should take <br>3 weeks - you won't get it before your birthday.</p>
-    {% endif %}
+            {# Hidden FTA (Old Blue) #}
+            {% elif values['application-type'] === 'old-blue' %}
+                <p>Based on your answers, you have an old passport that was issued in {{values['issue-year']}}.</p>
+                <p>As your passport was issued a long time ago, you must apply for a first UK passport and you may need to have a <a href="./help/identity-interviews" target="_blank">passport interview</a>.</p>
+                <p>It should take around 6 weeks to get a new passport.</p>
 
+            {# Replacements Damaged Child 0–11s, Replacements Damaged Child 12–15s #}
+            {% elif values['application-type'] === 'replacement-damaged-child-0-11' or
+                    values['application-type'] === 'replacement-damaged-child-12-15' %}
+                <p>Based on your answers, you're applying for a replacement, child passport.</p>
+                <p>If you want to change the name on your passport, we'll ask for the details later on.</p>
+                <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
 
-  {% elif values['application-type'] === 'replacement-lost-or-stolen-child-0-11' or
-          values['application-type'] === 'replacement-lost-or-stolen-child-12-15' %} {# lost/stolen child #}
-    <p>Based on your answers, your passport was lost or stolen. You're applying for a replacement child passport.</p>
-    <p>If you want to change the name on your passport, we'll ask for the details <br>later on.</p>
-    <p>It should take 3 weeks to get a new passport. Use the 1 week Fast Track service if you need to <a href="https://www.gov.uk/get-a-passport-urgently/1-week-fast-track-service">get a passport urgently</a>.</p>
+            {# Replacements Damaged Adult #}
+            {% elif values['application-type'] === 'replacement-damaged-adult' %}
+                <p>Based on your answers, you're applying for a replacement, adult passport.</p>
+                <p>If you want to change the name on your passport, we'll ask for the details later on.</p>
+                {% if not values['rising-16'] %}
+                    <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
+                {% elif values['rising-16'] %}
+                    <p>As you're about to turn 16, you'll get an adult passport. It should take 3 weeks - you won't get it before your birthday.</p>
+                {% endif %}
 
+            {# Lost or Stolen Child 0–11s, Lost or Stolen Child 12–15s #}
+            {% elif values['application-type'] === 'replacement-lost-or-stolen-child-0-11' or
+                    values['application-type'] === 'replacement-lost-or-stolen-child-12-15' %}
+                <p>Based on your answers, your passport was lost or stolen. You're applying for a replacement child passport.</p>
+                <p>If you want to change the name on your passport, we'll ask for the details later on.</p>
+                <p>It should take 3 weeks to get a new passport. Use the 1 week Fast Track service if you need to <a href="https://www.gov.uk/get-a-passport-urgently/1-week-fast-track-service">get a passport urgently</a>.</p>
 
-  {% elif values['application-type'] === 'renew-adult' %} {# Renew adult #}
-    <p>Based on your answers, you're applying for an adult renewal {{ "and changing your national status" if values['change-nationality'] else "" }}.</p>
-    <p>If you want to change the name on your passport, we'll ask for the details <br>later on.</p>
-    {% if not values['rising-16'] %}
-      <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
-    {% elif values['rising-16'] %}
-      <p>As you're about to turn 16, you'll get an adult passport. It should take <br>3 weeks - you won't get it before your birthday.</p>
-    {% endif %}
+            {# Lost or Stolen Adult #}
+            {% elif values['application-type'] === 'replacement-lost-or-stolen-adult' %}
+                <p>Based on your answers, your passport was lost or stolen. You're applying for a replacement adult passport.</p>
+                <p>If you want to change the name on your passport, we'll ask for the details later on.</p>
+                {% if not values['rising-16'] %}
+                    <p>It should take 3 weeks to get a new passport. Use the 1 week Fast Track service if you need to <a href="https://www.gov.uk/get-a-passport-urgently/1-week-fast-track-service">get a passport urgently</a>.</p>
+                {% elif values['rising-16'] %}
+                    <p>As you're about to turn 16, you'll get an adult passport. It should take 3 weeks - you won't get it before your birthday.</p>
+                {% endif %}
 
+            {# {% elif DPS %}
+                <p>Based on your answers, you're renewing a UK passport. If this is incorrect, <a href="./">start again</a>.</p> #}
 
-  {% elif values['application-type'] === 'renew-child-12-15' %} {# Renew 12–15s #}
-    <p>Based on your answers, you're renewing a child passport.</p>
-    <p>If your name has changed, or you can't be recognised as the same person from the photo in your old passport, you need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a>.</p>
-    <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
+            {% endif %}
+        {{/nunjucks}}
 
+        {{#input-submit}}{{/input-submit}}
 
-  {% elif values['application-type'] === 'renew-child-0-11' %} {# Renew 0-11s #}
-    <p>Based on your answers, you're renewing a child passport.</p>
-    <p>If your name has changed, you need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a>.</p>
-    <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
-
-
-  {% elif values['application-type'] === 'replacement-damaged-adult' %} {# Damaged adult #}
-    <p>Based on your answers, you're applying for a replacement, adult passport.</p>
-    <p>If you want to change the name on your passport, we'll ask for the details <br>later on.</p>
-    {% if not values['rising-16'] %}
-      <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
-    {% elif values['rising-16'] %}
-      <p>As you're about to turn 16, you'll get an adult passport. It should take <br>3 weeks - you won't get it before your birthday.</p>
-    {% endif %}
-
-
-  {% elif values['application-type'] === 'replacement-damaged-child-12-15' %} {# Damaged 12–15s #}
-    <p>Based on your answers, you're applying for a replacement, child passport.</p>
-    <p>If your name has changed, or you can't be recognised as the same person from the photo in your old passport, you need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a>.</p>
-    <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
-
-
-  {% elif values['application-type'] === 'replacement-damaged-child-0-11' %} {# Damaged 0-11s #}
-    <p>Based on your answers, you're applying for a replacement, child passport.</p>
-    <p>If your name has changed, you need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a>.</p>
-    <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
-
-
-  {% elif values['application-type'] === 'first-adult' %} {# FTA #}
-    <p>Based on your answers, you're applying for a first, adult passport.</p>
-    <p>You need to have <a href="https://www.gov.uk/types-of-british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
-    {% if not values['rising-16'] %}
-      <p>It should take around 6 weeks to get a new passport.</p>
-    {% elif values['rising-16'] %}
-    <p>As you're about to turn 16, you'll get an adult passport. It should take around 6 weeks - you won't get it before your birthday.<p>
-    {% endif %}
-
-
-  {% elif values['application-type'] === 'first-child' %} {# FTC #}
-    <p>Based on your answers, you're applying for a first, child passport. If your name has changed, you need to <a href="https://passportapplication.service.gov.uk/ips-olc/">apply in a different way</a>.</p>
-    <p>You need to have <a href="https://www.gov.uk/types-of-british-nationality" target="_blank">British nationality</a> to get a UK passport. Check you're eligible before you apply.</p>
-    <p>It should take 3 weeks to get a new passport. Use a different service if you need to <a href="https://www.gov.uk/get-a-passport-urgently">get a passport urgently</a>.</p>
-
-
-  {# {% elif DPS %}
-    <p>Based on your answers, you're renewing a UK passport. If this is incorrect, <a href="./">start again</a>.</p> #}
-
-
-  {% endif %}
-{{/nunjucks}}
-
-{{#input-submit}}{{/input-submit}}
-
-{{/form}}
+    {{/form}}
 {{/ hmpo-partials-form}}
 
 {{/ content}}
