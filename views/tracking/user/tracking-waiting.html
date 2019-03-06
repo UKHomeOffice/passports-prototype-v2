@@ -34,7 +34,38 @@
         <p>You need to ask them to <a href="paper-application-select">use a paper form</a>.</p>
         </div>
       </details>
-
+      {{#nunjucks}}
+        <div class="sidebar-container">   
+          <ul class="sidebar-task">
+            <li class="sidebar-task__panel">
+              <h3>Application reference</h3>
+              <p>PEX 319 825 680X</p>
+            </li>
+              {% if values['csig-type'] != 'examiner' %}
+                {% if values['change-of-name-reason'] or not values['lost-stolen-no-docs'] %}
+                  <li class="sidebar-task__panel">
+                    <h3>Documents</h3>
+                    {% if values['passport-before'] %}
+                      <a href="/prototype/apply/docs-renew" target="_blank">
+                        What you need to send
+                      </a>
+                    {% else %}
+                      <a href="/prototype/apply/docs-fta" target="_blank">
+                        What you need to send
+                      </a><br>
+                    {% endif %}
+                  </li>
+                {% endif %}
+              {% endif %}
+          </ul>
+          <ul class="sidebar-task">
+              <li class="sidebar-task__panel">
+                <h3>Tell us what you think</h3>
+                <p><a href="http://passport-office-surveys.homeoffice.gov.uk/s/passport-applications/">Fill in a survey about this service</a></p>
+              </li>
+          </ul>
+        </div>
+      {{/nunjucks}}
       <hr>
       <h2>Application history</h2>
       <article>
@@ -67,39 +98,5 @@
 
 {{/ hmpo-partials-form}}
 {{/content}}
-{{$sidebar}}
-  {{#nunjucks}}
-  <div class="sidebar-container">
-    <ul class="sidebar-task">
-      <li class="sidebar-task__panel">
-        <h3>Application reference</h3>
-        <p>PEX 319 825 680X</p>
-      </li>
-        {% if values['csig-type'] != 'examiner' %}
-          {% if values['change-of-name-reason'] or not values['lost-stolen-no-docs'] %}
-            <li class="sidebar-task__panel">
-              <h3>Documents</h3>
-              {% if values['passport-before'] %}
-                <a href="/prototype/apply/docs-renew" target="_blank">
-                  What you need to send
-                </a>
-              {% else %}
-                <a href="/prototype/apply/docs-fta" target="_blank">
-                  What you need to send
-                </a><br>
-              {% endif %}
-            </li>
-          {% endif %}
-        {% endif %}
-        <li class="sidebar-task__panel" style="border-top: none;">
-          <h3>Other links</h3>
-          <p><a href="/prototype/startpage">Start a new application</a></p>
-          <p><a href="/prototype/startpage">Give feedback</a></p>
-        </li>
-    </ul>
-  </div>
-  {{/nunjucks}}
-{{/sidebar}}
-
 
 {{/ layout-csig}}
