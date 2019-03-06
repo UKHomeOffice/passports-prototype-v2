@@ -1344,11 +1344,6 @@ module.exports = {
                 label: 'Father'
             },
             {
-                value: 'Social Worker',
-                label: 'Social Worker',
-                toggle: "relationship-social-worker"
-            },
-            {
                 value: 'Other',
                 label: 'Other',
                 toggle: "relationship-other"
