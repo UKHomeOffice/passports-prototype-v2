@@ -239,7 +239,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             newPassportFields.push({
                 step: this.getEditStep('change-name'),
                 title: 'Name change',
-                value: 'Yes'
+                value: 'Your name has changed',
             });
         } else {
             var str = values['change-of-name-reason'];
