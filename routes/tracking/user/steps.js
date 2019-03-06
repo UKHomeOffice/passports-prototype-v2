@@ -56,6 +56,9 @@ module.exports = {
       }
     }],
   },
+  '/details-not-found': {
+    next: '/'
+  },
   '/confirm-your-identity': {
     next: '/who-can',
     forks: [{
