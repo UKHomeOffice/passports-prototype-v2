@@ -57,7 +57,7 @@ module.exports = {
     }],
   },
   '/details-not-found': {
-    next: '/'
+    next: '/../user'
   },
   '/confirm-your-identity': {
     next: '/who-can',
