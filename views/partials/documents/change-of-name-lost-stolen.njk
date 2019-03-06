@@ -295,7 +295,7 @@
                             {% include "views/partials/documents/third-party-first-list.njk" %}
                         </ul>
                     {% endif %}
-                    
+
                     {% if values['lost-stolen'] == true and (not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18) %}
                         {# First `Send the following` block not shown #}
                         <h3 class="govuk-heading-m">Send 1 of the following:</h3>

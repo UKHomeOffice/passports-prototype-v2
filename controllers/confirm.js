@@ -96,7 +96,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
 
     // When reason why they can't apply appears
     if ((values['16-or-older'] == true || values['rising-16'] == true) ||
-        (values['16-or-older'] == false && (values['relationship-applicant'] == 'Social Worker' || values['relationship-applicant'] == 'Other'))
+        (values['16-or-older'] == false && values['relationship-applicant'] == 'Other')
     ) {
         thirdPartyFields.push({
             step: this.getEditStep('why-cant-apply'),
