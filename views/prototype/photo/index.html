@@ -1,60 +1,41 @@
 {{< layout}}
 
+{{$pageTitle}}How to get a digital passport photo{{/pageTitle}}
+
+{{$header}}
+    <h1>How to get a digital passport photo</h1>
+{{/header}}
+
 {{$back}}
     <!-- TODO: Make it work if coming back from next page -->
     <a href="javascript:history.back()" class="back-link">Back</a>
 {{/back}}
 
-{{$main-content}}
+{{$content}}
 
 {{< hmpo-partials-form}}
 {{$form}}
 
-<div class="column-full">
-    <div class="flash-card">
+    <p>There are 3 ways:</p>
 
-        <header>
-            <h1 style="margin-bottom:30px">How to get a digital passport photo</h1>
-        </header>
+    <h2>Photo taken at home</h2>
+    <p>You'll need someone to help you and a device that takes digital photos.</p>
 
-        <div class="grid-row">
-            <div class="column-two-thirds">
+    <h2>Photo with a code</h2>
+    <p>Get your photo taken in a booth or shop, and get a code with your photo. Use the code to add the photo to your application.</p>
 
-                <p>There are 3 ways:</p>
+    <h2>Photo in a digital file</h2>
+    <p>Get your photo taken in a shop and get a digital file of your photo. Upload the file to add the photo to your application.</p>
 
-                <h2>Photo taken at home</h2>
-                <p>You'll need someone to help you and a device that takes digital photos.</p>
+    {{#input-submit}}{{/input-submit}}
 
-                <h2>Photo with a code</h2>
-                <p>Get your photo taken in a booth or shop, and get a code with your photo. Use the code to add the photo to your application.</p>
-
-                <h2>Photo in a digital file</h2>
-                <p>Get your photo taken in a shop and get a digital file of your photo. Upload the file to add the photo to your application.</p>
-
-            </div>
-            <div class="column-one-third">
-                <img src="../../public/images/Photo_methods_2@2x.png" alt="smartphone-image" width="333">
-            </div>
-        </div>
-
-        {{#input-submit}}{{/input-submit}}
-
-        <div class="grid-row grid-row-additional">
-            <div class="column-two-thirds">
-
-                <div class="panel panel-border-wide panel-flash-card">
-                    <p>The photo code is a new service and may not be available yet from photo booths or shops in your
-                        area.</p>
-                </div>
-            </div>
-        </div>
-
+    <div class="panel panel-border-wide">
+        <p>The photo code is a new service and may not be available yet from photo booths or shops in your area.</p>
     </div>
-</div>
 
 {{/form}}
 {{/ hmpo-partials-form}}
 
-{{/main-content}}
+{{/content}}
 
 {{/ layout}}
