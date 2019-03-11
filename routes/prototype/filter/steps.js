@@ -143,8 +143,7 @@ module.exports = {
         forks: [{
             target: '/british-citizen',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['is-overseas'] === true &&
-                    req.session['hmpo-wizard-common']['passport-before']
+                return req.session['hmpo-wizard-common']['passport-before']
             }
         }]
     },
@@ -157,6 +156,7 @@ module.exports = {
             target: '/change-nationality',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['british-citizen'] == 'Other'
+                || req.session['hmpo-wizard-common']['british-citizen'] == 'British National Overseas'
             }
         }]
     },
