@@ -21,6 +21,9 @@ app.get('/identity-interviews', function (req, res, next) {
 app.get('/parents-details', function (req, res, next) {
     res.render('prototype/help/parents-details');
 });
+app.get('/photo-code', function (req, res, next) {
+	res.render('prototype/help/photo-code');
+});
 app.get('/photo-rules', function (req, res, next) {
 	res.render('prototype/help/photo-rules');
 });
