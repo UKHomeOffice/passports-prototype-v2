@@ -1,6 +1,6 @@
 {% if not values['16-or-older'] and not values['rising-16'] %}
     {% if values['relationship-applicant'] === 'Father' %}
-        {% if values['lost-stolen'] == true and (not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18) %}
+        {% if values['lost-stolen'] == true and values['applicant-age'] >= 18 %}
             {# First `Send the following` block not shown #}
             <h3 class="govuk-heading-m">If you don't have parental responsibility, send the following:</h3>
         {% else %}
@@ -24,8 +24,8 @@
     {% endif %}
 
 {% elif values['16-to-18'] or values['rising-16'] %}
-    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other' %}
-        {% if values['lost-stolen'] == true and (not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18) %}
+    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Other' %}
+        {% if values['lost-stolen'] == true and values['applicant-age'] >= 18 %}
             {# First `Send the following` block not shown #}
             <h3 class="govuk-heading-m">If you don't have parental responsibility, send the following:</h3>
         {% else %}
@@ -37,8 +37,8 @@
     {% endif %}
 
 {% else %} {# Over 18s #}
-    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Social Worker' or values['relationship-applicant'] === 'Other' %}
-        {% if values['lost-stolen'] == true and (not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18) %}
+    {% if values['relationship-applicant'] === 'Mother' or values['relationship-applicant'] === 'Father' or values['relationship-applicant'] === 'Other' %}
+        {% if values['lost-stolen'] == true and values['applicant-age'] >= 18 %}
             {# First `Send the following` block not shown #}
             <h3 class="govuk-heading-m">Send 1 of the following:</h3>
         {% else %}

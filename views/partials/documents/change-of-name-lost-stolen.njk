@@ -315,7 +315,7 @@
 
                 <div class="accordion-section-body">
 
-                    {% if (values['lost-stolen'] == true and values['dual-nationality'] == false) and ((not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18)) %}
+                    {% if values['lost-stolen'] == true and values['dual-nationality'] == false and values['applicant-age'] >= 18 %}
                         {# Show nothing #}
                     {% else %}
                         <h3 class="govuk-heading-m">Send the following:</h3>
@@ -327,7 +327,7 @@
                         </ul>
                     {% endif %}
 
-                    {% if values['lost-stolen'] == true and (not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18) %}
+                    {% if values['lost-stolen'] == true and values['applicant-age'] >= 18 %}
                         {# First `Send the following` block not shown #}
                         <h3 class="govuk-heading-m">Send 1 of the following:</h3>
                     {% else %}
@@ -360,7 +360,7 @@
 
             <div class="accordion-section-body">
 
-                {% if (values['lost-stolen'] == true and values['dual-nationality'] == false) and ((not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18)) %}
+                {% if values['lost-stolen'] == true and values['dual-nationality'] == false and values['applicant-age'] >= 18 %}
                     {# Show nothing #}
                 {% else %}
                     <h3 class="govuk-heading-m">Send the following:</h3>
@@ -372,7 +372,7 @@
                     </ul>
                 {% endif %}
 
-                {% if values['lost-stolen'] == true and (not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18) %}
+                {% if values['lost-stolen'] == true and values['applicant-age'] >= 18 %}
                     {# First `Send the following` block not shown #}
                     <h3 class="govuk-heading-m">Send 2 of the following from the last 12 months, that show you’re using your new name:</h3>
                 {% else %}
@@ -408,7 +408,7 @@
 
             <div class="accordion-section-body">
 
-                {% if (values['lost-stolen'] == true and values['dual-nationality'] == false) and ((not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18)) %}
+                {% if values['lost-stolen'] == true and values['dual-nationality'] == false and values['applicant-age'] >= 18 %}
                     {# Show nothing #}
                 {% else %}
                     <h3 class="govuk-heading-m">Send the following:</h3>
@@ -420,7 +420,7 @@
                     </ul>
                 {% endif %}
 
-                {% if values['lost-stolen'] == true and (not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18) %}
+                {% if values['lost-stolen'] == true and values['applicant-age'] >= 18 %}
                     {# First `Send the following` block not shown #}
                     <h3 class="govuk-heading-m">Send 1 of the following that proves you changed your name:</h3>
                 {% else %}
