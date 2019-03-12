@@ -64,11 +64,13 @@
 {{#nunjucks}}
     {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
         <div class="panel panel-border-wide alert-warning">
+            <p class="list-item-bold">
+                Automated check</p>
     {% elif values['choose-photo'] == 'code' %}
         <div class="panel panel-border-wide alert-default">
+            <p class="list-item-bold">
+                Our automated check suggests</p>
     {% endif %}
-        <p class="list-item-bold">
-            Our automated check suggests </p>
         <p>
             <ul class="list-bullet">
                 {% if values['applicant-age'] <= 11 %}
