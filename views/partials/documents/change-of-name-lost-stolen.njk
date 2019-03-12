@@ -1,4 +1,35 @@
-{% if values['change-of-name-reason'] == 'Marriage-or-civil-partnership' %}
+{% if values['applicant-age'] < 16 and values['rising-16'] === false %}
+    <h2 class="govuk-heading-l">Applicant's documents</h2>
+    <h3 class="govuk-heading-m">Send the following:</h3>
+    <ul class="list list-bullet">
+        {% for item in documents %}
+            <li>{{item}}</li>
+        {% endfor %}
+        <li>a deed poll or similar document about your name change</li>
+        {% include "views/partials/documents/third-party-first-list.njk" %}
+    </ul>
+
+    <h3 class="govuk-heading-m">And 1 of the following:</h3>
+    <ul class="list list-bullet">
+        <li>a signed statement from everyone with parental responsibility for the child saying they give permission for the name change</li>
+        <li>a court order allowing the change of name</li>
+    </ul>
+
+    <h3 class="govuk-heading-m">And 1 of the following from the last 12 months, that shows you’re using your new name:</h3>
+    <ul class="list list-bullet">
+        <li>medical card</li>
+        <li>letter from your local council or a government department</li>
+        <li>education record for example a school report</li>
+    </ul>
+    {% if values['lost-stolen'] == true %}
+        {% include "views/partials/documents/third-party-lost-stolen.njk" %}
+    {% else %}
+        {% include "views/partials/documents/third-party.njk" %}
+    {% endif %}
+
+    <hr>
+
+{% elif values['change-of-name-reason'] == 'Marriage-or-civil-partnership' %}
     <h2 class="govuk-heading-l">Applicant's documents</h2>
     <h3 class="govuk-heading-m">When do you want the new passport in your new name?</h3>
     <div class="accordion" id="name-change-accordion">
