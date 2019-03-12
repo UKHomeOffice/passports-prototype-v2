@@ -12,7 +12,7 @@
 
     <h2 class="govuk-heading-l">Applicant's documents</h2>
 
-    {% if (values['lost-stolen'] == true and values['dual-nationality'] == false) and ((not values['16-or-older'] and not values['rising-16'] and values['relationship-applicant'] === 'Social Worker') or (values['applicant-age'] >= 18)) %}
+    {% if values['lost-stolen'] == true and values['dual-nationality'] == false and values['applicant-age'] >= 18 %}
         {# Show nothing #}
     {% else %}
 
