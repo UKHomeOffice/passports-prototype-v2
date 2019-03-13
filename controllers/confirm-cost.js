@@ -95,7 +95,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 title: function () {
                     if (values.veteran || values['lost-stolen-no-docs']) {
                         return 'Delivery'
-                    } else if (values['overseas-service']) {
+                    } else if (values['is-overseas']) {
                         return 'Courier fee'
                     } else {
                         return 'Documents'
@@ -109,7 +109,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                             output += ' secure delivery. <br/>£' + cost;
                         }
                         return output;
-                    } else if (values['overseas-service']) {
+                    } else if (values['is-overseas']) {
                         if (values['passport-before']) {
                             return 'Your old passport and extra documents will be in a different envelope to your new passport £19.86'
                         } else {

@@ -26,7 +26,7 @@ util.inherits(Costs, Model);
 
 Costs.prototype.getCost = function () {
 
-    if (this.get('overseas-service')) {
+    if (this.get('is-overseas')) {
         config = require('../config/overseas-costing.json')
     }
 
@@ -49,7 +49,7 @@ Costs.prototype.getCost = function () {
     if (this.get('passport-options-overseas') == '34') {
         cost += 30.36;
     }
-    if (this.get('secure-return') || this.get('overseas-service')) {
+    if (this.get('secure-return') || this.get('is-overseas')) {
         cost += this.delivery();
     }
     if (this.get('passport-options-dps') == '50') {
@@ -86,7 +86,7 @@ Costs.prototype.delivery = function delivery() {
 
     if (this.get('secure-return') && !this.get('veteran')) {
         cost += config.costs['secure-delivery'];
-    } else if (this.get('overseas-service')) {
+    } else if (this.get('is-overseas')) {
         cost += config.costs['delivery'];
     }
     return cost;
