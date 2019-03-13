@@ -50,7 +50,7 @@
           Country
       </label>
       {{#nunjucks}}
-        {% if values['overseas-service'] %}
+        {% if values['is-overseas'] %}
           {{values['application-country']}}
         {% else %}
           United Kingdom
