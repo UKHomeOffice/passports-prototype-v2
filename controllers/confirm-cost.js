@@ -97,6 +97,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                         return 'Delivery'
                     } else if (values['is-overseas']) {
                         return 'Courier fee'
+                    } else if (values['passport-before'] && !values['lost-stolen'] && values['change-name']) {
+                        return 'Old passport and extra documents'
                     } else {
                         return 'Documents'
                     }
@@ -120,6 +122,11 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                     } else {
                         var output = 'You need to post your documents to us. We’ll return them to you by ';
                         var cost = model.delivery();
+
+                        if (values['passport-before'] && !values['lost-stolen'] && values['change-name']) {
+                            output = 'We’ll return your old passport and extra documents by';
+                        }
+
                         if (cost) {
                             output += ' secure delivery. <br/>£' + cost;
                         } else {
