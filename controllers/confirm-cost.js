@@ -82,11 +82,11 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             //       var output = 'You need to post your old passport to us. We’ll return it to you by ';
             //       var cost = model.delivery();
             //       if (cost) {
-            //         output += ' secure delivery. <br/>£5.00 ';
+            //         output += ' secure delivery<br>£5.00 ';
             //       }
             //       return output;
             //     } else {
-            //       return 'You need to post your old passport to us. We’ll return it to you by standard post. <br/>£0.00';
+            //       return 'You need to post your old passport to us. We’ll return it to you by standard post<br>£0.00';
             //     }
             //   }
             // },
@@ -105,10 +105,10 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 },
                 value: function () {
                     if (values['secure-return'] && values['is-overseas'] === true) {
-                        var output = 'You need to post your documents to us. We’ll return them to you by ';
+                        var output = 'You need to post your documents to us. We’ll return them to you by';
                         var cost = model.delivery();
                         if (cost) {
-                            output += ' secure delivery. <br/>£' + cost;
+                            output += ' secure delivery<br>£' + cost;
                         }
                         return output;
                     } else if (values['is-overseas']) {
@@ -118,9 +118,9 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                             return 'Your documents will be in a different envelope to your new passport £19.86'
                         }
                     } else if (values['lost-stolen-no-docs']) {
-                        return 'We\'ll send your new passport by secure delivery. The cost is included in the passport fee. <br/>£0.00';
+                        return 'We’ll send your new passport by secure delivery. The cost is included in the passport fee<br>£0.00';
                     } else {
-                        var output = 'You need to post your documents to us. We’ll return them to you by ';
+                        var output = 'You need to post your documents to us. We’ll return them to you by';
                         var cost = model.delivery();
 
                         if (values['passport-before'] && !values['lost-stolen'] && values['change-name']) {
@@ -128,9 +128,9 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                         }
 
                         if (cost) {
-                            output += ' secure delivery. <br/>£' + cost;
+                            output += ' secure delivery<br>£' + cost;
                         } else {
-                            output += ' standard post. <br/>£' + cost;
+                            output += ' standard post<br>£' + cost;
                         }
                         return output;
                     }
