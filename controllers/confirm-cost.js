@@ -65,10 +65,10 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                     var output = [];
                     if (values['passport-options'] == '50') {
                         var cost = currency(model.standardPassport() + model.largePassport())
-                        output.push('Jumbo passport');
+                        output.push('Jumbo passport with secure delivery included');
                         output.push(cost);
                     } else {
-                        output.push('Standard passport');
+                        output.push('Standard passport with secure delivery included');
                         output.push(currency(model.standardPassport()));
                     }
                     return output.join('<br>');
