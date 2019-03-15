@@ -6,7 +6,7 @@ const nationalities = [
   'British Overseas Citizen',
   'British Protected Person',
   'British Subject',
-  'British Subject (UK &amp; Colonies)'
+  'British Subject (UK & Colonies)'
 ];
 
 module.exports = {
@@ -458,7 +458,7 @@ module.exports = {
   },
   'british-citizen': {
     legend: {
-      value: 'What nationality is written on your passport?',
+      value: 'Are you a British Citizen?',
       className: 'visuallyhidden'
     },
     options: [

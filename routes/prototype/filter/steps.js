@@ -106,7 +106,7 @@ module.exports = {
     forks: [
       {
         // If their passport is lost/stolen
-        target: '/dual-national',
+        target: '/british-citizen',
         condition: function(req, res) {
           return req.session['hmpo-wizard-common']['lost-stolen'] == true;
         }
@@ -121,7 +121,7 @@ module.exports = {
   '/passport-damaged': {
     controller: require('../../../controllers/app-type'),
     fields: ['passport-damaged', 'damaged-reason'],
-    next: '/dual-national', // If they are NOT a UK Hidden FTA
+    next: '/british-citizen', // If they are NOT a UK Hidden FTA
     forks: [
       {
         // If they are a UK Hidden FTA
@@ -138,7 +138,7 @@ module.exports = {
     controller: require('../../../controllers/app-type'), // Sets the application-type to be used for the rest of the journey
     forks: [
       {
-        target: '/british-citizen',
+        target: '/summary',
         condition: function(req, res) {
           return req.session['hmpo-wizard-common']['passport-before'];
         }
@@ -147,7 +147,7 @@ module.exports = {
   },
   '/british-citizen': {
     fields: ['british-citizen', 'other-nationality'],
-    next: '/summary',
+    next: '/dual-national',
     forks: [
       {
         // Change of national status journey
