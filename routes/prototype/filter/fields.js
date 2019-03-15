@@ -1,5 +1,13 @@
 const _ = require('lodash');
 const countries = require('../../../config/countries');
+const nationalities = [
+  'British National Overseas (usually resident in Hong Kong)',
+  'British Overseas Territory Citizen',
+  'British Overseas Citizen',
+  'British Protected Person',
+  'British Subject',
+  'British Subject (UK &amp; Colonies)'
+];
 
 module.exports = {
   'rising-16': {
@@ -7,14 +15,15 @@ module.exports = {
       value: 'Rising 16s',
       className: 'visuallyhidden'
     },
-    options: [{
+    options: [
+      {
         value: true,
         label: 'Apply for an adult passport'
       },
       {
         value: false,
-        label: 'Apply for a child passport',
-      },
+        label: 'Apply for a child passport'
+      }
     ],
     labelClassName: 'form-label',
     formatter: ['boolean'],
@@ -25,9 +34,10 @@ module.exports = {
       value: 'Who is the new passport for?',
       className: 'visuallyhidden'
     },
-    options: [{
+    options: [
+      {
         value: true,
-        label: 'I’m helping someone to apply online',
+        label: 'I’m helping someone to apply online'
       },
       {
         value: false,
@@ -43,13 +53,15 @@ module.exports = {
       value: 'What to you want to do?',
       className: 'visuallyhidden'
     },
-    options: [{
+    options: [
+      {
         value: 'First',
         label: 'Apply for a first British passport'
       },
       {
         value: 'Change',
-        label: 'Make a change to a current British passport (including a change of name)'
+        label:
+          'Make a change to a current British passport (including a change of name)'
       },
       {
         value: 'Renew',
@@ -75,13 +87,15 @@ module.exports = {
       value: 'What to you want to do?',
       className: 'visuallyhidden'
     },
-    options: [{
+    options: [
+      {
         value: 'First',
         label: 'Apply for a first British passport'
       },
       {
         value: 'Change',
-        label: 'Make a change to a current British passport (including a change of name)'
+        label:
+          'Make a change to a current British passport (including a change of name)'
       },
       {
         value: 'Renew',
@@ -113,7 +127,8 @@ module.exports = {
       value: 'Are you applying from the UK?',
       className: 'visuallyhidden'
     },
-    options: [{
+    options: [
+      {
         value: true,
         label: 'Yes'
       },
@@ -135,7 +150,8 @@ module.exports = {
       value: 'Are you 16 or older?',
       className: 'visuallyhidden'
     },
-    options: [{
+    options: [
+      {
         value: true,
         label: 'Yes'
       },
@@ -160,7 +176,8 @@ module.exports = {
       value: 'Have you had a passport before?',
       className: 'visuallyhidden'
     },
-    options: [{
+    options: [
+      {
         value: true,
         label: 'Yes'
       },
@@ -171,9 +188,7 @@ module.exports = {
       }
     ],
     formatter: ['boolean'],
-    validate: [
-      'required'
-    ],
+    validate: ['required'],
     className: 'inline'
   },
   'lost-stolen': {
@@ -181,9 +196,10 @@ module.exports = {
       value: 'Lost stolen?',
       className: 'visuallyhidden'
     },
-    options: [{
+    options: [
+      {
         value: true,
-        label: 'Yes',
+        label: 'Yes'
       },
       {
         value: false,
@@ -191,9 +207,7 @@ module.exports = {
       }
     ],
     formatter: ['boolean'],
-    validate: [
-      'required'
-    ],
+    validate: ['required'],
     className: 'inline'
   },
   'lost-stolen-reported': {
@@ -201,7 +215,8 @@ module.exports = {
       value: 'Have you reported it?',
       className: 'visuallyhidden'
     },
-    options: [{
+    options: [
+      {
         value: true,
         label: 'Yes – I’ve cancelled it'
       },
@@ -227,7 +242,8 @@ module.exports = {
       value: 'What colour of UK passport did you have before?',
       className: 'visuallyhidden'
     },
-    options: [{
+    options: [
+      {
         value: 'red',
         label: 'Red'
       },
@@ -237,9 +253,7 @@ module.exports = {
       }
     ],
     // formatter: ['boolean'],
-    validate: [
-      'required'
-    ],
+    validate: ['required'],
     className: 'inline'
   },
   'naturalisation-registration-certificate': {
@@ -248,7 +262,8 @@ module.exports = {
     legend: {
       className: 'visuallyhidden'
     },
-    options: [{
+    options: [
+      {
         value: true,
         label: 'Yes'
       },
@@ -264,7 +279,8 @@ module.exports = {
       value: 'Lost stolen?',
       className: 'visuallyhidden'
     },
-    options: [{
+    options: [
+      {
         value: true,
         label: 'Yes'
       },
@@ -286,75 +302,72 @@ module.exports = {
     className: 'inline'
   },
   'application-country': {
-    options: [{
-      value: '',
-      label: ' '
-    }].concat(_.map(countries.filter(function (c) {
-      if (c.countryCode.split('.').pop() === "GB") {
-        return false; // skip
+    options: [
+      {
+        value: '',
+        label: ' '
       }
-      return true
-    }), function (c) {
-      return {
-        value: c.displayName,
-        label: c.displayName
-      }
-    })),
-    validate: [
-      'required'
-    ],
+    ].concat(
+      _.map(
+        countries.filter(function(c) {
+          if (c.countryCode.split('.').pop() === 'GB') {
+            return false; // skip
+          }
+          return true;
+        }),
+        function(c) {
+          return {
+            value: c.displayName,
+            label: c.displayName
+          };
+        }
+      )
+    ),
+    validate: ['required'],
     dependent: {
       field: 'apply-uk',
       value: false
     }
   },
   'country-birth': {
-    options: [{
-      value: '',
-      label: ' '
-    }].concat(_.map(countries, function (c) {
-      return {
-        value: c.countryCode,
-        label: c.displayName
+    options: [
+      {
+        value: '',
+        label: ' '
       }
-    })),
-    validate: [
-      'required'
-    ]
+    ].concat(
+      _.map(countries, function(c) {
+        return {
+          value: c.countryCode,
+          label: c.displayName
+        };
+      })
+    ),
+    validate: ['required']
   },
   'age-day': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
-    validate: [
-      'numeric',
-      'required'
-    ]
+    validate: ['numeric', 'required']
   },
   'age-year': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
-    validate: [
-      'numeric',
-      'required'
-    ]
+    validate: ['numeric', 'required']
   },
   'age-month': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
-    validate: [
-      'numeric',
-      'required'
-    ]
+    validate: ['numeric', 'required']
   },
   'passport-damaged': {
     legend: {
       value: 'Is your passport damaged?',
       className: 'visuallyhidden'
     },
-    formatter: [
-      'boolean'
-    ],
-    options: [{
+    formatter: ['boolean'],
+    options: [
+      {
         value: true,
         label: 'Yes',
         toggle: 'damaged-reason',
@@ -365,9 +378,7 @@ module.exports = {
         label: 'No'
       }
     ],
-    validate: [
-      'required'
-    ]
+    validate: ['required']
   },
   'damaged-reason': {
     validate: [
@@ -381,7 +392,8 @@ module.exports = {
       field: 'passport-damaged',
       value: true
     },
-    attributes: [{
+    attributes: [
+      {
         attribute: 'spellcheck',
         value: 'true'
       },
@@ -396,35 +408,27 @@ module.exports = {
   'issue-day': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
-    validate: [
-      'numeric',
-      'required'
-    ]
+    validate: ['numeric', 'required']
   },
   'issue-month': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
-    validate: [
-      'numeric',
-      'required'
-    ]
+    validate: ['numeric', 'required']
   },
   'issue-year': {
     labelClassName: 'form-label',
     formatter: 'removehyphens',
-    validate: [
-      'numeric',
-      'required'
-    ]
+    validate: ['numeric', 'required']
   },
   'passport-issuing-authority': {
     legend: {
       value: 'Which is your passport issuing authority?',
       className: 'form-label-bold'
     },
-    options: [{
+    options: [
+      {
         value: 'UKPA, UKPS, IPS or HMPO',
-        label: 'UKPA, UKPS, IPS or HMPO',
+        label: 'UKPA, UKPS, IPS or HMPO'
       },
       {
         value: 'Other',
@@ -438,7 +442,8 @@ module.exports = {
       value: 'Do you have any uncancelled passport from other countries?',
       className: 'visuallyhidden'
     },
-    options: [{
+    options: [
+      {
         value: true,
         label: 'Yes',
         toggle: 'same-name'
@@ -449,35 +454,60 @@ module.exports = {
       }
     ],
     formatter: ['boolean'],
-    validate: [
-      'required'
-    ]
+    validate: ['required']
   },
   'british-citizen': {
     legend: {
       value: 'What nationality is written on your passport?',
       className: 'visuallyhidden'
     },
-    options: [{
-      value: 'British Citizen',
-      label: 'British Citizen'
-    }, {
-      value: 'British National Overseas',
-      label: 'British National Overseas (usually resident in Hong Kong)'
-    }, {
-      value: 'Other',
-      label: 'Other'
-    }],
-    validate: [
-      'required'
+    options: [
+      {
+        value: true,
+        label: 'Yes'
+      },
+      {
+        value: false,
+        label: 'No',
+        toggle: 'other-nationality',
+        child: 'select'
+      }
     ],
+    formatter: ['boolean'],
+    /*validate: [
+      'required'
+    ],*/
+    className: 'inline'
   },
+
+  'other-nationality': {
+    options: [
+      {
+        value: '',
+        label: ' '
+      }
+    ].concat(
+      _.map(nationalities, function(n) {
+        return {
+          value: n,
+          label: n
+        };
+      })
+    ),
+    validate: ['required'],
+    dependent: {
+      field: 'british-citizen',
+      value: false
+    }
+  },
+
   'change-nationality': {
     legend: {
       value: 'Have you changed your nationality to British Citizen?',
       className: 'visuallyhidden'
     },
-    options: [{
+    options: [
+      {
         value: true,
         label: 'Yes'
       },
@@ -487,8 +517,6 @@ module.exports = {
       }
     ],
     formatter: ['boolean'],
-    validate: [
-      'required'
-    ]
+    validate: ['required']
   }
 };
