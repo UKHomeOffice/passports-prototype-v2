@@ -17,7 +17,7 @@
         <h2>Applicant's details</h2>
         <ul class="list list-bullet">
             {% if values['naturalisation-registration-certificate'] %}<li>naturalisation or registration certificate</li>{% endif %}
-            
+
                 {% if not values['passport-before'] and not values['naturalisation-registration-certificate'] %}
                     <li>birth or adoption certificate</li>
                 {% elif not values['passport-before'] and values['naturalisation-registration-certificate']%}
@@ -25,7 +25,7 @@
                 {% else %}
                     <li>old passport</li>
                 {% endif %}
-            
+
             {% if values['old-blue'] %}<li>UK passport details</li>{% endif %}
         </ul>
     {% endif %}
@@ -37,7 +37,7 @@
         <li>date of marriage or civil partnership (if this applies)</li>
     </ul>
 
-    <p>Check the <a href="./help/parents-details" target="_blank">rules about parents</a> if you're not sure whose details to provide.</p>
+    <p>Check the <a href="../help/parents-details" target="_blank">rules about parents</a> if you're not sure whose details to provide.</p>
 
 
     {% if not values['born-before-1983'] and not values['naturalisation-registration-certificate'] and not values['passport-before']%}
@@ -55,7 +55,7 @@
 <!--<details>
     <summary><span class="summary">Why you need these details</span></summary>
     <div class="panel panel-border-narrow">
-      <p>We need these details to check eligibility<a href="./help/parents-details" target="_blank">Check the rules about parents</a> if you're not sure whose details to provide.</p>
+      <p>We need these details to check eligibility<a href="../help/parents-details" target="_blank">Check the rules about parents</a> if you're not sure whose details to provide.</p>
     </div>
 </details> -->
 
