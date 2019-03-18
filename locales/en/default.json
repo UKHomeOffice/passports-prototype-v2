@@ -1,667 +1,661 @@
 {
-    "buttons": {
-        "next": "Continue",
-        "upload-your-photo": "Upload your photo",
-        "submit": "Submit",
-        "try-another-photo": "Try another photo",
-        "try-again": "Try again",
-        "find-address": "Find address",
-        "declaration": "Continue to payment"
+  "buttons": {
+    "next": "Continue",
+    "upload-your-photo": "Upload your photo",
+    "submit": "Submit",
+    "try-another-photo": "Try another photo",
+    "try-again": "Try again",
+    "find-address": "Find address",
+    "declaration": "Continue to payment"
+  },
+  "fields": {
+    "what-you-will-need-declaration": {
+      "label": "I'm ready to continue"
     },
-    "fields": {
-        "what-you-will-need-declaration": {
-            "label": "I'm ready to continue"
-        },
 
-        "country": {
-            "label": "Country"
-        },
-        "application-country": {
-            "label": "Country"
-        },
-        "country-birth": {
-            "label": "Country"
-        },
-        "age": {
-            "label": "Your age"
-        },
-        "age-day": {
-            "label": "Day"
-        },
-        "age-month": {
-            "label": "Month"
-        },
-        "age-year": {
-            "label": "Year"
-        },
-        "expiry-day": {
-            "label": "Day"
-        },
-        "expiry-month": {
-            "label": "Month"
-        },
-        "expiry-year": {
-            "label": "Year"
-        },
-        "expiry-day-lost": {
-            "label": "Day"
-        },
-        "expiry-month-lost": {
-            "label": "Month"
-        },
-        "expiry-year-lost": {
-            "label": "Year"
-        },
-        "issue-year": {
-            "label": "Year"
-        },
-        "issue-month": {
-            "label": "Month"
-        },
-        "issue-day": {
-            "label": "Day"
-        },
-        "damaged-reason": {
-            "label": "How was the passport damaged?"
-        },
-        "name": {
-            "label": "First and middle names"
-        },
-        "lastname": {
-            "label": "Last name"
-        },
-        "town-of-birth": {
-            "label": "Town of birth",
-            "hint": "As written on your birth, naturalisation or registration certificate"
-        },
-        "country-of-birth": {
-            "label": "Country of birth"
-        },
-        "born-in-uk": {
-            "legend": "Were they born in the UK?"
-        },
-        "change-nationality": {
-            "label": "Have you changed your nationality to British Citizen?"
-        },
-        "naturalisation-registration-certificate": {
-            "label": "Naturalisation or registration certificate"
-        },
-        "naturalisation-registration-certificate-number": {
-            "label": "Certificate number",
-            "hint": "For example 1091644"
-        },
-        "naturalisation-registration-certificate-issue-day": {
-            "label": "Day"
-        },
-        "naturalisation-registration-certificate-issue-month": {
-            "label": "Month"
-        },
-        "naturalisation-registration-certificate-issue-year": {
-            "label": "Year"
-        },
-        "address1": {
-            "label": "Address"
-        },
-        "town": {
-            "label": "Town or city"
-        },
-        "postcode": {
-            "label": "Postcode"
-        },
-        "email": {
-            "label": "Email"
-        },
-        "email-confirm": {
-            "label": "Confirm your email"
-        },
-        "country-code": {
-            "value": "Country code"
-        },
-        "passport-issuing-authority": {
-            "label": "Which is your passport issuing authority?"
-        },
-        "mobile": {
-            "label": "Mobile or home phone"
-        },
-        "mobile-overseas": {
-            "label": "Mobile or home phone"
-        },
-        "passport-options": {
-            "label": "Passport size"
-        },
-        "typeahead": {
-            "label": "Country"
-        },
-        "no-sign-reason": {
-            "label": "Explain why you can’t sign",
-            "hint": "If you have evidence, include it when you send the old passport."
-        },
-        "previous-name": {
-            "legend": "Have you ever been known by any other names?"
-        },
-        "previous-name-change": {
-            "legend": "Have you ever been known by any other names?"
-        },
-        "braille": {
-            "label": "They need a braille sticker."
-        },
-        "title": {
-            "label": "your title"
-        },
-        "companyName": {
-            "label": "Company name"
-        },
-        "pex-reference": {
-            "legend": "Does your application reference begin with PEX?",
-            "hint": "For example PEX 123 456 7890"
-        },
-        "reference-no": {
-            "label": "Reference",
-            "hint": "You’ll find this in your confirmation email, for example PEX 123 456 7890"
-        },
-        "dual-national-country": {
-            "label": "Which country is it for?"
-        },
-        "photo-url": {
-            "label": "Link"
-        },
-        "photo-code": {
-            "label": "Code"
-        },
-        "oix-override": {
-            "label": "Do you want to submit this photo?"
-        },
-        "oix-override-reason": {
-            "label": "Explain why you’d like to use this photo"
-        },
-        "passport-number": {
-            "label": "Passport Number"
-        },
-        "verification-method": {
-            "legend": "Your verification option",
-            "label": "Your verification option"
-        },
-        "national-insurance": {
-            "label": "National insurance number"
-        },
-        "person-check": {
-            "legend": "Do you know this person",
-            "label": "whether you know this person"
-        },
-        "reasons": {
-            "legend": "Why did you reject the countersignature",
-            "label": "reason for rejecting the countersignature"
-        },
-        "applicant-check": {
-            "legend": "Is this Susan Smith?",
-            "label": "Is this Susan Smith?"
-        },
-        "applicant-check-friend": {
-            "label": "Do you know Susan as a friend, neighbour or colleague?"
-        },
-        "applicant-check-address": {
-            "label": "Are you related to, in a relationship with or living at the same address as Susan?"
-        },
-        "knowntime": {
-            "label": "How many years have you known Susan?"
-        },
-        "profession": {
-            "label": "Profession"
-        },
-        "employer": {
-            "label": "Employer’s name"
-        },
-        "address-postcode": {
-            "label": "Postcode"
-        },
-        "phone-number": {
-            "label": "Mobile or home phone number"
-        },
-        "retired": {
-            "label": "I am retired"
-        },
-        "email-address": {
-            "label": "Email"
-        },
-        "csig-name": {
-            "label": "The person’s first name"
-        },
-        "csig-last-name": {
-            "label": "The person’s last name"
-        },
-        "csig-email": {
-            "label": "The person’s email"
-        },
-        "number-illegible": {
-            "label": "I can’t read my old passport number"
-        },
-        "what-damaged": {
-            "label": "What is damaged?"
-        },
-        "expiry-day-damaged": {
-            "label": "Day"
-        },
-        "expiry-month-damaged": {
-            "label": "Month"
-        },
-        "expiry-year-damaged": {
-            "label": "Year"
-        },
-        "front-cover-damaged": {
-            "label": "Front cover"
-        },
-        "back-cover-damaged": {
-            "label": "Back cover"
-        },
-        "photo-page-damaged": {
-            "label": "Photo page"
-        },
-        "emergency-contact-damaged": {
-            "label": "Emergency contact page"
-        },
-        "other-pages-damaged": {
-            "label": "Any other pages"
-        },
-        "chip-damaged": {
-            "label": "Chip (e-passports only)"
-        },
-
-
-        "parent1-first-names": {
-            "label": "First and middle names"
-        },
-        "parent1-last-name": {
-            "label": "Last name"
-        },
-        "parent1-town-of-birth": {
-            "label": "Town of birth"
-        },
-        "parent1-country-of-birth": {
-            "label": "Country of birth"
-        },
-        "parent1-country-of-nationality": {
-            "label": "Nationality",
-            "hint": "At the time of the applicant's birth"
-        },
-        "parent1-age-day": {
-            "label": "Day"
-        },
-        "parent1-age-month": {
-            "label": "Month"
-        },
-        "parent1-age-year": {
-            "label": "Year"
-        },
-        "parent1-passport-number": {
-            "label": "Passport Number",
-            "hint": "If applicable, for example 502135326"
-        },
-        "parent1-passport-issue-day": {
-            "label": "Day"
-        },
-        "parent1-passport-issue-month": {
-            "label": "Month"
-        },
-        "parent1-passport-issue-year": {
-            "label": "Year"
-        },
-        "parent1-additional-information": {
-            "label": "Tell us why"
-        },
-
-
-        "parent2-first-names": {
-            "label": "First and middle names"
-        },
-        "parent2-last-name": {
-            "label": "Last name"
-        },
-        "parent2-town-of-birth": {
-            "label": "Town of birth"
-        },
-        "parent2-country-of-birth": {
-            "label": "Country of birth"
-        },
-        "parent2-country-of-nationality": {
-            "label": "Nationality",
-            "hint": "At the time of the applicant's birth"
-        },
-        "parent2-age-day": {
-            "label": "Day"
-        },
-        "parent2-age-month": {
-            "label": "Month"
-        },
-        "parent2-age-year": {
-            "label": "Year"
-        },
-        "parent2-passport-number": {
-            "label": "Passport Number",
-            "hint": "If applicable, for example 502135326"
-        },
-        "parent2-passport-issue-day": {
-            "label": "Day"
-        },
-        "parent2-passport-issue-month": {
-            "label": "Month"
-        },
-        "parent2-passport-issue-year": {
-            "label": "Year"
-        },
-        "parent2-additional-information": {
-            "label": "Tell us why"
-        },
-
-
-        "marriage-day": {
-            "label": "Day"
-        },
-        "marriage-month": {
-            "label": "Month"
-        },
-        "marriage-year": {
-            "label": "Year"
-        },
-
-
-        "parent1-parent1-first-names": {
-            "label": "First and middle names"
-        },
-        "parent1-parent1-last-name": {
-            "label": "Last name"
-        },
-        "parent1-parent1-town-of-birth": {
-            "label": "Town of birth"
-        },
-        "parent1-parent1-country-of-birth": {
-            "label": "Country of birth"
-        },
-        "parent1-parent1-age-day": {
-            "label": "Day"
-        },
-        "parent1-parent1-age-month": {
-            "label": "Month"
-        },
-        "parent1-parent1-age-year": {
-            "label": "Year"
-        },
-        "parent1-parent1-additional-information": {
-            "label": "Tell us why"
-        },
-
-
-        "parent1-parent2-first-names": {
-            "label": "First and middle names"
-        },
-        "parent1-parent2-last-name": {
-            "label": "Last name"
-        },
-        "parent1-parent2-town-of-birth": {
-            "label": "Town of birth"
-        },
-        "parent1-parent2-country-of-birth": {
-            "label": "Country of birth"
-        },
-        "parent1-parent2-age-day": {
-            "label": "Day"
-        },
-        "parent1-parent2-age-month": {
-            "label": "Month"
-        },
-        "parent1-parent2-age-year": {
-            "label": "Year"
-        },
-        "parent1-parent2-additional-information": {
-            "label": "Tell us why"
-        },
-
-
-        "parent1-parents-marriage-day": {
-            "label": "Day"
-        },
-        "parent1-parents-marriage-month": {
-            "label": "Month"
-        },
-        "parent1-parents-marriage-year": {
-            "label": "Year"
-        },
-
-
-        "parent2-parent1-first-names": {
-            "label": "First and middle names"
-        },
-        "parent2-parent1-last-name": {
-            "label": "Last name"
-        },
-        "parent2-parent1-town-of-birth": {
-            "label": "Town of birth"
-        },
-        "parent2-parent1-country-of-birth": {
-            "label": "Country of birth"
-        },
-        "parent2-parent1-age-day": {
-            "label": "Day"
-        },
-        "parent2-parent1-age-month": {
-            "label": "Month"
-        },
-        "parent2-parent1-age-year": {
-            "label": "Year"
-        },
-        "parent2-parent1-additional-information": {
-            "label": "Tell us why"
-        },
-
-
-        "parent2-parent2-first-names": {
-            "label": "First and middle names"
-        },
-        "parent2-parent2-last-name": {
-            "label": "Last name"
-        },
-        "parent2-parent2-town-of-birth": {
-            "label": "Town of birth"
-        },
-        "parent2-parent2-country-of-birth": {
-            "label": "Country of birth"
-        },
-        "parent2-parent2-age-day": {
-            "label": "Day"
-        },
-        "parent2-parent2-age-month": {
-            "label": "Month"
-        },
-        "parent2-parent2-age-year": {
-            "label": "Year"
-        },
-        "parent2-parent2-additional-information": {
-            "label": "Tell us why"
-        },
-
-
-        "parent2-parents-marriage-day": {
-            "label": "Day"
-        },
-        "parent2-parents-marriage-month": {
-            "label": "Month"
-        },
-        "parent2-parents-marriage-year": {
-            "label": "Year"
-        },
-
-
-        "third-party-first-name": {
-            "label": "First and middle names"
-        },
-        "third-party-last-name": {
-            "label": "Last name"
-        },
-
-        "declaration": {
-            "label": "I agree"
-        }
+    "other-nationality": {
+      "label": "What type of British nationality do you have?"
     },
-    "error": {
-        "default": "An unknown error occured",
-        "session": "Session timeout"
+
+    "country": {
+      "label": "Country"
     },
-    "validation": {
-        "required": "Please enter {{label}}",
-        "numeric": "{{label}} must only contain numbers",
-        "default": "You must answer this question",
-        "continue": {
-            "required": "Please tell us if you'd like to continue"
-        },
-        "country": {
-            "required": "You must answer this question - country"
-        },
-        "country-birth": {
-            "required": "Please select your country"
-        },
-        "apply-uk": {
-            "required": "Please tell us if you're applying from the UK"
-        },
-        "application-for-someone-else": {
-            "required": "You must answer this question."
-        },
-        "passport-before": {
-            "required": "Please tell us if you're applying from the UK"
-        },
-        "lost-stolen": {
-            "required": "You must answer this question."
-        },
-        "damaged-reason": {
-            "required": "Explain how the passport was damaged"
-        },
-        "16-or-older": {
-            "required": "You must answer this question"
-        },
-        "dual-nationality": {
-            "required": "You must answer this question"
-        },
-        "oix-override": {
-            "required": "Do you want to submit this photo?"
-        },
-        "oix-override-reason": {
-            "required": "Explain why you’d like to use this photo"
-        },
-        "applicant-check": {
-            "required": "Is this Susan Smith?"
-        },
-        "contact-csig": {
-            "required": "You need to contact this person before we send them an email"
-        },
-        "csig-email-confirm": {
-            "required": "Please confirm the person's email"
-        },
-        "application-country": {
-            "required": "You must answer this question"
-        },
-        "british-citizen": {
-            "required": "You must answer this question - british citizen"
-        },
-        "change-nationality": {
-            "required": "You must answer this question - Have you changed your nationality to British Citizen?"
-        },
-        "issuing-authority": {
-            "required": "You must answer this question - issuing-authority"
-        },
-        "what-to-do": {
-            "required": "You must answer this question - what to do"
-        },
-        "what-you-will-need-declaration": {
-            "required": "You need to confirm you're ready to continue"
-        },
+    "application-country": {
+      "label": "Country"
+    },
+    "country-birth": {
+      "label": "Country"
+    },
+    "age": {
+      "label": "Your age"
+    },
+    "age-day": {
+      "label": "Day"
+    },
+    "age-month": {
+      "label": "Month"
+    },
+    "age-year": {
+      "label": "Year"
+    },
+    "expiry-day": {
+      "label": "Day"
+    },
+    "expiry-month": {
+      "label": "Month"
+    },
+    "expiry-year": {
+      "label": "Year"
+    },
+    "expiry-day-lost": {
+      "label": "Day"
+    },
+    "expiry-month-lost": {
+      "label": "Month"
+    },
+    "expiry-year-lost": {
+      "label": "Year"
+    },
+    "issue-year": {
+      "label": "Year"
+    },
+    "issue-month": {
+      "label": "Month"
+    },
+    "issue-day": {
+      "label": "Day"
+    },
+    "damaged-reason": {
+      "label": "How was the passport damaged?"
+    },
+    "name": {
+      "label": "First and middle names"
+    },
+    "lastname": {
+      "label": "Last name"
+    },
+    "town-of-birth": {
+      "label": "Town of birth",
+      "hint": "As written on your birth, naturalisation or registration certificate"
+    },
+    "country-of-birth": {
+      "label": "Country of birth"
+    },
+    "born-in-uk": {
+      "legend": "Were they born in the UK?"
+    },
+    "change-nationality": {
+      "label": "Have you changed your nationality to British Citizen?"
+    },
+    "naturalisation-registration-certificate": {
+      "label": "Naturalisation or registration certificate"
+    },
+    "naturalisation-registration-certificate-number": {
+      "label": "Certificate number",
+      "hint": "For example 1091644"
+    },
+    "naturalisation-registration-certificate-issue-day": {
+      "label": "Day"
+    },
+    "naturalisation-registration-certificate-issue-month": {
+      "label": "Month"
+    },
+    "naturalisation-registration-certificate-issue-year": {
+      "label": "Year"
+    },
+    "address1": {
+      "label": "Address"
+    },
+    "town": {
+      "label": "Town or city"
+    },
+    "postcode": {
+      "label": "Postcode"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "email-confirm": {
+      "label": "Confirm your email"
+    },
+    "country-code": {
+      "value": "Country code"
+    },
+    "passport-issuing-authority": {
+      "label": "Which is your passport issuing authority?"
+    },
+    "mobile": {
+      "label": "Mobile or home phone"
+    },
+    "mobile-overseas": {
+      "label": "Mobile or home phone"
+    },
+    "passport-options": {
+      "label": "Passport size"
+    },
+    "typeahead": {
+      "label": "Country"
+    },
+    "no-sign-reason": {
+      "label": "Explain why you can’t sign",
+      "hint": "If you have evidence, include it when you send the old passport."
+    },
+    "previous-name": {
+      "legend": "Have you ever been known by any other names?"
+    },
+    "previous-name-change": {
+      "legend": "Have you ever been known by any other names?"
+    },
+    "braille": {
+      "label": "They need a braille sticker."
+    },
+    "title": {
+      "label": "your title"
+    },
+    "companyName": {
+      "label": "Company name"
+    },
+    "pex-reference": {
+      "legend": "Does your application reference begin with PEX?",
+      "hint": "For example PEX 123 456 7890"
+    },
+    "reference-no": {
+      "label": "Reference",
+      "hint": "You’ll find this in your confirmation email, for example PEX 123 456 7890"
+    },
+    "dual-national-country": {
+      "label": "Which country is it for?"
+    },
+    "photo-url": {
+      "label": "Link"
+    },
+    "photo-code": {
+      "label": "Code"
+    },
+    "oix-override": {
+      "label": "Do you want to submit this photo?"
+    },
+    "oix-override-reason": {
+      "label": "Explain why you’d like to use this photo"
+    },
+    "passport-number": {
+      "label": "Passport Number"
+    },
+    "verification-method": {
+      "legend": "Your verification option",
+      "label": "Your verification option"
+    },
+    "national-insurance": {
+      "label": "National insurance number"
+    },
+    "person-check": {
+      "legend": "Do you know this person",
+      "label": "whether you know this person"
+    },
+    "reasons": {
+      "legend": "Why did you reject the countersignature",
+      "label": "reason for rejecting the countersignature"
+    },
+    "applicant-check": {
+      "legend": "Is this Susan Smith?",
+      "label": "Is this Susan Smith?"
+    },
+    "applicant-check-friend": {
+      "label": "Do you know Susan as a friend, neighbour or colleague?"
+    },
+    "applicant-check-address": {
+      "label": "Are you related to, in a relationship with or living at the same address as Susan?"
+    },
+    "knowntime": {
+      "label": "How many years have you known Susan?"
+    },
+    "profession": {
+      "label": "Profession"
+    },
+    "employer": {
+      "label": "Employer’s name"
+    },
+    "address-postcode": {
+      "label": "Postcode"
+    },
+    "phone-number": {
+      "label": "Mobile or home phone number"
+    },
+    "retired": {
+      "label": "I am retired"
+    },
+    "email-address": {
+      "label": "Email"
+    },
+    "csig-name": {
+      "label": "The person’s first name"
+    },
+    "csig-last-name": {
+      "label": "The person’s last name"
+    },
+    "csig-email": {
+      "label": "The person’s email"
+    },
+    "number-illegible": {
+      "label": "I can’t read my old passport number"
+    },
+    "what-damaged": {
+      "label": "What is damaged?"
+    },
+    "expiry-day-damaged": {
+      "label": "Day"
+    },
+    "expiry-month-damaged": {
+      "label": "Month"
+    },
+    "expiry-year-damaged": {
+      "label": "Year"
+    },
+    "front-cover-damaged": {
+      "label": "Front cover"
+    },
+    "back-cover-damaged": {
+      "label": "Back cover"
+    },
+    "photo-page-damaged": {
+      "label": "Photo page"
+    },
+    "emergency-contact-damaged": {
+      "label": "Emergency contact page"
+    },
+    "other-pages-damaged": {
+      "label": "Any other pages"
+    },
+    "chip-damaged": {
+      "label": "Chip (e-passports only)"
+    },
 
-        "passport-number": {
-            "required": "You must answer this question - passport number"
-        },
-        "change-name": {
-            "required": "You must answer this question"
-        },
-        "gender": {
-            "required": "You must answer this question"
-        },
-        "born-in-uk": {
-            "required": "You must answer this question"
-        },
-        "town-of-birth": {
-            "required": "You must answer this question"
-        },
-        "email": {
-            "required": "Enter your email address"
-        },
-        "mobile": {
-            "required": "Enter your mobile or home phone number"
-        },
-        "passport-options": {
-            "required": "You must answer this question"
-        },
+    "parent1-first-names": {
+      "label": "First and middle names"
+    },
+    "parent1-last-name": {
+      "label": "Last name"
+    },
+    "parent1-town-of-birth": {
+      "label": "Town of birth"
+    },
+    "parent1-country-of-birth": {
+      "label": "Country of birth"
+    },
+    "parent1-country-of-nationality": {
+      "label": "Nationality",
+      "hint": "At the time of the applicant's birth"
+    },
+    "parent1-age-day": {
+      "label": "Day"
+    },
+    "parent1-age-month": {
+      "label": "Month"
+    },
+    "parent1-age-year": {
+      "label": "Year"
+    },
+    "parent1-passport-number": {
+      "label": "Passport Number",
+      "hint": "If applicable, for example 502135326"
+    },
+    "parent1-passport-issue-day": {
+      "label": "Day"
+    },
+    "parent1-passport-issue-month": {
+      "label": "Month"
+    },
+    "parent1-passport-issue-year": {
+      "label": "Year"
+    },
+    "parent1-additional-information": {
+      "label": "Tell us why"
+    },
 
-        "parents-married": {
-            "required": "You must answer this question"
-        },
+    "parent2-first-names": {
+      "label": "First and middle names"
+    },
+    "parent2-last-name": {
+      "label": "Last name"
+    },
+    "parent2-town-of-birth": {
+      "label": "Town of birth"
+    },
+    "parent2-country-of-birth": {
+      "label": "Country of birth"
+    },
+    "parent2-country-of-nationality": {
+      "label": "Nationality",
+      "hint": "At the time of the applicant's birth"
+    },
+    "parent2-age-day": {
+      "label": "Day"
+    },
+    "parent2-age-month": {
+      "label": "Month"
+    },
+    "parent2-age-year": {
+      "label": "Year"
+    },
+    "parent2-passport-number": {
+      "label": "Passport Number",
+      "hint": "If applicable, for example 502135326"
+    },
+    "parent2-passport-issue-day": {
+      "label": "Day"
+    },
+    "parent2-passport-issue-month": {
+      "label": "Month"
+    },
+    "parent2-passport-issue-year": {
+      "label": "Year"
+    },
+    "parent2-additional-information": {
+      "label": "Tell us why"
+    },
 
-        "parent1-additional-information": {
-            "required": "Explain why you can't provide details for mother or parent 1"
-        },
-        "parent1-uk-passport": {
-            "required": "You must answer this question"
-        },
+    "marriage-day": {
+      "label": "Day"
+    },
+    "marriage-month": {
+      "label": "Month"
+    },
+    "marriage-year": {
+      "label": "Year"
+    },
 
-        "parent2-additional-information": {
-            "required": "Explain why you can't provide details for father or parent 2"
-        },
-        "parent2-uk-passport": {
-            "required": "You must answer this question"
-        },
+    "parent1-parent1-first-names": {
+      "label": "First and middle names"
+    },
+    "parent1-parent1-last-name": {
+      "label": "Last name"
+    },
+    "parent1-parent1-town-of-birth": {
+      "label": "Town of birth"
+    },
+    "parent1-parent1-country-of-birth": {
+      "label": "Country of birth"
+    },
+    "parent1-parent1-age-day": {
+      "label": "Day"
+    },
+    "parent1-parent1-age-month": {
+      "label": "Month"
+    },
+    "parent1-parent1-age-year": {
+      "label": "Year"
+    },
+    "parent1-parent1-additional-information": {
+      "label": "Tell us why"
+    },
 
-        "parent1-parents-married": {
-            "required": "You must answer this question"
-        },
-        "parent1-parent1-additional-information": {
-            "required": "Explain why you can't provide details for maternal grandmother"
-        },
-        "parent1-parent2-additional-information": {
-            "required": "Explain why you can't provide details for maternal grandfather"
-        },
+    "parent1-parent2-first-names": {
+      "label": "First and middle names"
+    },
+    "parent1-parent2-last-name": {
+      "label": "Last name"
+    },
+    "parent1-parent2-town-of-birth": {
+      "label": "Town of birth"
+    },
+    "parent1-parent2-country-of-birth": {
+      "label": "Country of birth"
+    },
+    "parent1-parent2-age-day": {
+      "label": "Day"
+    },
+    "parent1-parent2-age-month": {
+      "label": "Month"
+    },
+    "parent1-parent2-age-year": {
+      "label": "Year"
+    },
+    "parent1-parent2-additional-information": {
+      "label": "Tell us why"
+    },
 
-        "parent2-parents-married": {
-            "required": "You must answer this question"
-        },
-        "parent2-parent1-additional-information": {
-            "required": "Explain why you can't provide details for paternal grandmother"
-        },
-        "parent2-parent2-additional-information": {
-            "required": "Explain why you can't provide details for paternal grandfather"
-        },
+    "parent1-parents-marriage-day": {
+      "label": "Day"
+    },
+    "parent1-parents-marriage-month": {
+      "label": "Month"
+    },
+    "parent1-parents-marriage-year": {
+      "label": "Year"
+    },
 
-        "can-interview": {
-            "required": "You must answer this question"
-        },
-        "no-interview-reason": {
-            "required": "You must answer this question"
-        },
-        "can-sign": {
-            "required": "You must answer this question"
-        },
-        "secure-return": {
-            "required": "You must answer this question"
-        },
-        "declaration": {
-            "required": "You must agree with the declaration to use this service"
-        },
+    "parent2-parent1-first-names": {
+      "label": "First and middle names"
+    },
+    "parent2-parent1-last-name": {
+      "label": "Last name"
+    },
+    "parent2-parent1-town-of-birth": {
+      "label": "Town of birth"
+    },
+    "parent2-parent1-country-of-birth": {
+      "label": "Country of birth"
+    },
+    "parent2-parent1-age-day": {
+      "label": "Day"
+    },
+    "parent2-parent1-age-month": {
+      "label": "Month"
+    },
+    "parent2-parent1-age-year": {
+      "label": "Year"
+    },
+    "parent2-parent1-additional-information": {
+      "label": "Tell us why"
+    },
 
-        "name": {
-            "regex": "Your {{ label }} must only contain letters, hyphens and apostrophes"
-        },
-        "lastname": {
-            "regex": "Your {{ label }} must only contain letters, hyphens and apostrophes"
-        },
+    "parent2-parent2-first-names": {
+      "label": "First and middle names"
+    },
+    "parent2-parent2-last-name": {
+      "label": "Last name"
+    },
+    "parent2-parent2-town-of-birth": {
+      "label": "Town of birth"
+    },
+    "parent2-parent2-country-of-birth": {
+      "label": "Country of birth"
+    },
+    "parent2-parent2-age-day": {
+      "label": "Day"
+    },
+    "parent2-parent2-age-month": {
+      "label": "Month"
+    },
+    "parent2-parent2-age-year": {
+      "label": "Year"
+    },
+    "parent2-parent2-additional-information": {
+      "label": "Tell us why"
+    },
 
-        "email": "You must enter a valid email",
-        "email-confirm": "Your email doesn’t match. Check and try again.",
-        "exactlength": "{{label}} must be 9 characters",
-        "ninoformat": "{{label}} format incorrect"
+    "parent2-parents-marriage-day": {
+      "label": "Day"
+    },
+    "parent2-parents-marriage-month": {
+      "label": "Month"
+    },
+    "parent2-parents-marriage-year": {
+      "label": "Year"
+    },
+
+    "third-party-first-name": {
+      "label": "First and middle names"
+    },
+    "third-party-last-name": {
+      "label": "Last name"
+    },
+
+    "declaration": {
+      "label": "I agree"
     }
+  },
+  "error": {
+    "default": "An unknown error occured",
+    "session": "Session timeout"
+  },
+  "validation": {
+    "required": "Please enter {{label}}",
+    "numeric": "{{label}} must only contain numbers",
+    "default": "You must answer this question",
+    "continue": {
+      "required": "Please tell us if you'd like to continue"
+    },
+    "country": {
+      "required": "You must answer this question - country"
+    },
+    "country-birth": {
+      "required": "Please select your country"
+    },
+    "apply-uk": {
+      "required": "Please tell us if you're applying from the UK"
+    },
+    "application-for-someone-else": {
+      "required": "You must answer this question."
+    },
+    "passport-before": {
+      "required": "Please tell us if you're applying from the UK"
+    },
+    "lost-stolen": {
+      "required": "You must answer this question."
+    },
+    "damaged-reason": {
+      "required": "Explain how the passport was damaged"
+    },
+    "16-or-older": {
+      "required": "You must answer this question"
+    },
+    "dual-nationality": {
+      "required": "You must answer this question"
+    },
+    "oix-override": {
+      "required": "Do you want to submit this photo?"
+    },
+    "oix-override-reason": {
+      "required": "Explain why you’d like to use this photo"
+    },
+    "applicant-check": {
+      "required": "Is this Susan Smith?"
+    },
+    "contact-csig": {
+      "required": "You need to contact this person before we send them an email"
+    },
+    "csig-email-confirm": {
+      "required": "Please confirm the person's email"
+    },
+    "application-country": {
+      "required": "You must answer this question"
+    },
+    "british-citizen": {
+      "required": "You must answer this question - british citizen"
+    },
+    "change-nationality": {
+      "required": "You must answer this question - Have you changed your nationality to British Citizen?"
+    },
+    "issuing-authority": {
+      "required": "You must answer this question - issuing-authority"
+    },
+    "what-to-do": {
+      "required": "You must answer this question - what to do"
+    },
+    "what-you-will-need-declaration": {
+      "required": "You need to confirm you're ready to continue"
+    },
+
+    "passport-number": {
+      "required": "You must answer this question - passport number"
+    },
+    "change-name": {
+      "required": "You must answer this question"
+    },
+    "gender": {
+      "required": "You must answer this question"
+    },
+    "born-in-uk": {
+      "required": "You must answer this question"
+    },
+    "town-of-birth": {
+      "required": "You must answer this question"
+    },
+    "email": {
+      "required": "Enter your email address"
+    },
+    "mobile": {
+      "required": "Enter your mobile or home phone number"
+    },
+    "passport-options": {
+      "required": "You must answer this question"
+    },
+
+    "parents-married": {
+      "required": "You must answer this question"
+    },
+
+    "parent1-additional-information": {
+      "required": "Explain why you can't provide details for mother or parent 1"
+    },
+    "parent1-uk-passport": {
+      "required": "You must answer this question"
+    },
+
+    "parent2-additional-information": {
+      "required": "Explain why you can't provide details for father or parent 2"
+    },
+    "parent2-uk-passport": {
+      "required": "You must answer this question"
+    },
+
+    "parent1-parents-married": {
+      "required": "You must answer this question"
+    },
+    "parent1-parent1-additional-information": {
+      "required": "Explain why you can't provide details for maternal grandmother"
+    },
+    "parent1-parent2-additional-information": {
+      "required": "Explain why you can't provide details for maternal grandfather"
+    },
+
+    "parent2-parents-married": {
+      "required": "You must answer this question"
+    },
+    "parent2-parent1-additional-information": {
+      "required": "Explain why you can't provide details for paternal grandmother"
+    },
+    "parent2-parent2-additional-information": {
+      "required": "Explain why you can't provide details for paternal grandfather"
+    },
+
+    "can-interview": {
+      "required": "You must answer this question"
+    },
+    "no-interview-reason": {
+      "required": "You must answer this question"
+    },
+    "can-sign": {
+      "required": "You must answer this question"
+    },
+    "secure-return": {
+      "required": "You must answer this question"
+    },
+    "declaration": {
+      "required": "You must agree with the declaration to use this service"
+    },
+
+    "name": {
+      "regex": "Your {{ label }} must only contain letters, hyphens and apostrophes"
+    },
+    "lastname": {
+      "regex": "Your {{ label }} must only contain letters, hyphens and apostrophes"
+    },
+
+    "email": "You must enter a valid email",
+    "email-confirm": "Your email doesn’t match. Check and try again.",
+    "exactlength": "{{label}} must be 9 characters",
+    "ninoformat": "{{label}} format incorrect"
+  }
 }
