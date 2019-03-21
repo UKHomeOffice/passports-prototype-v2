@@ -78,7 +78,17 @@
 {{#input-text}}lastname{{/input-text}}
 
 <fieldset>
-    <h2>Is this name on {{> partials-applicant-your-their}} {{> partials-information-compared-to-document}}?</h2>
+    {{#nunjucks}}
+        {%- if values['passport-before'] and not values['old-blue'] -%} {# If true Renew #}
+            <h2>Did you use this name on your old passport?</h2>
+        {%- else -%}
+            {%- if values['naturalisation-registration-certificate'] -%} {# If naturalised or registered #}
+                <h2>Is this name on your naturalisation or registration certificate?</h2>
+            {%- else -%} {# If true FTA, or Hidden FTA, and not naturalised or registered #}
+                <h2>Is this name on your birth or adoption certificate?</h2>
+            {%- endif -%}
+        {%- endif -%}
+    {{/nunjucks}}
 
     {{#radio-group}}change-name{{/radio-group}}
 </fieldset>
