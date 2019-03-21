@@ -119,6 +119,7 @@ function clicks() {
     $('#name-changed-false').click();
     $('#uncancelled-No').click();
     $('#passport-damaged-false').click();
+    $('#british-citizen-true').click();
     $('#dual-nationality-false').click();
     $('#choose-photo-upload').click();
     $('#plain-expression-Yes').click();
