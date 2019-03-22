@@ -250,7 +250,13 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 value: reason
             });
         }
-    }
+    } else {
+            newPassportFields.push({
+                step: this.getEditStep('change-name'),
+                title: 'Name change',
+                value: 'Your name hasn’t changed',
+            });
+        }
 
     var allPreviousNames = _.zip(values['previous-first-name'], values['previous-last-name']);
     var previousNamesList = "";
