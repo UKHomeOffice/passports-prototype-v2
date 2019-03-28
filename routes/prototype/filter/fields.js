@@ -458,7 +458,35 @@ module.exports = {
   },
   'british-citizen': {
     legend: {
-      value: 'Are you a British Citizen?',
+      value: 'What nationality is written on your passport?',
+      className: 'visuallyhidden'
+    },
+    options: [
+      {
+        value: 'british',
+        label: 'British Citizen'
+      },
+      {
+        value: 'BNO',
+        label: 'British National Overseas',
+      },
+      {
+        value: 'BOTC',
+        label: 'British Overseas Territories Citizen',
+      },
+      {
+        value: 'other',
+        label: 'Other',
+      },
+    ],
+    //formatter: ['boolean'],
+    validate: ['required'],
+    //className: 'inline'
+  },
+
+  'naturalised-or-british': {
+    legend: {
+      value: 'Have you naturalised or registered to become a British citizen?',
       className: 'visuallyhidden'
     },
     options: [
@@ -469,15 +497,11 @@ module.exports = {
       {
         value: false,
         label: 'No',
-        toggle: 'other-nationality',
-        child: 'select'
       }
     ],
+    //validate: ['required'],
     formatter: ['boolean'],
-    /*validate: [
-      'required'
-    ],*/
-    className: 'inline'
+    className:'inline'
   },
 
   'other-nationality': {

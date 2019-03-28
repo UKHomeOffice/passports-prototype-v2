@@ -146,17 +146,21 @@ module.exports = {
     ]
   },
   '/british-citizen': {
-    fields: ['british-citizen', 'other-nationality'],
+    fields: ['british-citizen'],
     next: '/dual-national',
     forks: [
       {
-        // Change of national status journey
-        target: '/change-nationality',
+        target: '/naturalised-or-british',
         condition: function(req, res) {
-          return req.session['hmpo-wizard-common']['british-citizen'] == false;
+          return req.session['hmpo-wizard-common']['british-citizen'] == 'BNO' ||
+                 req.session['hmpo-wizard-common']['british-citizen'] == 'other'
         }
       }
     ]
+    },
+  '/naturalised-or-british': {
+    fields: ['naturalised-or-british'],
+    next: '/dual-national',
   },
   '/change-nationality': {
     // Change of national status journey

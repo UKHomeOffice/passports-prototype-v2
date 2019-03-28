@@ -89,7 +89,7 @@ module.exports = {
         }, {
             target: '/naturalisation-registration-details',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == true || req.sessionModel.get('change-nationality') == true;
+                return req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == true || req.sessionModel.get('british-citizen') == 'BNO';
             }
         }]
     },

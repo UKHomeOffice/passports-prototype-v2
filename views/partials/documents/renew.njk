@@ -4,6 +4,11 @@
     {% set documents = (documents.push('any passports from other countries that haven\'t expired'), documents) %}
 {% endif %}
 
+{% if values['british-citizen'] %}
+    {% set documents = (documents.push('a colour copy of both sides of your Hong Kong permanent identity card'), documents) %}
+    {% set documents = (documents.push('naturalisation or registration certificate'), documents) %}
+{% endif %}
+
 {% if values['lost-stolen'] == true %}
     {% set documents = (documents.shift(), documents) %} {# Remove `old passport` from array #}
 {% endif %}
