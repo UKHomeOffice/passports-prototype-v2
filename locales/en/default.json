@@ -552,7 +552,7 @@
             "required": "You must answer this question"
         },
         "british-citizen": {
-            "required": "You must answer this question - british citizen"
+            "required": "You must answer select a nationality"
         },
         "change-nationality": {
             "required": "You must answer this question - Have you changed your nationality to British Citizen?"
