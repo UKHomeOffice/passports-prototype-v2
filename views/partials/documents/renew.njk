@@ -1,12 +1,15 @@
 {% set documents = ['old passport'] %}
 
-{% if values['dual-nationality'] %}
-    {% set documents = (documents.push('any passports from other countries that haven\'t expired'), documents) %}
+{% if values['british-citizen'] == 'BNO' %}
+    {% set documents = (documents.push('copy of both sides of your Hong Kong permanent identity card'), documents) %}
 {% endif %}
 
-{% if values['british-citizen'] == 'BNO' %}
-    {% set documents = (documents.push('a colour copy of both sides of your Hong Kong permanent identity card'), documents) %}
-    {% set documents = (documents.push('naturalisation or registration certificate'), documents) %}
+{% if values['naturalised-or-british'] == true %}
+{% set documents = (documents.push('naturalisation or registration certificate'), documents) %}
+{% endif %}
+
+{% if values['dual-nationality'] %}
+    {% set documents = (documents.push('any passports from other countries that haven\'t expired'), documents) %}
 {% endif %}
 
 {% if values['lost-stolen'] == true %}
