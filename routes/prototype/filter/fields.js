@@ -480,6 +480,26 @@ module.exports = {
         className: 'inline'
     },
 
+    'become-british':{
+        legend: {
+            value: 'Have you become a British citizen?',
+            className: 'visuallyhidden'
+        },
+        options: [{
+                value: true,
+                label: 'Yes'
+            },
+            {
+                value: false,
+                label: 'No',
+            }
+        ],
+        //validate: ['required'],
+        formatter: ['boolean'],
+        className: 'inline'
+
+    },
+
     'other-nationality': {
         options: [{
             value: '',
