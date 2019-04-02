@@ -154,6 +154,19 @@ module.exports = {
     },
 
     '/become-british': {
+        fields: ['become-british'],
+        next: '/naturalised-or-british',
+        forks: [{
+            target: '/naturalised-or-british',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['become-british'] == true;
+            }
+        }, {
+            target: '',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['become-british'] == false;
+            }
+        }]
 
     },
     '/change-nationality': {

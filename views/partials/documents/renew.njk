@@ -1,7 +1,7 @@
 {% set documents = ['old passport'] %}
 
 {% if values['british-citizen'] == 'BNO' %}
-    {% set documents = (documents.push('copy of both sides of your Hong Kong permanent identity card'), documents) %}
+    {% set documents = (documents.push('a colour copy of both sides of your Hong Kong permanent identity card'), documents) %}
 {% endif %}
 
 {% if values['naturalised-or-british'] == true %}
