@@ -168,6 +168,12 @@ module.exports = {
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
                 }
+            },
+            {
+                target: '/grandparents-intro',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['british-citizen'] == 'BOTC';
+                }
             }
             // ,{
             //     target: '/home-address-manual-prototype',
