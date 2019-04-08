@@ -1,0 +1,32 @@
+{{< layout-photo-checker}}
+
+{{$pageTitle}}Get a digital photo{{/pageTitle}}
+
+{{$header}}
+    <h1>Get a digital photo</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+    {{#radio-group}}choose-photo{{/radio-group}}
+
+    <div id="photo-code" class="reveal js-hidden">
+        <div class="panel panel-border-narrow" style="margin-top:-20px; margin-bottom:20px;">
+            <p>Check if your printed photos have a photo code &ndash; you’ll need to enter this code to retrieve your
+                photo.<br><br>
+                The photo code is a new service and may not be available yet from photo booths or shops in your
+                area.</p>
+        </div>
+    </div>
+
+    {{#input-submit}}{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout-photo-checker}}

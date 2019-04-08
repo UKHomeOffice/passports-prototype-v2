@@ -1,0 +1,43 @@
+{{< hmpo-layout}}
+    {{$propositionHeader}}
+        <div class="header-proposition">
+            <div class="content">
+                <nav id="proposition-menu">
+                    <a href="/photo-checker" title="Check a passport photo" id="proposition-name">Check a passport photo</a>
+                </nav>
+            </div>
+        </div>
+    {{/propositionHeader}}
+
+    {{$main}}
+        {{$breadcrumb}}{{/breadcrumb}}
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <main id="content" class="main-content" role="main">
+            <div class="fill-banner">
+                <a class="button__fill" id="populate"/>Fill</a>
+                <a class="button__fill" href="/">Home</a>
+                <a class="button__fill" href="./">/</a>
+            <select class="form-control" id="journey-select" name="select-box">
+                <option value="" selected disabled>Application type</option>
+                <option>Lost and stolen</option>
+                <option>FTA</option>
+                <option>FTA - Third Party</option>
+                <option>Adult Renew</option>
+                <option>Adult Renew - Third Party</option>
+                <option>12-15 Renew</option>
+                <option>0-11 Renew</option>
+                <option>FTC</option>
+            </select>
+            </div>
+                {{> hmpo-partials-betatag}}
+                {{> hmpo-partials-back}}
+                <div class="grid-row">
+                    {{> hmpo-partials-maincontent}}
+                </div>
+        </main>
+    {{/main}}
+
+    {{$bodyEnd}}
+        {{> hmpo-partials-body-end}}
+    {{/bodyEnd}}
+{{/ hmpo-layout}}

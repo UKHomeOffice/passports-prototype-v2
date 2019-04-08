@@ -15,6 +15,9 @@ app.use('/prototype/photo/upload-errors', require('./routes/prototype/photo/uplo
 app.use('/prototype/help', require('./routes/prototype/help'));
 app.use('/prototype/apply', require('./routes/prototype/apply'));
 
+// Independent photo checker
+app.use('/prototype/photo-checker', require('./routes/prototype/photo-checker'));
+
 // Temporary routes for changing:
 // `/ftas` to `/prototype`
 // `/renew` to `/apply`

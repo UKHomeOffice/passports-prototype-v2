@@ -1,9 +1,11 @@
 {
     "buttons": {
+        "start": "Start",
         "next": "Continue",
         "upload-your-photo": "Upload your photo",
         "submit": "Submit",
         "try-another-photo": "Try another photo",
+        "check-another-photo": "Check another photo",
         "try-again": "Try again",
         "find-address": "Find address",
         "declaration": "Continue to payment"
