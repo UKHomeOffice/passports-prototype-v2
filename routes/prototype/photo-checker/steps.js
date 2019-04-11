@@ -4,7 +4,7 @@ module.exports = {
     },
     '/dob': {
         controller: require('../../../controllers/check-dob'),
-        next: '/how-to-get-a-digital-photo',
+        next: '/photo-guidance',
         backLink: './',
         fields: [
             'age-day',
