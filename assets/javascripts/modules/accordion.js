@@ -156,7 +156,8 @@ if (
   /docs-fta/.test(window.location.pathname) ||
   /docs-renew/.test(window.location.pathname) ||
   /parents-details/.test(window.location.pathname)||
-  /british-nationality/.test(window.location.pathname)
+  /british-nationality/.test(window.location.pathname) ||
+  /how-to-take-a-digital-photo/.test(window.location.pathname)
 ) {
   new Accordion(document.getElementById('name-change-accordion'))
 }

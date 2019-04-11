@@ -15,6 +15,12 @@ app.get('/confirming-your-identity', function (req, res, next) {
 app.get('/group-applications', function (req, res, next) {
     res.render('prototype/help/group-applications');
 });
+app.get('/how-to-get-a-digital-photo', function (req, res, next) {
+    res.render('prototype/help/how-to-get-a-digital-photo');
+});
+app.get('/how-to-take-a-digital-photo', function (req, res, next) {
+    res.render('prototype/help/how-to-take-a-digital-photo');
+});
 app.get('/identity-interviews', function (req, res, next) {
     res.render('prototype/help/identity-interviews');
 });
