@@ -39,5 +39,8 @@ app.get('/terms-and-conditions', function (req, res, next) {
 app.get('/who-can-confirm', function (req, res, next) {
     res.render('prototype/help/who-can-confirm');
 });
+app.get('/apply-in-welsh', function (req, res, next) {
+    res.render('prototype/help/apply-in-welsh');
+});
 
 module.exports = app;
