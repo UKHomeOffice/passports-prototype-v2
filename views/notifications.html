@@ -1,123 +1,125 @@
 {{< layout}}
 
-{{$pageTitle}}HMPO Prototypes{{/pageTitle}}
+    {{$pageTitle}}HMPO Prototypes{{/pageTitle}}
 
-{{$propositionHeader}}{{/propositionHeader}}
+    {{$propositionHeader}}{{/propositionHeader}}
 
-{{$content}}
+    {{$content}}
 
-<style>
-  .phase-banner {
-    display: none;
-  }
-</style>
+        <style>
+            .phase-banner {
+                display: none;
+            }
+        </style>
 
-<nav id="nav">
-  <div class="navbar">
-    <ul class="navbar__list-items">
-      <li>
-        <a href="/">Latest</a>
-      </li>
-      <li class="active">
-        <a href="/notifications">Notifications</a>
-      </li>
-      <li>
-        <a href="archive">Archive</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+        <nav id="nav">
+            <div class="navbar">
+                <ul class="navbar__list-items">
+                    <li>
+                        <a href="/">Latest</a>
+                    </li>
+                    <li class="active">
+                        <a href="/notifications">Notifications</a>
+                    </li>
+                    <li>
+                        <a href="archive">Archive</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-<h1>Notifications</h1>
+        <h1>Notifications</h1>
 
-<div class="prototype-box">
-  <h3>User initiated emails</h3>
-  <ul>
-    <li><a href="static/emails/csig/csig-email-21.html">Confirmation email</a></li>
-    <li><a href="static/emails/csig/csig-email-12.html">HMPO contacts c-sig</a></li>
-    <li><a href="static/emails/csig/csig-email-11.html">Applicant must ask someone else</a></li>
-    <li><a href="static/emails/csig/csig-email-20.html">Send your documents</a></li>
-    <li><a href="static/emails/csig/csig-email-25-exceptions.html">Send your form and documents</a></li>
+        <div class="prototype-box">
+            <h3>User initiated emails</h3>
+            <ul>
+                <li><a href="static/emails/csig/csig-email-21.html">Confirmation email</a></li>
+                <li><a href="static/emails/csig/csig-email-12.html">HMPO contacts c-sig</a></li>
+                <li><a href="static/emails/csig/csig-email-11.html">Applicant must ask someone else</a></li>
+                <li><a href="static/emails/csig/csig-email-20.html">Send your documents</a></li>
+                <li><a href="static/emails/csig/csig-email-25-exceptions.html">Send your form and documents</a></li>
+            </ul>
 
 
-  <h3>Examiner initiated emails</h3>
-  <ul>
-    <li><a href="static/emails/csig/csig-email-13.html">HMPO contacts applicant</a></li>
-    <li><a href="static/emails/csig/csig-email-12.html">HMPO contacts c-sig for an adult passport</a></li>
-    <li><a href="static/emails/csig/csig-email-22.html">HMPO contacts c-sig for a child passport</a></li>
-    <li><a href="static/emails/csig/csig-email-11.html">Applicant must ask someone else</a></li>
-    <li><a href="static/emails/csig/csig-email-14.html">Details received</a></li>
-  </ul>
+            <h3>Examiner initiated emails</h3>
+            <ul>
+                <li><a href="static/emails/csig/csig-email-13.html">HMPO contacts applicant</a></li>
+                <li><a href="static/emails/csig/csig-email-12.html">HMPO contacts c-sig for an adult passport</a></li>
+                <li><a href="static/emails/csig/csig-email-22.html">HMPO contacts c-sig for a child passport</a></li>
+                <li><a href="static/emails/csig/csig-email-11.html">Applicant must ask someone else</a></li>
+                <li><a href="static/emails/csig/csig-email-14.html">Details received</a></li>
+            </ul>
 
-  <h3>Ask someone</h3>
-  <ul>
-    <li><a href="static/emails/csig/csig-email-17.html">Reminder 1</a></li>
-    <li><a href="static/emails/csig/csig-email-18.html">Reminder  2</a></li>
-    <li><a href="static/emails/csig/csig-email-19.html">Reminder  3 &ndash; download form</a></li>
-    <li><a href="static/emails/csig/csig-email-23.html">Reminder  3 &ndash; call HM Passport Office</a></li>
+            <h3>Ask someone</h3>
+            <ul>
+                <li><a href="static/emails/csig/csig-email-17.html">Reminder 1</a></li>
+                <li><a href="static/emails/csig/csig-email-18.html">Reminder 2</a></li>
+                <li><a href="static/emails/csig/csig-email-19.html">Reminder 3 &ndash; download form</a></li>
+                <li><a href="static/emails/csig/csig-email-23.html">Reminder 3 &ndash; call HM Passport Office</a></li>
+            </ul>
 
-  </ul>
+            <h3>Remind the person</h3>
+            <ul>
+                <li><a href="static/emails/csig/csig-email-10.html">Reminder 1</a></li>
+                <li><a href="static/emails/csig/csig-email-15.html">Reminder 2</a></li>
+                <li><a href="static/emails/csig/csig-email-16.html">Reminder 3 &ndash; download form</a></li>
+                <li><a href="static/emails/csig/csig-email-24.html">Reminder 3 &ndash; call HM Passport Office</a></li>
+            </ul>
 
-  <h3>Remind the person</h3>
-  <ul>
-    <li><a href="static/emails/csig/csig-email-10.html">Reminder 1</a></li>
-    <li><a href="static/emails/csig/csig-email-15.html">Reminder 2</a></li>
-    <li><a href="static/emails/csig/csig-email-16.html">Reminder  3 &ndash; download form</a></li>
-    <li><a href="static/emails/csig/csig-email-24.html">Reminder  3 &ndash; call HM Passport Office</a></li>
-  </ul>
+            <h3>FTA</h3>
+            <ul>
+                <li><a href="static/emails/FTA/application-approved.html">Application approved</a></li>
+                <li><a href="static/emails/FTA/documents-received.html">Documents received</a></li>
+                <li><a href="static/emails/FTA/document-reminder-1-and-14-days.html">Document reminder 1 & 14 days</a></li>
+                <li><a href="static/emails/FTA/document-reminder-28-days.html">Document reminder 28 days</a></li>
+                <li><a href="static/emails/FTA/passport-on-its-way.html">Passport printed</a></li>
+            </ul>
 
-  <h3>FTA</h3>
-  <ul>
-    <li><a href="static/emails/FTA/application-approved.html">Application approved</a></li>
-    <li><a href="static/emails/FTA/documents-received.html">Documents received</a></li>
-    <li><a href="static/emails/FTA/document-reminder-1-and-14-days.html">Document reminder 1 & 14 days</a></li>
-    <li><a href="static/emails/FTA/document-reminder-28-days.html">Document reminder 28 days</a></li>
-    <li><a href="static/emails/FTA/passport-on-its-way.html">Passport printed</a></li>
-  </ul>
+            <h3>Adult renewals</h3>
+            <ul>
+                <li><a href="static/emails/renewal/application-approved.html">Application approved</a></li>
+                <li><a href="static/emails/renewal/application-received.html">Application received</a></li>
+                <li><a href="static/emails/renewal/old-passport-received.html">Old passport received</a></li>
+                <li><a href="static/emails/renewal/passport-reminder-1-and-14-days.html">Old passport reminder 1 & 14 days </a></li>
+                <li><a href="static/emails/renewal/passport-reminder-28-days.html">Old passport reminder 28 days</a></li>
+                <li><a href="static/emails/renewal/passport-on-its-way.html">Passport printed</a></li>
+            </ul>
 
-  <h3>Adult renewals</h3>
-  <ul>
-    <li><a href="static/emails/renewal/application-approved.html">Application approved</a></li>
-    <li><a href="static/emails/renewal/application-received.html">Application received</a></li>
-    <li><a href="static/emails/renewal/old-passport-received.html">Old passport received</a></li>
-    <li><a href="static/emails/renewal/passport-reminder-1-and-14-days.html">Old passport reminder 1 & 14 days </a></li>
-    <li><a href="static/emails/renewal/passport-reminder-28-days.html">Old passport reminder 28 days</a></li>
-    <li><a href="static/emails/renewal/passport-on-its-way.html">Passport printed</a></li>
-  </ul>
+            <h3>Lost stolen</h3>
+            <ul>
+                <li><a href="static/emails/lost-stolen/application-received.html">Application received</a></li>
+                <li><a href="static/emails/lost-stolen/ask-someone-to-confirm-your-identity.html">Ask someone to confirm your identity (paper form, no documents)</a></li>
+                <li><a href="static/emails/lost-stolen/confirming-your-identity.html">Confirming your identity</a></li>
+                <li><a href="static/emails/lost-stolen/application-approved.html">Application approved</a></li>
+                <li><a href="static/emails/lost-stolen/passport-on-its-way.html">Passport printed</a></li>
+                <li><a href="static/emails/lost-stolen/paper-referee-no-docs-reminder-1-and-14-days.html">Reminder 1 & 14 days (paper form, no documents)</a></li>
+                <li><a href="static/emails/lost-stolen/paper-referee-no-docs-reminder-28-days.html">Reminder 28 days (paper form, no documents)</a></li>
+            </ul>
 
-  <h3>Lost stolen</h3>
-  <ul>
-    <li><a href="static/emails/lost-stolen/application-received.html">Application received</a></li>
-    <li><a href="static/emails/lost-stolen/ask-someone-to-confirm-your-identity.html">Ask someone to confirm your identity (paper form, no documents)</a></li>
-    <li><a href="static/emails/lost-stolen/confirming-your-identity.html">Confirming your identity</a></li>
-    <li><a href="static/emails/lost-stolen/application-approved.html">Application approved</a></li>
-    <li><a href="static/emails/lost-stolen/passport-on-its-way.html">Passport printed</a></li>
-    <li><a href="static/emails/lost-stolen/paper-referee-no-docs-reminder-1-and-14-days.html">Reminder 1 & 14 days (paper form, no documents)</a></li>
-    <li><a href="static/emails/lost-stolen/paper-referee-no-docs-reminder-28-days.html">Reminder 28 days (paper form, no documents)</a></li>
-  </ul>
+            <h3>Change of name</h3>
+            <ul>
+                <li><a href="static/emails/con/application-approved.html">Application approved</a></li>
+                <li><a href="static/emails/con/application-received.html">Application received</a></li>
+                <li><a href="static/emails/con/documents-received.html">Documents received</a></li>
+                <li><a href="static/emails/con/document-reminder-1-and-14-days.html">Document reminder 1 & 14 days </a></li>
+                <li><a href="static/emails/con/document-reminder-28-days.html">Document reminder 28 days</a></li>
+                <li><a href="static/emails/con/passport-on-its-way.html">Passport printed</a></li>
+            </ul>
 
-  <h3>Change of name</h3>
-  <ul>
-    <li><a href="static/emails/con/application-approved.html">Application approved</a></li>
-    <li><a href="static/emails/con/application-received.html">Application received</a></li>
-    <li><a href="static/emails/con/documents-received.html">Documents received</a></li>
-    <li><a href="static/emails/con/document-reminder-1-and-14-days.html">Document reminder 1 & 14 days </a></li>
-    <li><a href="static/emails/con/document-reminder-28-days.html">Document reminder 28 days</a></li>
-    <li><a href="static/emails/con/passport-on-its-way.html">Passport printed</a></li>
-  </ul>
+            <h3>Emails to OLC users</h3>
+            <ul>
+                <li><a href="static/emails/olc-exit/olc-users-before-exit.html">Paid but not sent form – before OLC exit</li>
+            </ul>
 
-  <h3>Emails to OLC users</h3>
-  <ul>
-    <li><a href="static/emails/olc-exit/olc-users-before-exit.html">Paid but not sent form – before OLC exit</li>
-  </ul>
+            <h3>Text messages</h3>
+            <ul>
+                <li><a href="static/emails/csig/csig-texts.html">All text messages</a></li>
+            </ul>
 
-  <h3>Text messages</h3>
-  <ul>
-    <li><a href="static/emails/csig/csig-texts.html">All text messages</a></li>
-  </ul>
+        </div>
 
-</div>
+    {{/content}}
 
-{{/content}}
+    {{$footerSupportLinks}}{{/footerSupportLinks}}
 
 {{/ layout}}

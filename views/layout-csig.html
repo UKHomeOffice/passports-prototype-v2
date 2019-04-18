@@ -1,41 +1,52 @@
 {{< hmpo-layout}}
-{{$propositionHeader}}
-<div class="header-proposition">
-    <div class="content">
-        <nav id="proposition-menu">
-            <a href="/" title="Manage your application" id="proposition-name">Manage your application</a>
-            <ul id="proposition-links">
-                <li>
-                {{#nunjucks}}
-                    {% if values['loggedIn'] %}
-                        <a href="/">Sign out</a>
-                    {% endif %}
-                {{/nunjucks}}
-                </li>
-            </ul>
-        </nav>
-    </div>
-</div>
-{{/propositionHeader}}
-  {{$main}}
-      {{$breadcrumb}}{{/breadcrumb}}
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <main id="content" class="main-content" role="main">
-        <div class="fill-banner">
-          <a class="button__fill" id="populate">Fill</a>
-          <a class="button__fill" href="/">Home</a>
-          <a class="button__fill" href="./">/</a>
+    {{$propositionHeader}}
+        <div class="header-proposition">
+            <div class="content">
+                <nav id="proposition-menu">
+                    <a href="/" title="Manage your application" id="proposition-name">Manage your application</a>
+                    <ul id="proposition-links">
+                        <li>
+                            {{#nunjucks}}
+                                {% if values['loggedIn'] %}
+                                    <a href="/">Sign out</a>
+                                {% endif %}
+                            {{/nunjucks}}
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-          {{> hmpo-partials-betatag}}
-          {{> hmpo-partials-back}}
-          <div class="grid-row">
-              {{> hmpo-partials-maincontent}}
-          </div>
-      </main>
-  {{/main}}
+    {{/propositionHeader}}
 
-  {{$bodyEnd}}
+    {{$main}}
+        {{$breadcrumb}}{{/breadcrumb}}
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <main id="content" class="main-content" role="main">
+            <div class="fill-banner">
+                <a class="button__fill" id="populate">Fill</a>
+                <a class="button__fill" href="/">Home</a>
+                <a class="button__fill" href="./">/</a>
+            </div>
+            {{> hmpo-partials-betatag}}
+            {{> hmpo-partials-back}}
+            <div class="grid-row">
+                {{> hmpo-partials-maincontent}}
+            </div>
+        </main>
+    {{/main}}
 
-    {{> hmpo-partials-body-end}}
-  {{/bodyEnd}}
+    {{$footerSupportLinks}}
+        <ul>
+            <li><a href="https://www.passport.service.gov.uk/help/cookies" target="_blank">Cookies <span class="visuallyhidden">(Opens in a new window)</span></a></li>
+            <li><a href="https://www.passport.service.gov.uk/help/feedback" target="_blank">Feedback <span class="visuallyhidden">(Opens in a new window)</span></a></li>
+            <li><a href="https://www.passport.service.gov.uk/help" target="_blank">Help <span class="visuallyhidden">(Opens in a new window)</span></a></li>
+            <li><a href="https://www.passport.service.gov.uk/help/privacy" target="_blank">Privacy <span class="visuallyhidden">(Opens in a new window)</span></a></li>
+            <li><a href="https://www.passport.service.gov.uk/help/terms-and-conditions" target="_blank">Terms and conditions <span class="visuallyhidden">(Opens in a new window)</span></a></li>
+            <li>Built by HM Passport Office</li>
+        </ul>
+    {{/footerSupportLinks}}
+
+    {{$bodyEnd}}
+        {{> hmpo-partials-body-end}}
+    {{/bodyEnd}}
 {{/ hmpo-layout}}
