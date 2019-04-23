@@ -12,37 +12,38 @@ module.exports = {
             'age-month'
         ]
     },
-    '/how-to-get-a-digital-photo': {
-        next: '/photo-guidance'
-    },
-    '/choose-photo-method': {
-        next: '/photo-guidance',
-        fields: [
-            'choose-photo'
-        ],
-        forks: [{
-            target: '/photo-guidance',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['choose-photo'] == 'upload';
-            }
-        }, {
-            target: '/retrieve',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['choose-photo'] == 'code';
-            }
-        }]
-    },
+    // '/how-to-get-a-digital-photo': {
+    //     next: '/photo-guidance'
+    // },
+    // '/choose-photo-method': {
+    //     next: '/photo-guidance',
+    //     fields: [
+    //         'choose-photo'
+    //     ],
+    //     forks: [{
+    //         target: '/photo-guidance',
+    //         condition: function (req, res) {
+    //             return req.session['hmpo-wizard-common']['choose-photo'] == 'upload';
+    //         }
+    //     }, {
+    //         target: '/retrieve',
+    //         condition: function (req, res) {
+    //             return req.session['hmpo-wizard-common']['choose-photo'] == 'code';
+    //         }
+    //     }]
+    // },
     '/photo-guidance': {
-        next: '/upload',
+        backLink: './upload'
+        // next: '/upload',
+    },
+    '/upload': {
+        controller: require('../../../controllers/check-photo-file-name'),
+        next: '/processing-or-retrieving-image',
         forks: [{ // For prototype purpose, set choose-photo method var to upload
             condition: function (req, res) {
                 req.session['hmpo-wizard-common']['choose-photo'] = 'upload'
             }
         }]
-    },
-    '/upload': {
-        controller: require('../../../controllers/check-photo-file-name'),
-        next: '/processing-or-retrieving-image'
     },
     '/processing-or-retrieving-image': {},
     '/retrieve': {
