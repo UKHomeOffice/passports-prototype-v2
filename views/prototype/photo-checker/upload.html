@@ -13,7 +13,22 @@
 {{< hmpo-partials-form}}
 {{$form}}
 
-<p>Your photo will now go through an automated check.</p>
+{{#nunjucks}}
+
+    <p>Your photo will now go through an automated check.</p>
+
+    {% if values['applicant-age'] < 1 %}
+        <p>Before you upload your photo, check it meets all of these <a href="./photo-guidance" target="_blank">photo rules for ages under 1</a>.</p>
+    {% elif values['applicant-age'] < 6 %}
+        <p>Before you upload your photo, check it meets all of these <a href="./photo-guidance" target="_blank">photo rules for ages under 6</a>.</p>
+    {% elif values['applicant-age'] < 16 and not values['rising-16'] %}
+        <p>Before you upload your photo, check it meets all of these <a href="./photo-guidance" target="_blank">photo rules for ages between 6 and 16</a>.</p>
+    {% else %}
+        <p>Before you upload your photo, check it meets all of these <a href="./photo-guidance" target="_blank">photo rules for ages 16 and over</a>.</p>
+    {% endif %}
+
+{{/nunjucks}}
+
 <!-- <p>You'll need to review it before you add the photo to your application.</p> -->
 
 <div id="photo-photo-choose-file-group" class="form-group">
