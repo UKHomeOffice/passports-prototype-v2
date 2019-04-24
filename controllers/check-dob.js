@@ -40,6 +40,16 @@ Controller.prototype.successHandler = function successHandler(req, res, callback
     req.sessionModel.set('born-after-2006', true);
   }
 
+  // Date after EUSS launched
+  var bornAfter2018 = moment(dob).isSameOrAfter('2018-08-28');
+  console.log('Born >= 2018:', bornAfter2018);
+
+  if (bornAfter2018 == false) {
+    req.sessionModel.set('born-after-2018', false);
+  } else {
+    req.sessionModel.set('born-after-2018', true);
+  }
+
   // Check age, then set session variables
   var age = moment().diff(dob, 'years');
   var days = moment().diff(dob.add(age, 'years'), 'days', false);
