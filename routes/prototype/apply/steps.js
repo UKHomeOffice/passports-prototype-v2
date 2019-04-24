@@ -158,7 +158,7 @@ module.exports = {
         next: '/parent-2-details'
     }, 
     
-    /* Version 2 for EUSS Parent 1 */
+    /* Version 2 for EUSS Parent 1 
     '/parent-1-euss-documents-v2': {
         fields: [
             'parent1-euss-reference-number',
@@ -167,7 +167,8 @@ module.exports = {
         ],
         backLink: './parent-1-euss-documents',
         next: '/parent-2-details'
-    },
+    }, */
+    
     '/parent-2-details': {
         fields: [
             'parent2-town-of-birth',
