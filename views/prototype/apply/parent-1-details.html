@@ -47,6 +47,31 @@
         <br>
     </div>
 
+    <!-- {{#radio-group}}parent1-euss{{/radio-group}} -->
+    {{#nunjucks}}
+        {% if values['born-in-uk'] and values['born-after-2018'] %}
+            <div id="parent1-euss-group" class="form-group inline ">
+                <fieldset role="radiogroup" aria-required="true">
+                    <legend>
+                        <span class="form-label-bold">Did they have EU settled status at the time of the applicant’s birth?</span>
+                    </legend>
+                        <label class="block-label selected" for="parent1-euss-Yes">
+                            <input type="radio" name="parent1-euss" id="parent1-euss-Yes" value="Yes" required="true">
+                            Yes
+                        </label>
+                        <label class="block-label" for="parent1-euss-No">
+                            <input type="radio" name="parent1-euss" id="parent1-euss-No" value="No" required="true">
+                            No
+                        </label>
+                        <label class="block-label" for="parent1-euss-Unknown">
+                            <input type="radio" name="parent1-euss" id="parent1-euss-Unknown" value="Unknown" required="true">
+                            I don’t know
+                        </label>
+                </fieldset>
+            </div>
+        {% endif %}
+    {{/nunjucks}}
+
     {{#input-submit}}{{/input-submit}}
 
 {{/form}}
