@@ -8,6 +8,8 @@
         values = require('./applications/fta').values
     } else if (localStorage.journey === 'Lost and stolen') {
         values = require('./applications/lost-stolen').values
+    } else if (localStorage.journey === 'FTC-EUSS') {
+        values = require('./applications/ftc-euss').values
     } else if (localStorage.journey === 'Adult Renew' || localStorage.journey === 'Adult Renew - Third Party') {
         values = require('./applications/adult-renew').values
     } else if (localStorage.journey === '12-15 Renew' || localStorage.journey === '12-15 Renew - Third Party') {
@@ -30,6 +32,9 @@
             fta.clicks()
         } else if (localStorage.journey === 'Lost and stolen') {
             var adultRenew = require('./applications/lost-stolen')
+            adultRenew.clicks()
+        } else if (localStorage.journey === 'FTC-EUSS') {
+            var adultRenew = require('./applications/ftc-euss')
             adultRenew.clicks()
         } else if (localStorage.journey === 'Adult Renew' || localStorage.journey === 'Adult Renew - Third Party') {
             var adultRenew = require('./applications/adult-renew')
