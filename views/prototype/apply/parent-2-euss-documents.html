@@ -1,0 +1,59 @@
+{{< layout}}
+
+{{$pageTitle}}Father or parent 2 &ndash; EU settled status{{/pageTitle}}
+
+{{$header}}
+    <h1>Father or parent 2 &ndash; EU settled status</h1>
+{{/header}}
+
+{{$content}}
+<p>You need to give either:</p>
+<ul class="list list-bullet">
+        <li>the reference number of the document they used to apply for EU settled status – this could be a passport, identity card or another document</li>
+        <li>their EU settled status application reference number – they were sent this in a letter or email when their application was approved</li>
+    </ul>
+
+{{< hmpo-partials-form}}
+<h2>Which reference number do you want to give?</h2>
+{{$form}}
+
+    <!-- {{#radio-group}}parent2-euss-reference-number{{/radio-group}} -->
+    <div id="parent2-euss-reference-number-group" class="form-group">
+        <fieldset role="radiogroup" aria-required="true">
+            <legend>
+                <span class="form-label-bold">Which reference number do you want to give?</span>
+            </legend>
+
+            <label class="block-label selected" for="parent2-euss-reference-number-document-reference-number">
+                <input type="radio" name="parent2-euss-reference-number" id="parent2-euss-reference-number-document-reference-number" value="document-reference-number" required="true" data-toggle="parent2-euss-document-reference-number">
+                Document reference number
+            </label>
+
+            <div id="parent2-euss-document-reference-number" class="reveal js-hidden">
+                <div class="panel panel-border-narrow">
+                    {{#input-text}}parent2-euss-document-reference-number{{/input-text}}
+                </div>
+            </div>
+
+            <label class="block-label" for="parent2-euss-reference-number-application-reference-number">
+                <input type="radio" name="parent2-euss-reference-number" id="parent2-euss-reference-number-application-reference-number" value="application-reference-number" required="true" data-toggle="parent2-euss-application-reference-number">
+                Application reference number
+            </label>
+
+            <div id="parent2-euss-application-reference-number" class="reveal js-hidden">
+                <div class="panel panel-border-narrow">
+                    {{#input-text}}parent2-euss-application-reference-number{{/input-text}}
+                </div>
+            </div>
+
+        </fieldset>
+    </div>
+
+    {{#input-submit}}{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}
