@@ -156,6 +156,17 @@ module.exports = {
             'parent1-euss-application-reference-number'
         ],
         next: '/parent-2-details'
+    }, 
+    
+    /* Version 2 for EUSS Parent 1 */
+    '/parent-1-euss-documents-v2': {
+        fields: [
+            'parent1-euss-reference-number',
+            'parent1-euss-document-reference-number',
+            'parent1-euss-application-reference-number'
+        ],
+        backLink: './parent-1-euss-documents',
+        next: '/parent-2-details'
     },
     '/parent-2-details': {
         fields: [
