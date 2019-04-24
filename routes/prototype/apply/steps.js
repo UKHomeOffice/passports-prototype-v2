@@ -138,7 +138,22 @@ module.exports = {
             'parent1-passport-number',
             'parent1-passport-issue-day',
             'parent1-passport-issue-month',
-            'parent1-passport-issue-year'
+            'parent1-passport-issue-year',
+            'parent1-euss'
+        ],
+        next: '/parent-2-details',
+        forks: [{
+            target: '/parent-1-euss-documents',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['parent1-euss'] === 'Yes'
+            }
+        }]
+    },
+    '/parent-1-euss-documents': {
+        fields: [
+            'parent1-euss-reference-number',
+            'parent1-euss-document-reference-number',
+            'parent1-euss-application-reference-number'
         ],
         next: '/parent-2-details'
     },
@@ -151,7 +166,8 @@ module.exports = {
             'parent2-passport-number',
             'parent2-passport-issue-day',
             'parent2-passport-issue-month',
-            'parent2-passport-issue-year'
+            'parent2-passport-issue-year',
+            'parent2-euss'
         ],
         next: '/grandparents-intro',
         forks: [{
@@ -163,7 +179,13 @@ module.exports = {
                         req.session['hmpo-wizard-common']['passport-before'] == true ||
                         req.session['hmpo-wizard-common']['lost-stolen'] == true;
                 }
-            }, {
+            },  {
+                target: '/parent-2-euss-documents',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['parent2-euss'] === 'Yes'
+                }
+            },
+            {
                 target: '/home-address-manual-prototype',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
@@ -178,6 +200,14 @@ module.exports = {
             //     }
             // }
         ]
+    },
+    '/parent-2-euss-documents': {
+        fields: [
+            'parent2-euss-reference-number',
+            'parent2-euss-document-reference-number',
+            'parent2-euss-application-reference-number'
+        ],
+        next: '/grandparents-intro'
     },
     '/grandparents-intro': {
         next: '/parent-1-grandparents'

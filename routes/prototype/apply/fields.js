@@ -499,6 +499,48 @@ module.exports = {
         //     }
         // ]
     },
+    'parent1-euss': {
+        legend: {
+            value: 'Did they have EU settled status at the time of the applicant’s birth?',
+            className: 'form-label-bold'
+        },
+        options: [{
+                value: 'Yes',
+                label: 'Yes',
+            },
+            {
+                value: 'No',
+                label: 'No',
+            },
+            {
+                value: 'Unknown',
+                label: 'I don’t know'
+            }
+        ],
+        className: 'inline'
+    },
+    'parent1-euss-reference-number': {
+        validate: 'required',
+        legend: {
+            value: 'Which reference number do you want to give?',
+            className: 'form-label-bold'
+        },
+        options: [{
+                value: 'document-reference-number',
+                label: 'Document reference number',
+            },
+            {
+                value: 'application-reference-number',
+                label: 'Application reference number',
+            },
+        ],
+    },
+    'parent1-euss-document-reference-number': {
+        labelClassName: 'form-label-bold'
+    },
+    'parent1-euss-application-reference-number': {
+        labelClassName: 'form-label-bold'
+    },
 
     // Parent 2
     'parent2-first-names': {
@@ -614,6 +656,50 @@ module.exports = {
         //   field: 'can-sign',
         //   value: false
         // }
+    },
+
+    'parent2-euss': {
+        legend: {
+            value: 'Did they have EU settled status at the time of the applicant’s birth?',
+            className: 'form-label-bold'
+        },
+        options: [{
+                value: 'Yes',
+                label: 'Yes',
+            },
+            {
+                value: 'No',
+                label: 'No',
+            },
+            {
+                value: 'Unknown',
+                label: 'I don’t know'
+            }
+        ],
+        className: 'inline'
+    },
+
+    'parent2-euss-reference-number': {
+        validate: 'required',
+        legend: {
+            value: 'Which reference number do you want to give?',
+            className: 'form-label-bold'
+        },
+        options: [{
+                value: 'document-reference-number',
+                label: 'Document reference number',
+            },
+            {
+                value: 'application-reference-number',
+                label: 'Application reference number',
+            },
+        ],
+    },
+    'parent2-euss-document-reference-number': {
+        labelClassName: 'form-label-bold'
+    },
+    'parent2-euss-application-reference-number': {
+        labelClassName: 'form-label-bold'
     },
 
     // Parent 1's parents
