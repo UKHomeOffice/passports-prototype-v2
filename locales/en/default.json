@@ -617,11 +617,23 @@
         "parent1-uk-passport": {
             "required": "You must answer this question"
         },
+        "parent1-euss": {
+            "required": "You must answer this question"
+        },
+        "parent-1-euss-documents": {
+            "required": "You must answer this question"
+        },
 
         "parent2-additional-information": {
             "required": "Explain why you can't provide details for father or parent 2"
         },
         "parent2-uk-passport": {
+            "required": "You must answer this question"
+        },
+        "parent2-euss": {
+            "required": "You must answer this question"
+        },
+        "parent-2-euss-documents": {
             "required": "You must answer this question"
         },
 

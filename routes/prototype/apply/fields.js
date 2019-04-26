@@ -500,6 +500,7 @@ module.exports = {
         // ]
     },
     'parent1-euss': {
+        validate: 'required',
         legend: {
             value: 'Did they have EU settled status at the time of the applicant’s birth?',
             className: 'form-label-bold'
@@ -507,6 +508,7 @@ module.exports = {
         options: [{
                 value: 'Yes',
                 label: 'Yes',
+                toggle: 'parent1-euss'
             },
             {
                 value: 'No',
@@ -659,6 +661,7 @@ module.exports = {
     },
 
     'parent2-euss': {
+        validate: 'required',
         legend: {
             value: 'Did they have EU settled status at the time of the applicant’s birth?',
             className: 'form-label-bold'
@@ -666,6 +669,7 @@ module.exports = {
         options: [{
                 value: 'Yes',
                 label: 'Yes',
+                toggle: 'parent2-euss'
             },
             {
                 value: 'No',
