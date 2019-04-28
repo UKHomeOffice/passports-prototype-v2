@@ -502,7 +502,7 @@ module.exports = {
     'parent1-euss': {
         validate: 'required',
         legend: {
-            value: 'Did they have EU settled status at the time of the applicant’s birth?',
+            value: 'Did they have EU settled status when the applicant was born?',
             className: 'form-label-bold'
         },
         options: [{
@@ -529,11 +529,11 @@ module.exports = {
         },
         options: [{
                 value: 'document-reference-number',
-                label: 'Document reference number',
+                label: 'Document reference',
             },
             {
                 value: 'application-reference-number',
-                label: 'Application reference number',
+                label: 'Application reference',
             },
         ],
     },
@@ -663,7 +663,7 @@ module.exports = {
     'parent2-euss': {
         validate: 'required',
         legend: {
-            value: 'Did they have EU settled status at the time of the applicant’s birth?',
+            value: 'Did they have EU settled status when the applicant was born?',
             className: 'form-label-bold'
         },
         options: [{
@@ -691,11 +691,11 @@ module.exports = {
         },
         options: [{
                 value: 'document-reference-number',
-                label: 'Document reference number',
+                label: 'Document reference',
             },
             {
                 value: 'application-reference-number',
-                label: 'Application reference number',
+                label: 'Application reference',
             },
         ],
     },
