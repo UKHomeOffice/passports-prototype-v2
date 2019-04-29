@@ -31,7 +31,11 @@
     {% endif %}
     
     <h2>Parents' details</h2>
-    <p>Check the <a href="../help/parents-details" target="_blank">rules about parents</a> if you're not sure whose details to provide. For each parent you'll need:</p>
+
+    {% if values['born-after-2018'] and not values['naturalisation-registration-certificate'] and not values['passport-before']%}
+        <p>Check the <a href="../help/parents-details" target="_blank">rules about parents</a> if you're not sure whose details to provide. For each parent you'll need:</p>
+    {% endif %}
+
     <ul class="list list-bullet">
         <li>name, date and place of birth</li>
         <li>nationality</li>
@@ -39,12 +43,14 @@
         <li>date of marriage or civil partnership (if this applies)</li>
     </ul>
 
-    {% if values['born-after-2018'] %}
+    {% if values['born-after-2018'] and not values['naturalisation-registration-certificate'] and not values['passport-before']%}
         <p>If the parent had <a href="">EU settled status</a> at the time of the applicant's birth, you'll also need the reference number from either:</p>
         <ul class="list list-bullet">
             <li>the document they used to apply for EU settled status</li>
             <li>the letter or email confirming their settled status</li>
         </ul>
+    {% else %}
+        <p>Check the <a href="../help/parents-details" target="_blank">rules about parents</a> if you're not sure whose details to provide.</p>
     {% endif %}
 
     {% if not values['born-before-1983'] and not values['naturalisation-registration-certificate'] and not values['passport-before']%}
