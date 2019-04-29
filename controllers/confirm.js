@@ -402,14 +402,14 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         if (values['parent1-euss-reference-number'] === 'document-reference-number') {
             parent1Fields.push({
                 step: this.getEditStep('parent1-euss-document-reference-number'),
-                title: 'Document reference number',
+                title: 'Identity document reference',
                 value: values['parent1-euss-document-reference-number']
             });
         }
         if (values['parent1-euss-reference-number'] === 'application-reference-number') {
             parent1Fields.push({
                 step: this.getEditStep('parent1-euss-application-reference-number'),
-                title: 'Application reference number',
+                title: 'Application reference',
                 value: values['parent1-euss-application-reference-number']
             });
         }
@@ -491,14 +491,14 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         if (values['parent2-euss-reference-number'] === 'document-reference-number') {
             parent2Fields.push({
                 step: this.getEditStep('parent2-euss-document-reference-number'),
-                title: 'Document reference number',
+                title: 'Identity document reference',
                 value: values['parent2-euss-document-reference-number']
             });
         }
         if (values['parent2-euss-reference-number'] === 'application-reference-number') {
             parent2Fields.push({
                 step: this.getEditStep('parent2-euss-application-reference-number'),
-                title: 'Application reference number',
+                title: 'Application reference',
                 value: values['parent2-euss-application-reference-number']
             });
         }
