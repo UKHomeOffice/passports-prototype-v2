@@ -314,10 +314,10 @@
             "label": "Tell us why"
         },
         "parent1-euss-document-reference-number": {
-            "label": "Document reference number"
+            "label": "Identity document reference"
         },
         "parent1-euss-application-reference-number": {
-            "label": "Application reference number",
+            "label": "Application reference",
             "hint": "For example, 1234-5678-1234-5678"
         },
         "parent2-first-names": {
@@ -362,10 +362,10 @@
             "label": "Tell us why"
         },
         "parent2-euss-document-reference-number": {
-            "label": "Document reference number"
+            "label": "Identity document reference"
         },
         "parent2-euss-application-reference-number": {
-            "label": "Application reference number",
+            "label": "Application reference",
             "hint": "For example, 1234-5678-1234-5678"
         },
         
@@ -623,17 +623,23 @@
         "parent-1-euss-documents": {
             "required": "You must answer this question"
         },
+        "parent1-euss-reference-number": {
+            "required": "You must answer this question"
+        },
 
         "parent2-additional-information": {
             "required": "Explain why you can't provide details for father or parent 2"
         },
         "parent2-uk-passport": {
-            "required": "Select if parent 2 had EU settled status when the applicant was born"
+            "required": "Select if parent 2 has a UK passport"
         },
         "parent2-euss": {
-            "required": "You must answer this question"
+            "required": "Select if parent 2 had EU settled status when the applicant was born"
         },
         "parent-2-euss-documents": {
+            "required": "You must answer this question"
+        },
+        "parent2-euss-reference-number": {
             "required": "You must answer this question"
         },
 

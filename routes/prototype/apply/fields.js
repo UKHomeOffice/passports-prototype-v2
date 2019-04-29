@@ -508,7 +508,7 @@ module.exports = {
         options: [{
                 value: 'Yes',
                 label: 'Yes',
-                toggle: 'parent1-euss'
+                // toggle: 'parent1-euss'
             },
             {
                 value: 'No',
@@ -524,16 +524,20 @@ module.exports = {
     'parent1-euss-reference-number': {
         validate: 'required',
         legend: {
-            value: 'Which reference number do you want to give?',
+            value: 'Where will you get the reference from?',
             className: 'form-label-bold'
         },
         options: [{
                 value: 'document-reference-number',
-                label: 'Document reference',
+                label: 'Their identity document',
+                toggle: 'parent1-euss-document-reference-number',
+                child: 'input-text'
             },
             {
                 value: 'application-reference-number',
-                label: 'Application reference',
+                label: 'The letter or email confirming their settled status',
+                toggle: 'parent1-euss-application-reference-number',
+                child: 'input-text'
             },
         ],
     },
@@ -543,6 +547,7 @@ module.exports = {
     'parent1-euss-application-reference-number': {
         labelClassName: 'form-label-bold'
     },
+  
 
     // Parent 2
     'parent2-first-names': {
@@ -669,7 +674,7 @@ module.exports = {
         options: [{
                 value: 'Yes',
                 label: 'Yes',
-                toggle: 'parent2-euss'
+                // toggle: 'parent2-euss'
             },
             {
                 value: 'No',
@@ -681,21 +686,24 @@ module.exports = {
             }
         ],
         className: 'inline'
-    },
-
+    },    
     'parent2-euss-reference-number': {
         validate: 'required',
         legend: {
-            value: 'Which reference number do you want to give?',
+            value: 'Where will you get the reference from?',
             className: 'form-label-bold'
         },
         options: [{
                 value: 'document-reference-number',
-                label: 'Document reference',
+                label: 'Their identity document',
+                toggle: 'parent2-euss-document-reference-number',
+                child: 'input-text'
             },
             {
                 value: 'application-reference-number',
-                label: 'Application reference',
+                label: 'The letter or email confirming their settled status',
+                toggle: 'parent2-euss-application-reference-number',
+                child: 'input-text'
             },
         ],
     },
