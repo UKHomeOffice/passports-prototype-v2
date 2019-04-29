@@ -142,8 +142,10 @@ function clicks() {
     $('#parents-married-Yes').click();
     $('#parent1-uk-passport-Yes').click();
     $('#parent1-euss-Yes').click();
+    $('#parent1-euss-reference-number-document-reference-number').click();
     $('#parent2-uk-passport-No').click();
     $('#parent2-euss-Yes').click();
+    $('#parent2-euss-reference-number-application-reference-number').click();
     $('#parent1-parents-married-Unknown').click();
     $('#parent2-parents-married-Unknown').click();
     $('#can-interview-true').click();
