@@ -320,6 +320,9 @@
             "label": "Application reference",
             "hint": "For example, 1234-5678-1234-5678"
         },
+        "parent1-euss-unknown-reference-number": {
+            "label": "Tell us why"
+        },
         "parent2-first-names": {
             "label": "First and middle names"
         },
@@ -367,6 +370,9 @@
         "parent2-euss-application-reference-number": {
             "label": "Application reference",
             "hint": "For example, 1234-5678-1234-5678"
+        },
+        "parent2-euss-unknown-reference-number": {
+            "label": "Tell us why"
         },
         
         "marriage-day": {

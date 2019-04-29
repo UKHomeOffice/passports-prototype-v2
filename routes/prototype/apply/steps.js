@@ -153,7 +153,8 @@ module.exports = {
         fields: [
             'parent1-euss-reference-number',
             'parent1-euss-document-reference-number',
-            'parent1-euss-application-reference-number'
+            'parent1-euss-application-reference-number',
+            'parent1-euss-unknown-reference-number'
         ],
         next: '/parent-2-details'
     }, 
@@ -217,7 +218,8 @@ module.exports = {
         fields: [
             'parent2-euss-reference-number',
             'parent2-euss-document-reference-number',
-            'parent2-euss-application-reference-number'
+            'parent2-euss-application-reference-number',
+            'parent2-euss-unknown-reference-number'
         ],
         next: '/grandparents-intro'
     },

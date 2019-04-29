@@ -539,12 +539,21 @@ module.exports = {
                 toggle: 'parent1-euss-application-reference-number',
                 child: 'input-text'
             },
+            {
+                value: 'unknown-reference-number',
+                label: 'I can\'t find either reference',
+                toggle: 'parent1-euss-unknown-reference-number',
+                child: 'textarea'
+            }
         ],
     },
     'parent1-euss-document-reference-number': {
         labelClassName: 'form-label-bold'
     },
     'parent1-euss-application-reference-number': {
+        labelClassName: 'form-label-bold'
+    },
+    'parent1-euss-unknown-reference-number': {
         labelClassName: 'form-label-bold'
     },
   
@@ -705,12 +714,21 @@ module.exports = {
                 toggle: 'parent2-euss-application-reference-number',
                 child: 'input-text'
             },
+            {
+                value: 'unknown-reference-number',
+                label: 'I can\'t find either reference',
+                toggle: 'parent2-euss-unknown-reference-number',
+                child: 'textarea'
+            }
         ],
     },
     'parent2-euss-document-reference-number': {
         labelClassName: 'form-label-bold'
     },
     'parent2-euss-application-reference-number': {
+        labelClassName: 'form-label-bold'
+    },
+    'parent2-euss-unknown-reference-number': {
         labelClassName: 'form-label-bold'
     },
 
