@@ -543,7 +543,7 @@ module.exports = {
                 value: 'unknown-reference-number',
                 label: 'I can\'t find either reference',
                 toggle: 'parent1-euss-unknown-reference-number',
-                child: 'textarea'
+                child: 'textarea',
             }
         ],
     },
@@ -555,10 +555,11 @@ module.exports = {
     },
     'parent1-euss-unknown-reference-number': {
         labelClassName: 'form-label-bold',
-        attributes: [{
-            attribute: 'rows', 
-            value: 5
-        }]
+        className: 'textarea'
+        // attributes: [{
+        //    attribute: 'rows', 
+        //    value: 5
+        //}]
     },
   
     // Parent 2
@@ -733,10 +734,11 @@ module.exports = {
     },
     'parent2-euss-unknown-reference-number': {
         labelClassName: 'form-label-bold',
-        attributes: [{
-            attribute: 'rows', 
-            value: 5
-        }]
+        className: 'textarea'
+        // attributes: [{
+        //    attribute: 'rows', 
+        //    value: 5
+        // }]
     },
 
     // Parent 1's parents
