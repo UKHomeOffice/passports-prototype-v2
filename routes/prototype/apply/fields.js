@@ -554,10 +554,13 @@ module.exports = {
         labelClassName: 'form-label-bold'
     },
     'parent1-euss-unknown-reference-number': {
-        labelClassName: 'form-label-bold'
+        labelClassName: 'form-label-bold',
+        attributes: [{
+            attribute: 'rows', 
+            value: 5
+        }]
     },
   
-
     // Parent 2
     'parent2-first-names': {
         labelClassName: 'form-label'
@@ -729,7 +732,11 @@ module.exports = {
         labelClassName: 'form-label-bold'
     },
     'parent2-euss-unknown-reference-number': {
-        labelClassName: 'form-label-bold'
+        labelClassName: 'form-label-bold',
+        attributes: [{
+            attribute: 'rows', 
+            value: 5
+        }]
     },
 
     // Parent 1's parents
