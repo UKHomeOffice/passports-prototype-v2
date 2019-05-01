@@ -61,8 +61,21 @@
             <td class="govuk-table__cell">Fair</td>
         </tr>
         <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Your appearance</td>
-            <td class="govuk-table__cell" style="color: #b10e1e; font-weight: bold;">Weak</td>
+            <td class="govuk-table__cell" style="vertical-align: top;">Your appearance</td>
+            <td class="govuk-table__cell"><span style="color: #b10e1e; font-weight: bold;">Weak</span>
+                <ul class="list-bullet" style="margin-bottom: 0; margin-top: 5px;">
+                    {{#nunjucks}}
+                        {% if values['applicant-age'] <= 11 %}
+                            <li>it looks like your eyes are closed</li>
+                            <li>it looks like you’re not facing the camera</li>
+                            <li>we can’t find the outline of your head</li>
+                        {% else %}
+                            <li>it looks like your mouth is open</li>
+                            <li>we can’t find the outline of your head</li>
+                        {% endif %}
+                    {{/nunjucks}}
+                </ul>
+            </td>
         </tr>
         <tr class="govuk-table__row">
             <td class="govuk-table__cell">Photo quality and format</td>
@@ -71,106 +84,6 @@
     </tbody>
 </table>
 <br>
-
-<!-- <table class="govuk-table">
-    <caption class="govuk-table__caption" style="text-align: left; font-weight: bold;">Photo criteria and results</caption>
-    <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="col">Photo criteria</th>
-            <th class="govuk-table__header" scope="col">Photo check result</th>
-        </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Background and lighting</th>
-            <td class="govuk-table__cell">Fair</td>
-        </tr>
-        <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Your appearance</th>
-            <td class="govuk-table__cell">Weak</td>
-        </tr>
-        <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Photo quality and format</th>
-            <td class="govuk-table__cell">Strong</td>
-        </tr>
-    </tbody>
-</table> -->
-
-<!-- <ol class="list-number">
-    <li class="list-item-bold">Background and lighting
-        <p>Your photo must have:</p>
-        <ul class="list-bullet">
-            <li>a plain light-coloured background &ndash; without texture or pattern</li>
-            <li>balanced light &ndash; no shadows on your face or behind you</li>
-            <li>no objects behind you</li>
-        </ul>
-    </li>
-    <li class="list-item-bold">Your appearance
-        <p>Make sure:</p>
-        <ul class="list-bullet">
-            <li>the photo is a good likeness taken in the last month</li>
-            <li>your whole face is visible
-
-            {{#nunjucks}}
-                {% if values['applicant-age'] >= 6 %}
-                    with your eyes open</li>
-                    <li>you have a plain expression &ndash; no smile and mouth closed
-                {% endif %}
-            {{/nunjucks}}
-
-            </li>
-            <li>there are no reflections or glare (if you have to wear glasses)</li>
-            <li>you’re not wearing headwear (unless for religious or medical reasons)</li>
-        </ul>
-    </li>
-    <li class="list-item-bold">Photo quality and format
-        <p>Your photo must:</p>
-        <ul class="list-bullet">
-            <li>be in colour, with no effects or filters</li>
-            <li>not be blurred or have ‘red eye’</li>
-            <li>be unedited &ndash; you can’t ‘correct’ your passport photo</li>
-        </ul>
-    </li>
-</ol>
-<br> -->
-
-{{#nunjucks}}
-    {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
-        <div class="panel panel-border-wide alert-warning">
-            <p class="list-item-bold">
-                Automated check</p>
-    {% elif values['choose-photo'] == 'code' %}
-        <div class="panel panel-border-wide alert-default">
-            <p class="list-item-bold">
-                Our automated check suggests</p>
-    {% endif %}
-        <p>
-            <ul class="list-bullet">
-                {% if values['applicant-age'] <= 11 %}
-                    <li>it looks like your eyes are closed</li>
-                    <li>it looks like you’re not facing the camera</li>
-                    <li>we can’t find the outline of your head</li>
-                {% else %}
-                    <li>it looks like your mouth is open</li>
-                    <li>we can’t find the outline of your head</li>
-                {% endif %}
-            </ul>
-        </p>
-
-        {% if values['applicant-age'] < 1 %}
-            <p>It needs to meet all of these <a href="./photo-guidance" target="_blank">photo rules for ages under 1</a>.</p>
-        {% elif values['applicant-age'] < 6 %}
-            <p>It needs to meet all of these <a href="./photo-guidance" target="_blank">photo rules for ages under 6</a>.</p>
-        {% elif values['applicant-age'] < 16 and not values['rising-16'] %}
-            <p>It needs to meet all of these <a href="./photo-guidance" target="_blank">photo rules for ages between 6 and 16</a>.</p>
-        {% else %}
-            <p>It needs to meet all of these <a href="./photo-guidance" target="_blank">photo rules for ages 16 and over</a>.</p>
-        {% endif %}
-
-    </div>
-
-
-{{/nunjucks}}
 
 <h2 class="heading-medium">
     You can use the photo</h2>
