@@ -15,10 +15,10 @@ Controller.prototype.get = function successHandler(req, res, callback) {
             var photoFileName = req.sessionModel.get('photo-file-name');
 
             if (photoFileName) {
-                if (photoFileName.endsWith('1')) return res.redirect('./check-and-submit-passed-photo');
                 if (photoFileName.endsWith('variation-1')) return res.redirect('./check-and-submit-photo-variation-1');
                 if (photoFileName.endsWith('variation-2')) return res.redirect('./check-and-submit-photo-variation-2');
                 if (photoFileName.endsWith('variation-3')) return res.redirect('./check-and-submit-photo-variation-3');
+                if (photoFileName.endsWith('1')) return res.redirect('./check-and-submit-passed-photo');
                 if (photoFileName.endsWith('3')) return res.redirect('./not-accepted');
             }
 
@@ -27,10 +27,10 @@ Controller.prototype.get = function successHandler(req, res, callback) {
         else if (req.sessionModel.get('choose-photo') == 'code') {
             var url = req.sessionModel.get('photo-code-path');
 
-            if (url.startsWith('1')) return res.redirect('./check-and-submit-passed-photo');
             if (url.startsWith('variation-1')) return res.redirect('./check-and-submit-photo-variation-1');
             if (url.startsWith('variation-2')) return res.redirect('./check-and-submit-photo-variation-2');
             if (url.startsWith('variation-3')) return res.redirect('./check-and-submit-photo-variation-3');
+            if (url.startsWith('1')) return res.redirect('./check-and-submit-passed-photo');
             if (url.startsWith('3')) return res.redirect('./not-accepted');
 
             res.redirect('./code-error');
