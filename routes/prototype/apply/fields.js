@@ -508,7 +508,7 @@ module.exports = {
         options: [{
                 value: 'Yes',
                 label: 'Yes',
-                // toggle: 'parent1-euss'
+                toggle: 'parent1-euss'
             },
             {
                 value: 'No',
@@ -541,7 +541,7 @@ module.exports = {
             },
             {
                 value: 'unknown-reference-number',
-                label: 'I can\'t find either reference',
+                label: 'I can\'t give either reference',
                 toggle: 'parent1-euss-unknown-reference-number',
                 child: 'textarea',
             }
@@ -702,7 +702,7 @@ module.exports = {
         options: [{
                 value: 'Yes',
                 label: 'Yes',
-                // toggle: 'parent2-euss'
+                toggle: 'parent2-euss'
             },
             {
                 value: 'No',
@@ -735,7 +735,7 @@ module.exports = {
             },
             {
                 value: 'unknown-reference-number',
-                label: 'I can\'t find either reference',
+                label: 'I can\'t give either reference',
                 toggle: 'parent2-euss-unknown-reference-number',
                 child: 'textarea'
             }
