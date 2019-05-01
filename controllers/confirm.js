@@ -416,7 +416,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         if (values['parent1-euss-reference-number'] === 'unknown-reference-number') {
             parent1Fields.push({
                 step: this.getEditStep('parent1-euss-unknown-reference-number'),
-                title: 'Why no reference for EU settled status',
+                title: 'Reason no reference for EU settled status',
                 value: values['parent1-euss-unknown-reference-number']
             });
         }
@@ -512,7 +512,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         if (values['parent2-euss-reference-number'] === 'unknown-reference-number') {
             parent2Fields.push({
                 step: this.getEditStep('parent2-euss-unknown-reference-number'),
-                title: 'Why no reference for EU settled status',
+                title: 'Reason no reference for EU settled status',
                 value: values['parent2-euss-unknown-reference-number']
             });
         }

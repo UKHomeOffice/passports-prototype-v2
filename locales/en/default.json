@@ -626,20 +626,17 @@
         "parent1-euss": {
             "required": "Select if parent 1 had EU settled status when the applicant was born"
         },
-        // "parent-1-euss-documents": {
-        //     "required": "You must answer this question"
-        // },
         "parent1-euss-reference-number": {
             "required": "Select where you'll get the reference from"
         },
         "parent1-euss-document-reference-number": {
-            "required": "Add error message - Identity document reference"
+            "required": "Enter the identity document reference"
         },
         "parent1-euss-application-reference-number": {
-            "required": "Add error message - Application reference"
+            "required": "Enter the application reference"
         },
         "parent1-euss-unknown-reference-number": {
-            "required": "Add error message - Tell us why"
+            "required": "Enter the reason you can't give either reference"
         },
 
         "parent2-additional-information": {
@@ -651,20 +648,17 @@
         "parent2-euss": {
             "required": "Select if parent 2 had EU settled status when the applicant was born"
         },
-        // "parent-2-euss-documents": {
-        //     "required": "You must answer this question"
-        // },
         "parent2-euss-reference-number": {
             "required": "Select where you'll get the reference from"
         },
         "parent2-euss-document-reference-number": {
-            "required": "Add error message - Identity document reference"
+            "required": "Enter the identity document reference"
         },
         "parent2-euss-application-reference-number": {
-            "required": "Add error message - Application reference"
+            "required": "Enter the application reference"
         },
         "parent2-euss-unknown-reference-number": {
-            "required": "Add error message - Tell us why"
+            "required": "Enter the reason you can't give either reference"
         },
 
         "parent1-parents-married": {
