@@ -626,11 +626,11 @@
         "parent1-euss": {
             "required": "Select if parent 1 had EU settled status when the applicant was born"
         },
-        "parent-1-euss-documents": {
-            "required": "You must answer this question"
-        },
+        // "parent-1-euss-documents": {
+        //     "required": "You must answer this question"
+        // },
         "parent1-euss-reference-number": {
-            "required": "You must answer this question"
+            "required": "Select where you'll get the reference from"
         },
 
         "parent2-additional-information": {
@@ -642,11 +642,11 @@
         "parent2-euss": {
             "required": "Select if parent 2 had EU settled status when the applicant was born"
         },
-        "parent-2-euss-documents": {
-            "required": "You must answer this question"
-        },
+        // "parent-2-euss-documents": {
+        //     "required": "You must answer this question"
+        // },
         "parent2-euss-reference-number": {
-            "required": "You must answer this question"
+            "required": "Select where you'll get the reference from"
         },
 
         "parent1-parents-married": {
