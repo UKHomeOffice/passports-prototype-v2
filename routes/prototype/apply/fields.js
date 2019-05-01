@@ -548,14 +548,29 @@ module.exports = {
         ],
     },
     'parent1-euss-document-reference-number': {
-        labelClassName: 'form-label-bold'
+        labelClassName: 'form-label-bold',
+        validate: ['required'],
+        dependent: { 
+            field: 'parent1-euss-reference-number', 
+            value: 'document-reference-number'
+        }
     },
     'parent1-euss-application-reference-number': {
-        labelClassName: 'form-label-bold'
+        labelClassName: 'form-label-bold',
+        validate: ['required'],
+        dependent: { 
+            field: 'parent1-euss-reference-number', 
+            value: 'application-reference-number'
+        }
     },
     'parent1-euss-unknown-reference-number': {
         labelClassName: 'form-label-bold',
-        className: 'textarea'
+        className: 'textarea',
+        validate: ['required'],
+        dependent: { 
+            field: 'parent1-euss-reference-number', 
+            value: 'unknown-reference-number'
+        }
         // attributes: [{
         //    attribute: 'rows', 
         //    value: 5
@@ -727,14 +742,29 @@ module.exports = {
         ],
     },
     'parent2-euss-document-reference-number': {
-        labelClassName: 'form-label-bold'
+        labelClassName: 'form-label-bold',
+        validate: ['required'],
+        dependent: { 
+            field: 'parent2-euss-reference-number', 
+            value: 'document-reference-number'
+        }
     },
     'parent2-euss-application-reference-number': {
-        labelClassName: 'form-label-bold'
+        labelClassName: 'form-label-bold',
+        validate: ['required'],
+        dependent: { 
+            field: 'parent2-euss-reference-number', 
+            value: 'application-reference-number'
+        }
     },
     'parent2-euss-unknown-reference-number': {
         labelClassName: 'form-label-bold',
-        className: 'textarea'
+        className: 'textarea',
+        validate: ['required'],
+        dependent: { 
+            field: 'parent2-euss-reference-number', 
+            value: 'unknown-reference-number'
+        }
         // attributes: [{
         //    attribute: 'rows', 
         //    value: 5

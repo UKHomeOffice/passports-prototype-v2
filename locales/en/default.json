@@ -632,6 +632,15 @@
         "parent1-euss-reference-number": {
             "required": "You must answer this question"
         },
+        "parent1-euss-document-reference-number": {
+            "required": "Add error message - Identity document reference"
+        },
+        "parent1-euss-application-reference-number": {
+            "required": "Add error message - Application reference"
+        },
+        "parent1-euss-unknown-reference-number": {
+            "required": "Add error message - Tell us why"
+        },
 
         "parent2-additional-information": {
             "required": "Explain why you can't provide details for father or parent 2"
@@ -647,6 +656,15 @@
         },
         "parent2-euss-reference-number": {
             "required": "You must answer this question"
+        },
+        "parent2-euss-document-reference-number": {
+            "required": "Add error message - Identity document reference"
+        },
+        "parent2-euss-application-reference-number": {
+            "required": "Add error message - Application reference"
+        },
+        "parent2-euss-unknown-reference-number": {
+            "required": "Add error message - Tell us why"
         },
 
         "parent1-parents-married": {
