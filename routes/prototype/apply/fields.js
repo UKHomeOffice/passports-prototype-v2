@@ -543,21 +543,40 @@ module.exports = {
                 value: 'unknown-reference-number',
                 label: 'I can\'t find either reference',
                 toggle: 'parent1-euss-unknown-reference-number',
-                child: 'textarea'
+                child: 'textarea',
             }
         ],
     },
     'parent1-euss-document-reference-number': {
-        labelClassName: 'form-label-bold'
+        labelClassName: 'form-label-bold',
+        validate: ['required'],
+        dependent: { 
+            field: 'parent1-euss-reference-number', 
+            value: 'document-reference-number'
+        }
     },
     'parent1-euss-application-reference-number': {
-        labelClassName: 'form-label-bold'
+        labelClassName: 'form-label-bold',
+        validate: ['required'],
+        dependent: { 
+            field: 'parent1-euss-reference-number', 
+            value: 'application-reference-number'
+        }
     },
     'parent1-euss-unknown-reference-number': {
-        labelClassName: 'form-label-bold'
+        labelClassName: 'form-label-bold',
+        className: 'textarea',
+        validate: ['required'],
+        dependent: { 
+            field: 'parent1-euss-reference-number', 
+            value: 'unknown-reference-number'
+        }
+        // attributes: [{
+        //    attribute: 'rows', 
+        //    value: 5
+        //}]
     },
   
-
     // Parent 2
     'parent2-first-names': {
         labelClassName: 'form-label'
@@ -723,13 +742,33 @@ module.exports = {
         ],
     },
     'parent2-euss-document-reference-number': {
-        labelClassName: 'form-label-bold'
+        labelClassName: 'form-label-bold',
+        validate: ['required'],
+        dependent: { 
+            field: 'parent2-euss-reference-number', 
+            value: 'document-reference-number'
+        }
     },
     'parent2-euss-application-reference-number': {
-        labelClassName: 'form-label-bold'
+        labelClassName: 'form-label-bold',
+        validate: ['required'],
+        dependent: { 
+            field: 'parent2-euss-reference-number', 
+            value: 'application-reference-number'
+        }
     },
     'parent2-euss-unknown-reference-number': {
-        labelClassName: 'form-label-bold'
+        labelClassName: 'form-label-bold',
+        className: 'textarea',
+        validate: ['required'],
+        dependent: { 
+            field: 'parent2-euss-reference-number', 
+            value: 'unknown-reference-number'
+        }
+        // attributes: [{
+        //    attribute: 'rows', 
+        //    value: 5
+        // }]
     },
 
     // Parent 1's parents
