@@ -72,6 +72,8 @@ var values = {
     "parent1-passport-issue-month": "04",
     "parent1-passport-issue-year": "2007",
 
+    // EUSS Mother or Parent 1
+    "parent1-euss-document-reference-number": "1234567890",
 
     // Father
     "parent2-town-of-birth": "Norwich",
@@ -84,6 +86,9 @@ var values = {
     // "parent2-passport-issue-day": "19",
     // "parent2-passport-issue-month": "01",
     // "parent2-passport-issue-year": "2008",
+
+    // EUSS Father or Parent 2
+    "parent2-euss-application-reference-number": "1234-5678-1234-5678",
 
 
     // Maternal grandparents
