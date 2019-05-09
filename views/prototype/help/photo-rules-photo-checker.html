@@ -1,0 +1,56 @@
+{{< layout}}
+
+{{$pageTitle}}Photo rules{{/pageTitle}}
+
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$header}}
+    <h1>Photo rules</h1>
+{{/header}}
+
+{{$content}}
+
+<ol class="list-number">
+    <li class="list-item-bold">Background and lighting
+        <p>Your photo must have:</p>
+        <ul class="list-bullet">
+            <li>a plain light-coloured background &ndash; without texture or pattern</li>
+            <li>balanced light &ndash; no shadows on your face or behind you</li>
+            <li>no objects behind you</li>
+        </ul>
+    </li>
+    <li class="list-item-bold">Your appearance
+        <p>Make sure:</p>
+        <ul class="list-bullet">
+            <li>the photo is a good likeness taken in the last month</li>
+            <li>your whole face is visible with your eyes open</li>
+
+            <!-- {{#nunjucks}}
+                {% if values['applicant-age'] >= 6 %}
+                    with your eyes open</li>
+                    <li>you have a plain expression &ndash; no smile and mouth closed
+                {% endif %}
+            {{/nunjucks}} -->
+
+            <li>you have a plain expression &ndash; no smile and mouth closed</li>
+            <li>there are no reflections or glare (if you have to wear glasses)</li>
+            <li>you’re not wearing headwear (unless for religious or medical reasons)</li>
+        </ul>
+    </li>
+    <li class="list-item-bold">Photo quality and format
+        <p>Your photo must be:</p>
+        <ul class="list-bullet">
+            <li>in colour, with no effects or filters</li>
+            <li>not blurred or have ‘red eye’</li>
+            <li>unedited &ndash; you can’t ‘correct’ your passport photo</li>
+            <li>a jpg or jpeg file</li>
+            <li>at least 50KB and no more than 10MB</li>
+        </ul>
+    </li>
+</ol>
+
+{{> partials-elements-button-close}}
+
+{{/content}}
+
+{{/ layout}}
