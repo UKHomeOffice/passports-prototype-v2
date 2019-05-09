@@ -1,0 +1,121 @@
+{{< layout-photo-checker}}
+
+{{$back}}
+    {{#nunjucks}}
+        {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
+            <a href="upload" class="back-link">Back</a>
+        {% elif values['choose-photo'] == 'code' %}
+            <a href="retrieve" class="back-link">Back</a>
+        {% endif %}
+    {{/nunjucks}}
+{{/back}}
+
+{{$pageTitle}}
+    Photo check
+{{/pageTitle}}
+
+{{$header}}
+    <h1>Photo check</h1>
+{{/header}}
+
+{{$content}}
+
+{{<hmpo-partials-form}}
+{{$form}}
+
+<div class="photo-preview">
+    <div class="photo-preview-inner">
+        <h2 class="heading-medium">Your photo</h2>
+        <div class="photo">
+            {{#nunjucks}}
+                {% if values['applicant-age'] <= 11 %}
+                    <img src="/public/images/photo/result/thumbnail-child-age-0-5-fail.jpg" alt="Your photo" title="Your photo" width="150">
+                {% else %}
+                    <img src="/public/images/photo/result/thumbnail-adult-fail.jpg" alt="Your photo" title="Your photo" width="150">
+                {% endif %}
+
+                {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
+                    {# Show nothing #}
+                {% elif values['choose-photo'] == 'code' %}
+                    <p style="font-size:16px; font-weight:bold; color:grey">abc.de/2jdD4hk</p>
+                {% endif %}
+            {{/nunjucks}}
+        </div>
+    </div>
+</div>
+
+<p>Your photo has gone through a basic technical check.</p>
+<!-- <p>The check has rated your photo against the photo rules to see if it is suitable for a new passport.</p> -->
+<p>The photo check gives an estimate of how likely it is that your photo will be suitable for a new passport.</p>
+
+
+    <h2>Result</h2>
+
+    <p>Fair.</p>
+    <h3>What’s affecting this result?</h3>
+    <details>
+        <summary><span class="summary">3 positive factors</span></summary>
+        <div class="panel panel-border-narrow">
+            <p>Errors:</p>
+            <ul class="list list-bullet">
+                <li>the lighting is too dark or uneven</li>
+            </ul>
+        </div>
+    </details>
+    <details>
+        <summary><span class="summary">3 negative factors</span></summary>
+        <div class="panel panel-border-narrow">
+            <p>Errors:</p>
+            <ul class="list list-bullet">
+                <li>the lighting is too dark or uneven</li>
+            </ul>
+        </div>
+    </details>
+
+<div class="panel panel-border-wide">
+    <p>Photos that have a fair or good rating may still be unsuitable for your new passport.</p>
+    <p>Use the checklist to make sure your photo <a href="../help/photo-rules-photo-checker" target="_blank">meets the rules</a>.</p>
+</div>
+
+
+{{#input-submit}}check-another-photo{{/input-submit}}
+
+<details>
+    <summary><span class="summary">I can’t meet the photo rules</span></summary>
+    <div class="panel panel-border-narrow">
+        <p>You can still use a photo if you can’t meet the photo rules because of a religious or medical reason. We’ll
+            ask you to explain the circumstances when you submit your photo in the passport application.</p>
+    </div>
+</details>
+
+{{/form}}
+{{/hmpo-partials-form}}
+
+{{/content}}
+
+{{$sidebar}}
+<!-- <div class="column-one-third" style="margin-top:50px">
+    <div class="sidebar related">
+        <div class="photo-preview-inner">
+            <h2 class="heading-medium">Your photo</h2>
+            <div class="photo">
+                {{#nunjucks}}
+                    {% if values['applicant-age'] <= 11 %}
+                        <img src="/public/images/photo/result/thumbnail-child-age-0-5-fail.jpg" alt="Your photo" title="Your photo" width="150">
+                    {% else %}
+                        <img src="/public/images/photo/result/thumbnail-adult-fail.jpg" alt="Your photo" title="Your photo" width="150">
+                    {% endif %}
+
+                    {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
+                        {# Show nothing #}
+                    {% elif values['choose-photo'] == 'code' %}
+                        <p style="font-size:16px; font-weight:bold; color:grey">abc.de/2jdD4hk</p>
+                    {% endif %}
+                {{/nunjucks}}
+            </div>
+        </div>
+    </div>
+</div> -->
+{{/sidebar}}
+
+{{/ layout-photo-checker}}
