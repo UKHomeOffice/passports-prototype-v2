@@ -11,11 +11,11 @@
 {{/back}}
 
 {{$pageTitle}}
-    Your photo result
+    Photo check
 {{/pageTitle}}
 
 {{$header}}
-    <h1>Your photo result</h1>
+    <h1>Photo check</h1>
 {{/header}}
 
 {{$content}}
@@ -44,198 +44,80 @@
     </div>
 </div>
 
-<p>Your photo has been through an automated check.</p>
+<p>Your photo has gone through a basic technical check.</p>
+<!-- <p>The check has rated your photo against the photo rules to see if it is suitable for a new passport.</p> -->
+<p>The photo check gives an estimate of how likely it is that your photo will be suitable for a new passport.</p>
 
-<h2 class="govuk-table__caption">Photo criteria and results</h2>
-<table class="govuk-table">
-    <!-- <caption class="govuk-table__caption" style="text-align: left; font-weight: bold;">Photo criteria and results</caption> -->
-    <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="col">Photo criteria</th>
-            <th class="govuk-table__header" scope="col">Photo check result</th>
-        </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Background and lighting</td>
-            <td class="govuk-table__cell">Fair</td>
-        </tr>
-        <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Your appearance</td>
-            <td class="govuk-table__cell" style="color: #b10e1e; font-weight: bold;">Weak</td>
-        </tr>
-        <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Photo quality and format</td>
-            <td class="govuk-table__cell">Strong</td>
-        </tr>
-    </tbody>
-</table>
-<br>
+<div class="grid-row">
+    <h2 style="padding: 0 15px;">Results</h2>
 
-<!-- <table class="govuk-table">
-    <caption class="govuk-table__caption" style="text-align: left; font-weight: bold;">Photo criteria and results</caption>
-    <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="col">Photo criteria</th>
-            <th class="govuk-table__header" scope="col">Photo check result</th>
-        </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Background and lighting</th>
-            <td class="govuk-table__cell">Fair</td>
-        </tr>
-        <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Your appearance</th>
-            <td class="govuk-table__cell">Weak</td>
-        </tr>
-        <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Photo quality and format</th>
-            <td class="govuk-table__cell">Strong</td>
-        </tr>
-    </tbody>
-</table> -->
+    <h3 style="padding: 0 15px;">Background and lighting</h3>
+    <div class="column-one-third">
+        <div class="panel panel-border-wide" style="border-color: #b10e1e;">
+            <p>Poor.</p>
+        </div>
+    </div>
+    <div class="column-two-thirds">
+        <p>It looks like your photo is not suitable for a new passport.</p>
+        <details>
+            <summary><span class="summary">What’s affecting this result?</span></summary>
+            <div class="panel panel-border-narrow">
+                <p>Errors:</p>
+                <ul class="list list-bullet">
+                    <li>the lighting is too dark or uneven</li>
+                </ul>
+            </div>
+        </details>
+    </div>
 
-<!-- <ol class="list-number">
-    <li class="list-item-bold">Background and lighting
-        <p>Your photo must have:</p>
-        <ul class="list-bullet">
-            <li>a plain light-coloured background &ndash; without texture or pattern</li>
-            <li>balanced light &ndash; no shadows on your face or behind you</li>
-            <li>no objects behind you</li>
-        </ul>
-    </li>
-    <li class="list-item-bold">Your appearance
-        <p>Make sure:</p>
-        <ul class="list-bullet">
-            <li>the photo is a good likeness taken in the last month</li>
-            <li>your whole face is visible
+    <hr style="margin-left: 15px; margin-right: 15px; min-width: 1px;">
 
-            {{#nunjucks}}
-                {% if values['applicant-age'] >= 6 %}
-                    with your eyes open</li>
-                    <li>you have a plain expression &ndash; no smile and mouth closed
-                {% endif %}
-            {{/nunjucks}}
-
-            </li>
-            <li>there are no reflections or glare (if you have to wear glasses)</li>
-            <li>you’re not wearing headwear (unless for religious or medical reasons)</li>
-        </ul>
-    </li>
-    <li class="list-item-bold">Photo quality and format
-        <p>Your photo must:</p>
-        <ul class="list-bullet">
-            <li>be in colour, with no effects or filters</li>
-            <li>not be blurred or have ‘red eye’</li>
-            <li>be unedited &ndash; you can’t ‘correct’ your passport photo</li>
-        </ul>
-    </li>
-</ol>
-<br> -->
-
-{{#nunjucks}}
-    {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
-        <div class="panel panel-border-wide alert-warning">
-            <p class="list-item-bold">
-                Automated check</p>
-    {% elif values['choose-photo'] == 'code' %}
-        <div class="panel panel-border-wide alert-default">
-            <p class="list-item-bold">
-                Our automated check suggests</p>
-    {% endif %}
-        <p>
-            <ul class="list-bullet">
-                {% if values['applicant-age'] <= 11 %}
-                    <li>it looks like your eyes are closed</li>
-                    <li>it looks like you’re not facing the camera</li>
-                    <li>we can’t find the outline of your head</li>
-                {% else %}
+    <h3 style="padding: 0 15px;">Face and expression</h3>
+    <div class="column-one-third">
+        <div class="panel panel-border-wide" style="border-color: #ffbf47;">
+            <p>Fair.</p>
+        </div>
+    </div>
+    <div class="column-two-thirds">
+        <p>It looks like your photo meets most of the rules, but there are errors.</p>
+        <details>
+            <summary><span class="summary">What’s affecting this result?</span></summary>
+            <div class="panel panel-border-narrow">
+                <p>Errors:</p>
+                <ul class="list list-bullet">
                     <li>it looks like your mouth is open</li>
                     <li>we can’t find the outline of your head</li>
-                {% endif %}
-            </ul>
-        </p>
-
-        {% if values['applicant-age'] < 1 %}
-            <p>It needs to meet all of these <a href="./photo-guidance" target="_blank">photo rules for ages under 1</a>.</p>
-        {% elif values['applicant-age'] < 6 %}
-            <p>It needs to meet all of these <a href="./photo-guidance" target="_blank">photo rules for ages under 6</a>.</p>
-        {% elif values['applicant-age'] < 16 and not values['rising-16'] %}
-            <p>It needs to meet all of these <a href="./photo-guidance" target="_blank">photo rules for ages between 6 and 16</a>.</p>
-        {% else %}
-            <p>It needs to meet all of these <a href="./photo-guidance" target="_blank">photo rules for ages 16 and over</a>.</p>
-        {% endif %}
-
+                </ul>
+            </div>
+        </details>
     </div>
 
+    <hr style="margin-left: 15px; margin-right: 15px; min-width: 1px;">
 
-{{/nunjucks}}
-
-<h2 class="heading-medium">
-    You can use the photo</h2>
-<ul class="list-bullet">
-    <li>if you have a medical or religious reason why it doesn't meet the rules</li>
-    <li>if you think it meets all the rules</li>
-</ul>
-
-{{#nunjucks}}
-    {% if values['choose-photo'] == 'code' %}
-        <div class="panel panel-border-wide">
-            <p>If your photo doesn't meet the rules you may have problems with your application or when you travel.</p>
+    <h3 style="padding: 0 15px;">Quality and format</h3>
+    <div class="column-one-third">
+        <div class="panel panel-border-wide" style="border-color: #28a197;">
+            <p>Good.</p>
         </div>
-    {% endif %}
-{{/nunjucks}}
+    </div>
+    <div class="column-two-thirds">
+        <p>It looks like your photo is suitable for a new passport, but this is not guaranteed. Use the checklist to make sure your photo meets the rules.</p>
+        <p><a href="../help/photo-rules-photo-checker" target="_blank">Passport photo rules</a></p>
+    </div>
+</div>
 <br>
 
-<!-- <h2>Do you want to submit this photo?</h2>
 
-{{#radio-group}}oix-override{{/radio-group}}
-
-<div id="oix-override" class="reveal js-hidden">
-    <div class="panel panel-border-narrow" style="margin-top:-20px; margin-bottom:20px;">
-        <label for="oix-override-reason" class="form-label">
-            Tell us why you’d like to use this photo:
-        </label>
-        {{#textarea}}oix-override-reason{{/textarea}}
-    </div>
-    <br>
-</div>
-
-<div id="oix-override-group" class="form-group">
-    <fieldset role="radiogroup" aria-required="true">
-        <legend>
-            <span class="visuallyhidden">Do you want to use this photo?</span>
-        </legend>
-
-        <label class="block-label selected" for="oix-override-true">
-            <input type="radio" name="oix-override" id="oix-override-true" value="true" required="true" data-toggle="oix-override" aria-controls="oix-override" aria-expanded="true">
-            Yes, I want to submit it
-        </label>
-
-        <div class="panel panel-border-narrow js-hidden" id="oix-override" style="margin-top:10px; margin-bottom:0px;">
-            <label for="oix-override-reason" class="form-label">
-                Explain why you’d like to use this photo
-            </label>
-            {{#textarea}}oix-override-reason{{/textarea}}
-        </div>
-
-        <label class="block-label" for="oix-override-false">
-            <input type="radio" name="oix-override" id="oix-override-false" value="false" required="true">
-            No, I want to get another photo
-        </label>
-    </fieldset>
-</div> -->
 
 {{#input-submit}}check-another-photo{{/input-submit}}
 
-{{#nunjucks}}
-    {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
-        <div class="panel panel-border-wide">
-            <p>If your photo doesn't meet the rules you may have problems with your application or when you travel.</p>
-        </div>
-    {% endif %}
-{{/nunjucks}}
+<details>
+    <summary><span class="summary">I can’t meet the photo rules</span></summary>
+    <div class="panel panel-border-narrow">
+        <p>You can still use a photo if you can’t meet the photo rules because of a religious or medical reason. We’ll
+            ask you to explain the circumstances when you submit your photo in the passport application.</p>
+    </div>
+</details>
 
 {{/form}}
 {{/hmpo-partials-form}}
