@@ -48,65 +48,34 @@
 <!-- <p>The check has rated your photo against the photo rules to see if it is suitable for a new passport.</p> -->
 <p>The photo check gives an estimate of how likely it is that your photo will be suitable for a new passport.</p>
 
-<div class="grid-row">
-    <h2 style="padding: 0 15px;">Results</h2>
 
-    <h3 style="padding: 0 15px;">Background and lighting</h3>
-    <div class="column-one-third">
-        <div class="panel panel-border-wide" style="border-color: #b10e1e;">
-            <p>Poor.</p>
+    <h2>Result</h2>
+
+    <p>Fair.</p>
+    <h3>What’s affecting this result?</h3>
+    <details>
+        <summary><span class="summary">3 positive factors</span></summary>
+        <div class="panel panel-border-narrow">
+            <p>Errors:</p>
+            <ul class="list list-bullet">
+                <li>the lighting is too dark or uneven</li>
+            </ul>
         </div>
-    </div>
-    <div class="column-two-thirds">
-        <p>It looks like your photo is not suitable for a new passport.</p>
-        <details>
-            <summary><span class="summary">What’s affecting this result?</span></summary>
-            <div class="panel panel-border-narrow">
-                <p>Errors:</p>
-                <ul class="list list-bullet">
-                    <li>the lighting is too dark or uneven</li>
-                </ul>
-            </div>
-        </details>
-    </div>
-
-    <hr style="margin-left: 15px; margin-right: 15px; min-width: 1px;">
-
-    <h3 style="padding: 0 15px;">Face and expression</h3>
-    <div class="column-one-third">
-        <div class="panel panel-border-wide" style="border-color: #ffbf47;">
-            <p>Fair.</p>
+    </details>
+    <details>
+        <summary><span class="summary">3 negative factors</span></summary>
+        <div class="panel panel-border-narrow">
+            <p>Errors:</p>
+            <ul class="list list-bullet">
+                <li>the lighting is too dark or uneven</li>
+            </ul>
         </div>
-    </div>
-    <div class="column-two-thirds">
-        <p>It looks like your photo meets most of the rules, but there are errors.</p>
-        <details>
-            <summary><span class="summary">What’s affecting this result?</span></summary>
-            <div class="panel panel-border-narrow">
-                <p>Errors:</p>
-                <ul class="list list-bullet">
-                    <li>it looks like your mouth is open</li>
-                    <li>we can’t find the outline of your head</li>
-                </ul>
-            </div>
-        </details>
-    </div>
+    </details>
 
-    <hr style="margin-left: 15px; margin-right: 15px; min-width: 1px;">
-
-    <h3 style="padding: 0 15px;">Quality and format</h3>
-    <div class="column-one-third">
-        <div class="panel panel-border-wide" style="border-color: #28a197;">
-            <p>Good.</p>
-        </div>
-    </div>
-    <div class="column-two-thirds">
-        <p>It looks like your photo is suitable for a new passport, but this is not guaranteed. Use the checklist to make sure your photo meets the rules.</p>
-        <p><a href="../help/photo-rules-photo-checker" target="_blank">Passport photo rules</a></p>
-    </div>
+<div class="panel panel-border-wide">
+    <p>Photos that have a fair or good rating may still be unsuitable for your new passport.</p>
+    <p>Use the checklist to make sure your photo <a href="../help/photo-rules-photo-checker" target="_blank">meets the rules</a>.</p>
 </div>
-<br>
-
 
 
 {{#input-submit}}check-another-photo{{/input-submit}}

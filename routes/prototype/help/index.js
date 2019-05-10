@@ -33,6 +33,9 @@ app.get('/photo-code', function (req, res, next) {
 app.get('/photo-rules', function (req, res, next) {
 	res.render('prototype/help/photo-rules');
 });
+app.get('/photo-rules-photo-checker', function (req, res, next) {
+	res.render('prototype/help/photo-rules-photo-checker');
+});
 app.get('/terms-and-conditions', function (req, res, next) {
     res.render('prototype/help/terms-and-conditions');
 });
