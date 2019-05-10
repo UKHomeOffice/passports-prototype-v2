@@ -61,6 +61,18 @@ module.exports = {
     '/check-and-submit-photo': {
         next: '/../photo-checker'
     },
+    '/check-and-submit-photo-variation-1': {
+        next: '/../photo-checker'
+    },
+    '/check-and-submit-photo-variation-2': {
+        next: '/../photo-checker'
+    },
+    '/check-and-submit-photo-variation-3': {
+        next: '/../photo-checker'
+    },
+    '/check-and-submit-photo-variation-4': {
+        next: '/../photo-checker'
+    },
     '/not-accepted': {
         next: '/../photo-checker'
     },

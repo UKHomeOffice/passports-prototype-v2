@@ -48,7 +48,7 @@
 {% endif %}
 
 {% if values['dual-nationality'] %}
-    {% set documents = (documents.push('any passports from other countries that haven’t expired'), documents) %}
+    {% set documents = (documents.push('any current or expired passports from other countries that haven’t been cancelled'), documents) %}
 {% endif %}
 
 {# Applicant's documents #}
