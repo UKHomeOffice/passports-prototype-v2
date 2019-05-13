@@ -1,0 +1,137 @@
+{{< layout-photo-checker}}
+
+{{$back}}
+    {{#nunjucks}}
+        {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
+            <a href="upload" class="back-link">Back</a>
+        {% elif values['choose-photo'] == 'code' %}
+            <a href="retrieve" class="back-link">Back</a>
+        {% endif %}
+    {{/nunjucks}}
+{{/back}}
+
+{{$pageTitle}}
+    Photo check
+{{/pageTitle}}
+
+{{$header}}
+    <h1>Photo check</h1>
+{{/header}}
+
+{{$content}}
+
+{{<hmpo-partials-form}}
+{{$form}}
+
+<div class="photo-preview">
+    <div class="photo-preview-inner">
+        <h2 class="heading-medium">Your photo</h2>
+        <div class="photo">
+            {{#nunjucks}}
+                {% if values['applicant-age'] <= 11 %}
+                    <img src="/public/images/photo/result/thumbnail-child-age-0-5-fail.jpg" alt="Your photo" title="Your photo" width="150">
+                {% else %}
+                    <img src="/public/images/photo/result/thumbnail-adult-fail.jpg" alt="Your photo" title="Your photo" width="150">
+                {% endif %}
+
+                {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
+                    {# Show nothing #}
+                {% elif values['choose-photo'] == 'code' %}
+                    <p style="font-size:16px; font-weight:bold; color:grey">abc.de/2jdD4hk</p>
+                {% endif %}
+            {{/nunjucks}}
+        </div>
+    </div>
+</div>
+
+<p>Your photo has gone through a basic technical check.</p>
+<!-- <p>The check has rated your photo against the photo rules to see if it is suitable for a new passport.</p> -->
+<p>The photo check gives an estimate of how likely it is that your photo will be suitable for a new passport.</p>
+
+
+    <h2>Result</h2>
+
+    <!-- <p style="font-weight: 600; text-transform: uppercase; color: #ffbf47;">Okay</p> -->
+    <p style="font-size: 32px; font-weight: 600; text-transform: uppercase; color: #ffbf47; margin-bottom: 10px;">Okay</p>
+
+    <img src="../../../public/images/photo/dial-gauge.png" width="150">
+
+    <h3 style="margin-bottom: 10px;">What’s affecting this result?</h3>
+    <details style="margin-bottom: 10px;">
+        <summary><span class="summary">3 positive factors</span></summary>
+        <div class="panel panel-border-narrow">
+            <ul class="list list-bullet">
+                <li>plain light coloured background without texture or pattern</li>
+                <li>balanced lighting with no shadows</li>
+                <li>whole face is visible</li>
+
+            </ul>
+        </div>
+    </details>
+    <details>
+        <summary><span class="summary">2 negative factors</span></summary>
+        <div class="panel panel-border-narrow">
+            <h3>We can't find the outline of your head</h3>
+            <p>Please try:</p>
+            <ul class="list list-bullet">
+                <li>standing in front of a plain light coloured background</li>
+                <li>tying your hair back or brushing it down if it's loose</li>
+                <li>standing further away from the wall to avoid shadows</li>
+                <li>to make sure the background has no glare or patterns</li>
+            </ul>
+            <h3>The lighting is too dark or uneven</h3>
+            <p>Please try:</p>
+            <ul class="list list-bullet">
+                <li>standing further away to avoid shadows</li>
+                <li>switching the flash off</li>
+                <li>standing where there's more natural light</li>
+            </ul>
+        </div>
+    </details>
+
+<div class="panel panel-border-wide">
+    <p>Photos that have an okay or good rating may still be unsuitable for your new passport. Make sure your photo <a href="../help/photo-rules-photo-checker" target="_blank">meets the rules</a>.</p>
+</div>
+
+
+{{#input-submit}}check-another-photo{{/input-submit}}
+
+<details>
+    <summary><span class="summary">I can’t meet the photo rules</span></summary>
+    <div class="panel panel-border-narrow">
+        <p>You can still use a photo if you can’t meet the photo rules because of a religious or medical reason. We’ll
+            ask you to explain the circumstances when you submit your photo in the passport application.</p>
+    </div>
+</details>
+
+{{/form}}
+{{/hmpo-partials-form}}
+
+{{/content}}
+
+{{$sidebar}}
+<!-- <div class="column-one-third" style="margin-top:50px">
+    <div class="sidebar related">
+        <div class="photo-preview-inner">
+            <h2 class="heading-medium">Your photo</h2>
+            <div class="photo">
+                {{#nunjucks}}
+                    {% if values['applicant-age'] <= 11 %}
+                        <img src="/public/images/photo/result/thumbnail-child-age-0-5-fail.jpg" alt="Your photo" title="Your photo" width="150">
+                    {% else %}
+                        <img src="/public/images/photo/result/thumbnail-adult-fail.jpg" alt="Your photo" title="Your photo" width="150">
+                    {% endif %}
+
+                    {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
+                        {# Show nothing #}
+                    {% elif values['choose-photo'] == 'code' %}
+                        <p style="font-size:16px; font-weight:bold; color:grey">abc.de/2jdD4hk</p>
+                    {% endif %}
+                {{/nunjucks}}
+            </div>
+        </div>
+    </div>
+</div> -->
+{{/sidebar}}
+
+{{/ layout-photo-checker}}
