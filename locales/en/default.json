@@ -623,9 +623,7 @@
         "parent1-uk-passport": {
             "required": "Select if parent 1 has a UK passport"
         },
-        "parent1-euss": {
-            "required": "Select if parent 1 had EU settled status when the applicant was born"
-        },
+
         "parent1-euss-reference-number": {
             "required": "Select where you'll get the reference from"
         },

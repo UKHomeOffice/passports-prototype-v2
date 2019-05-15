@@ -521,6 +521,70 @@ module.exports = {
         ],
         className: 'inline'
     },
+    'parent1-euss-status': {
+        //validate: 'required',
+        legend: {
+            value: 'Did the mother or parent 1 have EU settled status when the applicant was born?',
+            className: 'visuallyhidden'
+        },
+        options: [{
+                value: true,
+                label: 'Yes',
+            },
+            {
+                value: false,
+                label: 'No',
+            }
+        ],
+        className: 'inline',
+        formatter: ['boolean'],
+        validate: ['required']
+    },
+    'parent1-euss-know-application': {
+        validate: 'required',
+        legend: {
+            value: 'Do you know the mother or parent 1\'s application reference?',
+            className: 'visuallyhidden'
+        },
+        options: [{
+                value: true,
+                label: 'Yes',
+            },
+            {
+                value: false,
+                label: 'No',
+            }
+        ],
+        className: 'inline',
+        formatter: ['boolean'],
+        validate: ['required']
+    },
+    'parent1-application-reference': {
+        labelClassName: 'visuallyhidden'
+    },
+    'parent1-euss-know-document': {
+        validate: 'required',
+        legend: {
+            value: 'Do you know the reference number of the mother or parent 1\'s identity document?',
+            className: 'visuallyhidden'
+        },
+        options: [{
+                value: true,
+                label: 'Yes',
+            },
+            {
+                value: false,
+                label: 'No',
+            }
+        ],
+        className: 'inline',
+        formatter: ['boolean'],
+        validate: ['required']
+    },
+    'parent1-document-reference': {
+        labelClassName: 'visuallyhidden'
+    },
+
     'parent1-euss-reference-number': {
         validate: 'required',
         legend: {
