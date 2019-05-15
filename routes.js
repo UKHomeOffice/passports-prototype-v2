@@ -6,8 +6,8 @@ app.use('/govuk', require('./routes/govuk'));
 app.use('/govuk/damaged', require('./routes/govuk/damaged'));
 
 // DCS user journeys
+app.use('/prototype', require('./routes/prototype'));
 app.use('/prototype/overseas', require('./routes/prototype/overseas'));
-app.use('/prototype/startpage', require('./routes/prototype/startpage'));
 app.use('/prototype/filter', require('./routes/prototype/filter'));
 app.use('/prototype/intro', require('./routes/prototype/intro'));
 app.use('/prototype/photo', require('./routes/prototype/photo'));
