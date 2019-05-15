@@ -560,6 +560,7 @@ module.exports = {
         validate: ['required']
     },
     'parent1-application-reference': {
+        validate: 'required',
         labelClassName: 'visuallyhidden'
     },
     'parent1-euss-know-document': {
@@ -582,6 +583,7 @@ module.exports = {
         validate: ['required']
     },
     'parent1-document-reference': {
+        validate: 'required',
         labelClassName: 'visuallyhidden'
     },
 

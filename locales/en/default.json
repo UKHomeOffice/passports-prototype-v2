@@ -624,6 +624,22 @@
             "required": "Select if parent 1 has a UK passport"
         },
 
+        "parent1-euss-status": {
+            "required": "You must answer this question - EU settled status"
+        },
+        "parent1-euss-know-application": {
+            "required": "You must answer this question - application reference"
+        },
+        "parent1-euss-know-document": {
+            "required": "You must answer this question - document reference"
+        },
+        "parent1-application-reference": {
+            "required": "Enter the application reference"
+        },
+        "parent1-document-reference": {
+            "required": "Enter the document reference"
+        },
+
         "parent1-euss-reference-number": {
             "required": "Select where you'll get the reference from"
         },
