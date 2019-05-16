@@ -383,8 +383,38 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         title: 'Date of issue',
         value: parent1DateOfIssue.isValid() ? parent1DateOfIssue.format('D MMMM YYYY') : ''
     });
-    // parent 1 EUSS selection
-    if (values['parent1-euss']) {
+
+
+
+    // Parent 1 - EUSS
+
+    if (values['parent1-euss-status']) {
+        parent1Fields.push({
+            step: this.getEditStep('parent1-euss-status'),
+            title: 'EU settled status',
+            value: values['parent1-euss-status']
+        });
+    }
+    if (values['parent1-euss-reference-number'] === 'document-reference-number') {
+        parent1Fields.push({
+            step: this.getEditStep('parent1-euss-document-reference-number'),
+            title: 'Document reference',
+            value: values['parent1-euss-document-reference-number']
+        });
+    }
+    if (values['parent1-euss-reference-number'] === 'application-reference-number') {
+        parent1Fields.push({
+            step: this.getEditStep('parent1-euss-application-reference-number'),
+            title: 'Application reference',
+            value: values['parent1-euss-application-reference-number']
+        });
+    }
+
+
+
+
+    // TO DELETE parent 1 EUSS selection
+    /* if (values['parent1-euss']) {
         if (values['parent1-euss'] === 'Unknown') {
             parent1Fields.push({
                 step: this.getEditStep('parent1-euss'),
@@ -420,7 +450,10 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 value: values['parent1-euss-unknown-reference-number']
             });
         }
-    }
+    } */
+    // TO DELETE parent 1 EUSS selection
+
+
 
     if (values['parent1-additional-information']) { // If mother additional information is NOT empty
         parent1Fields.push({
