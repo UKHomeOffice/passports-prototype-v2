@@ -507,35 +507,32 @@ module.exports = {
             className: 'visuallyhidden'
         },
         options: [{
-                value: true,
+                value: 'Yes',
                 label: 'Yes',
             },
             {
-                value: false,
+                value: 'No',
                 label: 'No',
             }
         ],
         className: 'inline',
-        formatter: ['boolean'],
         validate: ['required']
     },
     'parent1-euss-know-application': {
-        validate: 'required',
         legend: {
             value: 'Do you know the mother or parent 1\'s application reference?',
             className: 'visuallyhidden'
         },
         options: [{
-                value: true,
+                value: 'Yes',
                 label: 'Yes',
             },
             {
-                value: false,
+                value: 'No',
                 label: 'No',
             }
         ],
         className: 'inline',
-        formatter: ['boolean'],
         validate: ['required']
     },
     'parent1-application-reference': {
@@ -543,22 +540,20 @@ module.exports = {
         labelClassName: 'visuallyhidden'
     },
     'parent1-euss-know-document': {
-        validate: 'required',
         legend: {
             value: 'Do you know the reference number of the mother or parent 1\'s identity document?',
             className: 'visuallyhidden'
         },
         options: [{
-                value: true,
+                value: 'Yes',
                 label: 'Yes',
             },
             {
-                value: false,
+                value: 'No',
                 label: 'No',
             }
         ],
         className: 'inline',
-        formatter: ['boolean'],
         validate: ['required']
     },
     'parent1-document-reference': {
@@ -568,7 +563,7 @@ module.exports = {
 
 
     // To delete
-    'parent1-euss': {
+    /* 'parent1-euss': {
         validate: 'required',
         legend: {
             value: 'Did they have EU settled status when the applicant was born?',
@@ -644,7 +639,7 @@ module.exports = {
         //    attribute: 'rows', 
         //    value: 5
         //}]
-    },
+    }, */
   
     // Parent 2
     'parent2-first-names': {
@@ -769,35 +764,32 @@ module.exports = {
             className: 'visuallyhidden'
         },
         options: [{
-                value: true,
+                value: 'Yes',
                 label: 'Yes',
             },
             {
-                value: false,
+                value: 'No',
                 label: 'No',
             }
         ],
         className: 'inline',
-        formatter: ['boolean'],
         validate: ['required']
     },
     'parent2-euss-know-application': {
-        validate: 'required',
         legend: {
             value: 'Do you know the father or parent 2\'s application reference?',
             className: 'visuallyhidden'
         },
         options: [{
-                value: true,
+                value: 'Yes',
                 label: 'Yes',
             },
             {
-                value: false,
+                value: 'No',
                 label: 'No',
             }
         ],
         className: 'inline',
-        formatter: ['boolean'],
         validate: ['required']
     },
     'parent2-application-reference': {
@@ -805,22 +797,20 @@ module.exports = {
         labelClassName: 'visuallyhidden'
     },
     'parent2-euss-know-document': {
-        validate: 'required',
         legend: {
             value: 'Do you know the reference number of the father or parent 2\'s identity document?',
             className: 'visuallyhidden'
         },
         options: [{
-                value: true,
+                value: 'Yes',
                 label: 'Yes',
             },
             {
-                value: false,
+                value: 'No',
                 label: 'No',
             }
         ],
         className: 'inline',
-        formatter: ['boolean'],
         validate: ['required']
     },
     'parent2-document-reference': {
@@ -830,7 +820,7 @@ module.exports = {
 
 
     // To delete
-    'parent2-euss': {
+    /* 'parent2-euss': {
         validate: 'required',
         legend: {
             value: 'Did they have EU settled status when the applicant was born?',
@@ -906,7 +896,7 @@ module.exports = {
         //    attribute: 'rows', 
         //    value: 5
         // }]
-    },
+    }, */
 
     // Parent 1's parents
     'parent1-parents-married': {

@@ -156,7 +156,7 @@ module.exports = {
         forks: [{
             target: '/parent-2-details',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['parent1-euss-status'] == false
+                return req.session['hmpo-wizard-common']['parent1-euss-status'] === 'No'
             }
         }]
     },
@@ -164,10 +164,9 @@ module.exports = {
         fields: ['parent1-euss-know-application'],
         next: '/parent-1-application-reference',
         forks: [{
-            // TO DELETE target: '/parent-2-details',
             target: '/parent-1-know-document-reference',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['parent1-euss-know-application'] == false
+                return req.session['hmpo-wizard-common']['parent1-euss-know-application'] === 'No'
             }
         }]
     },
@@ -177,7 +176,7 @@ module.exports = {
         forks: [{
             target: '/parent-2-details',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['parent1-euss-know-document'] == false
+                return req.session['hmpo-wizard-common']['parent1-euss-know-document'] === 'No'
             }
         }]
     },
@@ -192,7 +191,7 @@ module.exports = {
 
 
     // TO DELETE
-    '/parent-1-euss-documents': {
+    /*'/parent-1-euss-documents': {
         fields: [
             'parent1-euss-reference-number',
             'parent1-euss-document-reference-number',
@@ -200,7 +199,7 @@ module.exports = {
             'parent1-euss-unknown-reference-number'
         ],
         next: '/parent-2-details'
-    }, 
+    },*/
     // TO DELETE
 
 
@@ -226,11 +225,10 @@ module.exports = {
                         req.session['hmpo-wizard-common']['passport-before'] == true ||
                         req.session['hmpo-wizard-common']['lost-stolen'] == true;
                 }
-            },  {
-                // TO DELETE target: '/parent-2-euss-documents',
+            },  
+            {
                 target: '/parent-2-euss-status',
                 condition: function (req, res) {
-                // TO DELETE    return req.session['hmpo-wizard-common']['parent2-euss'] === 'Yes'
                     return req.session['hmpo-wizard-common']['born-in-uk'] && 
                            req.session['hmpo-wizard-common']['born-after-2018'] 
                 }
@@ -257,7 +255,7 @@ module.exports = {
         forks: [{
             target: '/grandparents-intro',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['parent2-euss-status'] == false
+                return req.session['hmpo-wizard-common']['parent2-euss-status'] === 'No'
             }
         }]
     },
@@ -267,7 +265,7 @@ module.exports = {
         forks: [{
             target: '/parent-2-know-document-reference',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['parent2-euss-know-application'] == false
+                return req.session['hmpo-wizard-common']['parent2-euss-know-application'] === 'No'
             }
         }]
     },
@@ -277,7 +275,7 @@ module.exports = {
         forks: [{
             target: '/grandparents-intro',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['parent2-euss-know-document'] == false
+                return req.session['hmpo-wizard-common']['parent2-euss-know-document'] === 'No'
             }
         }]
     },
@@ -292,7 +290,7 @@ module.exports = {
 
 
     // TO DELETE
-    '/parent-2-euss-documents': {
+    /* '/parent-2-euss-documents': {
         fields: [
             'parent2-euss-reference-number',
             'parent2-euss-document-reference-number',
@@ -300,7 +298,7 @@ module.exports = {
             'parent2-euss-unknown-reference-number'
         ],
         next: '/grandparents-intro'
-    },
+    },*/
     // TO DELETE
     
 

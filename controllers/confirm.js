@@ -384,10 +384,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         value: parent1DateOfIssue.isValid() ? parent1DateOfIssue.format('D MMMM YYYY') : ''
     });
 
-
-
     // Parent 1 - EUSS
-
     if (values['parent1-euss-status']) {
         parent1Fields.push({
             step: this.getEditStep('parent1-euss-status'),
@@ -395,23 +392,20 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             value: values['parent1-euss-status']
         });
     }
-    if (values['parent1-euss-reference-number'] === 'document-reference-number') {
+    if (values['parent1-application-reference']) {
         parent1Fields.push({
-            step: this.getEditStep('parent1-euss-document-reference-number'),
-            title: 'Document reference',
-            value: values['parent1-euss-document-reference-number']
-        });
-    }
-    if (values['parent1-euss-reference-number'] === 'application-reference-number') {
-        parent1Fields.push({
-            step: this.getEditStep('parent1-euss-application-reference-number'),
+            step: this.getEditStep('parent1-application-reference'),
             title: 'Application reference',
-            value: values['parent1-euss-application-reference-number']
+            value: values['parent1-application-reference']
         });
     }
-
-
-
+    if (values['parent1-document-reference']) {
+        parent1Fields.push({
+            step: this.getEditStep('parent1-document-reference'),
+            title: 'Document reference',
+            value: values['parent1-document-reference']
+        });
+    }
 
     // TO DELETE parent 1 EUSS selection
     /* if (values['parent1-euss']) {
@@ -512,8 +506,32 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             value: values['parent2-euss-application-reference-number'] || ['parent2-euss-document-reference-number']
         });
     }
-    //parent 2 EUSS selection
-    if (values['parent2-euss']) {
+
+    // Parent 2 - EUSS
+    if (values['parent2-euss-status']) {
+        parent2Fields.push({
+            step: this.getEditStep('parent2-euss-status'),
+            title: 'EU settled status',
+            value: values['parent2-euss-status']
+        });
+    }
+    if (values['parent2-application-reference']) {
+        parent2Fields.push({
+            step: this.getEditStep('parent2-application-reference'),
+            title: 'Application reference',
+            value: values['parent2-application-reference']
+        });
+    }
+    if (values['parent2-document-reference']) {
+        parent2Fields.push({
+            step: this.getEditStep('parent2-document-reference'),
+            title: 'Document reference',
+            value: values['parent2-document-reference']
+        });
+    }
+
+    // TO DELETE parent 2 EUSS selection
+    /* if (values['parent2-euss']) {
         if (values['parent2-euss'] === 'Unknown') {
             parent2Fields.push({
                 step: this.getEditStep('parent2-euss'),
@@ -549,7 +567,9 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 value: values['parent2-euss-unknown-reference-number']
             });
         }
-    }
+    } */
+
+
 
     if (values['parent2-additional-information']) { // If father additional information is NOT empty
         parent2Fields.push({
