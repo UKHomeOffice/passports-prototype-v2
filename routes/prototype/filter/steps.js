@@ -120,7 +120,7 @@ module.exports = {
             }
         }]
     },
-    '/dual-national': {
+    /*'/dual-national': {
         fields: ['dual-nationality'],
         next: '/summary',
         controller: require('../../../controllers/app-type'), // Sets the application-type to be used for the rest of the journey
@@ -130,10 +130,22 @@ module.exports = {
                 return req.session['hmpo-wizard-common']['passport-before'];
             }
         }]
+    },*/
+    '/dual-national': {
+        fields: ['dual-nationality'],
+        next: '/either-parents-euss',
+        controller: require('../../../controllers/app-type'), // Sets the application-type to be used for the rest of the journey
+        forks: [{
+            target: '/either-parents-euss',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'];
+            }
+        }]
     },
 
     '/either-parents-euss': {
-
+        fields: ['either-parents-euss'],
+        next: '/summary'
     },
     
     '/british-citizen': {
