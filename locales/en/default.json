@@ -659,6 +659,25 @@
         "parent2-uk-passport": {
             "required": "Select if parent 2 has a UK passport"
         },
+        
+        "parent2-euss-status": {
+            "required": "You must answer this question - EU settled status"
+        },
+        "parent2-euss-know-application": {
+            "required": "You must answer this question - application reference"
+        },
+        "parent2-euss-know-document": {
+            "required": "You must answer this question - document reference"
+        },
+        "parent2-application-reference": {
+            "required": "Enter the application reference"
+        },
+        "parent2-document-reference": {
+            "required": "Enter the document reference"
+        },
+
+
+
         "parent2-euss": {
             "required": "Select if parent 2 had EU settled status when the applicant was born"
         },
@@ -674,6 +693,8 @@
         "parent2-euss-unknown-reference-number": {
             "required": "Enter the reason you can't give either reference"
         },
+
+
 
         "parent1-parents-married": {
             "required": "You must answer this question"

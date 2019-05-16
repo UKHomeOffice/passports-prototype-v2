@@ -139,7 +139,7 @@ module.exports = {
             'parent1-passport-issue-day',
             'parent1-passport-issue-month',
             'parent1-passport-issue-year',
-            // 'parent1-euss'
+            // TO DELTE 'parent1-euss'
         ],
         next: '/parent-2-details',
         forks: [{
@@ -150,10 +150,6 @@ module.exports = {
             }
         }]
     },
-    //'/parent-1-euss-status': {
-    //    fields: ['parent1-euss-status'],
-    //    next: '/parent-2-details'
-    //},
     '/parent-1-euss-status': {
         fields: ['parent1-euss-status'],
         next: '/parent-1-know-application-reference',
@@ -168,7 +164,7 @@ module.exports = {
         fields: ['parent1-euss-know-application'],
         next: '/parent-1-application-reference',
         forks: [{
-            // target: '/parent-2-details',
+            // TO DELETE target: '/parent-2-details',
             target: '/parent-1-know-document-reference',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['parent1-euss-know-application'] == false
@@ -185,7 +181,6 @@ module.exports = {
             }
         }]
     },
-
     '/parent-1-application-reference': {
         fields: ['parent1-application-reference'],
         next: '/parent-2-details'   
@@ -195,6 +190,8 @@ module.exports = {
         next: '/parent-2-details'   
     },
 
+
+    // TO DELETE
     '/parent-1-euss-documents': {
         fields: [
             'parent1-euss-reference-number',
@@ -204,18 +201,9 @@ module.exports = {
         ],
         next: '/parent-2-details'
     }, 
-    
-    /* Version 2 for EUSS Parent 1 
-    '/parent-1-euss-documents-v2': {
-        fields: [
-            'parent1-euss-reference-number',
-            'parent1-euss-document-reference-number',
-            'parent1-euss-application-reference-number'
-        ],
-        backLink: './parent-1-euss-documents',
-        next: '/parent-2-details'
-    }, */
-    
+    // TO DELETE
+
+
     '/parent-2-details': {
         fields: [
             'parent2-town-of-birth',
@@ -226,7 +214,7 @@ module.exports = {
             'parent2-passport-issue-day',
             'parent2-passport-issue-month',
             'parent2-passport-issue-year',
-            'parent2-euss'
+            // TO DELETE 'parent2-euss'
         ],
         next: '/grandparents-intro',
         forks: [{
@@ -239,9 +227,12 @@ module.exports = {
                         req.session['hmpo-wizard-common']['lost-stolen'] == true;
                 }
             },  {
-                target: '/parent-2-euss-documents',
+                // TO DELETE target: '/parent-2-euss-documents',
+                target: '/parent-2-euss-status',
                 condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['parent2-euss'] === 'Yes'
+                // TO DELETE    return req.session['hmpo-wizard-common']['parent2-euss'] === 'Yes'
+                    return req.session['hmpo-wizard-common']['born-in-uk'] && 
+                           req.session['hmpo-wizard-common']['born-after-2018'] 
                 }
             },
             {
@@ -260,6 +251,47 @@ module.exports = {
             // }
         ]
     },
+    '/parent-2-euss-status': {
+        fields: ['parent2-euss-status'],
+        next: '/parent-2-know-application-reference',
+        forks: [{
+            target: '/grandparents-intro',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['parent2-euss-status'] == false
+            }
+        }]
+    },
+    '/parent-2-know-application-reference': {
+        fields: ['parent2-euss-know-application'],
+        next: '/parent-2-application-reference',
+        forks: [{
+            target: '/parent-2-know-document-reference',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['parent2-euss-know-application'] == false
+            }
+        }]
+    },
+    '/parent-2-know-document-reference': {  
+        fields: ['parent2-euss-know-document'],
+        next: '/parent-2-document-reference',
+        forks: [{
+            target: '/grandparents-intro',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['parent2-euss-know-document'] == false
+            }
+        }]
+    },
+    '/parent-2-application-reference': {
+        fields: ['parent2-application-reference'],
+        next: '/grandparents-intro'   
+    },
+    '/parent-2-document-reference': {
+        fields: ['parent2-document-reference'],
+        next: '/grandparents-intro'   
+    },
+
+
+    // TO DELETE
     '/parent-2-euss-documents': {
         fields: [
             'parent2-euss-reference-number',
@@ -269,6 +301,9 @@ module.exports = {
         ],
         next: '/grandparents-intro'
     },
+    // TO DELETE
+    
+
     '/grandparents-intro': {
         next: '/parent-1-grandparents'
     },

@@ -499,30 +499,9 @@ module.exports = {
         //     }
         // ]
     },
-    'parent1-euss': {
-        validate: 'required',
-        legend: {
-            value: 'Did they have EU settled status when the applicant was born?',
-            className: 'form-label-bold'
-        },
-        options: [{
-                value: 'Yes',
-                label: 'Yes',
-                toggle: 'parent1-euss'
-            },
-            {
-                value: 'No',
-                label: 'No',
-            },
-            {
-                value: 'Unknown',
-                label: 'I don’t know'
-            }
-        ],
-        className: 'inline'
-    },
+
+    // Parent 1 EUSS
     'parent1-euss-status': {
-        //validate: 'required',
         legend: {
             value: 'Did the mother or parent 1 have EU settled status when the applicant was born?',
             className: 'visuallyhidden'
@@ -587,6 +566,30 @@ module.exports = {
         labelClassName: 'visuallyhidden'
     },
 
+
+    // To delete
+    'parent1-euss': {
+        validate: 'required',
+        legend: {
+            value: 'Did they have EU settled status when the applicant was born?',
+            className: 'form-label-bold'
+        },
+        options: [{
+                value: 'Yes',
+                label: 'Yes',
+                toggle: 'parent1-euss'
+            },
+            {
+                value: 'No',
+                label: 'No',
+            },
+            {
+                value: 'Unknown',
+                label: 'I don’t know'
+            }
+        ],
+        className: 'inline'
+    },
     'parent1-euss-reference-number': {
         validate: 'required',
         legend: {
@@ -759,6 +762,74 @@ module.exports = {
         // }
     },
 
+    // Parent 2 EUSS 
+    'parent2-euss-status': {
+        legend: {
+            value: 'Did the father or parent 2 have EU settled status when the applicant was born?',
+            className: 'visuallyhidden'
+        },
+        options: [{
+                value: true,
+                label: 'Yes',
+            },
+            {
+                value: false,
+                label: 'No',
+            }
+        ],
+        className: 'inline',
+        formatter: ['boolean'],
+        validate: ['required']
+    },
+    'parent2-euss-know-application': {
+        validate: 'required',
+        legend: {
+            value: 'Do you know the father or parent 2\'s application reference?',
+            className: 'visuallyhidden'
+        },
+        options: [{
+                value: true,
+                label: 'Yes',
+            },
+            {
+                value: false,
+                label: 'No',
+            }
+        ],
+        className: 'inline',
+        formatter: ['boolean'],
+        validate: ['required']
+    },
+    'parent2-application-reference': {
+        validate: 'required',
+        labelClassName: 'visuallyhidden'
+    },
+    'parent2-euss-know-document': {
+        validate: 'required',
+        legend: {
+            value: 'Do you know the reference number of the father or parent 2\'s identity document?',
+            className: 'visuallyhidden'
+        },
+        options: [{
+                value: true,
+                label: 'Yes',
+            },
+            {
+                value: false,
+                label: 'No',
+            }
+        ],
+        className: 'inline',
+        formatter: ['boolean'],
+        validate: ['required']
+    },
+    'parent2-document-reference': {
+        validate: 'required',
+        labelClassName: 'visuallyhidden'
+    },
+
+
+    // To delete
     'parent2-euss': {
         validate: 'required',
         legend: {

@@ -492,5 +492,23 @@ module.exports = {
         ],
         formatter: ['boolean'],
         validate: ['required']
+    },
+
+    'either-euss-status': {
+        legend: {
+            value: 'Do you have any uncancelled passport from otherDid either of your parents have EU settled status when you were born?',
+            className: 'visuallyhidden'
+        },
+        options: [{
+                value: true,
+                label: 'Yes'
+            },
+            {
+                value: false,
+                label: 'No'
+            }
+        ],
+        formatter: ['boolean'],
+        validate: ['required']
     }
 };

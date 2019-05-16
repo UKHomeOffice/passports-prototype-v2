@@ -131,6 +131,11 @@ module.exports = {
             }
         }]
     },
+
+    '/either-parents-euss': {
+
+    },
+    
     '/british-citizen': {
         fields: ['british-citizen', 'other-nationality'],
         next: '/dual-national',
