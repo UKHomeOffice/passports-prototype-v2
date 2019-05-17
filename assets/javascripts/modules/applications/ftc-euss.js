@@ -73,7 +73,6 @@ var values = {
     "parent1-passport-issue-year": "2007",
 
     // EUSS Mother or Parent 1
-    //DELETE "parent1-euss-document-reference-number": "1234567890",
     "parent1-application-reference": "1234-5678-1234-5678",
 
     // Father
@@ -87,10 +86,6 @@ var values = {
     // "parent2-passport-issue-day": "19",
     // "parent2-passport-issue-month": "01",
     // "parent2-passport-issue-year": "2008",
-
-    // EUSS Father or Parent 2
-    //DELETE"parent2-euss-application-reference-number": "1234-5678-1234-5678",
-
 
     // Maternal grandparents
     "parent1-parent1-first-names": "Victoria",
@@ -148,14 +143,10 @@ function clicks() {
     $('#naturalisation-registration-certificate-false').click();
     $('#parents-married-Yes').click();
     $('#parent1-uk-passport-Yes').click();
-    //DELETE $('#parent1-euss-Yes').click();
     $('#parent1-euss-status-Yes').click();
-    //DELETE $('#parent1-euss-reference-number-document-reference-number').click();
     $('#parent1-euss-know-application-Yes').click();
     $('#parent2-uk-passport-No').click();
-    //DELETE$('#parent2-euss-Yes').click();
     $('#parent2-euss-status-No').click();
-    //DELETE$('#parent2-euss-reference-number-application-reference-number').click();
     $('#parent1-parents-married-Unknown').click();
     $('#parent2-parents-married-Unknown').click();
     $('#can-interview-true').click();

@@ -138,8 +138,7 @@ module.exports = {
             'parent1-passport-number',
             'parent1-passport-issue-day',
             'parent1-passport-issue-month',
-            'parent1-passport-issue-year',
-            // TO DELTE 'parent1-euss'
+            'parent1-passport-issue-year'
         ],
         next: '/parent-2-details',
         forks: [{
@@ -190,20 +189,6 @@ module.exports = {
         next: '/parent-2-details'   
     },
 
-
-    // TO DELETE
-    /*'/parent-1-euss-documents': {
-        fields: [
-            'parent1-euss-reference-number',
-            'parent1-euss-document-reference-number',
-            'parent1-euss-application-reference-number',
-            'parent1-euss-unknown-reference-number'
-        ],
-        next: '/parent-2-details'
-    },*/
-    // TO DELETE
-
-
     '/parent-2-details': {
         fields: [
             'parent2-town-of-birth',
@@ -213,8 +198,7 @@ module.exports = {
             'parent2-passport-number',
             'parent2-passport-issue-day',
             'parent2-passport-issue-month',
-            'parent2-passport-issue-year',
-            // TO DELETE 'parent2-euss'
+            'parent2-passport-issue-year'
         ],
         next: '/grandparents-intro',
         forks: [{
@@ -288,21 +272,7 @@ module.exports = {
     '/parent-2-document-reference': {
         fields: ['parent2-document-reference'],
         next: '/grandparents-intro'   
-    },
-
-
-    // TO DELETE
-    /* '/parent-2-euss-documents': {
-        fields: [
-            'parent2-euss-reference-number',
-            'parent2-euss-document-reference-number',
-            'parent2-euss-application-reference-number',
-            'parent2-euss-unknown-reference-number'
-        ],
-        next: '/grandparents-intro'
-    },*/
-    // TO DELETE
-    
+    },    
 
     '/grandparents-intro': {
         next: '/parent-1-grandparents'

@@ -407,48 +407,6 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         });
     } 
 
-    // TO DELETE parent 1 EUSS selection
-    /* if (values['parent1-euss']) {
-        if (values['parent1-euss'] === 'Unknown') {
-            parent1Fields.push({
-                step: this.getEditStep('parent1-euss'),
-                title: 'EU settlement status',
-                value: 'I don’t know'
-            });
-        } else {
-            parent1Fields.push({
-                step: this.getEditStep('parent1-euss'),
-                title: 'EU settled status',
-                value: values['parent1-euss']
-            });
-        }
-
-        if (values['parent1-euss-reference-number'] === 'document-reference-number') {
-            parent1Fields.push({
-                step: this.getEditStep('parent1-euss-document-reference-number'),
-                title: 'Identity document reference',
-                value: values['parent1-euss-document-reference-number']
-            });
-        }
-        if (values['parent1-euss-reference-number'] === 'application-reference-number') {
-            parent1Fields.push({
-                step: this.getEditStep('parent1-euss-application-reference-number'),
-                title: 'Application reference',
-                value: values['parent1-euss-application-reference-number']
-            });
-        }
-        if (values['parent1-euss-reference-number'] === 'unknown-reference-number') {
-            parent1Fields.push({
-                step: this.getEditStep('parent1-euss-unknown-reference-number'),
-                title: 'Reason no reference for EU settled status',
-                value: values['parent1-euss-unknown-reference-number']
-            });
-        }
-    } */
-    // TO DELETE parent 1 EUSS selection
-
-
-
     if (values['parent1-additional-information']) { // If mother additional information is NOT empty
         parent1Fields.push({
             step: this.getEditStep('parent1-additional-information'),
@@ -495,19 +453,6 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         value: parent2DateOfIssue.isValid() ? parent2DateOfIssue.format('D MMMM YYYY') : ''
     });
 
-    // TO DELETE 
-    /* if (values['parent2-euss'] === 'yes' && ['parent2-euss-application-reference-number'] && ['parent2-euss-document-reference-number']) { // If father EUSS is NOT empty
-        parent2Fields.push({
-            step: this.getEditStep('parent2-euss'),
-            title: 'EU settled status',
-            value: values['parent2-euss']
-        },{
-            step: this.getEditStep('parent2-euss-application-reference-number' || 'parent2-euss-document-reference-number'),
-            title: 'Reference number',
-            value: values['parent2-euss-application-reference-number'] || ['parent2-euss-document-reference-number']
-        });
-    } */
-
     // Parent 2 - EUSS
     if (values['parent2-euss-status']) {
         parent2Fields.push({
@@ -530,47 +475,6 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             value: values['parent2-document-reference']
         });
     }
-
-    // TO DELETE parent 2 EUSS selection
-    /* if (values['parent2-euss']) {
-        if (values['parent2-euss'] === 'Unknown') {
-            parent2Fields.push({
-                step: this.getEditStep('parent2-euss'),
-                title: 'EU settlement status',
-                value: 'I don’t know'
-            });
-        } else {
-            parent2Fields.push({
-                step: this.getEditStep('parent2-euss'),
-                title: 'EU settlement status',
-                value: values['parent2-euss']
-            });
-        }
-
-        if (values['parent2-euss-reference-number'] === 'document-reference-number') {
-            parent2Fields.push({
-                step: this.getEditStep('parent2-euss-document-reference-number'),
-                title: 'Identity document reference',
-                value: values['parent2-euss-document-reference-number']
-            });
-        }
-        if (values['parent2-euss-reference-number'] === 'application-reference-number') {
-            parent2Fields.push({
-                step: this.getEditStep('parent2-euss-application-reference-number'),
-                title: 'Application reference',
-                value: values['parent2-euss-application-reference-number']
-            });
-        }
-        if (values['parent2-euss-reference-number'] === 'unknown-reference-number') {
-            parent2Fields.push({
-                step: this.getEditStep('parent2-euss-unknown-reference-number'),
-                title: 'Reason no reference for EU settled status',
-                value: values['parent2-euss-unknown-reference-number']
-            });
-        }
-    } */
-
-
 
     if (values['parent2-additional-information']) { // If father additional information is NOT empty
         parent2Fields.push({
