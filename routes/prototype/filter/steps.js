@@ -142,12 +142,12 @@ module.exports = {
             }
         }]
     },
-
     '/either-parents-euss': {
-        fields: ['either-parents-euss'],
+        fields: [
+            'either-euss-status'
+        ],
         next: '/summary'
     },
-    
     '/british-citizen': {
         fields: ['british-citizen', 'other-nationality'],
         next: '/dual-national',
