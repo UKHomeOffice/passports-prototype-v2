@@ -405,7 +405,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             title: 'Document reference',
             value: values['parent1-document-reference']
         });
-    }
+    } 
 
     // TO DELETE parent 1 EUSS selection
     /* if (values['parent1-euss']) {
