@@ -495,7 +495,8 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         value: parent2DateOfIssue.isValid() ? parent2DateOfIssue.format('D MMMM YYYY') : ''
     });
 
-    if (values['parent2-euss'] === 'yes' && ['parent2-euss-application-reference-number'] && ['parent2-euss-document-reference-number']) { // If father EUSS is NOT empty
+    // TO DELETE 
+    /* if (values['parent2-euss'] === 'yes' && ['parent2-euss-application-reference-number'] && ['parent2-euss-document-reference-number']) { // If father EUSS is NOT empty
         parent2Fields.push({
             step: this.getEditStep('parent2-euss'),
             title: 'EU settled status',
@@ -505,7 +506,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             title: 'Reference number',
             value: values['parent2-euss-application-reference-number'] || ['parent2-euss-document-reference-number']
         });
-    }
+    } */
 
     // Parent 2 - EUSS
     if (values['parent2-euss-status']) {
