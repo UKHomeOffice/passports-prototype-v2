@@ -43,7 +43,7 @@
         <li>date of marriage or civil partnership (if this applies)</li>
     </ul>
 
-    {% if values['born-after-2018'] and not values['naturalisation-registration-certificate'] and not values['passport-before']%}
+    {% if values['born-after-2018'] and not values['naturalisation-registration-certificate'] and values['either-euss-status'] and not values['passport-before']%}
         <p>If the parent had <a href="https://www.gov.uk/settled-status-eu-citizens-families" target="_blank">EU settled status</a> at the time of the applicant's birth, you'll also need the reference number from either:</p>
         <ul class="list list-bullet">
         <li>the identity document they used to apply for EU settled status (passport, national identity card or biometric residence card)</li>
