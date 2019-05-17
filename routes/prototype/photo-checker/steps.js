@@ -3,13 +3,11 @@ module.exports = {
         next: '/dob'
     },
     '/dob': {
-        controller: require('../../../controllers/check-dob'),
+        controller: require('../../../controllers/check-age-group'),
         next: '/upload',
         backLink: './',
         fields: [
-            'age-day',
-            'age-year',
-            'age-month'
+            'age-group'
         ]
     },
     // '/how-to-get-a-digital-photo': {
