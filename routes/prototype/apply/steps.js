@@ -146,7 +146,8 @@ module.exports = {
             target: '/parent-1-euss-status',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['born-in-uk'] && 
-                       req.session['hmpo-wizard-common']['born-after-2018'] 
+                       req.session['hmpo-wizard-common']['born-after-2018'] &&
+                       req.session['hmpo-wizard-common']['either-euss-status'] 
             }
         }]
     },
@@ -230,7 +231,8 @@ module.exports = {
                 target: '/parent-2-euss-status',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['born-in-uk'] && 
-                           req.session['hmpo-wizard-common']['born-after-2018'] 
+                           req.session['hmpo-wizard-common']['born-after-2018'] &&
+                           req.session['hmpo-wizard-common']['either-euss-status']
                 }
             },
             {

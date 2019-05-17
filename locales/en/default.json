@@ -554,6 +554,9 @@
         "dual-nationality": {
             "required": "You must answer this question"
         },
+        "either-euss-status": {
+            "required": "You must answer this question"
+        },
         "oix-override": {
             "required": "Do you want to submit this photo?"
         },
