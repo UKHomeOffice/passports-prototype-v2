@@ -20,6 +20,11 @@
     {{#nunjucks}}
         {% include "views/partials/documents/message-alert-default.njk" %}
         {% include "views/partials/documents/ftc.njk" %}
+        <!-- {% if values['either-euss-status'] %}
+            {% include "views/partials/documents/ftc-euss.njk" %}
+        {% else %} 
+            {% include "views/partials/documents/ftc.njk" %}
+        {% endif %} -->
     {{/nunjucks}}
 
     {{< hmpo-partials-form}}
