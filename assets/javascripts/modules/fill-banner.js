@@ -59,7 +59,7 @@
 
     var fileName = location.href.split("/").slice(-1);
 
-    if (fileName.includes("") || fileName.includes("startpage")) {
+    if (fileName.includes("") || fileName.includes("prototype")) {
         $("#journey-select").prop("disabled", false)
     } else {
         $("#journey-select").prop("disabled", true)

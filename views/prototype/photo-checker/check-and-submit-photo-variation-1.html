@@ -11,11 +11,11 @@
 {{/back}}
 
 {{$pageTitle}}
-    Your photo result
+    Photo check
 {{/pageTitle}}
 
 {{$header}}
-    <h1>Your photo result</h1>
+    <h1>Photo check</h1>
 {{/header}}
 
 {{$content}}
@@ -44,7 +44,8 @@
     </div>
 </div>
 
-<p>Your photo has been through an automated check.</p>
+<!-- <p>The check has rated your photo against the photo rules to see if it is suitable for a new passport.</p> -->
+<p>The photo check gives an estimate of how likely it is that your photo will be suitable for a new passport.</p>
 
 <h2 class="govuk-table__caption">Photo criteria and results</h2>
 <table class="govuk-table">
@@ -58,15 +59,15 @@
     <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
             <td class="govuk-table__cell">Background and lighting</td>
-            <td class="govuk-table__cell">Fair</td>
+            <td class="govuk-table__cell">Okay</td>
         </tr>
         <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Your appearance</td>
-            <td class="govuk-table__cell" style="color: #b10e1e; font-weight: bold;">Weak</td>
+            <td class="govuk-table__cell">Face and expression</td>
+            <td class="govuk-table__cell" style="color: #b10e1e; font-weight: bold;">Poor</td>
         </tr>
         <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Photo quality and format</td>
-            <td class="govuk-table__cell">Strong</td>
+            <td class="govuk-table__cell">Quality and format</td>
+            <td class="govuk-table__cell">Good</td>
         </tr>
     </tbody>
 </table>
@@ -172,13 +173,6 @@
 
 {{/nunjucks}}
 
-<h2 class="heading-medium">
-    You can use the photo</h2>
-<ul class="list-bullet">
-    <li>if you have a medical or religious reason why it doesn't meet the rules</li>
-    <li>if you think it meets all the rules</li>
-</ul>
-
 {{#nunjucks}}
     {% if values['choose-photo'] == 'code' %}
         <div class="panel panel-border-wide">
@@ -229,13 +223,21 @@
 
 {{#input-submit}}check-another-photo{{/input-submit}}
 
-{{#nunjucks}}
+<details>
+    <summary><span class="summary">I can’t meet the photo rules</span></summary>
+    <div class="panel panel-border-narrow">
+        <p>You can still use a photo if you can’t meet the photo rules because of a religious or medical reason. We’ll
+            ask you to explain the circumstances when you submit your photo in the passport application.</p>
+    </div>
+</details>
+
+<!-- {{#nunjucks}}
     {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
         <div class="panel panel-border-wide">
             <p>If your photo doesn't meet the rules you may have problems with your application or when you travel.</p>
         </div>
     {% endif %}
-{{/nunjucks}}
+{{/nunjucks}} -->
 
 {{/form}}
 {{/hmpo-partials-form}}
