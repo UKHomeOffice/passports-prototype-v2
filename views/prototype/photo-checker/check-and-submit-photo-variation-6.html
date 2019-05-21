@@ -44,62 +44,86 @@
     </div>
 </div>
 
-<!-- <p>The check has rated your photo against the photo rules to see if it is suitable for a new passport.</p> -->
-<p>The photo check gives an estimate of how likely it is that your photo will be suitable for a new passport.</p>
+<p>The check has rated your photo against the <a href="../help/photo-rules-photo-checker" target="_blank">photo rules</a> to see if it is suitable for a new passport.</p>
+<!-- <p>The photo check gives an estimate of how likely it is that your photo will be suitable for a new passport.</p> -->
 
-    <h2>Result</h2>
 
-    <!-- <p style="font-weight: 600; text-transform: uppercase; color: #ffbf47;">Okay</p> -->
-    <p style="font-size: 32px; font-weight: 600; text-transform: uppercase; color: #ffbf47; margin-bottom: 10px;">Okay</p>
+<!-- Poor variation -->
+<h2>Result</h2>
 
-    <div style="margin: 0 -15px;">
-        <div class="column-one-third">
-            <img src="../../../public/images/photo/dial-gauge.png" width="150" style="margin-bottom: 30px;">
-        </div>
+<p style="font-size: 32px; font-weight: 600; text-transform: uppercase; color: #b10e1e; margin-bottom: 10px;">Poor</p>
 
-        <!-- <p style="font-size: 32px; font-weight: 600; text-transform: uppercase; color: #ffbf47;">Okay</p> -->
-        <!-- <h3>What’s affecting this result?</h3> -->
-        <div class="column-two-thirds">
-            <details style="margin-bottom: 10px;">
-                <summary><span class="summary">We can't find the outline of your head</span></summary>
-                <div class="panel panel-border-narrow">
-                    <h3>Please try:</h3>
-                    <ul class="list list-bullet">
-                        <li>standing in front of a plain light coloured background</li>
-                        <li>tying your hair back or brushing it down if it's loose</li>
-                        <li>standing further away from the wall to avoid shadows</li>
-                        <li>to make sure the background has no glare or patterns</li>
-                    </ul>
-                </div>
-            </details>
-            <details>
-                <summary><span class="summary">The lighting is too dark or uneven</span></summary>
-                <div class="panel panel-border-narrow">
-                    <h3>Please try:</h3>
-                    <ul class="list list-bullet">
-                        <li>standing further away to avoid shadows</li>
-                        <li>switching the flash off</li>
-                        <li>standing where there's more natural light</li>
-                    </ul>
-                </div>
-            </details>
-        </div>
+<details style="margin-bottom: 10px;">
+    <summary><span class="summary">Your image and the background are difficult to tell apart</span></summary>
+    <div class="panel panel-border-narrow">
+        <h3>Try:</h3>
+        <ul class="list list-bullet">
+            <li>standing in front of a plain light coloured background</li>
+            <li>tying your hair back or brushing it down if it's loose</li>
+            <li>standing further away from the wall to avoid shadows</li>
+            <li>to make sure the background has no glare or patterns</li>
+        </ul>
     </div>
+</details>
+<details>
+    <summary><span class="summary">The lighting is too dark or uneven</span></summary>
+    <div class="panel panel-border-narrow">
+        <h3>Try:</h3>
+        <ul class="list list-bullet">
+            <li>standing further away to avoid shadows</li>
+            <li>switching the flash off</li>
+            <li>standing where there's more natural light</li>
+        </ul>
+    </div>
+</details>
+
+
+<!-- Okay variation -->
+<!-- <h2>Result</h2>
+
+<p style="font-size: 32px; font-weight: 600; text-transform: uppercase; color: #ffbf47; margin-bottom: 10px;">Okay</p>
+
+<details style="margin-bottom: 10px;">
+    <summary><span class="summary">We can't find the outline of your head</span></summary>
+    <div class="panel panel-border-narrow">
+        <h3>Please try:</h3>
+        <ul class="list list-bullet">
+            <li>standing in front of a plain light coloured background</li>
+            <li>tying your hair back or brushing it down if it's loose</li>
+            <li>standing further away from the wall to avoid shadows</li>
+            <li>to make sure the background has no glare or patterns</li>
+        </ul>
+    </div>
+</details>
+<details>
+    <summary><span class="summary">The lighting is too dark or uneven</span></summary>
+    <div class="panel panel-border-narrow">
+        <h3>Please try:</h3>
+        <ul class="list list-bullet">
+            <li>standing further away to avoid shadows</li>
+            <li>switching the flash off</li>
+            <li>standing where there's more natural light</li>
+        </ul>
+    </div>
+</details> -->
+
+
+<!-- Good variation -->
+<!-- <h2>Result</h2>
+
+<p style="font-size: 32px; font-weight: 600; text-transform: uppercase; color: #28a197; margin-bottom: 10px;">Good</p>
 
 <div class="panel panel-border-wide">
     <p>Photos that have a good rating may still be unsuitable for your new passport. Make sure your photo <a href="../help/photo-rules-photo-checker" target="_blank">meets the rules</a>.</p>
-</div>
+</div> -->
 
 
 {{#input-submit}}check-another-photo{{/input-submit}}
 
-<details>
-    <summary><span class="summary">I can’t meet the photo rules</span></summary>
-    <div class="panel panel-border-narrow">
-        <p>You can still use a photo if you can’t meet the photo rules because of a religious or medical reason. We’ll
-            ask you to explain the circumstances when you submit your photo in the passport application.</p>
-    </div>
-</details>
+<div class="panel panel-border-wide">
+    <p>You can still use a photo if you can’t meet the photo rules because of a religious or medical reason. We’ll
+        ask you to explain the circumstances when you submit your photo in the passport application.</p>
+</div>
 
 {{/form}}
 {{/hmpo-partials-form}}

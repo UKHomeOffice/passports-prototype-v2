@@ -4,6 +4,7 @@ app.use(require('./routes/start'));
 // GOV.UK pages
 app.use('/govuk', require('./routes/govuk'));
 app.use('/govuk/damaged', require('./routes/govuk/damaged'));
+app.use('/govuk/photos-for-passports', require('./routes/govuk/photos-for-passports'));
 
 // DCS user journeys
 app.use('/prototype', require('./routes/prototype'));
