@@ -77,6 +77,9 @@
 <!-- OLC PDF 14 -->
 {% if values['naturalisation-registration-certificate'] %}
 
+<!-- EUSS both parents -->
+{% elif values['born-after-2006'] and values['born-in-uk'] and values['parent1-euss-status'] === 'Yes' and values['parent2-euss-status'] === 'Yes' %}
+
 <!-- OLC PDF 7 -->
 {% elif values['born-between-1983-and-2006'] and values['born-in-uk'] and (values['parent1-passport-number'] and values['parent2-passport-number']) %}
     <h2 class="govuk-heading-l">Parents' documents</h2>
@@ -152,47 +155,14 @@
 
     <hr>
 
-
-<!-- EUSS test -->
-{% elif values['born-after-2018'] and (values['parent1-born-before-1983'] and values['parent2-born-before-1983']) and values['born-in-uk'] and values['parent1-euss-status'] === 'Yes' %}
-    <h2 class="govuk-heading-l">Parents' documents</h2>
-    <h3 class="govuk-heading-m">For 1 of your parents, send 1 of the following:</h3>
-    <ul class="list list-bullet">
-        <li>full birth or adoption certificate</li>
-        <li>naturalisation or registration certificate</li>
-        <li>test: Parent 1</li>
-        <li>the non-British passport they had when you were born showing indefinite leave to remain</li>
-    </ul>
-    <hr>
-
-{% elif values['born-after-2018'] and (values['parent1-born-before-1983'] and values['parent2-born-before-1983']) and values['born-in-uk'] and values['parent2-euss-status'] === 'Yes' %}
-    <h2 class="govuk-heading-l">Parents' documents</h2>
-    <h3 class="govuk-heading-m">For 1 of your parents, send 1 of the following:</h3>
-    <ul class="list list-bullet">
-        <li>full birth or adoption certificate</li>
-        <li>naturalisation or registration certificate</li>
-        <li>test: Parent 2</li>
-        <li>the non-British passport they had when you were born showing indefinite leave to remain</li>
-    </ul>
-    <hr>
-
-{% elif values['born-after-2018'] and (values['parent1-born-before-1983'] and values['parent2-born-before-1983']) and values['born-in-uk'] and (values['parent1-euss-status'] === 'Yes' and values['parent2-euss-status'] === 'Yes') %}
-    <h2 class="govuk-heading-l">Parents' documents</h2>
-    <h3 class="govuk-heading-m">For 1 of your parents, send 1 of the following:</h3>
-    <ul class="list list-bullet">
-        <li>full birth or adoption certificate</li>
-        <li>naturalisation or registration certificate</li>
-        <li>test: Both parents</li>
-        <li>the non-British passport they had when you were born showing indefinite leave to remain</li>
-    </ul>
-    <hr>
-<!-- EUSS test -->
-
-
 <!-- OLC PDF 6 copy of 4 -->
 {% elif values['born-after-2006'] and (values['parent1-born-before-1983'] and values['parent2-born-before-1983']) %}
     <h2 class="govuk-heading-l">Parents' documents</h2>
-    <h3 class="govuk-heading-m">For 1 of your parents, send 1 of the following:</h3>
+    {% if values['parent1-euss-status'] === 'Yes' or values['parent2-euss-status'] === 'Yes' %}
+        <h3 class="govuk-heading-m">For the parent who did not have EU settled status when you were born, send 1 of the following:</h3>
+    {% else %}
+        <h3 class="govuk-heading-m">For 1 of your parents, send 1 of the following:</h3>
+    {% endif %}
     <ul class="list list-bullet">
         <li>full birth or adoption certificate</li>
         <li>naturalisation or registration certificate</li>
@@ -203,10 +173,14 @@
 
     <hr>
 
-<!-- OLC PDF 4 copy of 3-->
+<!-- OLC PDF 4 copy of 3 -->
 {% elif values['born-after-2006'] and (not values['parent1-born-before-1983'] or not values['parent2-born-before-1983']) %}
     <h2 class="govuk-heading-l">Parents' documents</h2>
-    <h3 class="govuk-heading-m">For 1 of your parents, send 1 of the following:</h3>
+    {% if values['parent1-euss-status'] === 'Yes' or values['parent2-euss-status'] === 'Yes' %}
+        <h3 class="govuk-heading-m">For the parent who did not have EU settled status when you were born, send 1 of the following:</h3>
+    {% else %}
+        <h3 class="govuk-heading-m">For 1 of your parents, send 1 of the following:</h3>
+    {% endif %}
     <ul class="list list-bullet">
         <li>full birth or adoption certificate</li>
         <li>naturalisation or registration certificate</li>
@@ -217,19 +191,23 @@
 
     <hr>
 
-    <h2 class="govuk-heading-l">Grandparents' documents</h2>
-    <h3 class="govuk-heading-m">Send all of the following for both maternal grandparents:</h3>
-    <ul class="list list-bullet">
-        <li>full birth or adoption certificate</li>
-        <li>grandfather's marriage certificate to your grandmother (if this applies)</li>
-    </ul>
-    <h3 class="govuk-heading-m">And all of the following for both paternal grandparents:</h3>
-    <ul class="list list-bullet">
-        <li>full birth or adoption certificate</li>
-        <li>grandfather's marriage certificate to your grandmother (if this applies)</li>
-    </ul>
+    {% if values['parent1-euss-status'] === 'Yes' or values['parent2-euss-status'] === 'Yes' %}
+    {# Show nothing #}
+    {% else %}
+        <h2 class="govuk-heading-l">Grandparents' documents</h2>
+        <h3 class="govuk-heading-m">Send all of the following for both maternal grandparents:</h3>
+        <ul class="list list-bullet">
+            <li>full birth or adoption certificate</li>
+            <li>grandfather's marriage certificate to your grandmother (if this applies)</li>
+        </ul>
+        <h3 class="govuk-heading-m">And all of the following for both paternal grandparents:</h3>
+        <ul class="list list-bullet">
+            <li>full birth or adoption certificate</li>
+            <li>grandfather's marriage certificate to your grandmother (if this applies)</li>
+        </ul>
 
-    <hr>
+        <hr>
+    {% endif %}
 
 <!-- OLC PDF 13 copy of 12 -->
 {% elif values['born-after-2006'] and not values['born-in-uk'] and (values['parent1-born-before-1983'] and values['parent2-born-before-1983']) %}
