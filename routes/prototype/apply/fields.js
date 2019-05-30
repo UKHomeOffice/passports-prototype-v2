@@ -1393,7 +1393,7 @@ module.exports = {
             },
             {
                 value: '50',
-                label: 'Jumbo 50-page passport (£85.50)'
+                label: 'Frequent traveller 50-page passport (£85.50)'
             }
         ],
         validate: [
@@ -1431,7 +1431,7 @@ module.exports = {
             },
             {
                 value: '48',
-                label: 'Jumbo adult 48-page passport (£91)'
+                label: 'Frequent traveller adult 48-page passport (£91)'
             }
         ],
         validate: [
