@@ -139,9 +139,9 @@ function clicks() {
     $('#naturalisation-registration-certificate-false').click();
     $('#parents-married-Yes').click();
     $('#parent1-uk-passport-Yes').click();
-    $('#parent1-euss-Yes').click();
+    $('#parent1-euss-true').click();
     $('#parent2-uk-passport-No').click();
-    $('#parent2-euss-No').click();
+    $('#parent2-euss-false').click();
     $('#parent1-parents-married-Unknown').click();
     $('#parent2-parents-married-Unknown').click();
     $('#can-interview-true').click();

@@ -385,11 +385,18 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     });
     
     // parent 1 EUSS selection
-    if (values['parent1-euss']) {
+    if (values['parent1-euss'] == true) {
         parent1Fields.push({
             step: this.getEditStep('parent1-euss'),
             title: 'EU settled status',
-            value: values['parent1-euss']
+            value: 'Yes'
+        });
+    }
+    else {
+        parent1Fields.push({
+            step: this.getEditStep('parent1-euss'),
+            title: 'EU settled status',
+            value: 'No'
         });
     }
 
@@ -440,11 +447,18 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     });
 
     // parent 2 EUSS selection
-    if (values['parent2-euss']) {
+    if (values['parent2-euss'] == true) {
         parent2Fields.push({
             step: this.getEditStep('parent2-euss'),
             title: 'EU settled status',
-            value: values['parent2-euss']
+            value: 'Yes'
+        });
+    }
+    else {
+        parent2Fields.push({
+            step: this.getEditStep('parent2-euss'),
+            title: 'EU settled status',
+            value: 'No'
         });
     }
 
