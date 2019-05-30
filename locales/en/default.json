@@ -313,16 +313,6 @@
         "parent1-additional-information": {
             "label": "Tell us why"
         },
-        "parent1-euss-document-reference-number": {
-            "label": "Identity document reference"
-        },
-        "parent1-euss-application-reference-number": {
-            "label": "Application reference",
-            "hint": "For example, 1234-5678-1234-5678"
-        },
-        "parent1-euss-unknown-reference-number": {
-            "label": "Tell us why"
-        },
         "parent2-first-names": {
             "label": "First and middle names"
         },
@@ -362,16 +352,6 @@
             "label": "Year"
         },
         "parent2-additional-information": {
-            "label": "Tell us why"
-        },
-        "parent2-euss-document-reference-number": {
-            "label": "Identity document reference"
-        },
-        "parent2-euss-application-reference-number": {
-            "label": "Application reference",
-            "hint": "For example, 1234-5678-1234-5678"
-        },
-        "parent2-euss-unknown-reference-number": {
             "label": "Tell us why"
         },
         
@@ -624,19 +604,7 @@
             "required": "Select if parent 1 has a UK passport"
         },
         "parent1-euss": {
-            "required": "Select if parent 1 had EU settled status when the applicant was born"
-        },
-        "parent1-euss-reference-number": {
-            "required": "Select where you'll get the reference from"
-        },
-        "parent1-euss-document-reference-number": {
-            "required": "Enter the identity document reference"
-        },
-        "parent1-euss-application-reference-number": {
-            "required": "Enter the application reference"
-        },
-        "parent1-euss-unknown-reference-number": {
-            "required": "Enter the reason you can't give either reference"
+            "required": "Select if parent 1 had settled status through the EU Settlement Scheme when the applicant was born"
         },
 
         "parent2-additional-information": {
@@ -646,19 +614,7 @@
             "required": "Select if parent 2 has a UK passport"
         },
         "parent2-euss": {
-            "required": "Select if parent 2 had EU settled status when the applicant was born"
-        },
-        "parent2-euss-reference-number": {
-            "required": "Select where you'll get the reference from"
-        },
-        "parent2-euss-document-reference-number": {
-            "required": "Enter the identity document reference"
-        },
-        "parent2-euss-application-reference-number": {
-            "required": "Enter the application reference"
-        },
-        "parent2-euss-unknown-reference-number": {
-            "required": "Enter the reason you can't give either reference"
+            "required": "Select if parent 2 had settled status through the EU Settlement Scheme when the applicant was born"
         },
 
         "parent1-parents-married": {

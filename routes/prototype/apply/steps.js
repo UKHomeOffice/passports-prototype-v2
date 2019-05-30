@@ -142,34 +142,7 @@ module.exports = {
             'parent1-euss'
         ],
         next: '/parent-2-details',
-        forks: [{
-            target: '/parent-1-euss-documents',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['parent1-euss'] === 'Yes'
-            }
-        }]
-    },
-    '/parent-1-euss-documents': {
-        fields: [
-            'parent1-euss-reference-number',
-            'parent1-euss-document-reference-number',
-            'parent1-euss-application-reference-number',
-            'parent1-euss-unknown-reference-number'
-        ],
-        next: '/parent-2-details'
-    }, 
-    
-    /* Version 2 for EUSS Parent 1 
-    '/parent-1-euss-documents-v2': {
-        fields: [
-            'parent1-euss-reference-number',
-            'parent1-euss-document-reference-number',
-            'parent1-euss-application-reference-number'
-        ],
-        backLink: './parent-1-euss-documents',
-        next: '/parent-2-details'
-    }, */
-    
+    },    
     '/parent-2-details': {
         fields: [
             'parent2-town-of-birth',
@@ -192,12 +165,7 @@ module.exports = {
                         req.session['hmpo-wizard-common']['passport-before'] == true ||
                         req.session['hmpo-wizard-common']['lost-stolen'] == true;
                 }
-            },  {
-                target: '/parent-2-euss-documents',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['parent2-euss'] === 'Yes'
-                }
-            },
+            }, 
             {
                 target: '/home-address-manual-prototype',
                 condition: function (req, res) {
@@ -213,15 +181,6 @@ module.exports = {
             //     }
             // }
         ]
-    },
-    '/parent-2-euss-documents': {
-        fields: [
-            'parent2-euss-reference-number',
-            'parent2-euss-document-reference-number',
-            'parent2-euss-application-reference-number',
-            'parent2-euss-unknown-reference-number'
-        ],
-        next: '/grandparents-intro'
     },
     '/grandparents-intro': {
         next: '/parent-1-grandparents'
