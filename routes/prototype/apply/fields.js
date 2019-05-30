@@ -502,7 +502,7 @@ module.exports = {
     'parent1-euss': {
         validate: 'required',
         legend: {
-            value: 'Did they have EU settled status when the applicant was born?',
+            value: 'Did they have settled status through the EU Settlement Scheme when you were born?',
             className: 'form-label-bold'
         },
         options: [{
@@ -696,7 +696,7 @@ module.exports = {
     'parent2-euss': {
         validate: 'required',
         legend: {
-            value: 'Did they have EU settled status when the applicant was born?',
+            value: 'Did they have settled status through the EU Settlement Scheme when you were born?',
             className: 'form-label-bold'
         },
         options: [{
