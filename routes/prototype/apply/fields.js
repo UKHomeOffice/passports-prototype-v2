@@ -508,16 +508,16 @@ module.exports = {
         options: [{
                 value: 'Yes',
                 label: 'Yes',
-                toggle: 'parent1-euss'
+                //toggle: 'parent1-euss'
             },
             {
                 value: 'No',
                 label: 'No',
-            },
+            }/*,
             {
                 value: 'Unknown',
                 label: 'I don’t know'
-            }
+            } */
         ],
         className: 'inline'
     },
@@ -702,16 +702,16 @@ module.exports = {
         options: [{
                 value: 'Yes',
                 label: 'Yes',
-                toggle: 'parent2-euss'
+                //toggle: 'parent2-euss'
             },
             {
                 value: 'No',
                 label: 'No',
-            },
+            }/*,
             {
                 value: 'Unknown',
                 label: 'I don’t know'
-            }
+            }*/
         ],
         className: 'inline'
     },    
