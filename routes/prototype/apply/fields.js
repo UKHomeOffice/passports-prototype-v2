@@ -508,73 +508,13 @@ module.exports = {
         options: [{
                 value: 'Yes',
                 label: 'Yes',
-                //toggle: 'parent1-euss'
             },
             {
                 value: 'No',
                 label: 'No',
-            }/*,
-            {
-                value: 'Unknown',
-                label: 'I don’t know'
-            } */
-        ],
-        className: 'inline'
-    },
-    'parent1-euss-reference-number': {
-        validate: 'required',
-        legend: {
-            value: 'Where will you get the reference from?',
-            className: 'form-label-bold'
-        },
-        options: [{
-                value: 'document-reference-number',
-                label: 'Their identity document',
-                toggle: 'parent1-euss-document-reference-number',
-                child: 'input-text'
-            },
-            {
-                value: 'application-reference-number',
-                label: 'The letter or email confirming their settled status',
-                toggle: 'parent1-euss-application-reference-number',
-                child: 'input-text'
-            },
-            {
-                value: 'unknown-reference-number',
-                label: 'I can\'t give either reference',
-                toggle: 'parent1-euss-unknown-reference-number',
-                child: 'textarea',
             }
         ],
-    },
-    'parent1-euss-document-reference-number': {
-        labelClassName: 'form-label-bold',
-        validate: ['required'],
-        dependent: { 
-            field: 'parent1-euss-reference-number', 
-            value: 'document-reference-number'
-        }
-    },
-    'parent1-euss-application-reference-number': {
-        labelClassName: 'form-label-bold',
-        validate: ['required'],
-        dependent: { 
-            field: 'parent1-euss-reference-number', 
-            value: 'application-reference-number'
-        }
-    },
-    'parent1-euss-unknown-reference-number': {
-        labelClassName: 'form-label-bold',
-        className: 'textarea',
-        validate: ['required'],
-        dependent: { 
-            field: 'parent1-euss-reference-number', 
-            value: 'unknown-reference-number'
-        }
-        // attributes: [{
-        //    attribute: 'rows', 
-        //    value: 5
-        //}]
+        className: 'inline'
     },
   
     // Parent 2
@@ -702,74 +642,14 @@ module.exports = {
         options: [{
                 value: 'Yes',
                 label: 'Yes',
-                //toggle: 'parent2-euss'
             },
             {
                 value: 'No',
                 label: 'No',
-            }/*,
-            {
-                value: 'Unknown',
-                label: 'I don’t know'
-            }*/
+            }
         ],
         className: 'inline'
     },    
-    'parent2-euss-reference-number': {
-        validate: 'required',
-        legend: {
-            value: 'Where will you get the reference from?',
-            className: 'form-label-bold'
-        },
-        options: [{
-                value: 'document-reference-number',
-                label: 'Their identity document',
-                toggle: 'parent2-euss-document-reference-number',
-                child: 'input-text'
-            },
-            {
-                value: 'application-reference-number',
-                label: 'The letter or email confirming their settled status',
-                toggle: 'parent2-euss-application-reference-number',
-                child: 'input-text'
-            },
-            {
-                value: 'unknown-reference-number',
-                label: 'I can\'t give either reference',
-                toggle: 'parent2-euss-unknown-reference-number',
-                child: 'textarea'
-            }
-        ],
-    },
-    'parent2-euss-document-reference-number': {
-        labelClassName: 'form-label-bold',
-        validate: ['required'],
-        dependent: { 
-            field: 'parent2-euss-reference-number', 
-            value: 'document-reference-number'
-        }
-    },
-    'parent2-euss-application-reference-number': {
-        labelClassName: 'form-label-bold',
-        validate: ['required'],
-        dependent: { 
-            field: 'parent2-euss-reference-number', 
-            value: 'application-reference-number'
-        }
-    },
-    'parent2-euss-unknown-reference-number': {
-        labelClassName: 'form-label-bold',
-        className: 'textarea',
-        validate: ['required'],
-        dependent: { 
-            field: 'parent2-euss-reference-number', 
-            value: 'unknown-reference-number'
-        }
-        // attributes: [{
-        //    attribute: 'rows', 
-        //    value: 5
-        // }]
-    },
 
     // Parent 1's parents
     'parent1-parents-married': {
