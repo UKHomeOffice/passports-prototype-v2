@@ -131,8 +131,8 @@ function clicks() {
     $('#yes').click();
 
     // Renew/Apply flow
-    // $('#title-Mr').click();
-    $('#title-Master').click();
+    $('#title-Mr').click();
+    // $('#title-Master').click();
     $('#previous-name-false').click();
     $('#gender-M').click();
     $('#born-in-uk-true').click();
