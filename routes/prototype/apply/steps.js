@@ -174,7 +174,8 @@ module.exports = {
             },
             {   /* No Grandparent details if: 
                    - If 1 or both Parents have EUSS
-                   - If 1 or both Parents were born born before 1983 */
+                   - If 1 or both Parents have EUSS and were after 1983
+                   - If 1 or both Parents were born before 1983 */
                 target: '/home-address-manual-prototype',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['parent1-euss'] == true || 
