@@ -171,7 +171,14 @@ module.exports = {
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
                 }
-            }
+            },
+            {   // If 1 or both Parents have EUSS, then we do not need the Grandparents details
+                target: '/home-address-manual-prototype',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['parent1-euss'] == true || 
+                           req.session['hmpo-wizard-common']['parent2-euss'] == true;
+                }
+            },
             // ,{
             //     target: '/home-address-manual-prototype',
             //     condition: function (req, res) { // Grandparents details logic
