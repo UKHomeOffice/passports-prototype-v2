@@ -152,7 +152,11 @@
 
     <hr>
 
-<!-- EUSS: ILR for Parent 1
+<!-- ## START: EUSS SPECIFIC DOCS LIST ## -->
+<!-- 
+    =============================================
+    EUSS: ILR for Parent 1
+    =============================================
     Parent 1 - UK Passport (Yes)
     Parent 1 - EUSS (No)
     Parent 2 - UK Passport (No)
@@ -160,7 +164,7 @@
 -->
 {% elif values['born-after-2006'] and values['born-in-uk'] and (values['parent1-uk-passport'] == 'Yes' and values['parent1-euss'] == false and values['parent2-uk-passport'] == 'No' and values['parent2-euss'] == true) %}
     <h2 class="govuk-heading-l">Parents' documents</h2>
-    <h3 class="govuk-heading-m">For the mother or parent 1 who had settled status through the EU Settlement Scheme, send the following:</h3>
+    <h3 class="govuk-heading-m">For the parent who had settled status through the EU Settlement Scheme, send the following:</h3>
     <ul class="list list-bullet">
         <li>their EU Settlement Scheme application reference number (for example 1234-5678-1234-5678) – you can find this on the letter or email confirming their settled status</li>
     </ul>
@@ -168,10 +172,12 @@
     <ul class="list list-bullet">
         <li>the non-British passport they had when you were born showing indefinite leave to remain</li>
     </ul>
-
     <hr>
 
-<!-- EUSS: ILR for Parent 1
+<!-- 
+    =============================================
+    EUSS: ILR for Parent 1
+    =============================================
     Parent 1 - UK Passport (Yes)
     Parent 1 - EUSS (No)
     Parent 2 - UK Passport (Yes)
@@ -179,7 +185,7 @@
 -->
 {% elif values['born-after-2006'] and values['born-in-uk'] and (values['parent1-uk-passport'] == 'Yes' and values['parent1-euss'] == false and values['parent2-uk-passport'] == 'Yes' and values['parent2-euss'] == true) %}
     <h2 class="govuk-heading-l">Parents' documents</h2>
-    <h3 class="govuk-heading-m">For the mother or parent 1 who had settled status through the EU Settlement Scheme, send the following:</h3>
+    <h3 class="govuk-heading-m">For the parent who had settled status through the EU Settlement Scheme, send the following:</h3>
     <ul class="list list-bullet">
         <li>their EU Settlement Scheme application reference number (for example 1234-5678-1234-5678) – you can find this on the letter or email confirming their settled status</li>
     </ul>
@@ -187,10 +193,12 @@
     <ul class="list list-bullet">
         <li>the non-British passport they had when you were born showing indefinite leave to remain</li>
     </ul>
-
     <hr>
 
-<!-- EUSS: ILR for Parent 2
+<!-- 
+    =============================================
+    EUSS: ILR for Parent 2
+    =============================================
     Parent 1 - UK Passport (No)
     Parent 1 - EUSS (Yes)
     Parent 2 - UK Passport (Yes)
@@ -198,7 +206,7 @@
 -->
 {% elif values['born-after-2006'] and values['born-in-uk'] and (values['parent1-uk-passport'] == 'No' and values['parent1-euss'] == true and values['parent2-uk-passport'] == 'Yes' and values['parent2-euss'] == false) %}
     <h2 class="govuk-heading-l">Parents' documents</h2>
-    <h3 class="govuk-heading-m">For the father or parent 2 who had settled status through the EU Settlement Scheme, send the following:</h3>
+    <h3 class="govuk-heading-m">For the parent who had settled status through the EU Settlement Scheme, send the following:</h3>
     <ul class="list list-bullet">
         <li>their EU Settlement Scheme application reference number (for example 1234-5678-1234-5678) – you can find this on the letter or email confirming their settled status</li>
     </ul>
@@ -206,10 +214,12 @@
     <ul class="list list-bullet">
         <li>the non-British passport they had when you were born showing indefinite leave to remain</li>
     </ul>
-
     <hr>
 
-<!-- EUSS: ILR for Parent 2
+<!-- 
+    =============================================
+    EUSS: ILR for Parent 2
+    =============================================
     Parent 1 - UK Passport (Yes)
     Parent 1 - EUSS (Yes)
     Parent 2 - UK Passport (Yes)
@@ -217,7 +227,7 @@
 -->
 {% elif values['born-after-2006'] and values['born-in-uk'] and (values['parent1-uk-passport'] == 'Yes' and values['parent1-euss'] == true and values['parent2-uk-passport'] == 'Yes' and values['parent2-euss'] == false) %}
     <h2 class="govuk-heading-l">Parents' documents</h2>
-    <h3 class="govuk-heading-m">For the father or parent 2 who had settled status through the EU Settlement Scheme, send the following:</h3>
+    <h3 class="govuk-heading-m">For the parent who had settled status through the EU Settlement Scheme, send the following:</h3>
     <ul class="list list-bullet">
         <li>their EU Settlement Scheme application reference number (for example 1234-5678-1234-5678) – you can find this on the letter or email confirming their settled status</li>
     </ul>
@@ -225,8 +235,168 @@
     <ul class="list list-bullet">
         <li>the non-British passport they had when you were born showing indefinite leave to remain</li>
     </ul>
-
     <hr>
+
+<!-- 
+    =============================================
+    EUSS: birth, naturalisation, ILR for Parent 1
+    =============================================
+    Parent 1 - UK Passport (No)
+    Parent 1 - EUSS (No)
+    Parent 2 - UK Passport (No)
+    Parent 2 - EUSS (Yes)
+-->
+{% elif values['born-after-2006'] and values['born-in-uk'] and (values['parent1-uk-passport'] == 'No' and values['parent1-euss'] == false and values['parent2-uk-passport'] == 'No' and values['parent2-euss'] == true) %}
+    <h2 class="govuk-heading-l">Parents' documents</h2>
+    <h3 class="govuk-heading-m">For the parent who had settled status through the EU Settlement Scheme, send the following:</h3>
+    <ul class="list list-bullet">
+        <li>their EU Settlement Scheme application reference number (for example 1234-5678-1234-5678) – you can find this on the letter or email confirming their settled status</li>
+    </ul>
+    <h3 class="govuk-heading-m">For the parent who didn't have settled status through the EU Settlement Scheme, send 1 of the following:</h3>
+    <ul class="list list-bullet">
+        <li>full birth or adoption certificate</li>
+        <li>naturalisation or registration certificate</li>
+        <li>the non-British passport they had when you were born showing indefinite leave to remain</li>
+    </ul>
+    <hr>
+
+<!-- 
+    =============================================
+    EUSS: birth, naturalisation, ILR for Parent 1
+    =============================================
+    Parent 1 - UK Passport (No)
+    Parent 1 - EUSS (No)
+    Parent 2 - UK Passport (Yes)
+    Parent 2 - EUSS (Yes)
+-->
+{% elif values['born-after-2006'] and values['born-in-uk'] and (values['parent1-uk-passport'] == 'No' and values['parent1-euss'] == false and values['parent2-uk-passport'] == 'Yes' and values['parent2-euss'] == true) %}
+    <h2 class="govuk-heading-l">Parents' documents</h2>
+    <h3 class="govuk-heading-m">For the parent who had settled status through the EU Settlement Scheme, send the following:</h3>
+    <ul class="list list-bullet">
+        <li>their EU Settlement Scheme application reference number (for example 1234-5678-1234-5678) – you can find this on the letter or email confirming their settled status</li>
+    </ul>
+    <h3 class="govuk-heading-m">For the parent who didn't have settled status through the EU Settlement Scheme, send 1 of the following:</h3>
+    <ul class="list list-bullet">
+        <li>full birth or adoption certificate</li>
+        <li>naturalisation or registration certificate</li>
+        <li>the non-British passport they had when you were born showing indefinite leave to remain</li>
+    </ul>
+    <hr>
+
+<!--
+    =============================================
+    EUSS: birth, naturalisation, ILR for Parent 2
+    =============================================
+    Parent 1 - UK Passport (No)
+    Parent 1 - EUSS (Yes)
+    Parent 2 - UK Passport (No)
+    Parent 2 - EUSS (No)
+-->
+{% elif values['born-after-2006'] and values['born-in-uk'] and (values['parent1-uk-passport'] == 'No' and values['parent1-euss'] == true and values['parent2-uk-passport'] == 'No' and values['parent2-euss'] == false) %}
+    <h2 class="govuk-heading-l">Parents' documents</h2>
+    <h3 class="govuk-heading-m">For the parent who had settled status through the EU Settlement Scheme, send the following:</h3>
+    <ul class="list list-bullet">
+        <li>their EU Settlement Scheme application reference number (for example 1234-5678-1234-5678) – you can find this on the letter or email confirming their settled status</li>
+    </ul>
+    <h3 class="govuk-heading-m">For the parent who didn't have settled status through the EU Settlement Scheme, send 1 of the following:</h3>
+    <ul class="list list-bullet">
+        <li>full birth or adoption certificate</li>
+        <li>naturalisation or registration certificate</li>
+        <li>the non-British passport they had when you were born showing indefinite leave to remain</li>
+    </ul>
+    <hr>
+
+<!-- 
+    =============================================
+    EUSS: birth, naturalisation, ILR for Parent 2
+    =============================================
+    Parent 1 - UK Passport (Yes)
+    Parent 1 - EUSS (Yes)
+    Parent 2 - UK Passport (No)
+    Parent 2 - EUSS (No)
+-->
+{% elif values['born-after-2006'] and values['born-in-uk'] and (values['parent1-uk-passport'] == 'Yes' and values['parent1-euss'] == true and values['parent2-uk-passport'] == 'No' and values['parent2-euss'] == false) %}
+    <h2 class="govuk-heading-l">Parents' documents</h2>
+    <h3 class="govuk-heading-m">For the parent who had settled status through the EU Settlement Scheme, send the following:</h3>
+    <ul class="list list-bullet">
+        <li>their EU Settlement Scheme application reference number (for example 1234-5678-1234-5678) – you can find this on the letter or email confirming their settled status</li>
+    </ul>
+    <h3 class="govuk-heading-m">For the parent who didn't have settled status through the EU Settlement Scheme, send 1 of the following:</h3>
+    <ul class="list list-bullet">
+        <li>full birth or adoption certificate</li>
+        <li>naturalisation or registration certificate</li>
+        <li>the non-British passport they had when you were born showing indefinite leave to remain</li>
+    </ul>
+    <hr>
+
+<!-- 
+    =============================================
+    EUSS: Just EUSS references
+    =============================================
+    Parent 1 - UK Passport (No)
+    Parent 1 - EUSS (Yes)
+    Parent 2 - UK Passport (No)
+    Parent 2 - EUSS (Yes)
+-->
+{% elif values['born-after-2006'] and values['born-in-uk'] and (values['parent1-uk-passport'] == 'No' and values['parent1-euss'] == true and values['parent2-uk-passport'] == 'No' and values['parent2-euss'] == true) %}
+    <h2 class="govuk-heading-l">Parents' documents</h2>
+    <h3 class="govuk-heading-m">For each parent, send the following:</h3>
+    <ul class="list list-bullet">
+        <li>their EU Settlement Scheme application reference number (for example 1234-5678-1234-5678) – you can find this on the letter or email confirming their settled status</li>
+    </ul>
+    <hr>
+
+<!--
+    =============================================
+    EUSS: Just EUSS references
+    =============================================
+    Parent 1 - UK Passport (No)
+    Parent 1 - EUSS (Yes)
+    Parent 2 - UK Passport (Yes)
+    Parent 2 - EUSS (Yes)
+-->
+{% elif values['born-after-2006'] and values['born-in-uk'] and (values['parent1-uk-passport'] == 'No' and values['parent1-euss'] == true and values['parent2-uk-passport'] == 'Yes' and values['parent2-euss'] == true) %}
+    <h2 class="govuk-heading-l">Parents' documents</h2>
+    <h3 class="govuk-heading-m">For each parent, send the following:</h3>
+    <ul class="list list-bullet">
+        <li>their EU Settlement Scheme application reference number (for example 1234-5678-1234-5678) – you can find this on the letter or email confirming their settled status</li>
+    </ul>
+    <hr>
+
+<!-- 
+    =============================================
+    EUSS: Just EUSS references
+    =============================================
+    Parent 1 - UK Passport (Yes)
+    Parent 1 - EUSS (Yes)
+    Parent 2 - UK Passport (No)
+    Parent 2 - EUSS (Yes)
+-->
+{% elif values['born-after-2006'] and values['born-in-uk'] and (values['parent1-uk-passport'] == 'Yes' and values['parent1-euss'] == true and values['parent2-uk-passport'] == 'No' and values['parent2-euss'] == true) %}
+    <h2 class="govuk-heading-l">Parents' documents</h2>
+    <h3 class="govuk-heading-m">For each parent, send the following:</h3>
+    <ul class="list list-bullet">
+        <li>their EU Settlement Scheme application reference number (for example 1234-5678-1234-5678) – you can find this on the letter or email confirming their settled status</li>
+    </ul>
+    <hr>
+
+<!-- 
+    =============================================
+    EUSS: Just EUSS references
+    =============================================
+    Parent 1 - UK Passport (Yes)
+    Parent 1 - EUSS (Yes)
+    Parent 2 - UK Passport (Yes)
+    Parent 2 - EUSS (Yes)
+-->
+{% elif values['born-after-2006'] and values['born-in-uk'] and (values['parent1-uk-passport'] == 'Yes' and values['parent1-euss'] == true and values['parent2-uk-passport'] == 'Yes' and values['parent2-euss'] == true) %}
+    <h2 class="govuk-heading-l">Parents' documents</h2>
+    <h3 class="govuk-heading-m">For each parent, send the following:</h3>
+    <ul class="list list-bullet">
+        <li>their EU Settlement Scheme application reference number (for example 1234-5678-1234-5678) – you can find this on the letter or email confirming their settled status</li>
+    </ul>
+    <hr>
+<!-- ## END: EUSS SPECIFIC DOCS LIST ## -->
 
 <!-- OLC PDF 6 copy of 4 -->
 {% elif values['born-after-2006'] and (values['parent1-born-before-1983'] and values['parent2-born-before-1983']) %}
