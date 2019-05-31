@@ -685,7 +685,13 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     if (values['naturalisation-registration-certificate'] == true || // Naturalised or registered
         values['born-before-1983'] == true || // Born Before 01/01/1983
         values['old-blue'] == true || // Passport issued Before 01/01/1994 (Old blue) Hidden FTA
-        values['passport-before'] == true // 12-15s renewals that may have parents details, but not grandparents
+        values['passport-before'] == true || // 12-15s renewals that may have parents details, but not grandparents
+
+        // EUSS only 
+        values['parent1-euss'] == true || 
+        values['parent2-euss'] == true ||
+        (values['parent1-born-before-1983'] == true && values['parent1-euss'] == false) ||
+        (values['parent2-born-before-1983'] == true && values['parent2-euss'] == false) 
     ) {
         console.log('DELETE grandparents fields')
         response.sections.pop({
