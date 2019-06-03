@@ -286,7 +286,7 @@
         },
         "parent1-country-of-nationality": {
             "label": "Nationality",
-            "hint": "At the time of the applicant's birth"
+            "hint": "At the time of your birth"
         },
         "parent1-age-day": {
             "label": "Day"
@@ -327,7 +327,7 @@
         },
         "parent2-country-of-nationality": {
             "label": "Nationality",
-            "hint": "At the time of the applicant's birth"
+            "hint": "At the time of your birth"
         },
         "parent2-age-day": {
             "label": "Day"
