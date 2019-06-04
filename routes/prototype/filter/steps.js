@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-        fields: ['apply-uk', 'application-country'],
+        fields: ['application-country'],
         backLink: '../',
         next: '/first-uk',
         controller: require('../../../controllers/is-overseas'), // Sets the country to GB if not overseas
@@ -11,7 +11,31 @@ module.exports = {
                     req.session['hmpo-wizard-common']['application-country'] == 'SY'
                 );
             }
-        }]
+        },{
+            target: '/crown-ds',
+            condition: function (req, res) {
+                return (
+                    req.session['hmpo-wizard-common']['application-country'] == 'GG'
+                );
+            }
+        },
+        {
+            target: '/crown-ds',
+            condition: function (req, res) {
+                return (
+                    req.session['hmpo-wizard-common']['application-country'] == 'JE'
+                );
+            }
+        },
+        {
+            target: '/crown-ds',
+            condition: function (req, res) {
+                return (
+                    req.session['hmpo-wizard-common']['application-country'] == 'IM'
+                );
+            }
+        }
+    ]
     },
     '/first-uk': {
         backLink: './',
@@ -25,6 +49,8 @@ module.exports = {
         }]
     },
     '/you-need-a-different-service': {},
+    '/crown-ds': {},
+
     '/lost-stolen': {
         fields: ['lost-stolen'],
         next: '/dob',

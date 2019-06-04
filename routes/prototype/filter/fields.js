@@ -116,28 +116,28 @@ module.exports = {
             }
         ]
     },
-    'apply-uk': {
-        legend: {
-            value: 'Are you applying from the UK?',
-            className: 'visuallyhidden'
-        },
-        options: [{
-                value: true,
-                label: 'Yes'
-            },
-            {
-                value: false,
-                label: 'No',
-                toggle: 'application-country',
-                child: 'select'
-            }
-        ],
-        formatter: ['boolean'],
-        /*validate: [
-            'required'
-        ],*/
-        className: 'inline'
-    },
+    // 'apply-uk': {
+    //     legend: {
+    //         value: 'Where do you live?',
+    //         className: 'visuallyhidden'
+    //     },
+    //     options: [{
+    //             value: true,
+    //             label: 'Yes'
+    //         },
+    //         {
+    //             value: 'false',
+    //             label: 'No',
+    //             toggle: 'application-country',
+    //             child: 'select'
+    //         }
+    //     ],
+    //     formatter: ['boolean'],
+    //     /*validate: [
+    //         'required'
+    //     ],*/
+    //     className: 'inline'
+    // },
     '16-or-older': {
         legend: {
             value: 'Are you 16 or older?',
@@ -292,26 +292,18 @@ module.exports = {
             value: '',
             label: ' '
         }].concat(
-            _.map(
-                countries.filter(function (c) {
-                    if (c.countryCode.split('.').pop() === 'GB') {
-                        return false; // skip
-                    }
-                    return true;
-                }),
-                function (c) {
-                    return {
-                        value: c.displayName,
-                        label: c.displayName
-                    };
-                }
-            )
+            _.map(countries, function (c) {
+                return {
+                    value: c.countryCode,
+                    label: c.displayName
+                };
+            })
         ),
         validate: ['required'],
-        dependent: {
-            field: 'apply-uk',
-            value: false
-        }
+        // dependent: {
+        //     field: 'apply-uk',
+        //     value: false
+        // }
     },
     'country-birth': {
         options: [{

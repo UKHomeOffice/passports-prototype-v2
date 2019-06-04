@@ -4,7 +4,7 @@
 {{$pageTitle}}Are you applying from the UK?{{/pageTitle}}
 
 {{$header}}
-    <h1>Do you live in the UK?</h1>
+    <h1>Where do you live?</h1>
 
 {{/header}}
 
@@ -12,7 +12,8 @@
 {{< hmpo-partials-form}}
     {{$form}}
         <p class="form-hint">If you're applying on behalf of an adult or child, answer these questions with their details rather than your own.</p>
-        {{#radio-group}}apply-uk{{/radio-group}}
+        <p>
+        {{#select}}application-country{{/select}}
         {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}

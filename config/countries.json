@@ -7,6 +7,30 @@
         "ndd": "0"
     }
 }, {
+    "countryCode": "GG",
+    "displayName": "Guernsey",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "44",
+        "ndd": "0"
+    }
+}, {
+    "countryCode": "JE",
+    "displayName": "Jersey",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "44",
+        "ndd": "0"
+    }
+},{
+    "countryCode": "IM",
+    "displayName": "Isle of Man",
+    "diallingDetails": {
+        "idd": "0",
+        "code": "44",
+        "ndd": "0"
+    }
+},{
     "countryCode": "AF",
     "displayName": "Afghanistan",
     "diallingDetails": {
@@ -679,14 +703,6 @@
         "ndd": "NONE"
     }
 }, {
-    "countryCode": "GG",
-    "displayName": "Guernsey",
-    "diallingDetails": {
-        "idd": "0",
-        "code": "44",
-        "ndd": "0"
-    }
-}, {
     "countryCode": "GN",
     "displayName": "Guinea",
     "diallingDetails": {
@@ -790,15 +806,7 @@
         "code": "353",
         "ndd": "0"
     }
-}, {
-    "countryCode": "IM",
-    "displayName": "Isle of Man",
-    "diallingDetails": {
-        "idd": "0",
-        "code": "44",
-        "ndd": "0"
-    }
-}, {
+},  {
     "countryCode": "IL",
     "displayName": "Israel",
     "diallingDetails": {
@@ -830,15 +838,7 @@
         "code": "81",
         "ndd": "0"
     }
-}, {
-    "countryCode": "JE",
-    "displayName": "Jersey",
-    "diallingDetails": {
-        "idd": "0",
-        "code": "44",
-        "ndd": "0"
-    }
-}, {
+},  {
     "countryCode": "JO",
     "displayName": "Jordan",
     "diallingDetails": {
