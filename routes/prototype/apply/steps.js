@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-        backLink: '../photo/final-checks',
+        backLink: '../filter/summary',
         fields: [
             'passport-number',
             'expiry-day',

@@ -147,24 +147,8 @@ module.exports = {
     },
     '/check-and-submit-passed-photo': {
         fields: ['submit-photo'],
-        next: '/../apply',
+        next: '/../filter',
         forks: [{
-            target: '/../apply',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
-            }
-            
-        },{
-            target: '/../apply/lost-stolen-passport',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['lost-stolen'] == true; // If their passport is lost/stolen
-            }
-        }, {
-            target: '/../apply/name',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
-            }
-        }, {
             target: '/../photo',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['submit-photo'] == false;
@@ -173,23 +157,8 @@ module.exports = {
     },
     '/check-and-submit-photo': {
         fields: ['oix-override', 'oix-override-reason'],
-        next: '/../apply',
+        next: '/../filter',
         forks: [{
-            target: '/../apply',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
-            }
-        }, { 
-            target: '/../apply/lost-stolen-passport',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['lost-stolen'] == true; // If their passport is lost/stolen
-            }
-        }, {
-            target: '/../apply/name',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
-            }
-        }, {
             target: '/../photo',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['oix-override'] == false;
