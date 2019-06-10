@@ -499,28 +499,29 @@ module.exports = {
         //     }
         // ]
     },
-    
-    'parent1-euss': {
+
+    'either-parents-euss': {
         legend: {
-            value: 'Did they have settled status through the EU Settlement Scheme when you were born?',
-            className: 'form-label-bold'
+            value: 'Did either of your parents have settled status from the EU Settlement Scheme when you were born?',
+            className: 'visuallyhidden'
         },
-        className: 'inline',
         options: [{
-                value: true,
+                value: 'Yes',
                 label: 'Yes'
             },
             {
-                value: false,
+                value: 'No',
                 label: 'No'
+            },
+            {
+                value: 'Unknown',
+                label: 'I don’t know'
             }
-        ],
-        formatter: [
-            'boolean'
         ],
         validate: [
             'required'
-        ]
+        ],
+        className: 'inline'
     },
   
     // Parent 2
@@ -638,29 +639,6 @@ module.exports = {
         //   value: false
         // }
     },
-
-    'parent2-euss': {
-        legend: {
-            value: 'Did they have settled status through the EU Settlement Scheme when you were born?',
-            className: 'form-label-bold'
-        },
-        className: 'inline',
-        options: [{
-                value: true,
-                label: 'Yes'
-            },
-            {
-                value: false,
-                label: 'No'
-            }
-        ],
-        formatter: [
-            'boolean'
-        ],
-        validate: [
-            'required'
-        ]
-    },  
 
     // Parent 1's parents
     'parent1-parents-married': {

@@ -127,6 +127,20 @@ module.exports = {
             'marriage-month',
             'marriage-year'
         ],
+        next: '/parent-1-details',
+        forks: [{
+            target: '/parents-euss',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['born-in-uk'] == true &&
+                       req.session['hmpo-wizard-common']['born-after-2018'] == true && 
+                       req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == false;
+            }
+        }]
+    },
+    '/parents-euss': {
+        fields: [
+            'either-parents-euss'
+        ],
         next: '/parent-1-details'
     },
     '/parent-1-details': {
@@ -138,10 +152,9 @@ module.exports = {
             'parent1-passport-number',
             'parent1-passport-issue-day',
             'parent1-passport-issue-month',
-            'parent1-passport-issue-year',
-            'parent1-euss'
+            'parent1-passport-issue-year'
         ],
-        next: '/parent-2-details',
+        next: '/parent-2-details'
     },    
     '/parent-2-details': {
         fields: [
@@ -152,8 +165,7 @@ module.exports = {
             'parent2-passport-number',
             'parent2-passport-issue-day',
             'parent2-passport-issue-month',
-            'parent2-passport-issue-year',
-            'parent2-euss'
+            'parent2-passport-issue-year'
         ],
         next: '/grandparents-intro',
         forks: [{
@@ -172,18 +184,12 @@ module.exports = {
                     return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
                 }
             },
-            {   /* No Grandparent details if: 
-                   - If 1 or both Parents have EUSS
-                   - If 1 or both Parents have EUSS and were after 1983
-                   - If 1 or both Parents were born before 1983 */
+           {    // No Grandparent details if either parents have EUSS
                 target: '/home-address-manual-prototype',
                 condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['parent1-euss'] == true || 
-                           req.session['hmpo-wizard-common']['parent2-euss'] == true ||
-                           (req.session['hmpo-wizard-common']['parent1-born-before-1983'] == true && req.session['hmpo-wizard-common']['parent1-euss'] == false) ||
-                           (req.session['hmpo-wizard-common']['parent1-born-before-1983'] == true && req.session['hmpo-wizard-common']['parent2-euss'] == false);
+                    return req.session['hmpo-wizard-common']['either-parents-euss'];
                 }
-            },
+            }
             // ,{
             //     target: '/home-address-manual-prototype',
             //     condition: function (req, res) { // Grandparents details logic

@@ -1,0 +1,31 @@
+{{< layout}}
+
+{{$pageTitle}}Did either of your parents have settled status from the EU Settlement Scheme when you were born?{{/pageTitle}}
+
+{{$header}}
+
+<h1>Did either of your parents have settled status from the EU Settlement Scheme when you were born?</h1>
+
+{{/header}}
+
+{{$content}}
+
+<p>Only tell us if they had <a href="https://www.gov.uk/settled-status-eu-citizens-families/applying-for-settled-status" target="_blank">EU settled status</a>, not pre-settled status.</p>
+
+{{< hmpo-partials-form}}
+{{$form}}
+
+    {{#values.born-in-uk}}
+        {{#values.born-after-2018}}
+            {{#radio-group}}either-parents-euss{{/radio-group}}
+        {{/values.born-after-2018}}
+    {{/values.born-in-uk}}
+
+    {{#input-submit}}{{/input-submit}}
+
+{{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}

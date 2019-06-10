@@ -597,14 +597,15 @@
             "required": "You must answer this question"
         },
 
+        "either-parents-euss": {
+            "required": "You must answer this question"
+        },
+
         "parent1-additional-information": {
             "required": "Explain why you can't provide details for mother or parent 1"
         },
         "parent1-uk-passport": {
             "required": "Select if parent 1 has a UK passport"
-        },
-        "parent1-euss": {
-            "required": "Select if parent 1 had settled status through the EU Settlement Scheme when the applicant was born"
         },
 
         "parent2-additional-information": {
@@ -612,9 +613,6 @@
         },
         "parent2-uk-passport": {
             "required": "Select if parent 2 has a UK passport"
-        },
-        "parent2-euss": {
-            "required": "Select if parent 2 had settled status through the EU Settlement Scheme when the applicant was born"
         },
 
         "parent1-parents-married": {

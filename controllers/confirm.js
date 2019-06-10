@@ -343,6 +343,10 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         step: this.getEditStep('marriage-year'),
         title: 'Marriage date',
         value: parentsDateOfMarriage.isValid() ? parentsDateOfMarriage.format('D MMMM YYYY') : ''
+    }, {
+        step: this.getEditStep('either-parents-euss'),
+        title: 'EU settled status',
+        value: values['either-parents-euss']
     });
 
 
@@ -383,22 +387,6 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         title: 'Date of issue',
         value: parent1DateOfIssue.isValid() ? parent1DateOfIssue.format('D MMMM YYYY') : ''
     });
-    
-    // parent 1 EUSS selection
-    if (values['parent1-euss'] == true) {
-        parent1Fields.push({
-            step: this.getEditStep('parent1-euss'),
-            title: 'EU settled status',
-            value: 'Yes'
-        });
-    }
-    else {
-        parent1Fields.push({
-            step: this.getEditStep('parent1-euss'),
-            title: 'EU settled status',
-            value: 'No'
-        });
-    }
 
     if (values['parent1-additional-information']) { // If mother additional information is NOT empty
         parent1Fields.push({
@@ -445,22 +433,6 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         title: 'Date of issue',
         value: parent2DateOfIssue.isValid() ? parent2DateOfIssue.format('D MMMM YYYY') : ''
     });
-
-    // parent 2 EUSS selection
-    if (values['parent2-euss'] == true) {
-        parent2Fields.push({
-            step: this.getEditStep('parent2-euss'),
-            title: 'EU settled status',
-            value: 'Yes'
-        });
-    }
-    else {
-        parent2Fields.push({
-            step: this.getEditStep('parent2-euss'),
-            title: 'EU settled status',
-            value: 'No'
-        });
-    }
 
     if (values['parent2-additional-information']) { // If father additional information is NOT empty
         parent2Fields.push({
@@ -688,10 +660,9 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         values['passport-before'] == true || // 12-15s renewals that may have parents details, but not grandparents
 
         // EUSS only 
-        values['parent1-euss'] == true || 
-        values['parent2-euss'] == true ||
-        (values['parent1-born-before-1983'] == true && values['parent1-euss'] == false) ||
-        (values['parent2-born-before-1983'] == true && values['parent2-euss'] == false) 
+        values['either-parents-euss'] == 'Yes' || 
+        values['either-parents-euss'] == 'No' ||
+        values['either-parents-euss'] == 'Unknown'
     ) {
         console.log('DELETE grandparents fields')
         response.sections.pop({
