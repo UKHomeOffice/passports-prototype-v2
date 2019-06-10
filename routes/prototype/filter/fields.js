@@ -436,26 +436,23 @@ module.exports = {
     },
     'british-citizen': {
         legend: {
-            value: 'Are you a British Citizen?',
-            className: 'visuallyhidden'
+          value: 'What nationality is written on your passport?',
+          className: 'visuallyhidden'
         },
         options: [{
-                value: true,
-                label: 'Yes'
-            },
-            {
-                value: false,
-                label: 'No',
-                toggle: 'other-nationality',
-                child: 'select'
-            }
-        ],
-        formatter: ['boolean'],
-        /*validate: [
+          value: 'British Citizen',
+          label: 'British Citizen'
+        }, {
+          value: 'British National Overseas',
+          label: 'British National Overseas'
+        }, {
+          value: 'Other',
+          label: 'Other'
+        }],
+        validate: [
           'required'
-        ],*/
-        className: 'inline'
-    },
+        ],
+      },
 
     'other-nationality': {
         options: [{
