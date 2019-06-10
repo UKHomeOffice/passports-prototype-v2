@@ -111,7 +111,7 @@ module.exports = {
     '/passport-damaged': {
         controller: require('../../../controllers/app-type'),
         fields: ['passport-damaged', 'damaged-reason'],
-        next: '/british-citizen', // If they are NOT a UK Hidden FTA
+        next: '/dual-national', // If they are NOT a UK Hidden FTA
         forks: [{
             // If they are a UK Hidden FTA
             target: '/naturalisation-registration-details',
@@ -121,16 +121,20 @@ module.exports = {
         }]
     },
     '/dual-national': {
-        fields: ['dual-nationality'],
+        fields: [
+            'dual-nationality'
+        ],
         next: '/summary',
-        controller: require('../../../controllers/app-type'), // Sets the application-type to be used for the rest of the journey
+        controller: require('../../../controllers/app-type.js'), // Sets the application-type to be used for the rest of the journey
         forks: [{
-            target: '/summary',
+            target: '/british-citizen',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'];
+                return req.session['hmpo-wizard-common']['is-overseas'] === true &&
+                    req.session['hmpo-wizard-common']['passport-before']
             }
         }]
     },
+
     '/british-citizen': {
         fields: [
             'british-citizen'
@@ -144,16 +148,16 @@ module.exports = {
         }]
     },
 
-    '/change-nationality': {
-        // Change of national status journey
-        fields: ['change-nationality'],
-        next: '/naturalisation-certificate'
-    },
-    '/naturalisation-certificate': {
-        // Change of national status journey
-        fields: ['naturalisation-registration-certificate'],
-        next: '/summary'
-    },
+    // '/change-nationality': {
+    //     // Change of national status journey
+    //     fields: ['change-nationality'],
+    //     next: '/naturalisation-certificate'
+    // },
+    // '/naturalisation-certificate': {
+    //     // Change of national status journey
+    //     fields: ['naturalisation-registration-certificate'],
+    //     next: '/summary'
+    //},
     '/summary': {
         next: '/../intro'
     }
