@@ -444,7 +444,7 @@ module.exports = {
           label: 'British Citizen'
         }, {
           value: 'British National Overseas',
-          label: 'British National Overseas'
+          label: 'British National Overseas (usually resident in Hong Kong)'
         }, {
           value: 'Other',
           label: 'Other'
