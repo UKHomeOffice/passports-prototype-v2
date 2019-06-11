@@ -60,7 +60,7 @@ module.exports = {
                 target: '/country-birth',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['passport-before'] == false &&
-                        req.session['hmpo-wizard-common']['application-country'] !== ''
+                        req.session['hmpo-wizard-common']['application-country'] !== 'GB'
                 }
             }
         ]
