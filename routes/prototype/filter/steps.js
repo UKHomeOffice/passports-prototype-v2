@@ -55,14 +55,14 @@ module.exports = {
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['passport-before'] == false;
                 }
+            },
+            {
+                target: '/country-birth',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['passport-before'] == false &&
+                        req.session['hmpo-wizard-common']['application-country'] !== ''
+                }
             }
-            // ,{
-            //     target: '/country-birth',
-            //     condition: function (req, res) {
-            //         return req.session['hmpo-wizard-common']['passport-before'] == false &&
-            //             req.session['hmpo-wizard-common']['application-country'] !== ''
-            //     }
-            // }
         ]
     },
     '/country-birth': {
@@ -100,8 +100,12 @@ module.exports = {
             target: '/british-citizen',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['lost-stolen'] == true;
+            },
+            target: '/../overseas/information/afghanistan',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['application-country'] == 'Afghanistan'
             }
-        }]
+            }]
         // Issue date = 91 - 03 && Issue auth = Other && Over 16 = Yes
         // Issue date = 91 - 03 && Issue auth = HMPO && Over 16 = Yes
         // Issue date = 94 - 97 && Issue auth = HMPO && Over 16 = Yes
@@ -140,12 +144,12 @@ module.exports = {
             'british-citizen'
         ],
         next: '/summary',
-        forks: [{
-            target: '/../overseas/overseas-british',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['british-citizen'] == 'Other'
-            }
-        }]
+    //    forks: [{
+    //        target: '/../overseas/overseas-british',
+    //        condition: function (req, res) {
+    //            return req.session['hmpo-wizard-common']['british-citizen'] == 'Other'
+    //        }
+    //    }]
     },
 
     // '/change-nationality': {
