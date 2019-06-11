@@ -660,9 +660,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         values['passport-before'] == true || // 12-15s renewals that may have parents details, but not grandparents
 
         // EUSS only 
-        values['either-parents-euss'] == 'Yes' || 
-        values['either-parents-euss'] == 'No' ||
-        values['either-parents-euss'] == 'Unknown'
+        values['either-parents-euss'] == 'Yes'
     ) {
         console.log('DELETE grandparents fields')
         response.sections.pop({

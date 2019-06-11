@@ -187,17 +187,9 @@ module.exports = {
            {    // No Grandparent details if either parents have EUSS
                 target: '/home-address-manual-prototype',
                 condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['either-parents-euss'];
+                    return req.session['hmpo-wizard-common']['either-parents-euss'] == 'Yes';
                 }
             }
-            // ,{
-            //     target: '/home-address-manual-prototype',
-            //     condition: function (req, res) { // Grandparents details logic
-            //         return req.session['hmpo-wizard-common']['passport-before'] === false &&
-            //             (req.session['hmpo-wizard-common']['parent1-uk-passport'] === 'Yes' && req.session['hmpo-wizard-common']['parents-married'] === 'Yes') ||
-            //             (req.session['hmpo-wizard-common']['parent1-uk-passport'] === 'Yes' && req.session['hmpo-wizard-common']['parent2-uk-passport'] === 'Yes')
-            //     }
-            // }
         ]
     },
     '/grandparents-intro': {
