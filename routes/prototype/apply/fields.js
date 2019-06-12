@@ -520,8 +520,7 @@ module.exports = {
         ],
         validate: [
             'required'
-        ],
-        className: 'inline'
+        ]
     },
   
     // Parent 2
