@@ -1,21 +1,34 @@
 {{< layout}}
-{{$propositionHeader}}
-{{/propositionHeader}}
-{{$pageTitle}}Are you applying from the UK?{{/pageTitle}}
 
-{{$header}}
-    <h1>Do you live in the UK?</h1>
+{{$pageTitle}}Apply online for UK passport{{/pageTitle}}
 
-{{/header}}
+{{$main-content}}
 
-{{$content}}
 {{< hmpo-partials-form}}
-    {{$form}}
-        <p class="form-hint">If you're applying on behalf of an adult or child, answer these questions with their details rather than your own.</p>
-        {{#radio-group}}apply-uk{{/radio-group}}
-        {{#input-submit}}{{/input-submit}}
-    {{/form}}
+{{$form}}
+
+<div class="column-full">
+    <div class="flash-card">
+        <header>
+            <h1>Apply online for UK passport</h1>
+        </header>
+
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+                <p>If you're applying on behalf of an adult or child, answer these questions with their details rather than your own.</p>
+
+                <br>
+
+                {{#input-submit}}{{/input-submit}}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/form}}
 {{/ hmpo-partials-form}}
-{{/content}}
+
+{{/main-content}}
 
 {{/ layout}}

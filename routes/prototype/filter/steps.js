@@ -1,5 +1,19 @@
 module.exports = {
     '/': {
+        // fields: ['apply-uk', 'application-country'],
+        // backLink: '../',
+        next: '/live-uk',
+        // controller: require('../../../controllers/is-overseas'), // Sets the country to GB if not overseas
+        // forks: [{
+        //     target: '/../overseas/information/syria',
+        //     condition: function (req, res) {
+        //         return (
+        //             req.session['hmpo-wizard-common']['application-country'] == 'SY'
+        //         );
+        //     }
+        // }]
+    },
+    '/live-uk': {
         fields: ['apply-uk', 'application-country'],
         backLink: '../',
         next: '/first-uk',
