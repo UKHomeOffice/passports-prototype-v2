@@ -1,5 +1,15 @@
 module.exports = {
     '/': {
+        next: '/dob'
+    },
+    '/dob': {
+        controller: require('../../../controllers/check-dob'),
+        fields: [
+            'age-day',
+            'age-year',
+            'age-month'
+        ],
+        backLink: './',
         next: '/choose-photo-method'
     },
     '/choose-photo-method': {
@@ -147,7 +157,7 @@ module.exports = {
     },
     '/check-and-submit-passed-photo': {
         fields: ['submit-photo'],
-        next: '/../filter',
+        next: '/../filter/first-uk',
         forks: [{
             target: '/../photo',
             condition: function (req, res) {
@@ -157,7 +167,7 @@ module.exports = {
     },
     '/check-and-submit-photo': {
         fields: ['oix-override', 'oix-override-reason'],
-        next: '/../filter',
+        next: '/../filter/first-uk',
         forks: [{
             target: '/../photo',
             condition: function (req, res) {

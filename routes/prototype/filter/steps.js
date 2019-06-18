@@ -1,8 +1,11 @@
 module.exports = {
     '/': {
-        fields: ['apply-uk', 'application-country'],
-        backLink: '../photo/check-and-submit-passed-photo',
-        next: '/first-uk',
+        fields: [
+            'apply-uk',
+            'application-country'
+        ],
+        backLink: '../',
+        next: '/../intro',
         controller: require('../../../controllers/is-overseas'), // Sets the country to GB if not overseas
         forks: [{
             target: '/../overseas/information/syria',
@@ -14,59 +17,78 @@ module.exports = {
         }]
     },
     '/first-uk': {
-        backLink: './',
-        fields: ['passport-before'],
+        fields: [
+            'passport-before'
+        ],
         next: '/lost-stolen',
         forks: [{
-            target: '/dob',
+            target: '/naturalisation-registration-details',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['passport-before'] == false;
+            }
+        }, {
+            target: '/country-birth',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['passport-before'] == false &&
+                    req.session['hmpo-wizard-common']['application-country'] == 'Afghanistan'
             }
         }]
     },
     '/you-need-a-different-service': {},
     '/lost-stolen': {
-        fields: ['lost-stolen'],
-        next: '/dob',
+        fields: [
+            'lost-stolen'
+        ],
+        next: '/passport-date-of-issue',
         forks: [{
             target: '/lost',
             condition: {
                 field: 'lost-stolen',
                 value: true
             }
+        }, {
+            target: '/dual-national',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['lost-stolen'] == true;
+            }
         }]
     },
     '/lost': {
-        fields: ['lost-reference', 'lost-stolen-reported'],
-        next: '/dob'
+        fields: [
+            'lost-reference',
+            'lost-stolen-reported'
+        ],
+        next: '/passport-date-of-issue'
     },
-    '/dob': {
-        controller: require('../../../controllers/check-dob'),
-        fields: ['age-day', 'age-year', 'age-month'],
-        next: '/passport-date-of-issue',
-        forks: [{
-                target: '/dual-national',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['lost-stolen'] == true;
-                }
-            },
-            {
-                target: '/naturalisation-registration-details',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['passport-before'] == false;
-                }
-            },
-            {
-                target: '/country-birth',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['passport-before'] == false &&
-                        req.session['hmpo-wizard-common']['application-country'] == 'Afghanistan'
-                }
-            }
-        ]
-    },
+    // '/dob': {
+    //     controller: require('../../../controllers/check-dob'),
+    //     fields: ['age-day', 'age-year', 'age-month'],
+    //     next: '/passport-date-of-issue',
+    //     forks: [{
+    //             target: '/dual-national',
+    //             condition: function (req, res) {
+    //                 return req.session['hmpo-wizard-common']['lost-stolen'] == true;
+    //             }
+    //         },
+    //         {
+    //             target: '/naturalisation-registration-details',
+    //             condition: function (req, res) {
+    //                 return req.session['hmpo-wizard-common']['passport-before'] == false;
+    //             }
+    //         },
+    //         {
+    //             target: '/country-birth',
+    //             condition: function (req, res) {
+    //                 return req.session['hmpo-wizard-common']['passport-before'] == false &&
+    //                     req.session['hmpo-wizard-common']['application-country'] == 'Afghanistan'
+    //             }
+    //         }
+    //     ]
+    // },
     '/country-birth': {
-        fields: ['country-birth'],
+        fields: [
+            'country-birth'
+        ],
         //next: '/../overseas/overseas-british',
         next: '/summary',
         forks: [{
@@ -89,7 +111,9 @@ module.exports = {
         }]
     },
     '/naturalisation-registration-details': {
-        fields: ['naturalisation-registration-certificate'],
+        fields: [
+            'naturalisation-registration-certificate'
+        ],
         next: '/dual-national'
     },
     '/application-method': {},
@@ -120,7 +144,10 @@ module.exports = {
     },
     '/passport-damaged': {
         controller: require('../../../controllers/app-type'),
-        fields: ['passport-damaged', 'damaged-reason'],
+        fields: [
+            'passport-damaged',
+            'damaged-reason'
+        ],
         next: '/dual-national', // If they are NOT a UK Hidden FTA
         forks: [{
             // If they are a UK Hidden FTA

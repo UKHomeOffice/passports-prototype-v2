@@ -1,4 +1,28 @@
 module.exports = {
+    'age-day': {
+        labelClassName: 'form-label',
+        formatter: 'removehyphens',
+        validate: [
+            'numeric',
+            'required'
+        ]
+    },
+    'age-year': {
+        labelClassName: 'form-label',
+        formatter: 'removehyphens',
+        validate: [
+            'numeric',
+            'required'
+        ]
+    },
+    'age-month': {
+        labelClassName: 'form-label',
+        formatter: 'removehyphens',
+        validate: [
+            'numeric',
+            'required'
+        ]
+    },
     'choose-photo': {
         legend: {
             value: 'I already have a digital photo',

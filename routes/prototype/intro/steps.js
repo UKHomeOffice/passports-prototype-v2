@@ -1,6 +1,6 @@
 module.exports = {
     '/': {
-        backLink: '../',
+        backLink: '../filter',
         next: '/../photo'
     },
     '/what-you-need': {
