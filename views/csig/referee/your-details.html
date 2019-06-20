@@ -1,10 +1,10 @@
 {{< layout-referee}}
 
-{{$pageTitle}}Your UK passport{{/pageTitle}}
+{{$pageTitle}}Your name{{/pageTitle}}
 
 
 {{$header}}
-    <h1>Your name and home address</h1>
+    <h1>Your name</h1>
 {{/header}}
 
 {{$content}}
@@ -23,12 +23,6 @@
         <p class="form-hint" id="dob-hint">As written on your passport</p>
         {{#input-text}}lastname{{/input-text}}
       </fieldset>
-      <div id="address-postcode-group" class="form-group">
-        <label for="address-postcode" class="form-label-bold">
-          Postcode
-        </label>
-        {{#input-text}}address-postcode{{/input-text}}
-      </div>
       {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}
