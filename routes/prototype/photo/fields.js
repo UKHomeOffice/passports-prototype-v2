@@ -84,7 +84,7 @@ module.exports = {
         ],
         validate: ['required'],
         formatter: 'boolean'
-    },
+     },
     'oix-override': {
         legend: {
             value: 'Do you want to use this photo?',

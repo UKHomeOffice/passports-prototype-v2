@@ -156,10 +156,23 @@ module.exports = {
         controller: require('../../../controllers/fetch-photo-result')
     },
     '/check-and-submit-passed-photo': {
+        next: '/declaration-passed-photo'
+    },
+    // '/check-and-submit-passed-photo': {
+    //     fields: ['submit-photo'],
+    //     next: '/../filter/first-uk',
+    //     forks: [{
+    //         target: '/../photo',
+    //         condition: function (req, res) {
+    //             return req.session['hmpo-wizard-common']['submit-photo'] == false;
+    //         }
+    //     }]
+    // },
+    '/declaration-passed-photo': {
         fields: ['submit-photo'],
         next: '/../filter/first-uk',
         forks: [{
-            target: '/../photo',
+            target: '/choose-photo-method',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['submit-photo'] == false;
             }
