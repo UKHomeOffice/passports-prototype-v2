@@ -216,7 +216,7 @@ module.exports = {
     //     }]
     // },
     '/not-accepted': {
-        next: '/../photo'
+        next: '/choose-photo-method'
     },
     '/code-error': {
         backLink: './retrieve',
