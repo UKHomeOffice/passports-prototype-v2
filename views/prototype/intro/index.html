@@ -1,31 +1,49 @@
 {{< layout}}
 
-{{$main-content}}
+{{$pageTitle}}How to apply{{/pageTitle}}
+
+{{$header}}
+    <h1>How to apply</h1>
+{{/header}}
+
+{{$back}}
+    <!-- TODO: Make it work if coming back from next page -->
+    <a href="javascript:history.back()" class="back-link">Back</a>
+{{/back}}
+
+{{$content}}
 
 {{< hmpo-partials-form}}
-  {{$form}}
-    <!-- Renewals -->
-    {{#values.passport-before}}
-      {{#values.old-blue}}
-        {{> partials-how-to-how-to-fta}}
-      {{/values.old-blue}}
-      {{^values.old-blue}}
-        <!-- lost/stolen -->
-        {{#values.lost-stolen}}
-          {{> partials-how-to-how-to-lost-stolen}}
-        {{/values.lost-stolen}}
-        {{^values.lost-stolen}}
-          {{> partials-how-to-how-to-renew}}
-        {{/values.lost-stolen}}
-      {{/values.old-blue}}
-    {{/values.passport-before}}
-    <!-- First time applications -->
-    {{^values.passport-before}}
-      {{> partials-how-to-how-to-fta}}
-    {{/values.passport-before}}
-  {{/form}}
+    {{$form}}
+
+        <ul>
+            <li>
+                <h2>1. Get a digital passport photo</h2>
+                <p>We’ll show you how to get a digital photo.</p>
+            </li>
+            <li>
+                <h2>2. Apply and pay online</h2>
+                <p> A standard passport costs £75.50.</p>
+            </li>
+            <li>
+                <h2>3. Ask someone to confirm your identity</h2>
+                <p>They can <a href="./help/confirming-your-identity" target="_blank">confirm your identity online</a> without a printed photo.</p>
+            </li>
+            <li>
+                <h2>4. Send us your documents</h2>
+                <p>They need to be originals. We'll tell you what you need to send.</p>
+            </li>
+            <li>
+                <h2>5. Go for an interview</h2>
+                <p>If you need an <a href="./help/identity-interviews" target="_blank">interview</a>, we'll write to you with the details.</p>
+            </li>
+        </ul>
+
+        {{#input-submit}}{{/input-submit}}
+
+    {{/form}}
 {{/ hmpo-partials-form}}
 
-{{/ main-content}}
+{{/content}}
 
 {{/ layout}}
