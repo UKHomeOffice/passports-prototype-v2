@@ -158,9 +158,13 @@ module.exports = {
     '/check-and-submit-passed-photo': {
         next: '/declaration-passed-photo'
     },
-    '/check-and-submit-photo': {
+    '/check-and-submit-okay-photo': {
+        next: '/declaration-okay-photo'
+    },
+    '/check-and-submit-failed-photo': {
         next: '/declaration-failed-photo'
     },
+
     // '/check-and-submit-passed-photo': {
     //     fields: ['submit-photo'],
     //     next: '/../filter/first-uk',
@@ -181,6 +185,16 @@ module.exports = {
             }
         }]
     },
+    '/declaration-okay-photo': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
     '/declaration-failed-photo': {
         fields: ['oix-override', 'oix-override-reason'],
         next: '/../filter/first-uk',
@@ -191,7 +205,7 @@ module.exports = {
             }
         }]
     },
-    // '/check-and-submit-photo': {
+    // '/check-and-submit-failed-photo': {
     //     fields: ['oix-override', 'oix-override-reason'],
     //     next: '/../filter/first-uk',
     //     forks: [{
