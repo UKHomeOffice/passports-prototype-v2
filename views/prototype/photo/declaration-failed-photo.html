@@ -100,9 +100,8 @@
         </ul>
     </li>
 </ol>
-<br>
 
-{{#nunjucks}}
+<!-- {{#nunjucks}}
     {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
         <div class="panel panel-border-wide alert-warning">
             <p class="list-item-bold">
@@ -125,7 +124,7 @@
             </ul>
         </p>
     </div>
-{{/nunjucks}}
+{{/nunjucks}} -->
 
 <h2 class="heading-medium">
     You can use the photo</h2>
@@ -167,6 +166,18 @@
         </label>
 
         <div class="panel panel-border-narrow js-hidden" id="oix-override" style="margin-top:10px; margin-bottom:0px;">
+            {{#nunjucks}}
+                <p style="margin-bottom: 0;">Your photo has an okay result for the following reasons:</p>
+                <ul class="list list-bullet">
+                    {% if values['applicant-age'] <= 11 %}
+                        <li>it looks like your eyes are closed</li>
+                        <li>it looks like you’re not facing the camera</li>
+                        <li>we can’t find the outline of your head</li>
+                    {% else %}
+                        <li>your image and the background are difficult to tell apart</li>
+                    {% endif %}
+                </ul>
+            {{/nunjucks}}
             <label for="oix-override-reason" class="form-label">
                 Explain why you’d like to use this photo
             </label>
