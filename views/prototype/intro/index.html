@@ -16,30 +16,37 @@
 {{< hmpo-partials-form}}
     {{$form}}
 
-        <ul>
+        <style>
+            .list-item-bold p:last-child {
+                margin-bottom: 20px;
+            }
+        </style>
 
-            <li>
-                <h2>1. Get a digital passport photo</h2>
-                <p>We'll show you how to get a digital passport photo.<p>
+        <ol class="list list-number" style="margin-bottom:30px;">
+
+            <li class="list-item-bold">Get a digital passport photo
+                <p>We’ll show you how to get a digital passport photo.</p>
             </li>
-            <li>
-                <h2>2. Provide application details</h2>
-                <p>Fill in your application details.<p>
+
+            <li class="list-item-bold">Provide application details
+                <p>Fill in your application details.</p>
             </li>
-            <li>
-                <h2>3. Find out what documents you need to send</h2>
-                <p>We'll tell you what documents you need to send, based on your application details.<p>
+
+            <li class="list-item-bold">Find out what documents you need to send
+                <p>We’ll tell you what documents you need to send, based on your application details.</p>
             </li>
-            <li>
-                <h2>4. Pay for your passport online</h2>
+
+            <li class="list-item-bold">Pay for your passport online
                 <p>A standard passport is £75.50 for an adult, and £49 for a child.</p>
             </li>
-            <li>
-                <h2>5. Get someone to confirm your identity, if required</h2>
-                <p>We'll tell you if we need someone to confirm your identity. They can <a href="./help/confirming-your-identity" target="_blank">confirm your identity online</a> without a printed photo.</p>
+
+            <li class="list-item-bold">Get someone to confirm your identity, if required
+                <p>We’ll tell you if we need someone to confirm your identity. They can <a
+                        href="./help/confirming-your-identity" target="_blank">confirm your identity online</a> without
+                    a printed photo.</p>
             </li>
-            <li>
-                <h2>6. Track your application</h2>
+
+            <li class="list-item-bold">Track your application
                 <p>We’ll send you updates by email or text. You can also log in to:</p>
                 <ul class="list list-bullet">
                     <li>track progress on your application</li>
@@ -48,9 +55,7 @@
                 </ul>
             </li>
 
-
-
-        </ul>
+        </ol>
 
         {{#input-submit}}{{/input-submit}}
 
