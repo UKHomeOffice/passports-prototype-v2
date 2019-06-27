@@ -133,14 +133,6 @@
     <li>if you think it meets all the rules</li>
 </ul> -->
 
-<!-- {{#nunjucks}}
-    {% if values['choose-photo'] == 'code' %} -->
-    <!-- <div class="panel panel-border-wide">
-        <p>If your photo doesn't meet the rules you may have problems with your application or when you travel.</p>
-    </div> -->
-    <!-- {% endif %}
-{{/nunjucks}} -->
-
 <!-- <h2>Do you want to submit this photo?</h2>
 {{#radio-group}}oix-override{{/radio-group}}
 
@@ -153,6 +145,7 @@
     </div>
     <br>
 </div> -->
+
 <div class="panel panel-border-wide">
     <p>If your photo doesn't meet the rules you may have problems with your application or when you travel.</p>
 </div>
@@ -199,14 +192,6 @@
 </div>
 
 {{#input-submit}}{{/input-submit}}
-
-{{#nunjucks}}
-    {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
-        <div class="panel panel-border-wide">
-            <p>If your photo doesn't meet the rules you may have problems with your application or when you travel.</p>
-        </div>
-    {% endif %}
-{{/nunjucks}}
 
 {{/form}}
 {{/hmpo-partials-form}}
