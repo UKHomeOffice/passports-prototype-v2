@@ -63,7 +63,7 @@
         </div>
     </div>
 </div>
-
+<p>Before you submit your photo, check that it meets all of these rules.<p>
 <ol class="list list-number">
     <li class="list-item-bold">Background and lighting
         <p>Your photo must have:</p>
@@ -73,7 +73,7 @@
             <li>no objects behind you</li>
         </ul>
     </li>
-    <li class="list-item-bold">Your appearance
+    <li class="list-item-bold">Face and expression
         <p>Make sure:</p>
         <ul class="list list-bullet">
             <li>the photo is a good likeness taken in the last month</li>
@@ -126,12 +126,12 @@
     </div>
 {{/nunjucks}} -->
 
-<h2 class="heading-medium">
+<!-- <h2 class="heading-medium">
     You can use the photo</h2>
 <ul class="list list-bullet">
     <li>if you have a medical or religious reason why it doesn't meet the rules</li>
     <li>if you think it meets all the rules</li>
-</ul>
+</ul> -->
 
 {{#nunjucks}}
     {% if values['choose-photo'] == 'code' %}
@@ -160,15 +160,19 @@
         <legend>
             <span class="form-label-bold">Do you want to submit this photo?</span>
         </legend>
-
+        <h3>You can only use this photo if you:</h3>
+        <ul class="list list-bullet">
+            <li>have a medical or religious reason why it doesn't meet the rules</li>
+            <li>think it meets all the rules</li>
+        </ul>
         <label class="block-label selected" for="oix-override-true">
             <input type="radio" name="oix-override" id="oix-override-true" value="true" required="true" data-toggle="oix-override" aria-controls="oix-override" aria-expanded="true">
-            Yes, I want to submit it
+            Yes, I understand - submit this photo
         </label>
 
         <div class="panel panel-border-narrow js-hidden" id="oix-override" style="margin-top:10px; margin-bottom:0px;">
             {{#nunjucks}}
-                <p style="margin-bottom: 0;">Your photo has a poor result for the following reasons:</p>
+                <h3 style="margin-bottom: 0;">Your photo check errors:</h3>
                 <ul class="list list-bullet">
                     {% if values['applicant-age'] <= 11 %}
                         <li>it looks like your eyes are closed</li>
