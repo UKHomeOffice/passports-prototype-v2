@@ -23,6 +23,40 @@
 {{<hmpo-partials-form}}
 {{$form}}
 
+<style>
+    #result-dial-gauge {
+        margin-top: 5px;
+        max-width: 190px;
+    }
+    @media (min-width: 769px) {
+        #result-dial-gauge {
+            max-width: 100%;
+        }
+    }
+    .result-poor {
+        color: #b10e1e;
+    }
+    .result-okay {
+        color: #ffbf47;
+    }
+    .result-good {
+        color: #28a197;
+    }
+    .result-text {
+        font-size: 32px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        max-width: 190px;
+        text-align: center;
+    }
+    @media (min-width: 769px) {
+        .result-text {
+            margin-bottom: 30px;
+        }
+    }
+</style>
+
 <div class="photo-preview">
     <div class="photo-preview-inner">
         <h2 class="heading-medium">Your photo</h2>
@@ -51,13 +85,8 @@
     <h2 style="padding: 0 15px;">Result</h2>
 
     <div class="column-one-third">
-        <!-- <div class="panel panel-border-wide" style="border-color: #b10e1e;">
-            <p>Poor</p>
-        </div> -->
-        <!-- <p style="font-size: 32px; font-weight: 600; text-transform: uppercase; color: #b10e1e; margin-bottom: 20px;">Poor</p> -->
-        <p style="font-size: 32px; font-weight: 600; text-transform: uppercase; color: #28a197; margin-bottom: 20px;">Good</p>
-
-        <img src="../../../public/images/photo/dial-gauge-good.png" width="150">
+        <img id="result-dial-gauge" src="../../../public/images/photo/dial-gauge-good.png">
+        <p class="result-good result-text">Good</p>
     </div>
 
     <div class="column-two-thirds">
@@ -87,8 +116,7 @@
 
     <!-- <hr style="margin-left: 15px; margin-right: 15px; min-width: 1px;"> -->
 </div>
-<br>
-<br>
+
 {{#input-submit}}{{/input-submit}}
 
 <div class="panel panel-border-wide">
