@@ -1,7 +1,16 @@
     {{< layout}}
 
-    {{$pageTitle}}Do you live in the UK?{{/pageTitle}}
+    {{$pageTitle}}Choose a service{{/pageTitle}}
 
+form-radio {
+  display: block;
+
+
+  input {
+    vertical-align: middle;
+    margin: -4px 5px 0 0;
+  }
+}
 
 
     {{$header}}
@@ -17,7 +26,12 @@
     {{$content}}
     {{< hmpo-partials-form}}
         {{$form}}
-            {{#radio-group}}service-type{{/radio-group}}
+            {{#radio-group}}standard-radio{{/radio-group}}
+            <p class="form-hint">This is the standard service which cost <b>£XX.XX<b> and take X weeks.</p>
+            {{#radio-group}}dps-radio{{/radio-group}}
+            <p class="form-hint">This is the premium service which cost £XX.XX and takes X days.</p>
+            <br>
+            <br>
             {{#input-submit}}{{/input-submit}}
         {{/form}}
     {{/ hmpo-partials-form}}

@@ -1394,7 +1394,7 @@ module.exports = {
             'required'
         ]
     },
-    'service-type': {
+    'standard-radio': {
         legend: {
             value: 'What service do you want to use?',
             className: 'visuallyhidden'
@@ -1402,8 +1402,15 @@ module.exports = {
         options: [{
                 value: 'standard',
                 label: 'Standard Online Service'
-            },
-            {
+            }
+        ],
+    },
+    'dps-radio': {
+        legend: {
+            value: 'What service do you want to use?',
+            className: 'visuallyhidden'
+        },
+        options: [{
                 value: 'dps',
                 label: 'Premium Online Service',
             }
