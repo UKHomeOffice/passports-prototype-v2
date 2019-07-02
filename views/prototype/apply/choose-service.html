@@ -1,0 +1,26 @@
+    {{< layout}}
+
+    {{$pageTitle}}Do you live in the UK?{{/pageTitle}}
+
+
+
+    {{$header}}
+    <br>
+    <div class="panel panel-border-wide alert-default">
+    <p>You are eligible for <a href="https://www.gov.uk/get-a-passport-urgently/online-premium-service" target="_blank">Online Premium Service</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+        <h1>What service do you want to use?</h1>
+
+    {{/header}}
+
+    {{$content}}
+    {{< hmpo-partials-form}}
+        {{$form}}
+            {{#radio-group}}service-type{{/radio-group}}
+            {{#input-submit}}{{/input-submit}}
+        {{/form}}
+    {{/ hmpo-partials-form}}
+    {{/content}}
+
+    {{/ layout}}

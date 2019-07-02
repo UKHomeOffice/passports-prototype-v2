@@ -1394,6 +1394,21 @@ module.exports = {
             'required'
         ]
     },
+    'service-type': {
+        legend: {
+            value: 'What service do you want to use?',
+            className: 'visuallyhidden'
+        },
+        options: [{
+                value: 'standard',
+                label: 'Standard Online Service'
+            },
+            {
+                value: 'dps',
+                label: 'Premium Online Service',
+            }
+        ],
+    },
     'declaration': {
         formatter: 'boolean',
         validate: [

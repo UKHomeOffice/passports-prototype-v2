@@ -376,6 +376,12 @@ module.exports = {
             //             req.session['hmpo-wizard-common']['lost-stolen'] == true
             //     }
             // },
+            { // if Adult renewal
+                target: '/choose-service',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['application-type'] == 'renew-adult';
+                }
+            },
             { // if lost and stolen with no docs
                 target: '/cost',
                 condition: function (req, res) {
@@ -389,6 +395,9 @@ module.exports = {
                 }
             }
         ]
+    },
+    '/choose-service': {
+        next: '/documents-required',
     },
     '/csig-required': {
         next: '/documents-required',
