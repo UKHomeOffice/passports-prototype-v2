@@ -2,16 +2,6 @@
 
     {{$pageTitle}}Choose a service{{/pageTitle}}
 
-form-radio {
-  display: block;
-  margin: 10px 0;
-
-  input {
-    vertical-align: middle;
-    margin: -4px 5px 0 0;
-  }
-}
-
 
     {{$header}}
     <br>
@@ -26,11 +16,18 @@ form-radio {
     {{$content}}
     {{< hmpo-partials-form}}
         {{$form}}
+            <style>
+            @media (min-width: 641px) {
+                .form-group {
+                margin-bottom: 10px;
+                }
+            }
+            </style>
             {{#radio-group}}standard-radio{{/radio-group}}
             <p class="form-hint">This is the standard service which cost <b>£XX.XX<b> and take X weeks.</p>
+            <br>
             {{#radio-group}}dps-radio{{/radio-group}}
             <p class="form-hint">This is the premium service which cost £XX.XX and takes X days.</p>
-            <br>
             <br>
             {{#input-submit}}{{/input-submit}}
         {{/form}}
