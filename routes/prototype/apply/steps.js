@@ -379,7 +379,13 @@ module.exports = {
             { // if Adult renewal
                 target: '/choose-service',
                 condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['application-type'] == 'renew-adult';
+                    return req.session['hmpo-wizard-common']['application-type'] == 'renew-adult' &&
+                    req.session['hmpo-wizard-common']['is-overseas'] === false &&
+                    req.session['hmpo-wizard-common']['passport-before'] === true &&
+                    req.session['hmpo-wizard-common']['lost-stolen'] === false &&
+                    req.session['hmpo-wizard-common']['change-name'] === false &&
+                    req.session['hmpo-wizard-common']['passport-damaged'] === false &&
+                    req.session['hmpo-wizard-common']['dual-nationality'] === false;
                 }
             },
             { // if lost and stolen with no docs
