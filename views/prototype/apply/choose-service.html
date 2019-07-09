@@ -9,7 +9,7 @@
     <p>Based on your answers, you're eligible for <a href="https://www.gov.uk/get-a-passport-urgently/online-premium-service" target="_blank">Online Premium Service</a>.</p>
     </div> -->
 
-        <h1>What service </h1>
+        <h1>Do you want to use Online Premium?</h1>
 
     {{/header}}
 
@@ -23,12 +23,13 @@
                 }
             }
             </style>
-            <p>Based on your answers, you're eligible for <a href="https://www.gov.uk/get-a-passport-urgently/online-premium-service" target="_blank">Online Premium Service</a>.</p>
+            <p>You'll get your new passport in 3 weeks if you use the standard service. If you want it faster, use <a href = "www.gov.uk">Online Premium</a>.</p> 
+
             {{#radio-group}}standard-radio{{/radio-group}}
-            <p class="form-hint">The Standard Online Service will cost <strong>£75.50 </strong> and it should take 3 weeks to get your passport.</p>
+            <!-- <p class="form-hint">Your new passport will be delivered to your home address within 3 weeks.</p> -->
             <br>
             {{#radio-group}}dps-radio{{/radio-group}}
-            <p class="form-hint">The Premium Online Service will cost <strong>£177</strong> and The earliest you can get an appointment is 2 days from when you apply. We'll tell you what you'll need to do to apply using this service</p>
+            <!-- <p class="form-hint">You'll get your new passport at your appointment. The earliest appointment is X days away.</p>-->
             <br>
             {{#input-submit}}{{/input-submit}}
         {{/form}}

@@ -1401,7 +1401,7 @@ module.exports = {
         },
         options: [{
                 value: 'standard',
-                label: 'Standard Online Service'
+                label: 'No, I want to use the standard service (£75.50)'
             }
         ],
     },
@@ -1412,7 +1412,7 @@ module.exports = {
         },
         options: [{
                 value: 'dps',
-                label: 'Premium Online Service',
+                label: 'Yes, I want to use Online Premium (£177)',
             }
         ],
     },
