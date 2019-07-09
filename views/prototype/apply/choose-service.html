@@ -23,14 +23,25 @@
                 }
             }
             </style>
-            <p>You'll get your new passport in 3 weeks if you use the standard service. If you want it faster, use <a href = "www.gov.uk">Online Premium</a>.</p> 
+                <p>You'll get your new passport in 3 weeks if you use the standard service. If you want it faster, use <a href = "www.gov.uk">Online Premium</a>.</p> 
 
-            {{#radio-group}}standard-radio{{/radio-group}}
-            <!-- <p class="form-hint">Your new passport will be delivered to your home address within 3 weeks.</p> -->
+                {{#radio-group}}standard-radio{{/radio-group}}
+                <!-- <p class="form-hint">Your new passport will be delivered to your home address within 3 weeks.</p> -->
+                <br>
+                {{#radio-group}}dps-radio{{/radio-group}}
+                <!-- <p class="form-hint">You'll get your new passport at your appointment. The earliest appointment is X days away.</p>-->
             <br>
-            {{#radio-group}}dps-radio{{/radio-group}}
-            <!-- <p class="form-hint">You'll get your new passport at your appointment. The earliest appointment is X days away.</p>-->
-            <br>
+                <details>
+                <summary><span class="summary">How does Online Premium work?</span></summary>
+                <div class="panel panel-border-narrow">
+                    <p>text</p>
+                    <ul class="list list-bullet">
+                    <li>book an appointment and pay online. The earliest you can get an appointment is 2 days from when you apply.</li>
+                    <li>you’ll get your new passport at your appointment. Appointments can last up to 30 minutes.</li>
+                    <li>It costs £177 (or £187 for a 50 page frequent traveller passport).</li>
+                    </ul>
+                </div>
+                </details>
             {{#input-submit}}{{/input-submit}}
         {{/form}}
     {{/ hmpo-partials-form}}
