@@ -343,6 +343,10 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         step: this.getEditStep('marriage-year'),
         title: 'Marriage date',
         value: parentsDateOfMarriage.isValid() ? parentsDateOfMarriage.format('D MMMM YYYY') : ''
+    }, {
+        step: this.getEditStep('either-parents-euss'),
+        title: 'EU settled status',
+        value: values['either-parents-euss']
     });
 
 
@@ -391,7 +395,6 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
             value: values['parent1-additional-information']
         });
     }
-
 
     // Father
     var parent2Fields = [];
@@ -654,7 +657,10 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     if (values['naturalisation-registration-certificate'] == true || // Naturalised or registered
         values['born-before-1983'] == true || // Born Before 01/01/1983
         values['old-blue'] == true || // Passport issued Before 01/01/1994 (Old blue) Hidden FTA
-        values['passport-before'] == true // 12-15s renewals that may have parents details, but not grandparents
+        values['passport-before'] == true || // 12-15s renewals that may have parents details, but not grandparents
+
+        // EUSS only 
+        values['either-parents-euss'] == 'Yes'
     ) {
         console.log('DELETE grandparents fields')
         response.sections.pop({

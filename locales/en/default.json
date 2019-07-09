@@ -313,7 +313,6 @@
         "parent1-additional-information": {
             "label": "Tell us why"
         },
-
         "parent2-first-names": {
             "label": "First and middle names"
         },
@@ -355,7 +354,7 @@
         "parent2-additional-information": {
             "label": "Tell us why"
         },
-
+        
         "marriage-day": {
             "label": "Day"
         },
@@ -598,18 +597,22 @@
             "required": "You must answer this question"
         },
 
+        "either-parents-euss": {
+            "required": "You must answer this question"
+        },
+
         "parent1-additional-information": {
             "required": "Explain why you can't provide details for mother or parent 1"
         },
         "parent1-uk-passport": {
-            "required": "You must answer this question"
+            "required": "Select if parent 1 has a UK passport"
         },
 
         "parent2-additional-information": {
             "required": "Explain why you can't provide details for father or parent 2"
         },
         "parent2-uk-passport": {
-            "required": "You must answer this question"
+            "required": "Select if parent 2 has a UK passport"
         },
 
         "parent1-parents-married": {

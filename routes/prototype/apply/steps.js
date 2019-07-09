@@ -127,6 +127,20 @@ module.exports = {
             'marriage-month',
             'marriage-year'
         ],
+        next: '/parent-1-details',
+        forks: [{
+            target: '/parents-euss',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['born-in-uk'] == true &&
+                       req.session['hmpo-wizard-common']['born-after-2018'] == true && 
+                       req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == false;
+            }
+        }]
+    },
+    '/parents-euss': {
+        fields: [
+            'either-parents-euss'
+        ],
         next: '/parent-1-details'
     },
     '/parent-1-details': {
@@ -141,7 +155,7 @@ module.exports = {
             'parent1-passport-issue-year'
         ],
         next: '/parent-2-details'
-    },
+    },    
     '/parent-2-details': {
         fields: [
             'parent2-town-of-birth',
@@ -163,20 +177,19 @@ module.exports = {
                         req.session['hmpo-wizard-common']['passport-before'] == true ||
                         req.session['hmpo-wizard-common']['lost-stolen'] == true;
                 }
-            }, {
+            }, 
+            {
                 target: '/home-address-manual-prototype',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
                 }
+            },
+           {    // No Grandparent details if either parents have EUSS
+                target: '/home-address-manual-prototype',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['either-parents-euss'] == 'Yes';
+                }
             }
-            // ,{
-            //     target: '/home-address-manual-prototype',
-            //     condition: function (req, res) { // Grandparents details logic
-            //         return req.session['hmpo-wizard-common']['passport-before'] === false &&
-            //             (req.session['hmpo-wizard-common']['parent1-uk-passport'] === 'Yes' && req.session['hmpo-wizard-common']['parents-married'] === 'Yes') ||
-            //             (req.session['hmpo-wizard-common']['parent1-uk-passport'] === 'Yes' && req.session['hmpo-wizard-common']['parent2-uk-passport'] === 'Yes')
-            //     }
-            // }
         ]
     },
     '/grandparents-intro': {

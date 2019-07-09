@@ -500,6 +500,29 @@ module.exports = {
         // ]
     },
 
+    'either-parents-euss': {
+        legend: {
+            value: 'Did either of your parents have settled status from the EU Settlement Scheme when you were born?',
+            className: 'visuallyhidden'
+        },
+        options: [{
+                value: 'Yes',
+                label: 'Yes'
+            },
+            {
+                value: 'No',
+                label: 'No'
+            },
+            {
+                value: 'I don’t know',
+                label: 'I don’t know'
+            }
+        ],
+        validate: [
+            'required'
+        ]
+    },
+  
     // Parent 2
     'parent2-first-names': {
         labelClassName: 'form-label'

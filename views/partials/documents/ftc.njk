@@ -152,6 +152,17 @@
 
     <hr>
 
+<!-- ## If either parent has EUSS: YES -->
+{% elif values['born-after-2006'] and values['born-in-uk'] and values['either-parents-euss'] == 'Yes' %}
+    <h2 class="govuk-heading-l">Parents' documents</h2>
+    <h3 class="govuk-heading-m">For a parent who has settled status through the EU Settlement Scheme, send the following:</h3>
+    <ul class="list list-bullet">
+        <li>EU Settlement Scheme application reference (16 digits beginning with 1212 or 3434)</li>
+    </ul>
+    <p>The application reference is on the letter or email confirming their settled status. Send a copy or write the reference on a piece of paper.</p>
+    <p>If both parents have settled status, you only need to send one application reference.</p>
+    <hr>
+
 <!-- OLC PDF 6 copy of 4 -->
 {% elif values['born-after-2006'] and (values['parent1-born-before-1983'] and values['parent2-born-before-1983']) %}
     <h2 class="govuk-heading-l">Parents' documents</h2>
@@ -236,7 +247,6 @@
     <ul class="list list-bullet">
         <li>include a professional, or other title on your passport</li>
         <li>apply for a British National Overseas (BNO) passport</li>
-        <li>apply for a first child passport under the EU Settlement Scheme</li>
         <li>apply for a passport under treaty rights</li>
         <li>change your gender on your passport</li>
         <li>get a first UK passport based on your parents’ Crown or Community service</li>
