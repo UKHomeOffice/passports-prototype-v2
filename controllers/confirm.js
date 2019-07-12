@@ -343,11 +343,15 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
         step: this.getEditStep('marriage-year'),
         title: 'Marriage date',
         value: parentsDateOfMarriage.isValid() ? parentsDateOfMarriage.format('D MMMM YYYY') : ''
-    }, {
-        step: this.getEditStep('either-parents-euss'),
-        title: 'EU settled status',
-        value: values['either-parents-euss']
     });
+
+    if (values['either-parents-euss']) { 
+        parentsFields.push({
+            step: this.getEditStep('either-parents-euss'),
+            title: 'EU settled status',
+            value: values['either-parents-euss']
+        });
+    }
 
 
     // Mother
