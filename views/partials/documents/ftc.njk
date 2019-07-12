@@ -142,16 +142,6 @@
 
     <hr>
 
-<!-- OLC PDF 8 copy of 7 -->
-{% elif values['born-after-2006'] and values['born-in-uk'] and (values['parent1-passport-number'] and values['parent2-passport-number']) %}
-    <h2 class="govuk-heading-l">Parents' documents</h2>
-    <h3 class="govuk-heading-m">If claiming British nationality based on 1 of your parents being settled in the UK, send the following:</h3>
-    <ul class="list list-bullet">
-        <li>for 1 of your parents, the non-British passport they had when you were born showing indefinite leave to remain</li>
-    </ul>
-
-    <hr>
-
 <!-- ## If either parent has EUSS: YES -->
 {% elif values['born-after-2006'] and values['born-in-uk'] and values['either-parents-euss'] == 'Yes' %}
     <h2 class="govuk-heading-l">Parents' documents</h2>
@@ -162,6 +152,16 @@
     <p>The application reference is on the letter or email confirming their settled status. Send a copy or write the reference on a piece of paper.</p>
     <p>You don't need to send any passports.</p>
     <p>If both parents have settled status, you only need to send one application reference.</p>
+    <hr>
+
+<!-- OLC PDF 8 copy of 7 -->
+{% elif values['born-after-2006'] and values['born-in-uk'] and (values['parent1-passport-number'] and values['parent2-passport-number']) %}
+    <h2 class="govuk-heading-l">Parents' documents</h2>
+    <h3 class="govuk-heading-m">If claiming British nationality based on 1 of your parents being settled in the UK, send the following:</h3>
+    <ul class="list list-bullet">
+        <li>for 1 of your parents, the non-British passport they had when you were born showing indefinite leave to remain</li>
+    </ul>
+
     <hr>
 
 <!-- OLC PDF 6 copy of 4 -->
