@@ -8,7 +8,9 @@
         "check-another-photo": "Check another photo",
         "try-again": "Try again",
         "find-address": "Find address",
-        "declaration": "Continue to payment"
+        "declaration": "Continue to payment",
+        "3-weeks": "In 3 weeks",
+        "x-days": "In x days"
     },
     "fields": {
         "what-you-will-need-declaration": {

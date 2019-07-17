@@ -1,50 +1,83 @@
-    {{< layout}}
+{{< layout}}
 
-    {{$pageTitle}}Choose a service{{/pageTitle}}
+{{$pageTitle}}Choose a service{{/pageTitle}}
 
 
-    {{$header}}
-    <!-- <br>
-    <div class="panel panel-border-wide alert-default">
-    <p>Based on your answers, you're eligible for <a href="https://www.gov.uk/get-a-passport-urgently/online-premium-service" target="_blank">Online Premium Service</a>.</p>
-    </div> -->
+{{$header}}
+    <h1>When do you want your new passport?</h1>
+{{/header}}
 
-        <h1>Do you want to use Online Premium?</h1>
-
-    {{/header}}
-
-    {{$content}}
+{{$content}}
     {{< hmpo-partials-form}}
         {{$form}}
-            <style>
+
+        <style>
             @media (min-width: 641px) {
-                .form-group {
-                margin-bottom: 10px;
+                .column-two-thirds {
+                float: left;
+                width: 100%;
                 }
             }
-            </style>
-                <p>You'll get your new passport in 3 weeks if you use the standard service. If you want it faster, use <a href = "www.gov.uk">Online Premium</a>.</p> 
+        </style>
+        <p>something something</p>
+        <div class="column-full">
+            <div class="column-half">
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col"><h3>Standard</h3></th>
+                        <th class="govuk-table__header" scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">How</th>
+                        <td class="govuk-table__cell">Post to you  address</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">When</th>
+                        <td class="govuk-table__cell">Up to 3 weeks</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">Cost</th>
+                        <td class="govuk-table__cell">£70</td>
+                        </tr>
+                    </tbody>
+                </table>
+                        <br>
+                        {{#input-submit}}3-weeks{{/input-submit}}
 
-                {{#radio-group}}standard-radio{{/radio-group}}
-                <!-- <p class="form-hint">Your new passport will be delivered to your home address within 3 weeks.</p> -->
-                <br>
-                {{#radio-group}}dps-radio{{/radio-group}}
-                <!-- <p class="form-hint">You'll get your new passport at your appointment. The earliest appointment is X days away.</p>-->
-            <br>
-                <details>
-                <summary><span class="summary">How does Online Premium work?</span></summary>
-                <div class="panel panel-border-narrow">
-                    <p>text</p>
-                    <ul class="list list-bullet">
-                    <li>book an appointment and pay online. The earliest you can get an appointment is 2 days from when you apply.</li>
-                    <li>you’ll get your new passport at your appointment. Appointments can last up to 30 minutes.</li>
-                    <li>It costs £177 (or £187 for a 50 page frequent traveller passport).</li>
-                    </ul>
-                </div>
-                </details>
-            {{#input-submit}}{{/input-submit}}
+            </div>
+
+            <div class="column-half">
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col"><h3>Premium</h3></th>
+                        <th class="govuk-table__header" scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">How</th>
+                        <td class="govuk-table__cell">Collect from passport office</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">When</th>
+                        <td class="govuk-table__cell">2 days</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">Cost</th>
+                        <td class="govuk-table__cell">£70</td>
+                        </tr>
+                    </tbody>
+                </table>
+                        <br>
+                        {{#input-submit}}x-days{{/input-submit}}
+            </div>
+        </div>
         {{/form}}
     {{/ hmpo-partials-form}}
-    {{/content}}
+{{/content}}
 
-    {{/ layout}}
+{{/ layout}}
