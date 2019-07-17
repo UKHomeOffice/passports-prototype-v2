@@ -403,7 +403,10 @@ module.exports = {
         ]
     },
     '/choose-service': {
-        next: '/documents-required',
+        next: '/how-to-premium'
+    },
+    '/how-to-premium': {
+        next: '/documents-required'
     },
     '/csig-required': {
         next: '/documents-required',
