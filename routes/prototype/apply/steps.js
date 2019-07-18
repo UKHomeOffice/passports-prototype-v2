@@ -377,7 +377,7 @@ module.exports = {
             //     }
             // },
             { // if Adult renewal
-                target: '/choose-service',
+                target: '/passport-urgently',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['application-type'] == 'renew-adult' &&
                     req.session['hmpo-wizard-common']['is-overseas'] === false &&
@@ -402,7 +402,10 @@ module.exports = {
             }
         ]
     },
-    '/choose-service': {
+    // '/choose-service': {
+    //     next: '/passport-urgently'
+    // },
+    '/passport-urgently':{
         next: '/how-to-premium'
     },
     '/how-to-premium': {

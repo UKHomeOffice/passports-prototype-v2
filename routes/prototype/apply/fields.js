@@ -1394,26 +1394,47 @@ module.exports = {
             'required'
         ]
     },
-    'standard-radio': {
+    // 'standard-radio': {
+    //     legend: {
+    //         value: 'What service do you want to use?',
+    //         className: 'visuallyhidden'
+    //     },
+    //     options: [{
+    //             value: 'standard',
+    //             label: 'No, I want to use the standard service (£75.50)'
+    //         }
+    //     ],
+    // },
+    // 'dps-radio': {
+    //     legend: {
+    //         value: 'What service do you want to use?',
+    //         className: 'visuallyhidden'
+    //     },
+    //     options: [{
+    //             value: 'dps',
+    //             label: 'Yes, I want to use Online Premium (£177)',
+    //         }
+    //     ],
+    // },
+    'urgent': {
         legend: {
-            value: 'What service do you want to use?',
+            value: 'Is it urgent?',
             className: 'visuallyhidden'
         },
         options: [{
-                value: 'standard',
-                label: 'No, I want to use the standard service (£75.50)'
-            }
+                value: false,
+                label: 'No, use the standard service (£72.50)'
+            },
+            {
+                value: true,
+                label: 'Yes, I need it urgently (£177)'
+            },
         ],
-    },
-    'dps-radio': {
-        legend: {
-            value: 'What service do you want to use?',
-            className: 'visuallyhidden'
-        },
-        options: [{
-                value: 'dps',
-                label: 'Yes, I want to use Online Premium (£177)',
-            }
+        formatter: [
+            'boolean'
+        ],
+        validate: [
+            'required'
         ],
     },
     'declaration': {
