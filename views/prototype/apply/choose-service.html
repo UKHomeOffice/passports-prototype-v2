@@ -4,14 +4,15 @@
 
 
 {{$header}}
-    <h1>When do you want your new passport?</h1>
+    <h1>How quickly do you need your new passport?</h1>
 {{/header}}
 
 {{$content}}
     {{< hmpo-partials-form}}
         {{$form}}
-
-        <style>
+        <!-- <p>You'll get your new passport within 3 weeks with the standard service. </p>
+        <p>If you need it faster, choose Online Premium and book an appointment to collect it from your nearest passport office.</p> -->
+       <style>
             @media (min-width: 641px) {
                 .column-two-thirds {
                 float: left;
@@ -19,7 +20,7 @@
                 }
             }
         </style>
-        <p>something something</p>
+
         <div class="column-full">
             <div class="column-half">
                 <table class="govuk-table">
@@ -30,12 +31,17 @@
                         </tr>
                     </thead>
                     <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                    <th class="govuk-table__header" scope="row">Sending your documents</th>
+                                    <td class="govuk-table__cell">Post your old passport to the address we give you</td>
+                                    </tr>
+            
                         <tr class="govuk-table__row">
-                        <th class="govuk-table__header" scope="row">How</th>
-                        <td class="govuk-table__cell">Delivered to your address</td>
+                        <th class="govuk-table__header" scope="row">Getting your new passport</th>
+                        <td class="govuk-table__cell">Your new passport will be delivered to your address</td>
                         </tr>
                         <tr class="govuk-table__row">
-                        <th class="govuk-table__header" scope="row">When</th>
+                        <th class="govuk-table__header" scope="row">How long it takes</th>
                         <td class="govuk-table__cell">Up to 3 weeks</td>
                         </tr>
                         <tr class="govuk-table__row">
@@ -58,12 +64,17 @@
                         </tr>
                     </thead>
                     <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                    <th class="govuk-table__header" scope="row">Sending your documents</th>
+                                    <td class="govuk-table__cell">Take your old passport to your appointment</td>
+                                    </tr>
+            
                         <tr class="govuk-table__row">
-                        <th class="govuk-table__header" scope="row">How</th>
-                        <td class="govuk-table__cell">Collect from passport office</td>
+                        <th class="govuk-table__header" scope="row">Getting your new passport</th>
+                        <td class="govuk-table__cell">Collect it from passport office</td>
                         </tr>
                         <tr class="govuk-table__row">
-                        <th class="govuk-table__header" scope="row">When</th>
+                        <th class="govuk-table__header" scope="row">How long it takes</th>
                         <td class="govuk-table__cell">x days</td>
                         </tr>
                         <tr class="govuk-table__row">
