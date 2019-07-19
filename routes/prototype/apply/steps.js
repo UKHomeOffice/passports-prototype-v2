@@ -406,7 +406,15 @@ module.exports = {
     //     next: '/passport-urgently'
     // },
     '/passport-urgently':{
-        next: '/how-to-premium'
+        next: '/documents-required',
+        forks: [
+            { // if premium
+                target: '/how-to-premium',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['urgent'] == true
+                }
+            }
+        ]
     },
     '/how-to-premium': {
         next: '/documents-required'

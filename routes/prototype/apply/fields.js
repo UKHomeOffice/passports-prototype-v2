@@ -1329,6 +1329,33 @@ module.exports = {
         ],
         className: 'inline'
     },
+    'urgent': {
+        legend: {
+            value: 'Is it urgent?',
+            className: 'visuallyhidden'
+        },
+        options: [{
+                value: false,
+                label: 'No, use the standard service (£72.50)'
+            },
+            {
+                value: true,
+                label: 'Yes, I need it urgently (£177)'
+            },
+        ],
+        formatter: [
+            'boolean'
+        ],
+        validate: [
+            'required'
+        ],
+    },
+    'declaration': {
+        formatter: 'boolean',
+        validate: [
+            'required'
+        ]
+    },
     'relationship-applicant': {
         legend: {
             value: 'What is your relationship to the applicant?',
@@ -1416,31 +1443,4 @@ module.exports = {
     //         }
     //     ],
     // },
-    'urgent': {
-        legend: {
-            value: 'Is it urgent?',
-            className: 'visuallyhidden'
-        },
-        options: [{
-                value: false,
-                label: 'No, use the standard service (£72.50)'
-            },
-            {
-                value: true,
-                label: 'Yes, I need it urgently (£177)'
-            },
-        ],
-        formatter: [
-            'boolean'
-        ],
-        validate: [
-            'required'
-        ],
-    },
-    'declaration': {
-        formatter: 'boolean',
-        validate: [
-            'required'
-        ]
-    }
 };
