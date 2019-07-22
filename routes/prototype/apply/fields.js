@@ -1330,6 +1330,8 @@ module.exports = {
         className: 'inline'
     },
     'urgent': {
+        formatter: 'boolean',
+        validate: 'required',
         legend: {
             value: 'Is it urgent?',
             className: 'visuallyhidden'
@@ -1341,14 +1343,8 @@ module.exports = {
             {
                 value: true,
                 label: 'Yes, I need it urgently (£177)'
-            },
-        ],
-        formatter: [
-            'boolean'
-        ],
-        validate: [
-            'required'
-        ],
+            }
+        ]
     },
     'declaration': {
         formatter: 'boolean',

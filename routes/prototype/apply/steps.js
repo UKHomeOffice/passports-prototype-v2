@@ -406,6 +406,9 @@ module.exports = {
     //     next: '/passport-urgently'
     // },
     '/passport-urgently':{
+        fields: [
+            'urgent'
+        ],
         next: '/documents-required',
         forks: [
             { // if premium
