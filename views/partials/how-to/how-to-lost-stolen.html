@@ -27,11 +27,17 @@
               {% endif %}
             
           </li>
-          <li>
-            <span class="circle circle-step">3</span>
-            <h2>Ask someone to confirm your identity</h2>
-            <p style="margin-left:32px;">They can <a href="help/confirming-your-identity" target="_blank">confirm your identity online</a> without a printed photo.</p>
-          </li>
+
+          {# No referee for adult lost and stolen #}
+
+          {% if values['applicant-age'] < 16 %}
+            <li>
+              <span class="circle circle-step">3</span>
+              <h2>Ask someone to confirm your identity</h2>
+              <p style="margin-left:32px;">They can <a href="help/confirming-your-identity" target="_blank">confirm your identity online</a> without a printed photo.</p>
+            </li>
+          {% endif %}
+        
         </ul>
         {{/nunjucks}}
         {{#input-submit}}{{/input-submit}}
