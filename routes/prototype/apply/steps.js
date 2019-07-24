@@ -420,7 +420,10 @@ module.exports = {
         ]
     },
     '/how-to-premium': {
-        next: '/documents-required'
+        next: '/dps-dateandplace'
+    },
+    '/dps-dateandplace': {
+        next: ''
     },
     '/csig-required': {
         next: '/documents-required',
@@ -484,7 +487,7 @@ module.exports = {
     },
     '/docs-renew': {
         controller: require('../../../controllers/check-query-string'),
-        backLink: 'summary',
+        backLink: 'passport-urgently',
         next: '/passport-special-delivery',
         forks: [{
                 target: '../../../csig/user/need-csig',
