@@ -423,6 +423,12 @@ module.exports = {
         next: '/dps-dateandplace'
     },
     '/dps-dateandplace': {
+        next: ' '
+    },
+    '/dps-time': {
+        next: ''
+    },
+    '/dps-checkappointment': {
         next: ''
     },
     '/csig-required': {
