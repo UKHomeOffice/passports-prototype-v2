@@ -4,6 +4,7 @@
 {{$pageTitle}}Pick appointment time{{/pageTitle}}
 
 {{$header}}
+Pick appointment time
 {# <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -12,6 +13,9 @@
 {{/header}}
 
 {{$main-content}}
+
+{{< hmpo-partials-form}}
+    {{$form}}
 <div class="padding-wrapper">
     <h1>Choose a collection time</h1>
 
@@ -98,7 +102,8 @@ window.onscroll = function() {
     };
 </script> -->
 
-
+    {{/form}}
+{{/ hmpo-partials-form}}
 {{/main-content}}
 
 {{/ layout}}

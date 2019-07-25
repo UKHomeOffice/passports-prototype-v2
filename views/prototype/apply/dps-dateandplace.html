@@ -10,6 +10,8 @@
 {{/header}}
 
 {{$main-content}}
+{{< hmpo-partials-form}}
+    {{$form}}
 
 <div class="padding-wrapper">
 
@@ -126,8 +128,12 @@
 
 </div>
 </div>
-
+<br>
+{{#input-submit}}{{/input-submit}}
 </div>
+
+{{/form}}
+{{/ hmpo-partials-form}}
 {{/main-content}}
 
 {{/ layout}}

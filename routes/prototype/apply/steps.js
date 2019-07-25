@@ -423,7 +423,7 @@ module.exports = {
         next: '/dps-dateandplace'
     },
     '/dps-dateandplace': {
-        next: ' '
+        next: '/dps-time'
     },
     '/dps-time': {
         next: ''
