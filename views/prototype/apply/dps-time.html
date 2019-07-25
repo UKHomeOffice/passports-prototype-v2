@@ -1,7 +1,7 @@
 
 {{< layout}}
 
-{{$pageTitle}}Pick appointment time{{/pageTitle}}
+{{$pageTitle}}Choose a collection time - appointment{{/pageTitle}}
 
 {{$header}}
 Pick appointment time
@@ -14,96 +14,95 @@ Pick appointment time
 
 {{$main-content}}
 
-{{< hmpo-partials-form}}
-    {{$form}}
-<div class="padding-wrapper">
-    <h1>Choose a collection time</h1>
+    {{< hmpo-partials-form}}
+        {{$form}}
+            <div class="padding-wrapper">
+                <h1>Choose a collection time</h1>
 
-    <div class="grid-row">
-        <div class="column-two-thirds">
-            <h2>Peterborough HM Passport Office &nbsp; <span class="font-small"><a href="/priority_service_170202/book-appointment">Change</a></span></h2>
-            <p>Office address <a href="#" target="_blank">View map</a></p>
-            <p>It usually takes 30 minutes to collect your new passport.</p>
-        </div>
-    </div>
+                <div class="grid-row">
+                    <div class="column-two-thirds">
+                        <h2>Peterborough HM Passport Office &nbsp; <span class="font-small"><a href="/priority_service_170202/book-appointment">Change</a></span></h2>
+                        <p>Office address <a href="#" target="_blank">View map</a></p>
+                        <p>It usually takes 30 minutes to collect your new passport.</p>
+                    </div>
+                </div>
 
-        <div class="manage-times">
-            <div class="manage-time-next">
-                <span class="font-small"><a href="#">Later</a> </span></h2>
-            </div>
-            <div class="manage-time-previous">
-                <span class="font-small">Earlier</a></h2>
-            </div>
-        </div>
+                    <div class="manage-times">
+                        <div class="manage-time-next">
+                            <span class="font-small"><a href="#">Later <div class="later-arrow"></div></a> </span>
+                        </div>
+                        <!-- <div class="manage-time-previous">
+                            <span class="font-small">Earlier</a></h2>
+                        </div> -->
+                    </div>
 
-        <div class="book-table">
-            <table class="book-table">
-                <tbody>
-                    <tr>
-                        <td><span class="bold-small">Saturday<br> 21 January</span></td>
-                        <td><span class="bold-small">Monday<br>  23 January</span></td>
-                        <td><span class="bold-small">Tuesday<br>  24 January</span></td>
-                    </tr>
+                    <div class="book-table">
+                        <table class="book-table">
+                            <tbody>
+                                <tr>
+                                    <td><span class="bold-small">Saturday<br> 21 January</span></td>
+                                    <td><span class="bold-small">Monday<br>  23 January</span></td>
+                                    <td><span class="bold-small">Tuesday<br>  24 January</span></td>
+                                </tr>
 
-                    <tr>
-                        <td><span class="unavailable">10:00am </br></span></td>
-                        <td><a href="/prototype/apply/dps-checkappointment"><span class="available">10.00am </br><span class="available">available</span></span></a></td>
-                        <td><span class="unavailable">10:00am </br></span></td>
-                    </tr>
+                                <tr>
+                                    <td><span class="unavailable">10:00am </br></span></td>
+                                    <td><a href="/prototype/apply/dps-checkappointment"><span class="available">10.00am </br><span class="available">available</span></span></a></td>
+                                    <td><span class="unavailable">10:00am </br></span></td>
+                                </tr>
 
-                    <tr>
-                        <td><span class="available"><a href="#">10:30am </br><span class="available">available</span></span></a></td>
-                        <td><span class="unavailable">10:30am </br></span></td>
-                        <td><span class="unavailable">10:30am </br></span></td>
-                    </tr>
+                                <tr>
+                                    <td><span class="available"><a href="#">10:30am </br><span class="available">available</span></span></a></td>
+                                    <td><span class="unavailable">10:30am </br></span></td>
+                                    <td><span class="unavailable">10:30am </br></span></td>
+                                </tr>
 
-                    <tr>
-                        <td><span class="unavailable">12:30pm </br><span class="available">available</span></span></td>
-                        <td><a href="#"><span class="available">12:30pm </br><span class="available">available</span></span></a></td>
-                        <td><a href="#"><span class="available">12:30pm </br><span class="available">available</span></span></a></td>
-                    </tr>
+                                <tr>
+                                    <td><span class="unavailable">12:30pm </br><span class="available">available</span></span></td>
+                                    <td><a href="#"><span class="available">12:30pm </br><span class="available">available</span></span></a></td>
+                                    <td><a href="#"><span class="available">12:30pm </br><span class="available">available</span></span></a></td>
+                                </tr>
 
-                    <tr>
-                        <td><span class="unavailable">1:00pm </br></span></td>
-                        <td><span class="unavailable">1:00pm </br></span></td>
-                        <td><span class="unavailable">1:00pm </br></san></td>
-                    </tr>
+                                <tr>
+                                    <td><span class="unavailable">1:00pm </br></span></td>
+                                    <td><span class="unavailable">1:00pm </br></span></td>
+                                    <td><span class="unavailable">1:00pm </br></san></td>
+                                </tr>
 
-                    <tr>
-                        <td><span class="unavailable">1:30pm </br></span></td>
-                        <td><a href="#"><span class="available">1:30pm </br><span class="available">available</span></span></a></td>
-                        <td><span class="unavailable">1:30pm </br></span></td>
-                    </tr>
+                                <tr>
+                                    <td><span class="unavailable">1:30pm </br></span></td>
+                                    <td><a href="#"><span class="available">1:30pm </br><span class="available">available</span></span></a></td>
+                                    <td><span class="unavailable">1:30pm </br></span></td>
+                                </tr>
 
-                    <tr>
-                        <td><span class="unavailable">4:30pm </br></span></td>
-                        <td><a href="#"><span class="available">4:30pm </br><span class="available">available</span></span></a></td>
-                        <td><span class="unavailable">4:30pm </br></span></td>
-                    </tr>
+                                <tr>
+                                    <td><span class="unavailable">4:30pm </br></span></td>
+                                    <td><a href="#"><span class="available">4:30pm </br><span class="available">available</span></span></a></td>
+                                    <td><span class="unavailable">4:30pm </br></span></td>
+                                </tr>
 
-                    <tr>
-                        <td><span class="unavailable">5:00pm </br></span></td>
-                        <td><span class="unavailable">5:00pm </br></span></td>
-                        <td><a href="#"><span class="available">5.00pm </br><span class="available">available</span></span></a></td>
-                    </tr>
+                                <tr>
+                                    <td><span class="unavailable">5:00pm </br></span></td>
+                                    <td><span class="unavailable">5:00pm </br></span></td>
+                                    <td><a href="#"><span class="available">5.00pm </br><span class="available">available</span></span></a></td>
+                                </tr>
 
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            <!-- </div> -->
 
-<!-- <script>
-window.onscroll = function() {
-    var sticky = document.getElementById('stickynav');
-    if( document.body.scrollTop+document.documentElement.scrollTop > 240)
-        sticky.className = "stuck";
-    else sticky.className = "";
-    };
-</script> -->
+            <!-- <script>
+            window.onscroll = function() {
+                var sticky = document.getElementById('stickynav');
+                if( document.body.scrollTop+document.documentElement.scrollTop > 240)
+                    sticky.className = "stuck";
+                else sticky.className = "";
+                };
+            </script> -->
 
-    {{/form}}
-{{/ hmpo-partials-form}}
+        {{/form}}
+    {{/ hmpo-partials-form}}
 {{/main-content}}
-
 {{/ layout}}
