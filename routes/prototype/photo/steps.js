@@ -158,11 +158,11 @@ module.exports = {
     '/check-and-submit-passed-photo': {
         next: '/declaration-passed-photo'
     },
-    '/check-and-submit-okay-1-photo': {
-        next: '/declaration-okay-1-photo'
-    },
     '/check-and-submit-okay-2-photo': {
         next: '/declaration-okay-2-photo'
+    },
+    '/check-and-submit-okay-1-photo': {
+        next: '/declaration-okay-1-photo'
     },
     '/check-and-submit-failed-photo': {
         next: '/declaration-failed-photo'
@@ -188,7 +188,7 @@ module.exports = {
             }
         }]
     },
-    '/declaration-okay-1-photo': {
+    '/declaration-okay-2-photo': {
         fields: ['oix-override', 'oix-override-reason'],
         next: '/../filter/first-uk',
         forks: [{
@@ -198,7 +198,7 @@ module.exports = {
             }
         }]
     },
-    '/declaration-okay-2-photo': {
+    '/declaration-okay-1-photo': {
         fields: ['oix-override', 'oix-override-reason'],
         next: '/../filter/first-uk',
         forks: [{
