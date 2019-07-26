@@ -1,37 +1,48 @@
 {{< layout-referee}}
 
 
-{{$pageTitle}}Confirm these details{{/pageTitle}}
+{{$pageTitle}}About the person making this application{{/pageTitle}}
 
 
 {{$header}}
-  <h1>Confirm these details</h1>
+  <h1>About the person making this application</h1>
 {{/header}}
 
 {{$content}}
 <style>
 .confirmation dl dd p { padding: 0 }
 </style>
-<p>This is an application on behalf of Patrick Michael Smith. We need to confirm the person applying has parental responsibility.</p>
+<p>This is a passport application on behalf of Patrick Michael Smith.</p>
+<p>These details were provided by the person making the application. Answer to the best of your knowledge.</p>
 <div class="confirmation">
   <div class="section old-passport-details">
-    <dl class="expiry-date">
+    <dl>
         <dt class="column-half">Person making this application</dt>
         <dd class="column-half">
           <p>Suzanne Angela Smith</p>
         </dd>
     </dl>
-
-    <dl class="expiry-date">
+    <dl>
         <dt class="column-half">Relationship to applicant</dt>
         <dd class="column-half">
           <p>Mother</p>
         </dd>
     </dl>
+    <dl>
+        <dt class="column-half">Responsible for applicant</dt>
+        <dd class="column-half">
+          <p>Yes</p>
+        </dd>
+    </dl>
   </div>
 </div>
-<!-- <p>Suzanne Michaela Smith is applying on behalf of Michael Patrick Smith.</p>
- -->
+<details>
+  <summary><span class="summary">What do we mean by &lsquo;responsible&rsquo;?</span></summary>
+    <div class="panel panel-border-narrow">
+      <p>A person responsible for the applicant has to maintain and protect them. Most parents are responsible for their children, unless for example a court order has said otherwise.
+      </p>
+    </div>
+  </details>
 
  <h2>Can you confirm these details are correct?</h2>
 {{< hmpo-partials-form}}

@@ -3,13 +3,11 @@ module.exports = {
         next: '/dob'
     },
     '/dob': {
-        controller: require('../../../controllers/check-dob'),
+        controller: require('../../../controllers/check-age-group'),
         next: '/upload',
         backLink: './',
         fields: [
-            'age-day',
-            'age-year',
-            'age-month'
+            'age-group'
         ]
     },
     // '/how-to-get-a-digital-photo': {
@@ -59,6 +57,24 @@ module.exports = {
         next: '/../photo-checker'
     },
     '/check-and-submit-photo': {
+        next: '/../photo-checker'
+    },
+    '/check-and-submit-photo-variation-1': {
+        next: '/../photo-checker'
+    },
+    '/check-and-submit-photo-variation-2': {
+        next: '/../photo-checker'
+    },
+    '/check-and-submit-photo-variation-3': {
+        next: '/../photo-checker'
+    },
+    '/check-and-submit-photo-variation-4': {
+        next: '/../photo-checker'
+    },
+    '/check-and-submit-photo-variation-5': {
+        next: '/../photo-checker'
+    },
+    '/check-and-submit-photo-variation-6': {
         next: '/../photo-checker'
     },
     '/not-accepted': {

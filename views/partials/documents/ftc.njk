@@ -48,7 +48,7 @@
 {% endif %}
 
 {% if values['dual-nationality'] %}
-    {% set documents = (documents.push('any passports from other countries that haven’t expired'), documents) %}
+    {% set documents = (documents.push('any current or expired passports from other countries that haven’t been cancelled'), documents) %}
 {% endif %}
 
 {# Applicant's documents #}
@@ -140,6 +140,18 @@
         <li>grandfather's marriage certificate to your grandmother (if this applies)</li>
     </ul>
 
+    <hr>
+
+<!-- ## If either parent has EUSS: YES -->
+{% elif values['born-after-2006'] and values['born-in-uk'] and values['either-parents-euss'] == 'Yes' %}
+    <h2 class="govuk-heading-l">Parents' documents</h2>
+    <h3 class="govuk-heading-m">For a parent who has settled status through the EU Settlement Scheme, send the following:</h3>
+    <ul class="list list-bullet">
+        <li>EU Settlement Scheme application reference (16 digits beginning with 1212 or 3434)</li>
+    </ul>
+    <p>The application reference is on the letter or email confirming their settled status. Send a copy or write the reference on a piece of paper.</p>
+    <p>You don't need to send any passports.</p>
+    <p>If both parents have settled status, you only need to send one application reference.</p>
     <hr>
 
 <!-- OLC PDF 8 copy of 7 -->

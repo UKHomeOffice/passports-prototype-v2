@@ -127,6 +127,20 @@ module.exports = {
             'marriage-month',
             'marriage-year'
         ],
+        next: '/parent-1-details',
+        forks: [{
+            target: '/parents-euss',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['born-in-uk'] == true &&
+                       req.session['hmpo-wizard-common']['born-after-2018'] == true && 
+                       req.session['hmpo-wizard-common']['naturalisation-registration-certificate'] == false;
+            }
+        }]
+    },
+    '/parents-euss': {
+        fields: [
+            'either-parents-euss'
+        ],
         next: '/parent-1-details'
     },
     '/parent-1-details': {
@@ -138,38 +152,10 @@ module.exports = {
             'parent1-passport-number',
             'parent1-passport-issue-day',
             'parent1-passport-issue-month',
-            'parent1-passport-issue-year',
-            'parent1-euss'
-        ],
-        next: '/parent-2-details',
-        forks: [{
-            target: '/parent-1-euss-documents',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['parent1-euss'] === 'Yes'
-            }
-        }]
-    },
-    '/parent-1-euss-documents': {
-        fields: [
-            'parent1-euss-reference-number',
-            'parent1-euss-document-reference-number',
-            'parent1-euss-application-reference-number',
-            'parent1-euss-unknown-reference-number'
+            'parent1-passport-issue-year'
         ],
         next: '/parent-2-details'
-    }, 
-    
-    /* Version 2 for EUSS Parent 1 
-    '/parent-1-euss-documents-v2': {
-        fields: [
-            'parent1-euss-reference-number',
-            'parent1-euss-document-reference-number',
-            'parent1-euss-application-reference-number'
-        ],
-        backLink: './parent-1-euss-documents',
-        next: '/parent-2-details'
-    }, */
-    
+    },    
     '/parent-2-details': {
         fields: [
             'parent2-town-of-birth',
@@ -179,8 +165,7 @@ module.exports = {
             'parent2-passport-number',
             'parent2-passport-issue-day',
             'parent2-passport-issue-month',
-            'parent2-passport-issue-year',
-            'parent2-euss'
+            'parent2-passport-issue-year'
         ],
         next: '/grandparents-intro',
         forks: [{
@@ -192,36 +177,20 @@ module.exports = {
                         req.session['hmpo-wizard-common']['passport-before'] == true ||
                         req.session['hmpo-wizard-common']['lost-stolen'] == true;
                 }
-            },  {
-                target: '/parent-2-euss-documents',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['parent2-euss'] === 'Yes'
-                }
-            },
+            }, 
             {
                 target: '/home-address-manual-prototype',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['application-for-someone-else'] == true;
                 }
+            },
+           {    // No Grandparent details if either parents have EUSS
+                target: '/home-address-manual-prototype',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['either-parents-euss'] == 'Yes';
+                }
             }
-            // ,{
-            //     target: '/home-address-manual-prototype',
-            //     condition: function (req, res) { // Grandparents details logic
-            //         return req.session['hmpo-wizard-common']['passport-before'] === false &&
-            //             (req.session['hmpo-wizard-common']['parent1-uk-passport'] === 'Yes' && req.session['hmpo-wizard-common']['parents-married'] === 'Yes') ||
-            //             (req.session['hmpo-wizard-common']['parent1-uk-passport'] === 'Yes' && req.session['hmpo-wizard-common']['parent2-uk-passport'] === 'Yes')
-            //     }
-            // }
         ]
-    },
-    '/parent-2-euss-documents': {
-        fields: [
-            'parent2-euss-reference-number',
-            'parent2-euss-document-reference-number',
-            'parent2-euss-application-reference-number',
-            'parent2-euss-unknown-reference-number'
-        ],
-        next: '/grandparents-intro'
     },
     '/grandparents-intro': {
         next: '/parent-1-grandparents'

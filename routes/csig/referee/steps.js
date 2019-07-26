@@ -2,16 +2,21 @@ module.exports = {
     '/': {
         fields: ['age-day','age-month','age-year','passport-number','expiry-day','expiry-month','expiry-year'],
         backLink: '../referee-5/applicant-info',
-        next: '/name-address',
+        next: '/your-details',
         controller: require('../../../controllers/csig-email')
     },
-    '/name-address': {
-        fields: ['name', 'middlename', 'lastname', 'address-postcode'],
+    '/your-details': {
+        fields: ['name', 'middlename', 'lastname'],
         backLink: './',
-        next: '/home-address-select'
+        next: '/home-address'
     },
+    '/home-address': {
+      fields: ['address-postcode'],
+      backLink: './your-details',
+      next: '/home-address-select'
+  },
     '/home-address-select':{
-        backLink: './name-address',
+        backLink: './home-address',
         next: '/csig-identity-auth',
         fields: ['address-type'],
         forks: [{
@@ -148,5 +153,6 @@ module.exports = {
     },
     '/terms-and-conditions': {
     },
-
+    '/csig-identity-fail-three-times': {
+    },
 };

@@ -1,0 +1,28 @@
+{{< layout-referee}}
+
+{{$pageTitle}}Your home address{{/pageTitle}}
+
+
+{{$header}}
+    <h1>Your home address</h1>
+{{/header}}
+
+{{$content}}
+
+<p>Tell us where you live. Only give a work address if you also live there.</p> 
+
+{{< hmpo-partials-form}}
+    {{$form}}
+      <div id="address-postcode-group" class="form-group">
+        <label for="address-postcode" class="form-label-bold">
+          Postcode
+        </label>
+        {{#input-text}}address-postcode{{/input-text}}
+      </div>
+      {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout-referee}}

@@ -8,7 +8,7 @@
   {{/values.change-name}}
   {{^values.change-name}}
   <h1>Have {{> partials-applicant-you-they}} ever used any other names?</h1>
-  
+
   {{/values.change-name}}
 {{/header}}
 
@@ -19,15 +19,27 @@
 {{$form}}
 
 {{#values.change-name}}
-  <p>Tell us the name on {{> partials-applicant-your-their}} {{> partials-information-compared-to-document}} and any other names {{> partials-applicant-you-they}} have been known by. For example a maiden name, a previous married name or a name you were given at birth and changed later.</p>
+  <p>Tell us the name on {{> partials-applicant-your-their}} {{> partials-information-compared-to-document}} and any
+    other names {{> partials-applicant-you-they}} have been known by. For example
+    {{#nunjucks}}
+      {% if values['applicant-age'] >= 16 or values['rising-16'] == true %}
+        a maiden name, a previous married name or
+      {% endif %}
+    {{/nunjucks}}
+    a name you were given at birth and changed later.</p>
 
   <input type="hidden" name="previous-name" value="true" required="true">
 {{/values.change-name}}
 
 {{^values.change-name}}
-
-<p>For example a maiden name, a previous married name or a name you were given at birth and changed later. You must tell us every name you've used.</p>
-
+  <p>For example
+    {{#nunjucks}}
+      {% if values['applicant-age'] >= 16 or values['rising-16'] == true %}
+        a maiden name, a previous married name or
+      {% endif %}
+    {{/nunjucks}}
+    a name you were given at birth and changed later. You must
+    tell us every name you've used.</p>
 
   {{#radio-group}}previous-name{{/radio-group}}
 {{/values.change-name}}

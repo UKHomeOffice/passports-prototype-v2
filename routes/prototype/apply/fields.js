@@ -499,65 +499,30 @@ module.exports = {
         //     }
         // ]
     },
-    'parent1-euss': {
-        validate: 'required',
+
+    'either-parents-euss': {
         legend: {
-            value: 'Did they have EU settled status when the applicant was born?',
-            className: 'form-label-bold'
+            value: 'Did either of your parents have settled status from the EU Settlement Scheme when you were born?',
+            className: 'visuallyhidden'
         },
         options: [{
                 value: 'Yes',
-                label: 'Yes',
-                // toggle: 'parent1-euss'
+                label: 'Yes'
             },
             {
                 value: 'No',
-                label: 'No',
+                label: 'No'
             },
             {
-                value: 'Unknown',
+                value: 'I don’t know',
                 label: 'I don’t know'
             }
         ],
-        className: 'inline'
-    },
-    'parent1-euss-reference-number': {
-        validate: 'required',
-        legend: {
-            value: 'Where will you get the reference from?',
-            className: 'form-label-bold'
-        },
-        options: [{
-                value: 'document-reference-number',
-                label: 'Their identity document',
-                toggle: 'parent1-euss-document-reference-number',
-                child: 'input-text'
-            },
-            {
-                value: 'application-reference-number',
-                label: 'The letter or email confirming their settled status',
-                toggle: 'parent1-euss-application-reference-number',
-                child: 'input-text'
-            },
-            {
-                value: 'unknown-reference-number',
-                label: 'I can\'t find either reference',
-                toggle: 'parent1-euss-unknown-reference-number',
-                child: 'textarea'
-            }
-        ],
-    },
-    'parent1-euss-document-reference-number': {
-        labelClassName: 'form-label-bold'
-    },
-    'parent1-euss-application-reference-number': {
-        labelClassName: 'form-label-bold'
-    },
-    'parent1-euss-unknown-reference-number': {
-        labelClassName: 'form-label-bold'
+        validate: [
+            'required'
+        ]
     },
   
-
     // Parent 2
     'parent2-first-names': {
         labelClassName: 'form-label'
@@ -672,64 +637,6 @@ module.exports = {
         //   field: 'can-sign',
         //   value: false
         // }
-    },
-
-    'parent2-euss': {
-        validate: 'required',
-        legend: {
-            value: 'Did they have EU settled status when the applicant was born?',
-            className: 'form-label-bold'
-        },
-        options: [{
-                value: 'Yes',
-                label: 'Yes',
-                // toggle: 'parent2-euss'
-            },
-            {
-                value: 'No',
-                label: 'No',
-            },
-            {
-                value: 'Unknown',
-                label: 'I don’t know'
-            }
-        ],
-        className: 'inline'
-    },    
-    'parent2-euss-reference-number': {
-        validate: 'required',
-        legend: {
-            value: 'Where will you get the reference from?',
-            className: 'form-label-bold'
-        },
-        options: [{
-                value: 'document-reference-number',
-                label: 'Their identity document',
-                toggle: 'parent2-euss-document-reference-number',
-                child: 'input-text'
-            },
-            {
-                value: 'application-reference-number',
-                label: 'The letter or email confirming their settled status',
-                toggle: 'parent2-euss-application-reference-number',
-                child: 'input-text'
-            },
-            {
-                value: 'unknown-reference-number',
-                label: 'I can\'t find either reference',
-                toggle: 'parent2-euss-unknown-reference-number',
-                child: 'textarea'
-            }
-        ],
-    },
-    'parent2-euss-document-reference-number': {
-        labelClassName: 'form-label-bold'
-    },
-    'parent2-euss-application-reference-number': {
-        labelClassName: 'form-label-bold'
-    },
-    'parent2-euss-unknown-reference-number': {
-        labelClassName: 'form-label-bold'
     },
 
     // Parent 1's parents
@@ -1354,7 +1261,7 @@ module.exports = {
             },
             {
                 value: '50',
-                label: 'Jumbo 50-page passport (£85.50)'
+                label: 'Frequent traveller 50-page passport (£85.50)'
             }
         ],
         validate: [
@@ -1392,7 +1299,7 @@ module.exports = {
             },
             {
                 value: '48',
-                label: 'Jumbo adult 48-page passport (£91)'
+                label: 'Frequent traveller adult 48-page passport (£91)'
             }
         ],
         validate: [

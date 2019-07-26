@@ -41,7 +41,7 @@
 {% endif %}
 
 {% if values['dual-nationality'] %}
-    {% set documents = (documents.push('any passports from other countries that haven’t expired'), documents) %}
+    {% set documents = (documents.push('any current or expired passports from other countries that haven’t been cancelled'), documents) %}
 {% endif %}
 
 {% if values['old-blue'] %}
@@ -208,7 +208,7 @@
     <ul class="list list-bullet">
         <li>include a professional, or other title on your passport</li>
         <li>apply for a British National Overseas (BNO) passport</li>
-        <li>apply for a first child passport under the EU Settlement Scheme</li>      
+        <li>apply for a first child passport under the EU Settlement Scheme</li>
         <li>apply for a passport under treaty rights</li>
         <li>change your gender on your passport</li>
         <li>get a first UK passport based on your parents’ Crown or Community service</li>

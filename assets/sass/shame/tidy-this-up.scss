@@ -1146,17 +1146,6 @@ padding: 10px;
 
 /* photo code styles */
 
-.photo {
-  position: relative;
-  width: 120px;
-}
-
-@media (min-width: 769px) {
-  .photo {
-      width: 150px;
-  }
-}
-
 .photo-code {
   margin-top: 0.5em;
 }

@@ -15,9 +15,9 @@
 
 {{#nunjucks}}
 
-    <p>Your photo will now go through an automated check.</p>
+    <p>Your photo will now go through a basic technical check.</p>
 
-    {% if values['applicant-age'] < 1 %}
+    <!-- {% if values['applicant-age'] < 1 %}
         <p>Before you upload your photo, check it meets all of these <a href="./photo-guidance" target="_blank">photo rules for ages under 1</a>.</p>
     {% elif values['applicant-age'] < 6 %}
         <p>Before you upload your photo, check it meets all of these <a href="./photo-guidance" target="_blank">photo rules for ages under 6</a>.</p>
@@ -25,7 +25,7 @@
         <p>Before you upload your photo, check it meets all of these <a href="./photo-guidance" target="_blank">photo rules for ages between 6 and 16</a>.</p>
     {% else %}
         <p>Before you upload your photo, check it meets all of these <a href="./photo-guidance" target="_blank">photo rules for ages 16 and over</a>.</p>
-    {% endif %}
+    {% endif %} -->
 
 {{/nunjucks}}
 
@@ -39,15 +39,6 @@
 </div>
 
 <!-- {{#input-submit}}upload-your-photo{{/input-submit}} -->
-
-<h3>Your photo must be:</h3>
-<ul class="list list-bullet">
-    <li>in colour</li>
-    <li>unaltered by computer software</li>
-    <li>a jpg or jpeg file</li>
-    <li>at least 50KB and no more than 10MB</li>
-</ul>
-<br>
 
 {{/form}}
 {{/ hmpo-partials-form}}
