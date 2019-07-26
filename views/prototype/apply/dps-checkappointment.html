@@ -10,6 +10,8 @@
 {{/header}}
 
 {{$main-content}}
+{{< hmpo-partials-form}}
+		{{$form}}
 
 <div class="padding-wrapper">
 
@@ -37,8 +39,8 @@
 
     </p>
 
-       <p><a href="/priority-service/intro/you-need-a-photo" class="button">Continue</a></p>
-
+       <!-- <a><a href="/priority-service/intro/you-need-a-photo" class="button">Continue</a></p> -->
+       {{#input-submit}}{{/input-submit}}
       </div>
     </div>
 
@@ -47,7 +49,8 @@
     <p>&nbsp;</p>
   </div>
 -->
-
+{{/form}}
+	{{/ hmpo-partials-form}}
 {{/main-content}}
 
 {{/ layout}}

@@ -294,7 +294,7 @@ module.exports = {
         next: '/passport-options-overseas'
     },
     '/get-updates': {
-        next: '/passport-options'
+        next: '/sign'
     },
     '/passport-options': {
         controller: require('../../../controllers/costs-edit-step'),
@@ -302,7 +302,7 @@ module.exports = {
             'passport-options',
             'braille'
         ],
-        next: '/sign',
+        next: '/cost',
         forks: [{
             target: '/relationship-applicant',
             condition: function (req, res) {
@@ -429,7 +429,7 @@ module.exports = {
         next: ''
     },
     '/dps-checkappointment': {
-        next: ''
+        next: '/passport-options'
     },
     '/csig-required': {
         next: '/documents-required',
@@ -550,7 +550,7 @@ module.exports = {
     },
     '/passport-special-delivery': {
         controller: require('../../../controllers/costs-edit-step'),
-        next: '/cost',
+        next: '/passport-options',
         fields: [
             'secure-return'
         ],
