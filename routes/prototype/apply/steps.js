@@ -294,7 +294,14 @@ module.exports = {
         next: '/passport-options-overseas'
     },
     '/get-updates': {
-        next: '/sign'
+        next: '/sign',
+        forks: [{
+            target: '/relationship-applicant',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['16-or-older'] == false &&
+                    req.session['hmpo-wizard-common']['rising-16'] == false;
+            }
+        }]
     },
     '/passport-options': {
         controller: require('../../../controllers/costs-edit-step'),
@@ -309,13 +316,15 @@ module.exports = {
                 return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
                     req.session['hmpo-wizard-common']['is-overseas'] === true
             }
-        }, { // Overseas skip delivery page
-            target: '/relationship-applicant',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
-                    req.session['hmpo-wizard-common']['is-overseas'] === false
-            }
-        }]
+        }, 
+        // { // Overseas skip delivery page
+        //     target: '/relationship-applicant',
+        //     condition: function (req, res) {
+        //         return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
+        //             req.session['hmpo-wizard-common']['is-overseas'] === false
+        //     }
+        // }
+    ]
     },
     '/sign': {
         fields: [
