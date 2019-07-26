@@ -316,7 +316,7 @@ module.exports = {
                 return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
                     req.session['hmpo-wizard-common']['is-overseas'] === true
             }
-        }, 
+        },
         // { // Overseas skip delivery page
         //     target: '/relationship-applicant',
         //     condition: function (req, res) {
