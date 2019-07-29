@@ -32,7 +32,7 @@ Costs.prototype.getCost = function () {
 
     var cost = 0;
 
-    if (this.get('service-level') === 'Premium') {
+    if (this.get('urgent') === true ) {
         cost += config.costs['premium-service'];
     } else if (this.get('16-or-older') === false) {
         cost += this.get('veteran') ? 0 : config.costs['standard-child'];
@@ -68,6 +68,15 @@ Costs.prototype.standardPassport = function standardPassport() {
         cost += this.get('veteran') ? 0 : config.costs['standard-child'];
     } else {
         cost += this.get('veteran') ? 0 : config.costs['standard-service'];
+    }
+    return cost;
+};
+
+Costs.prototype.dpsPassport = function dpsPassport() {
+    var cost = config.costs['premium-service'];
+
+    if (this.get('veteran') && this.get('service-level') !== 'Premium') {
+        cost += config.costs['standard-service'];
     }
     return cost;
 };

@@ -4,7 +4,7 @@
         "__comment": "Set Base cost of CostModel in costs.js",
         "standard-child": 49,
         "__comment": "Set Base cost of CostModel in costs.js",
-        "premium-service": 142,
+        "premium-service": 177,
         "__comment": "Set Base cost of CostModel in costs.js – NOTE: I think this variable MAY be for 'Fast-track service (one week)' rather than for 'Premium service (one day)' ",
         "large-passport": 10,
         "__comment": "Add to Base cost of CostModel in costs.js",

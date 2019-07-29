@@ -63,11 +63,20 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 title: 'New passport',
                 value: function () {
                     var output = [];
-                    if (values['passport-options'] == '50') {
+                    if (values['passport-options'] == '50' && values['urgent'] === false) {
                         var cost = currency(model.standardPassport() + model.largePassport())
                         output.push('Frequent traveller passport with secure delivery included');
                         output.push(cost);
-                    } else {
+                    }
+                    else if (values['urgent'] === true && values ['passport-options'] == '34' ) {
+                        output.push('Standard bla bla');
+                        output.push(currency(model.dpsPassport()));
+                        }
+                    else if (values['urgent'] === true && values ['passport-options'] == '50'){
+                        output.push('Frequent bla bla');
+                        output.push(currency(model.dpsPassport() + model.largePassport()));
+                    }
+                    else {
                         output.push('Standard passport with secure delivery included');
                         output.push(currency(model.standardPassport()));
                     }
@@ -95,7 +104,9 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                 title: function () {
                     if (values.veteran || values['lost-stolen-no-docs']) {
                         return 'Delivery'
-                    } else if (values['is-overseas']) {
+                    } else if (values['urgent']=== true) {
+                        return;
+                    }else if (values['is-overseas']) {
                         return 'Courier fee'
                     } else if (values['passport-before'] && !values['lost-stolen'] && values['change-name']) {
                         return 'Old passport and extra documents'
@@ -119,7 +130,9 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                         }
                     } else if (values['lost-stolen-no-docs']) {
                         return 'We’ll send your new passport by secure delivery. The cost is included in the passport fee<br>£0.00';
-                    } else {
+                    } else if (values['urgent']=== true) {
+                    return;
+                    }   else {
                         var output = 'You need to post your documents to us. We’ll return them to you by';
                         var cost = model.delivery();
 
