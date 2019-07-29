@@ -75,9 +75,9 @@ Costs.prototype.standardPassport = function standardPassport() {
 Costs.prototype.dpsPassport = function dpsPassport() {
     var cost = config.costs['premium-service'];
 
-    if (this.get('veteran') && this.get('service-level') !== 'Premium') {
-        cost += config.costs['standard-service'];
-    }
+    // if (this.get('veteran') && this.get('service-level') !== 'Premium') {
+    //     cost += config.costs['standard-service'];
+    // }
     return cost;
 };
 
