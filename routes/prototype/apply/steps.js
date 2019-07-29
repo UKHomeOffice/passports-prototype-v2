@@ -435,7 +435,7 @@ module.exports = {
         next: '/dps-time'
     },
     '/dps-time': {
-        next: '/dps-checkappointment'
+        next: ''
     },
     '/dps-checkappointment': {
         next: '/passport-options'
