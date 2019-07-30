@@ -303,29 +303,29 @@ module.exports = {
             }
         }]
     },
-    '/passport-options': {
-        controller: require('../../../controllers/costs-edit-step'),
-        fields: [
-            'passport-options',
-            'braille'
-        ],
-        next: '/cost',
-        forks: [{
-            target: '/relationship-applicant',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
-                    req.session['hmpo-wizard-common']['is-overseas'] === true
-            }
-        },
-        // { // Overseas skip delivery page
-        //     target: '/relationship-applicant',
-        //     condition: function (req, res) {
-        //         return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
-        //             req.session['hmpo-wizard-common']['is-overseas'] === false
-        //     }
-        // }
-    ]
-    },
+    // '/passport-options': {
+    //     controller: require('../../../controllers/costs-edit-step'),
+    //     fields: [
+    //         'passport-options',
+    //         'braille'
+    //     ],
+    //     next: '/cost',
+    //     forks: [{
+    //         target: '/relationship-applicant',
+    //         condition: function (req, res) {
+    //             return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
+    //                 req.session['hmpo-wizard-common']['is-overseas'] === true
+    //         }
+    //     },
+    //     // { // Overseas skip delivery page
+    //     //     target: '/relationship-applicant',
+    //     //     condition: function (req, res) {
+    //     //         return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
+    //     //             req.session['hmpo-wizard-common']['is-overseas'] === false
+    //     //     }
+    //     // }
+    // ]
+    // },
     '/sign': {
         fields: [
             'can-sign',
@@ -435,10 +435,18 @@ module.exports = {
         next: '/dps-time'
     },
     '/dps-time': {
-        next: ''
+        next: '/dps-checkappointment'
     },
     '/dps-checkappointment': {
         next: '/passport-options'
+    },
+    '/passport-options': {
+        controller: require('../../../controllers/costs-edit-step'),
+        fields: [
+            'passport-options',
+            'braille'
+        ],
+        next: '/cost'
     },
     '/csig-required': {
         next: '/documents-required',
