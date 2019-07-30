@@ -446,7 +446,15 @@ module.exports = {
             'passport-options',
             'braille'
         ],
-        next: '/cost'
+        next: '/cost',
+        forks: [
+            { // if premium
+                target: '/declaration',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['urgent'] == true
+                }
+            }
+        ]
     },
     '/csig-required': {
         next: '/documents-required',
