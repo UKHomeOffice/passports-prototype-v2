@@ -586,6 +586,7 @@ module.exports = {
         next: '/declaration'
     },
     '/declaration': {
+        controller: require('../../../controllers/confirm-cost'),
         fields: ['declaration'],
         prereqs: [
             '/summary'
