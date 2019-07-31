@@ -161,6 +161,9 @@ module.exports = {
     '/check-and-submit-okay-2-photo': {
         next: '/declaration-okay-2-photo'
     },
+    '/check-and-submit-okay-2b-photo': {
+        next: '/declaration-okay-2-photo'
+    },
     '/check-and-submit-okay-1-photo': {
         next: '/declaration-okay-1-photo'
     },
