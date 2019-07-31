@@ -7,11 +7,59 @@
         <br>
         <div class="panel panel-border-wide alert-success">
             <h2>You've paid {{values.application-cost}}</h2>
-            <p>We've sent confirmation to:
-            {{values.email}}<br> <a href="">Download your confirmation</a></p>
+        {{#nunjucks}}
+        {% if values['urgent']%}
+                <p>We've saved your application and sent confirmation to: {{values.email}}<br> <a href="">Download your confirmation</a></p>
+            {% else %}
+                <p>We've sent confirmation to: {{values.email}}<br> <a href="">Download your confirmation</a></p>
+            {% endif %}
+        {{/nunjucks}}
         </div>
 
         {{#nunjucks}}
+
+        {% if values['urgent']%}
+            <p>Application reference:<strong> PEX 381 617 9621</strong></p>
+            <div class="panel-important">
+                <p>You can't use your old passport on the day of your appointment</p>
+            </div>
+
+            <h2>Your collection appointment</h2>
+            <p>
+            Monday, 26 September 2019<br>
+            at 10:00am
+            </p>
+            <p>
+            Newport HM Passport Office<br>
+            Nexus House <br>
+            Mission Court <br>
+            Newport <br>
+            NP20 2DW <br>
+            <a href="https://www.google.co.uk/maps/place/Newport+HM+Passport+Office/@51.5812985,-2.9860147,15z/data=!4m2!3m1!1s0x0:0x572ae1c5870c53da?sa=X&ved=0ahUKEwi-0JXZmI3SAhUECsAKHfFiCq0Q_BIIdjAK" target="_blank">View map</a>
+            </p>
+            <p>Follow signs to the main entrance and tell the staff at the check-in desk you've arrived. Don't go to the collections desk</p>
+            <p>It usually takes 30 minutes to collect your new passport. Don't arrive any earlier than 10 minutes before your collection appointment.</p>
+
+            <h2>What you need to bring</h2>
+            <p>You must bring your old passport with you.</p>
+            <p>If someone is collecting your new passport for you, they need to bring:</p>
+            <ul class="list list-bullet">
+                <li>your old passport</li>
+                <li>a signed and dated letter from you, confirming their full name and giving then premission to collect your passport.</li>
+                <li>proof of their identity, for example a driving licence or passport</li>
+            </ul>
+
+            <h2>Track your application</h2>
+            <p>Use your reference <strong>PEX 381 617 9621</strong> to <a href="/tracking?status=send-us-your-docs">track your application</a>.
+            We'll send updates to {{values.email}} and {{values.mobile}}.</p>
+            <p>We'll check your application. If there's a problem, we'll call you on the number you provided.</p>
+            <p>If you have any questions contact <a href="https://www.passport.service.gov.uk/help">HM PassportOffice</a>.</p>
+
+            <a href="" class="button">Give feedback</a><br><br>
+
+
+
+        {% else %}
 
             <p>{{ "Your application has been saved and we're now processing it." if values['lost-stolen-no-docs'] else "Your application has been saved." }}
             <br>Application reference <strong>PEX 319 825 680X</strong></p>
@@ -142,6 +190,8 @@
                 {% endif %}
 
             {% endif %}
+
+        {% endif %}
 
         {{/nunjucks}}
 
