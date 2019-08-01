@@ -394,6 +394,7 @@ module.exports = {
                     req.session['hmpo-wizard-common']['lost-stolen'] === false &&
                     req.session['hmpo-wizard-common']['change-name'] === false &&
                     req.session['hmpo-wizard-common']['passport-damaged'] === false &&
+                    req.session['hmpo-wizard-common']['application-for-someone-else'] === false &&
                     req.session['hmpo-wizard-common']['dual-nationality'] === false;
                 }
             },
