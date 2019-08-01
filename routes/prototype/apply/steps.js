@@ -422,7 +422,7 @@ module.exports = {
         next: '/documents-required',
         forks: [
             { // if premium
-                target: '/how-to-premium',
+                target: '/passport-options',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['urgent'] == true
                 }
@@ -439,7 +439,7 @@ module.exports = {
         next: '/dps-checkappointment'
     },
     '/dps-checkappointment': {
-        next: '/passport-options'
+        next: '/declaration'
     },
     '/passport-options': {
         controller: require('../../../controllers/costs-edit-step'),
@@ -450,7 +450,7 @@ module.exports = {
         next: '/cost',
         forks: [
             { // if premium
-                target: '/declaration',
+                target: '/how-to-premium',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['urgent'] == true
                 }
