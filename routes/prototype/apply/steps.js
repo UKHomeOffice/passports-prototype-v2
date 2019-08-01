@@ -430,15 +430,21 @@ module.exports = {
         ]
     },
     '/how-to-premium': {
-        next: '/dps-dateandplace'
+        next: '/dps-time'
     },
     '/dps-dateandplace': {
         next: '/dps-time'
     },
     '/dps-time': {
-        next: '/dps-checkappointment'
+        next: ''
+    },
+    '/dps-time-london': {
+        next: ''
     },
     '/dps-checkappointment': {
+        next: '/passport-options'
+    },
+    '/dps-checkappointment-london': {
         next: '/passport-options'
     },
     '/passport-options': {
