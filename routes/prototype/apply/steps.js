@@ -430,7 +430,6 @@ module.exports = {
         ]
     },
     '/how-to-premium': {
-        controller: require('../../../controllers/dps-dateandplace'),
         next: '/dps-time'
     },
     '/dps-dateandplace': {
@@ -442,6 +441,7 @@ module.exports = {
         next: '/dps-time'
     },
     '/dps-time': {
+        controller: require('../../../controllers/dps-dateandplace'),
         next: ''
     },
     '/dps-time-london': {
