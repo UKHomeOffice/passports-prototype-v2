@@ -430,18 +430,26 @@ module.exports = {
         ]
     },
     '/how-to-premium': {
+        controller: require('../../../controllers/dps-dateandplace'),
         next: '/dps-time'
     },
     '/dps-dateandplace': {
+        // fields: [
+        //     'dps-time-slot-london',
+        //     'dps-time-slot'
+        // ],
+        // noPost: true,
         next: '/dps-time'
     },
     '/dps-time': {
         next: ''
     },
     '/dps-time-london': {
+        controller: require('../../../controllers/dps-time-london'),
         next: ''
     },
     '/dps-checkappointment': {
+        controller: require('../../../controllers/check-appointment'),
         next: '/passport-options'
     },
     '/dps-checkappointment-london': {
