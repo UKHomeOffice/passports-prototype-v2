@@ -294,7 +294,7 @@ module.exports = {
         next: '/passport-options-overseas'
     },
     '/get-updates': {
-        next: '/sign',
+        next: '/passport-options',
         forks: [{
             target: '/relationship-applicant',
             condition: function (req, res) {
@@ -422,7 +422,7 @@ module.exports = {
         next: '/documents-required',
         forks: [
             { // if premium
-                target: '/passport-options',
+                target: '/how-to-premium',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['urgent'] == true
                 }
@@ -447,15 +447,15 @@ module.exports = {
             'passport-options',
             'braille'
         ],
-        next: '/cost',
-        forks: [
-            { // if premium
-                target: '/how-to-premium',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['urgent'] == true
-                }
-            }
-        ]
+        next: '/sign',
+        // forks: [
+        //     { // if premium
+        //         target: '/how-to-premium',
+        //         condition: function (req, res) {
+        //             return req.session['hmpo-wizard-common']['urgent'] == true
+        //         }
+        //     }
+        // ]
     },
     '/csig-required': {
         next: '/documents-required',
@@ -576,7 +576,7 @@ module.exports = {
     },
     '/passport-special-delivery': {
         controller: require('../../../controllers/costs-edit-step'),
-        next: '/passport-options',
+        next: '/cost',
         fields: [
             'secure-return'
         ],
