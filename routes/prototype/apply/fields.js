@@ -1329,12 +1329,13 @@ module.exports = {
         ],
         className: 'inline'
     },
-    'urgent': {
-        formatter: 'boolean',
-        validate: 'required',
+        'urgent': {
+            formatter: 'boolean',
+        validate: [
+            'required'
+        ],
         legend: {
             value: 'Is it urgent?',
-            className: 'visuallyhidden'
         },
         options: [{
                 value: false,
@@ -1344,8 +1345,8 @@ module.exports = {
                 value: true,
                 label: 'Yes, I need it urgently (£177)'
             }
-        ]
-    },
+        ],
+     },
     'declaration': {
         formatter: 'boolean',
         validate: [

@@ -416,8 +416,9 @@ module.exports = {
     //     next: '/passport-urgently'
     // },
     '/passport-urgently':{
+        controller: require('../../../controllers/costs-edit-step'),
         fields: [
-            'urgent'
+             'urgent'
         ],
         next: '/documents-required',
         forks: [
