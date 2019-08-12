@@ -437,6 +437,7 @@ module.exports = {
         next: '/dps-time'
     },
     '/dps-time': {
+        controller: require('../../../controllers/confirm-cost'),
         next: '/dps-checkappointment'
     },
     '/dps-checkappointment': {

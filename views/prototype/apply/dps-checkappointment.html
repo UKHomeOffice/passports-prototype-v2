@@ -12,45 +12,32 @@
 {{$main-content}}
 {{< hmpo-partials-form}}
 		{{$form}}
+      <div class="padding-wrapper">
+        <h1>Check your collection appointment (TBC)</h1>
 
-<div class="padding-wrapper">
+          <div class="panel-important">
+            <p>You must take your old passport to your appointment.</p>
+          </div>
 
+        <h2>Collection appointment</h2>
+        <p>Monday, 26 September 2019<br>
+        at 10:00am</p>
+        Newport HM Passport Office</br>
+        Nexus House </br>
+        Mission Court </br>
+        Newport </br>
+        NP20 2DW </br>
+        <a href="https://www.google.co.uk/maps/place/Newport+HM+Passport+Office/@51.5812985,-2.9860147,15z/data=!4m2!3m1!1s0x0:0x572ae1c5870c53da?sa=X&ved=0ahUKEwi-0JXZmI3SAhUECsAKHfFiCq0Q_BIIdjAK" target="_blank">View map</a></p>
 
-    <h1>Check your collection appointment</h1>
+        <h2>Cost</h2>
+        <p> Your new passport will cost <strong>{{values.application-cost}}</strong></p>
+        <br>
 
-
-    <div class="panel-important">
-          <p>You must take your old passport to your appointment.</p>
-        </div>
-
-
-      <h2>Monday, 26 September 2019</br>
-        at 10:00am</h2>
-
-     <h2>Newport HM Passport Office</h2>
-      <p>
-    Nexus House </br>
-    Mission Court </br>
-    Newport </br>
-    NP20 2DW </br>
-      <a href="https://www.google.co.uk/maps/place/Newport+HM+Passport+Office/@51.5812985,-2.9860147,15z/data=!4m2!3m1!1s0x0:0x572ae1c5870c53da?sa=X&ved=0ahUKEwi-0JXZmI3SAhUECsAKHfFiCq0Q_BIIdjAK" target="_blank">View map</a></p>
-
-      <!--<p>It usually takes 30 minutes to collect your new passport.</p>-->
-
-    </p>
-
-       <!-- <a><a href="/priority-service/intro/you-need-a-photo" class="button">Continue</a></p> -->
        {{#input-submit}}{{/input-submit}}
       </div>
-    </div>
 
-<!--
-  <div class="column-one-third">
-    <p>&nbsp;</p>
-  </div>
--->
-{{/form}}
-	{{/ hmpo-partials-form}}
+    {{/form}}
+{{/ hmpo-partials-form}}
 {{/main-content}}
 
 {{/ layout}}
