@@ -1339,7 +1339,7 @@ module.exports = {
         },
         options: [{
                 value: false,
-                label: 'No, I&apos;ll use the standard service (£72.50)'
+                label: 'No, I&apos;ll use the standard service (£75.50)'
             },
             {
                 value: true,
