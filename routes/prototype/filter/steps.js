@@ -1,10 +1,14 @@
 module.exports = {
     '/': {
+        backLink: '../',
+        next: '/live-uk',
+    },
+    '/live-uk': {
         fields: [
             'apply-uk',
             'application-country'
         ],
-        backLink: '../',
+        backLink: './',
         next: '/../intro',
         controller: require('../../../controllers/is-overseas'), // Sets the country to GB if not overseas
         forks: [{
