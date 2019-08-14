@@ -31,9 +31,14 @@
         <a href="https://www.google.co.uk/maps/place/HM+Passport+Office/@51.4936639,-0.1461045,17z/data=!3m1!4b1!4m5!3m4!1s0x4876051f799cb11f:0xaa05e82d4f114209!8m2!3d51.4936639!4d-0.1439158" target="_blank">View map</a></p>
 
         <h2>Cost</h2>
-        <p> Your new passport will cost <strong>{{values.application-cost}}</strong></p>
+        {{#nunjucks}}
+        {% if values['passport-options'] === '34' %}
+        <p> Your new standard 34-pages passport will cost <strong>{{values.applicationCost}}</strong></p>
+        {% else %}
+        <p> Your new frequent travellor 50-pages passport will cost <strong>{{values.applicationCost}}</strong></p>
+        {% endif %}
         <br>
-
+        {{/nunjucks}}
        {{#input-submit}}{{/input-submit}}
       </div>
 
