@@ -1,5 +1,6 @@
 // Routes
 app.use(require('./routes/start'));
+app.use(require('./routes/lab-photo-result-scenarios'));
 
 // GOV.UK pages
 app.use('/govuk', require('./routes/govuk'));
