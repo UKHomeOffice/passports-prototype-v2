@@ -161,6 +161,21 @@ module.exports = {
     '/check-and-submit-okay-2-photo': {
         next: '/declaration-okay-2-photo'
     },
+    '/check-and-submit-okay-2-photo-participant-2': {
+        next: '/declaration-okay-2-photo-participant-2'
+    },
+    '/check-and-submit-okay-2-photo-participant-4': {
+        next: '/declaration-okay-2-photo-participant-4'
+    },
+    '/check-and-submit-okay-2-photo-participant-5': {
+        next: '/declaration-okay-2-photo-participant-5'
+    },
+    '/check-and-submit-okay-2-photo-participant-7': {
+        next: '/declaration-okay-2-photo-participant-7'
+    },
+    '/check-and-submit-okay-2-photo-participant-8': {
+        next: '/declaration-okay-2-photo-participant-8'
+    },
     '/check-and-submit-okay-2b-photo': {
         next: '/declaration-okay-2-photo'
     },
@@ -169,6 +184,12 @@ module.exports = {
     },
     '/check-and-submit-failed-photo': {
         next: '/declaration-failed-photo'
+    },
+    '/check-and-submit-failed-photo-participant-7': {
+        next: '/declaration-failed-photo-participant-7'
+    },
+    '/check-and-submit-failed-photo-participant-8': {
+        next: '/declaration-failed-photo-participant-8'
     },
 
     // '/check-and-submit-passed-photo': {
@@ -201,6 +222,56 @@ module.exports = {
             }
         }]
     },
+    '/declaration-okay-2-photo-participant-2': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
+    '/declaration-okay-2-photo-participant-4': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
+    '/declaration-okay-2-photo-participant-5': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
+    '/declaration-okay-2-photo-participant-7': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
+    '/declaration-okay-2-photo-participant-8': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
     '/declaration-okay-1-photo': {
         fields: ['oix-override', 'oix-override-reason'],
         next: '/../filter/first-uk',
@@ -212,6 +283,26 @@ module.exports = {
         }]
     },
     '/declaration-failed-photo': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
+    '/declaration-failed-photo-participant-7': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
+    '/declaration-failed-photo-participant-8': {
         fields: ['oix-override', 'oix-override-reason'],
         next: '/../filter/first-uk',
         forks: [{
