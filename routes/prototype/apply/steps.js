@@ -431,7 +431,12 @@ module.exports = {
         ]
     },
     '/how-to-premium': {
-        next: '/dps-dateandplace'
+        next: '/dps-dateandplace',
+        forks: [{
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['secure-return'] = false
+                }
+            }]
     },
     '/dps-dateandplace': {
         next: '/dps-time'
