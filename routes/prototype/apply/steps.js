@@ -432,6 +432,7 @@ module.exports = {
     },
     '/how-to-premium': {
         next: '/dps-dateandplace',
+        // Set secure delivery to false to avoid adding £5 to the cost incase secure delivery was selected previously
         forks: [{
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['secure-return'] = false
