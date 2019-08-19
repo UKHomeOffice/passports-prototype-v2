@@ -657,6 +657,9 @@
         "lastname": {
             "regex": "Your {{ label }} must only contain letters, hyphens and apostrophes"
         },
+        "urgent": {
+            "required": "Tell us if you need your passport urgently"
+        },
 
         "email": "You must enter a valid email",
         "email-confirm": "Your email doesn’t match. Check and try again.",
