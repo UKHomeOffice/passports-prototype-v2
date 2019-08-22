@@ -53,8 +53,11 @@ Controller.prototype.get = function successHandler(req, res, callback) {
 
             if (photoFileName) {
                 if (photoFileName.endsWith('1')) return res.redirect('./check-and-submit-passed-photo');
-                if (photoFileName.endsWith('2')) return res.redirect('./check-and-submit-photo');
-                if (photoFileName.endsWith('3')) return res.redirect('./not-accepted');
+                if (photoFileName.endsWith('2')) return res.redirect('./check-and-submit-okay-2-photo');
+                if (photoFileName.endsWith('2b')) return res.redirect('./check-and-submit-okay-2b-photo');
+                if (photoFileName.endsWith('3')) return res.redirect('./check-and-submit-okay-1-photo');
+                if (photoFileName.endsWith('4')) return res.redirect('./check-and-submit-failed-photo');
+                if (photoFileName.endsWith('5')) return res.redirect('./not-accepted');
             }
 
             res.redirect('./check-and-submit-passed-photo');
@@ -63,8 +66,11 @@ Controller.prototype.get = function successHandler(req, res, callback) {
             var url = req.sessionModel.get('photo-code-path');
 
             if (url.startsWith('1')) return res.redirect('./check-and-submit-passed-photo');
-            if (url.startsWith('2')) return res.redirect('./check-and-submit-photo');
-            if (url.startsWith('3')) return res.redirect('./not-accepted');
+            if (url.startsWith('2b')) return res.redirect('./check-and-submit-okay-2b-photo');
+            if (url.startsWith('2')) return res.redirect('./check-and-submit-okay-2-photo');
+            if (url.startsWith('3')) return res.redirect('./check-and-submit-okay-1-photo');
+            if (url.startsWith('4')) return res.redirect('./check-and-submit-failed-photo');
+            if (url.startsWith('5')) return res.redirect('./not-accepted');
 
             res.redirect('./code-error');
         }

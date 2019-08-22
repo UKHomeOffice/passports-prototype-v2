@@ -23,6 +23,26 @@
 {{<hmpo-partials-form}}
 {{$form}}
 
+<style>
+    .heading-medium, h2 {
+        font-family: "nta", Arial, sans-serif;
+        font-weight: 700;
+        text-transform: none;
+        font-size: 18px;
+        line-height: 1.2;
+        margin-top: 1.25em;
+        margin-bottom: .5em;
+    }
+    @media (min-width: 641px) {
+        .heading-medium, h2 {
+            margin-top: 1.875em;
+            margin-bottom: .83333em;
+            font-size: 24px;
+            line-height: 1.25;
+
+    }
+</style>
+
 <div class="photo-preview">
     <div class="photo-preview-inner">
         <h2 class="heading-medium">Your photo</h2>
@@ -31,7 +51,7 @@
                 {% if values['applicant-age'] <= 11 %}
                     <img src="/public/images/photo/result/thumbnail-child-age-0-5-fail.jpg" alt="Your photo" title="Your photo" width="150">
                 {% else %}
-                    <img src="/public/images/photo/result/thumbnail-adult-fail.jpg" alt="Your photo" title="Your photo" width="150">
+                    <img src="/public/images/photo/result/thumbnail-adult-poor-mouth-open.jpg" alt="Your photo" title="Your photo" width="150">
                 {% endif %}
 
                 {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
@@ -43,19 +63,19 @@
         </div>
     </div>
 </div>
-
-<ol class="list-number">
+<p>Before you submit your photo, check that it meets all of these rules.<p>
+<ol class="list list-number">
     <li class="list-item-bold">Background and lighting
         <p>Your photo must have:</p>
-        <ul class="list-bullet">
+        <ul class="list list-bullet">
             <li>a plain light-coloured background &ndash; without texture or pattern</li>
             <li>balanced light &ndash; no shadows on your face or behind you</li>
             <li>no objects behind you</li>
         </ul>
     </li>
-    <li class="list-item-bold">Your appearance
+    <li class="list-item-bold">Face and expression
         <p>Make sure:</p>
-        <ul class="list-bullet">
+        <ul class="list list-bullet">
             <li>the photo is a good likeness taken in the last month</li>
             <li>your whole face is visible
 
@@ -72,17 +92,16 @@
         </ul>
     </li>
     <li class="list-item-bold">Photo quality and format
-        <p>Your photo must:</p>
-        <ul class="list-bullet">
-            <li>be in colour, with no effects or filters</li>
-            <li>not be blurred or have ‘red eye’</li>
-            <li>be unedited &ndash; you can’t ‘correct’ your passport photo</li>
+        <p>Your photo must be:</p>
+        <ul class="list list-bullet">
+            <li>in colour, with no effects or filters</li>
+            <li>not blurred or have ‘red eye’</li>
+            <li>unedited &ndash; you can’t ‘correct’ your passport photo</li>
         </ul>
     </li>
 </ol>
-<br>
 
-{{#nunjucks}}
+<!-- {{#nunjucks}}
     {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
         <div class="panel panel-border-wide alert-warning">
             <p class="list-item-bold">
@@ -105,26 +124,17 @@
             </ul>
         </p>
     </div>
-{{/nunjucks}}
+{{/nunjucks}} -->
 
-<h2 class="heading-medium">
+<!-- <h2 class="heading-medium">
     You can use the photo</h2>
-<ul class="list-bullet">
+<ul class="list list-bullet">
     <li>if you have a medical or religious reason why it doesn't meet the rules</li>
     <li>if you think it meets all the rules</li>
-</ul>
+</ul> -->
 
-{{#nunjucks}}
-    {% if values['choose-photo'] == 'code' %}
-        <div class="panel panel-border-wide">
-            <p>If your photo doesn't meet the rules you may have problems with your application or when you travel.</p>
-        </div>
-    {% endif %}
-{{/nunjucks}}
-
-<h2>Do you want to submit this photo?</h2>
-
-<!-- {{#radio-group}}oix-override{{/radio-group}}
+<!-- <h2>Do you want to submit this photo?</h2>
+{{#radio-group}}oix-override{{/radio-group}}
 
 <div id="oix-override" class="reveal js-hidden">
     <div class="panel panel-border-narrow" style="margin-top:-20px; margin-bottom:20px;">
@@ -136,18 +146,38 @@
     <br>
 </div> -->
 
+<div class="panel panel-border-wide">
+    <p>If your photo doesn’t meet the rules you may have problems with your application or when you travel.</p>
+</div>
+
 <div id="oix-override-group" class="form-group">
     <fieldset role="radiogroup" aria-required="true">
         <legend>
-            <span class="visuallyhidden">Do you want to use this photo?</span>
+            <span class="form-label-bold">Do you want to submit this photo?</span>
         </legend>
-
+        <h3>You can only use this photo if you:</h3>
+        <ul class="list list-bullet">
+            <li>have a medical or religious reason why it doesn’t meet the rules</li>
+            <li>think it meets all the rules</li>
+        </ul>
         <label class="block-label selected" for="oix-override-true">
             <input type="radio" name="oix-override" id="oix-override-true" value="true" required="true" data-toggle="oix-override" aria-controls="oix-override" aria-expanded="true">
-            Yes, I want to submit it
+            Yes, I understand &ndash; submit this photo
         </label>
 
         <div class="panel panel-border-narrow js-hidden" id="oix-override" style="margin-top:10px; margin-bottom:0px;">
+            {{#nunjucks}}
+                <h3 style="margin-bottom: 0;">Your photo check result:</h3>
+                <ul class="list list-bullet">
+                    {% if values['applicant-age'] <= 11 %}
+                        <li>it looks like your eyes are closed</li>
+                        <li>it looks like you’re not facing the camera</li>
+                        <li>we can’t find the outline of your head</li>
+                    {% else %}
+                        <li>it looks like your mouth is open</li>
+                    {% endif %}
+                </ul>
+            {{/nunjucks}}
             <label for="oix-override-reason" class="form-label">
                 Explain why you’d like to use this photo
             </label>
@@ -162,14 +192,6 @@
 </div>
 
 {{#input-submit}}{{/input-submit}}
-
-{{#nunjucks}}
-    {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
-        <div class="panel panel-border-wide">
-            <p>If your photo doesn't meet the rules you may have problems with your application or when you travel.</p>
-        </div>
-    {% endif %}
-{{/nunjucks}}
 
 {{/form}}
 {{/hmpo-partials-form}}

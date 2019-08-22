@@ -1,5 +1,15 @@
 module.exports = {
     '/': {
+        next: '/dob'
+    },
+    '/dob': {
+        controller: require('../../../controllers/check-dob'),
+        fields: [
+            'age-day',
+            'age-year',
+            'age-month'
+        ],
+        backLink: './',
         next: '/choose-photo-method'
     },
     '/choose-photo-method': {
@@ -146,58 +156,83 @@ module.exports = {
         controller: require('../../../controllers/fetch-photo-result')
     },
     '/check-and-submit-passed-photo': {
+        next: '/declaration-passed-photo'
+    },
+    '/check-and-submit-okay-2-photo': {
+        next: '/declaration-okay-2-photo'
+    },
+    '/check-and-submit-okay-2b-photo': {
+        next: '/declaration-okay-2-photo'
+    },
+    '/check-and-submit-okay-1-photo': {
+        next: '/declaration-okay-1-photo'
+    },
+    '/check-and-submit-failed-photo': {
+        next: '/declaration-failed-photo'
+    },
+
+    // '/check-and-submit-passed-photo': {
+    //     fields: ['submit-photo'],
+    //     next: '/../filter/first-uk',
+    //     forks: [{
+    //         target: '/../photo',
+    //         condition: function (req, res) {
+    //             return req.session['hmpo-wizard-common']['submit-photo'] == false;
+    //         }
+    //     }]
+    // },
+    '/declaration-passed-photo': {
         fields: ['submit-photo'],
-        next: '/../apply',
+        next: '/../filter/first-uk',
         forks: [{
-            target: '/../apply',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
-            }
-            
-        },{
-            target: '/../apply/lost-stolen-passport',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['lost-stolen'] == true; // If their passport is lost/stolen
-            }
-        }, {
-            target: '/../apply/name',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
-            }
-        }, {
-            target: '/../photo',
+            target: '/choose-photo-method',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['submit-photo'] == false;
             }
         }]
     },
-    '/check-and-submit-photo': {
+    '/declaration-okay-2-photo': {
         fields: ['oix-override', 'oix-override-reason'],
-        next: '/../apply',
+        next: '/../filter/first-uk',
         forks: [{
-            target: '/../apply',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == true; // If they have had UK passport before
-            }
-        }, { 
-            target: '/../apply/lost-stolen-passport',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['lost-stolen'] == true; // If their passport is lost/stolen
-            }
-        }, {
-            target: '/../apply/name',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['passport-before'] == false; // If they have NOT had UK passport before
-            }
-        }, {
-            target: '/../photo',
+            target: '/choose-photo-method',
             condition: function (req, res) {
                 return req.session['hmpo-wizard-common']['oix-override'] == false;
             }
         }]
     },
+    '/declaration-okay-1-photo': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
+    '/declaration-failed-photo': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
+    // '/check-and-submit-failed-photo': {
+    //     fields: ['oix-override', 'oix-override-reason'],
+    //     next: '/../filter/first-uk',
+    //     forks: [{
+    //         target: '/../photo',
+    //         condition: function (req, res) {
+    //             return req.session['hmpo-wizard-common']['oix-override'] == false;
+    //         }
+    //     }]
+    // },
     '/not-accepted': {
-        next: '/../photo'
+        next: '/choose-photo-method'
     },
     '/code-error': {
         backLink: './retrieve',

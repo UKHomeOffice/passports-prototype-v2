@@ -67,7 +67,7 @@
                 {% if values['applicant-age'] <= 11 %}
                     <img src="/public/images/photo/result/thumbnail-child-age-0-5-fail.jpg" alt="Your photo" title="Your photo" width="150">
                 {% else %}
-                    <img src="/public/images/photo/result/thumbnail-adult-good.jpg" alt="Your photo" title="Your photo" width="150">
+                    <img src="/public/images/photo/result/thumbnail-adult-poor-mouth-open.jpg" alt="Your photo" title="Your photo" width="150">
                 {% endif %}
 
                 {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
@@ -87,39 +87,43 @@
     <h2 style="padding: 0 15px;">Result</h2>
 
     <div class="column-one-third">
-        <img id="result-dial-gauge" src="../../../public/images/photo/dial-gauge-good.png">
-        <p class="result-good result-text">Good</p>
+        <img id="result-dial-gauge" src="../../../public/images/photo/dial-gauge-poor.png">
+        <p class="result-poor result-text">Poor</p>
     </div>
 
     <div class="column-two-thirds">
-        <p style="margin-top: 15px;">Photos with a good rating are the most likely to be suitable for a new passport.</p>
-        <!-- <details>
-            <summary><span class="summary">What’s affecting this result?</span></summary>
+        <p style="margin-top: 15px;">Your photo doesn’t meet all the rules and is unlikely to be suitable for a new passport.</p>
+            <p style="margin-top: 15px;">Next, you'll check the photo for common mistakes. You can:</p>
+            <ul class="list list-bullet">
+                <li>choose to take another photo</li>
+                <li>use this photo if you can't meet the rules because of a religious or medical reason</li>
+                <li>use this photo if you think the reason for the result is not correct</li>
+            </ul>
+        <details>
+            <summary><span class="summary">Find out the reason for this result</span></summary>
             <div class="panel panel-border-narrow">
-                <h3>Your image and the background are difficult to tell apart</h3>
-                <h3>Try:</h3>
+                <h3>It looks like your mouth is open</h3>
                 <ul class="list list-bullet">
-                    <li>standing in front of a plain light coloured background</li>
-                    <li>tying your hair back or brushing it down if it's loose</li>
-                    <li>standing further away from the wall to avoid shadows</li>
-                    <li>to make sure the background has no glare or patterns</li>
+                    <li>sometimes this is caused by facial hair or shadows near your mouth</li>
+                    <li>try different lighting</li>
+                    <li>you can still submit your photo if you believe it should be accepted (for example there's a medical reason why your mouth appears to be open)</li>
                 </ul>
-                <h3>The lighting is too dark or uneven</h3>
-                <h3>Try:</h3>
-                <ul class="list list-bullet">
-                    <li>standing further away to avoid shadows</li>
-                    <li>switching the flash off</li>
-                    <li>standing where there's more natural light</li>
-                </ul>
-
             </div>
-        </details> -->
+        </details>
     </div>
 
     <!-- <hr style="margin-left: 15px; margin-right: 15px; min-width: 1px;"> -->
 </div>
 
 {{#input-submit}}{{/input-submit}}
+
+<!-- <div class="panel panel-border-wide">
+    <p>You can still use a photo if you can’t meet the photo rules because of a religious or medical reason.</p>
+</div> -->
+<!-- <div class="panel panel-border-wide">
+    <p>You can still use a photo if you can’t meet the photo rules because of a religious or medical reason. We'll ask you to explain the circumstances when you submit your photo.</p>
+</div> -->
+
 
 {{/form}}
 {{/hmpo-partials-form}}
@@ -136,7 +140,7 @@
                     {% if values['applicant-age'] <= 11 %}
                         <img src="/public/images/photo/result/thumbnail-child-age-0-5-fail.jpg" alt="Your photo" title="Your photo" width="150">
                     {% else %}
-                        <img src="/public/images/photo/result/thumbnail-adult-fail.jpg" alt="Your photo" title="Your photo" width="150">
+                        <img src="/public/images/photo/result/thumbnail-adult-poor-mouth-open.jpg" alt="Your photo" title="Your photo" width="150">
                     {% endif %}
 
                     {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}

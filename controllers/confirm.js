@@ -315,7 +315,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     } else {
         newPassportFields.push({
             title: 'Your photo',
-            custom: '<div class="photo"><img src="../../public/images/photo/result/thumbnail-adult-pass.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150"></div>'
+            custom: '<div class="photo"><img src="../../public/images/photo/result/thumbnail-adult-good.jpg" alt="Your uploaded photo" title="Your uploaded photo" width="150"></div>'
         });
     }
 

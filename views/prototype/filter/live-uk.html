@@ -1,15 +1,15 @@
 {{< layout}}
 
-{{$pageTitle}}Which country were you born in?{{/pageTitle}}
+{{$pageTitle}}Do you live in the UK?{{/pageTitle}}
 
 {{$header}}
-    <h1>Which country were you born in?</h1>
+    <h1>Do you live in the UK?</h1>
 {{/header}}
 
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-        {{#select}}country-birth{{/select}}
+        {{#radio-group}}apply-uk{{/radio-group}}
         {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}

@@ -1,4 +1,28 @@
 module.exports = {
+    'age-day': {
+        labelClassName: 'form-label',
+        formatter: 'removehyphens',
+        validate: [
+            'numeric',
+            'required'
+        ]
+    },
+    'age-year': {
+        labelClassName: 'form-label',
+        formatter: 'removehyphens',
+        validate: [
+            'numeric',
+            'required'
+        ]
+    },
+    'age-month': {
+        labelClassName: 'form-label',
+        formatter: 'removehyphens',
+        validate: [
+            'numeric',
+            'required'
+        ]
+    },
     'choose-photo': {
         legend: {
             value: 'I already have a digital photo',
@@ -60,7 +84,7 @@ module.exports = {
         ],
         validate: ['required'],
         formatter: 'boolean'
-    },
+     },
     'oix-override': {
         legend: {
             value: 'Do you want to use this photo?',

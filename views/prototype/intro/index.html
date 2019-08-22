@@ -1,31 +1,83 @@
 {{< layout}}
 
-{{$main-content}}
+{{$pageTitle}}How to apply{{/pageTitle}}
+
+{{$header}}
+    <h1>How to apply</h1>
+{{/header}}
+
+{{$back}}
+    <!-- TODO: Make it work if coming back from next page -->
+    <a href="javascript:history.back()" class="back-link">Back</a>
+{{/back}}
+
+{{$content}}
 
 {{< hmpo-partials-form}}
-  {{$form}}
-    <!-- Renewals -->
-    {{#values.passport-before}}
-      {{#values.old-blue}}
-        {{> partials-how-to-how-to-fta}}
-      {{/values.old-blue}}
-      {{^values.old-blue}}
-        <!-- lost/stolen -->
-        {{#values.lost-stolen}}
-          {{> partials-how-to-how-to-lost-stolen}}
-        {{/values.lost-stolen}}
-        {{^values.lost-stolen}}
-          {{> partials-how-to-how-to-renew}}
-        {{/values.lost-stolen}}
-      {{/values.old-blue}}
-    {{/values.passport-before}}
-    <!-- First time applications -->
-    {{^values.passport-before}}
-      {{> partials-how-to-how-to-fta}}
-    {{/values.passport-before}}
-  {{/form}}
+    {{$form}}
+
+        <style>
+            .list-item-bold p:last-child {
+                margin-bottom: 20px;
+            }
+        </style>
+
+        <ol class="list list-number">
+
+            <li class="list-item-bold">Get a digital passport photo
+                <p>We’ll show you how to get a digital passport photo.</p>
+            </li>
+
+            <li class="list-item-bold">Provide application details
+                <p>Fill in your application details.</p>
+            </li>
+
+            <li class="list-item-bold">Find out what documents you need to send
+                <p>We’ll tell you what documents you need to send.</p>
+            </li>
+
+            <li class="list-item-bold">Pay for your passport online
+                <p>A standard passport is £75.50 for an adult, and £49 for a child.</p>
+            </li>
+
+            <li class="list-item-bold">If required, get someone to confirm your identity
+                <p>We’ll tell you if we need someone to confirm your identity. They can confirm your identity online</a> without
+                    a printed photo.</p>
+            </li>
+
+            <li class="list-item-bold">Track your application
+                <p>We’ll send you updates by email or text. You can also log in to:</p>
+                <ul class="list list-bullet">
+                    <li>track progress on your application</li>
+                    <li>check what documents you need to send, and where to send them</li>
+                    <li>ask someone to confirm your identity (if required)</li>
+                </ul>
+            </li>
+
+        </ol>
+
+        <details>
+            <summary><span class="summary">I need help doing things online</span></summary>
+            <div class="panel panel-border-narrow">
+                <p>You can call the Passport Adviceline for help.</p>
+                <ul>
+                    <li>Telephone: 0300 330 0901</li>
+                    <li>Textphone: 0300 330 0808</li>
+                    <li>Monday to Friday, 8:00am to 8:00pm</li>
+                    <li>Weekends and public holidays, 9:00am to 5:30pm</li>
+                    <p></p>
+                    <li><a href="https://www.gov.uk/call-charges">Find out about call charges</a></li>
+                </ul>
+            </div>
+        </details>
+
+        {{#input-submit}}{{/input-submit}}
+
+
+
+    {{/form}}
 {{/ hmpo-partials-form}}
 
-{{/ main-content}}
+{{/content}}
 
 {{/ layout}}
