@@ -1,0 +1,120 @@
+
+{{< layout}}
+
+{{$pageTitle}}Choose a date and place - appointment{{/pageTitle}}
+
+{{$header}}{{/header}}
+
+{{$main-content}}
+	{{< hmpo-partials-form}}
+		{{$form}}
+			<div class="padding-wrapper">
+				<h1>Choose a date and place</h1>
+
+				<div class="grid-row">
+					<div class="column-two-thirds">
+						<p>You'll need to collect your new passport from a <a href="https://www.passport.service.gov.uk/help/passport-offices/" target="_blank">passport office</a>. You can ask someone else to go for you if you’re not available.</p>
+					</div>
+				</div>
+
+				<!--
+				<p>You can check collection times in: </p>
+				<p class="font-small"><a href="/priority-service/book-appointment/london-week-1">London</a> &emsp; <a href="#">Peterborough</a> &emsp; <a href="#">Newport</a> &emsp; <a href="#">Liverpool</a> &emsp; <a href="#">Durham</a> &emsp; <a href="#">Glasgow</a> &emsp; <a href="#">Belfast</a></p>
+				-->
+
+				<div class="manage-times">
+					<div class="manage-time-next">
+					<span class="font-small"><a href="#">Later <div class="later-arrow"></div></a> </span>
+				</div>
+
+				<!-- <div class="manage-time-previous">
+				<a href="/priority-service/book-appointment/"><div class="earlier-arrow"></div> Earlier </div></a>
+				</div> -->
+
+				<div class="book-table">
+					<table class="book-table">
+						<tbody>
+							<tr>
+								<td><span class="bold-small">Thursday<br> 22 August</span></td>
+								<td><span class="bold-small">Friday<br>  23 August</span></td>
+								<td><span class="bold-small">Saturday<br>  24 August</span></td>
+								<td class="hide"><span class="bold-small">Sunday<br>  25 August</span></td>
+								<td class="hide"><span class="bold-small">Monday<br>  26 August</span></td>
+								<td class="hide"><span class="bold-small">Tuesday<br>  27 August</span></td>
+							</tr>
+
+							<tr>
+								<td><a href="/prototype/apply/dps-time" name="dps-time-slot" value="London22aug" input type="submit"><span class="city-available">London </br><span class="available">Available</span></span></a></td>
+								<td><span class="unavailable">London</br></span></td>
+								<td><a href="#"><span class="city-available">London </br><span class="available">Available</span></span></a></td>
+								<td class="hide"><span class="unavailable">London </br></span></td>
+								<td class="hide"><a href="#"><span class="city-available">London </br><span class="available">Available</span></span></a></td>
+								<td class="hide"><a href="#"><span class="city-available">London </br><span class="available">Available</span></span></a></td>
+							</tr>
+
+							<tr>
+								<td><span class="unavailable">Peterborough </br></span></td>
+								<td><span class="unavailable">Peterborough </br></span></td>
+								<td><span class="unavailable">Peterborough </br></span></td>
+								<td class="hide"><span class="city-available"><a href="#">Peterborough </br><span class="available">Available</span></span></a></td>
+								<td class="hide"><span class="unavailable">Peterborough </br></span></td>
+								<td class="hide"><span class="unavailable">Peterborough </br></span></td>
+							</tr>
+
+							<tr>
+								<td><a href="#"><span class="city-available">Newport </br><span class="available">Available</span></span></a></td>
+								<td><a href="#"><span class="city-available">Newport </br><span class="available">Available</span></span></a></td>
+								<!-- <td><a href="/prototype/apply/dps-time" name="dps-time-slot" value="Newport24sep" input type="submit"><span class="city-available">Newport </br><span class="available">Available</span></span></a></td> -->
+								<td><span class="unavailable">Newport </br></span></td>
+								<td class="hide"><span class="unavailable">Newport </br></span></td>
+								<td class="hide"><span class="unavailable">Newport </br></span></td>
+								<td class="hide"><span class="unavailable">Newport </br></span></td>
+							</tr>
+
+							<tr>
+								<td><span class="unavailable">Liverpool </br></span></td>
+								<td><span class="unavailable">Liverpool </br></span></td>
+								<td><span class="unavailable">Liverpool </br></san></td>
+								<td class="hide"><a href="#"><span class="city-available">Liverpool </br><span class="available">Available</span></span></a></td>
+								<td class="hide"><span class="unavailable">Liverpool </br></span></td>
+								<td class="hide"><span class="unavailable">Liverpool </br></span></td>
+							</tr>
+
+							<tr>
+								<td><a href="#"><span class="city-available">Durham </br><span class="available">Available</span></span></a></td>
+								<td><span class="unavailable">Durham </br></span></td>
+								<td><span class="unavailable">Durham </br></span></td>
+								<td class="hide"><span class="unavailable">Durham </br></span></td>
+								<td class="hide"><span class="unavailable">Durham </br></span></td>
+							<td class="hide"><span class="unavailable">Durham </br></span></td>
+							</tr>
+
+							<tr>
+								<td><span class="unavailable">Glasgow </br></span></td>
+								<td><a href="#"><span class="city-available">Glasgow </br><span class="available">Available</span></span></a></td>
+								<td><span class="unavailable">Glasgow </br></span></td>
+								<td class="hide"><a href="#"><span class="city-available">Glasgow </br><span class="available">Available</span></span></a></td>
+								<td class="hide"><span class="unavailable">Glasgow </br></span></td>
+								<td class="hide"><span class="unavailable">Glasgow </br></span></td>
+							</tr>
+
+							<tr>
+								<td><span class="unavailable">Belfast </br></span></td>
+								<td><span class="unavailable">Belfast </br></span></td>
+								<td><a href="#"><span class="city-available">Belfast </br><span class="available">Available</span></span></a></td>
+								<td class="hide"><span class="unavailable">Belfast </br></span></td>
+								<td class="hide"><a href="#"><span class="city-available">Belfast </br><span class="available">Available</span></span></a></td>
+								<td class="hide"><span class="unavailable">Belfast </br></span></td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<br>
+			<!-- </div> -->
+
+		{{/form}}
+	{{/ hmpo-partials-form}}
+{{/main-content}}
+{{/ layout}}

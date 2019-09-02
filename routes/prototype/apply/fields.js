@@ -1352,6 +1352,30 @@ module.exports = {
         ],
         className: 'inline'
     },
+        'urgent': {
+            formatter: 'boolean',
+        validate: [
+            'required'
+        ],
+        legend: {
+            value: 'Is it urgent?',
+        },
+        options: [{
+                value: false,
+                label: 'No, I&apos;ll use the standard service (£75.50)'
+            },
+            {
+                value: true,
+                label: 'Yes, I need it urgently (£177)'
+            }
+        ],
+     },
+    'declaration': {
+        formatter: 'boolean',
+        validate: [
+            'required'
+        ]
+    },
     'relationship-applicant': {
         legend: {
             value: 'What is your relationship to the applicant?',
@@ -1417,10 +1441,26 @@ module.exports = {
             'required'
         ]
     },
-    'declaration': {
-        formatter: 'boolean',
-        validate: [
-            'required'
-        ]
-    }
+    // 'standard-radio': {
+    //     legend: {
+    //         value: 'What service do you want to use?',
+    //         className: 'visuallyhidden'
+    //     },
+    //     options: [{
+    //             value: 'standard',
+    //             label: 'No, I want to use the standard service (£75.50)'
+    //         }
+    //     ],
+    // },
+    // 'dps-radio': {
+    //     legend: {
+    //         value: 'What service do you want to use?',
+    //         className: 'visuallyhidden'
+    //     },
+    //     options: [{
+    //             value: 'dps',
+    //             label: 'Yes, I want to use Online Premium (£177)',
+    //         }
+    //     ],
+    // },
 };

@@ -1,0 +1,88 @@
+
+{{< layout}}
+
+{{$propositionHeader}}{{/propositionHeader}}
+
+{{$pageTitle}}Check your appointment{{/pageTitle}}
+
+{{$header}}
+
+{{/header}}
+
+{{$main-content}}
+  {{< hmpo-partials-form}}
+		{{$form}}
+      <div class="padding-wrapper">
+        <h1>Check your appointment</h1>
+          <div class="panel-important">
+            <p>You must take your old passport to your appointment.</p>
+          </div>
+        <h2>Collection appointment</h2>
+          <p>Thursday, 22 August 2019<br>
+          at 2:00pm</p>
+          London HM Passport Office</br>
+          2nd Floor </br>
+          Globe House </br>
+          89 Eccleston Square </br>
+          London </br>
+          SW1V 1PN </br>
+          <a href="https://www.google.co.uk/maps/place/HM+Passport+Office/@51.4936639,-0.1461045,17z/data=!3m1!4b1!4m5!3m4!1s0x4876051f799cb11f:0xaa05e82d4f114209!8m2!3d51.4936639!4d-0.1439158" target="_blank">View map</a></p>
+        <br>
+        {{#nunjucks}}
+
+          {% if values['passport-options'] === '34' %}
+            <div class="grid-row">
+              <div class="column-two-thirds">
+                <div class="confirmation">
+                  <div class="section old-passport-details">
+                    <h2>Cost</h2>
+                        <dl class="passport-number">
+                          <dt class="column-one-third">Passport size</dt>
+                            <dd class="column-two-thirds">
+                              <p>Standard 34-page passport</p>
+                            </dd>
+                        </dl>
+                        <dl class="expiry-date">
+                          <dt class="column-one-third">Total</dt>
+                            <dd class="column-two-thirds">
+                                <p>{{values.applicationCost}}</p>
+                            </dd>
+                        </dl>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        {% else %}
+            <div class="grid-row">
+              <div class="column-two-thirds">
+                <div class="confirmation">
+                  <div class="section old-passport-details">
+                    <h2>Cost</h2>
+                        <dl class="passport-number">
+                          <dt class="column-one-third">Passport size</dt>
+                            <dd class="column-two-thirds">
+                              <p>Frequent traveller 50-page passport</p>
+                            </dd>
+                        </dl>
+                        <dl class="expiry-date">
+                          <dt class="column-one-third">Total</dt>
+                            <dd class="column-two-thirds">
+                                <p>{{values.applicationCost}}</p>
+                            </dd>
+                        </dl>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        <br>
+        {{/nunjucks}}
+
+       {{#input-submit}}{{/input-submit}}
+      </div>
+    {{/form}}
+  {{/ hmpo-partials-form}}
+{{/main-content}}
+
+{{/ layout}}

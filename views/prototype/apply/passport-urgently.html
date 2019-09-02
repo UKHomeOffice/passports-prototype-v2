@@ -1,0 +1,51 @@
+{{< layout}}
+
+{{$pageTitle}}Do you need your passport urgently?{{/pageTitle}}
+
+{{$header}}
+    <h1>Do you need your passport urgently?</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+    {{$form}}
+        <p>It should take 3 weeks to get your passport with the standard service.</p>
+        <p>If you need your passport urgently, collect it from a <a href="https://www.passport.service.gov.uk/help/passport-offices/" target="_blank">passport office</a> in the next 5 days with the Online Premium service.</p>
+
+    {{#nunjucks}}
+    {% if values['passport-options'] === '34' %}
+        <div id="urgent-group" class="form-group">
+            <fieldset role="radiogroup" aria-required="true">
+				<label class="block-label" for="urgent-false">
+					<input type="radio" name="urgent" id="urgent-false" value="false" required="true">
+					No, I'll use the standard service (£75.50)
+				</label>
+				<label class="block-label" for="urgent-true">
+					<input type="radio" name="urgent" id="urgent-true" value="true"  required="true">
+					Yes, I need it urgently (£177)
+				</label>
+            </fieldset>
+        </div>
+	{% else %}
+		<div id="urgent-group" class="form-group">
+			<fieldset role="radiogroup" aria-required="true">
+				<label class="block-label" for="urgent-false">
+					<input type="radio" name="urgent" id="urgent-false" value="false" required="true">
+					No, I'll use the standard service (£85.50)
+				</label>
+            	<label class="block-label" for="urgent-true">
+                <input type="radio" name="urgent" id="urgent-true" value="true" required="true" >
+                Yes, I need it urgently (£187)
+            	</label>
+            </fieldset>
+        </div>
+	{% endif %}
+	{{/nunjucks}}
+	{{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}

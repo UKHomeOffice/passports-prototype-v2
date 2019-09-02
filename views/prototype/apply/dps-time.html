@@ -1,0 +1,117 @@
+
+{{< layout}}
+
+{{$pageTitle}}Choose a collection time - appointment{{/pageTitle}}
+
+{{$pageTitle}}Choose a collection time{{/pageTitle}}
+
+{{$header}}
+{# <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous">
+</script>  #}
+{{/header}}
+
+{{$main-content}}
+
+    {{< hmpo-partials-form}}
+        {{$form}}
+            <div class="padding-wrapper">
+                <h1>Choose a collection time</h1>
+
+                <div class="grid-row">
+                    <div class="column-two-thirds">
+                        <h2>London HM Passport Office</h2>
+                        <p>2nd Floor, Globe House, 89 Eccleston Square, London, SW1V 1PN  <a href="https://www.google.co.uk/maps/place/HM+Passport+Office/@51.4936639,-0.1461045,17z/data=!3m1!4b1!4m5!3m4!1s0x4876051f799cb11f:0xaa05e82d4f114209!8m2!3d51.4936639!4d-0.1439158" target="_blank">View map</a></p>
+                        <p>It usually takes 30 minutes to collect your new passport.</p>
+                        <!--<p>If you can’t find the date and time you need, you can <a href="www.gov.uk">choose a different passport offices</a>.</p>-->
+                    </div>
+                </div>
+
+                    <div class="manage-times">
+                        <div class="manage-time-next">
+                            <span class="font-small"><a href="#">Later <div class="later-arrow"></div></a> </span>
+                        </div>
+                        <!-- <div class="manage-time-previous">
+                            <span class="font-small">Earlier</a></h2>
+                        </div> -->
+                    </div>
+
+                    <div class="book-table">
+                        <table class="book-table">
+                            <tbody>
+                                <tr>
+                                    <td><span class="bold-small">Thursday<br> 22 August</span></td>
+                                    <td><span class="bold-small">Friday<br>  23 August</span></td>
+                                    <td><span class="bold-small">Saturday<br>  24 August</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="unavailable">10:00am </br></span></td>
+                                    <td><a href="#" input type="submit"><span class="available">10.00am </br><span class="available">Available</span></span></a></td>
+                                    <td><span class="unavailable">10:00am </br></span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="available"><a href="#">10:30am </br><span class="available">Available</span></span></a></td>
+                                    <td><span class="unavailable">10:30am </br></span></td>
+                                    <td><span class="unavailable">10:30am </br></span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="unavailable">12:30pm </br></span></td>
+                                    <td><a href="#"><span class="available">12:30pm </br><span class="available">Available</span></span></a></td>
+                                    <td><a href="#"><span class="available">12:30pm </br><span class="available">Available</span></span></a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="unavailable">1:00pm </br></span></td>
+                                    <td><span class="unavailable">1:00pm </br></span></td>
+                                    <td><span class="unavailable">1:00pm </br></san></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="#"><span class="available">1:30pm </br><span class="available">Available</span></span></a></td>
+                                    <td><a href="#"><span class="available">1:30pm </br><span class="available">Available</span></span></a></td>
+                                    <td><span class="unavailable">1:30pm </br></span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="available"><a href="/prototype/apply/dps-checkappointment">2:00pm </br><span class="available">Available</span></span></a></td>
+                                    <td><span class="available"><a href="#">2:00pm </br><span class="available">Available</span></span></a></td>
+                                    <td><span class="available"><a href="#">2:00pm </br><span class="available">Available</span></span></a></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="unavailable">4:30pm </br></span></td>
+                                    <td><a href="#"><span class="available">4:30pm </br><span class="available">Available</span></span></a></td>
+                                    <td><span class="unavailable">4:30pm </br></span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="#"><span class="available">5.00pm </br><span class="available">Available</span></span></a></td>
+                                    <td><a href="#"><span class="available">5.00pm </br><span class="available">Available</span></span></a></td>
+                                    <td><a href="#"><span class="available">5.00pm </br><span class="available">Available</span></span></a></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            <!-- </div> -->
+
+            <!-- <script>
+            window.onscroll = function() {
+                var sticky = document.getElementById('stickynav');
+                if( document.body.scrollTop+document.documentElement.scrollTop > 240)
+                    sticky.className = "stuck";
+                else sticky.className = "";
+                };
+            </script> -->
+
+        {{/form}}
+    {{/ hmpo-partials-form}}
+
+{{/main-content}}
+{{/ layout}}

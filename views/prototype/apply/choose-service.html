@@ -1,0 +1,94 @@
+{{< layout}}
+
+{{$pageTitle}}Choose a service{{/pageTitle}}
+
+
+{{$header}}
+    <h1>How quickly do you need your new passport?</h1>
+{{/header}}
+
+{{$content}}
+    {{< hmpo-partials-form}}
+        {{$form}}
+        <!-- <p>You'll get your new passport within 3 weeks with the standard service. </p>
+        <p>If you need it faster, choose Online Premium and book an appointment to collect it from your nearest passport office.</p> -->
+       <style>
+            @media (min-width: 641px) {
+                .column-two-thirds {
+                float: left;
+                width: 100%;
+                }
+            }
+        </style>
+
+        <div class="column-full">
+            <div class="column-half">
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col"><h2>Standard</h2></th>
+                        <th class="govuk-table__header" scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                    <th class="govuk-table__header" scope="row">Sending your documents</th>
+                                    <td class="govuk-table__cell">Post your old passport to the address we give you</td>
+                                    </tr>
+            
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">Getting your new passport</th>
+                        <td class="govuk-table__cell">Your new passport will be delivered to your address</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">How long it takes</th>
+                        <td class="govuk-table__cell">Up to 3 weeks</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">Cost</th>
+                        <td class="govuk-table__cell">£70</td>
+                        </tr>
+                    </tbody>
+                </table>
+                        <br>
+                        {{#input-submit}}3-weeks{{/input-submit}}
+
+            </div>
+
+            <div class="column-half">
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col"><h2>Premium</h2></th>
+                        <th class="govuk-table__header" scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                    <th class="govuk-table__header" scope="row">Sending your documents</th>
+                                    <td class="govuk-table__cell">Take your old passport to your appointment</td>
+                                    </tr>
+            
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">Getting your new passport</th>
+                        <td class="govuk-table__cell">Collect it from passport office</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">How long it takes</th>
+                        <td class="govuk-table__cell">x days</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">Cost</th>
+                        <td class="govuk-table__cell">£177</td>
+                        </tr>
+                    </tbody>
+                </table>
+                        <br>
+                        {{#input-submit}}x-days{{/input-submit}}
+            </div>
+        </div>
+        {{/form}}
+    {{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
