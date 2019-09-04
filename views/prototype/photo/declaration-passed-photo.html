@@ -11,11 +11,11 @@
 {{/back}}
 
 {{$pageTitle}}
-    Check your photo
+    Do you want to submit this photo?
 {{/pageTitle}}
 
 {{$header}}
-    <h1>Check your photo</h1>
+    <h1>Do you want to submit this photo?</h1>
 {{/header}}
 
 {{$content}}
@@ -64,59 +64,17 @@
     </div>
 </div>
 
-<p>Before you submit your photo, check that it meets all of these rules.<p>
-
-<ol class="list list-number">
-    <li class="list-item-bold">Background and lighting
-        <p>Your photo must have:</p>
-        <ul class="list list-bullet">
-            <li>a plain light-coloured background &ndash; without texture or pattern</li>
-            <li>balanced light &ndash; no shadows on your face or behind you</li>
-            <li>no objects behind you</li>
-        </ul>
-    </li>
-    <li class="list-item-bold">Face and expression
-        <p>Make sure:</p>
-        <ul class="list list-bullet">
-            <li>the photo is a good likeness taken in the last month</li>
-            <li>your whole face is visible
-
-            {{#nunjucks}}
-                {% if values['applicant-age'] >= 6 %}
-                    with your eyes open</li>
-                    <li>you have a plain expression &ndash; no smile and mouth closed
-                {% endif %}
-            {{/nunjucks}}
-
-            </li>
-            <li>there are no reflections or glare (if you have to wear glasses)</li>
-            <li>you’re not wearing headwear (unless for religious or medical reasons)</li>
-        </ul>
-    </li>
-    <li class="list-item-bold">Photo quality and format
-        <p>Your photo must be:</p>
-        <ul class="list list-bullet">
-            <li>in colour, with no effects or filters</li>
-            <li>not blurred or have ‘red eye’</li>
-            <li>unedited &ndash; you can’t ‘correct’ your passport photo</li>
-        </ul>
-    </li>
-</ol>
-
-<div class="panel panel-border-wide">
-    <p>If your photo doesn’t meet the rules you may have problems with your application or when you travel.</p>
+<div class="panel-important">
+    <p>By continuing you understand that your photo must meet these <a href="#">photo rules</a></p>
 </div>
 
 <!-- <h2>Do you want to submit this photo?</h2> -->
 <div id="submit-photo-group" class="form-group">
     <fieldset role="radiogroup" aria-required="true">
-        <legend>
-            <span class="form-label-bold">Do you want to submit this photo?</span>
-        </legend>
 
         <label class="block-label selected" for="submit-photo-true">
             <input type="radio" name="submit-photo" id="submit-photo-true" value="true" required="true">
-            Yes, this photo meets the rules
+            Yes, I understand - submit this photo
         </label>
 
         <label class="block-label" for="submit-photo-false">
