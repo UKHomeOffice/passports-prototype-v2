@@ -1,6 +1,7 @@
 module.exports = {
     '/': {
-        next: '/dob'
+        // next: '/dob'
+        next: '/choose-photo-method'
     },
     '/dob': {
         controller: require('../../../controllers/check-dob'),
@@ -9,8 +10,9 @@ module.exports = {
             'age-year',
             'age-month'
         ],
-        backLink: './',
-        next: '/choose-photo-method'
+        backLink: '/prototype/intro',
+        // next: '/choose-photo-method'
+        next: '/'
     },
     '/choose-photo-method': {
         fields: ['choose-photo'],
