@@ -8,7 +8,10 @@
         "check-another-photo": "Check another photo",
         "try-again": "Try again",
         "find-address": "Find address",
-        "declaration": "Continue to payment"
+        "declaration": "Continue to payment",
+        "3-weeks": "Within 3 weeks",
+        "x-days": "Within x days",
+        "collect": "Choose a collection appointment"
     },
     "fields": {
         "what-you-will-need-declaration": {
@@ -656,6 +659,9 @@
         },
         "lastname": {
             "regex": "Your {{ label }} must only contain letters, hyphens and apostrophes"
+        },
+        "urgent": {
+            "required": "Tell us if you need your passport urgently"
         },
 
         "email": "You must enter a valid email",

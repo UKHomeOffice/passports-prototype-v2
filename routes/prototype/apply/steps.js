@@ -307,29 +307,38 @@ module.exports = {
         next: '/passport-options-overseas'
     },
     '/get-updates': {
-        next: '/passport-options'
-    },
-    '/passport-options': {
-        controller: require('../../../controllers/costs-edit-step'),
-        fields: [
-            'passport-options',
-            'braille'
-        ],
-        next: '/sign',
+        next: '/passport-options',
         forks: [{
             target: '/relationship-applicant',
             condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
-                    req.session['hmpo-wizard-common']['is-overseas'] === true
-            }
-        }, { // Overseas skip delivery page
-            target: '/relationship-applicant',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
-                    req.session['hmpo-wizard-common']['is-overseas'] === false
+                return req.session['hmpo-wizard-common']['16-or-older'] == false &&
+                    req.session['hmpo-wizard-common']['rising-16'] == false;
             }
         }]
     },
+    // '/passport-options': {
+    //     controller: require('../../../controllers/costs-edit-step'),
+    //     fields: [
+    //         'passport-options',
+    //         'braille'
+    //     ],
+    //     next: '/cost',
+    //     forks: [{
+    //         target: '/relationship-applicant',
+    //         condition: function (req, res) {
+    //             return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
+    //                 req.session['hmpo-wizard-common']['is-overseas'] === true
+    //         }
+    //     },
+    //     // { // Overseas skip delivery page
+    //     //     target: '/relationship-applicant',
+    //     //     condition: function (req, res) {
+    //     //         return req.session['hmpo-wizard-common']['applicant-age'] <= 11 &&
+    //     //             req.session['hmpo-wizard-common']['is-overseas'] === false
+    //     //     }
+    //     // }
+    // ]
+    // },
     '/sign': {
         fields: [
             'can-sign',
@@ -389,6 +398,19 @@ module.exports = {
             //             req.session['hmpo-wizard-common']['lost-stolen'] == true
             //     }
             // },
+            { // if Adult renewal
+                target: '/passport-urgently',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['application-type'] == 'renew-adult' &&
+                    req.session['hmpo-wizard-common']['is-overseas'] === false &&
+                    req.session['hmpo-wizard-common']['passport-before'] === true &&
+                    req.session['hmpo-wizard-common']['lost-stolen'] === false &&
+                    req.session['hmpo-wizard-common']['change-name'] === false &&
+                    req.session['hmpo-wizard-common']['passport-damaged'] === false &&
+                    req.session['hmpo-wizard-common']['application-for-someone-else'] === false &&
+                    req.session['hmpo-wizard-common']['dual-nationality'] === false;
+                }
+            },
             { // if lost and stolen with no docs
                 target: '/cost',
                 condition: function (req, res) {
@@ -402,6 +424,59 @@ module.exports = {
                 }
             }
         ]
+    },
+    // '/choose-service': {
+    //     next: '/passport-urgently'
+    // },
+    '/passport-urgently':{
+        controller: require('../../../controllers/costs-edit-step'),
+        fields: [
+             'urgent'
+        ],
+        next: '/documents-required',
+        forks: [
+            { // if premium
+                target: '/how-to-premium',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['urgent'] == true
+                }
+            }
+        ]
+    },
+    '/how-to-premium': {
+        next: '/dps-dateandplace',
+        // Set secure delivery to false to avoid adding £5 to the cost incase secure delivery was selected previously
+        forks: [{
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['secure-return'] = false
+                }
+            }]
+    },
+    '/dps-dateandplace': {
+        next: '/dps-time'
+    },
+    '/dps-time': {
+        controller: require('../../../controllers/confirm-cost'),
+        next: '/dps-checkappointment'
+    },
+    '/dps-checkappointment': {
+        next: '/declaration'
+    },
+    '/passport-options': {
+        controller: require('../../../controllers/costs-edit-step'),
+        fields: [
+            'passport-options',
+            'braille'
+        ],
+        next: '/sign',
+        // forks: [
+        //     { // if premium
+        //         target: '/how-to-premium',
+        //         condition: function (req, res) {
+        //             return req.session['hmpo-wizard-common']['urgent'] == true
+        //         }
+        //     }
+        // ]
     },
     '/csig-required': {
         next: '/documents-required',
@@ -465,7 +540,7 @@ module.exports = {
     },
     '/docs-renew': {
         controller: require('../../../controllers/check-query-string'),
-        backLink: 'summary',
+        backLink: 'passport-urgently',
         next: '/passport-special-delivery',
         forks: [{
                 target: '../../../csig/user/need-csig',
@@ -533,6 +608,7 @@ module.exports = {
         next: '/declaration'
     },
     '/declaration': {
+        controller: require('../../../controllers/confirm-cost'),
         fields: ['declaration'],
         prereqs: [
             '/summary'

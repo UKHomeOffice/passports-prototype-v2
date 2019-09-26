@@ -48,7 +48,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
     model.set(values);
 
     // Set the cost in session so we can use it in front-end later
-    req.sessionModel.set('application-cost', currency(model.getCost()));
+    req.sessionModel.set('applicationCost', currency(model.getCost()));
 
     var response = _.extend({}, values, {
         sections: []

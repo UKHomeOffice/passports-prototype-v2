@@ -193,7 +193,7 @@ ConfirmForm.prototype.createBreakdown = function (req, values, callback) {
                         output.push('£85.50');
                     } else {
                         output.push('Standard passport with special delivery included.');
-                        output.push('£72.50');
+                        output.push('£75.50');
                     }
                     return output.join('<br>');
                 }
