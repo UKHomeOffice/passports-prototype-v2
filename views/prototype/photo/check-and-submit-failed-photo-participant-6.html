@@ -1,0 +1,160 @@
+{{< layout}}
+
+{{$back}}
+    {{#nunjucks}}
+        {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
+            <a href="upload" class="back-link">Back</a>
+        {% elif values['choose-photo'] == 'code' %}
+            <a href="retrieve" class="back-link">Back</a>
+        {% endif %}
+    {{/nunjucks}}
+{{/back}}
+
+{{$pageTitle}}
+    Photo check
+{{/pageTitle}}
+
+{{$header}}
+    <h1>Photo result</h1>
+{{/header}}
+
+{{$content}}
+
+{{<hmpo-partials-form}}
+{{$form}}
+
+<style>
+    #result-dial-gauge {
+        margin-top: 5px;
+        max-width: 190px;
+    }
+    @media (min-width: 769px) {
+        #result-dial-gauge {
+            max-width: 100%;
+        }
+    }
+    .result-poor {
+        color: #d4351c;
+    }
+    .result-okay-1 {
+        color: #0b0c0c;
+    }
+    .result-okay-2 {
+        color: #0b0c0c;
+    }
+    .result-good {
+        color: #28a197;
+    }
+    .result-text {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        max-width: 190px;
+        text-align: center;
+    }
+    @media (min-width: 769px) {
+        .result-text {
+            margin-bottom: 30px;
+        }
+    }
+</style>
+
+<div class="photo-preview">
+    <div class="photo-preview-inner">
+        <h2 class="heading-medium">Your photo</h2>
+        <div class="photo">
+            {{#nunjucks}}
+                {% if values['applicant-age'] <= 11 %}
+                    <img src="/public/images/photo/result/thumbnail-child-age-0-5-fail.jpg" alt="Your photo" title="Your photo" width="150">
+                {% else %}
+                    <img src="/public/images/photo/result/thumbnail-adult-poor-mouth-open.jpg" alt="Your photo" title="Your photo" width="150">
+                {% endif %}
+
+                {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
+                    {# Show nothing #}
+                {% elif values['choose-photo'] == 'code' %}
+                    <p style="font-size:16px; font-weight:bold; color:grey">abc.de/2jdD4hk</p>
+                {% endif %}
+            {{/nunjucks}}
+        </div>
+    </div>
+</div>
+
+<!-- <p>The check has rated your photo against the photo rules to see if it is suitable for a new passport.</p> -->
+<!-- <p>The photo check gives an estimate of how likely it is that your photo will be suitable for a new passport.</p> -->
+
+<div class="grid-row">
+    <!-- <h2 style="padding: 0 15px;">Result</h2> -->
+
+    <div class="column-one-third">
+        <img id="result-dial-gauge" src="../../../public/images/photo/dial-gauge-poor@2x.png">
+        <p class="result-poor result-text">Poor</p>
+    </div>
+
+    <div class="column-two-thirds">
+        <p style="margin-top: 15px;">Your photo doesn’t meet all the rules and is unlikely to be suitable for a new passport.</p>
+
+        <details>
+            <summary><span class="summary">Find out the reason for this result</span></summary>
+            <div class="panel panel-border-narrow">
+                <h3>It looks like your mouth is open</h3>
+                <ul class="list list-bullet">
+                    <li>sometimes this is caused by facial hair or shadows near your mouth</li>
+                    <li>try different lighting</li>
+                    <li>you can still submit your photo if you believe it should be accepted (for example there's a medical reason why your mouth appears to be open)</li>
+                </ul>
+            </div>
+        </details>
+
+            <p style="margin-top: 15px;">Next, you can:</p>
+            <ul class="list list-bullet">
+                <li>use this photo if you think the reason for the result is not correct</li>
+                <li>use this photo if you can't meet the rules because of a religious or medical reason</li>
+                <li>choose to take another photo</li>
+            </ul>
+    </div>
+
+    <!-- <hr style="margin-left: 15px; margin-right: 15px; min-width: 1px;"> -->
+</div>
+
+{{#input-submit}}{{/input-submit}}
+
+<!-- <div class="panel panel-border-wide">
+    <p>You can still use a photo if you can’t meet the photo rules because of a religious or medical reason.</p>
+</div> -->
+<!-- <div class="panel panel-border-wide">
+    <p>You can still use a photo if you can’t meet the photo rules because of a religious or medical reason. We'll ask you to explain the circumstances when you submit your photo.</p>
+</div> -->
+
+
+{{/form}}
+{{/hmpo-partials-form}}
+
+{{/content}}
+
+{{$sidebar}}
+<!-- <div class="column-one-third" style="margin-top:50px">
+    <div class="sidebar related">
+        <div class="photo-preview-inner">
+            <h2 class="heading-medium">Your photo</h2>
+            <div class="photo">
+                {{#nunjucks}}
+                    {% if values['applicant-age'] <= 11 %}
+                        <img src="/public/images/photo/result/thumbnail-child-age-0-5-fail.jpg" alt="Your photo" title="Your photo" width="150">
+                    {% else %}
+                        <img src="/public/images/photo/result/thumbnail-adult-poor-mouth-open.jpg" alt="Your photo" title="Your photo" width="150">
+                    {% endif %}
+
+                    {% if values['choose-photo'] == 'take' or values['choose-photo'] == 'upload' %}
+                        {# Show nothing #}
+                    {% elif values['choose-photo'] == 'code' %}
+                        <p style="font-size:16px; font-weight:bold; color:grey">abc.de/2jdD4hk</p>
+                    {% endif %}
+                {{/nunjucks}}
+            </div>
+        </div>
+    </div>
+</div> -->
+{{/sidebar}}
+
+{{/ layout}}

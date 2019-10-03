@@ -163,6 +163,21 @@ module.exports = {
     '/check-and-submit-okay-2-photo': {
         next: '/declaration-okay-2-photo'
     },
+    '/check-and-submit-okay-2-photo-participant-1': {
+        next: '/declaration-okay-2-photo'
+    },
+    '/check-and-submit-okay-2-photo-participant-2': {
+        next: '/declaration-okay-2-photo'
+    },
+    '/check-and-submit-okay-2-photo-participant-3': {
+        next: '/declaration-okay-2-photo'
+    },
+    '/check-and-submit-okay-2-photo-participant-5': {
+        next: '/declaration-okay-2-photo'
+    },
+    '/check-and-submit-okay-2-photo-participant-6': {
+        next: '/declaration-okay-2-photo'
+    },
     '/check-and-submit-okay-2b-photo': {
         next: '/declaration-okay-2-photo'
     },
@@ -170,6 +185,12 @@ module.exports = {
         next: '/declaration-okay-1-photo'
     },
     '/check-and-submit-failed-photo': {
+        next: '/declaration-failed-photo'
+    },
+    '/check-and-submit-failed-photo-participant-1': {
+        next: '/declaration-failed-photo'
+    },
+    '/check-and-submit-failed-photo-participant-5': {
         next: '/declaration-failed-photo'
     },
 
@@ -203,6 +224,56 @@ module.exports = {
             }
         }]
     },
+    '/declaration-okay-2-photo-participant-1': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
+    '/declaration-okay-2-photo-participant-2': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
+    '/declaration-okay-2-photo-participant-3': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
+    '/declaration-okay-2-photo-participant-5': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
+    '/declaration-okay-2-photo-participant-6': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
     '/declaration-okay-1-photo': {
         fields: ['oix-override', 'oix-override-reason'],
         next: '/../filter/first-uk',
@@ -214,6 +285,16 @@ module.exports = {
         }]
     },
     '/declaration-failed-photo': {
+        fields: ['oix-override', 'oix-override-reason'],
+        next: '/../filter/first-uk',
+        forks: [{
+            target: '/choose-photo-method',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['oix-override'] == false;
+            }
+        }]
+    },
+    '/declaration-failed-photo-participant-1': {
         fields: ['oix-override', 'oix-override-reason'],
         next: '/../filter/first-uk',
         forks: [{
