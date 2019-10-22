@@ -5,10 +5,13 @@ module.exports = {
     },
     '/help-or-feedback': {
         backLink: './',
-        next:'/ ',
+        next:'/phase-banner-feedback-page',
         fields: [
             'help-feedback'
         ],
+    },
+    '/phase-banner-feedback-page': {
+        next: '/ '
     },
     '/live-uk': {
         fields: [

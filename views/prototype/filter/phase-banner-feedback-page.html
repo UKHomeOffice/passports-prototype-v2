@@ -1,0 +1,31 @@
+{{< layout}}
+
+{{$pageTitle}}Feedback{{/pageTitle}}
+
+{{$header}}
+    <h1>Feedback</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+<style>
+    .textarea {
+    height: 300px;
+    width: 100%;
+}
+</style>
+        {{#input-text}}feedback-name{{/input-text}}
+        {{#textarea}}feedback-textarea{{/textarea}}
+
+
+
+
+
+
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}

@@ -14,6 +14,9 @@
         "collect": "Choose a collection appointment"
     },
     "fields": {
+        "feedback-textarea": {
+            "label":"Tell us what you think of the online service"
+        },
         "what-you-will-need-declaration": {
             "label": "I'm ready to continue"
         },
@@ -75,6 +78,9 @@
         },
         "name": {
             "label": "First and middle names"
+        },
+        "feedback-name": {
+            "label": "Name (optional)"
         },
         "lastname": {
             "label": "Last name"
