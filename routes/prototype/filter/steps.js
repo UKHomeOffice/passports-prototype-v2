@@ -3,6 +3,13 @@ module.exports = {
         backLink: '../',
         next: '/live-uk',
     },
+    '/help-or-feedback': {
+        backLink: './',
+        next:'/ ',
+        fields: [
+            'help-feedback'
+        ],
+    },
     '/live-uk': {
         fields: [
             'apply-uk',
