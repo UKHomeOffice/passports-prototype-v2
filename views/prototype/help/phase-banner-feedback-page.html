@@ -9,15 +9,13 @@
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-        <style>
-            .textarea {
-            height: 300px;
-            width: 100%;
-        }
-        </style>
-
         {{#input-text}}feedback-name{{/input-text}}
-        {{#textarea}}feedback-textarea{{/textarea}}
+        <div id="feedback-textarea-group" class="form-group">
+            <label for="feedback-textarea" class="form-label-bold">
+                Tell us what you think of the online service
+            </label>
+            <textarea name="feedback-textarea" id="feedback-textarea" class="form-control" aria-required="false" spellcheck="false" maxlength="500" style="margin: 0px 198px 0px 0px; width: 431px; height: 211px;"></textarea>
+        </div>
         {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}
