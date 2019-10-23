@@ -10,24 +10,6 @@ const nationalities = [
 ];
 
 module.exports = {
-    'help-feedback': {
-        legend: {
-            value: 'Do you need help with your application?',
-            className: 'visuallyhidden'
-        },
-        options: [{
-                value: true,
-                label: 'Yes'
-            },
-            {
-                value: false,
-                label: 'No',
-            }
-        ],
-        validate: ['required'],
-        formatter: ['boolean'],
-        className: 'inline'
-    },
     'rising-16': {
         legend: {
             value: 'Rising 16s',

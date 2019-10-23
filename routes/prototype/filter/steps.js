@@ -3,16 +3,6 @@ module.exports = {
         backLink: '../',
         next: '/live-uk',
     },
-    '/help-or-feedback': {
-        backLink: './',
-        next:'/phase-banner-feedback-page',
-        fields: [
-            'help-feedback'
-        ],
-    },
-    '/phase-banner-feedback-page': {
-        next: '/ '
-    },
     '/live-uk': {
         fields: [
             'apply-uk',
