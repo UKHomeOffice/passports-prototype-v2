@@ -1,5 +1,14 @@
 var app = require('express')();
 
+app.get('/help-or-feedback', function (req, res, next) {
+    res.render('prototype/help/help-or-feedback');
+});
+app.get('/phase-banner-feedback-page', function (req, res, next) {
+    res.render('prototype/help/phase-banner-feedback-page');
+});
+app.get('/feedback-thankyou', function (req, res, next) {
+    res.render('prototype/help/feedback-thankyou');
+});
 app.get('/additional-documents', function (req, res, next) {
     res.render('prototype/help/additional-documents');
 });
