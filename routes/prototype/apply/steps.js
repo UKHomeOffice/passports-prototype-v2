@@ -307,14 +307,14 @@ module.exports = {
         next: '/passport-options-overseas'
     },
     '/get-updates': {
-        next: '/passport-options',
-        forks: [{
-            target: '/relationship-applicant',
-            condition: function (req, res) {
-                return req.session['hmpo-wizard-common']['16-or-older'] == false &&
-                    req.session['hmpo-wizard-common']['rising-16'] == false;
-            }
-        }]
+        next: '/passport-options'
+        // forks: [{
+        // //     target: '/relationship-applicant',
+        // //     condition: function (req, res) {
+        // //         return req.session['hmpo-wizard-common']['16-or-older'] == false &&
+        // //             req.session['hmpo-wizard-common']['rising-16'] == false;
+        // //     }
+        //  }]
     },
     // '/passport-options': {
     //     controller: require('../../../controllers/costs-edit-step'),
@@ -469,14 +469,12 @@ module.exports = {
             'braille'
         ],
         next: '/sign',
-        // forks: [
-        //     { // if premium
-        //         target: '/how-to-premium',
-        //         condition: function (req, res) {
-        //             return req.session['hmpo-wizard-common']['urgent'] == true
-        //         }
-        //     }
-        // ]
+        forks: [{
+            target: '/relationship-applicant',
+            condition: function (req, res) {
+                return req.session['hmpo-wizard-common']['12-or-older'] == false
+            }
+        }]
     },
     '/csig-required': {
         next: '/documents-required',
