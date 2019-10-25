@@ -308,13 +308,6 @@ module.exports = {
     },
     '/get-updates': {
         next: '/passport-options'
-        // forks: [{
-        // //     target: '/relationship-applicant',
-        // //     condition: function (req, res) {
-        // //         return req.session['hmpo-wizard-common']['16-or-older'] == false &&
-        // //             req.session['hmpo-wizard-common']['rising-16'] == false;
-        // //     }
-        //  }]
     },
     // '/passport-options': {
     //     controller: require('../../../controllers/costs-edit-step'),
