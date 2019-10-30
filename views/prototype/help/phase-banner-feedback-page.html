@@ -4,12 +4,14 @@
 
 {{$header}}
     <h1>Feedback</h1>
+    <div class="panel-important">
+    <p>This page is for feedback only. You can <a href="https://www.passport.service.gov.uk/help" target="_blank">contact us</a> if you need help with your application.</p>
+</div>
 {{/header}}
 
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-        {{#input-text}}feedback-name{{/input-text}}
         <div id="feedback-textarea-group" class="form-group">
             <label for="feedback-textarea" class="form-label-bold">
                 Tell us what you think of the online service
