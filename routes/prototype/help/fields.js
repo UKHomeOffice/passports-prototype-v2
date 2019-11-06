@@ -7,15 +7,14 @@ module.exports = {
             className: 'visuallyhidden'
         },
         options: [{
-                value: true,
-                label: 'Yes'
+            value: false,
+                label: 'Leave feedback'
             },
             {
-                value: false,
-                label: 'No'
+                value: true,
+                label: 'Get help with my application'
             }
         ],
         formatter: ['boolean'],
-        className: 'inline'
     },
 };

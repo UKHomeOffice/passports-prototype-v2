@@ -2,20 +2,17 @@
 
 {{$pageTitle}}Feedback{{/pageTitle}}
 
+{{$betatag}}
+{{/betatag}}
+
 {{$header}}
     <h1>Feedback</h1>
-    <div class="panel-important">
-    <p>This page is for feedback only. You can <a href="https://www.passport.service.gov.uk/help" target="_blank">contact us</a> if you need help with your application.</p>
-</div>
 {{/header}}
 
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
         <div id="feedback-textarea-group" class="form-group">
-            <label for="feedback-textarea" class="form-label-bold">
-                Tell us what you think of the online service
-            </label>
             <textarea name="feedback-textarea" id="feedback-textarea" class="form-control" aria-required="false" spellcheck="false" maxlength="500" style="margin: 0px 198px 0px 0px; width: 431px; height: 211px;"></textarea>
         </div>
         {{#input-submit}}{{/input-submit}}
