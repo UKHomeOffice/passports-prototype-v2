@@ -11,7 +11,8 @@
         "declaration": "Continue to payment",
         "3-weeks": "Within 3 weeks",
         "x-days": "Within x days",
-        "collect": "Choose a collection appointment"
+        "collect": "Choose a collection appointment",
+        "feedback": "Submit feedback"
     },
     "fields": {
         "feedback-textarea": {
