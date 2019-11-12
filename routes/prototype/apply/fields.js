@@ -135,7 +135,7 @@ module.exports = {
             'required',
             {
                 type: 'regex',
-                arguments: /^[A-Za-z .'-]+$/
+                arguments: /^[A-Za-z .'-í]+$/
             }
         ]
     },
