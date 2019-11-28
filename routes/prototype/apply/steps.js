@@ -404,6 +404,13 @@ module.exports = {
                     req.session['hmpo-wizard-common']['dual-nationality'] === false;
                 }
             },
+            { // if DPS booked
+                target: '/dps-not-eligible',
+                condition: function (req, res) {
+                    return req.session['hmpo-wizard-common']['urgent'] == true &&
+                    req.session['hmpo-wizard-common']['change-name'] === true;
+                }
+            },
             { // if lost and stolen with no docs
                 target: '/cost',
                 condition: function (req, res) {
@@ -421,6 +428,11 @@ module.exports = {
     // '/choose-service': {
     //     next: '/passport-urgently'
     // },
+    '/dps-not-eligible':{
+
+        next:'/ '
+
+    },
     '/passport-urgently':{
         controller: require('../../../controllers/costs-edit-step'),
         fields: [
