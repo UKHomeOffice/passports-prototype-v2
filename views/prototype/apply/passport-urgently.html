@@ -11,7 +11,7 @@
 {{< hmpo-partials-form}}
     {{$form}}
         <p>It should take 3 weeks to get your passport with the standard service.</p>
-        <p>If you need your passport urgently, collect it from a <a href="https://www.passport.service.gov.uk/help/passport-offices/" target="_blank">passport office</a> in the next 5 days with the Online Premium service.</p>
+        <p>If you need your passport urgently, book an appointment to collect it from a <a href="https://www.passport.service.gov.uk/help/passport-offices/" target="_blank">passport office</a>. The earliest you can get an appointment is 2 days away.</p>
 
     {{#nunjucks}}
     {% if values['passport-options'] === '34' %}
@@ -43,21 +43,6 @@
 	{% endif %}
 	{{/nunjucks}}
 	{{#input-submit}}{{/input-submit}}
-		<details>
-		<summary>
-			<span class="summary">Other services you can use  (sshhh just ignore me)</span>
-		</summary>
-		<div class="panel panel-border-narrow">
-			<p>Paper Fast Track</p>
-			<ul>
-				<li>Info</li>
-				<p></p>
-				<li>
-					<a href=" ">Link for paper fast track page</a>
-				</li>
-			</ul>
-		</div>
-	</details>
     {{/form}}
 {{/ hmpo-partials-form}}
 
