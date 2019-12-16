@@ -1,0 +1,26 @@
+{{< layout}}
+
+{{$pageTitle}}Feedback{{/pageTitle}}
+
+{{$betatag}}
+{{/betatag}}
+
+{{$header}}
+    <h1>Feedback</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+        <p>Don't include any personal or financial information.</p>
+        <div id="feedback-textarea-group" class="form-group">
+            <textarea name="feedback-textarea" id="feedback-textarea" class="form-control" aria-required="false" spellcheck="false" maxlength="500" style="margin: 0px 198px 0px 0px; width: 431px; height: 211px;"></textarea>
+            <p>
+            <p class="form-hint" id="char-hint">500 characters remaining</p>
+        </div>
+        {{#input-submit}}feedback{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}

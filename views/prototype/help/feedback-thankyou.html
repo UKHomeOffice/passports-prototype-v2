@@ -1,0 +1,28 @@
+{{< layout}}
+
+{{$pageTitle}}Feedback submitted{{/pageTitle}}
+
+{{$betatag}}
+{{/betatag}}
+
+{{$back}}
+{{/back}}
+
+
+
+{{$header}}
+    <h1>Thank you</h1>
+{{/header}}
+
+{{$content}}
+{{< hmpo-partials-form}}
+    {{$form}}
+        <p>Your feedback has been submitted.</p>
+        <div id="close">
+            <button class="button" role="button" id="close-button" onclick="window.close(); return false;">Close<span class="visuallyhidden"> the current window</span></button>
+        </div>
+    {{/form}}
+{{/ hmpo-partials-form}}
+{{/content}}
+
+{{/ layout}}
