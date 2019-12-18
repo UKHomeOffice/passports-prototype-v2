@@ -429,9 +429,10 @@ module.exports = {
     //     next: '/passport-urgently'
     // },
     '/dps-not-eligible':{
-
         next:'/docs-renew'
-
+    },
+    '/dps-appointment-expired':{
+        next:'/how-to-premium'
     },
     '/passport-urgently':{
         controller: require('../../../controllers/costs-edit-step'),
