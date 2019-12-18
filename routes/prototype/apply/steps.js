@@ -429,7 +429,7 @@ module.exports = {
     //     next: '/passport-urgently'
     // },
     '/dps-not-eligible':{
-        next:'/docs-renew'
+        next:'/documents-required'
     },
     '/dps-appointment-expired':{
         next:'/how-to-premium'
