@@ -404,7 +404,7 @@ module.exports = {
                     req.session['hmpo-wizard-common']['dual-nationality'] === false;
                 }
             },
-            { // if DPS booked
+            { // if DPS selected but retuned and changed name
                 target: '/dps-not-eligible',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['urgent'] == true &&
