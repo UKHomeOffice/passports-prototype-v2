@@ -1,0 +1,27 @@
+{{< layout}}
+
+{{$pageTitle}}You can't use Online Premium{{/pageTitle}}
+
+{{$header}}
+    <h1>You can't use Online Premium</h1>
+{{/header}}
+
+{{$content}}
+
+{{< hmpo-partials-form}}
+    {{$form}}
+        <p>You changed some of your details and you're no longer eligible for the Online Premium service. Your appointment will be cancelled.</p>
+        {{#nunjucks}}
+            {% if values['passport-options'] === '34' %}
+                <p>You'll need to use the standard service. It should take 3 weeks to get your new passport and costs £75.50.</p>
+            {% else %}
+                <p>You'll need to use the standard service. It should take 3 weeks to get your new passport and costs £85.50.</p>
+            {% endif %}
+        {{/nunjucks}}
+        {{#input-submit}}{{/input-submit}}
+    {{/form}}
+{{/ hmpo-partials-form}}
+
+{{/content}}
+
+{{/ layout}}

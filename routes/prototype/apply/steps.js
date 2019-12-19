@@ -418,9 +418,14 @@ module.exports = {
             }
         ]
     },
-    // '/choose-service': {
-    //     next: '/passport-urgently'
-    // },
+    // This is a static page
+    '/dps-not-eligible':{
+        next:'/documents-required'
+    },
+    // This is a static page
+    '/dps-appointment-expired':{
+        next:'/how-to-premium'
+    },
     '/passport-urgently':{
         controller: require('../../../controllers/costs-edit-step'),
         fields: [
