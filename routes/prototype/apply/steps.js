@@ -404,13 +404,6 @@ module.exports = {
                     req.session['hmpo-wizard-common']['dual-nationality'] === false;
                 }
             },
-            { // if DPS selected but retuned and changed name
-                target: '/dps-not-eligible',
-                condition: function (req, res) {
-                    return req.session['hmpo-wizard-common']['urgent'] == true &&
-                    req.session['hmpo-wizard-common']['change-name'] === true;
-                }
-            },
             { // if lost and stolen with no docs
                 target: '/cost',
                 condition: function (req, res) {
@@ -425,12 +418,11 @@ module.exports = {
             }
         ]
     },
-    // '/choose-service': {
-    //     next: '/passport-urgently'
-    // },
+    // This is a static page
     '/dps-not-eligible':{
         next:'/documents-required'
     },
+    // This is a static page
     '/dps-appointment-expired':{
         next:'/how-to-premium'
     },
