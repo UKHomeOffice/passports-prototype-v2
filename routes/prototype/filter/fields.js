@@ -252,7 +252,8 @@ module.exports = {
         },
         options: [{
                 value: true,
-                label: 'Yes'
+                label: 'Yes',
+                toggle: 'nat-reg-yes'
             },
             {
                 value: false,

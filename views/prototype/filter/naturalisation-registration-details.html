@@ -10,38 +10,15 @@
 
 {{< hmpo-partials-form}}
 {{$form}}
-
-    <style>
-        .guidance-photos ul li  {
-           margin: 0 3% 0 0;
-        }
-    </style>
-
     <fieldset  class="inline">
         <p>You'll only have one of these certificates if you applied for British nationality through the Home Office.</p>
-            <details>
-            <summary><span class="summary">Naturalisation or Registration certificates</span></summary>
-            <br>
-            <div class="panel panel-border-narrow">
-                <div class="guidance-photos" aria-hidden="true">
-                    <ul>
-                        <li>
-                            <h3>Naturalisation Certificate</h3>
-                            <img src="../../public/images/nat.jpg" alt="" class="" onclick="window.open('../../public/images/nat.jpg', '_blank');">
-                        </li>
-                        <li>
-                            <h3>Registration Certificate</h3>
-                            <img src="../../public/images/reg.jpg" alt="" class="" onclick="window.open('../../public/images/reg.jpg', '_blank');">
-                        </li>
-                    </ul>
-                </div>
-                <br>
-                <p>If you have either of these certificates, select yes.</p>
-            </div>
-        </details>
+        {{#radio-group}}naturalisation-registration-certificate{{/radio-group}}
     </fieldset>
-
-    {{#radio-group}}naturalisation-registration-certificate{{/radio-group}}
+    <div id="nat-reg-yes" class="reveal js-hidden">
+        <div class="panel panel-border-narrow">
+            <p>This is <u>not</u> your birth certificate.</p>
+        </div>
+    </div>
     {{#input-submit}}{{/input-submit}}
 
 {{/form}}
