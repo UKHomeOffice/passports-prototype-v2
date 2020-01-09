@@ -19,7 +19,7 @@
 
     <fieldset  class="inline">
         <p>You'll only have one of these certificates if you applied for British nationality through the Home Office.</p>
-            <details>
+           <!-- <details>
             <summary><span class="summary">Naturalisation or Registration certificates</span></summary>
             <br>
             <div class="panel panel-border-narrow">
@@ -38,7 +38,7 @@
                 <br>
                 <p>If you have either of these certificates, select yes.</p>
             </div>
-        </details>
+        </details> -->
     </fieldset>
 
     {{#radio-group}}naturalisation-registration-certificate{{/radio-group}}
@@ -48,5 +48,22 @@
 {{/ hmpo-partials-form}}
 
 {{/content}}
+
+{{$sidebar}}
+    <div class="column-one-third">
+        <br>
+        <br>
+        <div class="sidebar related">
+            <div class="photo-preview-inner">
+                <h2 class="heading-small">Naturalisation certificate example</h2>
+                    <img src="../../public/images/nat.jpg" alt="" width="150" align="middle" style="cursor:pointer;" onclick="window.open('../../public/images/reg.jpg', '_blank');" >
+                    <p>Click on image to enlarge</p>
+                <h2 class="heading-small">Registration certificate example</h2>
+                    <img src="../../public/images/reg.jpg" alt="" width="150" align="middle" style="cursor:pointer;" onclick="window.open('../../public/images/reg.jpg', '_blank');" >
+                    <p>Click on image to enlarge</p>
+            </div>
+        </div>
+    </div>
+{{/sidebar}}
 
 {{/ layout}}
