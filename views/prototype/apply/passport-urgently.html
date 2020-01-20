@@ -1,29 +1,69 @@
 {{< layout}}
 
-{{$pageTitle}}Do you need your passport urgently?{{/pageTitle}}
+{{$pageTitle}}Digital services{{/pageTitle}}
 
 {{$header}}
-    <h1>Do you need your passport urgently?</h1>
+    <h1>Digital services</h1>
 {{/header}}
 
 {{$content}}
 
 {{< hmpo-partials-form}}
-    {{$form}}
-        <p>It should take 3 weeks to get your passport with the standard service.</p>
-        <p>If you need your passport urgently, book an appointment to collect it from a <a href="https://www.passport.service.gov.uk/help/passport-offices/" target="_blank">passport office</a>. The earliest you can get an appointment is 2 days away.</p>
 
+    {{$form}}
+        <p>You are eligable for the services listed below:</p>
+		<div class="column-long">
+		<table class="govuk-table">
+		<thead class="govuk-table__head">
+			<tr class="govuk-table__row">
+			<th class="govuk-table__header" scope="col">Service</th>
+			<th class="govuk-table__header" scope="col">Duration</th>
+			<th class="govuk-table__header" class="numeric" scope="col">Documents</th>
+			<th class="govuk-table__header" class="numeric" scope="col">New passport</th>
+			<th class="govuk-table__header" class="numeric" scope="col">Cost</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="govuk-table__row">
+			<td class="govuk-table__cell">Standard</td>
+			<td class="govuk-table__cell">Up to 3 weeks</td>
+			<td class="govuk-table__cell">Post it to us</td>
+			<td class="govuk-table__cell">Receive in the post</td>
+			<td class="govuk-table__cell" class="numeric">£75.50</td>
+			</tr>
+			<tr class="govuk-table__row">
+			<td class="govuk-table__cell">Digital Fast Track</td>
+			<td class="govuk-table__cell">Within a week of your appointment</td>
+			<td class="govuk-table__cell">Bring to your appointment</td>
+			<td class="govuk-table__cell">Receive in the post</td>
+			<td class="govuk-table__cell" class="numeric">£142</td>
+			</tr>
+			<tr class="govuk-table__row">
+			<td class="govuk-table__cell">Digital Premium</td>
+			<td class="govuk-table__cell">Earliest appointment is 2 days away</td>
+			<td class="govuk-table__cell">Bring to your appointment</td>
+			<td class="govuk-table__cell">Receive at your appointment</td>
+			<td class="govuk-table__cell" class="numeric">£177</td>
+			</tr>
+		</tbody>
+		</table>
+		<br>
+		<h2>Which service do you want?</h2>
     {{#nunjucks}}
     {% if values['passport-options'] === '34' %}
         <div id="urgent-group" class="form-group">
             <fieldset role="radiogroup" aria-required="true">
 				<label class="block-label" for="urgent-false">
-					<input type="radio" name="urgent" id="urgent-false" value="false" required="true">
-					No, I'll use the standard service (£75.50)
+					<input type="radio" name="urgent" id="standard" value="standard" required="true">
+					Standard service (£75.50)
 				</label>
 				<label class="block-label" for="urgent-true">
-					<input type="radio" name="urgent" id="urgent-true" value="true"  required="true">
-					Yes, I need it urgently (£177)
+					<input type="radio" name="urgent" id="DFT" value="DFT"  required="true">
+					Digital Fast Track (£142)
+				</label>
+				<label class="block-label" for="urgent-true">
+					<input type="radio" name="urgent" id="DPS" value="DPS"  required="true">
+					Digital Premium (£177)
 				</label>
             </fieldset>
         </div>
