@@ -5,12 +5,13 @@
 {{/pageTitle}}
 
 {{$header}}
-    <h1>Your payment has been declined</h1>
+    <h1>Tech error</h1>
 {{/header}}
 
 {{$content}}
-{{hmpo-partials-form}}
-{{form}}
+{{< hmpo-partials-form}}
+{{$form}}
+
 
 
 <p>No money has been taken from your account. Contact your bank for more details.</p>
@@ -19,7 +20,6 @@
 
 {{/form}}
 {{/ hmpo-partials-form}}
-
-{{/ content}}
+{{/content}}
 
 {{/ layout}}
