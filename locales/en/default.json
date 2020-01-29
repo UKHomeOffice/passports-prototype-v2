@@ -12,7 +12,8 @@
         "3-weeks": "Within 3 weeks",
         "x-days": "Within x days",
         "collect": "Choose a collection appointment",
-        "feedback": "Submit feedback"
+        "feedback": "Submit feedback",
+        "try-payment": "Try payment again"
     },
     "fields": {
         "feedback-textarea": {

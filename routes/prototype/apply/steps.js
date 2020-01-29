@@ -619,5 +619,14 @@ module.exports = {
     },
     '/confirmation': {
         next: '/../csig/track'
+    },
+    '/payment-declined-error': {
+        next:'/payment'
+    },
+    '/payment-technical-error': {
+        next:'/payment'
+    },
+    '/payment-cancelled-error': {
+        next:'/payment'
     }
 };
