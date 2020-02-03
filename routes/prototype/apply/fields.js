@@ -1352,21 +1352,23 @@ module.exports = {
         ],
         className: 'inline'
     },
-        'urgent': {
-            formatter: 'boolean',
-        validate: [
-            'required'
-        ],
-        legend: {
-            value: 'Is it urgent?',
-        },
+    'urgent': {
+            legend: {
+                value: 'Do you need your passport urgently?',
+                className: 'visuallyhidden'
+            },
         options: [{
-                value: false,
-                label: 'No, I&apos;ll use the standard service (£75.50)'
+                value: 'dcs',
+                label: 'Up to 3 weeks (£75.50)'
             },
             {
-                value: true,
-                label: 'Yes, I need it urgently (£177)'
+                value: 'dft',
+                label: 'Up to 1 week (£142)',
+            },
+            {
+                value: 'dps',
+                label: 'Earliest appointment in 2 days (£177)',
+                toggle: 'standard-info'
             }
         ],
      },

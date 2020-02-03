@@ -1,18 +1,17 @@
 {{< layout}}
 
-{{$pageTitle}}Do you need your passport urgently?{{/pageTitle}}
+{{$pageTitle}}Select a service{{/pageTitle}}
 
 {{$header}}
-    <h1>Do you need your passport urgently?</h1>
+    <h1>Select a service</h1>
 {{/header}}
 
 {{$content}}
 
 {{< hmpo-partials-form}}
     {{$form}}
-        <p>It should take 3 weeks to get your passport with the standard service.</p>
-        <p>If you need your passport urgently, book an appointment to collect it from a <a href="https://www.passport.service.gov.uk/help/passport-offices/" target="_blank">passport office</a>. The earliest you can get an appointment is 2 days away.</p>
-    {{#nunjucks}}
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Luctus venenatis lectus magna fringilla urna porttitor.</p>
+     <!-- {{#nunjucks}}
 
     {% if values['passport-options'] === '34' %}
 
@@ -45,13 +44,15 @@
         </div>
 	{% endif %}
 
-	{{/nunjucks}}
-
+	{{/nunjucks}}  -->
+	{{#radio-group}}urgent{{/radio-group}}
 	<div id="standard-info" class="reveal js-hidden">
-		<div class="panel panel-border-narrow">
-			<p>If you're 16 or older, you may need te'll tell you if that happens and what you need to do.</p>
+		<div class="panel panel-border-narrow" style="margin-top:-20px; margin-bottom:20px;">
+			<p>You'll need to book an appointment to collect your new passport from a <a href="https://www.passport.service.gov.uk/help/passport-offices" target="_blank">passport office</a>.</p>
+			<p>This usually takes 30 mintues. You must take your old passport with you.</p>
 		</div>
 	</div>
+	<br>
 
 	{{#input-submit}}{{/input-submit}}
 
