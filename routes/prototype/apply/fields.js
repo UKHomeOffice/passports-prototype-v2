@@ -1352,8 +1352,8 @@ module.exports = {
         ],
         className: 'inline'
     },
-        'urgent': {
-            formatter: 'boolean',
+    'urgent': {
+        formatter: 'boolean',
         validate: [
             'required'
         ],
@@ -1368,6 +1368,11 @@ module.exports = {
                 value: true,
                 label: 'Yes, I need it urgently (£177)'
             }
+        ],
+     },
+     'priority-services':{
+        validate: [
+            'required'
         ],
      },
     'declaration': {

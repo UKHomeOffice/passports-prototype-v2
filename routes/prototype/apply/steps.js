@@ -434,12 +434,15 @@ module.exports = {
         next: '/documents-required',
         forks: [
             { // if premium
-                target: '/how-to-premium',
+                target: '/priority-services',
                 condition: function (req, res) {
                     return req.session['hmpo-wizard-common']['urgent'] == true
                 }
             }
         ]
+    },
+    '/priority-services':{
+        next:'/ ',
     },
     '/how-to-premium': {
         next: '/dps-dateandplace',
