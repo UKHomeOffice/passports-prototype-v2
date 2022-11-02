@@ -32,7 +32,7 @@
     "express-partial-templates": "^0.2.0",
     "express-session": "^1.14.0",
     "govuk-elements-sass": "2.1.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
