@@ -27,7 +27,7 @@
     "connect-fs2": "^0.1.8",
     "connect-redis": "^3.3.3",
     "cookie-parser": "^1.4.3",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "express-basic-auth": "^1.1.6",
     "express-partial-templates": "^0.2.0",
     "express-session": "^1.14.0",
