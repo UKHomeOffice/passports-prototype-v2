@@ -22,12 +22,12 @@
   },
   "homepage": "https://github.com/UKHomeOffice/passports-prototype#readme",
   "dependencies": {
-    "body-parser": "^1.15.2",
+    "body-parser": "^1.20.1",
     "browserify": "^16.2.3",
     "connect-fs2": "^0.1.8",
     "connect-redis": "^3.3.3",
     "cookie-parser": "^1.4.3",
-    "express": "^4.16.3",
+    "express": "^4.18.2",
     "express-basic-auth": "^1.1.6",
     "express-partial-templates": "^0.2.0",
     "express-session": "^1.14.0",
@@ -55,7 +55,7 @@
     "van11y-accessible-tab-panel-aria": "git+https://github.com/gavboulton/van11y-accessible-tab-panel-aria.git#feature/keep-href"
   },
   "devDependencies": {
-    "browser-sync": "^2.24.7",
+    "browser-sync": "^2.29.1",
     "gulp-nodemon": "^2.2.1",
     "gulp-uglify": "^3.0.1",
     "vinyl-buffer": "^1.0.1",
